@@ -1,0 +1,1550 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://molaman.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1939325*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[1]='28';commentCnt[77]='4';commentCnt[84]='9';commentCnt[85]='8';commentCnt[86]='10';commentCnt[87]='17';commentCnt[88]='4';commentCnt[89]='21';commentCnt[90]='5';commentCnt[91]='2';commentCnt[92]='5';commentCnt[93]='6';commentCnt[95]='9';commentCnt[96]='8';commentCnt[97]='8';commentCnt[98]='5';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[1]='0';
+mihanblogDisLikeArrCnt[1]='0';
+mihanblogLikeArrCnt[77]='0';
+mihanblogDisLikeArrCnt[77]='0';
+mihanblogLikeArrCnt[84]='0';
+mihanblogDisLikeArrCnt[84]='0';
+mihanblogLikeArrCnt[85]='0';
+mihanblogDisLikeArrCnt[85]='0';
+mihanblogLikeArrCnt[86]='0';
+mihanblogDisLikeArrCnt[86]='0';
+mihanblogLikeArrCnt[87]='0';
+mihanblogDisLikeArrCnt[87]='0';
+mihanblogLikeArrCnt[88]='0';
+mihanblogDisLikeArrCnt[88]='0';
+mihanblogLikeArrCnt[89]='0';
+mihanblogDisLikeArrCnt[89]='0';
+mihanblogLikeArrCnt[90]='0';
+mihanblogDisLikeArrCnt[90]='0';
+mihanblogLikeArrCnt[91]='0';
+mihanblogDisLikeArrCnt[91]='0';
+mihanblogLikeArrCnt[92]='0';
+mihanblogDisLikeArrCnt[92]='0';
+mihanblogLikeArrCnt[93]='0';
+mihanblogDisLikeArrCnt[93]='0';
+mihanblogLikeArrCnt[95]='0';
+mihanblogDisLikeArrCnt[95]='0';
+mihanblogLikeArrCnt[96]='0';
+mihanblogDisLikeArrCnt[96]='0';
+mihanblogLikeArrCnt[97]='0';
+mihanblogDisLikeArrCnt[97]='0';
+mihanblogLikeArrCnt[98]='0';
+mihanblogDisLikeArrCnt[98]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://molaman.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://molaman.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','87');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','سه شنبه 10 مرداد 1396');
+	
+	setStatVar('today_view','3');
+	setStatVar('yesterday_view','24');
+	
+	setStatVar('this_month_view','513');
+	setStatVar('last_month_view','636');
+
+	setStatVar('total_view','46309');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (03:52)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://molaman.mihanblog.com/statupdate/?data[refereruri]=http://myyesterdays.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607826187&data[hash]=a5bdbd37fe696d171b8ac8dd3a475def&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://molaman.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="../molaman.mihanblog.com/'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://molaman.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://molaman.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://molaman.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://molaman.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://molaman.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://molaman.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://molaman.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://molaman.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://molaman.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://molaman.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://molaman.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://molaman.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://molaman.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://molaman.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://molaman.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://molaman.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://molaman.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://molaman.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://molaman.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://molaman.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://molaman.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://molaman.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://molaman.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://molaman.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://molaman.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://molaman.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://molaman.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://molaman.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://molaman.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://molaman.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://molaman.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://molaman.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://molaman.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://molaman.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://molaman.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<head>
+<title>مــولـای مــنــــ...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="designer" content="Ashoora.ir & BlogSkin.ir">
+<meta name="author" content="مغناطیـس ">
+<meta name="language" content="Farsi">
+<meta name="keywords" content="مــولـای مــنــــ...,molaman,, Blog, Weblog, Persian,Iran, Farsi, Weblogs, Blogskin, امام زمان, امام مهدی, مهدویت, علم مهدوی, دلنوشته مهدوی, حدیث مهدوی, داستان مهدوی, کلیپ مهدوی, عکس مهدوی, صوت مهدوی, کتاب مهدوی, ">
+
+<meta http-equiv="expires" content="never">
+
+<meta name="description" content="مــولـای مــنــــ... - ...و این بار با خود عهـد بستمـ که هر گاه سحـرگاهان بر سجاده ی عشق ابراز بندگی می نمایم ، عهــد و پیمانمـ را محکمــ ‏تر و استـوارتر از قبلـ با او ببندمـ...<br />
+.<br />
+تا آقایم ، مولایمـ ، سرورمـ و تنهـا امیـد زندگیمـ مصممـ شود برای ظهورشـ...<br />
+.<br />
+اللهمــ عجلــ لولیکــ الفرجــ...<br />
+<br />
+.....<br />
+به وبلاگمـ خوش آمدید<br />
+بیشتر مطالبـ اینـ وبلاگــ رو خودمـ نوشتمـ<br />
+لذا تقاضا میکنمـ با ذکر منبع کپی کنید<br />
+در پناه حق... - مــولـای مــنــــ...">
+<meta name="keywords" content="مــولـای مــنــــ...,molaman,, Blog, Weblog, Persian,Iran, Farsi, Weblogs, Blogskin">
+<link rel="alternate" type="application/rss+xml" title="مــولـای مــنــــ..." href="http://molaman.mihanblog.com/post/rss/" />
+<link rel="alternate" type="application/atom+xml" title="مــولـای مــنــــ..." href="http://molaman.mihanblog.com/post/atom/" />
+<link href="http://www.ashoora.biz/weblog/34/style.css" type="text/css" rel="stylesheet">
+<style type="text/css">
+.pagination{clear:both;margin:0 auto 20px;direction:rtl;color:#444444;font-size:12px}
+.nppage,.page{float:none;width:auto;font-weight:bold;font-size:12px;color:#444444;text-decoration:none}
+.pagination .left{float:left;text-align:left}
+.pagination .right{float:right;text-align:right}
+.pagination .clear{clear:both}
+</style>
+</head>
+
+<body>
+<div align=center>
+<div style="width:960">
+<div class=mainr>
+<div class=top2><div class=titr>مــولـای مــنــــ...</div><div class=des>
+	به امید روزی که پایان فصل انتظار، بهار آمدنت باشد؛   ای مـوعـود آمدنی</div></div>
+<div class=post>
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=tpost><div class=title><a href="http://molaman.mihanblog.com/post/1">سرآغاز</a></div>
+<div class=date>نوشته شده در تاریخ شنبه 1 آبان 1395 توسط 
+	مغناطیـس  | <a target="_self" href="javascript:newComment(1)" >
+	نظرات (<script>setCommentCnt(1)</script>)</a></div></div>
+<div class=xpost><div class=xpost2><div style="float:right">
+	</div> <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><br>
+
+
+
+
+
+
+
+
+
+
+
+<div align="center"><font size="4" color="#999900"><font face="Mihan-Koodak">بسم رب المهدی</font></font><font size="4"><br><font size="3" face="Mihan-Koodak">مهدی جان</font><font size="3"><br><font face="Mihan-Koodak">آلودگی دلهایمان از حد هشدار فرا رفته</font><br><font face="Mihan-Koodak">نفس هایمان به شماره افتاده</font><br><font face="Mihan-Koodak">سالهاست زندگیمان تعطیل رسمی است</font><br></font></font><font size="3"><font face="Mihan-Koodak">هوای باریدن نداری <font color="#FF6666">مولای من</font>...؟؟<br><br></font></font><img src="../file.mihanblog.com/public/user_data/user_files/647/1939325/imammahdi.jpg" alt="'گفتم شبی به مهدی اذن نگاه خواهم گفتا که من هم از تو ترک گناه خواهم&nbsp; " width="332" height="253"><br></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://molaman.mihanblog.com/post/category/1">
+			مدیر وبلاگ</a>،&nbsp;				<br>
+						برچسب ها:
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >دلنوشته امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87%20%DA%A9%D9%88%D8%AA%D8%A7%D9%87" >دلنوشته کوتاه</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D9%85%D9%87%D8%AF%DB%8C" >امام مهدی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87%20%D8%A7%D9%85%D8%A7%D9%85%20%D9%85%D9%87%D8%AF%DB%8C" >دلنوشته امام مهدی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%88%D9%84%D8%A7%DB%8C%20%D9%85%D9%86" >مولای من</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%87%D8%AF%D9%88%DB%8C%D8%AA" >مهدویت</a>، 
+																</font>
+
+</div></div>
+<div class=bpost></div>
+<div class=tpost><div class=title><a href="http://molaman.mihanblog.com/post/89">مهدویت به چه معناست؟</a></div>
+<div class=date>نوشته شده در تاریخ سه شنبه 10 مرداد 1396 توسط 
+	مغناطیـس  | <a target="_self" href="javascript:newComment(89)" >
+	نظرات (<script>setCommentCnt(89)</script>)</a></div></div>
+<div class=xpost><div class=xpost2><div style="float:right">
+	</div> 
+
+
+<font size="3" face="Mihan-Koodak">باور به ظهور شخصی كه جهان را پر از عدل و داد كرده و ریشه های ظلم و 
+ستم را می چیند اختصاص به اسلام نداشته بلكه، شامل ادیان مختلف الهی و 
+آسمانی می شود و در اسلام، مسیحیت،[1] یهودیت[2] و زرتشت[3] و... به ظهور 
+این شخص نوید داده شده است.</font><br><p><font size="3" face="Mihan-Koodak">
+بنابراین می توان گفت تمامی ادیان به آمدن موعودی مصلح باور دارند كه این 
+موعود در اندیشة زردتشت سوشیاتت،[4] در اندیشه مسیحیت حضرت مسیح و غیره... و
+ در اسلام حضرت مهدی(عج) است كه قرآن و سنت به آمدن آن بشارت داده اند.<br>
+امّا در مورد اینكه مهدویت یعنی چه؟ باید اذعان داشت لغت مهدویت برگرفته از امام مهدی(ع) است.<br>
+«خلاصه و حقیقت مهدویت، منتهی شدن سیر جوامع جهان به سوی جامعه واحد و 
+سعادت عمومی، امنیت و رفاه، تعاون و همكاری، همبستگی همگانی حكومت حق و عدل
+ جهانی، غلبه حق بر باطل، غلبة جنودالله بر جنود شیطان نجات مستضعفان و 
+نابودی مستكبران، و خلافت مؤمنان و شایستگان به رهبری یك رجل و ابرمرد الهی
+ است كه موعود انبیاء و ادیان و دوازدهمین اوصیاء و خلفای پیغمبر آخرالزمان
+ است.»[5]</font></p><p align="center"><font size="3" face="Mihan-Koodak"><font color="#3333FF"><font color="#999900">ادامه متن را در ادامه مطلب بخوانید،همچنین در این باره یک برنامه اندرویدی را در ادامه مطلب معرفی کردم که میتوانید به نصب آن اقدام کنید.</font><br></font></font></p><p align="center"><img src="https://s.cafebazaar.ir/1/icons/ir.masaf.km_512x512.png" alt="https://s.cafebazaar.ir/1/icons/ir.masaf.km_512x512.png" class="transparent" width="212" height="212"></p>
+
+
+
+
+
+				<br><br><b><a href='http://molaman.mihanblog.com/post/89'>ادامه مطلب</a></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://molaman.mihanblog.com/post/category/3">
+			علم مهدوی</a>،&nbsp;				<br>
+						برچسب ها:
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%B9%D9%84%D9%85%20%D9%85%D9%87%D8%AF%D9%88%DB%8C" >علم مهدوی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D9%85%D9%87%D8%AF%DB%8C" >امام مهدی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%88%D9%84%D8%A7%DB%8C%20%D9%85%D9%86" >مولای من</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D8%B9%D9%86%D8%A7%20%D9%88%20%D9%85%D9%81%D9%87%D9%88%D9%85%20%D9%85%D9%87%D8%AF%D9%88%DB%8C%D8%AA" >معنا و مفهوم مهدویت</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%87%D8%AF%D9%88%DB%8C%D8%AA%20%DB%8C%D8%B9%D9%86%DB%8C%20%DA%86%D9%87%D8%9F" >مهدویت یعنی چه؟</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%87%D8%AF%D9%88%DB%8C%D8%AA" >مهدویت</a>، 
+																</font>
+
+</div></div>
+<div class=bpost></div>
+<div class=tpost><div class=title><a href="http://molaman.mihanblog.com/post/92">چند حدیث از مولا امام زمان(عج)4</a></div>
+<div class=date>نوشته شده در تاریخ دوشنبه 9 مرداد 1396 توسط 
+	مغناطیـس  | <a target="_self" href="javascript:newComment(92)" >
+	نظرات (<script>setCommentCnt(92)</script>)</a></div></div>
+<div class=xpost><div class=xpost2><div style="float:right">
+	</div> 
+<font size="3" face="Mihan-Koodak"><font size="3" color="#996633" face="Mihan-Koodak">صاحب‌الزمان، مهدی موعود(عج) می‌فرمایند:<br></font><font color="#009900">11.</font> شیعیان ما هنگامی به فرجام نیک و زیبای خداوند میرسند که از گناهانی که نهی شده اند ؛احتراز نمایند .(بحارالانوار ؛ ج 53 ؛ص 177)
+</font><p align="justify"><font size="3" face="Mihan-Koodak"><font color="#009900">12.</font> ما در رعایت حال شما کوتاهی نمی کنیم و یاد شما را 
+از خطر نبرده ایم ؛ که اگر جز این بود گرفتاریها به شما روی می آورد و 
+دشمنان شما راریشه کن می کردند .پس از خدا بترسید و ما را پشتیبانی 
+کنید&nbsp;.(بحارالانوار ؛ج 53؛ص 175.)</font></p><font size="3" face="Mihan-Koodak">
+</font><p align="justify"><font size="3" face="Mihan-Koodak"><font color="#009900">13. </font>هر گاه خداوند به ما اجازه دهد که سخن بگوییم ؛حق 
+ظاهر خواهد شد و باطل سست و ضعیف شده و از میان خواهد رفت .(بحارالانوار ؛ ج
+ 25 ؛ص180)</font></p><p align="center"><br><img src="../file.mihanblog.com/public/user_data/user_files/647/1939325/hadis..jpg" alt="یا مهدی ادرکنی" width="265" height="265"></p><p align="center"></p>
+
+				<br><br><b></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://molaman.mihanblog.com/post/category/8">
+			حدیث مهدوی</a>،&nbsp;				<br>
+						برچسب ها:
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%88%D9%84%D8%A7%DB%8C%20%D9%85%D9%86" >مولای من</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%AD%D8%AF%DB%8C%D8%AB%20%D9%85%D9%87%D8%AF%D9%88%DB%8C" >حدیث مهدوی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D9%85%D9%87%D8%AF%DB%8C" >امام مهدی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D8%AD%D8%A7%D8%AF%DB%8C%D8%AB%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >احادیث امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%AD%D8%AF%DB%8C%D8%AB%20%D8%A7%D8%B2%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >حدیث از امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%87%D8%AF%D9%88%DB%8C%D8%AA" >مهدویت</a>، 
+																</font>
+
+</div></div>
+<div class=bpost></div>
+<div class=tpost><div class=title><a href="http://molaman.mihanblog.com/post/98">چرا به امام زمان(عج)نیاز داریم؟</a></div>
+<div class=date>نوشته شده در تاریخ یکشنبه 8 مرداد 1396 توسط 
+	مغناطیـس  | <a target="_self" href="javascript:newComment(98)" >
+	نظرات (<script>setCommentCnt(98)</script>)</a></div></div>
+<div class=xpost><div class=xpost2><div style="float:right">
+	</div> <font size="3" face="Mihan-Koodak">می گوید: چرا فکر می کنی به&nbsp;امام زمان(عجل الله تعالی فرجه الشریف) نیاز داریم؟</font><div><font size="3" face="Mihan-Koodak">می گویم: چرا نه؟</font></div><div><font size="3" face="Mihan-Koodak">می گوید: دلیل بیاور.</font></div><div><font size="3" face="Mihan-Koodak">می گویم: امام رضا (علیه السلام) را قبول داری؟</font></div><div><font size="3" face="Mihan-Koodak">می گوید: آری.</font></div><div><font size="3" face="Mihan-Koodak">آن موقع است که «ربّ اشرح لی صدری و یسّرلی امری» می شود آغاز سخنانم:</font></div><div><font size="3" face="Mihan-Koodak">« امام...؟ </font><font size="3" face="Mihan-Koodak">امام&nbsp;همه کس&nbsp;من است،</font></div><div><font size="3" face="Mihan-Koodak">مگر نشنیدی روایت امام رضا (علیه السلام) را که می فرمایند:</font></div><div><font size="3" face="Mihan-Koodak">امام وسیله کامل شدن نماز است،امام وسیله کامل شدن زکات است،امام وسیله کامل شدن روزه است،امام وسیله کامل شدن حج است،امام وسیله کامل شدن جهاد است...؟</font></div><div><font size="3" face="Mihan-Koodak">یعنی اگر امام را نداشته باشم،هیچ حجی از من مقبول نیست،هیچ نمازی مرا به خدایم وصل نمی کند،هیچ روزه ای در نامه اعمالم ثبت نخواهد شد،هیچ جهادی کامل نیست،...</font></div><div><font size="3" face="Mihan-Koodak">امام رضا(علیه السلام) می فرمایند: </font><font size="3" face="Mihan-Koodak">امام ماه تابان است ... امام چراغ فروزان است ... امام نور درخشان است ... امام ستاره ای راهنما در تاریکیها است ...</font></div><div><font size="3" face="Mihan-Koodak">یعنی اگر امام را نداشته باشم،چگونه این راه مخوف و غریب را بپیمایم؟</font></div><div><font size="3" face="Mihan-Koodak">امام رضا(علیه السلام) ، امام را آب گوارا معرفی می کنند،حال من سوالی می پرسم:</font></div><div><font size="3" face="Mihan-Koodak">انسان ... بدون آب می تواند زندگی کند؟...</font></div><div><font size="3" face="Mihan-Koodak">امام رضا(علیه السلام) می فرمایند: </font><font size="3" face="Mihan-Koodak">امام ابری بارنده است ، امام بارانی شتابنده است...</font></div><div><font size="3" face="Mihan-Koodak">و چه رحمتی از این بالاتر؟ خداوند نعمت به این خوبی داده،استفاده نکنیم؟!</font></div><div><font size="3" face="Mihan-Koodak">امام رضا(علیه السلام) می فرمایند: امام پدری مهربان است...</font></div><div><font size="3" face="Mihan-Koodak">انسانی که پدر ندارد،اساس و پایه ندارد،فرو می ریزد. نکند ما نیز بدون امام فرو بریزیم؟!</font></div><div><font size="3" face="Mihan-Koodak">امام اطاعتش واجب است...</font></div><div><font size="3" face="Mihan-Koodak">چرا از دیگران که هیچ اعتمادی به آنها نیست پیروی می کنیم؟</font></div><div><font size="3" face="Mihan-Koodak">امام خیرخواه بندگان خداست...</font></div><div><font size="3" face="Mihan-Koodak">چرا ناخواسته با دستان خود سدی می شویم بر راه پیشرفتمان؟</font></div><div><font size="3" face="Mihan-Koodak">امام به امر خدای عزوجل <b><font size="4" color="#339999">قائم</font></b> است...»</font></div><div><font size="3" face="Mihan-Koodak">و هر دو به احترام او برمی خیزیم.</font></div><div><font size="2" face="Thread-00001de4-Id-00000011" color="#cc9933"><br></font></div><div><font size="2" face="Mihan-Koodak" color="#3366ff">*منبع روایات: الکافی/ج1/کتاب الحجه/باب نادر جامع فی فضل الامام و صفاته</font></div><div align="center"><font size="2" face="Thread-00001de4-Id-00000011" color="rgb(204,153,51)"><img src="../file.mihanblog.com/public/user_data/user_files/647/1939325/gh.jpg" alt="یا قائم آل محمد"></font></div>
+
+
+
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://molaman.mihanblog.com/post/category/8">
+			حدیث مهدوی</a>،&nbsp;<a href="http://molaman.mihanblog.com/post/category/3">
+			علم مهدوی</a>،&nbsp;<a href="http://molaman.mihanblog.com/post/category/2">
+			دلنوشته مهدوی</a>،&nbsp;				<br>
+						برچسب ها:
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%88%D9%84%D8%A7%DB%8C%20%D9%85%D9%86" >مولای من</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D9%85%D9%87%D8%AF%DB%8C" >امام مهدی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%DA%86%D8%B1%D8%A7%20%D8%A8%D9%87%20%D9%88%D8%AC%D9%88%D8%AF%20%D8%A7%D9%85%D8%A7%D9%85%20%D9%86%DB%8C%D8%A7%D8%B2%20%D8%AF%D8%A7%D8%B1%DB%8C%D9%85" >چرا به وجود امام نیاز داریم</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%AF%D8%B1%20%DA%A9%D9%84%D8%A7%D9%85%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B1%D8%B6%D8%A7" >امام در کلام امام رضا</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87%20%D9%85%D9%87%D8%AF%D9%88%DB%8C" >دلنوشته مهدوی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%B9%D9%84%D9%85%20%D9%85%D9%87%D8%AF%D9%88%DB%8C" >علم مهدوی</a>، 
+																</font>
+
+</div></div>
+<div class=bpost></div>
+<div class=tpost><div class=title><a href="http://molaman.mihanblog.com/post/91">داستان عجیب ملاقات شیخ حسن با امام زمان(عج)</a></div>
+<div class=date>نوشته شده در تاریخ یکشنبه 8 مرداد 1396 توسط 
+	مغناطیـس  | <a target="_self" href="javascript:newComment(91)" >
+	نظرات (<script>setCommentCnt(91)</script>)</a></div></div>
+<div class=xpost><div class=xpost2><div style="float:right">
+	</div> <font size="3" face="Mihan-Koodak">داستان ذیل در مورد شخصی است که عاشق دختر همسایشان شده است. او برای رسیدن
+ به عشقش هر کاری می کند ولی نهایتا متوسل به درگاه امام زمان(عج) می شود و
+ آخرش را هم که معلوم است....اما نکاتی بسیار تامل برانگیز در این داستان 
+وجود دارد. منجمله اینکه زیارت وجود مقدس حضرت می تواند نصیب هر کسی بشود 
+(و این نیست که خاص عرفا یا خواص باشد) و ثانیا برای دیدار حضرت لازم نیست 
+که حتما درخواست بسیار عارفانه ای داشته باشی. ظاهرا کیفیت درخواست مهم است
+ نه نوع درخواست. اینکه هر چی می خواهی را خالصانه طلب کنی. در هر صورت این
+ داستان را با دقت مطالعه کنید.<br></font><div align="center"><img src="../file.mihanblog.com/public/user_data/user_files/647/1939325/dastan..jpg" alt="یا ابا صالح المهدی" "="" class="shrinkToFit" width="277" height="173"><br><font size="3" face="Mihan-Koodak"><font color="#666600">برای خواندن داستان به ادامه مطلب مراجعه کنید.</font><br></font></div>
+
+
+
+
+
+				<br><br><b><a href='http://molaman.mihanblog.com/post/91'>ادامه مطلب</a></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://molaman.mihanblog.com/post/category/7">
+			داستان مهدوی</a>،&nbsp;				<br>
+						برچسب ها:
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%20%D9%85%D9%87%D8%AF%D9%88%DB%8C" >داستان مهدوی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%88%D9%84%D8%A7%DB%8C%20%D9%85%D9%86" >مولای من</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D9%85%D9%87%D8%AF%DB%8C" >امام مهدی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%20%D9%85%D9%84%D8%A7%D9%82%D8%A7%D8%AA%20%D8%B4%DB%8C%D8%AE%20%D8%AD%D8%B3%D9%86%20%D8%A8%D8%A7%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >داستان ملاقات شیخ حسن با امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >داستان امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%20%D9%85%D9%84%D8%A7%D9%82%D8%A7%D8%AA%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >داستان ملاقات امام زمان</a>، 
+																</font>
+
+</div></div>
+<div class=bpost></div>
+<div class=tpost><div class=title><a href="http://molaman.mihanblog.com/post/90">اشعار کوچک برای امام زمان(عج)</a></div>
+<div class=date>نوشته شده در تاریخ شنبه 7 مرداد 1396 توسط 
+	مغناطیـس  | <a target="_self" href="javascript:newComment(90)" >
+	نظرات (<script>setCommentCnt(90)</script>)</a></div></div>
+<div class=xpost><div class=xpost2><div style="float:right">
+	</div> 
+<font size="3"><font face="Mihan-Koodak">این اشعار برای پیامک هم مناسب هستن.امیدوارم خوشتون بیاد...<br></font></font><br><p style="text-align: center;"><font size="3" face="Mihan-Koodak">اى نـسـیـم سـحـر آرامـگـه یـار كـجـاسـت؟ <br>مـنزل‏آن مه عاشق كُش عیار كجاست؟ <br>هـرسـر مـوى مـرا با تـو هـزاران ‏كـار اسـت <br>مـا كـجاییم و ملامتگر بیكار كجاست؟ <br>ساقى و مطرب و مى،جمله‏ مهیاست ولى <br>عـیش، بى یار مهیا نشود یار كجاست؟ 
+</font></p><p style="text-align: center;"><font size="3" face="Mihan-Koodak">----------------------------------------------</font></p><font size="3" face="Mihan-Koodak">
+</font><p style="text-align: center;"><font size="3" face="Mihan-Koodak">صبحی گره اززمانه واخواهد شد<br>رازشب تاربرملا خواهدشد<br>درراه ،&nbsp; عزیزیست كه باآمدنش<br>هرقطب نما&nbsp; قبله نماخواهد شد<br>اللهم عجل لولیك الفرج</font></p><font size="3" face="Mihan-Koodak">
+</font><p style="text-align: center;"><font size="3" face="Mihan-Koodak">----------------------------------------------<br><br>بی قرار توام و در دل تنگم گله هاست<br>آه! بی تاب شدن عادت بی حوصله هاست<br>مثل عكس رخ مهتاب كه افتاده در آب<br>در دلم هستی و بین من و تو فاصله هاست<br>یامهدی،ادركنی!</font></p><font size="3" face="Mihan-Koodak">
+</font><p style="text-align: center;"><font size="3" face="Mihan-Koodak">----------------------------------------------</font></p><p style="text-align: center;"><font size="3" face="Mihan-Koodak"><font color="#999900">برای خواندن بیشتر به ادامه مطلب مراجعه کنید.</font><br></font></p>
+
+				<br><br><b><a href='http://molaman.mihanblog.com/post/90'>ادامه مطلب</a></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://molaman.mihanblog.com/post/category/2">
+			دلنوشته مهدوی</a>،&nbsp;				<br>
+						برچسب ها:
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%B4%D8%B9%D8%B1%20%D9%85%D9%87%D8%AF%D9%88%DB%8C" >شعر مهدوی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%B4%D8%B9%D8%B1%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >شعر امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%88%D9%84%D8%A7%DB%8C%20%D9%85%D9%86" >مولای من</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D9%85%D9%87%D8%AF%DB%8C" >امام مهدی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%B4%D8%B9%D8%B1%20%D9%85%D8%B0%D9%87%D8%A8%DB%8C" >شعر مذهبی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%BE%DB%8C%D8%A7%D9%85%DA%A9%20%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >پیامک درباره امام زمان</a>، 
+																</font>
+
+</div></div>
+<div class=bpost></div>
+<div class=tpost><div class=title><a href="http://molaman.mihanblog.com/post/97">اعلام نتیجه مسابقه قرآنی</a></div>
+<div class=date>نوشته شده در تاریخ جمعه 6 مرداد 1396 توسط 
+	مغناطیـس  | <a target="_self" href="javascript:newComment(97)" >
+	نظرات (<script>setCommentCnt(97)</script>)</a></div></div>
+<div class=xpost><div class=xpost2><div style="float:right">
+	</div> 
+
+<font size="3"><font face="Mihan-Koodak">دوستای خوبم،از همراهیتون در این مسابقه متشکرم.<br>از هفت نفری که به سوال پاسخ دادن،پاسخ پنج نفر درست بود و به قید قرعه به سه نفر هدیه کوچکی داده میشه.<br></font></font><div align="center"><font size="3" color="#999900"><font face="Mihan-Koodak"><font size="4">نفر اول به قید قرعه: شیوا خانم (<b>Shiva</b>)</font></font></font><font color="#999900"><br><font size="3"><font face="Mihan-Koodak"><font size="4">نفر دوم: آقای امیرعلی توفیقی</font></font></font><br><font size="3"><font face="Mihan-Koodak"><font size="4">نفر سوم: مریم خانم</font></font></font></font><br></div><font size="3"><font face="Mihan-Koodak">لطفا برندگان مسابقه هر چه سریعتر شماره حسابشون رو به صورت نظر خصوصی به همین پست ارسال کنن،انشالله در اسرع وقت هدیه هاشون رو براشون واریز میکنم.<br><font color="#3333FF"><font color="#666666">لطفا منتظر مسابقه بعدی باشید...</font><br></font></font></font><div align="center"><font size="3" color="#CC0000"><font face="Mihan-Koodak">برای خواندن پاسخ مسابقه به ادامه مطلب مراجعه کنید.</font></font><br></div><div align="center"><img src="../file.mihanblog.com/public/user_data/user_files/647/1939325/mosabeghe..jpg" alt="التماس دعا" width="244" height="244"></div>
+
+
+
+
+
+
+				<br><br><b><a href='http://molaman.mihanblog.com/post/97'>ادامه مطلب</a></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://molaman.mihanblog.com/post/category/1">
+			مدیر وبلاگ</a>،&nbsp;				<br>
+						برچسب ها:
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D8%B3%D8%A7%D8%A8%D9%82%D9%87%20%D9%82%D8%B1%D8%A2%D9%86%DB%8C" >مسابقه قرآنی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%86%D8%AA%D8%A7%DB%8C%D8%AC%20%D9%85%D8%B3%D8%A7%D8%A8%D9%82%D9%87%20%D9%82%D8%B1%D8%A2%D9%86%DB%8C" >نتایج مسابقه قرآنی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%88%D9%84%D8%A7%DB%8C%20%D9%85%D9%86" >مولای من</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D9%85%D9%87%D8%AF%DB%8C" >امام مهدی</a>، 
+																</font>
+
+</div></div>
+<div class=bpost></div>
+<div class=tpost><div class=title><a href="http://molaman.mihanblog.com/post/96">جمعه یعنی...</a></div>
+<div class=date>نوشته شده در تاریخ جمعه 6 مرداد 1396 توسط 
+	مغناطیـس  | <a target="_self" href="javascript:newComment(96)" >
+	نظرات (<script>setCommentCnt(96)</script>)</a></div></div>
+<div class=xpost><div class=xpost2><div style="float:right">
+	</div> 
+
+<div align="center"><font size="3" face="Mihan-Koodak">جمعه یعنی عطرنرگــس درهوا سر میکشـــد</font><br><font size="3" face="Mihan-Koodak">جمعه یعنی قلب عاشــق سوی او پر میکشـــد</font><br><br><font size="3" face="Mihan-Koodak">جمعه یعنی روشن ازرویش بگردد این جهــان</font><br><font size="3" face="Mihan-Koodak">جمعه یعنی انتظـــار مَهــدی صاحبــ زمان(عج)</font><br></div><font size="3" face="Mihan-Koodak"><font color="#339999"><br><font color="#CC9933">#یا_حجت_بن_الحسن_عجل_علی_ظهورک<br>#باز_جمعه_و_انتظار</font><br></font></font><div align="center"><img src="../file.mihanblog.com/public/user_data/user_files/647/1939325/jomee..jpg" alt="جمعه یعنی انتظار" width="313" height="313"></div>
+
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://molaman.mihanblog.com/post/category/2">
+			دلنوشته مهدوی</a>،&nbsp;				<br>
+						برچسب ها:
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%AC%D9%85%D8%B9%D9%87%20%D9%88%20%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1" >جمعه و انتظار</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%88%D9%84%D8%A7%DB%8C%20%D9%85%D9%86" >مولای من</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D9%85%D9%87%D8%AF%DB%8C" >امام مهدی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87%20%D9%85%D9%87%D8%AF%D9%88%DB%8C" >دلنوشته مهدوی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87%20%D8%AC%D9%85%D8%B9%D9%87" >دلنوشته جمعه</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%B4%D8%B9%D8%B1%20%D8%AC%D9%85%D8%B9%D9%87%20%DB%8C%D8%B9%D9%86%DB%8C" >شعر جمعه یعنی</a>، 
+																</font>
+
+</div></div>
+<div class=bpost></div>
+<div class=tpost><div class=title><a href="http://molaman.mihanblog.com/post/88">گالری عکس نوشته مولا6</a></div>
+<div class=date>نوشته شده در تاریخ پنجشنبه 5 مرداد 1396 توسط 
+	مغناطیـس  | <a target="_self" href="javascript:newComment(88)" >
+	نظرات (<script>setCommentCnt(88)</script>)</a></div></div>
+<div class=xpost><div class=xpost2><div style="float:right">
+	</div> 
+<font size="3"><font face="Mihan-Koodak">سلام، با سری بعد از عکس نوشته های زیبایی با موضوع امام زمان(عج) در خدمتیم:<br></font></font><div align="center"><img src="http://bashiran.ir/wp-content/uploads/2016/05/%D8%A8%D9%87-%D8%B1%D8%A7%D9%87-%D8%A8%D9%8A%D8%A7%D9%8A%D9%8A%D9%85.jpg" alt="http://bashiran.ir/wp-content/uploads/2016/05/%D8%A8%D9%87-%D8%B1%D8%A7%D9%87-%D8%A8%D9%8A%D8%A7%D9%8A%D9%8A%D9%85.jpg" class="shrinkToFit" width="380" height="380"><br><font size="3" color="#009900"><font face="Mihan-Koodak">برای مشاهده ادامه گالری،به ادامه مطلب مراجعه کنید.</font></font><br></div>
+
+
+
+
+				<br><br><b><a href='http://molaman.mihanblog.com/post/88'>ادامه مطلب</a></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://molaman.mihanblog.com/post/category/5">
+			عکس مهدوی</a>،&nbsp;				<br>
+						برچسب ها:
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%B9%DA%A9%D8%B3%20%D9%85%D9%87%D8%AF%D9%88%DB%8C" >عکس مهدوی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%88%D9%84%D8%A7%DB%8C%20%D9%85%D9%86" >مولای من</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >دلنوشته امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%B9%DA%A9%D8%B3%20%D9%86%D9%88%D8%B4%D8%AA%D9%87%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >عکس نوشته امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D9%85%D9%87%D8%AF%DB%8C" >امام مهدی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%B9%DA%A9%D8%B3%20%D9%86%D9%88%D8%B4%D8%AA%D9%87%20%D9%85%D8%B0%D9%87%D8%A8%DB%8C" >عکس نوشته مذهبی</a>، 
+																</font>
+
+</div></div>
+<div class=bpost></div>
+<div class=tpost><div class=title><a href="http://molaman.mihanblog.com/post/95">مسابقه قرآنی ویژه وبلاگ مولای من</a></div>
+<div class=date>نوشته شده در تاریخ چهارشنبه 4 مرداد 1396 توسط 
+	مغناطیـس  | <a target="_self" href="javascript:newComment(95)" >
+	نظرات (<script>setCommentCnt(95)</script>)</a></div></div>
+<div class=xpost><div class=xpost2><div style="float:right">
+	</div> 
+
+
+<div align="center"><font size="3"><font face="Mihan-Koodak">بسم رب المهدی</font></font><br></div><font size="3"><font face="Mihan-Koodak">این وبلاگ مسابقه ی کوچکی برگزار می کند که شرکت عموم بازدیدکنندگان در آن آزاد است.<br>در این مسابقه سوالی را مطرح می کنیم و شما با پاسخ دادن به آن -که به صورت انتخاب یکی از چهار گزینه است- صاحب هدیه کوچکی از طرف مدیر وبلاگ می شوید.<br><font color="#999900">توجه:</font><br>لطفا در صورت تمایل به شرکت در وبلاگ،پاسخ را در یک کامنت(نظر)ذکر کنید و نام خود را حتما بنویسید.نظر را در حالت خصوصی قرار داده و ارسال کنید. سپس نظر دیگری را بر این محتوا «من در این مسابقه شرکت کردم» به صورت عمومی(غیرخصوصی) ارسال کنید.<br><font color="#999900">سوال:</font><br>امام صادق(علیه السلام) می فرمایند: «هرکس سوره های ...................... را قرائت کند پیش از آن که بمیرد ، حضرت قائم (علیه السلام) را درک می کند و اگر بمیرد در جوار رسول خدا (صل الله علیه و آل و سلم) خواهد بود.<br>الف) معوذتین<br>ب) چهار قل<br>ج) مسبحات<br>د) حمد و اخلاص<br><font color="#999900">هدایا:</font></font></font><br><font size="3"><font face="Mihan-Koodak">نفر اول: هدیه نقدی به ارزش 15000 تومان<br>نفر دوم: هدیه نقدی به ارزش 10000 تومان<br>نفر سوم: هدیه نقدی به ارزش 5000 تومان<br>هدایا به کسانی تعلق می گیرد که پاسخ را درست بدهند و در قرعه کشی رتبه اول تا سوم را کسب نمایند.<br><font color="#999900">مهلت پاسخگویی:</font><br>تا جمعه ششم مرداد 96 ساعت 18:00 عصر<br></font></font><div align="center"><img src="../file.mihanblog.com/public/user_data/user_files/647/1939325/mosabeghe2..jpg" alt="کی می شود بگویند مهدی فاطمه آمد" class="shrinkToFit" width="342" height="195"><span style="color: #008000;"><strong></strong></span></div>
+
+
+
+
+
+
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://molaman.mihanblog.com/post/category/3">
+			علم مهدوی</a>،&nbsp;<a href="http://molaman.mihanblog.com/post/category/1">
+			مدیر وبلاگ</a>،&nbsp;				<br>
+						برچسب ها:
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D8%B3%D8%A7%D8%A8%D9%82%D9%87%20%D9%85%D9%87%D8%AF%D9%88%DB%8C" >مسابقه مهدوی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%B9%D9%84%D9%85%20%D9%85%D9%87%D8%AF%D9%88%DB%8C" >علم مهدوی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%B3%D9%88%D8%B1%D9%87%20%D9%87%D8%A7%DB%8C%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >سوره های امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D8%B3%D8%A7%D8%A8%D9%82%D9%87%20%D9%82%D8%B1%D8%A2%D9%86%DB%8C" >مسابقه قرآنی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%88%D9%84%D8%A7%DB%8C%20%D9%85%D9%86" >مولای من</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D9%85%D9%87%D8%AF%DB%8C" >امام مهدی</a>، 
+																</font>
+
+</div></div>
+<div class=bpost></div>
+<div class=tpost><div class=title><a href="http://molaman.mihanblog.com/post/86">ما برای ظهور چه کاری انجام دهیم؟</a></div>
+<div class=date>نوشته شده در تاریخ چهارشنبه 4 مرداد 1396 توسط 
+	مغناطیـس  | <a target="_self" href="javascript:newComment(86)" >
+	نظرات (<script>setCommentCnt(86)</script>)</a></div></div>
+<div class=xpost><div class=xpost2><div style="float:right">
+	</div> 
+
+<div class="content">
+    <div class="field field-type-text field-field-q">
+    <div class="field-items">
+            <div class="field-item odd">
+                    <font size="3" face="Mihan-Koodak" color="#33CC00">پرسش :
+ما چه کاری می توانیم انجام بدهیم ؟ با توجه به اینکه الان همه درگیر مشغله
+ کاری ، درسی و... هستند ، چه کار می تونیم بکنیم که خودمون رو آماده کرده 
+باشیم ؟
+        </font></div><font size="3" face="Mihan-Koodak">
+        </font></div><font size="3" face="Mihan-Koodak">
+</font></div><font size="3" face="Mihan-Koodak">
+</font><p><font size="3" face="Mihan-Koodak">پاسخ :<br>
+برای کسب امادگی برای ظهور،لازم است به ویژگی های یاران آن حضرت آگاهی داشته باشیم تا با کسب این ویژگی ها،آماده ظهور شویم:</font></p><font size="3" face="Mihan-Koodak">
+</font><p><font size="3" face="Mihan-Koodak">1.شناخت پروردگار</font></p><font size="3" face="Mihan-Koodak">
+</font><p><font size="3" face="Mihan-Koodak">یاران امام مهدی(عج) از جمله كسانی هستند كه خداوند را آن گونه كه 
+شایسته است می شناسند. حضرت علی(ع) این شناخت والای خداوند را در ایشان این
+ گونه وصف فرموده است:«رجال مومنون عرفوا الله حق معرفته و هم انصارالمهدی 
+فی آخر الزمان»{بحارالانوار، محمدباقر مجلسی، ج ۵۷، ص .۲۲۹}.</font></p><div align="center"><font size="3" face="Mihan-Koodak"></font><font size="3" color="#999900"><font face="Mihan-Koodak">برای خواندن ادامه پاسخ ، به ادامه مطلب مراجعه کنید.</font></font><br></div></div>
+
+
+
+
+
+
+				<br><br><b><a href='http://molaman.mihanblog.com/post/86'>ادامه مطلب</a></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://molaman.mihanblog.com/post/category/3">
+			علم مهدوی</a>،&nbsp;				<br>
+						برچسب ها:
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D8%A7%20%DA%86%D9%87%20%DA%A9%D8%A7%D8%B1%DB%8C%20%D8%A8%D8%B1%D8%A7%DB%8C%20%D8%B8%D9%87%D9%88%D8%B1%20%D8%A7%D9%86%D8%AC%D8%A7%D9%85%20%D8%AF%D9%87%DB%8C%D9%85" >ما چه کاری برای ظهور انجام دهیم</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%B8%D9%87%D9%88%D8%B1%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >ظهور امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D9%85%D9%87%D8%AF%DB%8C" >امام مهدی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%88%D9%84%D8%A7%DB%8C%20%D9%85%D9%86" >مولای من</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%B9%D9%84%D9%85%20%D9%85%D9%87%D8%AF%D9%88%DB%8C" >علم مهدوی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%B2%D9%85%DB%8C%D9%86%D9%87%20%D8%B3%D8%A7%D8%B2%DB%8C%20%D8%A8%D8%B1%D8%A7%DB%8C%20%D8%B8%D9%87%D9%88%D8%B1%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >زمینه سازی برای ظهور امام زمان</a>، 
+																</font>
+
+</div></div>
+<div class=bpost></div>
+<div class=tpost><div class=title><a href="http://molaman.mihanblog.com/post/87">گریه امام زمان(عج) برای شیعیان</a></div>
+<div class=date>نوشته شده در تاریخ سه شنبه 3 مرداد 1396 توسط 
+	مغناطیـس  | <a target="_self" href="javascript:newComment(87)" >
+	نظرات (<script>setCommentCnt(87)</script>)</a></div></div>
+<div class=xpost><div class=xpost2><div style="float:right">
+	</div> <font size="3"><font face="Mihan-Koodak">خیلی ناراحت کننده اس،امام زمان(عج) بیشتر به فکر ماست تا اینکه ما به فکر ایشون باشیم... :(</font></font><br><br>
+		<!--AparatShow-->
+				<div style="display:none">[http://www.aparat.com/v/rSco3]</div>
+                <div class="aparatFrame">
+                    <iframe frameborder=0  allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" width="435" height="290" src="http://www.aparat.com/video/video/embed/videohash/rSco3/vt/frame"> </iframe>
+                </div>
+
+		<!--eoAparatShow-->
+								<br><br><b></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://molaman.mihanblog.com/post/category/4">
+			کلیپ مهدوی</a>،&nbsp;				<br>
+						برچسب ها:
+													<a href="http://molaman.mihanblog.com/post/tag/%DA%A9%D9%84%DB%8C%D9%BE%20%D9%85%D9%87%D8%AF%D9%88%DB%8C" >کلیپ مهدوی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D9%85%D9%87%D8%AF%DB%8C" >امام مهدی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%88%D9%84%D8%A7%DB%8C%20%D9%85%D9%86" >مولای من</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%DA%AF%D8%B1%DB%8C%D9%87%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86%20%D8%A8%D8%B1%D8%A7%DB%8C%20%D8%B4%DB%8C%D8%B9%DB%8C%D8%A7%D9%86" >گریه امام زمان برای شیعیان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%DA%AF%D8%B1%DB%8C%D9%87%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >گریه امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%DA%A9%D9%84%DB%8C%D9%BE%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >کلیپ امام زمان</a>، 
+																</font>
+
+</div></div>
+<div class=bpost></div>
+<div class=tpost><div class=title><a href="http://molaman.mihanblog.com/post/85">ارتباط خضر نبی(ع) با امام زمان(عج)</a></div>
+<div class=date>نوشته شده در تاریخ دوشنبه 2 مرداد 1396 توسط 
+	مغناطیـس  | <a target="_self" href="javascript:newComment(85)" >
+	نظرات (<script>setCommentCnt(85)</script>)</a></div></div>
+<div class=xpost><div class=xpost2><div style="float:right">
+	</div> <font size="3" face="Mihan-Koodak">همة ما خضر نبی را به عنوان نماد عمر جاودانه و طولانی می‌شناسیم؛ امّا 
+در روایات، او حجّتی برای طول عمر امام زمان(ع) و مونس تنهایی‌های ایشان 
+معرفی شده است.<br></font><p><font size="3" face="Mihan-Koodak">
+در روایات چهار پیامبر را می‌توانیم ببیینم که عمری چند هزار ساله 
+یافته‌اند و از زمان خود تا کنون زنده هستند. این پیامبران عبارتند از:<br>
+<font color="#666600">1.</font> ادریس(ع)؛<br>
+<font color="#666600">2.</font> الیاس(ع)؛<br>
+<font color="#666600">3.</font> خضر(ع)؛<br>
+<font color="#666600">4.</font> مسیح(ع).</font></p><font size="3" face="Mihan-Koodak">
+</font><p><font size="3" face="Mihan-Koodak">از میان آنان خضر و الیاس در زمین و مسیح و ادریس در آسمان زیست 
+می‌کنند.1 در این میان خضر و الیاس با هم برادرند و هم دوره با ذوالقرنین 
+بوده‌اند. برخی او را متولّد «فارس» معرفی کرده‌اند.2 در روایتی از امام 
+صادق(ع) نقل شده که فرمودند:</font></p><font size="3" face="Mihan-Koodak">
+</font><p><font size="3" face="Mihan-Koodak">«خضر، پیغمبر مرسل بود و حق تعالی او را بر قوم او مبعوث گردانید و او 
+قوم خود را به توحید و به اقرار انبیا و رسل و كتب انبیا دعوت نمود و معجزة
+ او این بود كه بر بالای چوب خشكی یا بر زمین سادة بی‏گیاهی نمی‏نشست جز 
+آنكه آنها سبز می‌شد و او را خضر از این جهت نامیدند؛ زیرا كه خضر مشتق از 
+سبزیست و اسم او تالیا بن ملكان‌ست كه اجداد او به نوح منتهی می شوند.»3</font></p><font size="3" face="Mihan-Koodak">
+</font><p><font size="3" face="Mihan-Koodak">گفته شده او در سفری همراه با ذوالقرنین بوده و هر دو به دنبال آب حیات 
+می‌گشته‌اند. پس از طیّ مسافتی طولانی خضر آب حیات را یافته و از آن 
+می‌نوشد و ذوالقرنین بی بهره می‌ماند.4 البتّه در روایات، گاه علّت طول عمر
+ او را دعای حضرت آدم(ع) گفته‌اند.5 </font></p><font size="3" face="Mihan-Koodak">
+در روایات مربوط به معراج رسول خدا(ص) آمده که بوی مطبوعی را ایشان در 
+آسمان احساس می‌کنند. وقتی از علّت آن می‌پرسند، پاسخ می‌شنوند این بو 
+مربوط به خانة زن و شوهری است از مؤمنان به حضرت خضر بوده و پس از برملا 
+شدن ایمانشان در خانة خود زنده زنده به آب جوش افکنده شده و سپس خانه را 
+برسرشان ویران می‌کنند.6<br></font><div align="center"><font size="3" color="#3333FF" face="Mihan-Koodak"><font color="#33CC00">برای خواندن ادامه ، به ادامه مطلب مراجعه کنید.</font><br></font><img src="../file.mihanblog.com/public/user_data/user_files/647/1939325/khezr..jpg" alt="کوه خضر قدمگاه خضر نبی" width="346" height="238"></div>
+
+
+
+				<br><br><b><a href='http://molaman.mihanblog.com/post/85'>ادامه مطلب</a></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://molaman.mihanblog.com/post/category/3">
+			علم مهدوی</a>،&nbsp;				<br>
+						برچسب ها:
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D9%85%D9%87%D8%AF%DB%8C" >امام مهدی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%88%D9%84%D8%A7%DB%8C%20%D9%85%D9%86" >مولای من</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%B9%D9%84%D9%85%20%D9%85%D9%87%D8%AF%D9%88%DB%8C" >علم مهدوی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A2%DB%8C%D8%A7%20%D8%AE%D8%B6%D8%B1%20%D9%86%D8%A8%DB%8C%20%D8%AF%D8%B1%20%D8%AE%D8%AF%D9%85%D8%AA%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86%20%D8%A7%D8%B3%D8%AA%D8%9F" >آیا خضر نبی در خدمت امام زمان است؟</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D8%B1%D8%AA%D8%A8%D8%A7%D8%B7%20%D8%AE%D8%B6%D8%B1%20%D9%86%D8%A8%DB%8C%20%D8%A8%D8%A7%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >ارتباط خضر نبی با امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%AE%D8%B6%D8%B1%20%D9%86%D8%A8%DB%8C" >خضر نبی</a>، 
+																</font>
+
+</div></div>
+<div class=bpost></div>
+<div class=tpost><div class=title><a href="http://molaman.mihanblog.com/post/84">دانلود مداحی با موضوع مولا امام زمان(عج)</a></div>
+<div class=date>نوشته شده در تاریخ یکشنبه 1 مرداد 1396 توسط 
+	مغناطیـس  | <a target="_self" href="javascript:newComment(84)" >
+	نظرات (<script>setCommentCnt(84)</script>)</a></div></div>
+<div class=xpost><div class=xpost2><div style="float:right">
+	</div> 
+
+<font size="3"><font face="Mihan-Koodak">تا حالا شده دلتون برای امام زمان (عج) تنگ بشه؟<br>جوری که انگار قبلا ایشونو دیدین و الان دلتون بخواد دوباره ببینینشون؟<br>تا حالا شده بخواید که دلتون به امام زمان (عج) نزدیک بشه؟<br>میدونین وقتی به امام زمان (عج) فکر میکنین خیلی به ایشون نزدیکین؟<br>اگه گریه هم بکنین دیگه چی میشه!<br>چند مداحی برای امام زمان(عج) برای هرکی دلتنگ مولاست...<br>کلیک کنید:<br><font color="#009900"><a href="http://s9.picofile.com/file/8301705318/%D8%AD%D8%A7%D8%AC%D8%AA%D9%85_%D8%B1%D8%A7_%D8%B1%D9%88%D8%A7_%DA%A9%D9%86.mp3.html" target="_blank" title="پر از حاجتم حاجتم را روا کن">پر از حاجتم حاجتم را روا کن</a><br><a href="http://s8.picofile.com/file/8301705518/%D8%AA%D9%88_%DA%A9%D8%B9%D8%A8%D9%87_%D8%AF%D9%84%D9%87%D8%A7%DB%8C%DB%8C.mp3.html" target="_blank" title="تو کعبه دلهایی">تو کعبه دلهایی</a><br><a href="http://s9.picofile.com/file/8301705692/%DA%86%D8%B1%D8%A7_%D8%A2%D9%88%D8%A7%D8%B1%D9%87_%DA%A9%D9%88%D9%87_%D9%88_%D8%A8%DB%8C%D8%A7%D8%A8%D8%A7%D9%86%D9%85_%D9%86%D9%85%DB%8C%D8%AF%D8%A7%D9%86%D9%85.mp3.html" target="_blank" title="چرا آواره کوه و بیابانم؟نمیدانم">چرا آواره کوه و بیابانم؟نمیدانم</a><br><a href="http://s8.picofile.com/file/8301707692/%D9%85%DB%8C%D8%B4%D9%88%D8%AF_%D9%81%D8%B1%D8%B5%D8%AA_%D8%AF%DB%8C%D8%AF%D8%A7%D8%B1_%D9%85%D9%87%DB%8C%D8%A7_%D8%AD%D8%AA%D9%85%D8%A7.mp3.html" target="_blank" title="می شود فرصت دیدار مهیا حتما">می شود فرصت دیدار مهیا حتما</a><br><br></font></font></font><div align="center"><img src="http://www.ayehayeentezar.com/gallery/images/81133936424687836970.gif" alt="http://www.ayehayeentezar.com/gallery/images/81133936424687836970.gif" class="transparent" width="325" height="130"><br></div>
+
+
+
+
+
+
+				<br><br><b></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://molaman.mihanblog.com/post/category/6">
+			صوت مهدوی</a>،&nbsp;				<br>
+						برچسب ها:
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%B5%D9%88%D8%AA%20%D9%85%D9%87%D8%AF%D9%88%DB%8C" >صوت مهدوی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D8%AF%D8%A7%D8%AD%DB%8C%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >مداحی امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D9%85%D9%87%D8%AF%DB%8C" >امام مهدی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%88%D9%84%D8%A7%DB%8C%20%D9%85%D9%86" >مولای من</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%BE%D8%B1%20%D8%A7%D8%B2%20%D8%AD%D8%A7%D8%AC%D8%AA%D9%85%20%D8%AD%D8%A7%D8%AC%D8%AA%D9%85%20%D8%B1%D8%A7%20%D8%B1%D9%88%D8%A7%20%DA%A9%D9%86" >پر از حاجتم حاجتم را روا کن</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%DB%8C%20%D8%B4%D9%88%D8%AF%20%D9%81%D8%B1%D8%B5%D8%AA%20%D8%AF%DB%8C%D8%AF%D8%A7%D8%B1%20%D9%85%D9%87%DB%8C%D8%A7%20%D8%AD%D8%AA%D9%85%D8%A7" >می شود فرصت دیدار مهیا حتما</a>، 
+																</font>
+
+</div></div>
+<div class=bpost></div>
+<div class=tpost><div class=title><a href="http://molaman.mihanblog.com/post/77">داستان ولادت مولا امام مهدی(عج)</a></div>
+<div class=date>نوشته شده در تاریخ جمعه 30 تیر 1396 توسط 
+	مغناطیـس  | <a target="_self" href="javascript:newComment(77)" >
+	نظرات (<script>setCommentCnt(77)</script>)</a></div></div>
+<div class=xpost><div class=xpost2><div style="float:right">
+	</div> 
+
+<font size="3" face="Mihan-Koodak">نزدیک غروب بود، ابومحمد ـ امام حسن 
+عسکری ـ کسی را نزد من فرستاد و از من برای افطار دعوت فرمودند. کارهایم را
+ رها کردم و به خانه حضرت عسکری (علیه‌السلام) رفتم و ازعلت این دعوت سؤال 
+کردم؟ به من فرمود: عمه جان! امشب پیش ما افطار کن که امشب خدای تبارک و 
+تعالی حجت خود را به دنیا خواهد آورد. پرسیدم: مادرش کیست؟ فرمود: نرجس. 
+گفتم: خداوند مرا فدائی شما کند، من کوچکترین اثر و نشانه‌ای از حمل در او 
+نمی‌بینم!! فرمود: همان است که گفتم...<br>حکیمه خاتون گفت: وارد اتاق 
+شدم سلام کردم و نشستم. نرجس خاتون سلامم را جواب داد و گفت: بانوی من! 
+بانوی خاندانم! چگونه‌ای؟ در چه حال هستی گفتم: بلکه تو بانوی من و خاندان 
+من هستی.<br>نرجس سخنم را قطع کرد و گفت: این چه گفتاری است عمه جان!؟<br>گفتم:
+ دخترم! خداوند امشب به تو پسری عطا می‌کند که سرور و آقای هر دو جهان 
+خواهد بود. نرجس از شنیدن این کلام خجالت کشید و از حیا سرش را پایین 
+انداخت.<br>چون از نماز عشا فارغ شدم، افطار کردم و خوابیدم. نیمه‌های 
+شب بود برای نماز شب برخاستم و پس از خواندن نماز شب دوباره به رختخواب 
+رفتم. در تمام این مدت، نرجس مشغول استراحت بود و خبری نبود. بعد از مدتی 
+او نیز بیدار شد نماز شبش را خواند و دوباره به رختخواب باگشت.<br>من 
+که نگران بودم از اطاق بیرون آمدم به آسمان نگاهی افکندم، دیدم صبح کاذب 
+دمیده ولی هنوز خبری نشده و نرجس خاتون مشغول استراحت است در دلم دچار 
+تردید شدم، که ناگهان امام حسن عسکری (علیه‌السلام) از اطاق مجاور بانگ زد:
+ عمه جان شتاب نکن، که امر نزدیک است...<br></font><div align="center"><font size="3" face="Mihan-Koodak" color="#3333FF"><font color="#CC9933">برای خواندن ادامه این داستان به ادامه مطلب مراجعه کنید.</font><br></font><img src="http://www.dordaneh12.ir/files/clip/sher_va_sorod/tavalodeimam/ffrm.jpg" alt="ولادت حضرت مهدی " width="300" height="226"></div>
+
+
+
+				<br><br><b><a href='http://molaman.mihanblog.com/post/77'>ادامه مطلب</a></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://molaman.mihanblog.com/post/category/7">
+			داستان مهدوی</a>،&nbsp;<a href="http://molaman.mihanblog.com/post/category/3">
+			علم مهدوی</a>،&nbsp;				<br>
+						برچسب ها:
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%20%D9%88%D9%84%D8%A7%D8%AF%D8%AA%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >داستان ولادت امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%20%D9%85%D9%87%D8%AF%D9%88%DB%8C" >داستان مهدوی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%B9%D9%84%D9%85%20%D9%85%D9%87%D8%AF%D9%88%DB%8C" >علم مهدوی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D9%85%D9%87%D8%AF%DB%8C" >امام مهدی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%88%D9%84%D8%A7%DB%8C%20%D9%85%D9%86" >مولای من</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%20%D8%AA%D9%88%D9%84%D8%AF%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >داستان تولد امام زمان</a>، 
+																</font>
+
+</div></div>
+<div class=bpost></div>
+<div class=tpost><div class=title><a href="http://molaman.mihanblog.com/post/93">چرا نامه اعمال ما به امام زمان(عج)عرضه می شود؟</a></div>
+<div class=date>نوشته شده در تاریخ پنجشنبه 29 تیر 1396 توسط 
+	مغناطیـس  | <a target="_self" href="javascript:newComment(93)" >
+	نظرات (<script>setCommentCnt(93)</script>)</a></div></div>
+<div class=xpost><div class=xpost2><div style="float:right">
+	</div> 
+
+
+
+
+<div style="text-align: justify;">
+					<font size="3" face="Mihan-Koodak">امام مهدی(عج) در نامه ای به شیخ مفید می نویسد: «ما در مراعات خبرگیری از حال شما کوتاهی نمی کنیم و یاد شما را فراموش نمی کنیم.» این اغراق نیست،امام با تمام وجود ما را دوست دارد و به ما عشق می ورزد.<br>رُمیله
+ می‌گوید: در زمان حکومت امیرالمؤمنین(ع) روزی به تب شدیدی دچار شدم و در 
+روز جمعه احساس سبکی کردم با خود گفتم: بهتر است که آبی به‌ صورت بزنم و 
+پشت سر حضرت(ع) نماز بخوانم به مسجد آمدم. هنگامی که آن حضرت بالای منبر 
+رفتند. تب من برگشت. وقتی سخنان امام تمام شد و به سرای حکومتی برگشت، من 
+هم به آنجا رفتم و وارد ساختمان شدم. حضرت فرمودند: ای رمیله می‌دیدم که به
+ خود می‌پیچیدی. گفتم: آری، آن‌ گاه داستان خود را بازگو کردم.</font></div><div style="text-align: justify;"><font size="3" face="Mihan-Koodak">فرمودند:
+ رمیله! هیچ مؤمنی مریض نمی‌شود مگر اینکه ما از شدت علاقه به او مریض 
+می‌شویم و هیچ مؤمنی غمگین نمی‌شود مگر اینکه ما به خاطر او محزون می‌شویم و
+ دعا نمی‌کند، مگر اینکه آمین می‌گوییم و ساکت نمی‌شود، مگر اینکه برایش 
+دعا می‌کنیم.</font></div><div style="text-align: justify;"><font size="3" face="Mihan-Koodak">گفتم:
+ یا امیرالمؤمنین! فدایت شوم، این حالت مربوط به کسانی است که در کنار 
+شمایند یا درباره همه مؤمنان صدق می‌کند؟امام فرمودند: رمیله هر مؤمنی که 
+در شرق یا غرب یا در جاهای دیگر باشد از ما غایب نیست.<br></font><div align="center"><font size="3" color="#3333FF" face="Mihan-Koodak"><font color="#339999">برای خواندن ادامه، به ادامه مطلب مراجعه کنید.</font><br></font><img src="../file.mihanblog.com/public/user_data/user_files/647/1939325/name..jpg" alt="سلام ای صاحب دنیا کجایی" width="278" height="278"></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+				<br><br><b><a href='http://molaman.mihanblog.com/post/93'>ادامه مطلب</a></b>
+				<font style="font-size:8pt;"><br>
+			طبقه بندی: <a href="http://molaman.mihanblog.com/post/category/3">
+			علم مهدوی</a>،&nbsp;				<br>
+						برچسب ها:
+													<a href="http://molaman.mihanblog.com/post/tag/%DA%86%D8%B1%D8%A7%20%D9%86%D8%A7%D9%85%D9%87%20%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%85%D8%A7%20%D8%A8%D9%87%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86%20%D8%B9%D8%B1%D8%B6%D9%87%20%D9%85%DB%8C%20%D8%B4%D9%88%D8%AF" >چرا نامه اعمال ما به امام زمان عرضه می شود</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%DA%86%D8%B1%D8%A7%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86%20%D9%86%D8%A7%D9%85%D9%87%20%D8%A7%D8%B9%D9%85%D8%A7%D9%84%20%D9%85%D8%A7%20%D8%B1%D8%A7%20%D9%85%DB%8C%D8%A8%DB%8C%D9%86%D8%AF" >چرا امام زمان نامه اعمال ما را میبیند</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >امام زمان</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D9%85%D9%87%D8%AF%DB%8C" >امام مهدی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%88%D9%84%D8%A7%DB%8C%20%D9%85%D9%86" >مولای من</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D8%B9%D9%84%D9%85%20%D9%85%D9%87%D8%AF%D9%88%DB%8C" >علم مهدوی</a>، 
+													<a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%87%D8%B1%D8%A8%D8%A7%D9%86%DB%8C%20%D9%88%20%D8%B9%D8%B7%D9%88%D9%81%D8%AA%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >مهربانی و عطوفت امام زمان</a>، 
+																</font>
+
+</div></div>
+<div class=bpost></div>
+<img src="http://www.ashoora.biz/weblog/pixel_3520.gif" alt="" />
+<div class="pagination">
+<span class="left"><a href="http://molaman.mihanblog.com/page/1" class="page"><b>1</b></a>&nbsp;&nbsp;<a href="http://molaman.mihanblog.com/page/2" class="page"><span>2</span></a>&nbsp;&nbsp;<a href="http://molaman.mihanblog.com/page/3" class="page"><span>3</span></a>&nbsp;&nbsp;<a href="http://molaman.mihanblog.com/page/4" class="page"><span>4</span></a>&nbsp;&nbsp;<a href="http://molaman.mihanblog.com/page/5" class="page"><span>5</span></a>&nbsp;&nbsp;<a href="http://molaman.mihanblog.com/page/6" class="page"><span>6</span></a>&nbsp;&nbsp;</span>
+<span class="right">دیگر صفحات (6): </span>
+<div class="clear"></div>
+</div>
+<div style="width:530;text-align:center;font-size:8pt;color:#7b9608;height:30;float:right;">	<span dir="RTL" style="line-height: 115%; font-family: Tahoma,sans-serif;" lang="FA">	<a target="_blank" style="text-decoration: none; font-weight: 700" href="http://www.ashoora.ir">	<font color="#000000" size="1">مرجع دریافت ابزار و قالب وبلاگ</font></a></span><b><font size="1"><br>		<font color="#FFCC00">.:</font></font></b><font color="#FFCC00"> </font>  <span id="designer" style="color:#996600;">By <a href="http://www.ashoora.ir/" target="_blank" style="color:#996600;font-weight:bold;">Ashoora.ir</a> & <a href="http://www.blogskin.ir/" target="_blank" style="color:#996600;font-weight:bold;">Blog Skin</a></span> <b>	<font size="1" color="#FFCC00">:.</font></b></div></div></div><div class=mainl><div class=top1></div><div class=menu>
+
+<!-- Date Time by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/time-date/date-fa.php?color=333333&font=10&bg=FCFCCA&kc=CAE09D&kadr=1"></script><div style="display:none"><h2><a href="http://www.1abzar.com/abzar/time-date.php">&#1587;&#1575;&#1593;&#1578; &#1608; &#1578;&#1575;&#1585;&#1610;&#1582;</a></h2></div>
+<!-- Date Time by www.1abzar.com --->
+
+
+<!-- Date Time by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/time-date/clock-ir.php?color=333333&font=10&bg=FCFCCA&kc=CAE09D&kadr=1"></script><div style="display:none"><h2><a href="http://www.1abzar.com/abzar/time-date.php">&#1587;&#1575;&#1593;&#1578; &#1608; &#1578;&#1575;&#1585;&#1610;&#1582;</a></h2></div>
+<!-- Date Time by www.1abzar.com --->
+
+<div class=tmenu><div class=tmenu2>درباره وبلاگ</div></div>
+<div class=xmenu>
+<div class=xmenu1>
+<div style="text-align:center;"><img src="../static.mihanblog.com/public/user_data/web_photo/647/1939325.jpg@8302"  /></div>
+<br><font color="#555555">
+...و این بار با خود عهـد بستمـ که هر گاه سحـرگاهان بر سجاده ی عشق ابراز بندگی می نمایم ، عهــد و پیمانمـ را محکمــ ‏تر و استـوارتر از قبلـ با او ببندمـ...<br />
+.<br />
+تا آقایم ، مولایمـ ، سرورمـ و تنهـا امیـد زندگیمـ مصممـ شود برای ظهورشـ...<br />
+.<br />
+اللهمــ عجلــ لولیکــ الفرجــ...<br />
+<br />
+.....<br />
+به وبلاگمـ خوش آمدید<br />
+بیشتر مطالبـ اینـ وبلاگــ رو خودمـ نوشتمـ<br />
+لذا تقاضا میکنمـ با ذکر منبع کپی کنید<br />
+در پناه حق...<br></font>
+<b>•</b> <a href="mailto:f.hejazi796@gmail.com" title="ارسال ایمیل">
+		پست الکترونیک</a><br>
+		<b>•</b> <a href="javascript:messageForm()" title="تماس با مدیران وبلاگ">
+		تماس با مدیر</a><br>
+		<a href="http://molaman.mihanblog.com/post/rss/" >RSS</a><br> <a href="http://molaman.mihanblog.com/post/atom/" >
+ATOM</a>
+</div>
+</div>
+<div class=bmenu></div>
+
+<div class=tmenu><div class=tmenu2>موضوعات</div></div>
+<div class=xmenu>
+	<div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/category/9">
+		کتاب مهدوی (3)</a></div>	<div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/category/8">
+		حدیث مهدوی (7)</a></div>	<div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/category/7">
+		داستان مهدوی (9)</a></div>	<div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/category/6">
+		صوت مهدوی (9)</a></div>	<div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/category/5">
+		عکس مهدوی (6)</a></div>	<div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/category/4">
+		کلیپ مهدوی (11)</a></div>	<div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/category/3">
+		علم مهدوی (37)</a></div>	<div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/category/2">
+		دلنوشته مهدوی (18)</a></div>	<div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/category/1">
+		مدیر وبلاگ (5)</a></div>	</div>
+<div class=bmenu></div>
+<div class=tmenu><div class=tmenu2>آخرین مطالب</div></div>
+<div class=xmenu>
+	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/89">
+		مهدویت به چه معناست؟</a></div>	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/92">
+		چند حدیث از مولا امام زمان(عج)4</a></div>	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/98">
+		چرا به امام زمان(عج)نیاز داریم؟</a></div>	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/91">
+		داستان عجیب ملاقات شیخ حسن با امام زمان(عج)</a></div>	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/90">
+		اشعار کوچک برای امام زمان(عج)</a></div>	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/97">
+		اعلام نتیجه مسابقه قرآنی</a></div>	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/96">
+		جمعه یعنی...</a></div>	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/88">
+		گالری عکس نوشته مولا6</a></div>	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/95">
+		مسابقه قرآنی ویژه وبلاگ مولای من</a></div>	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/86">
+		ما برای ظهور چه کاری انجام دهیم؟</a></div>	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/87">
+		گریه امام زمان(عج) برای شیعیان</a></div>	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/85">
+		ارتباط خضر نبی(ع) با امام زمان(عج)</a></div>	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/84">
+		دانلود مداحی با موضوع مولا امام زمان(عج)</a></div>	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/77">
+		داستان ولادت مولا امام مهدی(عج)</a></div>	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/93">
+		چرا نامه اعمال ما به امام زمان(عج)عرضه می شود؟</a></div>	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/76">
+		آقا اینا واسه شما هستشا (تلنگر)</a></div>	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/75">
+		دعای زمان غیبت و شرح آن</a></div>	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/74">
+		غربت امام زمان(عج) از زبان خود حضرت</a></div>	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/73">
+		دلایل عقلی وجود امام زمان(عج)</a></div>	<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/72">
+		دلنوشته نام مولا(عج)</a></div>		<div class=xmenu1><b>•</b> <a href="http://molaman.mihanblog.com/post/list"><b>
+		لیست آخرین مطالب</b></a></div>
+</div>
+<div class=bmenu></div>
+<form id="frm-16076775395fd33663f0079" method="get" action="http://molaman.mihanblog.com/post/search/fid/16076775395fd33663f0079"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+<div class=tmenu><div class=tmenu2> جستجو در وبلاگ</div></div>
+<div class=xmenu>
+<div class=xmenu1>		<input type="text" value="" name="search_text" size="15">
+		<input type="submit" value="جستجو">
+</div>
+</div>
+<div class=bmenu></div><input type="hidden" name="frm-id" value="16076775395fd33663f0079" id="frm-id" /></form>
+<div class=tmenu><div class=tmenu2>آرشیو مطالب</div></div>
+<div class=xmenu>
+<div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/archive/1396/5">
+	 مرداد 1396</a></div><div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/archive/1396/4">
+	 تیر 1396</a></div><div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/archive/1396/3">
+	 خرداد 1396</a></div><div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/archive/1396/2">
+	 اردیبهشت 1396</a></div><div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/archive/1396/1">
+	 فروردین 1396</a></div><div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/archive/1395/12">
+	 اسفند 1395</a></div><div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/archive/1395/11">
+	 بهمن 1395</a></div><div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/archive/1395/10">
+	 دی 1395</a></div><div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/archive/1395/9">
+	 آذر 1395</a></div><div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/archive/1395/8">
+	 آبان 1395</a></div></div>
+<div class=bmenu></div>
+		<form id="frm-16076775395fd33663f083c" method="post" action="http://molaman.mihanblog.com/poll/new/fid/16076775395fd33663f083c/atrty/1607677539/avrvy/0/key/61fcba0154d9dc843ea4a1ab6ce64985/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="368589" id="data[pollid]" />		
+<div class=tmenu><div class=tmenu2>نظر سنجی</div></div>
+<div class=xmenu>
+<div class=xmenu1><b>•</b> <font color="#444444">بیشتر از کدام موضوع در وبلاگ قرار داده شود؟<br>	<label><input type="checkbox"  name="data[v1]" id="v1" value="1" />علم مهدوی</label><br>	<label><input type="checkbox"  name="data[v2]" id="v2" value="1" />دلنوشته مهدوی</label><br>	<label><input type="checkbox"  name="data[v3]" id="v3" value="1" />حدیث مهدوی</label><br>	<label><input type="checkbox"  name="data[v4]" id="v4" value="1" />صوت مهدوی</label><br>	<label><input type="checkbox"  name="data[v5]" id="v5" value="1" />عکس مهدوی</label><br>	<label><input type="checkbox"  name="data[v6]" id="v6" value="1" />کلیپ مهدوی</label><br>	<label><input type="checkbox"  name="data[v7]" id="v7" value="1" />داستان مهدوی</label><br>	<label><input type="checkbox"  name="data[v8]" id="v8" value="1" />کتاب مهدوی</label><br>	<label><input type="checkbox"  name="data[v9]" id="v9" value="1" />موضوع جدیدی قرار دهید</label><br></font><br><input type="submit" value="ثبت"></div>
+</div>
+<div class=bmenu></div>
+		<input type="hidden" name="frm-id" value="16076775395fd33663f083c" id="frm-id" /></form><div class=tmenu><div class=tmenu2>نویسنده</div></div>
+<div class=xmenu>
+<div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/post/author/1589576"></a> <a href="http://molaman.mihanblog.com/post/author/1589576">
+	مغناطیـس </a></div></div>
+<div class=bmenu></div><div class=tmenu><div class=tmenu2>صفحات جانبی</div></div>
+<div class=xmenu><div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/extrapage/profile">پروفایل مدیر وبلاگ</a></div></div>
+<div class=bmenu></div>
+
+
+
+
+
+
+<div>
+<div class=tmenu><div class=tmenu2><span lang="fa">دانشنامه مهدویت</span></div></div>
+<div class=xmenu><div class=xmenu1>&nbsp;<!--start of ashoora.ir mahdaviat--><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/png.js"></script><script type="text/javascript" src="http://www.ashoora.biz/mazhabi-projects/mahdaviat/mahdaviat.php?mod=6&color2=F30A36&color1=000000&width=200"></script><a href="http://www.ashoora.ir/" class="ashoora_tool_link">&#1605;&#1607;&#1583;&#1608;&#1740;&#1578; &#1575;&#1605;&#1575;&#1605; &#1586;&#1605;&#1575;&#1606; (&#1593;&#1580;)</a><!-- end of ashoora.ir mahdaviat--></div>
+</div>
+<div class=bmenu></div>
+</div>
+
+
+
+<div class=tmenu><div class=tmenu2>ابر برچسب ها</div></div>
+<div class=xmenu>
+<div class=xmenu1><a href="http://molaman.mihanblog.com/post/tag/%DA%A9%D9%84%DB%8C%D9%BE+%D9%85%D9%87%D8%AF%D9%88%DB%8C" style="font-size:1.06em">
+		کلیپ مهدوی</a> <a href="http://molaman.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87+%D9%85%D9%87%D8%AF%D9%88%DB%8C" style="font-size:1.12em">
+		دلنوشته مهدوی</a> <a href="http://molaman.mihanblog.com/post/tag/%D8%B9%DA%A9%D8%B3+%D9%85%D9%87%D8%AF%D9%88%DB%8C" style="font-size:1.05em">
+		عکس مهدوی</a> <a href="http://molaman.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87+%DA%A9%D9%88%D8%AA%D8%A7%D9%87+%D8%A7%D9%85%D8%A7%D9%85+%D8%B2%D9%85%D8%A7%D9%86" style="font-size:1.04em">
+		دلنوشته کوتاه امام زمان</a> <a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D8%A8%D8%A7%D8%B5%D8%A7%D9%84%D8%AD" style="font-size:1.02em">
+		اباصالح</a> <a href="http://molaman.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87+%D8%A7%D9%85%D8%A7%D9%85+%D8%B2%D9%85%D8%A7%D9%86" style="font-size:1.11em">
+		دلنوشته امام زمان</a> <a href="http://molaman.mihanblog.com/post/tag/%DA%A9%D9%84%DB%8C%D9%BE+%D8%A7%D9%85%D8%A7%D9%85+%D8%B2%D9%85%D8%A7%D9%86" style="font-size:1.02em">
+		کلیپ امام زمان</a> <a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85+%D9%85%D9%87%D8%AF%DB%8C" style="font-size:1.97em">
+		امام مهدی</a> <a href="http://molaman.mihanblog.com/post/tag/%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86+%D9%85%D9%87%D8%AF%D9%88%DB%8C" style="font-size:1.04em">
+		داستان مهدوی</a> <a href="http://molaman.mihanblog.com/post/tag/%D8%AD%D8%AF%DB%8C%D8%AB+%D9%85%D9%87%D8%AF%D9%88%DB%8C" style="font-size:1.04em">
+		حدیث مهدوی</a> <a href="http://molaman.mihanblog.com/post/tag/%D8%AD%D8%AF%DB%8C%D8%AB+%D8%A7%D8%B2+%D8%A7%D9%85%D8%A7%D9%85+%D8%B2%D9%85%D8%A7%D9%86" style="font-size:1.02em">
+		حدیث از امام زمان</a> <a href="http://molaman.mihanblog.com/post/tag/%D8%B9%DA%A9%D8%B3+%D9%86%D9%88%D8%B4%D8%AA%D9%87+%D8%A7%D9%85%D8%A7%D9%85+%D8%B2%D9%85%D8%A7%D9%86" style="font-size:1.04em">
+		عکس نوشته امام زمان</a> <a href="http://molaman.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87+%D8%A7%D9%85%D8%A7%D9%85+%D9%85%D9%87%D8%AF%DB%8C" style="font-size:1.02em">
+		دلنوشته امام مهدی</a> <a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%87%D8%AF%D9%88%DB%8C%D8%AA" style="font-size:1.43em">
+		مهدویت</a> <a href="http://molaman.mihanblog.com/post/tag/%D9%85%D9%88%D9%84%D8%A7%DB%8C+%D9%85%D9%86" style="font-size:1.99em">
+		مولای من</a> <a href="http://molaman.mihanblog.com/post/tag/%DA%A9%D8%AA%D8%A7%D8%A8+%D9%85%D9%87%D8%AF%D9%88%DB%8C" style="font-size:1em">
+		کتاب مهدوی</a> <a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D8%AD%D8%A7%D8%AF%DB%8C%D8%AB+%D8%A7%D9%85%D8%A7%D9%85+%D8%B2%D9%85%D8%A7%D9%86" style="font-size:1.02em">
+		احادیث امام زمان</a> <a href="http://molaman.mihanblog.com/post/tag/%D8%B9%DA%A9%D8%B3+%D8%A7%D9%85%D8%A7%D9%85+%D8%B2%D9%85%D8%A7%D9%86" style="font-size:1.02em">
+		عکس امام زمان</a> <a href="http://molaman.mihanblog.com/post/tag/%D8%B9%D9%84%D9%85+%D9%85%D9%87%D8%AF%D9%88%DB%8C" style="font-size:1.35em">
+		علم مهدوی</a> <a href="http://molaman.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85+%D8%B2%D9%85%D8%A7%D9%86" style="font-size:2em">
+		امام زمان</a> </div>
+</div>
+<div class=bmenu></div>
+<div class=tmenu><div class=tmenu2>پیوند های روزانه</div></div>
+<div class=xmenu><div class=xmenu1><b>•</b>  <a target="_blank" href="http://sh-m12.mihanblog.com" title="">
+	شیطان،مامور گمراهی</a></div><div class=xmenu1><b>•</b>  <a target="_blank" href="http://www.abasaleh-faryad.blogfa.com" title="">
+	...faryad...</a></div><div class=xmenu1><b>•</b>  <a target="_blank" href="http://2gholu.mihanblog.com" title="وبلاگ ساخته من و خواهرم برای خواهرزاده هام">
+	دوقلوهای افسانه ای</a></div><div class=xmenu1><b>•</b>  <a target="_blank" href="../www.myyesterdays.mihanblog.com/index.html" title="وبلاگ ساخته خودم برای خاطراتم">
+	دیـــروزهایمـ</a></div><div class=xmenu1><b>•</b>  <a target="_blank" href="../www.2fereshteh.mihanblog.com/index.html" title="وبلاگ پدر و مادر ساخته ی خودم">
+	دو فرشته از طرف خداوند</a></div><div class=xmenu1><b>•</b>  <a href="http://molaman.mihanblog.com/linkdaily/"><b>همه 
+	پیوندهای روزانه</b></a></div>
+<div class=xmenu1><b>•</b>  <a href="javascript:linkdailyForm()"><b>ارسال پیوند 
+	روزانه</b></a></div>
+</div>
+<div class=bmenu></div><div class=tmenu><div class=tmenu2>آمار سایت</div></div>
+<div class=xmenu>
+<div class=xmenu1><font color="#555555">
+			بازدیدهای امروز : <span class=a><script>getStatVar('today_view');</script></span> نفر<br>
+	بازدیدهای دیروز : <span class=a><script>getStatVar('yesterday_view');</script></span> نفر<br>
+	کل بازدیدها : <span class=a><script>getStatVar('total_view');</script></span> نفر<br>
+	بازدید این ماه :<span class=a> <script>getStatVar('this_month_view');</script></span> نفر<br>
+	بازدید ماه قبل : <span class=a><script>getStatVar('last_month_view');</script></span> نفر<br>
+	تعداد نویسندگان : <span class=a>1 نفر<br>
+	کل مطالب : <span class=a><script>getStatVar('total_post');</script></span> عدد<br>
+	آخرین بازدید : <span class=a><script>getStatVar('last_view_date');</script></span><br>
+	آخرین بروز رسانی : <span class=a><script>getStatVar('modify_date');</script></span></font>
+</div>
+</div>
+
+<div class=bmenu></div>
+
+<div>
+<div class=tmenu><div class=tmenu2><span lang="fa">لوگوی دوستان</span></div></div>
+<div class=xmenu>
+<div class=xmenu1> 
+
+<p style="text-align: center"> 
+
+<a href="http://www.ashoora.ir/" target="_blank"><img border="0" src="http://www.ashoora.biz/weblog/34/1.jpg"></a>
+
+</div>
+</div>
+<div class=bmenu></div>
+</div>
+
+<div>
+<div class=tmenu><div class=tmenu2>امکانات جانبی</div></div>
+<div class=xmenu>
+<div class=xmenu1 align="center"> 
+
+لوگوی این وبلاگ:
+<p align="center"><a href="index.html" target="_blank"><img border="0" src="../file.mihanblog.com/public/user_data/user_files/647/1939325/cooltext253051257243668.png"  width="200" alt="مولای من"  height="100"></a><br><input onclick="this.select()" type="text" width="356" name="T1" size="15" value='<!-- start logo cod off http://www.molaman.mihanblog.com --><p align="center"><p align="center"><a href="http://www.molaman.mihanblog.com" target="_blank"><img border="0" src="http://file.mihanblog.com//public/user_data/user_files/647/1939325/cooltext253051257243668.png"  width="200" height="100" alt="مولای من"></a></p><!--finish logo cod off http://www.molaman.mihanblog.com -->' dir="ltr" ></p><div style="display:none"><a href="http://blogers.ir">وبلاگ</a>-<a href="http://blogers.ir/cod/make-logo-banner-cod/">کد لوگو و بنر</a></div>
+
+خوش اومدید
+<p align='center'><script src="http://cafe-webniaz.ir/abzar/modir/pm5.js"></script>
+<font face="Tahoma" size="2">
+<p><center>
+<p>
+بر جمال دلربای مهدی(عج) صلوات
+<p>
+نظر یادتون نره
+</div></div></script>
+
+منو
+<p align='center'><p><center><script type="text/javascript" src="http://cafe-webniaz.ir/abzar/modir/mnuchap.js"></script>
+<div class="cafe-webniaz-ir-lefter"><a href="index.html"><div class="cafe-webniaz-ir-home">
+</div> صفحه اصلی </a><a href="http://molaman.mihanblog.com/extrapage/profile">
+<div class="cafe-webniaz-ir-profile"></div> پروفایل مدیر </a>
+<a href="http://molaman.mihanblog.com/message" rel="nofollow" ><div class="cafe-webniaz-ir-emailmodir"></div> تماس با من </a>
+<a href="http://molaman.mihanblog.com/post/comment/1" rel="nofollow" ><div class="cafe-webniaz-ir-nazarat"></div> ارسال نظر سریع </a>
+</div>
+
+
+دعای سلامتی مولا
+<!-- www.20Tools.com --><p align="center"><marquee style="FONT-SIZE: 8pt; FONT-FAMILY: Tahoma; padding-top:5px; padding-bottom:5px" scrollamount="4" scrolldelay="114" direction="right" height="20" width="151">اللّهُمَّ كُنْ لِوَلِیِّكَ الْحُجَّةِ بْنِ الْحَسَنِ صَلَواتُكَ عَلَیْهِ وَعَلى آبائِهِ فی هذِهِ السّاعَةِ وَفی كُلِّ ساعَةٍ وَلِیّاً وَحافِظاً وَقائِدا ‏وَناصِراً وَدَلیلاً وَعَیْناً حَتّى تُسْكِنَهُ أَرْضَك َطَوْعاً وَتُمَتِّعَهُ فیها طَویلاً</marquee></p><p align="center"><a target="_blank" href="http://www.20tools.com"><span style="text-decoration: none">سایت خدماتی بیست تولز</span></a></p><div style="display:none">﻿<center>
+<img src='http://night-skin.com/public/images/icon_green-check.png' /> <a target='_blank' href='http://pompebenzin.com/'>پمپ بنزین</a> | <a target='_blank' href='http://yas-theme.com/'>یاس تم</a><br /><img src='http://night-skin.com/public/images/icon_green-check.png' /> <a target='_blank' href='http://7wills.com/'>وصیت نامه</a> | <a target='_blank' href='http://sharifaqm.ir/'>آلودگی هوا</a><br /><img src='http://night-skin.com/public/images/icon_green-check.png' /> <a target='_blank' href='http://40shakhes.ir/'>چهل شاخص</a> | <a target='_blank' href='http://ipause.ir/'>موسیقی</a><br /></center><a href=http://www.20tools.com/java/doa-faraj>کد دعای فرج آقا امام زمان ( عج )</a></div><!-- www.20Tools.com -->
+
+<center><object width="130" height="185"><param name="movie" value="http://jamkran.persiangig.com/audio/bn.swf" /><embed src="http://jamkran.persiangig.com/audio/bn.swf" width="130" height="185"></embed></object></center><p align="center" style="margin-top: 5; margin-bottom: 5"><a target="_blank" href="http://mp3-player.blogfa.com" style="text-decoration: none"><font face="arial" style="font-weight: 700; font-size:12pt">ساخت کدصوتی صلواتی</font></a></p>
+
+ذکر ایام هفته
+<script type=text/javascript src="http://PICHAK.net/zekr-rooz/show.php?n=18"></script><div style="display:none"><a target="_blank" title="کد ذکر ایام هفته" href="http://picHAk.net/zekr-rooz">کد ذکر ایام هفته</a></div>
+
+ثانیه شمار
+<div id='www-20tools.com'></div>
+<script src="http://www.20tools.com/java/absence/03.php" language="javascript"></script>
+<div style="visibility:hidden;display:none">﻿<center>
+<img src='http://night-skin.com/public/images/icon_green-check.png' /> <a target='_blank' href='http://pompebenzin.com/'>پمپ بنزین</a> | <a target='_blank' href='http://yas-theme.com/'>یاس تم</a><br /><img src='http://night-skin.com/public/images/icon_green-check.png' /> <a target='_blank' href='http://7wills.com/'>وصیت نامه</a> | <a target='_blank' href='http://sharifaqm.ir/'>آلودگی هوا</a><br /><img src='http://night-skin.com/public/images/icon_green-check.png' /> <a target='_blank' href='http://40shakhes.ir/'>چهل شاخص</a> | <a target='_blank' href='http://ipause.ir/'>موسیقی</a><br /></center><a href=http://www.20tools.com/java/absence>کد لحظه شمار غیبت امام زمان برای وبلاگهای مهدویت</a></div>
+
+
+هدایت به بالا
+<!-- Begin Night-Skin.com Upper code -->
+<script type='text/javascript' src='http://night-skin.com/blogcode/upper/jq-up.js' ></script><a href="http://night-skin.com" target="_blank">ابزار پرش به بالا</a>
+<script type='text/javascript' > document.write ("<scr"+"ipt type='text/javascript' src='http://night-skin.com/blogcode/upper/11-scroll.js' ></s"+"cript>");</script>
+<!-- End Night-Skin.com Upper code -->
+
+
+
+
+اوقات شرعی
+
+<!-- Begin ToolsIR.com Oghat code -->
+<script src="http://oghat.toolsir.com/azan.php?mod=6&border=1&az=1&city=19-2" type="text/javascript"></script><div style="display:none;"><h2><a href="http://www.toolsir.com/">دریافت کد اوقات شرعی</a></h2></div>
+<!-- End ToolsIR.com Oghat code -->
+
+
+
+
+تاریخ
+
+<!-- Calendar by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/ruznama/?mod=8"></script><div style="display:none"><h3><a href="http://www.1abzar.com/abzar/ruznama.php">&#1578;&#1602;&#1608;&#1740;&#1605; &#1588;&#1605;&#1587;&#1740;</a></h3></div>
+<!-- Calendar by www.1abzar.com --->
+
+
+<p align='center'><script src="http://cafe-webniaz.ir/abzar/modir/pm.js"></script>
+<div class="webniaz-blogfa-com">
+<div class="PM"></div>
+<marquee scrollamount="2" scrolldelay="5" direction="right">
+به وبلاگ «مولای من» خوش آمدید.امیدوارم این وبلاگ برای شما مورد استفاده واقع شود.شما می توانید انتقادات و پیشنهادات خود را در مورد وبلاگ برای من بصورت کامنت(نظر) یا از طریق لینک تماس با مدیر بیان کنید.از بازدید شما متشکرم.</marquee>
+</div></p>
+
+</div>
+</div>
+<div class=bmenu></div>
+</div>
+
+
+<p><br><br></div>
+</div>
+</div>
+
+</div>
+</div>
+</body>
+
+<!--By Ashoora.ir & Blogskin.ir-->
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'molaman.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

@@ -1,0 +1,914 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*926957*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','273');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','جمعه 10 مهر 1394');
+	
+	setStatVar('today_view','12');
+	setStatVar('yesterday_view','21');
+	
+	setStatVar('this_month_view','604');
+	setStatVar('last_month_view','1104');
+
+	setStatVar('total_view','331079');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (17:50)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://we--plus.mihanblog.com/statupdate/?data[refereruri]=http://we--plus.mihanblog.com/post/archive&data[postid]=&data[requesturi]=/post/archive/1391/10&data[sdate]=1608216304&data[hash]=d5caed0e3beb67ec8177f8418a59bbf3&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[147]='14';commentCnt[148]='24';commentCnt[149]='27';commentCnt[150]='24';commentCnt[151]='24';commentCnt[152]='20';commentCnt[153]='13';commentCnt[154]='32';commentCnt[155]='19';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[147]='0';
+mihanblogDisLikeArrCnt[147]='0';
+mihanblogLikeArrCnt[148]='0';
+mihanblogDisLikeArrCnt[148]='0';
+mihanblogLikeArrCnt[149]='0';
+mihanblogDisLikeArrCnt[149]='0';
+mihanblogLikeArrCnt[151]='0';
+mihanblogDisLikeArrCnt[151]='0';
+mihanblogLikeArrCnt[152]='0';
+mihanblogDisLikeArrCnt[152]='0';
+mihanblogLikeArrCnt[154]='0';
+mihanblogDisLikeArrCnt[154]='0';
+mihanblogLikeArrCnt[155]='0';
+mihanblogDisLikeArrCnt[155]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://we--plus.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://we--plus.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Theme Designer" content="www.payamblog.com">
+<meta name="description" content=""/>
+<meta name="keywords" content=""/> 
+<link rel="alternate" type="application/rss+xml" title=" علیرضا حقیقی" href="../../rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title=" علیرضا حقیقی" href="../../atom/index.html" />
+<script language="javascript" type="text/javascript" src="http://payamblog.com/tem/16/payamblog.js"></script>
+
+<title> علیرضا حقیقی - مطالب  دی 1391</title>
+
+</head>
+
+<body>
+
+<div align="left">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td class=div2 valign=top>
+
+<div class=div60></div>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>درباره وبلاگ</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div31><center><img src="http://static.mihanblog.com//public/user_data/web_photo/309/926957.jpg?8602"  /></center><br>
+<font class=text1><br>
+مدیر وبلاگ : <a href="../../author/783854.html">مریم </a></font></div>
+</div><div class=div30></div>
+</div>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>مطالب اخیر</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="../../316.html">:-(</a></font></div><div class=div32><font class=text1><a href="../../315.html">آوار 12 هزار نفری بر سر آمریکا</a></font></div><div class=div32><font class=text1><a href="../../314.html">من اومدم!</a></font></div><div class=div32><font class=text1><a href="../../312.html"> *10* مقدس!</a></font></div><div class=div32><font class=text1><a href="../../311.html">سلاممممم</a></font></div><div class=div32><font class=text1><a href="../../310.html">.......!!!!</a></font></div><div class=div32><font class=text1><a href="../../309.html">بازم عکس!</a></font></div><div class=div32><font class=text1><a href="../../308.html">تسلیت....+ عکس</a></font></div><div class=div32><font class=text1><a href="../../307.html">اینم از پست!!!!!!!!!!!!! :-))))))))</a></font></div><div class=div32><font class=text1><a href="../../306.html">سلامممممممممممم!:-))))))))))</a></font></div><div class=div32><font class=text1><a href="../../305.html">تولد علیرضا مبارررررررررررک! :-))</a></font></div><div class=div32><font class=text1><a href="../../303.html">تولدت مبارک نسیم جونم! :-*</a></font></div><div class=div32><font class=text1><a href="../../302.html">آخرین پست 92! :-)</a></font></div><div class=div32><font class=text1><a href="../../301.html">:-))</a></font></div><div class=div32><font class=text1><a href="../../300.html">تولدم مبارک! یه دنیا ممنون! :-)</a></font></div></div><div class=div30></div>
+</div>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>آرشیو وبلاگ</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="../1394/7.html"> مهر 1394</a></font></div><div class=div32><font class=text1><a href="../1394/4.html"> تیر 1394</a></font></div><div class=div32><font class=text1><a href="../1394/3.html"> خرداد 1394</a></font></div><div class=div32><font class=text1><a href="../1393/9.html"> آذر 1393</a></font></div><div class=div32><font class=text1><a href="../1393/7.html"> مهر 1393</a></font></div><div class=div32><font class=text1><a href="../1393/6.html"> شهریور 1393</a></font></div><div class=div32><font class=text1><a href="../1393/5.html"> مرداد 1393</a></font></div><div class=div32><font class=text1><a href="../1393/4.html"> تیر 1393</a></font></div><div class=div32><font class=text1><a href="../1393/2.html"> اردیبهشت 1393</a></font></div><div class=div32><font class=text1><a href="../1393/1.html"> فروردین 1393</a></font></div><div class=div32><font class=text1><a href="../1392/12.html"> اسفند 1392</a></font></div><div class=div32><font class=text1><a href="../1392/11.html"> بهمن 1392</a></font></div><div class=div32><font class=text1><a href="../../archive.html">آرشیو كل مطالب</a></font></div>
+</div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>پیوندهای روزانه</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="http://www.grin.ir/" title="" target="_blank">خرید اینترنتی</a></font></div><div class=div32><font class=text1><a href="http://www.upsara.com/" title="با افتخار میزبان عکس ها و فایل های شما هستیم.
+آپلود رایگان و دائمی عکس
+
+با لینک کردن ما آدرس ما رو فراموش نکنید و از ما حمایت کنید
+
+باتشکر
+آپسرا" target="_blank">آپلود عکس</a></font></div><div class=div32><font class=text1><a href="http://buying.blog.ir/" title="" target="_blank">فروشگاه اینترنتی</a></font></div><div class=div32><font class=text1><a href="http://www.persepolisnews.ir/" title="" target="_blank">خبرگزاری باشگاه پرسپولیس ایران</a></font></div><div class=div32><font class=text1><a href="http://www.ffiri.ir" title="" target="_blank">فدراسیون فوتبال جمهوری اسلامی ایران</a></font></div><div class=div32><font class=text1><a href="http://www.sh3klak.blogfa.com/" title="" target="_blank">تصاویر مخصوص</a></font></div><div class=div32><font class=text1><a href="http://fc-perspolis.com" title="" target="_blank">وب سایت رسمی باشگاه فرهنگی ورزشی پرسپولیس</a></font></div><div class=div32><font class=text1><a href="http://www.rubin-kazan.ru" title="" target="_blank">وبسایت رسمی باشگاه روبین کازان</a></font></div><div class=div32><font class=text1><a href="../../../linkdaily/index.html">همه پیوندهای روزانه</a></font></div>
+<div class=div32><font class=text1><a href="javascript:linkdailyForm()">ارسال پیوند روزانه</a></font></div>
+</div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>پیوندها</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="http://sunrise-girl-1379.blogfa.com/" title="" target="_blank"> ✿◕ ‿ ◕✿ SuNRiSE ✿◕ ‿ ◕✿</a></font></div><div class=div32><font class=text1><a href="http://www.volleyball-saeid2014.blogfa.com/" title="" target="_blank">تـــک کــــــــاپــیـــتـان قلــــــــبم</a></font></div><div class=div32><font class=text1><a href="http://shima014.blogfa.com/" title="" target="_blank">دخملای فوتبالی</a></font></div><div class=div32><font class=text1><a href="http://koolbehvolleyball25.blogfa.com/" title="" target="_blank">·٠•●♥کلبه والیبالیست ها♥●•٠·(صدف جووون)</a></font></div><div class=div32><font class=text1><a href="http://2009mz.shakheh.com/" title="" target="_blank">✔️ والیبال و فوتبال ✔️(مبینا جووون)</a></font></div><div class=div32><font class=text1><a href="http://deltangivman.blogfa.com/" title="" target="_blank">دلتنگى و من(نسیم جوووونم)</a></font></div><div class=div32><font class=text1><a href="http://pro-volleyball.mihanblog.com/" title="" target="_blank">ولیبال حرفه ای(ریحانه جوووونم)</a></font></div><div class=div32><font class=text1><a href="http://reyhaneh6617.blogfa.com" title="" target="_blank">غاتی پاطی (اجی جووونم)</a></font></div><div class=div32><font class=text1><a href="http://perspolis-66.shakheh.com/" title="" target="_blank">پرسپولیس ( اونم از نوع دو آتیشه)(مبینا جون)</a></font></div><div class=div32><font class=text1><a href="http://like-perspolis.blogfa.com/" title="" target="_blank">♥فقط پرسپولیس♥پیـام صادقیان♥حسین ماهینے♥</a></font></div><div class=div32><font class=text1><a href="http://lovebadminton.rozblog.com/" title="" target="_blank">پوئن 25 تیم قهرمان من(نیکی جووون)</a></font></div><div class=div32><font class=text1><a href="http://talacheh.mihanblog.com/" title="" target="_blank">زیور الات دست ساز (طناز جووونم)</a></font></div><div class=div32><font class=text1><a href="http://mirsaeedmarouf4.blogfa.com/" title="" target="_blank">میر سعید معروف 4(میشا جووون)</a></font></div><div class=div32><font class=text1><a href="http://alirezayaghootesorkh.blogfa.com" title="" target="_blank">علیرضا حقیقی یاقوت سرخ(غزل جووون)</a></font></div><div class=div32><font class=text1><a href="http://hosein7744.mihanblog.com" title="" target="_blank">وبلاگ رسمی حسین اسدالهی</a></font></div><div class=div32><font class=text1><a href="http://just-ehsanalikhani-.mihanblog.com/" title="" target="_blank">احسان علیخانی(سپیده جووون)</a></font></div><div class=div32><font class=text1><a href="http://fano0o0s.mihanblog.com" title="" target="_blank">فانوس(ریحانه ودلارام جوووووونم)</a></font></div><div class=div32><font class=text1><a href="http://www.mylovea20.blogfa.com/" title="" target="_blank">alireza haghighi my love(نادیا جووون)</a></font></div><div class=div32><font class=text1><a href="http://nimkat2012.blogfa.com" title="" target="_blank">نیمکت(هدی و حدیث جووون)</a></font></div><div class=div32><font class=text1><a href="http://khatemarzi.mihanblog.com/" title="" target="_blank">فقط طنز برای وقت هایی که بی کاریی</a></font></div><div class=div32><font class=text1><a href="http://meysamvr.blogfa.com/" title="" target="_blank">فوتبال یعنی زندگی(آقا میثم)</a></font></div><div class=div32><font class=text1><a href="http://www.realgoalkeeper.blogfa.com/" title="" target="_blank">منو درگیر خودت کن(رومینا جووون)</a></font></div><div class=div32><font class=text1><a href="http://valibal2013.mihanblog.com" title="" target="_blank">سایت تخصصی والیبال(آقا میثم)</a></font></div><div class=div32><font class=text1><a href="http://feshangchi75.blogfa.com/" title="" target="_blank">امیر حسین فشنگچی(مهسا جووون)</a></font></div><div class=div32><font class=text1><a href="http://patoghmabahala.blogfa.com/" title="" target="_blank">کلیک کن...پاتوق باحالاست...(الناز جووون)</a></font></div><div class=div32><font class=text1><a href="http://peykan-bazargard.mihanblog.com/" title="" target="_blank">کلوپ هواداران پیکان و مهدی بازارگرد(اقا علیرضا)</a></font></div><div class=div32><font class=text1><a href="http://dehkadeh-emroozi.blogfa.com/" title="" target="_blank">دهکده ی امروزی(سارا جووون)</a></font></div><div class=div32><font class=text1><a href="http://silvermooninbluesky.blogfa.com/" title="" target="_blank">قلب شیشه ای(نیایش جووون)</a></font></div><div class=div32><font class=text1><a href="http://www.miladakbari1374.blogfa.com/" title="" target="_blank">نوشاد عالمیان(اقا میلاد)</a></font></div><div class=div32><font class=text1><a href="http://alirezahaghighi20.blogfa.com/" title="" target="_blank">فقط علیرضاحقیقی(پریا جووون)</a></font></div><div class=div32><font class=text1><a href="http://www.sarbazanvatan.blogfa.com" title="" target="_blank">سربازان وطن(اقا ارش)</a></font></div><div class=div32><font class=text1><a href="http://www.HTMVI.blogfa.com" title="" target="_blank">هواداران تیم ملی والیبال</a></font></div><div class=div32><font class=text1><a href="http://description27.blogfa.com/" title="" target="_blank">Ϡ₡ بِـــِـבפּלּ شـَـرح ... Ϡ₡(ملیکا جووون)</a></font></div><div class=div32><font class=text1><a href="http://volleyball-stars.mihanblog.com" title="" target="_blank">♥ستاره های والیبال♥(مهسا جووون)</a></font></div><div class=div32><font class=text1><a href="http://elina-note.blogfa.com/" title="" target="_blank">ღ با یک جفت کتونی خیس ღ(الینا جووون)</a></font></div><div class=div32><font class=text1><a target="_blank" href="http://www.payamblog.com">بهترین قالب های وبلاگ</a></font></div>
+<div class=div32><font class=text1><a href="../../../link/index.html">همه پیوندها</a></font></div>
+</div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>نویسندگان</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="../../author/783854.html">مریم  (273)</a></font></div></div><div class=div30></div>
+</div>
+
+
+		
+
+<form id="frm-16082163045fdb6ef060c1d" method="get" action="http://we--plus.mihanblog.com/post/search/fid/16082163045fdb6ef060c1d"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> <div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>جستجو</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><center><input type="text" name="search_text"><br>
+<input type="submit" value="جستجو" style="font-family: Tahoma; font-size: 9pt"></center></div>
+</div><div class=div30></div>
+</div><input type="hidden" name="frm-id" value="16082163045fdb6ef060c1d" id="frm-id" /></form>
+
+<div class=div24> <div class=div35> <div class=div25><font class=text5>آمار وبلاگ</font></div></div> <div class=div342></div> <div class=div341> <div class=div32><font class=text1>کل بازدید : <script>getStatVar('total_view');</script></font></div> <div class=div32><font class=text1>بازدید امروز :<script>getStatVar('today_view');</script></font></div> <div class=div32><font class=text1>بازدید دیروز : <script>getStatVar('yesterday_view');</script></font></div> <div class=div32><font class=text1>بازدید این ماه : <script>getStatVar('this_month_view');</script></font></div> <div class=div32><font class=text1>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></font></div> <div class=div32><font class=text1>تعداد نویسندگان : <script>getStatVar('total_author');</script></font></div> <div class=div32><font class=text1>تعداد کل پست ها : <script>getStatVar('total_post');</script></font></div> <div class=div32><font class=text1>آخرین بازدید : <script>getStatVar('last_view_date');</script></font></div> <div class=div32><font class=text1>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></font></div> </div><div class=div30></div> </div>
+
+<div class=div24><center>
+</center></div>
+
+</td>
+
+<td class=div1 valign=top>
+
+<div class=div61>
+<div class=div10><font class=title> علیرضا حقیقی</font></div>
+<div class=div12><font class=des></font></div>
+</div>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../155.html">اووومدم با یه عالمه عکس...</a></font></div>
+<div class=div58><font class=text7>جمعه 29 دی 1391 :: نویسنده : <a href="../../author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+<font face="georgia, times new roman, times, serif" size="3">سلاااااااااااااااااااااام دوست جونام &nbsp;</font><img src="http://www.pic4ever.com/images/4xvim2p.gif"><div><font face="georgia, times new roman, times, serif" size="3">حالتون چطوره؟؟</font></div><div><font face="georgia, times new roman, times, serif" size="3">چه خبرا؟؟</font></div><div><font face="georgia, times new roman, times, serif" size="3">ببخشید دیر دیر اپ میکنم خبری نیست!</font></div><div><font face="georgia, times new roman, times, serif" size="3">ولی باز اومدم &nbsp;با یه سری از عکس های <font color="#ff0000"><b>علیرضا</b></font> امیدوارم خوشتون بیاد</font></div><div><font face="georgia, times new roman, times, serif" size="3">امتحانا هم که تموم شد همه خوشحال</font><img src="http://www.pic4ever.com/images/pillowfight.gif"></div><div><font face="georgia, times new roman, times, serif" size="3">بریم سراغ عکساااااا:</font></div><div><font face="georgia, times new roman, times, serif" size="3">&nbsp;</font></div><div><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></div><div><img src="http://mmfhmm.persiangig.com/36.jpg"></div><div>&nbsp;</div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000">بچه ها این همون روزی که علیرضا اومده بود ایران رفته بود استادیوم ازادی اون کناریشم باباشه!خیی گوگوله!!!!!!</font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000">داره یخ میکنه!</font><img src="http://www.pic4ever.com/images/2029.gif"></div><div>&nbsp;</div><div><img src="http://mmfhmm.persiangig.com/37654046419062641154.jpg"></div><div><br></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000">چه لبخند ملیحی زده!!!رویانیان هم که استعفا داده!</font></div><div><font color="#ff0000" face="georgia, times new roman, times, serif" size="3">&nbsp;</font></div><div><br></div><div><br></div><div><img src="http://mmfhmm.persiangig.com/16802-1-norm.png"></div><div><br></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000">ا</font><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">ون &nbsp;ته&nbsp;میبینینش!!!؟؟</font></div><div><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></div><div><img src="http://mmfhmm.persiangig.com/IMAGE633763484469099941.jpg"></div><div><br></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000">دورانه طفولیتشه!!!............</font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><img src="http://mmfhmm.persiangig.com/IMAGE634722612772267078.jpg"></div><div><br></div><div><br></div><div><br></div><div><img src="http://mmfhmm.persiangig.com/photos_8564.jpg"></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000">این جاام که روبینه!!!!</font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><img src="http://mmfhmm.persiangig.com/photos_9896.jpg"></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000">خیلییییییییییییییییی قشنگه عکسه!!!</font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><img src="http://mmfhmm.persiangig.com/photos_9628.jpg"></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000">علیرضا نگهبانی میدی دم در؟؟!!دم در زشته برو تو بابا!!!</font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><img src="http://mihanblog.com/public/public/rte/images_new/smiles/100.gif"><font size="3" face="georgia, times new roman, times, serif" color="#ff0000">راستی چند تا از عکس ها رو قبلا دیده بودین؟؟</font></div><div><br></div><div><br></div>
+
+
+
+
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(155)">نظرات (<script>setCommentCnt(155)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../154.html">ملاقات دروازه‌بانان سابق پرسپولیس در آمریکا</a></font></div>
+<div class=div58><font class=text7>یکشنبه 24 دی 1391 :: نویسنده : <a href="../../author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><font face="georgia, times new roman, times, serif" size="3"><font color="#ff0000"><b>علیرضا حقیقی </b></font>دروازه بان تیم روبین کازان روسیه برای گذراندن تعطیلات راهی آمریکا شد.(<font color="#ff0000">اوووو)</font></font><img src="http://www.pic4ever.com/images/jawsmiley.gif"><div><font face="georgia, times new roman, times, serif" size="3">دروازه بان سابق پرسپولیس در این سفر دیداری با احمد رضا عابدزاده دیگر دروازه بان سابق پرسپولیس داشت(<font color="#ff0000">منم بودم عجب شبی بود)</font></font><img src="http://www.kolobok.us/smiles/icq/yahoo.gif"></div><div><font face="georgia, times new roman, times, serif" size="3">عابدزاده که به عنوان مربی دروازه بانان &nbsp;در لس آنجلس بلوز آمریکا &nbsp;فعالیت میکند چندین شاگرد خصوصی از جمله</font></div><div><font face="georgia, times new roman, times, serif" size="3">پسر یورگن کلینزمان نیز دارد.</font></div><div><font face="georgia, times new roman, times, serif" size="3">وی همچنین در دوران حضور در کادر مربیگری پرپولیس مربی <b><font color="#ff0000">علیرضا حقیقی</font></b> بوده.</font></div><div style="text-align: justify;"><font color="#333333" face="Tahoma">&nbsp;</font></div><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(154)">نظرات (<script>setCommentCnt(154)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../153.html">:((( بازم تسلیت!</a></font></div>
+<div class=div58><font class=text7>جمعه 22 دی 1391 :: نویسنده : <a href="../../author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><font size="3" face="georgia, times new roman, times, serif"><b>فرا رسیدن سالروز رحلت پیامبر اکرم و امام حسن مجتبی&nbsp;</b></font><div><font size="3" face="georgia, times new roman, times, serif"><b>و شهادت امام رضا رو تسلیت میگم!</b></font></div><div><font size="3" face="georgia, times new roman, times, serif"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif"><br></font></div><div style="text-align: start;"><span style="text-align: right;">&nbsp;</span><span style="color: rgb(51, 0, 0); font-family: Tahoma; font-size: large; text-align: right;">&nbsp;</span><img src="http://mmfhmm.persiangig.com/41654_8tbIfkHC.jpg"></div><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(153)">نظرات (<script>setCommentCnt(153)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../152.html">بازم مثل همیشه  پرسپولیس برنده میشه!:))</a></font></div>
+<div class=div58><font class=text7>چهارشنبه 20 دی 1391 :: نویسنده : <a href="../../author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4>
+<font face="georgia, times new roman, times, serif" size="3">سلاااااااااااااام به همه ی دوستای گلم!</font><img src="http://www.pic4ever.com/images/2lbkos0.gif"><div><font face="georgia, times new roman, times, serif" size="3">الان من چی میتونم بگم!خودتون بهتر از من خبر دارین!</font></div><div><font face="georgia, times new roman, times, serif" size="3">وااااااااااااااااااااااااااااااااااااااااااااااااااااا</font></div><div><font face="georgia, times new roman, times, serif" size="3">اااااااااااااااااااااااااااااااااااااااااااااااااااااا</font></div><div><font face="georgia, times new roman, times, serif" size="3">اااااااااااااااااااااااااااااااااااااااااااااااااااااا</font></div><div><font face="georgia, times new roman, times, serif" size="3">یعنی ترکوند دیشب <b><font color="#ff0000">پرسپولیس</font></b></font></div><div><font face="georgia, times new roman, times, serif" size="3">نفتو به آتیش کشوندیم!</font><img src="http://www.pic4ever.com/images/cancan.gif"></div><div><font face="georgia, times new roman, times, serif" size="3">نمیشد این یحیی جوووووووون زودتر میوند؟!!!</font></div><div><br></div><div><br></div><div><font face="georgia, times new roman, times, serif"><font size="3">حالا همه باهم پرسپولیس چیکارش میکنه سوراخ سوراخش میکنه!!!!!!!!!</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></font></div><div><font size="3" face="georgia, times new roman, times, serif"><img src="http://www.pic4ever.com/images/loveshower.gif"></font></div><div><font size="3" face="georgia, times new roman, times, serif">&nbsp;از مرحله یک هشتم جام حذفی باشگاه های کشور، <font color="#ff0000"><b>پرسپولیس</b></font> توانست با گل‌های محمد نوری در دقایق 27 و 58 از روی پاس غلامرضا رضایی و و حسین ماهینی‌ در دقیقه 76 از روی نقطه پنالتی و هادی نوروزی در دقیقه 86 گل‌های <font color="#ff0000"><b>پرسپولیس</b></font> به پیروزی برسد و در مرحله بعد به مصاف ذوب آهن برود.</font><img src="http://www.pic4ever.com/images/studsmatta.gif"></div><div><br></div><div><br></div><div><br></div><div><br></div><div><img src="http://www.afkarnews.ir/images/docs/000182/n00182094-b.jpg" alt="دیدار پرسپولیس - نفت تهران / گزارش تصویری"></div><div><br></div><div><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">عاشقتونیم بابااااااااااااا!</font></div><div><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></div><div><img src="http://www.afkarnews.ir/images/docs/000182/n00182094-r-b-009.jpg"></div><div><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">کاپی جون چطوره!؟؟</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/3.gif"></div><div><br></div><div><font size="3" face="georgia, times new roman, times, serif">راستی خبر بعدی!!!!!!!!!!</font></div><div><font size="3" face="georgia, times new roman, times, serif"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif"><font color="#ff0000">&nbsp;</font><span style="line-height: 21px; text-align: justify;">مهاجم آرژانتینی <font color="#3333ff">بار</font><font color="#ff0000">سلونا</font><font color="#3333ff">(لیونل </font><font color="#ff0000">&nbsp;مسی)</font><font color="#3333ff">&nbsp;</font>برای چهارمین بار توپ طلای فوتبال جهان را بدست آورد.</span></font></div><div><br></div><div><font color="#ff0000" face="georgia, times new roman, times, serif" size="3">&nbsp;</font></div><div><img src="data:image/jpeg;base64,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"></div><div><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></div><div><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></div><div><img src="http://mihanblog.com/public/public/rte/images_new/smiles/100.gif"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">راستی نظرتون درباره ی اهنگ وبم چطوره؟برش دارم دیگه؟؟</font></div>
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(152)">نظرات (<script>setCommentCnt(152)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../151.html">مصاحبه با علیرضا حقیقی شماره یک پرسپولیس</a></font></div>
+<div class=div58><font class=text7>یکشنبه 17 دی 1391 :: نویسنده : <a href="../../author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><img src="http://www.pic4ever.com/images/4lqqtqv.gif">&nbsp;<span style="font-family: georgia, 'times new roman', times, serif; font-size: medium;">سلااااااااااااااااااااام دوست جونام چطورید؟؟</span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span style="font-family: georgia, 'times new roman', times, serif; font-size: medium;">خبری چیزی نیست که بزارم عکس های <font color="#ff0000"><b>علیرضا </b></font>رو هم تازه گذاشتم ازاونجای که<b> گلنوش</b> جووووونم &nbsp;گفت مطلب جدید بزار دیگه منم گشتم یه مصاحبه برای خیییییییییییییییییلیییییییییییییییی وقت پیشه علیرضا س ولی خیلی باحاله من که خیلی دوستش دارم همشو بخونید چون خیلی باحال&nbsp;</span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><img src="http://www.pic4ever.com/images/loveshower.gif"><span style="font-family: georgia, 'times new roman', times, serif; font-size: medium;">....بعله دیگه راستی جواب های علیرضا رو <font color="#ff0000">قرمز</font> کردم&nbsp;</span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span style="font-family: georgia, 'times new roman', times, serif; font-size: medium;"><br></span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span style="font-family: georgia, 'times new roman', times, serif; font-size: medium;">فقط جلوی«عقاب آسیا»جوجه
+ام</span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="georgia, times new roman, times, serif"><b style="font-size: 11pt;">رحمتی شماره یک آسیاست،من شماره یک دنیا می شوم</b><font color="#ff0000" size="3">(رحمتی عددی نیست بابا!)</font></font></span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><b><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></b></span></span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 115%;"><b><font color="#ff0000">علیرضا حقیقی</font></b> از ۱۷ سالگی مدعی پوشیدن پیراهن شماره یک
+پرسپولیس بود.از همان روزی که پنالتی آقای گل جهان را مهار کرد تا به امروز.حالا
+او مدعی اول پیراهن یک است.حقیقی روز جمعه در ۹۰ حاضر شد و با همان اعتماد به نفس
+همیشگی از شماره یک بودنش گفت.از این که اگر قرار باشد برای او مدعی بتراشند
+پرسپولیس را ترک خواهد کرد.از این که ۵ سال بعد در اروپا بازی خواهد کرد و این که
+او قصد ندارد زیر سایه هیچ دروازه بانی باشد.چه میثاق چه رحمتی</span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL">&nbsp;خلاصه آن که پس از چند
+سالی آشنایی نگارنده با حقیقی،دیروز حقایق تازه ای از ابعاد شخصیتی این گلر جوان
+را پیدا کردم و...بهتر نیست خودتان با ما و حقیقی همراه باشید و درباره او قضاوت
+کنید؟ <font color="#ff0000">(شما لازم نیست همراه باشی من خودم میرم همراهش!!اییییییییش)</font></span></font></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span style="font-family: Arial, sans-serif;">&nbsp;</span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed">
+
+</p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL">مثل اینکه از عکس
+انداختن روی پل و اتوبان هیجان زده شدی،سوژه جالبی بود؟</span></font><span style="font-family: georgia, 'times new roman', times, serif; font-size: medium;">&nbsp;</span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span style="font-family: georgia, 'times new roman', times, serif; font-size: medium;"><br></span></p>
+
+<p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3" color="#ff0000">(<span lang="FA" dir="RTL">با خنده ای
+بلند(خیلی،خیلی&nbsp;</span></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><img src="http://www.pic4ever.com/images/4chsmu1.gif"></p>
+
+<p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL">تا به حال چنین عکسی
+گرفته بودی؟</span></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL"><br></span></font></p>
+
+<p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL" style="color: rgb(255, 0, 0);">خدا</span><span lang="FA" dir="RTL"><font color="#ff0000"> وکیلی وسط پل نه
+عکس گرفته و نه چنین عکسی دیده بود </font>(خولن اینا علیرضا جان دیگه توقعی جز این نمیره ازشون)</span></font><span style="color: rgb(255, 0, 0); font-family: Arial, sans-serif;">&nbsp;</span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span style="font-family: Arial, sans-serif;"><br></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;">
+
+</p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><img src="http://www.pic4ever.com/images/3ztzsjm.gif"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL">نترسیدی خدای نکرده با
+ماشین تصادف کنی؟</span></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL"><br></span></font></p>
+
+<span lang="FA" dir="RTL" style="color: rgb(255, 0, 0); line-height: 115%;"><font face="georgia, times new roman, times, serif" size="3">نه،مگر گلر هم ترسو می شود</font></span><span lang="FA" dir="RTL" style="font-size: 11pt; line-height: 115%; font-family: Arial, sans-serif;"><font color="#ff0000">؟</font>(شیییییییییییییره علیرضا)</span><img src="http://www.pic4ever.com/images/cheerleader3.gif"><p></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3"><br></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL" style="line-height: 115%;"></span></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL"><font face="georgia, times new roman, times, serif" size="3">یعنی چی</font>؟</span><span style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">&nbsp;</font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></p>
+
+<p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/22.gif" style="line-height: 115%;"><font color="#ff0000">(<span lang="FA" dir="RTL">خیلی خونسرد(یک
+گلر باید سر نترس داشته و بی کله باش</span></font></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><br></font></p>
+
+<p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL"><font size="3" face="georgia, times new roman, times, serif">تا به حال در اتوبان و
+آسفالت شیرجه زده بودی؟</font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">&nbsp;</font></span></p>
+
+<p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL">در دوران کودکی چرا ولی
+از موقعی که باشگاهی شدم دیگر نه</span><span dir="LTR"></span><span dir="LTR"></span>.<span style="line-height: 115%;">&nbsp;</span></font></p>
+
+<span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><br></p>خسته نشدی از بس که در پرسپولیس روی نیمکت نشستی؟</font></span><div><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></div><div><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></div><div><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">(شما خسته شدی بفرما !یعنی ببینید چقدر قدیمی که هنوز اینجا نیمکت نشین بوده!)</font></span><img src="http://www.pic4ever.com/images/97.gif"><p></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span style="color: rgb(255, 0, 0); line-height: 115%; font-family: georgia, 'times new roman', times, serif; font-size: medium;">ریز می خندد)</span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><span style="line-height: 115%;"><span lang="FA" dir="RTL">(این ریزشو خوب اومدی <font color="#ff0000">)من از سال ۷۸ با نونهالان پرسپولیس به این تیم آمدم و
+الان ۱۰ سالی می شود در این تیم سابقه</font></span></span></font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span style="color: rgb(255, 0, 0); line-height: 115%; font-family: georgia, 'times new roman', times, serif; font-size: medium;">&nbsp;دارم &nbsp;</span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span style="line-height: 115%;"><span lang="FA" dir="RTL"><font color="#ff0000">&nbsp;۱۶</font></span></span></span></span><font color="#ff0000" style="line-height: 115%;">&nbsp;سالگی هم پیشنهادات مختلفی
+داشتم،ولی عشق به پرسپولیس اجازه نداد از این تیم جدا شوم</font><span style="line-height: 115%;">(ادم گریش میگیره</span></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><span style="line-height: 115%;"><br></span></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="line-height: 115%;"></span></font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL">به نظرت در فوتبال حرفه ای،عشق حماقت نیست؟</span><o:p></o:p></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><o:p><font face="georgia, times new roman, times, serif" size="3">&nbsp;</font></o:p></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif" style="line-height: 115%;"><span style="line-height: 115%;"><font color="#ff0000">شاید این چنین باشد،ولی عشق به پرسپولیس حماقت نیست</font></span></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif">&nbsp;</font><span style="line-height: 12px;">&nbsp;</span></p><div><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><img src="http://jamnews.ir/Images/News/Smal_Pic/8-11-1390/IMAGE634633721909613069.jpg"></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="line-height: 115%;">بقیش <b>ادامه ی مطلب</b></span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/100.gif" style="line-height: 115%;"></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">حتما نگا کنید هااااااااااااااااااااا</font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3">&nbsp;</font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><br></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">ادامه مطلب یادتون نره هااااااااااااااااا</font></p><p></p><p></p>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+<BlogExtendedPost><br><br><b><a href='../../151.html'>ادامه مطلب</a></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(151)">نظرات (<script>setCommentCnt(151)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../150.html">بازم مثل همیشه بردیم!!!!:)))</a></font></div>
+<div class=div58><font class=text7>چهارشنبه 13 دی 1391 :: نویسنده : <a href="../../author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4>
+
+<p class="MsoNormal" style="text-align: right; direction: ltr; unicode-bidi: embed;"><span style="font-family: georgia, 'times new roman', times, serif; font-size: medium;">&nbsp; &nbsp;&nbsp;</span><img src="http://www.pic4ever.com/images/balloons.gif"><span style="font-family: georgia, 'times new roman', times, serif; font-size: medium;">&nbsp; &nbsp; سلاااااااااااااااااااااااااام
+ب دوستای گلم</span></p><p class="MsoNormal" style="text-align: right; direction: ltr; unicode-bidi: embed;"><o:p></o:p></p><p class="MsoNormal" style="text-align: right; direction: ltr; unicode-bidi: embed;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/7.gif"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL">حالتون چطوره؟چه خبرا؟</span><o:p></o:p></font></p>
+
+<p class="MsoNormal" style="text-align: right; direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL">منم سلامتی خبری نیست این
+دبستانی هارو باز تعطیل کردن واسه الودگی هوا&nbsp;</span></font><span lang="FA" dir="RTL" style="font-family: georgia, 'times new roman', times, serif; font-size: medium;">انگار ما تصویه هوا داریم والا
+به خدا یه کاری میکنن تا ماها ازاخر جان به جان افرین تسلیم شیم (خدا نکنه دور از
+جونتون)</span></p>
+
+<p class="MsoNormal" style="text-align: right; direction: ltr; unicode-bidi: embed;"><img src="http://www.pic4ever.com/images/97.gif"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL">اره دیگه پیشگامانم که اومد رده
+ی4 یادش بخیر اول بودیم چقدر سخت</span><span dir="LTR"></span><span dir="LTR"></span>!!!!!!!!<o:p></o:p></font></p>
+
+<p class="MsoNormal" style="text-align: right; direction: ltr; unicode-bidi: embed;"><img src="http://www.pic4ever.com/images/cancan.gif"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL">پرسپولیسم که داره با یحیی میترکونه
+با&nbsp; 25 امتیاز اومدیم رده ی 9 حال کردم شدیییییییید</span><o:p></o:p></font></p>
+
+<p class="MsoNormal" style="text-align: right; direction: ltr; unicode-bidi: embed;"><img src="http://www.pic4ever.com/images/47b20s0.gif"><font face="georgia, times new roman, times, serif" size="3">&nbsp;<span lang="FA" dir="RTL">غلامرضا رضایی ثانیه 12 و
+دقیقه ی 26 کریم انصاری فرد یعنی الان چی بگم من!!!!!!!گلزنی ثانیه شدی</span><span dir="LTR"></span><span dir="LTR"></span>!<o:p></o:p></font></p>
+
+<span lang="FA" dir="RTL"><div style="line-height: 115%; text-align: right;"><font face="georgia, times new roman, times, serif" size="3"><span style="line-height: 115%;">اره دیگه .....دیگه ببینم</span><span style="line-height: 115%;">&nbsp; </span><span style="line-height: 115%;">خبر یادم میاد
+یا نه......&nbsp;</span></font></div><div style="text-align: right;"><font face="georgia, times new roman, times, serif" size="3"><span style="line-height: 18px;">اهان بچه ها این عکسا چند روزه قاطی کرده پرشین گیگ اصلا باز نمیشه این عکس های وبمم قاط زده&nbsp;</span></font></div><div style="text-align: right;"><font face="georgia, times new roman, times, serif" size="3"><span style="line-height: 18px;">الانم میخواستم عکس بزارم نشد!</span></font><img src="http://www.kolobok.us/smiles/icq/ireful.gif"></div><div style="text-align: right;"><br></div><div style="text-align: right;"><font face="georgia, times new roman, times, serif" size="3">بچه ها پرشین گیگ حالش خوب شد عکس ها درست شد اینم از تمرین <font color="#ff0000">پرسپولیس</font> تو برفا &nbsp;البته جدید نیست ماله چند روز پیشه!</font></div><div style="text-align: right;"><font face="georgia, times new roman, times, serif" size="3"><br></font></div><div style="text-align: right;"><font face="georgia, times new roman, times, serif" size="3">&nbsp;</font></div><div style="text-align: right;"><font color="#ff0000" face="georgia, times new roman, times, serif" size="3">&nbsp;</font><img src="http://mmfhmm.persiangig.com/ImageGen.jpg"></div><div style="text-align: right;"><font face="georgia, times new roman, times, serif" size="3" color="#ff0000"><br></font></div><div style="text-align: right;"><font face="georgia, times new roman, times, serif" size="3" color="#ff0000"><br></font></div><div style="text-align: right;"><img src="http://mmfhmm.persiangig.com/ImageGen%20%282%29.jpg"></div><div style="text-align: right;"><br></div><div style="text-align: right;"><br></div><div style="text-align: right;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/100.gif">&nbsp;<font face="georgia, times new roman, times, serif" size="3" color="#ff0000"><b>نظر</b></font></div></span>
+
+
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(150)">نظرات (<script>setCommentCnt(150)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../149.html">بدویییییید عکس!!!</a></font></div>
+<div class=div58><font class=text7>پنجشنبه 7 دی 1391 :: نویسنده : <a href="../../author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4>
+<font face="georgia, times new roman, times, serif" size="3">سلااااام دوست جونام&nbsp;</font><div><img src="http://www.pic4ever.com/images/139fs108574.gif"><font face="georgia, times new roman, times, serif" size="3"><br></font><div><font face="georgia, times new roman, times, serif" size="3">خوبید؟چه خبر؟</font></div><div><font face="georgia, times new roman, times, serif" size="3">اول &nbsp;برد پیکان مقابل<font color="#cc0000"> پیشگامان </font>و تبریک میگم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/45.gif"></font></div><div><font face="georgia, times new roman, times, serif" size="3"><br></font></div><div><font face="georgia, times new roman, times, serif" size="3">یه سری از عکسای دیگه ی<font color="#ff0000"><b> علیرضا</b></font></font><img src="http://www.pic4ever.com/images/16.gif"><span style="font-family: georgia, 'times new roman', times, serif; font-size: medium;">رو براتون گذاشتم باز نیاین بگید تکراری هاااااا خودم میدونم&nbsp;</span></div></div><div><font face="georgia, times new roman, times, serif" size="3">چون سوژه وباحالن میزارم!</font></div><div><font face="georgia, times new roman, times, serif" size="3">همین دیگه!</font></div><div><font face="georgia, times new roman, times, serif" size="3"><br></font></div><div><img src="http://mmfhmm.persiangig.com/22283_170.jpg"></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000">بچه اون سنگینه کمرت درد میگیره هاااااا!</font><img src="http://www.pic4ever.com/images/flat.gif"></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><img src="http://mmfhmm.persiangig.com/4016422.jpg"></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000">علیرضا جان دارن با روی خوش بهت میگن بده اون اقا هرو نگا چه ملیح بهت مینگره!!!</font><img src="http://www.pic4ever.com/images/4025mr7.gif"></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><img src="http://mmfhmm.persiangig.com/603165_orig.jpg"></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000">دستتو بکش مگه ما باهم شوخی داریم!؟؟</font></div><div><img src="http://www.pic4ever.com/images/Just_Cuz_15.gif"></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><img src="http://mmfhmm.persiangig.com/6xd98m0ziin9d3gm9hl.jpg"></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000">سریع جمع کن بریم چقدر فس فس میکنی!!</font><img src="http://www.pic4ever.com/images/5.gif"></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><img src="http://mmfhmm.persiangig.com/IMAGE634722612772267078.jpg"></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000">&nbsp;میگی یه تنه جامو به دست اورده&nbsp;</font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000">علی جان نکن بزار بچه ها ام دست بزنن</font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><img src="http://mmfhmm.persiangig.com/1308839921.jpg"></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000">چه صمیمی!من اینقدر این عکسو دوست دارم نظر شما چیه؟</font><img src="http://www.kolobok.us/smiles/mini/heart_mini.gif"></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><img src="http://mmfhmm.persiangig.com/1337076928_photos_9493.jpg"></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000">اونجوری نگا نکن اون سیبا و موزا ماله توئه &nbsp;</font><img src="http://www.pic4ever.com/images/43qoqxf.gif"></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><img src="http://mmfhmm.persiangig.com/1337077018_photos_9593.jpg"></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000">88؟؟؟؟؟خوبه 88....88 &nbsp;شمارت نشد!!!</font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif" color="#ff0000"><img src="http://mmfhmm.persiangig.com/photos_9495.jpg"></font></div><div><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">داره با خودش میگه این چیه الان؟؟اخه میدونی تا حالا ندیده!!</font><img src="http://www.pic4ever.com/images/oregonian_winesmiley.gif"></div><div><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></div><div><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">ودر پایان این خود علیرضاس که میگه:</font></div><div><br></div><div>.</div><div>.</div><div>&nbsp;<img src="http://mmfhmm.persiangig.com/x6oywskcjmzuee9kpe2f.png"></div><div><br></div><div><br></div><div><br></div><div><font face="georgia, times new roman, times, serif" size="3" color="#ff0000">بچه ها من به شخصه از این عکس خوشم نمیاد چون علیرضا رو مسخره کردن ولی چون دوست عزیزم (سپیده )گفت بزار منم&nbsp;</font></div><div><font face="georgia, times new roman, times, serif" size="3" color="#ff0000">گذاشتم!دستش درد نکنه!</font></div><div><br></div><div><br></div>
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(149)">نظرات (<script>setCommentCnt(149)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../148.html">برخورد سرد کریمی با حقیقی/پرسپولیسی‌ها هافبک ستاره سرخ را تائید کردند</a></font></div>
+<div class=div58><font class=text7>دوشنبه 4 دی 1391 :: نویسنده : <a href="../../author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><p style="text-align: justify; "><span id="bodyHolder_newstextDetail_nwstxtInfoPane"><font face="georgia, 'times new roman', times, serif" size="3"><br class="Apple-interchange-newline">دروازه‌بان تیم فوتبال روبین‌کازان روسیه گفت: من باید به سمت کریمی می‌رفتم نه اینکه او به سمتم بیاید.</font></span></p><p style="text-align: justify; "><font size="3" face="georgia, 'times new roman', times, serif"><b>پس تمرین امروز پرسپولیس در اکادمی پرسپولیس کلیه بازیکنان به سمت علیرضا حقیقی رفتند و دقایقی را با وی به خوش وبش پرداختند اما تنها بازیکنی که به سمت دروازه بان سابق پرسپولیس نرفت وبا او صحبت نکرد علی کریمی بود که موجب تعصبات دیگران شده بود.</b></font><img src="http://www.pic4ever.com/images/4fvgdaq_th.gif"></p><p style="text-align: justify; "><font size="3" face="georgia, 'times new roman', times, serif" color="#ff0000">(واقعا چراااااااااا من وقتی اینو خوندم خیلی ناراحت شدم !نمیدونم چی بگم تاسف بخورم که نمیتونم چون کریمی یکی از ستاره هاست&nbsp;</font></p><p style="text-align: justify; "><font size="3" face="georgia, 'times new roman', times, serif" color="#ff0000">ولی یکی به من بگه چراااااا؟؟؟؟) &nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/7.gif"><img src="http://www.pic4ever.com/images/97.gif"></p><p style="text-align: justify; "><font face="georgia, 'times new roman', times, serif" size="3"><b>&nbsp;گفته میشود که علیرضا حقیقی و علی کریمی باهم مشکلاتی دارند</b><font color="#ff0000">(ببخشید علیرضا اخلاقش عاااالیه مشکل از جا ی دیگس!!)</font></font><img src="http://www.kolobok.us/smiles/icq/ireful.gif"></p><p style="text-align: justify; "><font color="#ff0000" style="font-family: georgia, 'times new roman', times, serif; font-size: medium; "><b>علیرضا حقیقی</b></font><span style="font-family: georgia, 'times new roman', times, serif; font-size: medium; "> درباره مذاکرتش با باشگاه پرسپولیس اظهار داشت: همه می دانند قرارداد من با تیم روبین‌کازان 4 ساله است و به سادگی به بازیکنانی که جذب کرده رضایتنامه نمی دهد .من هم فقط 8 ماه است که در روبین حضور دارم و هنوز قراردادم با این تیم مانده است.</span></p><p style="text-align: justify; "><font face="georgia, 'times new roman', times, serif" size="3" color="#ff0000">(خوب ..خوب....؟؟؟!!)</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/86.gif"></p><p class="rtejustify" style="text-align: justify; "><span id="bodyHolder_newstextDetail_nwstxtBodyPane"><font face="georgia, 'times new roman', times, serif" size="3">وی در پاسخ سوالی که آیا با پرسپولیسی ها مذاکره داشتی و حتی حاضری بدون دریافت یک ریال&nbsp;رضایت روبینی ها را برای&nbsp;حضور در نیم فصل و پیوستن به پرسپولیس بگیری تأکید کرد: من صحبتی با آقای رویانیان نداشتم اما&nbsp;او یک پیشنهاد به مدیر برنامه های من داده بود اما ماجرای دیگری در بین نبوده که برخی ها بخواهند در پرسپولیس مخالفت کنند.</font></span></p><p class="rtejustify" style="text-align: justify; "><span id="bodyHolder_newstextDetail_nwstxtBodyPane"><font face="georgia, 'times new roman', times, serif" size="3">وی ادامه داد: در این شرایط که من در تعطیلات هستم باید از زدن اینگونه اخبار کذب جلوگیری شود، مسئولان روبین‌کازان بازیکنان خود را حتی در تعطیلات زیر نظر دارند و دوست ندارند بازیکنانشان که با آنها قرارداد دارد به مسئله دیگری فکر کنند،ما یک ماه دیگر باید در یوفا کاپ به مصاف اتلتیکومادرید برویم پس من باید به آن بازی فکر کنم نه مسئله دیگری.<font color="#ff0000">(بل.. بل..)</font></font></span></p><p class="rtejustify" style="text-align: justify; "><span id="bodyHolder_newstextDetail_nwstxtBodyPane"><font face="georgia, 'times new roman', times, serif" size="3">وی افزود: متأسفانه مثل اینکه برخی ها از قانون خبر ندارند که گفته اند من حاضرم روبینی ها را راضی کنم تا نیم فصل بدون هیچ پولی به پرسپولیس بیایم، واقعاً خنده دار است، باشگاه روبین‌کازان یک باشگاه حرفه ای است و این طور نیست که آنجا بروی بنشینی و بگویی توروخدا رضایتنامه‌ام را بدهید تا&nbsp;به تیم دیگری بروم. البته می دانم که این موضوع از کجا نشأت گرفته&nbsp;است.</font></span></p><p class="rtejustify" style="text-align: justify; "><span id="bodyHolder_newstextDetail_nwstxtBodyPane"><font face="georgia, 'times new roman', times, serif" size="3"><b><font color="#ff0000">حقیقی</font></b> ادامه داد: وقتی سر بازی پرسپولیس و ملوان و تمرین روز گذشته این تیم رفتم شایعاتی را درست کردند، پس حالا که برخی آقایان می خواهند با این کارها من را وارد حاشیه کنند دیگر به ورزشگاه و سر تمرین نمی روم اما همه این را بدانند خانه اول و آخرم پرسپولیس است و هیچکس نمی تواند من را از این تیم جدا کند و روزی برمی‌گردم.<font color="#ff0000">(کی شایع درست کرده؟؟؟ هاااا چرا علیرضا توروخدا بیا بابا بعضی چشم دیدن تو وپیشرفتتو ندارن تو مال پرسپولیسی این و همه میدونن اون اقایون رو هم من میکوبونم تو دهنشون تا ادم شن تو ناراحت نباش)</font></font></span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/14.gif"></p><p class="rtejustify" style="text-align: justify; "><span id="bodyHolder_newstextDetail_nwstxtBodyPane"><font face="georgia, 'times new roman', times, serif" size="3">دروازبان روبین‌کازان یادآور شد: من بعد از مدت ها به ایران آمدم و راستش را بخواهید دلم برای پرسپولیس و دوستانم تنگ شده بود<font color="#ff0000">(اخیییییییییییییییییی)</font></font></span><img src="http://www.kolobok.us/smiles/mini/heart_mini.gif"><span style="font-family: georgia, 'times new roman', times, serif; font-size: medium; ">و به همین دلیل به ورزشگاه و تمرین رفتم&nbsp;حتی خیلی خوشحال شدم که باقری و خیلی دیگر از دوستانم را دیدم، اما حالا که می گویند من را برخی ها نخواسته اند این بسیار عجیب است و تأسف دارد.</span><font color="#ff0000" style="font-family: georgia, 'times new roman', times, serif; font-size: medium; ">(اون بعضی ها ببخشید ها غلط اضافی کردن)</font></p><p class="rtejustify" style="text-align: justify; "><span id="bodyHolder_newstextDetail_nwstxtBodyPane"><font face="georgia, 'times new roman', times, serif" size="3">وی در پاسخ به&nbsp;این سوال که چرا به &nbsp;باشگاه پرسپولیس رفته بود خاطرنشان کرد: برای صحبت با مسئولان باشگاه و برای دریافت برخی مطالباتم که از قبل مانده بود به باشگاه رفتم و با شیرینی هم دیداری داشتم. البته باید از نگاه ویژه رویانیان تشکر کنم&nbsp;که همیشه به من لطف داشته است اما خود او هم می داند من با روبین‌کازان 4 سال قرارداد دارم.</font></span></p><p class="rtejustify" style="text-align: justify; "><span id="bodyHolder_newstextDetail_nwstxtBodyPane"><font face="georgia, 'times new roman', times, serif" size="3">وی در پایان در خصوص برخورد سرد روز گذشته با کریمی نیز گفت: کریمی بزرگ فوتبال ماست و من باید به طرف او می رفتم نه&nbsp;اینکه کریمی&nbsp;به طرف من بیاید. من چون دور و اطرافم شلوغ بود کریمی را ندیدم اما همیشه برای ایشان آرزوی موفقیت می کنم و از همینجا از تمام بازیکنان پرسپولیس که به گرمی با من برخورد کردند تشکر می‌کنم.<font color="#ff0000">(من فعلا اعصاب کریمی رو ندارم نمیتونم در بارش حرف بزنم)</font></font></span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/33.gif"></p><p class="rtejustify" style="text-align: justify; "><br></p><font size="3" face="georgia, 'times new roman', times, serif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/100.gif"><font color="#ff0000"><b>راستی واسه مطلب پایین هم نظری چیزی بزارید!من دیگه برم یه ذره درس بخونم&nbsp;</b></font></font><font color="#ff0000"><b>
+<img src="http://www.pic4ever.com/images/reading.gif">&nbsp;<font size="3" face="georgia, 'times new roman', times, serif">البته مگه اعصاب میزارن برای ادم اینا</font></b></font><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(148)">نظرات (<script>setCommentCnt(148)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../147.html">علیرضا حقیقی در تمرینات پرسپولی/عکس</a></font></div>
+<div class=div58><font class=text7>یکشنبه 3 دی 1391 :: نویسنده : <a href="../../author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4>
+
+
+<font face="georgia, 'times new roman', times, serif" size="3"><p style="text-align: justify; ">تمرین امروز پرسپولیس با حضور پیشکسوتان سابق پرسپولیس و&nbsp;<b><font color="#ff0000">علیرضا حقیقی</font>&nbsp;</b>برگزار شد.</p><p style="text-align: justify; "><br>تمرینات تیم پرسپولیس در نوبت عصر از ساعت 14:45 در آکادمی فوتبال برگزار شد. در این تمرین بازیکنان پرسپولیس بدن های خود را گرم کردند و سپس با سانتر از جناحین و ضربه به گل پرداختند.<br><br>* در تمرین امروز افشین پیروانی ـ رضا شاهرودی ـ ناصر ابراهیمی از کادر فنی تیم فوتبال سنگ آهن بافق حضور داشتند و با قرمز پوشان به خوش و بش پرداختند، همچنین&nbsp;<font color="#ff0000"><b>علیرضا حقیقی</b></font>&nbsp;دروازه بان تیم فوتبال روبین کازان روسیه که برای تعطیلات راهی تهران شده، تمرین امروز پرسپولیسی ها را از نزدیک تماشا کرد و با بازیکنان و کادر فنی این تیم خوش و بش کرد.<br><br>* پس از گذشت 30 دقیقه از تمرین کریم باقری با لباس شخصی در جمع سرخپوشان حضور پیدا کرد، در وسط زمین با یحیی گل محمدی گفت و گو کرد.<br><br>* در تمرین امروز شهاب گردان غایب بود، پیوستن او به سپاهان تقریباً قطعی شده است.<br><br>* شوخی ها و خنده های کریم باقری در تمرین امروز با&nbsp;<b><font color="#ff0000">حقیقی&nbsp;</font></b>و پیروانی جالب بود.<br><br>* چلنگر مترجم کرانچار نیز امروز به تمرین قرمزپوشان آمد.<br><br>* در تمرین امروز ادموند بزیک نیز پا به توپ شد.<br><br>* در پایان تمرین امروز بازیکنان به دو قسمت تقسیم شدند و به فوتبال دستگرمی در نیمه زمین پرداختند.<br><br>* پرسپولیسی ها درباره تمرین امروز پیگیر نتیجه بازی امروز استقلال و دورودگهر بودند.<br><br>* یحیی گل محمدی در تمرین امروز بیشتر در نقش داور بازی بود به طوری که بازیکنان را پس از هر اشتباه نگه می داشت و به آنها تذکر می داد.<br><br>* مارکو پروویچ در تمرین امروز غایب بود، این بازیکن سابقه حضور در ستاره سرخ بلگراد را دارد و برای تست در تمرینات پرسپولیس حضور دارد. از این بازیکن امروز تست پزشکی گرفته شد.<br><br>اما یکی دیگر از نکات تمرین امروز حضور ابراهیم میرزاپور بود، وی در گوشه ای از زمین همراه با مربیان سنگ آهن بافق در حال تمرین کردن بود که بازیکنان پرسپولیس مخصوصاً ملی پوشان سابق با وی به گفت و گو و خوش و بش پرداختند.</p><p style="text-align: justify; "><font color="#ff0000">اینم عکساش&nbsp;</font></p><p style="text-align: justify; "><img src="http://mmfhmm.persiangig.com/aliiiiiiiiii.jpg"></p><p style="text-align: justify; "><font color="#ff0000">یعنی عالی شده!</font></p><p style="text-align: justify; "><font color="#ff0000">&nbsp;</font><img src="http://mmfhmm.persiangig.com/reeeeeeeeeza.jpg"></p></font><font face="georgia, 'times new roman', times, serif" size="3"><p style="text-align: justify; "><span style="color: rgb(255, 0, 0); ">دوست داشتی تو ام الان اونجا بودی؟؟میدونم اره</span></p><p style="text-align: justify; "><img src="http://mmfhmm.persiangig.com/ImageGen%20%281%29.jpg">
+</p><p style="text-align: justify; "><br></p><p style="text-align: justify; "><font color="#ff0000">نظر یادتون نره! دوست جونام</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/6.gif"></p></font>
+
+
+
+
+
+
+
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(147)">نظرات (<script>setCommentCnt(147)</script>)</a></font></div>
+</div>
+</div>
+<div class=div29></div>
+<div class=div28><font class=text4>
+<br><br>
+</font>
+</div>
+
+</td>
+<td class=div0> </td>
+<td class=div3> </td>
+</tr>
+<tr>
+<td class=div2 valign=top>
+
+ </td>
+
+<td class=div01 valign=top>
+<div class=div6></div>
+<div class=div7>
+<a href="http://www.payamblog.com" target="_blank">
+<img src="http://payamblog.com/tem/16/blank.gif" border=0 width=189 height=35></a></div></td>
+<td class=div0> </td>
+<td class=div3> </td>
+</tr>
+</table>
+</div><div id="seo"><h1><a title="قالب بلاگفا" href="http://blogfa.payamblog.com/">قالب بلاگفا</a></h1><h2><a title="قالب وبلاگ"  href="http://www.payamblog.com">قالب وبلاگ</a></h2><h2><a title="vpn" href="http://www.purchasevpn.com">purchase vpn</a></h2><h2><a title="بازی اندروید"  href="http://www.download0098.com/category/mobile/android-games/">بازی اندروید</a></h2></div><script type=text/javascript>document.getElementById('s'+'e'+'o').style.display='none';</script>
+
+</body>
+
+</html>
+
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'we--plus.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.targetedwebtraffic.com" target="_blank">Buy Website Traffic</a> | <a href="https://www.seo25.com" target="_blank">Buy Targeted Website Traffic</a>
+    </div>
+</center>

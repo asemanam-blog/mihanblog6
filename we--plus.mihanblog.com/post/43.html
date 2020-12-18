@@ -1,0 +1,856 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*926957*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','273');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','جمعه 10 مهر 1394');
+	
+	setStatVar('today_view','12');
+	setStatVar('yesterday_view','21');
+	
+	setStatVar('this_month_view','604');
+	setStatVar('last_month_view','1104');
+
+	setStatVar('total_view','331079');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (17:50)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://we--plus.mihanblog.com/statupdate/?data[refereruri]=http://we--plus.mihanblog.com/post/archive/1391/4&data[postid]=43&data[requesturi]=/post/43&data[sdate]=1608216335&data[hash]=275c0de666799721d2d04bd905c3d903&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[43]='3';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[43]='0';
+mihanblogDisLikeArrCnt[43]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://we--plus.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://we--plus.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Theme Designer" content="www.payamblog.com">
+<meta name="description" content="یه مصاحبه ی جالب..."/>
+<meta name="keywords" content="یه,مصاحبه,جالب,"/> 
+<link rel="alternate" type="application/rss+xml" title=" علیرضا حقیقی" href="rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title=" علیرضا حقیقی" href="atom/index.html" />
+<script language="javascript" type="text/javascript" src="http://payamblog.com/tem/16/payamblog.js"></script>
+
+<title> علیرضا حقیقی - یه مصاحبه ی جالب...</title>
+
+</head>
+
+<body>
+
+<div align="left">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td class=div2 valign=top>
+
+<div class=div60></div>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>درباره وبلاگ</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div31><center><img src="http://static.mihanblog.com//public/user_data/web_photo/309/926957.jpg?4092"  /></center><br>
+<font class=text1><br>
+مدیر وبلاگ : <a href="author/783854.html">مریم </a></font></div>
+</div><div class=div30></div>
+</div>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>مطالب اخیر</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="316.html">:-(</a></font></div><div class=div32><font class=text1><a href="315.html">آوار 12 هزار نفری بر سر آمریکا</a></font></div><div class=div32><font class=text1><a href="314.html">من اومدم!</a></font></div><div class=div32><font class=text1><a href="312.html"> *10* مقدس!</a></font></div><div class=div32><font class=text1><a href="311.html">سلاممممم</a></font></div><div class=div32><font class=text1><a href="310.html">.......!!!!</a></font></div><div class=div32><font class=text1><a href="309.html">بازم عکس!</a></font></div><div class=div32><font class=text1><a href="308.html">تسلیت....+ عکس</a></font></div><div class=div32><font class=text1><a href="307.html">اینم از پست!!!!!!!!!!!!! :-))))))))</a></font></div><div class=div32><font class=text1><a href="306.html">سلامممممممممممم!:-))))))))))</a></font></div><div class=div32><font class=text1><a href="305.html">تولد علیرضا مبارررررررررررک! :-))</a></font></div><div class=div32><font class=text1><a href="303.html">تولدت مبارک نسیم جونم! :-*</a></font></div><div class=div32><font class=text1><a href="302.html">آخرین پست 92! :-)</a></font></div><div class=div32><font class=text1><a href="301.html">:-))</a></font></div><div class=div32><font class=text1><a href="300.html">تولدم مبارک! یه دنیا ممنون! :-)</a></font></div></div><div class=div30></div>
+</div>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>آرشیو وبلاگ</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="archive/1394/7.html"> مهر 1394</a></font></div><div class=div32><font class=text1><a href="archive/1394/4.html"> تیر 1394</a></font></div><div class=div32><font class=text1><a href="archive/1394/3.html"> خرداد 1394</a></font></div><div class=div32><font class=text1><a href="archive/1393/9.html"> آذر 1393</a></font></div><div class=div32><font class=text1><a href="archive/1393/7.html"> مهر 1393</a></font></div><div class=div32><font class=text1><a href="archive/1393/6.html"> شهریور 1393</a></font></div><div class=div32><font class=text1><a href="archive/1393/5.html"> مرداد 1393</a></font></div><div class=div32><font class=text1><a href="archive/1393/4.html"> تیر 1393</a></font></div><div class=div32><font class=text1><a href="archive/1393/2.html"> اردیبهشت 1393</a></font></div><div class=div32><font class=text1><a href="archive/1393/1.html"> فروردین 1393</a></font></div><div class=div32><font class=text1><a href="archive/1392/12.html"> اسفند 1392</a></font></div><div class=div32><font class=text1><a href="archive/1392/11.html"> بهمن 1392</a></font></div><div class=div32><font class=text1><a href="archive.html">آرشیو كل مطالب</a></font></div>
+</div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>پیوندهای روزانه</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="http://www.grin.ir/" title="" target="_blank">خرید اینترنتی</a></font></div><div class=div32><font class=text1><a href="http://www.upsara.com/" title="با افتخار میزبان عکس ها و فایل های شما هستیم.
+آپلود رایگان و دائمی عکس
+
+با لینک کردن ما آدرس ما رو فراموش نکنید و از ما حمایت کنید
+
+باتشکر
+آپسرا" target="_blank">آپلود عکس</a></font></div><div class=div32><font class=text1><a href="http://buying.blog.ir/" title="" target="_blank">فروشگاه اینترنتی</a></font></div><div class=div32><font class=text1><a href="http://www.persepolisnews.ir/" title="" target="_blank">خبرگزاری باشگاه پرسپولیس ایران</a></font></div><div class=div32><font class=text1><a href="http://www.ffiri.ir" title="" target="_blank">فدراسیون فوتبال جمهوری اسلامی ایران</a></font></div><div class=div32><font class=text1><a href="http://www.sh3klak.blogfa.com/" title="" target="_blank">تصاویر مخصوص</a></font></div><div class=div32><font class=text1><a href="http://fc-perspolis.com" title="" target="_blank">وب سایت رسمی باشگاه فرهنگی ورزشی پرسپولیس</a></font></div><div class=div32><font class=text1><a href="http://www.rubin-kazan.ru" title="" target="_blank">وبسایت رسمی باشگاه روبین کازان</a></font></div><div class=div32><font class=text1><a href="../linkdaily/index.html">همه پیوندهای روزانه</a></font></div>
+<div class=div32><font class=text1><a href="javascript:linkdailyForm()">ارسال پیوند روزانه</a></font></div>
+</div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>پیوندها</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="http://sunrise-girl-1379.blogfa.com/" title="" target="_blank"> ✿◕ ‿ ◕✿ SuNRiSE ✿◕ ‿ ◕✿</a></font></div><div class=div32><font class=text1><a href="http://www.volleyball-saeid2014.blogfa.com/" title="" target="_blank">تـــک کــــــــاپــیـــتـان قلــــــــبم</a></font></div><div class=div32><font class=text1><a href="http://shima014.blogfa.com/" title="" target="_blank">دخملای فوتبالی</a></font></div><div class=div32><font class=text1><a href="http://koolbehvolleyball25.blogfa.com/" title="" target="_blank">·٠•●♥کلبه والیبالیست ها♥●•٠·(صدف جووون)</a></font></div><div class=div32><font class=text1><a href="http://2009mz.shakheh.com/" title="" target="_blank">✔️ والیبال و فوتبال ✔️(مبینا جووون)</a></font></div><div class=div32><font class=text1><a href="http://deltangivman.blogfa.com/" title="" target="_blank">دلتنگى و من(نسیم جوووونم)</a></font></div><div class=div32><font class=text1><a href="http://pro-volleyball.mihanblog.com/" title="" target="_blank">ولیبال حرفه ای(ریحانه جوووونم)</a></font></div><div class=div32><font class=text1><a href="http://reyhaneh6617.blogfa.com" title="" target="_blank">غاتی پاطی (اجی جووونم)</a></font></div><div class=div32><font class=text1><a href="http://perspolis-66.shakheh.com/" title="" target="_blank">پرسپولیس ( اونم از نوع دو آتیشه)(مبینا جون)</a></font></div><div class=div32><font class=text1><a href="http://like-perspolis.blogfa.com/" title="" target="_blank">♥فقط پرسپولیس♥پیـام صادقیان♥حسین ماهینے♥</a></font></div><div class=div32><font class=text1><a href="http://lovebadminton.rozblog.com/" title="" target="_blank">پوئن 25 تیم قهرمان من(نیکی جووون)</a></font></div><div class=div32><font class=text1><a href="http://talacheh.mihanblog.com/" title="" target="_blank">زیور الات دست ساز (طناز جووونم)</a></font></div><div class=div32><font class=text1><a href="http://mirsaeedmarouf4.blogfa.com/" title="" target="_blank">میر سعید معروف 4(میشا جووون)</a></font></div><div class=div32><font class=text1><a href="http://alirezayaghootesorkh.blogfa.com" title="" target="_blank">علیرضا حقیقی یاقوت سرخ(غزل جووون)</a></font></div><div class=div32><font class=text1><a href="http://hosein7744.mihanblog.com" title="" target="_blank">وبلاگ رسمی حسین اسدالهی</a></font></div><div class=div32><font class=text1><a href="http://just-ehsanalikhani-.mihanblog.com/" title="" target="_blank">احسان علیخانی(سپیده جووون)</a></font></div><div class=div32><font class=text1><a href="http://fano0o0s.mihanblog.com" title="" target="_blank">فانوس(ریحانه ودلارام جوووووونم)</a></font></div><div class=div32><font class=text1><a href="http://www.mylovea20.blogfa.com/" title="" target="_blank">alireza haghighi my love(نادیا جووون)</a></font></div><div class=div32><font class=text1><a href="http://nimkat2012.blogfa.com" title="" target="_blank">نیمکت(هدی و حدیث جووون)</a></font></div><div class=div32><font class=text1><a href="http://khatemarzi.mihanblog.com/" title="" target="_blank">فقط طنز برای وقت هایی که بی کاریی</a></font></div><div class=div32><font class=text1><a href="http://meysamvr.blogfa.com/" title="" target="_blank">فوتبال یعنی زندگی(آقا میثم)</a></font></div><div class=div32><font class=text1><a href="http://www.realgoalkeeper.blogfa.com/" title="" target="_blank">منو درگیر خودت کن(رومینا جووون)</a></font></div><div class=div32><font class=text1><a href="http://valibal2013.mihanblog.com" title="" target="_blank">سایت تخصصی والیبال(آقا میثم)</a></font></div><div class=div32><font class=text1><a href="http://feshangchi75.blogfa.com/" title="" target="_blank">امیر حسین فشنگچی(مهسا جووون)</a></font></div><div class=div32><font class=text1><a href="http://patoghmabahala.blogfa.com/" title="" target="_blank">کلیک کن...پاتوق باحالاست...(الناز جووون)</a></font></div><div class=div32><font class=text1><a href="http://peykan-bazargard.mihanblog.com/" title="" target="_blank">کلوپ هواداران پیکان و مهدی بازارگرد(اقا علیرضا)</a></font></div><div class=div32><font class=text1><a href="http://dehkadeh-emroozi.blogfa.com/" title="" target="_blank">دهکده ی امروزی(سارا جووون)</a></font></div><div class=div32><font class=text1><a href="http://silvermooninbluesky.blogfa.com/" title="" target="_blank">قلب شیشه ای(نیایش جووون)</a></font></div><div class=div32><font class=text1><a href="http://www.miladakbari1374.blogfa.com/" title="" target="_blank">نوشاد عالمیان(اقا میلاد)</a></font></div><div class=div32><font class=text1><a href="http://alirezahaghighi20.blogfa.com/" title="" target="_blank">فقط علیرضاحقیقی(پریا جووون)</a></font></div><div class=div32><font class=text1><a href="http://www.sarbazanvatan.blogfa.com" title="" target="_blank">سربازان وطن(اقا ارش)</a></font></div><div class=div32><font class=text1><a href="http://www.HTMVI.blogfa.com" title="" target="_blank">هواداران تیم ملی والیبال</a></font></div><div class=div32><font class=text1><a href="http://description27.blogfa.com/" title="" target="_blank">Ϡ₡ بِـــِـבפּלּ شـَـرح ... Ϡ₡(ملیکا جووون)</a></font></div><div class=div32><font class=text1><a href="http://volleyball-stars.mihanblog.com" title="" target="_blank">♥ستاره های والیبال♥(مهسا جووون)</a></font></div><div class=div32><font class=text1><a href="http://elina-note.blogfa.com/" title="" target="_blank">ღ با یک جفت کتونی خیس ღ(الینا جووون)</a></font></div><div class=div32><font class=text1><a target="_blank" href="http://www.payamblog.com">بهترین قالب های وبلاگ</a></font></div>
+<div class=div32><font class=text1><a href="../link/index.html">همه پیوندها</a></font></div>
+</div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>نویسندگان</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="author/783854.html">مریم  (273)</a></font></div></div><div class=div30></div>
+</div>
+
+
+		
+
+<form id="frm-16082163355fdb6f0f4299b" method="get" action="http://we--plus.mihanblog.com/post/search/fid/16082163355fdb6f0f4299b"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> <div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>جستجو</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><center><input type="text" name="search_text"><br>
+<input type="submit" value="جستجو" style="font-family: Tahoma; font-size: 9pt"></center></div>
+</div><div class=div30></div>
+</div><input type="hidden" name="frm-id" value="16082163355fdb6f0f4299b" id="frm-id" /></form>
+
+<div class=div24> <div class=div35> <div class=div25><font class=text5>آمار وبلاگ</font></div></div> <div class=div342></div> <div class=div341> <div class=div32><font class=text1>کل بازدید : <script>getStatVar('total_view');</script></font></div> <div class=div32><font class=text1>بازدید امروز :<script>getStatVar('today_view');</script></font></div> <div class=div32><font class=text1>بازدید دیروز : <script>getStatVar('yesterday_view');</script></font></div> <div class=div32><font class=text1>بازدید این ماه : <script>getStatVar('this_month_view');</script></font></div> <div class=div32><font class=text1>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></font></div> <div class=div32><font class=text1>تعداد نویسندگان : <script>getStatVar('total_author');</script></font></div> <div class=div32><font class=text1>تعداد کل پست ها : <script>getStatVar('total_post');</script></font></div> <div class=div32><font class=text1>آخرین بازدید : <script>getStatVar('last_view_date');</script></font></div> <div class=div32><font class=text1>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></font></div> </div><div class=div30></div> </div>
+
+<div class=div24><center>
+</center></div>
+
+</td>
+
+<td class=div1 valign=top>
+
+<div class=div61>
+<div class=div10><font class=title> علیرضا حقیقی</font></div>
+<div class=div12><font class=des></font></div>
+</div>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="43.html">یه مصاحبه ی جالب...</a></font></div>
+<div class=div58><font class=text7>یکشنبه 25 تیر 1391 :: نویسنده : <a href="author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+<p class="MsoNormal" dir="LTR" style="text-align: right;line-height: normal; direction: ltr; unicode-bidi: embed; "><span class="Apple-style-span" style="color: rgb(255, 0, 0); font-weight: bold; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">پول قرارداد خوزه را از
+انتقال حقیقی تامین کردم</span></span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></p>
+
+<p class="MsoNormal" align="right" dir="LTR" style="margin-bottom:0cm;margin-bottom:
+.0001pt;text-align:right;line-height:normal;direction:ltr;unicode-bidi:embed"><span style="color: red; "><o:p><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> </span></span></o:p></span></p>
+
+<p class="MsoNormal" align="right" dir="LTR" style="margin-bottom:0cm;margin-bottom:
+.0001pt;text-align:right;line-height:normal;direction:ltr;unicode-bidi:embed"><b><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">رویانیان: نکونام را می‌خواهیم/
+خوزه قول قهرمانی نداده است(دستش درد نکنه)!!!!!!</span></span></span></b><span style="color: red; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><o:p></o:p></span></span></span></p>
+
+<p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:160%;direction:ltr;
+unicode-bidi:embed"><b><span lang="FA" dir="RTL" style="line-height: 160%; color: red; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">خبرگزاری فارس: مدیرعامل باشگاه پرسپولیس از تمایلش
+برای جذب هافبک تیم ملی خبر داد و گفت:</span></span></span></b></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:160%;direction:ltr;
+unicode-bidi:embed"><b><span lang="FA" dir="RTL" style="line-height: 160%; color: red; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> به مدیر برنامه‌های نکونام گفتم این بازیکن
+را می‌خواهم</span></span></span></b><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span dir="LTR"></span></span></span><b><span style="line-height: 160%; color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span dir="LTR"></span>.</span></span></span></b><span style="line-height: 160%; color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><o:p></o:p></span></span></span></p>
+
+<p class="MsoNormal" align="right" dir="LTR" style="margin-bottom:0cm;margin-bottom:
+.0001pt;text-align:right;line-height:normal;direction:ltr;unicode-bidi:embed"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span dir="RTL"></span></span></span><span dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span dir="RTL"></span></span></span><span style="mso-spacerun:yes"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> </span></span></span></span><span style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><o:p></o:p></span></span></span></p>
+
+<p class="MsoNormal" align="center" dir="LTR" style="text-align: right;line-height: normal; direction: ltr; unicode-bidi: embed; "><span style="color: rgb(51, 51, 51); "><span style="mso-spacerun:yes"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> </span></span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><o:p></o:p></span></span></span></p>
+
+<p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">وی
+در خصوص اتفاقات اخیر و این موضوع که پول‌هایی که می‌دهد از کجا می‌آید تاکید کرد:
+هرکس</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> راست بگوید او را می‌کوبند امااگر
+دروغ بگوییم و بگوییم پولی می‌دهیم که زیر سقف که هیچ؛ زیر زمین </span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">است، همهخوششان
+می‌آید.این چه دنیایی است؟وقتی
+پشت پرده فوتبال را می‌گویی، می‌گویند چرا ریخت و </span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">پاشمی‌کنی؟</span></span></span></p>
+
+<p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span style="color: rgb(51, 51, 51); "><o:p><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> </span></span></o:p></span></p>
+
+<p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">رویانیان
+عنوان کرد: من ریخت و پاش نمی‌کنم و هرچه که خرج کردم را رسما به وزارت ورزش و هر</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> مرجعی که لازم باشد اعلام کردمسقف
+به بازیکنان پرداخت کردم اما آنها چرا به دروغ می‌گویند زیر </span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">سقف پول دادند؟ من که
+راست می‌گویم<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">باید کتک بخورم؟‌</span></span><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">مدیرعامل
+</span></span></span><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">پرسپولیس</span></span></span><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "> با اشاره به اینکه
+آنها که</span></span></span></span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "> رعایت نمی‌کنند و دروغ می‌گویند آدم‌های خوبی<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "> هستند اما من بچه مسلمان که</span></span><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">ظاهرم
+اعتقادی است را</span></span></span></span></span></span></span></span></span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "><span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "> ی‌کوبند یادآور شد: در 11 ماهی که به </span></span></span><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">پرسپولیس</span></span></span><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "> آمدم</span></span></span></span></span></span></span></span></span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: georgia; font-size: 16px;"><br></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> دولت در مجموع 4.5 میلیارد به ما داده اما
+تیم</span></span><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">رقیب
+من 7 میلیارد پول گرفته است</span></span></span><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">(اره!!خوش به حالش)</span></span></span><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">.</span></span></span></span></span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> به تیم وابسته به صنعت هم اپن پول را می‌دهند. متأسفم برای
+فوتبالیکه
+وقتی راست می‌گویی تو را می </span></span></span></span></span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">کوبند.رویانیان
+اضافه کرد: من دلار را گران نخریدم. برادر عزیز که در روزنامه پرتیراژ هر
+دلار را </span></span></span></span></span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">ضرب در 1900 تومان می‌کنی، این <span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">را بدان که</span></span><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">من
+هر دلار را 1200</span></span></span><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">(نه
+بابا!!!!!!!!!)</span></span></span><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">
+تومان خریدم و</span></span></span></span></span></span></span></span></span></span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "> یک سال نگه داشتم. ضمن اینکه این پول را تنها به سرمربی ندادیم و کل
+کادرفنی
+این مبلغ راگرفته است. </span></span></span></span></span></span></span></span></span></span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">این در حالی است که در برخی تیم‌ها فقط به یک مربی این پول
+پرداختمی‌شود و کسی هم </span></span></span></span></span></span></span></span></span></span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">صدایشدرنمی‌آید
+اما من که راست می‌گویم را زیر سؤال می‌برند.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></p>
+
+<p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">به
+گزارش فارس، رویانیان در ادامه در خصوص شرایط </span></span></span><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">پرسپولیس</span></span></span><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> گفت: بهترین بازیکن و مربی</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> رآوردیم (</span></span></span><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">2بار)</span></span></span><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">و به امید موفقیت تلاشمی‌کنیم.
+مردم کارنامه این مربی را خوانده‌اند. خوزه 22 قهرمانی </span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">آورده و مربی موفقی است.</span></span></span></p>
+
+<p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span style="mso-spacerun:yes"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> </span></span></span></span><span style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><o:p></o:p></span></span></span></p>
+
+<p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">خبرنگار
+دیگری در خصوص شفاف سازی باشگاه </span></span></span><span lang="FA" dir="RTL" style="color: rgb(84, 141, 212); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">استقلال</span></span></span><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> در مورد قرارداد با
+جواد نکونام از رویانیان</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> سؤال کرد که وی در<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "> پاسخ گفت:</span></span><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">در
+مورد </span></span></span><span lang="FA" dir="RTL" style="color: rgb(84, 141, 212); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">استقلال</span></span></span><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "> حرف نمی‌زنم </span></span></span><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">(افرین)</span></span></span><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">و درباره خودم حرف زدم.</span></span></span></span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "> رویانیان ظاهر اسلامی دارد و راست می‌گوید
+و او را می‌کوبند اما سند دارمکه
+بالای سقف پول می‌دهند. </span></span></span></span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">من راست می‌گویم و هزینه راست‌گفتنم را<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">می‌دهم. ما هیچ
+هستیم و هیچ می‌مانیم. اصلا آبروی ما</span></span><span style="mso-spacerun:yes"><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "> </span></span></span><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">برود،</span></span></span></span></span></span></span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "><span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "> مگر آبرو داریم؟ آبرو برای مردم است.</span></span></span></span></span></span></span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></p>
+
+<p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">مدیرعامل
+</span></span></span><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">پرسپولیس</span></span></span><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> در خصوص منع حضور
+هواداران در تمرینات اظهار داشت: خداوکیلی گناه</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> می‌کنیم. مردم و همسایه‌ها اذیتمی‌شوند.
+نمی‌دانم چه کاری انجام دهم و فعلا در حال برنامه ریزی هستم.</span></span></span></p>
+
+<p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span style="color: rgb(51, 51, 51); "><span style="mso-spacerun:yes"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> </span></span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><o:p></o:p></span></span></span></p>
+
+<p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">وی
+در خصوص لیدرهای</span></span></span><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">
+پرسپولیس</span></span></span><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> گفت: ما لیدر نداریم
+بلکه کمیته مشوقین را با حضور افراد متعهد</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> درست<span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 11px; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "> کردیم.(</span></span></span><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">زحمت کشیدین</span></span><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: red; "><span style="mso-spacerun:yes"><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "> </span></span></span><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">واقعا!!!!!!! پرسپولیس و ترکوندین</span></span></span><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">) نمی‌دانم چرا یکسری
+افراد نوکر</span></span></span></span></span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 11px; "><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "> یکسری دیگر می‌شوند. آدم خوب نیست که نوکر بازیکن یامربی
+شود. لیدر هم بنده خدا است.</span></span></span></span></span></span></span></span></span></p>
+
+<p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span style="mso-spacerun:yes"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> </span></span></span></span><span style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><o:p></o:p></span></span></span></p>
+
+<p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">رویانیان
+افزود: به تیمم اعتقاد دارم اما افرادی باید با مجموعه همکاری کنند که با اخلاق
+باشند و در عین</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> حال به کسی هم وابستهنشوند.
+اگر کسی پول گرفت و تشویق کرد این یعنی فساد. شما لیدر هستید اما مگر </span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">شخصیت
+ندارید؟ چراباید طوری رفتار شودکه
+یک مربی یا بازیکن بالاتر از ما قرار گیرد</span></span></span></p>
+
+<p class="MsoNormal" align="right" dir="LTR" style="mso-margin-top-alt:auto;
+mso-margin-bottom-alt:auto;text-align:right;line-height:normal;direction:ltr;
+unicode-bidi:embed"><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: georgia; font-size: 16px;"> </span></p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">مدیرعامل </span></span></span><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">پرسپولیس</span></span></span><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> در خصوص اتفاقاتی که منجر به عقد قرارداد با خوزه مانوئل شد گفت: نشست‌های</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> مختلف و حرف‌های زیادیبا خوزه زدم. اعتقادات و باورهایم را به او گفتم و انتظارات هواداران را به</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> ویگوشزد کردم. او کاملاتوجیه است. البته یکسری چیزهابین ما اختلاف بود که باعث شد زمان عقد </span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">قراردادطول بکشد که این اختلافات امروزبرطرف شدند. خوزه با تمام قوا می‌خواهدموفق شود. قول داده </span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">توانش رابگذارد و فقط از این موضوع ناراحت بود که چرایک ماه به تمرینات دیر اضافه شده است.</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> </span></span></span></span><span style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><o:p></o:p></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">رویانیان در خصوص خریدهای جدید این تیم تصریح کرد: یک دروازه‌بان می‌خواهیم و یک بازیکن</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> دیگر<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "> در پست هافبک یا</span></span><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "> دفاع چپ</span></span><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">جذب خواهیم کرد</span></span></span><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; ">(ببینم میتونین پیدا کنین)</span></span></span><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "><span dir="LTR"></span></span></span><span style="color: red; "><span class="Apple-style-span" style="font-family: georgia; "><span class="Apple-style-span" style="font-size: 16px; "><span dir="LTR"></span>.</span></span></span></span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span class="Apple-style-span" style="color: rgb(255, 0, 0); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">وی درباره آخرین وضعیت انتقال خلعتبری به </span></span></span><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">پرسپولیس</span></span></span><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> عنوان کرد: اولین کسی که با وی صحبت کرد</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> من بودم. با خانواده و پدرشهم صحبت کردم. خلعتبری به ما قول داد و یک مبلغی را هم مشخص کرد اما</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">در حال حاضر این مبلغ</span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">بیشتر شده ضمن اینکه</span></span><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">استقلال و سپاهان هم او را می‌خواهند. البته خداوکیلی</span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> خانواده خلعتبری </span></span></span><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">پرسپولیسی</span></span><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">هستند (</span></span></span><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">باریک....)</span></span></span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> </span></span></span></span><span style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><o:p></o:p></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">رویانیان در پاسخ به این سؤال که اگر </span></span></span><span lang="FA" dir="RTL" style="color: rgb(84, 141, 212); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">استقلال</span></span></span><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> موفق به جذب نکونام نشود آیا وی برای خرید او</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> اقدام خواهد کرد گفت:</span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> نکونام بازیکن</span></span><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">بین المللی است و نباید از او استفاده ابزاری و خرابش کرد</span></span></span><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">(نمی</span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">  دونم </span></span><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">چی بگم واالا). به</span></span></span><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> مدیر برنامه‌هایش در آلمان گفتم نکونام را می‌خواهم اما بدونحاشیه. البته </span></span></span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: red; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">خلعتبری را هم با شرایط خودم می‌خواهمهمانطور که سایر بازیکنان را با شرایط خودم جذب کردم.</span></span></span></span></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">وی ادامه داد: من گفتم بالای سقف به بازیکنان پول دادم و این مبلغ هم متوسط 100 میلیون بیشتر است </span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">چراکه بیشتر آنها ملیپوش هستند. ما شرکت دولتی هستیم و سازمان لیگ خصوصی. باید بدانیم دولتی،</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">خصوصی و قانونچیست؟</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">به گزارش فارس رویانیان با انتقاد از قرعه کشی رقابت‌های لیگ برتر گفت: در یک قرعه کشی کاملا</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> اتفاقی و "خودجوش" مثل دوسه سال اخیر ما در ردیف آخر قرار گرفتیم و یک تیم دیگر رو آمد. مثل</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">همیشه باید بیرون از خانه کاررا شروع کنیم و در فصل گرماجای گرم برویم و در فصل سرما جای سرد</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><br></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">وی ادامه داد: به صورت "خودجوش" بازیکنان ما محروم می‌شوند. به صورت "خودجوش" سه امتیاز</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> از ما کم می‌شود. خیلی"خودجوش" اولین بار داور بازی را قطع می‌کند و "خودجوش" خیلی اتفاقات </span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">می‌افتد.</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: georgia; font-size: 16px;"><br></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">مسئولان فدراسیون ما رابزنید، ما در خدمتشما هستیم اما هواداران را نزنید و اجازه دهید تیمشان را</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">تشویق کنند. همین جا هم از کمیتهاستیناف و غیره و ذلک خواهشمی‌کنم به خاطر ایام مقدس نیمه شعبان</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">بازیکنان ما را از تحریم خارج کنید</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> </span></span></span></span><span style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><o:p></o:p></span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span lang="FA" dir="RTL" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">رویانیان در پایان گفت: اجازه ورود هواداران به تمرینات دست من نیست و سرمربی باید در این مورد</span></span></span></p><p class="MsoNormal" align="right" dir="LTR" style="margin-bottom: 0.0001pt; text-align: right; line-height: normal; direction: ltr; unicode-bidi: embed; "><span class="Apple-style-span" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> اظهارنظر کند. </span></span></span></span></span></p>
+
+
+
+
+
+
+
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(43)">نظرات (<script>setCommentCnt(43)</script>)</a></font></div>
+</div>
+</div>
+<div class=div29></div>
+<div class=div28><font class=text4>
+<br><br>
+</font>
+</div>
+
+</td>
+<td class=div0> </td>
+<td class=div3> </td>
+</tr>
+<tr>
+<td class=div2 valign=top>
+
+ </td>
+
+<td class=div01 valign=top>
+<div class=div6></div>
+<div class=div7>
+<a href="http://www.payamblog.com" target="_blank">
+<img src="http://payamblog.com/tem/16/blank.gif" border=0 width=189 height=35></a></div></td>
+<td class=div0> </td>
+<td class=div3> </td>
+</tr>
+</table>
+</div><div id="seo"><h1><a title="قالب بلاگفا" href="http://blogfa.payamblog.com/">قالب بلاگفا</a></h1><h2><a title="قالب وبلاگ"  href="http://www.payamblog.com">قالب وبلاگ</a></h2><h2><a title="vpn" href="http://www.purchasevpn.com">purchase vpn</a></h2><h2><a title="بازی اندروید"  href="http://www.download0098.com/category/mobile/android-games/">بازی اندروید</a></h2></div><script type=text/javascript>document.getElementById('s'+'e'+'o').style.display='none';</script>
+
+</body>
+
+</html>
+
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'we--plus.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.targetedwebtraffic.com" target="_blank">Buy Website Traffic</a> | <a href="https://www.seo25.com" target="_blank">Buy Targeted Website Traffic</a>
+    </div>
+</center>

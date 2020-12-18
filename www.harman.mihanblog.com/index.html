@@ -1,0 +1,909 @@
+<!DOCTYPE HTML>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://harman.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*333334*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[106]='0';commentCnt[107]='1';commentCnt[108]='0';commentCnt[111]='0';commentCnt[115]='0';commentCnt[116]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','88');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','دوشنبه 18 فروردین 1399');
+	
+	setStatVar('today_view','9');
+	setStatVar('yesterday_view','15');
+	
+	setStatVar('this_month_view','317');
+	setStatVar('last_month_view','358');
+
+	setStatVar('total_view','35807');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (12:36)');
+
+
+
+    
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://harman.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="http://harman.mihanblog.com/'+img+'" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://harman.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://harman.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://harman.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://harman.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://harman.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://harman.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://harman.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://harman.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://harman.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://harman.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://harman.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://harman.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://harman.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://harman.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://harman.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://harman.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://harman.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://harman.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://harman.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://harman.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://harman.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://harman.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://harman.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://harman.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://harman.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://harman.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://harman.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://harman.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://harman.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://harman.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://harman.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://harman.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://harman.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://harman.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://harman.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+<div style="z-index:1000; position:absolute; right:0px; top:0px; border-width:0px; \">
+<img src=" http://file.mihanblog.com//public/user_data/user_files/112/333334/dada.png " width=\"200\" height=\"200\
+border=\"0\"
+/></div>
+
+
+<link rel="shortcut icon" href="http://file.mihanblog.com//public/user_data/user_files/112/333334/LOGO.jpg" type="image/x-icon" />
+<style> 
+img { 
+max-width: 500px; 
+max-height: 400px; 
+} 
+</style> 
+<!-- mihantools.net --->
+<script type="text/javascript" src="http://mihantools.net/tools/click-c/click-c.js"></script><div style="display:none"><h1><a href="http://sabastore.net/category.php?id=21">ساعت مچی</a></h1> | <h1><a href="http://mihantools.net/copying-content/">جلوگیری از کپی کردن مطالب</a></h1></div>
+<!-- mihantools.net --->
+<head>
+	<title>هه‌رمان</title>
+   	 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="expires" content="0">
+	<meta name="designer" content="GreenSkin.ir">
+	<meta name="copyright" content="Copyright (c) by GreenSkin.ir">
+	<meta name="resource-type" content="document">
+	<meta name="distribution" content="global">
+	<meta name="author" content="هەرمان ">
+	<meta name="language" content="Farsi">
+	<meta name="robots" content="index, follow">
+	<meta name="revisit-after" content="1 days">
+	<meta name="rating" content="general">
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+	<link rel="alternate" type="application/rss+xml" title="هه‌رمان" href="http://harman.mihanblog.com/post/rss/" />
+	<link rel="alternate" type="application/atom+xml" title="هه‌رمان" href="http://harman.mihanblog.com/post/atom/" />
+	<link href="http://file.mihanblog.com//public/user_data/user_files/503/1508999/harman/harman.css" type="text/css" rel="stylesheet">
+	<link href="http://dl.greenskin.ir/theme/theme_music12/style/icons.css" type="text/css" rel="stylesheet">
+	<link href="http://dl.greenskin.ir/theme/theme_music12/GS-Slider/themes/default/default.css" type="text/css" media="screen" rel="stylesheet"/>
+               <link href="http://dl.greenskin.ir/theme/theme_music12/GS-Slider/GS-Slider.css" type="text/css" media="screen" rel="stylesheet"/>
+</head>
+ 
+<body>
+ <div class="GreenSkin">
+    <header class="header">
+	<div style="display:none"><h1><a href="index.html">هه‌رمان</a></h1></div>
+        <nav>
+            <ul>
+				<li><a href="index.html">سەر پەل</a></li>
+                <li><a href="http://harman.mihanblog.com/post/list">ڕزنەو بابەتەکان</a></li>
+                <li><a href="http://harman.mihanblog.com/m/">تایوەتی موبایلی</a></li>
+				<li><a href="http://harman.mihanblog.com/post/rss/">دلێنە</a></li>
+				<li><a href="http://harman.mihanblog.com/post/atom/">ئاتۆم</a></li>
+                <li><a href="javascript:messageForm()">پەیوەندی کەردەی چەنیما</a></li>
+                <li><a target="_blank" href="http://www.PHOTOPAVEH.MIHANBLOG.COM/">وەشکەرو قۆڵاخی</a></li>
+            </ul>
+        </nav>
+    </header>
+    <aside class="GSside-1">
+	  <nav>
+        <h3><span></span>جەبارەو ئێمە</h3>
+        <div style="text-align:center;"><img src="http://static.mihanblog.com//public/user_data/web_photo/112/333334.jpg?8763"  /></div>
+		<p><a href="http://harman.mihanblog.com/post/author/226623">هەرمان </a><br></p>
+	  </nav>
+	  
+	  	  <nav>
+        <h3><span></span>بابەتێ</h3>
+        <ul>
+			<li><a href="http://harman.mihanblog.com/post/category/14" title="تعداد مطالب : 1">ترجمه</a></li><li><a href="http://harman.mihanblog.com/post/category/11" title="تعداد مطالب : 5">نقد / ڕەخنە</a></li><li><a href="http://harman.mihanblog.com/post/category/10" title="تعداد مطالب : 3">مقالات / وتار</a></li><li><a href="http://harman.mihanblog.com/post/category/2" title="تعداد مطالب : 6">شعر هورامی</a></li><li><a href="http://harman.mihanblog.com/post/category/4" title="تعداد مطالب : 3">شعر سورانی</a></li><li><a href="http://harman.mihanblog.com/post/category/3" title="تعداد مطالب : 6">داستان هورامی</a></li><li><a href="http://harman.mihanblog.com/post/category/7" title="تعداد مطالب : 1">داستان سورانی</a></li><li><a href="http://harman.mihanblog.com/post/category/6" title="تعداد مطالب : 2">داستان فارسی</a></li><li><a href="http://harman.mihanblog.com/post/category/8" title="تعداد مطالب : 8">جلسات انجمن</a></li><li><a href="http://harman.mihanblog.com/post/category/9" title="تعداد مطالب : 3">اطلاعیه و فراخوان ها</a></li><li><a href="http://harman.mihanblog.com/post/category/1" title="تعداد مطالب : 13">شاعران امروز پاوه</a></li>        </ul>
+	  </nav>
+	  	  	  <nav>
+        <h3><span></span>بابەتێ وەڵینێ</h3>
+        <ul>
+			<li><a href='http://harman.mihanblog.com/post/archive/1399/1/3' title=' هفته سوم فروردین 1399(2)'> هفته سوم فروردین 1399</a></li><li><a href='http://harman.mihanblog.com/post/archive/1394/12/1' title=' هفته اول اسفند 1394(5)'> هفته اول اسفند 1394</a></li><li><a href='http://harman.mihanblog.com/post/archive/1394/11/4' title=' هفته چهارم بهمن 1394(2)'> هفته چهارم بهمن 1394</a></li><li><a href='http://harman.mihanblog.com/post/archive/1394/11/3' title=' هفته سوم بهمن 1394(2)'> هفته سوم بهمن 1394</a></li><li><a href='http://harman.mihanblog.com/post/archive/1394/11/2' title=' هفته دوم بهمن 1394(4)'> هفته دوم بهمن 1394</a></li><li><a href='http://harman.mihanblog.com/post/archive/1394/11/1' title=' هفته اول بهمن 1394(1)'> هفته اول بهمن 1394</a></li><li><a href='http://harman.mihanblog.com/post/archive/1394/10/4' title=' هفته چهارم دی 1394(4)'> هفته چهارم دی 1394</a></li><li><a href='http://harman.mihanblog.com/post/archive/1394/10/3' title=' هفته سوم دی 1394(4)'> هفته سوم دی 1394</a></li><li><a href='http://harman.mihanblog.com/post/archive/1394/10/1' title=' هفته اول دی 1394(1)'> هفته اول دی 1394</a></li><li><a href='http://harman.mihanblog.com/post/archive/1394/9/3' title=' هفته سوم آذر 1394(1)'> هفته سوم آذر 1394</a></li>            <li><a href="http://harman.mihanblog.com/post/archive"><b>سەرجەمو بابەتەکان</b></a></li>
+        </ul>
+	  </nav>
+	  	  	  <nav>
+        <h3><span></span>لینکدونی</h3>
+        <ul>
+			<li><a href="http://omidsolemani.blogfa.com/" title="" target="_blank">امید سلیمانی</a></li><li><a href="http://shonama.blogfa.com" title="مدی : عدنان مرادی" target="_blank">:::اولین وبلاگ تخصصی غزل اورامی</a></li>			<li><a target="_blank" href="http://www.GreenSkin.ir/" title="قالب سبز">قالب سبز</a></li>
+			<li><a href="http://harman.mihanblog.com/linkdaily/"><b>همه لینکها</b></a></li>
+			<li><a href="javascript:linkdailyForm()"><b>ارسال لینک به لینکدونی</b></a></li>
+        </ul>
+	  </nav>
+	  	  	  <nav>
+        <h3><span></span>پەلێ جیاوازێ</h3>
+        <ul>
+			<li><a href="http://harman.mihanblog.com/extrapage/mashaheer">مفاخر و مشاهیر ادبی و فرهنگی</a></li><li><a href="http://harman.mihanblog.com/extrapage/bookshop">خرید و فروش کتاب</a></li><li><a href="http://harman.mihanblog.com/extrapage/tazehayenashr">معرفی کتاب های نازه منتشر شده</a></li><li><a href="http://harman.mihanblog.com/extrapage/kodakan">کودکان</a></li><li><a href="http://harman.mihanblog.com/extrapage/adnan">:: عدنان مرادی</a></li><li><a href="http://harman.mihanblog.com/extrapage/dastan">انجمن داستان نویسی</a></li><li><a href="http://harman.mihanblog.com/extrapage/shear">انجمن شعر</a></li><li><a href="http://harman.mihanblog.com/extrapage/farakhan">فراخوان ها و اطلاعیه های ادبی</a></li>        </ul>
+	  </nav>
+	  	  <form id="frm-16080744575fd944d98b710" method="get" action="http://harman.mihanblog.com/post/search/fid/16080744575fd944d98b710"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+	  <nav>
+        <h3><span></span>گێڵای</h3>
+        <div align="center">
+		<input type="text" name="search_text" value="گێڵە" onfocus="this.value='';"/><br>
+		<input type="submit" value=" گێڵای ">
+		</div>
+	  </nav>
+	  <input type="hidden" name="frm-id" value="16080744575fd944d98b710" id="frm-id" /></form>
+</nav>
+	  </cb:block_extrapage>
+	  <form id="frm-16080744575fd944d98c2c8" method="get" action="http://harman.mihanblog.com/post/search/fid/16080744575fd944d98c2c8"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+	  <nav>
+        <h3><span></span>کتێوێ تازێ</h3>
+        <div align="center">
+		<!-- Pic Slider by www.1abzar.com --->
+<script src="http://1abzar.ir/abzar/tools/slider2/?no=3&play=1&w=200&h=300&id=ke4l9y9ogw0dzcf&max=2&ct=1&kc=BBBBBB&kadr=2"></script><div style="display:none"><h2><a href="http://www.1abzar.com/abzar/slider.php">&#1575;&#1587;&#1604;&#1575;&#1740;&#1583;&#1585;</a></h2></div>
+<!-- Pic Slider by www.1abzar.com --->
+
+		</div>
+	  </nav>
+	  <input type="hidden" name="frm-id" value="16080744575fd944d98c2c8" id="frm-id" /></form>	  
+    </aside>	
+    <section>
+		<article>
+		<div id="GS_Slider">
+        <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="http://file.mihanblog.com//public/user_data/user_files/503/1508999/harman/01.jpg" data-thumb="http://file.mihanblog.com//public/user_data/user_files/503/1508999/harman/01.jpg" alt="Music v:12"/>
+				<img src="http://file.mihanblog.com//public/user_data/user_files/503/1508999/harman/02.jpg" data-thumb="http://file.mihanblog.com//public/user_data/user_files/503/1508999/harman/02.jpg" alt="Music v:12"/>
+                <img src="http://file.mihanblog.com//public/user_data/user_files/503/1508999/harman/03.jpg" data-thumb="http://file.mihanblog.com//public/user_data/user_files/503/1508999/harman/03.jpg" alt="Music v:12"/>
+                <img src="http://file.mihanblog.com//public/user_data/user_files/503/1508999/harman/04.jpg" data-thumb="http://file.mihanblog.com//public/user_data/user_files/503/1508999/harman/04.jpg" alt="Music v:12"/>
+            </div>
+        </div>
+		</div>
+		</article>
+				<article>
+           <h2><span></span>ئاخەرین بابەتی نا نریەیینێرە</h2>
+			<div class="GSPostMain">
+			<img hspace="0" src="http://dl.greenskin.ir/images/li.png" align="baseline" border="0"> <a href="http://harman.mihanblog.com/post/116" title="هەواڵی کۆچی کاک ناسری ئاغەبرا">هەواڵی کۆچی کاک ناسری ئاغەبرا</a></a><br><img hspace="0" src="http://dl.greenskin.ir/images/li.png" align="baseline" border="0"> <a href="http://harman.mihanblog.com/post/115" title="هەواڵوو کۆچوو کاکه باقی شەفێعێ">هەواڵوو کۆچوو کاکه باقی شەفێعێ</a></a><br><img hspace="0" src="http://dl.greenskin.ir/images/li.png" align="baseline" border="0"> <a href="http://harman.mihanblog.com/post/111" title="به بونه ی روژی زمانی زکماکییه وه">به بونه ی روژی زمانی زکماکییه وه</a></a><br><img hspace="0" src="http://dl.greenskin.ir/images/li.png" align="baseline" border="0"> <a href="http://harman.mihanblog.com/post/108" title="رو زوانی ئه دایی / عه دنان مورادی">رو زوانی ئه دایی / عه دنان مورادی</a></a><br>			</div>
+        </article>
+						<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		        <article>
+           <h2><span></span><a href="http://harman.mihanblog.com/post/116" title="هەواڵی کۆچی کاک ناسری ئاغەبرا">هەواڵی کۆچی کاک ناسری ئاغەبرا</a></h2>
+			<div class="GSPostMain">
+            <hr>
+<div class="owner_photo clearfix"></div>
+<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<div>
+<b><font size="3" face="Mihan-IransansLight">به سەخڵەتی زستانەوە مەحاڵ گوڵ چنین</font></b></div><div><b><font size="3" face="Mihan-IransansLight">
+به نکبەتی خەزانەوە خەیاڵ بەی ڕنین</font></b></div><div><b><font size="3" face="Mihan-IransansLight">
+به دەم خەمی گرانەوە بە دوورە ڕاچنین</font></b></div><div><b><font size="3" face="Mihan-IransansLight">
+به کۆکی مل و شانەو گران ڕاپەڕین</font></b></div><div><b><font size="3" face="Mihan-IransansLight">بە مەینەتی ژیانەوە شاکاره پێکەنین</font></b></div><div><b><font size="3" face="Mihan-IransansLight"><br></font></b></div><div><b><font size="3" face="Mihan-IransansLight">
+
+بە داخەوە خەم لە سەر خەم داخ لە سەر داخ بۆ کۆچی شاعێرەیکی تر <br></font></b></div><div><b><font size="3" face="Mihan-IransansLight">ئەم جارە هەواڵی کۆچی کاک ناسری ئاغەبرا دڵی هەژاندم. </font></b><br></div><div><br></div><div align="center"><img src="http://s10.picofile.com/file/8393368018/naser.jpg" alt="" vspace="0" hspace="0" border="0" align="bottom"></div>
+
+<br>
+<br>
+<br>	
+
+                
+
+
+                		
+			<div class="meta">
+				<span class="user"><span class="GS-users"></span> هەرمان </span>	
+				<span class="date"><span class="GS-clock"></span> سه شنبه 19 فروردین 1399</span>
+				<span class="comment"><span class="GS-comment"></span> <a target="_self" href="http://harman.mihanblog.com/post/116#commentlist" class="comment-link">نظرات(<script>setCommentCnt(116)</script>)</a></span>
+				<span class="more"><span class="GS-level-up"></span><a href="http://harman.mihanblog.com/&lt;script&gt;mihanblogPostLike('116','like')&lt;/script&gt;">درێژەو بابەتەکەی</a></span>
+			</div>
+			</div>
+        </article>
+                <article>
+           <h2><span></span><a href="http://harman.mihanblog.com/post/115" title="هەواڵوو کۆچوو کاکه باقی شەفێعێ">هەواڵوو کۆچوو کاکه باقی شەفێعێ</a></h2>
+			<div class="GSPostMain">
+            <hr>
+<div class="owner_photo clearfix"></div>
+
+<div style="text-align: center;"><br></div><div style="text-align: center;"><img src="http://s11.picofile.com/file/8393280418/baqi.jpg" alt="" vspace="0" hspace="0" border="0" align="bottom"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font size="4" face="Mihan-Iransans">به داخەوە هەواڵوو کۆچوو پیروو شاعێرانوو شارەکەیما&nbsp;</font><span style="font-family: Mihan-Iransans; font-size: large;">کاکه باقی شەفێعی ئەژناسیا به "سەیاد"&nbsp;</span><span style="font-family: Mihan-Iransans; font-size: large;">ماتەم بارێش کەردێمێ. پەرسەو سەرەوەشی وێما سەرجەم خزمەتوو بنەوانێ و قەم و کەرس و کاریشەنه و هەر پاسە سەرجەم شاعێر و خەمەوەروو فەرهەنگوو پاوەی و هەورامانی و کوردەواری مەکەرم.</span></div>
+
+
+
+
+<br>
+<br>
+<br>	
+
+                
+
+
+                		
+			<div class="meta">
+				<span class="user"><span class="GS-users"></span> هەرمان </span>	
+				<span class="date"><span class="GS-clock"></span> دوشنبه 18 فروردین 1399</span>
+				<span class="comment"><span class="GS-comment"></span> <a target="_self" href="http://harman.mihanblog.com/post/115#commentlist" class="comment-link">نظرات(<script>setCommentCnt(115)</script>)</a></span>
+				<span class="more"><span class="GS-level-up"></span><a href="http://harman.mihanblog.com/&lt;script&gt;mihanblogPostLike('115','like')&lt;/script&gt;">درێژەو بابەتەکەی</a></span>
+			</div>
+			</div>
+        </article>
+                <article>
+           <h2><span></span><a href="http://harman.mihanblog.com/post/111" title="به بونه ی روژی زمانی زکماکییه وه">به بونه ی روژی زمانی زکماکییه وه</a></h2>
+			<div class="GSPostMain">
+            <b>طبقه بندی: </b><a href="http://harman.mihanblog.com/post/category/10">مقالات / وتار</a>،&nbsp;<hr>
+<div class="owner_photo clearfix"></div>
+
+
+
+<table style="border: 1px solid rgb(0, 0, 0); border-collapse: collapse;" align="left" cellpadding="1" cellspacing="1" width="109" height="152"><tbody><tr><td style="border: 1px solid rgb(0, 0, 0); border-collapse: collapse; width: 121.2px;"><img src="http://file.mihanblog.com//public/user_data/user_files/112/333334/nnnnn.jpg" alt="" align="bottom" border="0" vspace="0" width="153" height="200" hspace="0"></td></tr></tbody></table><p class="MsoNormal" dir="RTL" style="text-align: center; margin-bottom: 0.0001pt; line-height: 200%; direction: rtl; unicode-bidi: embed;"><span dir="RTL" style="line-height: 115%;" lang="AR-SA"><font size="3" face="Mihan-Iransans">به ناوی خودا‌وه‌ندی بوون</font></span></p><p class="MsoNormal" dir="RTL" style="text-align: center; margin-bottom: 0.0001pt; line-height: 200%; direction: rtl; unicode-bidi: embed;"><span dir="RTL" style="font-size:14.0pt;
+line-height:115%;font-family:&quot;Unikurd Hiwa&quot;,sans-serif;mso-fareast-font-family:
+Calibri;mso-fareast-theme-font:minor-latin;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA" lang="AR-SA"><br></span></p><p class="MsoNormal" dir="RTL" style="text-align: center; margin-bottom: 0.0001pt; line-height: 200%; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans"><b><span style="line-height: 200%;" lang="FA"><font color="#990000" size="5">به‌بۆنه‌ی ڕۆژی جیهانی زوانی زکماکییه‌‌وه</font></span></b><span dir="LTR" style="font-size: medium; line-height: 200%;"><o:p></o:p></span></font></p><p class="MsoNormal" dir="RTL" style="text-align:justify;text-justify:kashida;
+text-kashida:0%;line-height:200%;direction:rtl;unicode-bidi:embed"><span style="line-height: 200%;" lang="AR-SA"><font size="3" face="Mihan-Iransans"><br></font></span></p><p class="MsoNormal" dir="RTL" style="text-align:justify;text-justify:kashida;
+text-kashida:0%;line-height:200%;direction:rtl;unicode-bidi:embed"><span style="line-height: 200%;" lang="AR-SA"><font size="3" face="Mihan-Iransans">نادر
+نه‌قشبه‌ندی <o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;margin-bottom:0cm;
+margin-bottom:.0001pt;text-align:right;line-height:200%;direction:rtl;
+unicode-bidi:embed">
+
+</p><p class="MsoNormal" dir="RTL" style="text-align:justify;text-justify:kashida;
+text-kashida:0%;line-height:200%;direction:rtl;unicode-bidi:embed"><span style="line-height: 200%;" lang="AR-SA"><font size="3" face="Mihan-Iransans">3ی
+ڕه‌شه‌مه‌ی 1384 هه‌تاوی</font><font style="font-size: 14pt;" face="Unikurd Hiwa, sans-serif"><o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:200%;direction:rtl;unicode-bidi:embed"><font size="3" face="Mihan-Iransans"><span style="line-height: 200%;" lang="AR-SA"><font color="#6600cc">زمانی دایکیی و
+خوێندنگاکانی ئێران</font></span><span style="line-height: 200%;" lang="FA"><o:p></o:p></span></font></p><p class="MsoNormal" dir="RTL" style="text-align: right; line-height: 16.5px; direction: rtl; unicode-bidi: embed;">
+
+
+
+</p><p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:200%;direction:rtl;unicode-bidi:embed"><font size="3" face="Mihan-Iransans"><span style="line-height: 200%;" lang="AR-SA">زمان، تایبه‌تمه‌ندییه‌کی
+گرینگی مرۆڤه‌ و ڕۆچنه‌ی ده‌رخستنی بیر و بۆچوون و خواسته‌کانییه‌تی. مرۆڤه‌کان به
+هاوبیری و هاوکاری، کۆشکی شارستانییه‌تی خۆیان بنیات ناوه و له‌م ڕێگه سه‌خت و پڕ
+له که‌ندوله‌نده‌دا، زمان ته‌نیا پردی په‌ڕینه‌وه و تاقه ئامرازی گۆڕینه‌وه‌ی
+زانیاری و ئه‌زموون و هه‌روه‌ها ده‌سته‌به‌ر کردنی گه‌شه‌ و پێشکه‌وتنیان بووه که
+وا بوو ده‌توانین بڵێن پێشکه‌وتنی وڵاتان پێوه‌ندی ڕاسته‌وخۆی به زمانه‌وه هه‌یه.
+فارس ده‌ڵێ: «همه چیز را همگان دانند»؛ که واته پێویسته هه‌موو مرۆڤه‌کان له پرسه
+گرینگه‌کانی وڵاته‌که‌یان‌دا به‌شدار بن هه‌تا وه‌کوو بتوانن وڵات و کۆمه‌ڵگایه‌کی
+پێشکه‌وتوو پێک‌بهێنن.</span><span style="line-height: 200%;" lang="FA"><o:p></o:p></span></font></p><p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-align:justify;line-height:200%;direction:rtl;unicode-bidi:embed"><font size="3" face="Mihan-Iransans"><span style="line-height: 200%;" lang="AR-SA"></span></font></p><p class="MsoNormal" dir="RTL" style="text-align:justify;text-justify:kashida;
+text-kashida:0%;line-height:200%;direction:rtl;unicode-bidi:embed"><span style="line-height: 200%;" lang="AR-SA"><font size="3" face="Mihan-Iransans">له
+زۆربه‌ی وڵاته فره‌نه‌ته‌وه‌کان‌دا، زیاتر له یه‌ک زمان وه‌ک زمانی فه‌رمی به کار
+ده‌هێنرێ و زمانی نه‌ته‌وه‌یه‌ک به سه‌ر زمانه‌کانی‌تردا داناسه‌پێ. به واتایه‌کی
+تر له‌و وڵاتانه‌دا هه‌موو نه‌ته‌وه‌کان وه‌ک خاوه‌ن‌ماڵ ده‌بینرێن و نه‌ته‌وه‌یه‌ک
+خۆی به خوا و خاوه‌نی هه‌موو شتێک نازانێ. ئاوایه‌ که هه‌مووان ده‌ست له‌ نێو ده‌ست
+هه‌وڵی پێش خستنی وڵاته‌که‌یان ده‌ده‌ن؛ به‌ڵام مخابن له هێندێ وڵات‌دا، نه‌ته‌وه‌یه‌ک
+به سه‌ر نه‌ته‌وه‌کانی تردا زاڵ ده‌بێ و ئه‌وانی تر له زۆر شت و له هه‌موویان
+گرینگ‌تر له زمان، بێ‌به‌ش ده‌کرێن. بێ‌به‌ش کردنی نه‌ته‌وه‌یه‌ک له زمانی دایکی،
+ده‌بێته هۆی بێ‌به‌ش بوونی وڵات له توانا و به‌هره‌ی ئه‌و نه‌ته‌وه‌یه و له ئه‌نجام‌دا
+لاواز بوونی وڵاته‌که؛ چونکه ئه‌و که‌سه‌ی له زمانی دایکی بێ‌به‌ش بکرێ، که‌سایه‌تی
+ڕاسته‌قینه‌ی خۆی له ده‌ست ده‌دا و له شوناسی خۆی دوور ده‌که‌وێته‌وه‌. له نێو
+چوونی شوناسی نه‌ته‌وه‌ییش له نێوچوونی نه‌ته‌وه‌ی به دواوه‌ دێ. ئاوایه که هیتله‌ر
+ده‌ڵێ: «ئه‌گه‌ر ده‌تانه‌وێ نه‌ته‌وه‌یه‌ک له نێو ببه‌ن، سه‌ره‌تا زمانه‌که‌یان له
+نێو ببه‌ن.» (داغچی، لاپه‌ڕه‌ی 189)</font><font style="font-size: 14pt;" face="Unikurd Hiwa, sans-serif"><o:p></o:p></font></span></p>
+
+
+
+
+
+
+
+
+<br>
+<br>
+<a href='http://harman.mihanblog.com/post/111'>دریژه ی بابه ت </a><br>	
+
+                
+
+
+                		
+			<div class="meta">
+				<span class="user"><span class="GS-users"></span> هەرمان </span>	
+				<span class="date"><span class="GS-clock"></span> سه شنبه 4 اسفند 1394</span>
+				<span class="comment"><span class="GS-comment"></span> <a target="_self" href="http://harman.mihanblog.com/post/111#commentlist" class="comment-link">نظرات(<script>setCommentCnt(111)</script>)</a></span>
+				<span class="more"><span class="GS-level-up"></span><a href="http://harman.mihanblog.com/&lt;script&gt;mihanblogPostLike('111','like')&lt;/script&gt;">درێژەو بابەتەکەی</a></span>
+			</div>
+			</div>
+        </article>
+                <article>
+           <h2><span></span><a href="http://harman.mihanblog.com/post/108" title="رو زوانی ئه دایی / عه دنان مورادی">رو زوانی ئه دایی / عه دنان مورادی</a></h2>
+			<div class="GSPostMain">
+            <b>طبقه بندی: </b><a href="http://harman.mihanblog.com/post/category/1">شاعران امروز پاوه</a>،&nbsp;<hr>
+<div class="owner_photo clearfix"></div>
+
+
+
+<table style="border: 1px solid rgb(0, 0, 0); border-collapse: collapse;" height="152" align="left" cellpadding="1" cellspacing="1" width="109"><tbody><tr><td style="border: 1px solid rgb(0, 0, 0); border-collapse: collapse; width: 121.2px;"><img src="http://file.mihanblog.com//public/user_data/user_files/112/333334/adnanmoradi.jpg" alt="" height="199" hspace="0" align="bottom" border="0" vspace="0" width="159"></td></tr></tbody></table><p class="MsoNormal" dir="RTL" style="text-align: right; line-height: 16.5px; direction: rtl; unicode-bidi: embed;"><font size="4"><span style="font-family: Mihan-Iransans; color: rgb(20, 24, 35); line-height: 20.7px;">ز</span><span style="font-family: Mihan-Iransans; color: rgb(20, 24, 35); line-height: 200%;">وانی ئەذایی</span></font></p><p dir="RTL" style="margin-top:0cm;margin-right:0cm;margin-bottom:4.5pt;
+margin-left:0cm;text-align:right;line-height:200%;direction:rtl;unicode-bidi:
+embed"><font face="Mihan-Iransans" size="4"><span style="line-height: 200%; color: rgb(20, 24, 35);" lang="FA">ڕۆ 21 فوریەو گرده ساڵەی ڕۆ زوانی ئەذایەن</span><span dir="LTR" style="line-height: 200%; color: rgb(20, 24, 35);"><o:p></o:p></span></font></p>
+
+<p dir="RTL" style="margin: 4.5pt 0cm; line-height: 200%; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="4"><span style="line-height: 200%; color: rgb(20, 24, 35);" lang="FA">گمێنێ تاسێ شارو ویریما</span><span dir="LTR" style="line-height: 200%; color: rgb(20, 24, 35);"><br>
+</span><span style="line-height: 200%; color: rgb(20, 24, 35);" lang="FA">کۆنێ ئاواتێ ڕۆ تەگویریما؟</span><span dir="LTR" style="line-height: 200%; color: rgb(20, 24, 35);"><br>
+</span><span class="textexposedshow"><span style="line-height: 200%; color: rgb(20, 24, 35);" lang="FA">کۆن خۆ قەرار بێ
+پلوورەوارانێ</span></span><span dir="LTR" style="line-height: 200%; color: rgb(20, 24, 35);"><br>
+</span><span class="textexposedshow"><span style="line-height: 200%; color: rgb(20, 24, 35);" lang="FA">کەرمێ خەڵاتی جوانێ بەرانێ</span></span><span dir="LTR" style="line-height: 200%; color: rgb(20, 24, 35);"><br>
+</span><span class="textexposedshow"><span style="line-height: 200%; color: rgb(20, 24, 35);" lang="FA">کۆن خۆ قەرار بێ تابڵۆ
+دڵداری</span></span><span dir="LTR" style="line-height: 200%; color: rgb(20, 24, 35);"><br>
+</span><span class="textexposedshow"><span style="line-height: 200%; color: rgb(20, 24, 35);" lang="FA">کەرمێ ئەو ملو باڵاو دیواری</span></span><span dir="LTR" style="line-height: 200%; color: rgb(20, 24, 35);"><br>
+</span><span class="textexposedshow"><span style="line-height: 200%; color: rgb(20, 24, 35);" lang="FA">قەرار بی ئەگەر ورکەما نەوی</span></span><span dir="LTR" style="line-height: 200%; color: rgb(20, 24, 35);"><br>
+</span><span class="textexposedshow"><span style="line-height: 200%; color: rgb(20, 24, 35);" lang="FA">بلمێ خزمەتو شێعرەو مەولەوی</span></span><span dir="LTR" style="line-height: 200%; color: rgb(20, 24, 35);"><br>
+</span><span class="textexposedshow"><span style="line-height: 200%; color: rgb(20, 24, 35);" lang="FA">یاوەینم یاگەی دڵما غەریوەن</span></span><span dir="LTR" style="line-height: 200%; color: rgb(20, 24, 35);"><br>
+</span><span class="textexposedshow"><span style="line-height: 200%; color: rgb(20, 24, 35);" lang="FA">وەنەما فەرزەن واوەیلاو
+شیوەن</span></span><span dir="LTR" style="line-height: 200%; color: rgb(20, 24, 35);"><br>
+</span><span class="textexposedshow"><span style="line-height: 200%; color: rgb(20, 24, 35);" lang="FA">قومیاما وەنه شاروو وێمانه</span></span><span dir="LTR" style="line-height: 200%; color: rgb(20, 24, 35);"><br>
+</span><span class="textexposedshow"><span style="line-height: 200%; color: rgb(20, 24, 35);" lang="FA">ماچی لەیذێنم سا بۆ بمانه</span></span><span dir="LTR" style="line-height: 200%; color: rgb(20, 24, 35);"><br>
+</span><span class="textexposedshow"><span style="line-height: 200%; color: rgb(20, 24, 35);" lang="FA">وەختەی نەتاوی بنویسی و
+بوانی</span></span><span dir="LTR" style="line-height: 200%; color: rgb(20, 24, 35);"><br>
+</span><span class="textexposedshow"><span style="line-height: 200%; color: rgb(20, 24, 35);" lang="FA">شاروو وێتەنە غەریو مەنمانی</span></span><span dir="LTR" style="line-height: 200%; color: rgb(20, 24, 35);"><br>
+</span><span class="textexposedshow"><span style="line-height: 200%; color: rgb(20, 24, 35);" lang="FA">غەریو کەی ئانەن شارەو دەر
+گێـڵۆ</span></span><span dir="LTR" style="line-height: 200%; color: rgb(20, 24, 35);"><br>
+</span><span class="textexposedshow"><span style="line-height: 200%; color: rgb(20, 24, 35);" lang="FA">غەریو ئانەنه جە وێش
+هۆرگێـڵۆ</span></span><span dir="LTR" style="line-height: 200%; color: rgb(20, 24, 35);"><br>
+</span><span class="textexposedshow"><span style="line-height: 200%; color: rgb(20, 24, 35);" lang="FA">بەگنۆ ئەوپەڕشو کەمتەرخەم
+مانۆ</span></span><span dir="LTR" style="line-height: 200%; color: rgb(20, 24, 35);"><br>
+</span><span class="textexposedshow"><span style="line-height: 200%; color: rgb(20, 24, 35);" lang="FA">زوان و ئەذاییش نەتاۆو بوانۆ</span></span></font></p>
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>	
+
+                
+
+
+                		
+			<div class="meta">
+				<span class="user"><span class="GS-users"></span> هەرمان </span>	
+				<span class="date"><span class="GS-clock"></span> یکشنبه 2 اسفند 1394</span>
+				<span class="comment"><span class="GS-comment"></span> <a target="_self" href="http://harman.mihanblog.com/post/108#commentlist" class="comment-link">نظرات(<script>setCommentCnt(108)</script>)</a></span>
+				<span class="more"><span class="GS-level-up"></span><a href="http://harman.mihanblog.com/&lt;script&gt;mihanblogPostLike('108','like')&lt;/script&gt;">درێژەو بابەتەکەی</a></span>
+			</div>
+			</div>
+        </article>
+                <article>
+           <h2><span></span><a href="http://harman.mihanblog.com/post/107" title="پیام مدیر کل یونسکو به مناسبت روز جهانی زبان مادری ۲۰۱۶">پیام مدیر کل یونسکو به مناسبت روز جهانی زبان مادری ۲۰۱۶</a></h2>
+			<div class="GSPostMain">
+            <hr>
+<div class="owner_photo clearfix"></div>
+
+
+
+
+<div><p class="MsoNormal" dir="RTL" style="text-align: justify; line-height: 200%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><font face="Mihan-Iransans" size="3"><span style="line-height: 200%;" lang="FA">موضوع روز جهانی زبان مادری امسال ( سال ۲۰۱۶) بر کیفیت آموزش، زبان آموزش و نتایج
+یادگیری تاکید دارد.</span><span dir="LTR" style="line-height: 200%;"><o:p></o:p></span></font></p><p class="MsoNormal" dir="RTL" style="text-align: center; line-height: 200%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><img src="http://ishiq.net/wp-content/uploads/80306603-copie-300x200.jpg" alt="" hspace="0" align="bottom" border="0" vspace="0"></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; line-height: 200%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><font face="Mihan-Iransans" size="3"><span style="line-height: 200%;" lang="FA">هدف از این
+انتخاب در واقع تاکید براهمیت زبان مادری در بالا بردن کیفیت تحصیل و تنوع زبانی
+به منظور دست یابی به اهداف چشم انداز توسعه پایدار تا سال ۲۰۳۰ می باشد</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR" style="line-height: 200%;"><span dir="LTR"></span><span dir="LTR"></span>.</span><span style="line-height: 200%;" lang="FA"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; line-height: 200%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><font face="Mihan-Iransans" size="3"><span style="line-height: 200%;" lang="FA">طبق هدف
+چهارم برنامه توسعه پایدار، دستور کار سال ۲۰۳۰ بر کیفیت تحصیل عادلانه و یادگیری
+مادام العمر برای همگان متمرکز شده است تا زنان و مردان قادر به کسب مهارتها و
+دانش لازم برای دستیابی به انچه که آرزو می کنند داشته باشند و از رهگذر آن شرایط
+لازم برای مشارکت کامل در فعالیت‌های اجتماعی را در اختیار بگیرند</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR" style="line-height: 200%;"><span dir="LTR"></span><span dir="LTR"></span>.</span><span style="line-height: 200%;" lang="FA"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; line-height: 200%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><font face="Mihan-Iransans" size="3"><span style="line-height: 200%;" lang="FA">این موضوع
+به خصوص برای دختران و زنان هچنین اقلیت‌ها، مردم بومی و جمعیت روستایی اهمیت
+بالاتری دارد. این مسئله در چهارچوب برنامه جامع عملیاتی ۲۰۳۰ یونسکو همچنین نقشه
+راه برای پیاده کردن دستور کار برنامه جامع۲۰۳۰ بازتاب یافته است تا موجب تشویق به
+استفاده از زبان مادری در تحصیل و یادگیری همچنین ترویج و حمایت ازتنوع زبانی گردد</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR" style="line-height: 200%;"><span dir="LTR"></span><span dir="LTR"></span>.</span><span style="line-height: 200%;" lang="FA"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; line-height: 200%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><font face="Mihan-Iransans" size="3"><span style="line-height: 200%;" lang="FA">چند
+زبانگی، ضرورتی است غیر قابل اجتناب برای دست‌یابی به اهداف یاد شده. با توجه به
+مسئله رشد، اشتغال و بهداشت و همچنین الگوی مصرف و تولید پایدار و تغییرات شرایط
+آب و هوایی، چند زبانگی تنها راه دستیابی به کلیت اهداف برنامه جامع ۲۰۳۰ است</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR" style="line-height: 200%;"><span dir="LTR"></span><span dir="LTR"></span>.</span><span style="line-height: 200%;" lang="FA"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; line-height: 200%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><font face="Mihan-Iransans" size="3"><span style="line-height: 200%;" lang="FA">یونسکو سعی
+دارد تا از طریق حمایت از بارگذاری محتوی محلی بر ارتقا تنوع زبانی در اینترنت،
+همچنین در مدیا و محصولات اطلاع‌رسانی تمرکز کند. یونسکو تلاش می‌کند تا از طریق
+برنامه “سیستم‌های دانش محلی و بومی” اهمیت زبان مادری را بر عرصه عمومی آورده و
+از این طریق برحفظ و به اشتراک گذاری فرهنگ‌ها و دانش بومی که گنجینه غنی از حکمت
+هستند تاکید می‌کند</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR" style="line-height: 200%;"><span dir="LTR"></span><span dir="LTR"></span>.</span><span style="line-height: 200%;" lang="FA"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; line-height: 200%; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><font face="Mihan-Iransans" size="3"><span style="line-height: 200%;" lang="FA">زبان‌های
+مادری در یک رویکرد چند زبانه اساس و بنیان آموزش با کیفیت بوده و پایه و اساس
+فرایند توانمند‌سازی زنان و مردان و جوامع‌ آن‌ می‌باشد. ما باید قدرت زبان‌های
+مادری را درک کرده و به قوی شدن آن کمک کنیم تا مطمئن شویم هیچ کس از حق برخورداری
+از یک آینده عادلانه‌ و پایدار محروم نشود</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR" style="line-height: 200%;"><span dir="LTR"></span><span dir="LTR"></span>.</span><span style="line-height: 200%;" lang="FA"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="line-height:200%"><span dir="LTR"><o:p><font face="Mihan-Iransans" size="3">&nbsp;</font></o:p></span></p></div>
+
+<br>
+<br>
+<br>	
+
+                
+
+
+                		
+			<div class="meta">
+				<span class="user"><span class="GS-users"></span> هەرمان </span>	
+				<span class="date"><span class="GS-clock"></span> یکشنبه 2 اسفند 1394</span>
+				<span class="comment"><span class="GS-comment"></span> <a target="_self" href="http://harman.mihanblog.com/post/107#commentlist" class="comment-link">نظرات(<script>setCommentCnt(107)</script>)</a></span>
+				<span class="more"><span class="GS-level-up"></span><a href="http://harman.mihanblog.com/&lt;script&gt;mihanblogPostLike('107','like')&lt;/script&gt;">درێژەو بابەتەکەی</a></span>
+			</div>
+			</div>
+        </article>
+                <article>
+           <h2><span></span><a href="http://harman.mihanblog.com/post/106" title="بە بونه ی روژی زمانی دایکی">بە بونه ی روژی زمانی دایکی</a></h2>
+			<div class="GSPostMain">
+            <hr>
+<div class="owner_photo clearfix"></div>
+
+
+
+<div><p class="MsoNormal" dir="RTL" style="text-align: center; margin-bottom: 0.0001pt; line-height: 200%;"><img src="http://file.mihanblog.com//public/user_data/user_files/112/333334/da.jpg" alt="" hspace="0" align="bottom" border="0" vspace="0"></p><p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+text-align:justify;text-justify:kashida;text-kashida:0%;line-height:200%"><font face="Mihan-Iransans" size="3"><span style="line-height: 200%;" lang="FA">یەکێک
+لە نوێترین پێناسەکان لە مەڕ فەرهەنگەوە لە ڕەهەندی زوانەوە گەڵاڵە دەبێت؛ لەبەر
+ئەوەی هەر زوانێک لە ڕێی نیشانە و سیستمی دەلالی خۆیەوە دەتوانێ فەرهەنگێک بنیات
+بنێت. بۆیە فەرهەنگ کۆمەڵێک کردەی ئاگاهانەیە کە لە لایان تاکەکانی کۆمەڵگەیەکی
+زوانییەوە لە پێناو ئافراندنی واتاکان یان کامڵکردنی واتاکانی پێشوو، گۆڕین یان
+ڕەدکردنیانەوە بەڕێوە دەچن. هۆکردی جەختکردن لە سەر "کۆمەڵگای زوانی"
+ئەوەیە کە "زوان" کەرەستەی پەیوەندی نێوانزەینی مرۆڤەکانە کە لە
+پێکهێنانی مانادا دەوری سەرەکیی دەگێڕێت. شتەکان و ڕووداوەکان لە جیهانی ئاساییدا
+بوونیان هەیە و ڕوو دەدەن، بەڵام مانای زاتییان نییە، ئەوە زوانە بەوان مانا
+دەبەخشێت. لە ڕێگەی زوانەوە جیهان ئێنسانیتر دەبێت</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR" style="line-height: 200%;"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="margin-bottom:0cm;margin-bottom:.0001pt;
+text-align:justify;text-justify:kashida;text-kashida:0%;line-height:200%"><font face="Mihan-Iransans" size="3"><span style="line-height: 200%;" lang="FA">بونیادنانی
+فەرهەنگ سەرەڕای هەموو ئاکام و قازانجەکانی لە یەکەم وارگدا کارێکە لە ئاقاری
+زماندا ڕوودەدا. زوان هاوکات کۆمەڵگە و فەرهەنگ پێکەوە بنیات دەنێت. ڕۆلان بارت لە
+باسی توخمەکانی نیشانەناسیدا بە لەونێکی باوەڕپێکراو بۆمان دەسەلمێنێت دۆزینەوەی
+تەرزەکانی پەیوەندی زوانیی دەتوانن ڕێگاچارە بن بۆ فامی پەیوەندیە ئێنسانییەکان.
+کەوابوو زوانەکان ئەو مافەیان هەیە ماناکان و نیشانەکان بەرهەم بهێنن و لە پانتای
+ئەندێشەدا دانوستانیان پێبکەن؛ چوون مرۆڤ بوونەوەرێکی سیمبۆل سازە. دەخوازێ لە
+دوودەری زوانی خۆیەوە جیهان ببینێتەوە و مانای بکاتەوە</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR" style="line-height: 200%;"><span dir="LTR"></span><span dir="LTR"></span>.</span></font></p></div>
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>	
+
+                
+
+
+                		
+			<div class="meta">
+				<span class="user"><span class="GS-users"></span> هەرمان </span>	
+				<span class="date"><span class="GS-clock"></span> یکشنبه 2 اسفند 1394</span>
+				<span class="comment"><span class="GS-comment"></span> <a target="_self" href="http://harman.mihanblog.com/post/106#commentlist" class="comment-link">نظرات(<script>setCommentCnt(106)</script>)</a></span>
+				<span class="more"><span class="GS-level-up"></span><a href="http://harman.mihanblog.com/&lt;script&gt;mihanblogPostLike('106','like')&lt;/script&gt;">درێژەو بابەتەکەی</a></span>
+			</div>
+			</div>
+        </article>
+        								<article>
+           <h2><span></span>ابر برچسب</h2>
+			<div class="GSPostMain">
+			<a href="http://harman.mihanblog.com/post/tag/%DA%A9%D9%84%D8%AB%D9%88%D9%85+%D8%B9%D8%AB%D9%85%D8%A7%D9%86%D9%BE%D9%88%D8%B1" style="font-size:1em">کلثوم عثمانپور</a>,			</div>
+        </article>
+			
+				<article>
+			لاپەڕێ : 15 | <a href="http://harman.mihanblog.com/page/1"><b>1</b></a>  <a href="http://harman.mihanblog.com/page/2"><span>2</span></a>  <a href="http://harman.mihanblog.com/page/3"><span>3</span></a>  <a href="http://harman.mihanblog.com/page/4"><span>4</span></a>  <a href="http://harman.mihanblog.com/page/5"><span>5</span></a>  <a href="http://harman.mihanblog.com/page/6"><span>6</span></a>  <a href="http://harman.mihanblog.com/page/7"><span>7</span></a>  <a href="http://harman.mihanblog.com/page/8"><i>...</i></a>  		</article>
+			</section>
+	
+    <aside class="GSside-2">
+	      <nav>
+        <h3><span></span> سەردای هەرمان بەرەکان</h3>
+        <ul>
+			<p class="clear">	
+			<img align="absMiddle" src="http://dl.greenskin.ir/images/stats.gif"/> <b> چن که سی لاش دان </b><br>
+			<li>  سەردای ئارۆی  : <b><script>getStatVar('today_view');</script></b></li>                           
+			<li>  سەردای هیزی : <b><script>getStatVar('yesterday_view');</script></b></li> 
+			<li> ئی مانگێ: <b><script>getStatVar('this_month_view');</script></b></li> 
+			<li>  مانگەی ویەردێ : <b><script>getStatVar('last_month_view');</script></b></li>                            
+			<li> سەرجەمو سەردانەکا : <b><script>getStatVar('total_view');</script></b></li> 
+			</p>
+			<hr>
+			<p class="clear">
+			<img align="absMiddle" src="http://dl.greenskin.ir/images/easymoblog.png"/> <b>آمار وبلاگ</b><br>
+			<li> سەرجەمو بابەتەکان : <b><script>getStatVar('total_post');</script></b></li> 
+			<li> نویسیارێ : <b><script>getStatVar('total_author');</script></b></li> 
+			<li> آخرین بروز رسانی : <b><script>getStatVar('modify_date');</script></b></li> 
+			</p>
+        </ul>
+	  </nav>
+	  	        <nav>
+        <h3><span></span>نوویسیارێ</h3>
+        <ul>
+						<li><a href="http://harman.mihanblog.com/post/author/226623" title="تعداد پست‌های راسالی : 88">هەرمان </a></li>
+			        </ul>
+	  </nav>
+	  	  	  <nav>
+        <h3><span></span>پێوەزێ</h3>
+        <ul>
+			<li><a href="http://shilankarimi.blogfa.com/" title=""  target="_blank">شیلان کریمی</a></li><li><a href="http://photopaveh.mihanblog.com" title=""  target="_blank">فوتو پاوه</a></li><li><a href="http://shonama.blogfa.com" title=""  target="_blank">غزل هورامی</a></li><li><a href="http://kalian.blogfa.com/" title=""  target="_blank">کلیان</a></li>			<li><a target="_blank" href="http://www.GreenSkin.ir/" title="قالب سبز">قالب سبز</a></li>
+			<li><a href="http://harman.mihanblog.com/link/"><b>همه لینکها</b></a></li>
+        </ul>
+	  </nav>
+	  	  
+			 
+
+	  <nav>
+        <h3><span></span>دانامێ و پسپۆڕێ</h3>
+        <div align="center">
+		<center> <a href="http://harman.mihanblog.com/extrapage/mashaheer"><img src="http://file.mihanblog.com//public/user_data/user_files/112/333334/mashahir.jpg"></a><center>
+
+		</div>
+	  </nav>
+	  
+
+
+	  <nav>
+        <h3><span></span>کیانەی بابەتی</h3>
+        <div align="center">
+ <center><!-- Contact Form by www.1abzar.com --->
+<a href="http://www.1abzar.com/visit/contact-form/?email=moradi_adnan@yahoo.com" target="_blank"><img border=0 src="http://1abzar.ir/abzar/tools/contact-form/c3.png" alt="کیاستەی بابەتی"></a>
+<!-- Contact Form by www.1abzar.com ---><center>
+برای ارسال مقالات و اشعار و داستان های خود برای مدیر وبلاگ بر روی گزینه بالا کلیک نمایید
+
+
+		</div>
+	  </nav>
+	  
+
+
+	  <nav>
+        <h3><span></span>تفاق و پەسا</h3>
+        <p><div align="center"><center>
+<p><a href="index.html" target="_blank" title="<www.harman.mihanblog.com>"><img src="http://file.mihanblog.com//public/user_data/user_files/53/157034/banerharman.png" border="0"></a></p><center>
+
+<center>
+<p><a href="http://www.photopaveh.mihanblog.com" target="_blank" title="<www.photopaveh.mihanblog.com>"><img src="http://file.mihanblog.com//public/user_data/user_files/53/157034/photopaveh.png" border="0"></a></p><center>
+<p align="center">
+<center><a href="http://www.zagrosweb.org/gen/fonts/ALIFONT.EXE"><img
+alt="دانلود فونت"
+src="http://cld.persiangig.com/preview/LhWr3gkuvE/font.png"
+width="190" height=95"
+border="0px"></a></center>
+
+<center><a href="http://www.facebook.com/harman.paveh"><img
+alt=" فیسبوک هرمان "
+src="http://cld.persiangig.com/preview/iGe2Slhr5O/facebook-icon.png"
+width="190" height=95"
+border="0px"></a></center>
+
+<p align="center">
+
+<center>
+<a href="http://www.shonama.blogfa.com"><img
+
+alt=" شونه‌ما "
+src="http://cld.persiangig.com/preview/ILQOAzo3VQ/SHONAMA.png"
+width="190" height="95"
+border="0px"></a></center>
+<p align="center">
+
+<p align="center">
+<center><a href="http://harman.mihanblog.com/extrapage/farakhan"><img
+alt=" فراخوان ها "
+src="http://cld.persiangig.com/preview/dZjFcGBAy6/FARAKHAN.png"
+width="190" height=95"
+border="0px"></a></center>
+
+<p align="center">
+<center><a href="http://harman.mihanblog.com/extrapage/kodakan"><img
+alt=" کودکان "
+src="http://shonama.persiangig.com/HARMAN/935/kodakan.png"
+width="190" height=95"
+border="0px"></a></center>
+
+<p align="center">
+<center><a href="http://harman.mihanblog.com/extrapage/adnan"><img
+alt="عدنان مرادی"
+src="http://file.mihanblog.com//public/user_data/user_files/112/333334/adnanmoradi.png"
+width="190" height=95"
+border="0px"></a></center>
+
+
+<html>
+ <head>
+      
+     <link rel="stylesheet" href="http://ifont.ir/apicode/46">
+     <style type='text/css'>
+     div{ /* نمونه ای با تگ */
+         font-family:'Dehnavi92',tahoma;
+         font-size:14px;
+     }
+     .font{ /*  نمونه ای با کلاس */
+         font-family:'Dehnavi92',tahoma;
+         font-size:14px;
+     }
+     </style>
+     <titleخه یر به یدی په ی په لیانه و هه رمانی </title> 
+</head>
+ <body>
+      
+ 
+     <div style="font-family:'Dehnavi92',tahoma">خه یر به یدی په ی په لیانه و هه رمانی </div> 
+     <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+     <div class="font"><a href="http://shonama.blogfa.com"> عدنان مرادی</a></div>
+   </body>
+</html>
+</div></p>
+	  </nav>
+	  
+    </aside>
+	<div class="clear"></div>
+   <footer>
+        <span> <a href="http://www.greenskin.ir/"target="_blank"  title="" >  </a>  <a href="http://www.greenskin.ir/"target="_blank" title="GreenSkin" > </a></span>
+    </footer>
+ </div>
+<script type="text/javascript" src="http://dl.greenskin.ir/theme/theme_music12/GS-Slider/scripts/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="http://dl.greenskin.ir/theme/theme_music12/GS-Slider/scripts/jquery.gs.slider.js"></script>
+<script type="text/javascript">$(window).load(function() {$('#slider').nivoSlider();});</script>
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'harman.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

@@ -1,0 +1,929 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*926957*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','273');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','جمعه 10 مهر 1394');
+	
+	setStatVar('today_view','12');
+	setStatVar('yesterday_view','21');
+	
+	setStatVar('this_month_view','604');
+	setStatVar('last_month_view','1104');
+
+	setStatVar('total_view','331079');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (17:50)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://we--plus.mihanblog.com/statupdate/?data[refereruri]=http://we--plus.mihanblog.com/post/author/783854&data[postid]=&data[requesturi]=/post/author/783854/page/4&data[sdate]=1608216300&data[hash]=b404adb87cac43d975b989329ef150a9&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[250]='20';commentCnt[251]='126';commentCnt[253]='5';commentCnt[254]='18';commentCnt[255]='19';commentCnt[256]='28';commentCnt[257]='18';commentCnt[258]='6';commentCnt[259]='14';commentCnt[260]='37';commentCnt[261]='22';commentCnt[262]='89';commentCnt[263]='26';commentCnt[264]='9';commentCnt[265]='69';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[250]='0';
+mihanblogDisLikeArrCnt[250]='0';
+mihanblogLikeArrCnt[251]='0';
+mihanblogDisLikeArrCnt[251]='0';
+mihanblogLikeArrCnt[253]='0';
+mihanblogDisLikeArrCnt[253]='0';
+mihanblogLikeArrCnt[254]='0';
+mihanblogDisLikeArrCnt[254]='0';
+mihanblogLikeArrCnt[255]='0';
+mihanblogDisLikeArrCnt[255]='0';
+mihanblogLikeArrCnt[256]='0';
+mihanblogDisLikeArrCnt[256]='0';
+mihanblogLikeArrCnt[257]='0';
+mihanblogDisLikeArrCnt[257]='0';
+mihanblogLikeArrCnt[258]='0';
+mihanblogDisLikeArrCnt[258]='0';
+mihanblogLikeArrCnt[259]='0';
+mihanblogDisLikeArrCnt[259]='0';
+mihanblogLikeArrCnt[260]='0';
+mihanblogDisLikeArrCnt[260]='0';
+mihanblogLikeArrCnt[261]='0';
+mihanblogDisLikeArrCnt[261]='0';
+mihanblogLikeArrCnt[262]='0';
+mihanblogDisLikeArrCnt[262]='0';
+mihanblogLikeArrCnt[263]='0';
+mihanblogDisLikeArrCnt[263]='0';
+mihanblogLikeArrCnt[264]='0';
+mihanblogDisLikeArrCnt[264]='0';
+mihanblogLikeArrCnt[265]='0';
+mihanblogDisLikeArrCnt[265]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://we--plus.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://we--plus.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Theme Designer" content="www.payamblog.com">
+<meta name="description" content=""/>
+<meta name="keywords" content=""/> 
+<link rel="alternate" type="application/rss+xml" title=" علیرضا حقیقی" href="../../../rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title=" علیرضا حقیقی" href="../../../atom/index.html" />
+<script language="javascript" type="text/javascript" src="http://payamblog.com/tem/16/payamblog.js"></script>
+
+<title> علیرضا حقیقی - مطالب مریم </title>
+
+</head>
+
+<body>
+
+<div align="left">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td class=div2 valign=top>
+
+<div class=div60></div>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>درباره وبلاگ</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div31><center><img src="http://static.mihanblog.com//public/user_data/web_photo/309/926957.jpg?2952"  /></center><br>
+<font class=text1><br>
+مدیر وبلاگ : <a href="../../783854.html">مریم </a></font></div>
+</div><div class=div30></div>
+</div>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>مطالب اخیر</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="../../../316.html">:-(</a></font></div><div class=div32><font class=text1><a href="../../../315.html">آوار 12 هزار نفری بر سر آمریکا</a></font></div><div class=div32><font class=text1><a href="../../../314.html">من اومدم!</a></font></div><div class=div32><font class=text1><a href="../../../312.html"> *10* مقدس!</a></font></div><div class=div32><font class=text1><a href="../../../311.html">سلاممممم</a></font></div><div class=div32><font class=text1><a href="../../../310.html">.......!!!!</a></font></div><div class=div32><font class=text1><a href="../../../309.html">بازم عکس!</a></font></div><div class=div32><font class=text1><a href="../../../308.html">تسلیت....+ عکس</a></font></div><div class=div32><font class=text1><a href="../../../307.html">اینم از پست!!!!!!!!!!!!! :-))))))))</a></font></div><div class=div32><font class=text1><a href="../../../306.html">سلامممممممممممم!:-))))))))))</a></font></div><div class=div32><font class=text1><a href="../../../305.html">تولد علیرضا مبارررررررررررک! :-))</a></font></div><div class=div32><font class=text1><a href="../../../303.html">تولدت مبارک نسیم جونم! :-*</a></font></div><div class=div32><font class=text1><a href="../../../302.html">آخرین پست 92! :-)</a></font></div><div class=div32><font class=text1><a href="../../../301.html">:-))</a></font></div><div class=div32><font class=text1><a href="../../../300.html">تولدم مبارک! یه دنیا ممنون! :-)</a></font></div></div><div class=div30></div>
+</div>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>آرشیو وبلاگ</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="../../../archive/1394/7.html"> مهر 1394</a></font></div><div class=div32><font class=text1><a href="../../../archive/1394/4.html"> تیر 1394</a></font></div><div class=div32><font class=text1><a href="../../../archive/1394/3.html"> خرداد 1394</a></font></div><div class=div32><font class=text1><a href="../../../archive/1393/9.html"> آذر 1393</a></font></div><div class=div32><font class=text1><a href="../../../archive/1393/7.html"> مهر 1393</a></font></div><div class=div32><font class=text1><a href="../../../archive/1393/6.html"> شهریور 1393</a></font></div><div class=div32><font class=text1><a href="../../../archive/1393/5.html"> مرداد 1393</a></font></div><div class=div32><font class=text1><a href="../../../archive/1393/4.html"> تیر 1393</a></font></div><div class=div32><font class=text1><a href="../../../archive/1393/2.html"> اردیبهشت 1393</a></font></div><div class=div32><font class=text1><a href="../../../archive/1393/1.html"> فروردین 1393</a></font></div><div class=div32><font class=text1><a href="../../../archive/1392/12.html"> اسفند 1392</a></font></div><div class=div32><font class=text1><a href="../../../archive/1392/11.html"> بهمن 1392</a></font></div><div class=div32><font class=text1><a href="../../../archive.html">آرشیو كل مطالب</a></font></div>
+</div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>پیوندهای روزانه</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="http://www.grin.ir/" title="" target="_blank">خرید اینترنتی</a></font></div><div class=div32><font class=text1><a href="http://www.upsara.com/" title="با افتخار میزبان عکس ها و فایل های شما هستیم.
+آپلود رایگان و دائمی عکس
+
+با لینک کردن ما آدرس ما رو فراموش نکنید و از ما حمایت کنید
+
+باتشکر
+آپسرا" target="_blank">آپلود عکس</a></font></div><div class=div32><font class=text1><a href="http://buying.blog.ir/" title="" target="_blank">فروشگاه اینترنتی</a></font></div><div class=div32><font class=text1><a href="http://www.persepolisnews.ir/" title="" target="_blank">خبرگزاری باشگاه پرسپولیس ایران</a></font></div><div class=div32><font class=text1><a href="http://www.ffiri.ir" title="" target="_blank">فدراسیون فوتبال جمهوری اسلامی ایران</a></font></div><div class=div32><font class=text1><a href="http://www.sh3klak.blogfa.com/" title="" target="_blank">تصاویر مخصوص</a></font></div><div class=div32><font class=text1><a href="http://fc-perspolis.com" title="" target="_blank">وب سایت رسمی باشگاه فرهنگی ورزشی پرسپولیس</a></font></div><div class=div32><font class=text1><a href="http://www.rubin-kazan.ru" title="" target="_blank">وبسایت رسمی باشگاه روبین کازان</a></font></div><div class=div32><font class=text1><a href="../../../../linkdaily/index.html">همه پیوندهای روزانه</a></font></div>
+<div class=div32><font class=text1><a href="javascript:linkdailyForm()">ارسال پیوند روزانه</a></font></div>
+</div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>پیوندها</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="http://sunrise-girl-1379.blogfa.com/" title="" target="_blank"> ✿◕ ‿ ◕✿ SuNRiSE ✿◕ ‿ ◕✿</a></font></div><div class=div32><font class=text1><a href="http://www.volleyball-saeid2014.blogfa.com/" title="" target="_blank">تـــک کــــــــاپــیـــتـان قلــــــــبم</a></font></div><div class=div32><font class=text1><a href="http://shima014.blogfa.com/" title="" target="_blank">دخملای فوتبالی</a></font></div><div class=div32><font class=text1><a href="http://koolbehvolleyball25.blogfa.com/" title="" target="_blank">·٠•●♥کلبه والیبالیست ها♥●•٠·(صدف جووون)</a></font></div><div class=div32><font class=text1><a href="http://2009mz.shakheh.com/" title="" target="_blank">✔️ والیبال و فوتبال ✔️(مبینا جووون)</a></font></div><div class=div32><font class=text1><a href="http://deltangivman.blogfa.com/" title="" target="_blank">دلتنگى و من(نسیم جوووونم)</a></font></div><div class=div32><font class=text1><a href="http://pro-volleyball.mihanblog.com/" title="" target="_blank">ولیبال حرفه ای(ریحانه جوووونم)</a></font></div><div class=div32><font class=text1><a href="http://reyhaneh6617.blogfa.com" title="" target="_blank">غاتی پاطی (اجی جووونم)</a></font></div><div class=div32><font class=text1><a href="http://perspolis-66.shakheh.com/" title="" target="_blank">پرسپولیس ( اونم از نوع دو آتیشه)(مبینا جون)</a></font></div><div class=div32><font class=text1><a href="http://like-perspolis.blogfa.com/" title="" target="_blank">♥فقط پرسپولیس♥پیـام صادقیان♥حسین ماهینے♥</a></font></div><div class=div32><font class=text1><a href="http://lovebadminton.rozblog.com/" title="" target="_blank">پوئن 25 تیم قهرمان من(نیکی جووون)</a></font></div><div class=div32><font class=text1><a href="http://talacheh.mihanblog.com/" title="" target="_blank">زیور الات دست ساز (طناز جووونم)</a></font></div><div class=div32><font class=text1><a href="http://mirsaeedmarouf4.blogfa.com/" title="" target="_blank">میر سعید معروف 4(میشا جووون)</a></font></div><div class=div32><font class=text1><a href="http://alirezayaghootesorkh.blogfa.com" title="" target="_blank">علیرضا حقیقی یاقوت سرخ(غزل جووون)</a></font></div><div class=div32><font class=text1><a href="http://hosein7744.mihanblog.com" title="" target="_blank">وبلاگ رسمی حسین اسدالهی</a></font></div><div class=div32><font class=text1><a href="http://just-ehsanalikhani-.mihanblog.com/" title="" target="_blank">احسان علیخانی(سپیده جووون)</a></font></div><div class=div32><font class=text1><a href="http://fano0o0s.mihanblog.com" title="" target="_blank">فانوس(ریحانه ودلارام جوووووونم)</a></font></div><div class=div32><font class=text1><a href="http://www.mylovea20.blogfa.com/" title="" target="_blank">alireza haghighi my love(نادیا جووون)</a></font></div><div class=div32><font class=text1><a href="http://nimkat2012.blogfa.com" title="" target="_blank">نیمکت(هدی و حدیث جووون)</a></font></div><div class=div32><font class=text1><a href="http://khatemarzi.mihanblog.com/" title="" target="_blank">فقط طنز برای وقت هایی که بی کاریی</a></font></div><div class=div32><font class=text1><a href="http://meysamvr.blogfa.com/" title="" target="_blank">فوتبال یعنی زندگی(آقا میثم)</a></font></div><div class=div32><font class=text1><a href="http://www.realgoalkeeper.blogfa.com/" title="" target="_blank">منو درگیر خودت کن(رومینا جووون)</a></font></div><div class=div32><font class=text1><a href="http://valibal2013.mihanblog.com" title="" target="_blank">سایت تخصصی والیبال(آقا میثم)</a></font></div><div class=div32><font class=text1><a href="http://feshangchi75.blogfa.com/" title="" target="_blank">امیر حسین فشنگچی(مهسا جووون)</a></font></div><div class=div32><font class=text1><a href="http://patoghmabahala.blogfa.com/" title="" target="_blank">کلیک کن...پاتوق باحالاست...(الناز جووون)</a></font></div><div class=div32><font class=text1><a href="http://peykan-bazargard.mihanblog.com/" title="" target="_blank">کلوپ هواداران پیکان و مهدی بازارگرد(اقا علیرضا)</a></font></div><div class=div32><font class=text1><a href="http://dehkadeh-emroozi.blogfa.com/" title="" target="_blank">دهکده ی امروزی(سارا جووون)</a></font></div><div class=div32><font class=text1><a href="http://silvermooninbluesky.blogfa.com/" title="" target="_blank">قلب شیشه ای(نیایش جووون)</a></font></div><div class=div32><font class=text1><a href="http://www.miladakbari1374.blogfa.com/" title="" target="_blank">نوشاد عالمیان(اقا میلاد)</a></font></div><div class=div32><font class=text1><a href="http://alirezahaghighi20.blogfa.com/" title="" target="_blank">فقط علیرضاحقیقی(پریا جووون)</a></font></div><div class=div32><font class=text1><a href="http://www.sarbazanvatan.blogfa.com" title="" target="_blank">سربازان وطن(اقا ارش)</a></font></div><div class=div32><font class=text1><a href="http://www.HTMVI.blogfa.com" title="" target="_blank">هواداران تیم ملی والیبال</a></font></div><div class=div32><font class=text1><a href="http://description27.blogfa.com/" title="" target="_blank">Ϡ₡ بِـــِـבפּלּ شـَـرح ... Ϡ₡(ملیکا جووون)</a></font></div><div class=div32><font class=text1><a href="http://volleyball-stars.mihanblog.com" title="" target="_blank">♥ستاره های والیبال♥(مهسا جووون)</a></font></div><div class=div32><font class=text1><a href="http://elina-note.blogfa.com/" title="" target="_blank">ღ با یک جفت کتونی خیس ღ(الینا جووون)</a></font></div><div class=div32><font class=text1><a target="_blank" href="http://www.payamblog.com">بهترین قالب های وبلاگ</a></font></div>
+<div class=div32><font class=text1><a href="../../../../link/index.html">همه پیوندها</a></font></div>
+</div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>نویسندگان</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="../../783854.html">مریم  (273)</a></font></div></div><div class=div30></div>
+</div>
+
+
+		
+
+<form id="frm-16082163005fdb6eec25925" method="get" action="http://we--plus.mihanblog.com/post/search/fid/16082163005fdb6eec25925"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> <div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>جستجو</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><center><input type="text" name="search_text"><br>
+<input type="submit" value="جستجو" style="font-family: Tahoma; font-size: 9pt"></center></div>
+</div><div class=div30></div>
+</div><input type="hidden" name="frm-id" value="16082163005fdb6eec25925" id="frm-id" /></form>
+
+<div class=div24> <div class=div35> <div class=div25><font class=text5>آمار وبلاگ</font></div></div> <div class=div342></div> <div class=div341> <div class=div32><font class=text1>کل بازدید : <script>getStatVar('total_view');</script></font></div> <div class=div32><font class=text1>بازدید امروز :<script>getStatVar('today_view');</script></font></div> <div class=div32><font class=text1>بازدید دیروز : <script>getStatVar('yesterday_view');</script></font></div> <div class=div32><font class=text1>بازدید این ماه : <script>getStatVar('this_month_view');</script></font></div> <div class=div32><font class=text1>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></font></div> <div class=div32><font class=text1>تعداد نویسندگان : <script>getStatVar('total_author');</script></font></div> <div class=div32><font class=text1>تعداد کل پست ها : <script>getStatVar('total_post');</script></font></div> <div class=div32><font class=text1>آخرین بازدید : <script>getStatVar('last_view_date');</script></font></div> <div class=div32><font class=text1>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></font></div> </div><div class=div30></div> </div>
+
+<div class=div24><center>
+</center></div>
+
+</td>
+
+<td class=div1 valign=top>
+
+<div class=div61>
+<div class=div10><font class=title> علیرضا حقیقی</font></div>
+<div class=div12><font class=des></font></div>
+</div>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../../265.html">حقیقی، دروازه بان پرسپولیس مقابل پدیده مشهد</a></font></div>
+<div class=div58><font class=text7>دوشنبه 29 مهر 1392 :: نویسنده : <a href="../../783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(153, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;">سلام!</span></span></span></span><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(153, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;">من خیلی خوشحالم!</span></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(153, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;">فقط میتونم همینو بگم!چهارشنبه علیرضا <span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 11px; font-weight: normal; "><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"><span class="Apple-style-span" style="color: rgb(153, 0, 0); font-family: georgia; font-size: 16px; font-weight: bold; ">تو ترکیب اصلیه!</span></span></span></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(153, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;">yeeeeeeeeeeeeeeeeeees!</span></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(153, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;">اصلا باس اینجوری باشه!</span></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(153, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;">من چون خیلی خوشحالم نمیتونم چیز دیگه بگم!</span></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(153, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;">فدا مدا!<span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 11px; font-weight: normal; "><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"></span></span></span></span></span></div><div><br></div><div><img src="http://201020.ir/UserFile/News/b588177a_799d_4f57_b386_6fd782574930.jpg"><br></div><div><br></div><div><br></div><div><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"><br></div><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(265)">نظرات (<script>setCommentCnt(265)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../../264.html">عکس های علیرضا در بازی با داماش!</a></font></div>
+<div class=div58><font class=text7>یکشنبه 28 مهر 1392 :: نویسنده : <a href="../../783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(153, 51, 153);"><span class="Apple-style-span" style="font-weight: bold;">سلام سلام!</span></span></span></span><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(153, 51, 153);"><span class="Apple-style-span" style="font-weight: bold;">خوبین که؟</span></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(153, 51, 153);"><span class="Apple-style-span" style="font-weight: bold;">من بد نیستم!</span></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(153, 51, 153);"><span class="Apple-style-span" style="font-weight: bold;"> هی من میگم این فوتو امان فعال شده جدیدا شما گوش ندین!</span></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(153, 51, 153);"><span class="Apple-style-span" style="font-weight: bold;">دمش گرم بازم!بچه ها من حرف کم میزنم!!! چون زود اپ میکنما!حرفام تموم میشه!</span></span></span></span></div><div><span class="Apple-style-span" style="color: rgb(153, 51, 153); font-family: georgia; font-size: 16px; font-weight: bold;"><br></span></div><div><span class="Apple-style-span" style="color: rgb(153, 51, 153); font-family: georgia; font-size: 16px; font-weight: bold;"><img src="http://upload.tehran98.com/upme/uploads/7050626d59026a831.jpg"><br></span></div><div><span class="Apple-style-span" style="color: rgb(153, 51, 153); font-family: georgia; font-size: 16px; font-weight: bold;"><br></span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"> </span><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);">اوه!!!قضیه از چه قراره؟؟!</span></span></span><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></span></span></span></div><div><br></div><div><img src="http://upload.tehran98.com/upme/uploads/7050fbf6b6e9f8d52.jpg"><br></div><div><br></div><div><br></div><div><img src="http://upload.tehran98.com/upme/uploads/b4a84b5b55e16d121.jpg"><br></div><div><br></div><div><img src="http://mihanblog.com/public/public/rte/images_new/smiles/5.gif"><br></div><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(264)">نظرات (<script>setCommentCnt(264)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../../263.html">پرسپولیس 2 داماش 0 صعود به رده ی دوم :-)</a></font></div>
+<div class=div58><font class=text7>شنبه 27 مهر 1392 :: نویسنده : <a href="../../783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">سلام!</span></span><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">خوبین؟</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">چه خبرا؟</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">تبریک بابا ترکوندن که!دمشون کلی گرم!<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><img src="http://www.pic4ever.com/images/47b20s0.gif"></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> گل هارو هم که متوسل زاده و حمید علی عسگر زد که خداییش گلش خیلی قشنگ بود!<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><img src="http://www.kolobok.us/smiles/mini/heart_mini.gif"></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-weight: bold;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);">علیرضا </span></span>هم که طبق معمول رو نیمکت بود!!!!!!!!!!!!!!!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">بعله دیگه 24 امتیاز گرفتیم رفتیم رده  دوم!<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><img src="http://www.pic4ever.com/images/bliss.gif"></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">همین دیگه حرف دیگه ندارم!برین وب خواهرم!<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif">    <img src="http://www.pic4ever.com/images/128fs318181.gif"></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">راستی دلم واسه خاله تنگ شده چند روزیه نیومده!نهایت هم همینطور!<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><img src="http://mihanblog.com/public/public/rte/images_new/smiles/2.gif"></span></span></span></div><div><br></div><div><img src="http://fc-perspolis.com/image/getthumbnail/id/14606/size/middle"><br></div><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(263)">نظرات (<script>setCommentCnt(263)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../../262.html">آزاد............</a></font></div>
+<div class=div58><font class=text7>پنجشنبه 25 مهر 1392 :: نویسنده : <a href="../../783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(153, 51, 153);"><span class="Apple-style-span" style="font-weight: bold;">سلام!</span></span></span></span><div><span class="Apple-style-span" style="color: rgb(153, 51, 153); font-family: georgia; font-size: 16px; font-weight: bold;"><br></span><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(153, 51, 153);"><span class="Apple-style-span" style="font-weight: bold;">شبتون شیک وخوش!</span></span></span></span></div><div><span class="Apple-style-span" style="color: rgb(153, 51, 153); font-family: georgia; font-size: 16px; font-weight: bold;"><br></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(153, 51, 153);"><span class="Apple-style-span" style="font-weight: bold;">این پستو گذاشتم ازاد!</span></span></span></span></div><div><span class="Apple-style-span" style="color: rgb(153, 51, 153); font-family: georgia; font-size: 16px; font-weight: bold;"><br></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(153, 51, 153);"><span class="Apple-style-span" style="font-weight: bold;">اینجا بحرفیم!</span></span></span></span></div><div><span class="Apple-style-span" style="color: rgb(153, 51, 153); font-family: georgia; font-size: 16px; font-weight: bold;"><br></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(153, 51, 153);"><span class="Apple-style-span" style="font-weight: bold;">شب نشینیه!هرکی هست بیاد!<span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 11px; font-weight: normal; "><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></span></span></span></span></span></div></div><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(262)">نظرات (<script>setCommentCnt(262)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../../261.html">عیدتون مبارک/تبریک برای برد :)</a></font></div>
+<div class=div58><font class=text7>چهارشنبه 24 مهر 1392 :: نویسنده : <a href="../../783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4>
+<span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">سلااااااااااامممممممممم سلاممممممممممم</span></span><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><br></span><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: large;"><span class="Apple-style-span" style="font-weight: bold;"><span class="Apple-style-span" style="color: rgb(0, 102, 0);">عیدتون مبارک!</span></span></span></span></div><div><br></div><div><img src="http://www.aftabir.com/e_card/photos/06290c22c6addc56e2c6a15f3d28c64a.jpg"><br></div><div><br></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">خوبین؟</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(51, 51, 153);"><span class="Apple-style-span" style="font-weight: bold;">بایدم خوب باشین اون از دیشب که بچه ها ترکوندن اینم از امروز که عیده!</span></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">بازیه دیروز که نیمه اول زیاد جالب نیود ولی به هر حال دمشون گرم!صدر نشین موندیم!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">با گل سید جلال وقوچان نژاد البته با پاس کریم!ایول نه قشنگ بود!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">خلاصه که دیگه همین حرفی ندارم!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">جدیدا حرفی ندارم!البته حرفی ندارم اینم!</span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></span></span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><br></span></div><div><br></div></div>
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(261)">نظرات (<script>setCommentCnt(261)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../../260.html">علیرضا حقیقی: سفرم به کازان برای کارهای اداری بود/ جایگاهم را در تیم ملی پس می‌گیرم</a></font></div>
+<div class=div58><font class=text7>شنبه 20 مهر 1392 :: نویسنده : <a href="../../783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">ههههه سلام!<img src="http://www.pic4ever.com/images/square.gif"></span></span><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">چیکار کنم خب؟؟خبر زیاده!الان که <span class="Apple-style-span" style="font-weight: bold;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);">علیرضا </span></span>هست باید پست بزارم دیگه روسیه که بره ماهی یه بار</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">ازش خبردارم یشیم!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">خلاصه اینکه حاجی  هم برگشت امروز!تعجب نکنید!این حاجی فقط به خاطر نسیم جونه<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><img src="http://www.pic4ever.com/images/16.gif"><span class="Apple-style-span" style="font-family: georgia; font-size: 16px; ">!نظرتون؟<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><img src="http://mihanblog.com/public/public/rte/images_new/smiles/7.gif"></span></span></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></div><div><span class="Apple-style-span" style="color: rgb(255, 255, 255); font-family: Tahoma; "><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);">علیرضا حقیقی</span></span> می‌گوید سفرش به کازان برای کارهای اداری بوده و امیدوار است جایگاه خود را در پرسپولیس و تیم ملی پس بگیرد.</span></span></span></font><p></p><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><font></font></span></span></span><p></p><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><font></font></span></span></span><p><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">دروازه‌بان پرسپولیس در گفت‌وگو با خبرنگار ورزشی خبرگزاری دانشجویان ایران (ایسنا) درباره‌ی وضعیت خود در پرسپولیس اظهار کرد: در حال حاضر شرایط برای من خیلی سخت است. برای این به پرسپولیس آمدم که بازی کنم اما متاسفانه هنوز این اتفاق نیفتاده است. همیشه گفته‌ام که بازی کردن علیرضا حقیقی دست خداست و من هم تا الان هیچ اعتراضی ندارم و در طول فصل همیشه سعی کرده‌ام فقط کار خودم را انجام دهم.</span></span></span></font></p><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><font></font></span></span></span><p></p><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><font></font></span></span></span><p><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">او ادامه داد: فعلا شرایط این‌گونه است اما به هیچ عنوان ناامید نیستم. باید خوب تمرین کنم و خوب زندگی کنم که شکر خدا این شاخصه‌ها را رعایت می‌کنم. زمانی که بازی کنم خیلی حرف‌ها برای گفتن خواهم داشت.</span></span></span></font></p><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><font></font></span></span></span><p></p><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><font></font></span></span></span><p><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);">حقیقی</span></span> در پاسخ به این سوال که آیا تا به حال درباره‌ی شرایطش با علی دایی صحبت کرده یا خیر، گفت: صحبت کردن بازیکن در زمین بازی و در تمرین‌هاست. من باید به نحو احسن کارم را انجام دهم تا بتوانم درون دروازه باشم. همیشه با انگیزه کار کرده‌ام و این را یاد گرفته‌ام که باید به کارم احترام بگذارم.</span></span></span></font></p><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><font></font></span></span></span><p></p><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><font></font></span></span></span><p><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">دروازه‌بان پرسپولیس درباره‌ی این‌که احتمال دارد بازی‌های جام حذفی به او داده شود، گفت: تا الان که صحبتی در این‌باره با من نشده اما من به پرسپولیس آمده‌ام که در تمام بازی‌ها حضور داشته باشم، نه جام حذفی. با این حال مهم برای من بازی کردن است. چه لیگ برتر باشد چه جام حذفی.</span></span></span></font></p><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><font></font></span></span></span><p></p><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><font></font></span></span></span><p><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">او درباره‌ی فهرست جدید تیم ملی فوتبال اظهار کرد: این نظر کی‌روش است چه کسی در فهرست تیم ملی باشد و چه کسی نباشد. از زمانی که کی‌روش آمده در همه‌ی اردوها به غیر از یک بار همیشه دعوت شدم که با این دفعه می‌شود دو اردو. هیچ اعتراضی به این فهرست ندارم. وظیفه‌ی من تمرین کردم است. امیدوارم تیم ملی مقابل تایلند و رقبای آینده‌ی خود نتیجه بگیرد. من هم همه‌ی تلاشم را می‌کنم و آن‌قدر انگیزه و امید دارم که مطمئن باشید جایم را در تیم ملی پس می‌گیرم و امیدوارم هرچه زودتر هم در پرسپولیس و هم در تیم ملی بازی کنم.</span></span></span></font></p><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><font></font></span></span></span><p></p><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><font></font></span></span></span><p><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><span class="Apple-style-span" style="color: rgb(204, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;">حقیقی</span></span><span class="Apple-style-span" style="font-weight: bold;"> درباره‌ی سفر چند روزه‌ی خود به کازان خاطرنشان کرد: شنبه هفته گذشته با دایی صحبت کردم و با اجازه‌ی او به روسیه رفتم تا یک سری کارهای اداری را در این کشور انجام دهم. آخر هفته هم به ایران برگشتم اما متاسفانه بعضی رسانه‌ها شیطنت کرده بودند و نوشتند که حقیقی دیگر برنمی‌گردد. اما من یک بازیکن حرفه‌ای هستم و تا ثانیه‌ی آخر در خدمت پرسپولیس و هواداران آن هستم. همین الان هم که روی نیمکت پرسپولیس نشسته‌ام افتخار می‌کنم. درست است ناراحتم اما هیچ وقت نگذاشته‌ام که ناراحتی من تبدیل به مشکل جدیدی برای تیم شود. اما امیدوارم دوستانی که شیطنت کردند دیگر از کاه، کوه نسازند. اصلا مگر می‌شود یک بازیکن در فوتبال حرفه‌ای بدون اجازه‌ی مربی به سفر خارجی برود؟</span></span></span></span></font></p></span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><br></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">یه سری از رسانه ها هم گفته بودن علیرضا قهر کرده واینا!قهر ؟؟نه اخه به قیافش میخوره قهر کنه؟<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><img src="http://www.pic4ever.com/images/229.gif"></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">خودش گفته قهر کدومه؟!واسه کارای اداری وشخصی رفته!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">بعضی ها خود درگیری دارن به خدا!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">به قول حاجی از کاه کوه میسازن!<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><img src="http://www.kolobok.us/smiles/icq/mocking.gif"></span></span></span></div><div><br></div><div><br></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-weight: bold;"><span class="Apple-style-span" style="color: rgb(153, 51, 153);">فعلا...</span></span></span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-weight: bold;"><span class="Apple-style-span" style="color: rgb(153, 51, 153);"><img src="http://www.pic4ever.com/images/fly2.gif"></span></span></span></span></div><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(260)">نظرات (<script>setCommentCnt(260)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../../259.html">بازگشت به کازان شایعه است؛ حقیقی با مرخصی در روسیه</a></font></div>
+<div class=div58><font class=text7>جمعه 19 مهر 1392 :: نویسنده : <a href="../../783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><span class="Apple-style-span" style="color: rgb(255, 255, 255); font-family: Tahoma; "><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><div>دوباره سلام!<img src="http://www.pic4ever.com/images/rainbowf.gif"></div><div>هی دم به دقیقه سلام میکنم!خودتون بیکارین!!!!!!!!!</div><div>هی براتون پست میزارم بعد دوباره نمیزارم یه مدت!خخخ....<img src="http://www.pic4ever.com/images/4chsmu1.gif"></div><div>خب هی این ور اون ور نوشتن علیرضا رفته روسیه به کسی نگفته! رفته بمونه!نه بابا رفته مرخصی واسه خودش!</div><div>البته به من گفته بود ولی خب من نگفتم!!!!!!!!!<img src="http://www.pic4ever.com/images/128fs318181.gif"></div><div>حال کنه!والا به خدا!</div><div><br></div><div><br></div><span class="Apple-style-span" style="font-weight: bold;"> این روزها خبر از حضور حقیقی در روسیه و احتمال بازنگشت او به پرسپولیس مطرح می شود و برخی ها بر این باورند که دعوت نشدن او به تیم ملی به خاطر نیمکت نشینی در پرسپولیس باعث شده که او به فکر بازگشت به روبین کازان بیفتد.</span></span></span></span></font><p><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;"> براساس این گزارش و به نقل از منابع غیر رسمی بازگشت حقیقی به فوتبال روسیه در فصل جاری شایعه ای بیش نیست و ظاهرا این گلر جوان سرخ ها به منظور درست کردن برخی از امور شخصی خود و با اجازه از کادر فنی به روسیه سفر کرده و او به زودی در تمرین تیمش حاضر خواهد شد.</span></span></span></span></font></p><p><span class="Apple-style-span" style="color: rgb(0, 102, 0); font-family: georgia; font-size: 16px;"><br></span></p><p><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 102, 0);"><span class="Apple-style-span" style="font-weight: bold;">اینم عکس علی تو روسیه<span class="Apple-style-span" style="color: rgb(255, 255, 255); font-family: Tahoma; font-size: 11px; font-weight: normal; "><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"></span></span></span></span></span></p><p><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: georgia; font-size: 16px; font-weight: bold;"><br></span></p><p><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: georgia; font-size: 16px; font-weight: bold;"><img src="http://upload7.ir/images/93369953769004604445.jpg" alt="alireza-kazan.jpg"><br></span></p><p><br></p></span>
+
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(259)">نظرات (<script>setCommentCnt(259)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../../258.html">جام حذفی، وعده دایی به حقیقی</a></font></div>
+<div class=div58><font class=text7>پنجشنبه 18 مهر 1392 :: نویسنده : <a href="../../783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4>
+<span class="Apple-style-span" style="color: rgb(84, 39, 10); font-family: Tahoma; font-size: 12px; letter-spacing: 1px; white-space: pre-wrap; -webkit-text-stroke-color: rgba(255, 255, 255, 0.00784314); "><div><span class="Apple-style-span" style="color: rgb(102, 0, 204);"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;">سلام دوستای گلمممم</span></span></span></div><div><span class="Apple-style-span" style="color: rgb(102, 0, 204);"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;">خوبین؟</span></span></span></div><div><span class="Apple-style-span" style="color: rgb(102, 0, 204);"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;">چه خبرا؟</span></span></span></div><div><span class="Apple-style-span" style="color: rgb(102, 0, 204);"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;">چی بگم دیگه؟</span></span></span></div><div><span class="Apple-style-span" style="color: rgb(102, 0, 204);"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;">واقعا حرفی ندارم برای گفتن!شماها بگین!</span></span></span></div><div><br></div><div><img src="http://upload.tehran98.com/upme/uploads/3b5fc0ab25389a8b1.jpg"><br></div></span>
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(258)">نظرات (<script>setCommentCnt(258)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../../257.html">حقیقی به کازان رفت/ آیا او به ایران بازمی گردد؟</a></font></div>
+<div class=div58><font class=text7>چهارشنبه 17 مهر 1392 :: نویسنده : <a href="../../783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">سلام!<img src="http://www.pic4ever.com/images/23t06dg.gif"></span></span><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">خوبین ؟</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">چه خبرا؟</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">خب خودتونم میدونید که <span class="Apple-style-span" style="font-weight: bold;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);">علیرضا</span></span> چند روزیه رفته روبین وسر تمرینا غایبه!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">میگن برای مسائل اینکه نیم فصل برگرده یانه رفته!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">ولی همه میگن نامشخصه نمیدونم والا!<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><img src="http://www.pic4ever.com/images/sigh.gif"></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">نامشخص که نیست بالاخره گفته میخواد واسه چی بره.حالا برمیگرده که! رسانه هاام زیاد گندش میکنن!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-weight: bold;"><br></span></span></span></div><div><span class="Apple-style-span" style="color: rgb(255, 255, 255); font-family: Tahoma; "><p class="rtejustify"><font><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-weight: bold;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);">علیرضا حقیقی</span>، دروازه‌بان تیم فوتبال پرسپولیس به مدت دو روز در تمرینات این تیم غایب است.</span></span></span></span></font></p><p class="rtejustify"><font><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-weight: bold;">از همین رو مشخص شد که <span class="Apple-style-span" style="color: rgb(204, 0, 0);">علیرضا حقیقی</span> سفری به روبین‌کازان روسیه بنا بر دلایل نامشخصی داشته است.</span></span></span></span></font></p><p class="rtejustify"><font><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-weight: bold;">در خصوص سفر او بحث‌های زیادی می شود و مشخص نیست که آیا <span class="Apple-style-span" style="color: rgb(204, 0, 0);">حقیقی</span> اصلا قصد بازگشت به ایران را دارد یا خیر؟ قرار است تا 3 روز آینده تکلیف نهایی <span class="Apple-style-span" style="color: rgb(204, 0, 0);">حقیقی</span> مشخص شود.<span class="Apple-style-span" style="color: rgb(255, 255, 255); font-family: Tahoma; font-size: 11px; font-weight: normal; "><img src="http://www.pic4ever.com/images/16.gif"></span></span></span></span></span></font></p><p class="rtejustify"><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: georgia; font-size: 16px; font-weight: bold;"><img src="http://upload7.ir/images/28998901117155377655.jpg" alt="1374362_403709963084806_1242603911_n.jpg"><br></span></p><p class="rtejustify"><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;">همین دیگه تا سه روز دیگه ببینینم چی میشه!</span></span><span class="Apple-style-span" style="color: rgb(255, 255, 255); "><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><img src="http://www.pic4ever.com/images/fol.gif"></span></span></span></span></p></span></div><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(257)">نظرات (<script>setCommentCnt(257)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../../256.html">برفراز قله های آسیا...</a></font></div>
+<div class=div58><font class=text7>دوشنبه 15 مهر 1392 :: نویسنده : <a href="../../783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4>
+
+<span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">سلامممممممممممممممممممممممممممم</span></span><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">تبریک میگم <span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><img src="http://www.pic4ever.com/images/congratualtions.gif"><span class="Apple-style-span" style="font-family: georgia; font-size: 16px; ">بابا زدن ترکوندن بروبچ والیبالیمون دمشون گرم واقعا.<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><img src="http://www.pic4ever.com/images/cancan.gif"></span></span></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">دوسال پیش هم روی سکوی قهرمانی ایستادن </span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">چه روزی بود!استادیوم چه خبر بود!یادش بخیر!!!!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">واقعا گل کاشتن همشون خسته نباشن همشون از دم!<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><img src="http://www.pic4ever.com/images/cheerleader3.gif"></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">ایول....<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><img src="http://www.pic4ever.com/images/47b20s0.gif"></span></span></span></div><div><br></div><div><img src="http://upload7.ir/images/71679554771180234953.jpg" alt="1376612_592590860805863_1196958718_n.jpg"><br></div><div><br></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-weight: bold;"><span class="Apple-style-span" style="color: rgb(0, 153, 0);">شییییییییییییییییییییییییییییره.................</span></span></span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-weight: bold;"><span class="Apple-style-span" style="color: rgb(0, 153, 0);"><img src="http://www.pic4ever.com/images/greenstars.gif"></span></span></span></span></div><div><span class="Apple-style-span" style="color: rgb(0, 153, 0); font-family: georgia; font-size: 16px; font-weight: bold;"><br></span></div><div><span class="Apple-style-span" style="color: rgb(0, 153, 0); font-family: georgia; font-size: 16px; font-weight: bold;"><br></span></div><div><span class="Apple-style-span" style="color: rgb(0, 153, 0); font-family: georgia; font-size: 16px; font-weight: bold;"><img src="http://upload7.ir/images/83633244743368251725.jpg" alt="1378463_221399331353150_1704455844_n.jpg"><br></span></div><div><span class="Apple-style-span" style="color: rgb(0, 153, 0); font-family: georgia; font-size: 16px; font-weight: bold;"><br></span></div><div><span class="Apple-style-span" style="color: rgb(0, 153, 0); font-weight: bold; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">دمتون گرمممم فدای همتون.....<span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 11px; font-weight: normal; "><img src="http://www.pic4ever.com/images/16.gif"></span></span></span></span></div><div><br></div><div><br></div><div><br></div><div><img src="http://upload7.ir/images/42456670893359981947.jpg" alt="1377134_579913618723222_38086393_n.jpg"><br></div><div><br></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">آخه اقا فرهاد همین الان وقته اس ام اس خوندنه؟عایا؟</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">داداشو!!!!!فدا مداش!</span></span></div>
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(256)">نظرات (<script>setCommentCnt(256)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../../255.html">قربانی نیمکت نشینی درپرسپولیس:علیرضاحقیقی</a></font></div>
+<div class=div58><font class=text7>شنبه 13 مهر 1392 :: نویسنده : <a href="../../783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">سلام!</span></span><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">شرمنده دیر دیر اپ میکنم!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">حسش نیست همچین!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">خب خوبین؟</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">منم بد نیستم!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">بچه ها علیرضا رو دعوت نکردن تیم ملی!!!!!!!!!!!!!!!!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">نمیدونم واقعا چی بگم هیچی نمیگم!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;">راستی توی تمرین پرسپولیس:</span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><br></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">*کریم باقری مربی پرسپولیس با اتومبیل پراید خود به ورزشگاه آمد و در مقابل <span class="Apple-style-span" style="font-weight: bold;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);">علیرضا حقیقی</span> هم با  یک اتومبیل پورشه در درفشی فر آفتابی شد.!!!!!!</span></span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">سایت گل:</span></span></div><div><br></div><div><span class="Apple-style-span" style="color: rgb(255, 255, 255); font-family: Tahoma; "><div dir="rtl" id="yui_3_7_2_1_1380961019394_2170" class="yiv896521645MsoNormal" style="text-align: justify; "><span id="yui_3_7_2_1_1380961019394_2169" lang="FA"><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);">علیرضا حقیقی</span></span> دروازه‌بان پرسپولیس بعد از 12 هفته نیمکت‌نشینی ج<span class="Apple-style-span" style="font-weight: bold;">ای خود را در فهرست</span></span></font></span><span style="font-size: small; "><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;"> دعوت</span></span></font><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;"> </span></span><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;">شدگان به تیم ملی از دست</span> <span class="Apple-style-span" style="font-weight: bold;">داد، </span></span></font></span></div><div dir="rtl" id="yui_3_7_2_1_1380961019394_2170" class="yiv896521645MsoNormal" style="text-align: justify; "><span style="font-size: small; "><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">که البته محتمل هم به نظر می رسید چرا که او</span></font></span><span style="font-size: small; "><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"> در تمام این فصل زیر سایه نیلسون دروازه‌بان برزیلی و سن و سال دار</span></font><span class="Apple-style-span" style="color: rgb(0, 0, 0);"> </span><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">پرسپولیس گیر کرده و البته</span></font></span><span style="font-size: small; "><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"> هرگز فرصتی را پیدا نکرده تا خودی نشان بدهد و مثل ایکر کاسیاس کمی هم بازی کند.</span></font></span></div><div dir="rtl" id="yui_3_7_2_1_1380961019394_2170" class="yiv896521645MsoNormal" style="text-align: justify; "><span lang="FA"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><br></span></span></div><div dir="rtl" id="yui_3_7_2_1_1380961019394_2202" class="yiv896521645MsoNormal" style="text-align: justify; "><font size="2"><span id="yui_3_7_2_1_1380961019394_2201" lang="FA"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">حقیقی که سال پیش در تیم روبین کازان نیمکت‌نشین بود به دلیل اینکه به هر حال در یک تیم اروپایی</span></span><span style="font-size: small; "><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"> تمرین می‌کرد و با استانداردهای اروپا پی</span><span class="Apple-style-span" style="color: rgb(0, 0, 0);">ش می‌رفت همواره به تیم ملی دعوت</span></font><span class="Apple-style-span" style="color: rgb(0, 0, 0);"> </span><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">می‌شد و گهگاه</span></font></span><font size="2"><span style="font-size: small; "><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"> هم فرصت بازی پیدا می‌کرد اما که برای بیشتر دیده شدن یک تصمیم</span></font><span class="Apple-style-span" style="color: rgb(0, 0, 0);"> </span><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">مهم گرفت و از کازان به</span></font></span><span style="font-size: small; "><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"> پرسپولیس آمد با شرایطی مواجه است که هرگز تصورش را</span></font><span class="Apple-style-span" style="color: rgb(0, 0, 0);"> </span><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">نمی‌کرد ظاهرا و به عقیده حقیقی او</span></font></span><span style="font-size: small; "><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"> می‌توانست با رقابت با نیلسون آرام آرام شماره</span></font><span class="Apple-style-span" style="color: rgb(0, 0, 0);"> </span><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">یک پرسپولیس را از این گلر برزیلی بگیرد چرا که</span></font></span></font><span style="font-size: small; "><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"> نیلسون یک خارجی است، سن و</span></font><span class="Apple-style-span" style="color: rgb(0, 0, 0);"> سالی دارد و در نهایت هم از ایرا خواهد رفت اما او جوان است و به</span></span></font><span style="font-size: small; "><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"> هر حال سرمایه دروازه‌بانی ایران محسوب می شود، با این حال پیش بینی‌های حقیقی</span></font><span class="Apple-style-span" style="color: rgb(0, 0, 0);"> </span><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">به حقیقت</span></font></span><span style="font-size: small; "><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"> نپیوسته تا نیمکت پرسپولیس دو حقیقی جوان بلندقامت روی خود داشته باشد.</span></font></span></div><div dir="rtl" id="yui_3_7_2_1_1380961019394_2202" class="yiv896521645MsoNormal" style="text-align: justify; "><span style="font-size: small; "><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><br></span></span></div><div dir="rtl" id="yui_3_7_2_1_1380961019394_2202" class="yiv896521645MsoNormal" style="text-align: justify; "><span lang="FA"><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"> دو چهره‌ای که هر دو کارد بزنی خونش در نمی‌آید. از بین حقیقی‌ها آنی که هافبک پرسپولیس است حتی امروز تهدید به جدایی از پرسپولیس کرده است.</span></font></span></div><div dir="rtl" id="yui_3_7_2_1_1380961019394_2202" class="yiv896521645MsoNormal" style="text-align: justify; "><span lang="FA"><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><br></span></font></span></div><div dir="rtl" id="yui_3_7_2_1_1380961019394_2205" class="yiv896521645MsoNormal" style="text-align: justify; "><span id="yui_3_7_2_1_1380961019394_2214" lang="FA"><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">باید ببینیم حقیقی گلر با این موقعیت جدید چگونه کنار خواهد آمد.</span></font></span></div><div dir="rtl" id="yui_3_7_2_1_1380961019394_2205" class="yiv896521645MsoNormal" style="text-align: justify; "><span lang="FA"><font size="2"><strong><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><br></span></strong></font></span></div><div dir="rtl" id="yui_3_7_2_1_1380961019394_2205" class="yiv896521645MsoNormal" style="text-align: justify; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-size: 13px; font-weight: bold;"><br></span></div><div dir="rtl" id="yui_3_7_2_1_1380961019394_2205" class="yiv896521645MsoNormal" style="text-align: justify; "><span lang="FA"><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><br></span></font></span></div><div dir="rtl" id="yui_3_7_2_1_1380961019394_2205" class="yiv896521645MsoNormal" style="text-align: justify; "><span lang="FA"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><img src="http://s1.picofile.com/file/7961288709/c9dce61a1fb311e3b15a22000ae9081a_7.jpg" width="489" height="572" style="width: 502px; height: 585px; "></span></span></div><div dir="rtl" id="yui_3_7_2_1_1380961019394_2205" class="yiv896521645MsoNormal" style="text-align: justify; "><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><br></span></div><div dir="rtl" id="yui_3_7_2_1_1380961019394_2205" class="yiv896521645MsoNormal" style="text-align: justify; "><span class="Apple-style-span" style="color: rgb(0, 0, 0);">فعلا!...</span></div></span></div><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(255)">نظرات (<script>setCommentCnt(255)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../../254.html">بازهم علیرضاحقیقی دردام حاشیه</a></font></div>
+<div class=div58><font class=text7>دوشنبه 8 مهر 1392 :: نویسنده : <a href="../../783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4>
+<span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">سلام!<img src="http://www.pic4ever.com/images/139fs108574.gif"></span></span><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">نخیر خوب نیستم!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">اصلا حوصله ندارم!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-weight: bold;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);">علیرضا</span></span> رو نیمکت !</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">شماهاهم که سر نمیزنید!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">هنوز اول مدرسه هاس بابا!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">اره دیگه باز حاشیه درست کردن!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><br></span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><img src="http://www.photoaman.com/images/photos/590/2013092813053145.jpg"><br></span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><br></span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><br></span></div><div><span class="Apple-style-span" style="color: rgb(255, 255, 255); font-family: Tahoma; "><div style="text-align: justify; "><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">دروازه‌بان</span><span class="Apple-style-span" style="color: rgb(204, 0, 0);"> پرسپولیس</span><span class="Apple-style-span" style="color: rgb(0, 0, 0);"> از نیمكت‌نشینی‌های تكراری اش دلخور است و می گوید که نیم فصل از این تیم می رود.</span></span></span></font></div><div style="text-align: justify; "><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><br></span></span></span></font></div><div style="text-align: justify; "><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"> ایران ورزشی، قرمزپوشان خوش و خندان در حال گذر از تونل ورزشگاه هستند و در آن تاریكی شب، فقط ناراحتی و رفتار خشن علیرضا حقیقی است كه توی ذوق می‌زند. او را می‌بینیم كه پشت سر بهزاد غلامپور به محوطه بیرونی تونل آزادی رسیده و با صدایی بلند، پدرش را صدا می‌زند و حتی اجازه نمی‌دهد صحبت‌های او با یكی از عكاسان تمام شود: «ول كن دیگه! بیا بریم، حوصله ندارم.»</span></span></span></font></div><div style="text-align: justify; "><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><br></span></span></span></font></div><div style="text-align: justify; "><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">این جملات در حالی كه حقیقی به سمت پژو ۲۰۶ نقره‌ای پدرش در حركت بود، با درخواست چند هوادار قطع شد و واكنش این دروازه‌بان به هوادارانش هم با همان لحن خشن تكرار شد: «زود باشید! كار دارم باید بروم.»</span></span></span></font></div><div style="text-align: justify; "><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><br></span></span></span></font></div><div style="text-align: justify; "><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">و موقع رفتن، با عصبانیت كیف ورزشی‌اش را به سمت صندلی عقب ماشین پرتاب می‌كند و در ماشین را چنان محكم می‌بندد كه تعجب غلامپور و چند پرسپولیسی دیگر متعجب نگاهش می‌كنند.</span></span></span></font></div><div style="text-align: justify; "><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><br></span></span></span></font></div><div style="text-align: justify; "><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">این داستان كوتاه، اتفاق‌هایی را حكایت می‌كند كه بعد از سوت پایان پرسپولیس- فجر از سر گذراندیم. ناراحتی حقیقی هم شاید از این بوده كه با درخشش نیلسون باید روزهای بیشتری را روی نیمكت بنشیند.</span></span></span></font></div><div style="text-align: justify; "><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><br></span></span></span></font></div><div style="text-align: justify; "><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">هر چند كه پدر این دروازه‌بان كل داستان را ساختگی می‌داند و این‌طور به آن واكنش نشان می‌دهد: «آن شب بعد از بازی پرسپولیس ما می‌خواستیم، جایی برویم كه من به علیرضا گفتم پسرم عجله كن و زودتر بیا كه او هم گفت بگذار ساكم را بردارم. اتفاقا من برای خروج از ورزشگاه عجله داشتم نه علیرضا. او عاشق پرسپولیس است. آن‌وقت از برد تیم ناراحت باشد؟ اینها حرف‌های آدم‌های مریض است.»</span></span></span></font></div><div style="text-align: justify; "><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><br></span></span></span></font></div><div style="text-align: justify; "><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;">خود </span><span class="Apple-style-span" style="color: rgb(204, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;">حقیقی</span></span><span class="Apple-style-span" style="font-weight: bold;"> اما سكوت اختیار كرده و دیگر حتی مثل قبل، رقیب برزیلی‌اش را زیر سوال نمی‌برد. تنها چیزی كه درباره‌اش حرف می‌زند، همین نیمكت‌نشینی‌های تكراری است.</span></span></span></span></font></div><div style="text-align: justify; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><br></span></span></span></div><p></p><div style="text-align: justify; "><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><span class="Apple-style-span" style="color: rgb(204, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;">علیرضا حقیقی</span></span> <span class="Apple-style-span" style="font-weight: bold;">در بازگشت به پرسپولیس، قراردادش را با روبین‌كازان فسخ كرد اما حالا كه فیكس بودنش در حد یك رویا باقی مانده، دوباره هوای نیمكت‌نشینی در اروپا به سرش زده و می‌گوید كه تا نیم‌فصل بیشتر میهمان پرسپولیس نخواهد بود: «من با روبین‌كازان قرارداد دارم و باید برگردم. حضورم در پرسپولیس قرضی و مقطعی است. هر ۱۰ روز یكبار با مسئولان تیم روسی در ارتباطم و بعد از پایان قراردادم با پرسپولیس باید در تمرین روبین‌كازان حاضر شوم. دست خودم نیست كه بخواهم بمانم. با روبین‌كازان قرارداد دارم و باید برگردم.»</span></span></span></span></font></div><div style="text-align: justify; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: georgia; font-size: 16px;"><br></span></div><div style="text-align: justify; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: georgia; font-size: 16px;"><br></span></div><div style="text-align: justify; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: georgia; font-size: 16px;"><img src="http://www.photoaman.com/images/photos/590/2013092813053247.jpg"><br></span></div><div style="text-align: justify; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: georgia; font-size: 16px;"><br></span></div><div style="text-align: justify; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: georgia; font-size: 16px;">والا علیرضا که پرسپولیسه میاد اینجوری جرف بزنه!یه سری از مردم هم اسکل به خدا!اه..<span class="Apple-style-span" style="color: rgb(255, 255, 255); font-family: Tahoma; font-size: 11px; "><img src="http://www.pic4ever.com/images/cry2.gif"></span></span></div><div style="text-align: justify; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: georgia; font-size: 16px;">با اینکه علیرضا یه مصاحبه کرده برنی سایت گل بخونید!من حوصله ندارم بزارم!<span class="Apple-style-span" style="color: rgb(255, 255, 255); font-family: Tahoma; font-size: 11px; "><img src="http://www.kolobok.us/smiles/icq/ireful.gif"></span></span></div><div style="text-align: justify; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: georgia; font-size: 16px;">تو مصاحبش گفته:</span></div><div style="text-align: justify; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: georgia; font-size: 16px;"><br></span></div><div style="text-align: justify; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: georgia; font-size: 16px;"><span class="Apple-style-span" style="color: rgb(255, 255, 255); font-family: Tahoma; font-size: 11px; "><div dir="rtl" id="yui_3_7_2_1_1380449017077_5517" class="yiv2210110601MsoNormal" style="text-align: justify; "><strong><span id="yui_3_7_2_1_1380449017077_5518" lang="FA"><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">با توجه به اینکه نیمکت‌نشین هستی شرایط خودت در پرسپولیس چطور است؟</span></font></span></strong></div><div dir="rtl" id="yui_3_7_2_1_1380449017077_5517" class="yiv2210110601MsoNormal" style="text-align: justify; "><strong><span lang="FA"><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><br></span></font></span></strong></div><div dir="rtl" id="yui_3_7_2_1_1380449017077_5519" class="yiv2210110601MsoNormal" style="text-align: justify; "><span id="yui_3_7_2_1_1380449017077_5520" lang="FA"><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">خدا را شکر از لحاظ بدنی و تمرینی شرایط عالی دارم، هیچ وقت کم نمی‌گذارم چرا که یاد گرفته‌ام باید به کارم احترام بگذارم تا کارم هم به من احترام بگذارد. یک چیزهایی دست خود آدم است؛ تمرین کردن و حرفه‌ای زندگی کردن؛ من سعی می‌کنم این دو را به نحو احسن انجام بدهم. من نمی‌توانم بغل نیلسون بایستم و بگویم دوتایی درون دروازه بیاستیم یا نمی‌توانم به دایی بگویم باید به من بازی بدهی. مهمترین چیز نتیجه گرفتن پرسپولیس است. زمان بازی کردن من هم فرا می‌رسد و من باید صبر کنم و خوب تمرین کنم تا در آن لحظه خودم را نشان بدهم چرا که خیلی چیزها برای گفتن دارم.من یاد گرفته ام که بجنگم و حقم را بگیرم و قطعاً توبت من هم می شود.</span></font></span></div><div dir="rtl" id="yui_3_7_2_1_1380449017077_5519" class="yiv2210110601MsoNormal" style="text-align: justify; "><span lang="FA"><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><br></span></font></span></div><div dir="rtl" id="yui_3_7_2_1_1380449017077_5521" class="yiv2210110601MsoNormal" style="text-align: justify; "><strong><span id="yui_3_7_2_1_1380449017077_5522" lang="FA"><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">یعنی این روزهای سخت را به راحتی تحمل می‌کنی؟</span></font></span></strong></div><div dir="rtl" id="yui_3_7_2_1_1380449017077_5521" class="yiv2210110601MsoNormal" style="text-align: justify; "><strong><span lang="FA"><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);"><br></span></font></span></strong></div><div dir="rtl" class="yiv2210110601MsoNormal" style="text-align: justify; "><span lang="FA"><font size="2"><span class="Apple-style-span" style="color: rgb(0, 0, 0);">من از کاسیاس بزرگتر نیستم او هم روزهای سختی را پشت سر می‌گذارد و مثل من بازی نمی‌کند من هم مثل او صبر می‌کنم چرا که قطعا نوبت من هم می‌شود، آقای دایی حواسش به همه چیز هست و قطعا به من فکر می‌کند، من همیشه باید آماده باشم تا  جواب اعتماد او را بدهم.</span></font></span></div></span></span></div><div style="text-align: justify; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><img src="http://www.pic4ever.com/images/sigh.gif"><br></span></span></span></div><div style="text-align: justify; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">تازه با نیلسون هم اتاقی هم هست!این عکسای که گذاشتم برای بازی با فجره!</span></span></span></div><div style="text-align: justify; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">همین دیگه حوصله ندارم!اه....</span></span></span></div><div style="text-align: justify; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">اه....</span></span></span></div><div style="text-align: justify; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">اه..</span></span></span></div><div style="text-align: justify; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">اعصاب 0..........<span class="Apple-style-span" style="color: rgb(255, 255, 255); font-family: Tahoma; font-size: 11px; "><img src="http://www.kolobok.us/smiles/light_skin/dash2.gif"></span></span></span></span></div><div style="text-align: justify; "><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: georgia; font-size: 16px;"><br></span></div></span></div>
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(254)">نظرات (<script>setCommentCnt(254)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../../253.html">آیا کسی حقیقی را به جا می آورد؟</a></font></div>
+<div class=div58><font class=text7>شنبه 6 مهر 1392 :: نویسنده : <a href="../../783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4>
+
+<span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">سلامممممممممممممممممممممممممممممممممممممم<img src="http://www.pic4ever.com/images/square.gif"></span></span><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">خوبین؟؟؟؟؟؟؟؟؟؟؟دلم براتون تنگ شده بود!<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><img src="http://www.pic4ever.com/images/bighug.gif"></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">بالاخره اومدم!تا از مدرسه رسیدم گفتم بیام اینجا!مامانم میگه اینترنت  وصل شد میگم اره میگه گفتم تا اومدی رفتی تو اتاق ساکت </span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">ناهار هم نخوردی!<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><img src="http://www.pic4ever.com/images/4chsmu1.gif"></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">بعله بگما هنوز نهار نخوردم دارم براتون پست میزارم ساعت 3!گشنمه!!!!!!<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><img src="http://www.pic4ever.com/images/flat.gif"></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">از دسته این حجمه نمیدونم چجوری تموم میشه!!!!!!!!!!!!!!!!!!!!کی تمومش میکنه!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">خوبین دیگه حوصله ندارم بگم چه خبر از درس واینا به ما چه اصلا!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">بریم سراغ پرسپولیس دمش گرم تبریک میگم به همتون بردو</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> فعلا که همه ی بازی های خونگی رو بردیم!بقیه رو هم میبریم!بعله اصلا باس اینجوری باشه!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">اره دیگه </span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">حمید جاسمیان یه گفتگو کرده بینش اینو گفته بوده که خداییش هم راست میگه حرف منم همینه!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">کاپیتان سال‌های دور تیم پرسپولیس در ادامه گفت: باید بپرسم چرا </span></span><span class="Apple-style-span" style="color: rgb(204, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">علیرضا حقیقی</span></span></span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> را به پرسپولیس آوردید؟ طفلک همیشه روی نیمکت نشسته است. در حالی که از آن سر دنیا آمده تا بازی کند. دایی باید به او میدان دهد. فکر نمی‌کنم از دروازه‌بان اصلی پرسپولیس چیزی کمتر داشته باشد. حتی شده یک ربع به حقیقی بازی بدهند در غیر اینصورت این بازیکن هرز می‌رود</span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></div><div><br></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">به خدا هیچکس هم حالیش نیست!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><br></span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><img src="http://upload7.ir/images/33496029449531914970.jpg" alt="dd8bedb7_2d83_407b_a3b8_2cea67495772.jpg"><br></span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><br></span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><br></span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><br></span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><br></span></div>
+
+
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(253)">نظرات (<script>setCommentCnt(253)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../../251.html">باختیم دیگه!</a></font></div>
+<div class=div58><font class=text7>جمعه 29 شهریور 1392 :: نویسنده : <a href="../../783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4>
+
+<span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">سلام!</span></span><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">خوبین؟</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">حال و حوصله نداشتم آپ کنم!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">بازیه امروزم که.......</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">2-0!!!!!اونم وقتی 10 نفره بودیم!!!!!!!!!!داور محسن قهرمانی؟؟؟؟چی بگم اخه؟ای بابا!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: large;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-weight: bold;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);">علیرضا </span></span>هم که همچنان</span></span> ...</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">اینجاام که مثل روبین شده!رون نیمکت!بره روسیه که بهتره!هم تیم خوبیه هم بهتره کلا!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">کلا من اعصاب ندارم  امروز!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">یه سری عکس <span class="Apple-style-span" style="color: rgb(204, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;">علیرضا </span></span>تو تمرینات بود که نذاشتم میزارم حالا!بزارم؟یا دیدین؟</span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">چه پست مختصری بود!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">همین دیگه!کم نوشتم خسته نشین!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><br></span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><img src="http://uploadtak.com/images/w598_578509_5966162270635.jpg"><br></span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><br></span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;">فعلا!...</span></div>
+
+
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(251)">نظرات (<script>setCommentCnt(251)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../../../250.html">میلاد امام رضا (ع) مبارک :-*</a></font></div>
+<div class=div58><font class=text7>سه شنبه 26 شهریور 1392 :: نویسنده : <a href="../../783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">سلام سلام!</span></span><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">اول از هر چی عیدتون مبارک!<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><img src="http://www.pic4ever.com/images/dancegirl2.gif"></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">خوبین خوشین؟</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">منم اره باز سرما خوردم چه جووووووووور!صدامم در نمیاد!درگیرم منم با این سرما خوردگی!<span class="Apple-style-span" style="font-family: tahoma; font-size: 11px; "><img src="http://www.pic4ever.com/images/mornincoffee.gif"></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">خلاصه که بگذریم بازم عیدتون مبارک!</span></span></div><div><br></div><div><span class="Apple-style-span" style="line-height: 30px; "><span class="Apple-style-span" style="font-weight: bold;"><span class="Apple-style-span" style="font-size: large;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="color: rgb(0, 153, 0);">میلاد هشتمین امام، هفتمین قبله و دهمین کشتی نجات<br> امام رضا (ع) بر شما مبارکباد.</span></span></span></span></span><img src="http://www.pic4ever.com/images/greenstars.gif"><br></div><div><span class="Apple-style-span" style="color: rgb(0, 153, 0); font-family: georgia; font-size: 18px; font-weight: bold; line-height: 30px;"><br></span></div><div><span class="Apple-style-span" style="color: rgb(0, 153, 0); font-family: georgia; font-size: 18px; font-weight: bold; line-height: 30px;"><img src="http://ups.night-skin.com/up-92-05/1348414229-Emam-Reza-YazdFun-com-10.jpg"><br></span></div><div><span class="Apple-style-span" style="color: rgb(0, 153, 0); font-family: georgia; font-size: 18px; font-weight: bold; line-height: 30px;"><br></span></div><div><span class="Apple-style-span" style="color: rgb(0, 153, 0); font-family: georgia; font-size: 18px; font-weight: bold; line-height: 30px;"><span class="Apple-style-span" style="color: rgb(51, 51, 51); "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">هر چند حال و روز زمین و زمان بد است<br>یک تکه از بهشت در آغوش مشهد است<br>حتی اگر به آخر خط هم رسیده ای<br>آنجا برای عشق شروعی مجدد است . . </span></span></span><br></span></div><div><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: georgia; font-size: 16px; font-weight: bold; line-height: 30px;"><br></span></div><div><span class="Apple-style-span" style="line-height: 30px; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;">بازم عیدتون مبارک!</span></span></span></span></span></div><div><span class="Apple-style-span" style="line-height: 30px; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);"><span class="Apple-style-span" style="font-weight: bold;">فداتون!<span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: tahoma; font-size: 11px; font-weight: normal; line-height: normal; "><img src="http://www.pic4ever.com/images/inlove2.gif"></span></span></span></span></span></span></div><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(250)">نظرات (<script>setCommentCnt(250)</script>)</a></font></div>
+</div>
+</div>
+<div class=div29></div>
+<div class=div28><font class=text4>
+<br><br>
+( کل صفحات : 19 )   
+<a href="1.html" class=text4><span>1</span></a>   <a href="2.html" class=text4><span>2</span></a>   <a href="3.html" class=text4><span>3</span></a>   <a href="4.html" class=text4><b>4</b></a>   <a href="5.html" class=text4><span>5</span></a>   <a href="6.html" class=text4><span>6</span></a>   <a href="7.html" class=text4><span>7</span></a>   <a href="8.html" class=text4><i>...</i></a>   </font>
+</div>
+
+</td>
+<td class=div0> </td>
+<td class=div3> </td>
+</tr>
+<tr>
+<td class=div2 valign=top>
+
+ </td>
+
+<td class=div01 valign=top>
+<div class=div6></div>
+<div class=div7>
+<a href="http://www.payamblog.com" target="_blank">
+<img src="http://payamblog.com/tem/16/blank.gif" border=0 width=189 height=35></a></div></td>
+<td class=div0> </td>
+<td class=div3> </td>
+</tr>
+</table>
+</div><div id="seo"><h1><a title="قالب بلاگفا" href="http://blogfa.payamblog.com/">قالب بلاگفا</a></h1><h2><a title="قالب وبلاگ"  href="http://www.payamblog.com">قالب وبلاگ</a></h2><h2><a title="vpn" href="http://www.purchasevpn.com">purchase vpn</a></h2><h2><a title="بازی اندروید"  href="http://www.download0098.com/category/mobile/android-games/">بازی اندروید</a></h2></div><script type=text/javascript>document.getElementById('s'+'e'+'o').style.display='none';</script>
+
+</body>
+
+</html>
+
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'we--plus.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.targetedwebtraffic.com" target="_blank">Buy Website Traffic</a> | <a href="https://www.seo25.com" target="_blank">Buy Targeted Website Traffic</a>
+    </div>
+</center>

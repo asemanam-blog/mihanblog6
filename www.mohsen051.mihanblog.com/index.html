@@ -1,0 +1,1106 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../mohsen051.mihanblog.com/xmlrpc@rsd.html" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه بیست و سوم آذر 1399');
+		/*1708545*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[383]='0';commentCnt[384]='0';commentCnt[385]='1';commentCnt[387]='0';commentCnt[388]='0';commentCnt[389]='0';commentCnt[390]='1';commentCnt[391]='1';commentCnt[393]='0';commentCnt[394]='0';commentCnt[397]='1';commentCnt[399]='2';commentCnt[402]='0';commentCnt[403]='0';commentCnt[404]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[383]='0';
+mihanblogDisLikeArrCnt[383]='0';
+mihanblogLikeArrCnt[385]='0';
+mihanblogDisLikeArrCnt[385]='0';
+mihanblogLikeArrCnt[389]='0';
+mihanblogDisLikeArrCnt[389]='0';
+mihanblogLikeArrCnt[390]='0';
+mihanblogDisLikeArrCnt[390]='0';
+mihanblogLikeArrCnt[391]='0';
+mihanblogDisLikeArrCnt[391]='0';
+mihanblogLikeArrCnt[397]='0';
+mihanblogDisLikeArrCnt[397]='0';
+mihanblogLikeArrCnt[399]='0';
+mihanblogDisLikeArrCnt[399]='0';
+mihanblogLikeArrCnt[404]='0';
+mihanblogDisLikeArrCnt[404]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://mohsen051.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://mohsen051.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','177');
+	setStatVar('total_author','2');
+	setStatVar('modify_date','یکشنبه شانزدهم آذر 1399');
+	
+	setStatVar('today_view','43');
+	setStatVar('yesterday_view','161');
+	
+	setStatVar('this_month_view','1229');
+	setStatVar('last_month_view','1354');
+
+	setStatVar('total_view','91362');
+	setStatVar('last_view_date','یکشنبه بیست و سوم آذر 1399 (07:21)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://mohsen051.mihanblog.com/statupdate/?data[refereruri]=http://asemanman94.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607831607&data[hash]=826047c4d849f414f6a2a5894287138d&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="../mohsen051.mihanblog.com/'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="../mohsen051.mihanblog.com/'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://mohsen051.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://mohsen051.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://mohsen051.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://mohsen051.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://mohsen051.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://mohsen051.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://mohsen051.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://mohsen051.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://mohsen051.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://mohsen051.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://mohsen051.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://mohsen051.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://mohsen051.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://mohsen051.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://mohsen051.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<!-.-.-Design By : pichak.net-.-.->
+<head>
+<script language="JavaScript1.2">
+<!--
+
+top.window.moveTo(0,0);
+if (document.all) {
+top.window.resizeTo(screen.availWidth,screen.availHeight);
+}
+else if (document.layers||document.getElementById) {
+if (top.window.outerHeight<screen.availHeight||top.window.outerWidth<screen.availWidth){
+top.window.outerHeight = screen.availHeight;
+top.window.outerWidth = screen.availWidth;
+}
+}
+
+//-->
+</script>
+<!-"-"-Design By : www.pichak.net-"-"->
+<title>خُـزعــــــبل</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="keywords" content="خُـزعــــــبل,mohsen051">
+      <META NAME="description" CONTENT="خُـزعــــــبل - ">
+      <meta name="copyright" content="www.pichak.net">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="designer" content="http://pichak.net" />
+      <link rel="alternate" type="application/rss+xml" title="خُـزعــــــبل" href="../mohsen051.mihanblog.com/post/rss/index.html" />
+<!-"-"-Design By : www.pichak.net-"-"->
+<style>
+<!--
+body{font-family:Tahoma;font-size:8pt;padding:0px;margin:0px;color:#d1dcf3;background:#fff}
+a, a:visited{color:#494949;text-decoration: none}a:hover{color:#000000;text-decoration: none}
+body {
+	BACKGROUND: #988d75 url('') center left fixed no-repeat ; 
+}
+.link1{width:170px;}
+.link2{background:#988d75 url() right no-repeat;padding:0px;font-weight:bold;text-align:center;color:#3f3e48;}
+#page{background:url() center repeat-y;width:750px}img{border:none}
+#uwrapper {margin:0;padding:0;text-align:center;background-image:url(); background-repeat:repeat-x; background-position-y:top;}
+#header{height:0px;background:url() no-repeat right; }
+#header div{color:#2C2215;font-family:verdana;font-size:21pt;font-weight:bold;text-align:center;padding-top:50px}
+#header div p{margin-top:5px;margin-bottom:0px;color:#2C2215;font-family:Tahoma;font-size: 9pt;font-weight:normal;text-align:center;direction:rtl}
+#headerb{height:0px}
+#content{padding:0px 7px}
+#main{background:#b0a58e url(http://pichak.net/themes/02/12/image/pichak.jpg) no-repeat top center;float:left;width:550px;text-align:right;overflow:hidden}
+#post{padding:0 0px;text-align:right}
+#posttitle{height:50px;background: url() right no-repeat;text-align:right;font-size:9pt;font-weight:42;direction:rtl;padding-top:14px;padding-right:40px}
+#posttitle a, #posttitle a:visited {color:#494949}#posttitle a:hover {color:#494949}
+#postbody{text-align: justify;padding:0px 25px 5px 3;font-size:8pt;color:#313131;line-height:1.5em;direction:rtl;}
+#postbody p{margin-top:10px;margin-bottom:0px}
+#postdesc{padding-top:15px;padding-right:32px;padding-left:7px;color:#676767;direction:rtl}
+#space{height:20px}
+#sidebar{float:right;background:#a69b84 url() no-repeat top center ;width:180px;padding-top:0px;color:#494949;line-height:1.5em;text-align:right}
+#sidebar a, #sidebar a:visited {color:#4c4c4c}#sidebar a:hover {color:#000000}
+#mmenu{width:175px;ine-height: 1.5em;text-align:center;direction:rtl;}
+#sidebar ul{font-size:8pt;list-style-type: none;margin: 0px;padding:0 5px 20px 5px}
+#sidebar li {font-size:8pt;padding-right:5px;padding-bottom:0px;line-height:1.5em;direction:rtl}
+#photo{width:160px;padding-top:5px;padding-bottom:2px;text-align:center}
+#about{width:160px;text-align: justify;font-size:8pt;padding:10px 7px 20px 7px;color:#4c4c4c;direction:rtl}
+#feed{margin:0px;padding-bottom:10px;text-align:center}
+#custom{width:160px;color:#5e7161;overflow:auto;margin:10px 0;text-align:center;direction:rtl}
+-->
+</style>
+<script lang ="javascript">
+function GetBC(lngPostid)
+{
+intTimeZone=<-BlogTimeZone->;
+strBlogId="mohsen051";
+intCount=-1;
+strResult="";
+try {
+for (i=0;i<BlogComments.length;i+=2)
+{
+if (BlogComments[i]==lngPostid)
+intCount=BlogComments[i+1] ;
+}
+}  catch( e) {
+}
+if ( intCount==-1)  strResult="آرشیو نظرات";
+if ( intCount==0)  strResult="نظر بدهید";
+if ( intCount==1)  strResult="یک نظر";
+if ( intCount>1)  strResult=intCount + " نظر" ;
+strUrl="http://commenting.blogfa.com/?blogid=" +strBlogId + "&postid=" + lngPostid + "&timezone=" + intTimeZone ;
+strResult ="<a href="../mohsen051.mihanblog.com/%255C%2522javascript%253Avoid(0)%255C%2522.html" onclick=\"javascript:window.open('" + strUrl + "','blogfa_comments','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px')\" >" +  strResult + " </a>" ;
+document.write ( strResult ) ;
+}
+function OpenLD()
+{
+window.open('LinkDump.aspx','blogfa_ld','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px');
+return true;
+}
+</script>
+<script language="javascript" type="text/javascript"          
+  src="http://pichak.net/p/js/themes/up.js"></script>
+</head>
+<body>
+<!-.-.-Design By : pichak.net-.-.->
+<div id=uwrapper>
+<div align=center>
+<div id=page>
+
+<div id=content>
+<div id=main>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center><br>
+<font color="#010101" face="Arial" style="font-size: 15pt">
+<b>  خُـزعــــــبل</b><p>
+<font color="#010101" face="Tahoma" style="font-size: 8pt">
+  <p>
+</center>
+<p>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="../mohsen051.mihanblog.com/post/404.html"><b>یشب بارانی</b></a></div>
+<div id=postbody><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div>صدای مرا از اتاقی میشنوید که باران با شتاب هرچه بیشتر بر شیشه پنجره اش مشت میکوبد و انگار میخواهد به داخل راه یابد و ببیند در این اتاقِ همیشه تاریک، چه کسی نشسته است و چه نسبتی نهفته است بین همنشینِ اتاق پایینی و اتاق بالایی که درپشت بام است. باران حتما میداند که صاحب هردو اتاق یک شخص است، آنهم من.</div><div>.</div><div>امشب داشتم برنامه کتابباز سروش صحت نازنین را میدیدم. آی که چقدر صحت نازنین است. حدمتی که او در حق بشرِ مقیمِ ایران کرد را هیچ افلوکِ سیاسی و هیچ مردان و زنان هیچ قلمرویی نکرده، مگر از جنس کتاب و قصه و شنیدن و حرف های خوب باشد، که آنهم از غیر فرهنگیانِ فرهنگ دوست بعید است. با این تعاریف اینکار فقط از دست سروش صحت بر می آید. سروش؟ اگر صدایم را میشنوی که یک در هزار است، بدان که من بخش عمده ی شخصیت در حال بازیابی ام را مدیون تو هستم مرد، چه در حالات نااحوالم چه در حالات سرخوشم، و چه مثل امشب که خنثی بودم اما برنامه ات را که با حضور احسانو(احسان عبدی پور) و مجتبی شکور را که دیدم مملو از تبلور و اشتیاق و سرخوشی شدم. اصلا همین برنامه باعث شد که دلم برای نوشتن تنگ شود و بلافاصله بعد از اتمام برنامه بروم و چای بریزم و دوان دوان به اتاق به تصویر کشیده شده در چند خط بالا رجوع کنم و لپ تاپم را باز کنم و القصه ..</div><div>بگذار لبی تر کنم.</div><div>.</div><div>امشب بحث حول محور قصه بود. قصه. اصلا قصه چیست؟ قصه را میتوانم اینگونه برای خودم تعریف کنم که قصه همان چیزی است که تو را تشکیل داده و تو میتوانی جرفی برای گفتن داشته باشی درباره اش و همچنین قصه چیزی است که درون مایه و اساس و تار و پود تورا شکل داده. خواسته ناخواسته قصه تورا در بند میکشد و مشت و مالت میدهد و تورا&nbsp; دست آموز خودش میکند و در پایان تورا تربیت میکند. قصه تورا شکل میدهد. قصه، تورا جان میدهد.</div><div>قطعا دیده اید که افرادی خوش روایتن، خوش قصه گویند و آب و تاب دارد حرف هایشان و در این پیچ و خم قصه هایشان این ما هستیم که بعنوان شنونده گم میشویم و یا به تعبیر قشنگتر اسیر میشویم. پدربزرگ من ازین دست انسان هاست. صحبت درباره ایت بود که قصه جهان موازی است که میتواند دو انسان از دو تفکر متفاوت و دونگرش متضاد را هم حتی به پیش هم آورد و نزدیک بهم کند. قصه. <br></div><div>چیزی مه مشخص است این است که معمولا همه برای گفتن قصه دارند، حرفی برای گفتن دارند و روایتی را هرچند از خفط، ولی دارند که درباره موضوعی روایت گونه حرف بزنند و از ابتدا به انتها برسانندش. اما مهم برای من و از نظر من محتوای قصه است، موضوع قصه. <br></div><div>بقیش نیمه تمام بماند ووو<br></div><br></div>
+<div id=postdesc>  یکشنبه شانزدهم آذر 1399 _
+	20:10 _توسط <a href="../mohsen051.mihanblog.com/post/author/1416660.html">he  </a><a target="_self" href="javascript:newComment(404)">نظرات  <script>setCommentCnt(404)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="../mohsen051.mihanblog.com/post/403.html"><b>98 چه میکردم واقعا ؟</b></a></div>
+<div id=postbody><div>داشتم آرشیو&nbsp; مطالب وبم را میدیدم.</div><div>چقدر در سال 95 و 96 حالم خوب بود. نوشته هایم بوی بازی گوشی و انرزی مثبت میداد. من به این بود آشنایم. خدایااااااااااااااااااا</div><div>از 97 به بعد یکم عجیب شدم</div><div>98 را کلا نبودم. چه غلطی میکرم. راستش 98 خیلی بد بود برایم. تمام جلگه ها و مرداب های را شنا کردم <br></div><div>99 است الان. حال 95 و 96 را میخواهم، اما انگار متاثرم و تحت تاثیر قرار گرفته 98م. آه چه خیت98<br></div><br></div>
+<div id=postdesc>  جمعه هفتم آذر 1399 _
+	14:31 _توسط <a href="../mohsen051.mihanblog.com/post/author/1416660.html">he  </a><a target="_self" href="javascript:newComment(403)">نظرات  <script>setCommentCnt(403)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="../mohsen051.mihanblog.com/post/402.html"><b>هیشکی خونه نیست، اما من و من</b></a></div>
+<div id=postbody>اصلا نمیدانم باید از کجا شروع کنم و بکجا برسانمش و در اوج یا خفت و تاریکی تمامش کنم یا باری دیگر خودم را استوار و اتوکشیده و قوی نشان بدهم و قوز پشتی ام را از همه، بدون استثنا همه، بپوشانم. اینروزها آشناها غریبه شده اند و غریبه ها غریبه تر. میتواناز بین غریبه ها گوش شنوایدا کرد اما دوست و آشنا هرگز. میتوان در دایرکت یک دختر توییتری شب را تا صبح دوطرفه از غصه هامان و اضطراب هامان حرف بزنیم و نکیر و منکر را باهم بصورت تر و خشک به باد فحش بگیریم و دردهایمان را از پشت دکمه های کیبور فریاد کنیم، اما و اما و اما ، دیگر نمیشود آشنا را در خلوت در یک نشست دونفره گیر انداخت. ینی میشود اما مصلحت زندگی اینرا نمیگوید. نمیدانم. شاید اشتباه میکنم. شاید من اساسا اینروزا اشتباه تامل میکتم، مثلا موقع چای هوردت های مکررم، موقغ چشم باز کردنم و مواجهه شدن با زندگی در هرروز صبخ پاییزی، شاید دم غروبش که در اتاق بالا در قرنطیته گیر کرده ام، نمیدانم، شاید در تمامی این لحظات اشتباه اندیشیدم و تاملاتم از اساس پوچ بوده. از شما چه پنهان، اینروزها به مرگ خیلی فکر میکنم. از مرک میترسم. بمراتب از مرگ نزدیکانم، همانان که حاضر نیستم باهاشون گفتگو کنم و مرهم راز ها نمی پندارمشان، از مرگ اینها بمراتب بیشتر میترسم. آه پسر. آهنگ تو بارون که رفتی قمیشی پخش شد و ازینحا به بعد نوشته هایم قطعا مضاف شور و شعف خواهد بود؛ دقیقا بمانند فردی که تحت تاثیر مرفین است و درد های اطرافش را نمیبیند یا نمیخواهد که ببیند. یادم رفت از چه میخواستم حرف بزنم. مهم بود و اساسی. خیلی در مخیله خودم اینروزها حرف میزنم. اساسا باز با خودم درگیرم. در بدتم دو موجود درگیرند باهم. عین مدرنیته و سنت میمانند. عین سرما و گرما. نمیدانم مکمل همدیگرند یا رقیب یکدیگر. شاید هم هم تیمند و تیم شده اند که مرا بزنند زمین. به اینها هم خوش بین نیستم. از پوست و وچود خودم هستند اما بهشان خوشبین نیستم. من مادر آنها نیستم پس. اگر مادرشان بودم، اگر از پوست و استخواتم بودند حتما میفهیدمشان و درکشان میکردم و پسشان نمیزدم. اینروزها به مرگ فکر میکنم. مثلا همین دیشب که در خواب عصرانه غرق بودم و خواب های اجق وجق میدیدم و مثل همیشه بیاد ندارم هیچکدامشان را، از خواب که پریدم یکهو زندگی بنظرم آمد که چه بی انتها تلخ و پوچ و تهی و محدود به لذایذ کوچک و زودگذر است. خیلی عجیب بود برام. فکر نمیککردم اینقدر به این حس و حال نزدیک بشوم. اما شدم. خسته ام ازینکه مینویسم. دیگر دوست دارم کمتر حس و حالم را در معرض دید همگان بگذارم. کمتر حرف بزنم و حتی کمتر حانه باشم. مرفین را که دو هفته ای بود از سر گرفته بودم و هر سه روزی یکبار میخوردم را کنار گذاشتم تا بیشتر به اصل خویشتن نزدیک شوم. نمیدانم. بعضی وقت ها این حس و حال عجیبم را میاندازم گردن مرفین. اما مرفین باور کنید رفیق و یاور روزهای من است. در بدترین شرابط، موقع عایی که زندگی به چشمم مزحک ترین است یاور بوده، زمانی که از فرط جنون خیابان ها در به در دنبال دکتر اعصاب و روان میگشتم تا نسخه برایم بپیجد اما همشان وقتشان پر بود و دوباره و سه باره تنها میماندم، مرفین بود که حالم را جا میاورد... اما مرفین بد است. مثل یک داف خوشکل خوش اندام است که موقع نبودنش امیال حنسی ات را نمیتوانی آرام کنی. در نبودنش در و دیوار برای مترسک اند و روی اعصاب. عین همون داف که باید پنج شنبه شبها باشد و تا صبح برای تانگو برقصد و تو برایش دهل بنوازی و دغدغه فردا صبح سرکار را هم نداشته باشی و تا خود صبح عیش و نوش کنی و جامه دران جام هارا پی در پی تلق تولوق کنی و چشم هایتان که خوب خمار شد بنشینی کمی حرف بزنی و دغدغه هایت را بریزی روی میز و تقسیم بر دو کنید و زمانی که کوله بارتان سبک تر شد و آماده ادامه راه شدید ، شب را صبح کنید و باقی ماجرا. دیدید. مرفین چه زیباست. باور کنی تملقی نکردم. مرفین به همین مقدار زیبا و طنین انداز است. اما نبودنش، حنی در یک شب که باید باشد و نیست، اینقدر بتو صدمه وارد میکند که همان یکشب کافی ست برای باقی ایام. بماند. خسته شدم ازین تصویر سازی. استرس هایم را چه کنم؟ در کدام بیابان در زیر کدام سنگ بگذارم و به شهر برگردم. آه چه شاعرانه اما مضحک. به هرحال ، جمعه تون بحیر. خودافظ<br><br></div>
+<div id=postdesc>  جمعه هفتم آذر 1399 _
+	13:20 _توسط <a href="../mohsen051.mihanblog.com/post/author/1416660.html">he  </a><a target="_self" href="javascript:newComment(402)">نظرات  <script>setCommentCnt(402)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="../mohsen051.mihanblog.com/post/399.html"><b>حماقت کردم</b></a></div>
+<div id=postbody>
+
+
+<div>بنام خدا</div><div>سعی کردم چند روز پیش بیایم و مطلبی را طبق معمول 
+هردفعه که ذهنم را به خود برای چند دقیقه مدخوش کرده را اینجا رها کنم و 
+بازگردم به دنیای حقیقی، اما نشد. آنقدر دست دست کردم و ماتحت گشادم را سفت
+ نچسبیدم که نیامدم و اینجارا متروکه رها گذاریدم. بگذریم</div><div>چند 
+روز پیش عصر بخواب رفتم. چند روزی بود که ماقبلش عصر ها خواب را ترک گفته 
+بودم و نمیخوابیدم و فیلم میدیدم. مثلا چند روزی بود میشستم و سری گادفادر و
+ سینمای کمدی سیاه چاپلین و تایتانیک، آن حماسه عاشقانه بزرگ را میدیدم. 
+آه، حرف از تایتانیک شد. آن حماسه بزرگ عاشقانه میتواند ناچیز صفتی درخور 
+آن جلال و جبروت بی همتای داستان تایتانیک باشد. بازهم بگذریم</div><div>عصر
+ از خواب جستم و ابتدا کمی سرم درد میکرد. آدرس دقیق: پشت سر، کنار کوچه 
+منتهی به مغز، درب سبز رنگ پلاک خاطره/ بعد از چندی که از خواب جستنم گذشت 
+سر دردم را فراموش کردم و به دست باد و هوای بی رحم و عجیب غریب پاییزی 
+سپردم و هجوم خاطرات که الحق بیرحم ترینن و در پاییز واقعا بمانند ارتش 
+هیتلر و هجوم گرفته را همچون لهستان بی دفاع میدرد ، مرا درید. خاطرات یکی 
+پس از دیگری مرا در کنار رینگ با گارد باز چپ و راست میکردند. دقیقا عین آن
+ یکی از فیلم های نولان که در آن دیکاپریو خاطرات رو یکی پس از دیگری به 
+سرعت از مغز خود عبور میداد و خاطرات رنگ میباختند در ذهنش و او با هرکدام 
+مجبور به همجواری و همسو شدن داشت. به هرحال.</div><div>خاطرات یکی پس از 
+دیگری آمدند و رفتند اما یکی شان آمد و قصد رفتن را تا انتهای بامداد نکرد.
+ باز میگشت به دوران دانشگاه. حتی الان که مینویسم اگر کمی خودذم را رها 
+کنم و افسار احساساتم را بدست نگیرم میتازد و دوباره زیر یرتمه اسبان وحشی 
+خاطره دریده میشوم و بیا حالا جمعم کن. ولش. خاطره از آن قرار بود که یادم 
+آمد از پاییز دانشگاه. بهتر است بگویم از تابستان به اینور دانشگاه. چه 
+دوران مطلوبی بود. یادم نمیرود آنروزوی که برای اولین بار دل را به دریا 
+زدم و در یک روز بارانی که عین سگ باران میزد و همه زیر سایه بان ورودی 
+دانشگاه کز کرده بودند و دوربین بدست از منظره بوجود آمده فیلم میگرفتند من
+ اورا دم ورودی دانشگاه یکه و تنها دیدم، با همان ژست ماخوذ به حیا همیشکی 
+خود. دستان به جلو و به تعبیری دست به سینه و جزوه هایش را سفت گرفته بود و
+ به تابو اعلانات دم حراست نگهبانی دانشگاه زل زده بود. آه محسن قبلم/ رفتم
+ و پیش قدم شدم. سلام و تبسم تحویلش دادم و او هم با ماخوذیتی هرچه تمام تر
+ جوابم را داد و تبسمی گرررررم بمن تحویل داد. سر صحبت را باز کردم و گفتم 
+فلان درس را با من دارید جزوه اش را دارید؟ گفت نه. گفتم خیالتان راحت با 
+من. باقی دروس را پرسیدم و بابت آنها هم قول دادم نگران نباشد و روی من 
+حساب کند. همینطور هم شد و اولین قرارمان را در فلسطین یک با پراید هاچ بک 
+مشکی ام که آن زمان داشتم و روز قبل بردمش کارواش و تمیزش کردم و برق 
+انداختمش دران کوچه گذاشتیم. آمد. از اتوبوس که پیاده شد با چشمانم از 
+آنطرف خیابان به اینطرف دنبالش کردم. زنگ زد و شماره اش که سیو کرده بوده 
+به اسم و فامیل و پسوند uni روی گوشیم افتاد و همانطور بازهم چشمانم را از 
+دوختن به او برنداشتم. بلخره جواب دادم و گفتم بیاید داخل کوچه. رفتم به 
+پیشوازش. کت مشکی با شلوار مشکی و پیراهن مشکی به تن داشتم. آه شاید 
+تقدیرمان بخاطره همین قضیه سیاه درآمد. خرافاتی شده ام/ به هرحال. رفتیم تا
+ فتوکپی و در مسیر حرف زدیم و تبسم و اینها. رفتم کپی گرفتم و امدم و او 
+تشکر کرد و گفت نیازی به اینکار ها نیست خودم انجام میدادم. گفتم نه. و در 
+ادامه دعوتش کردم به خوردن یک نوشیدنی در کافی شاپ. رفتیم. نشستیم. اجازه 
+گرفتم سیگار بکشم و گفت اشکالی ندارد بابا، و از لحنش فهمیدم خودش هم اهل 
+دل است. گارسون آمد و قبل از آنکه من سفارش بدهم به مانند جنتلمن ها 
+پیشخوان را دادم به او که اول او انتخاب کند. کنجکاو بودم ببینم چی سفارش 
+میدهد چون از روی همین ماجرا هم میتوان به شخصیت یک فرد پی برد. دیدم چای 
+سفارش داد. معمولا اشخاص ساده و بی ریا اینکار را میکنند. او واقعا ساده و 
+بی ریا بود دوستان! من هم خندیدم و گفتم گارسون دوتایش کن و یکی را کمی 
+پررنگ تر. من همیشه به تفاوت بها میدادم و اینجا هم خودم را از او که سلطان
+ قلبم بود از ترم اول دانشگاه تا همینجا که بلخره در ترم سوم توانستم به او
+ برسم، سعی کردم از او هم خودم را متمایز کنم و این اولین اشتباه من مغرور 
+بی کفایت سک مصب خاک در کفن بود. بگذریم. بد دهن میشوم کسی نیست جمعم کند .
+ لاک زده بود، لاک قرمز. چای را آوردند و همش داشت با قاشق دخل چایش بازی 
+میکرد و سرش پایین بود و چشمانش دوخته شده بود به رنگ خوش چاییش که از رنگ 
+چای من خوشرنگ تر بود. من به او دوخته بودم و او به چایش نگاه میکرد. من به
+ خطوط موازن صورت، لبانش و چشم های خمارش ، او به چای. من به دستان لطیفش 
+که رگه های آبی را با کمی دقت میتوان پیدا کرد و او به چایش. من به سایز 
+بجای ناخن های دستش و فرم نازنین انگشتانش و او به آن چای لعنتی. و سیگار 
+دم میگرفتم . زیر لب حرف میزد. آهسته ، خیلی آهسته. طوری که یکی دوبار صرفا
+ جهت آنکه ببینم لبخندش چقدر زیباست دستانم را چسباندم به گوشم و آمدم جلو و
+ گفتم میشود کمی بلندتر؟ صدا به صدا نمیرسد. و او خندید پسر، خنده ای که 
+دیگر هیچگاه از یادم نمیرفت. ولله ززیبا میخندید. خدایا به جلا و منزلتت 
+قسم دیگر هیچ لبخندی به اندازه او دلم را نبرد. بگذریم، افسار نمیخواهم 
+پاره کنم. در بازگشت رساندمش به حوالی خانشان ، خانه شان از محله های قدیمی
+ و با اصالت شهرمان بود. نه خیلی بالا&nbsp; و نه پایین. اینها مهم نبود، برای 
+من مهم است ولی میدانستم که او درست تربیت شده و جای نگرانی ندارد. کتاب 
+میخواند. یک کتابم را تحت عنوان رمان یازده دقیقه پاعلو کولیو را بعنوان 
+کادو در یک شب که ماشین را پارک کرده بودم اطراف پارک مینای سجاد داخل 
+ماشین به او تقدیم کردم. او به واقع کتاب خوان بود. آنزمان که من جوجو بودم
+ در عرصه کتابخوانی. کتاب یازده دقیقه پایلو را خیلی دوست داشتم و در پایان
+ کتاب متنی درباره اینکه کتاب را خیلی دوست دارم و این کتاب را همیشه منتظر
+ بودم کسیی به زندگیم بیاید که آنقدر مهم باشد که به او تقدیم کنم ، متنی 
+با آب و تاب نوشتم و بهش فهماندم که دوستش دارم. اینکار را یکبار دیگر هم 
+کردم و لای یکی از جزواتم نامه ای گذاشتم که تنها چند بیت از رضا صادقی بود
+ که البته الان پشیمانم که چرا رضا صادقی؟ اینهمه شاعر، مپلا فروغ و شاملو 
+چرا نه؟ ای کاش بازگردد خدایا آن ایام. روز های سپری میشدند و ما خاطره 
+باهم میساختیم. روز به روز اوضاع قشنگ تر میشد و خاطره های رنگش سبز و آبی 
+تر میشدند و من خنده های بیشتری از او میدیدم. الان یادم آمد. زمستان بود 
+یا پاییز، سمت پارک باهنر باقالی فروشی را دیدیم و گفتم من عاشقانه باقالی 
+دوست دارم و زدم کنارو یک ظرف خریدم. باقالی هایش خوب از آب در نیامدند ولی
+ کنار او میچسبید. خودش کم میخورد و بیشتر میگرفت سمت من تا من بخورم. آه 
+محسن، همینقدر ساده و بی ریا خاطره قشنگی رقم زدیم. خاطراتی دیگری هم 
+داشتیم، مثلا هفت خبیث را خودم به او یاد دادم و او ازانجا که استعدادش در 
+یادگیری خوب بود از دست دوم به بعد دیگر مجال پیروزی بمن نمیداد و دست هارا
+ یکی پس از دیگری ازمن میگرفت. ما برای برنده شرط میگذاشتیم که میتواند یک 
+درخواست کند. من در دلم نیت کرده بودم اگر برنده شوم طلب بوس کنم اما دیگر 
+هیچگاه نبردم. او برنده میشد و در یکی از مطالباتش گفت که ازت میخواهم یقه 
+پیراهنت را تحت هر شرایططی ببندی، من خندیدم و سر به سرش گذاشتم و او دیگر 
+هیچ نگفت&nbsp; و من از آنروز به بعد در دانشگاه و تقریبا همجا یقه ام را بستم. 
+اما پشیمانم، از آنکه بجای آن شوخی های خونوک بی سر و پا باید در جواب 
+تذکرش میگفتم چشم و سف و سخت به چشمانش خیره میشدم و هیچ نمیگفتم ولی 
+میفهماندم که بی تو هرگز. من اینکار را خوب بلدم چون چشمانم اینکار را خوب 
+بلدند. به هرجال/&nbsp; روزهای شیرینی بود که در پاییز گذر شذند و دیگر تکرار 
+نمیشوند. اما اشتباه عدم این ادامه رابطه تقصیر خودم بود و بس. از یک جایی 
+به بعد فردی دیگر هم وارد زندگی ام شد. لعنت به او . او نحس بود. تر زد به 
+همچی. من را درگیر ابتلا به مرفین کرد. رفیقان ناباب درم را گرفتند. و از 
+همه مهمتر، اورا از من گرفت. اورا از من گرفت. اورا از من گرفت. من همزمان 
+به دنبال دو خرگوش بودم. اشتباه خودم بود و اشتباه بیشترم آن بود که خرگوش 
+کم سن و سال تر را انتخاب کردم. یادم نمیرود. او به من زنگ زد و من جواب 
+دادم و انگار گوشی دست یکی دیگر باشد صحبت کردم و گفتم که گوشی اش را جا 
+گذاشته و آن قرار را پیچاندم و رفتم جای آن یکی دیگر. یادم نمیرود آنروز را
+ هیچگاه. بعد هم گلایه اش را بمن کرد و من خودم را باز زدم به آن در. گفتم،
+ همه این نرسیدن ها تقصیر خوذم بود. حتی یه شب در ماشین آنثدر صمیمی شد که 
+فهمیدم دارد یکجوری این بی محلی های چند وقته اخیر را میخواهد کنار بزند و 
+دوباره خود قبلی ام را میخواهد و توجه قبلی ام را. اما من شخصی منفور شده 
+بودم و به چنگال شیطان افتاده بودم. من چند روزی ازو خبر نداشتم و بعد ها 
+بمن در یک خلوتکاه دوفره گفت که دلیلش همین بود که رفت با پسره مو فرفریه 
+دانشگاه که داخل تریا باهاش سلام علیک کردم و به نیت دعوا پیشقدم شدم ولی 
+وقتی دیدم پسر خوب و خوشبرخورد و مودبی است منصرف شدم. دلیلش را گفت که این
+ بوده که تو چند روز یبار از من خبر میگرفتی و با زبان بی زبانی به بی محلی
+ های گلایه نشان داد. حق داشت. من ان ایام داغ بود و خیلی پا پیچش نشدم. تا
+ آنکه بخودم آمدم و دیدم مرفین مرا دارد عوض میکند و اعصاب ندارم و دیگر 
+حوصله هم حتی! کم کم هم آن خرگوش را که داستان های عجیب و غریب خودش را 
+داشت را گذاشتم کنار و هم مرفین زهرماری را. بخوذم آمدم و دیدم او را خیلی 
+دوست دارم. سعی کردم به هر طریقی خودم را او نزدیک کنم دوباره. اینکار را 
+کردم ، دانشگاه دوساعت حرف زدیم و کل سفرنامه ام به تهران را برایش بازگو 
+کردم و گفتیم و خندیدیم و او بمن گفت تو واقعا آدم برون گرایی هستی چون یکی
+ دوجا کنترل احساساتم را از دست دادم و او در مقابل بلند خندید و این را 
+گفت. میخواستم بهش بگویم شب هایی که بیادت تنها آرامیدم و غلت میزدم در 
+رختخواب و با هیچکس میل سخن نبود و تورا در دلم، قلبم محصور کردم و باز 
+نزدم کجا بودی شخصیت درون گرایم را ببینی! نشد اما. قرار شد شماره اش را 
+بگیرم اما نداد. با خودم گفتم اشکال ندارد دانشگاه میبینمش و دفعه های بعد 
+میگیرم و راضی اش میکنم. به اینکار هم مطمعن بودم و هستم و خودم را 
+میشناسم، کاری را که میخواهم به هرطریقی بدستش میارم. اما ، اما ، اما ، 
+کرونا نگذاشت و هفته بعدش دانشگاه ها تعطیل شد و او هم ترم آخرش بود و 
+تمام. شماره اش را داشته ولی گوشی ام را عوض کرده بودم و پاک شده بود. 
+اینستایش را پاک کرده بود. دیگر هیچ جا بهش دسترسی نداشتم. هیچ جا و این 
+غصه ام میگیرد که چرا قدرش را ندانستم. او هر آنچهخ که مطلوب دلم بود را 
+داشت. اما من حماقت کردم و کنارم نگهش نداشتم</div><div>&nbsp;بسه دیگه<br></div><br></div>
+<div id=postdesc>  دوشنبه بیست و یکم مهر 1399 _
+	10:32 _توسط <a href="../mohsen051.mihanblog.com/post/author/1416660.html">he  </a><a target="_self" href="javascript:newComment(399)">نظرات  <script>setCommentCnt(399)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="../mohsen051.mihanblog.com/post/397.html"><b>روز اول پاییز 99</b></a></div>
+<div id=postbody><div>بسم رب الشهدا من الپاییز</div><div>امروز اولین روز از پاییز 99 است. و به روایتی موثق آخرین پاییز قرن مان. امروز هرطور شده تصمیم گرفتم خودم را برسانم به این صفجه و مطلبی پیرامون این موضوع بنویسم و هرچند چند عدد فسفر ناقابل بسوزانم. گرچه خاطرات پاییز همان مرور کردنشان خودشان خود به خود فسفر های داشته و نداشته مان را میسوزاند، اما به هر حال! چند روز پیش آمدم که بنویسم، آمدم هم اتفاقا، اما نیمه کاره رها کردم و رفتم، چرا؟ چون حرفم نمیامد یا اگر میامد ترجیح میدادم در خودم خفه نگهشان دارم. امروز در هر صصفحه مجازی که داشتم اعلام کردم که حواسم سر جایش هست هنوز و با آنکه گاهی فراموش میکنم تولد عزیزانم را بهشان سر موعد تبریک بگویم یا گاهی وسایلم را درون ماشین جا میگذارم و میایم بالا یا اینکه یادم میرود که هررروز به مادرم بگویم که چقدر دوستت دارم و یادم میرود که او تنها بشری ست که از نگاه من فرشته است که میتواند مرا تحمل کند، یادم میرود و یادم میرود و یادم میرود. در مورد نکته آخر باید بگویم محسن لعنت بتو. اما ، ای کاش اینرا هم یادم میرفت. ای کاش یادم میرفت که یادم مانده است خاطرات قدیم را. ای کاش یادم میرفت که امروز بدو ورود پاییز است و باید برایش فرش قرمز پهن کنیم. یا آخرین پاییز قرن را فراموش میکردم. نمیدانم. گاهی با خودم فکر میکنم پاییز را ما الکی گنده اش کردیم والا عصر هایش خیلی هم دلگیر نیست. اما خودمانیم، هر روز عصر میفهمم گزاف گویی میکنم و عصر هایش اتفاقا خیلی هم یکجوریه. اما شما نمیدانید، چند سال پیش که چهارم دبیرستان بودم و از بهترین دوران زندگی ام بود، اصلا نمیدانستم در پاییز به سر میبرم. اصلا حواسم به پاییز نبود. جالبیش در این است که تمام اتفاقات خوب آنسال حول حوش پاییز ذر دوران بود و میچرخید. آن کاپشن چرم، آن شلوار اسلش و کفش های رگه های آبی، آن بند تنبان که از خاصیت شلوار اسلش هست، آن رفیق هم پا که سیگار یه کبریتا میکشیدیم و آخر هم با دوست دخترم ریختن رو همو منو فراموش کردنو من هیچ به روی خودم نیاوردم و شبها با خودم میگفتم تو که عین داداشم بودی و اون دختره هم که اصن نگو، چرا ریختیتن رو هم آخه بد مصبا ؟ و من هم در اینستا به یک پست اکتفا کردم و خیلی سربسته گفتم من میدانم که چه گوهی میخورین و چه کثافتی دست و پا کردین برای خودتان ، اما بدانید هرچه دارید مدیون منید. بعد هم ژست مارلون براندو بخودم گرفتم و غصه هارو زیر بالشتم کردم و رفتم زیر پتو و شاید هق هق. اما من آن شب ها را فراموش نکردم. شب هایی که مجبور شدم به افیون رجوع کنم. شبهایی که رفیق های ناباب دورم را همچون گرگ های گله سیر نشدگان دورم را پر کرده بودند و سوزه میکشید سر دسته مان و ماهم بدنبالش. دیگر از یکشب به بعد حال رفیق را هم نداشتم. خودم و بودم وزخم ها و خاطرات و افیون ها. آی نگویم برایتان که این افیوون ها چه ها که با من نکرد. موی هایم کم کم شروع به ریزش کردند، دستانم زمخت شدن، افکارم کلفت و کریه و زشت و عقده ای و نکبت بار شدن، چین و چروک بود که در صورتم پدید آمد، و این منم بودم که باید خودم را{ تنها } ازین منجلاب گه گرفته به دست خویش، بیرون میکشیدم. رفیق ها ، همدم ها ، رفیق من لا رفیق ها، کوچه راه بندون ها، لات های کوچه خلوت ، زیبا رویان درویش کش عیار کش که مجنونشان بودیم ، دلبر که جان فرسود از او ، اون یارو چشم مشکیه که خونشون جا خونه داداشم بود، اون سفره آسمانی که معنی اسمش بود، و و و ، هیشکی دیگه نبود، فقط من بودم و ننه و بابام. برادر و خواهرمم بودن اما نه ، انگار نبودن. خیلی ریخته بودم بهم و انقدر که از چشمانم که هرکه میدید میگفت چه خوشگلن و مواظبشون باش، از معلم فلسفمون بگیر تا همه دلبران. خلاصه وعضی بود. خواهرم خواب دیده بود من اوضاعم وخیم است و از تو جوب و این حرفا پیدایم کرده اند. بمن گفت. راستش ترسیدم و لرزیدم. البته که خوابش یکم پیاز داغش زیاد بود، اما با خود گفتم محسن اوضاعت وخیم است. خواهر است دیگر، خوب میفهمد. هم دختر است و دختر ها با یک نگاه میتوانند از اعماق احساسات یکی پسر خبردار شوند و هم خواهر است دیگر، دلسوز شماره دو مادر. به هرحال. شبی آمدم خانه و سرد بود آنشب اتفاقا. رفتم دستانم را روی بخاری خشک کنم. مادر طبقفه پایین بود. پدر تنها نشسته بود روی مبل اختصاصی اش. پدرم آرامش خاصی دارد همیشه. محجوب است بسیار، بسیار بسیار. گفت پسرم بیا چند دقیقه ای باهات کار دارم. رفتم و لباس هایم را در بیاورم که راحت تر حرف بزنیم. باور نمیکنید، ولی همان چند دقیقه چه ها با من گذشت. انگار خودم میدانستم که موضع چیست و انگار بمن وحی شده بود که موضوع صحبت چیست. خیلی وقت بود دنبال بهانه میگشتم که سرم را بزنم به سنگ، فقط منتظر آن بود سنگ را از دست محبوبیب که ارزشش را داشته باشد بگیرم و سرم را بکوبانم بهش. پدر. این واژه نام آشنا. کوه استقامت. او بود برایم آن سنبل رشادت و زکاوت و مرامت. نشستیم. پدر با دستانش مثل دیپلمات های آرام و متین برایم حرف زد و از چشم هایش غصه را خواندم. همانجا سرم را انداختم پایین تا بیشتر شرمنده نشوم. رکیک ترین فحش هارا ، هرچه فحش ک دار بود را بخودم دادم که ای لعنت بتو، لعنت بتو که باعث و بانی این غم شده ای. پدر خوب حرف زد. از حرف هایش پی بردم که مدتی ست که میدانسته و به روی خودش نیاورده و از همه چیز بو برده. به هرحال. آنشب تلنگر لازم بمن خرد و من شکستم. شکستم و از نو برخواستم و تکه هایم را ترمیم کردم و از نو نوپا شدم. به آن شکستن احتیاج داشتم. آنهم بدست چه کسی بهتر از پدر. اصلا به دست پدر که شکستن محسوب نمیشود. آنشب ورق زندگی ام برگشت و من خوب شدم و پسر عاقل اندر سفیه بنظر آمدم، تا چند وقت. دقیق یادم نیست ولی بهتر بودم. تا اینکه قد کشیدم و وارد بحران اصلی جوانی شدم. سن بیست و بیست و خورده ای، که الان صدایم را میشنوید. بهاران و زمستان ها آمدند د ورفتند ، خزان و غیر خزانش را دیدیم، دلمان لرزید و مشت هایمان را بهم گره کردیم و قوز کمرمان را پنهان کردیم جلوی آینه تا نا امید نشویم. به دری میزدیم تا حالمان خوب بماند. اما شما بگویید، تا کی ؟ تا کی خودمان را گول بزنیم؟ بالخره پاییز و خزان اثرش را گذاشت و در آینه ان پشت قوز کرده را دیدم و کمی ترک برداشتم.</div><div>پینوشت: من به قسمت اعتقاد دارم. داشتم مینوشتم که همکارم موضوعی را پیش کشید و مجبور شدم که باهاش مخالفت کنم و سر صحبت مفصل باز شد و من سفره دلم را که از انتقاد نشات میگرفت باز کردم. موضوع نه عاشقانه بود نه پاییز گونه و نه کوفت و زهر مار، بلکه سم بود، زیرا سیاست بود. بههرحال؛ هیمن امر موجب شد کمی از فضای نوشتن دور شوم و سررشته از کلاف دور شد. خوب نتوانستم پایان بندی درستی بکنم و ازین بابت ننگ میفرستم بر همکارم. اسمش مسعود است، پسر بدی نیست. الان دارد از مادر خانومش میگوید. سی دو سه سال سن دارد و همسرش بیست و دو. تنها ازین خصلتش خوشم آمده، و شاید منهم چنین راهی را بپیمانم. دوست دارم. دل همسرم باید همیشه جوان باشد، از سر و کولم برود بالا، دیوونه باشه حتی زمانی که من زیادی عاقلم. به هرحال ، پایان &nbsp; <br></div><br></div>
+<div id=postdesc>  سه شنبه یکم مهر 1399 _
+	10:56 _توسط <a href="../mohsen051.mihanblog.com/post/author/1416660.html">he  </a><a target="_self" href="javascript:newComment(397)">نظرات  <script>setCommentCnt(397)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="../mohsen051.mihanblog.com/post/394.html"><b>راحت باش، مثل هنگامی که بیژامه به پا کردی</b></a></div>
+<div id=postbody>کمتر وقت میکنم بیایم. دلیلش را دقیق نمیدانم ولی میشود حدس ززد. خودم را درگیر برخی حواشی کرده ام. خودم هم میدانم تا حدودی شان مضر و بیهوده است، ولی حس میکنم نیاز دارم. بله، نیاز به چنین اشتباهاتی دارم. من اینگونه آدمی هستم، باید خودم به نتیجه ای واحد برسم. باید تا انتهای کوچه بروم و بعد عقب گرد کنم. به تابلو های ابتدای کوچه توجهی ندارم. میبینمشان ولی برایم تار و خنده آور است. به دیوار نوشت ها و حتی نقشه در جیب شللوار شیش جیبمم عنایت ندارم. من اساسا باید خودم کشف کنم و خودم افسار به دست بگیرم و خودم بتازونم. این روحیه ام مرا بارها مورد صدمه قرار داده. مرا نیشگون انداخته. ولی چه میشود کرد، من اینم. برای من عصیان معنی خالصی میدهد. عصیان واژه ای ست آشنا برای من. خیلی آشنا. من در برهه های زندگی ام معمولا عصیان های زیادی را تجربه کردم. فروغ شعری دارد تحتعنوان عصیان با خدا. بین خودمان بماند ولی من به عصیان به خدا هم برخیزیدم. خدا مرا ببخشد، خودش میداند اینها شور جوانی ست و الا بی تو هرگز. بههرحال، عصیان برای من واژه ای درخور اهمیتی ست. برایم شگرفت است. گاهی بعد شیطانی بخودش میگیرد و گاهی بعد انسانی و فرا مخلوقاتی. معتقدم باید به همه چیز از پنجره ای دیگر بدان نگاه کرد. من طرفدار نظرریات جدیدم، چه در حوزه اجتماع و فرهنگ و حتی سیاست . غیره. من طرفدار نوینم. طرفدار تازگی، بهاری، از نو آغاز کردن، از وارستگی، از کچل کردن و از نو روییدن(البته این مورد را هیچگاه جرعت نکردم و فقط سربازی میتواند اجبارم کند). به هرحال. این حرف هایی بود که الان حسم را منتقل میکرد. برای همین است که می آیم&nbsp; و اینحا مینویسم جون معمولا در صفحات دیگر که آشنایان دنبالم میکنند کمتر میتوانم نظراتم را فریاد بزنم، کمتر میتوانم خالصای وجودیم را به معرض عموم بگذارم. ای تف به قضاوت، ای تف. به هرحال، شما دوست عزیزی که مرا نمیشناسی؟ برایت احترام قاعلم پس برای نظریاتم حرمت قاعل شو. گرچه تضادش هم برایم مهم نیست ولی چنین فرهنگی را در خود پدید بیاور، اینگونه خودت هم راحتتری&nbsp;<br></div>
+<div id=postdesc>  پنجشنبه سیزدهم شهریور 1399 _
+	11:56 _توسط <a href="../mohsen051.mihanblog.com/post/author/1416660.html">he  </a><a target="_self" href="javascript:newComment(394)">نظرات  <script>setCommentCnt(394)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="../mohsen051.mihanblog.com/post/393.html"><b>دو شنبه و امروز سه شنبه</b></a></div>
+<div id=postbody>دیروز همین ساعات بود که در بیقرار ترین حال ممکن سپری میکردم. حالم بد بو. قرار بر بی قراری بود. کلافه بودم و در ماشین آرام نمیگرفتم. گوشی ام را درآوردم. بالا پایین کردم کانتکت های محترم را. ای گور پدر تک تک کشان. حتی تعداد افرادی که باهاشون راحتم هم به تعداد دو دست نمیرسد... آخر شماره برادر وسطی را گرفتم و دل را زدم به دریا که میروم و همه جیز را به او میگویم، او یاور همیشه مومن است. زنگیدم. خواب بود. بمانند همیشه با آرام ترین و ریلکس ترین حالت ممکن که زبانزد خانواده است حوابم را داد. طلب پوزش کردم و گفتم میخواهم ببینمت. گفتم باشد، کی میرسی؟ گفتم دو دقیقه دیگر. ولی پنج دقیقه دیگر رسیدم. چند دقیقه ای به انتظارش نشستم. همان چند دقیقه کلافه ام میکرد. دوست داشتم هرچه سریعتر یکی بیاید و باهاش صحبت کنم... بلخره آمد. رفتیم چند کوچه آنور تر و درب خانه ای ترمز ردم. صاحب خانه آشنای برادرم در آمد و باهم با چشم هایشان سلام کردند. آشنای برادرم پاترول داشت و زنی خوشگل. به هرجال. سزیع رفتم سر اصل ماجرا. گفتم کلافه ام و ریخته ام بهم. در کمال خونسردی پاسخ شنیدم که دلیلش پیست؟ واقعا خودمم نمیدانشتم. میدانستم ها، ولی آدرس دقیقش را نمیدانستم... خلاصه صحبت کردیم و صحبت کردیم. تا در لابه لای حرف هایم کشید بیرون اصل موضوع را. اصل موضوع تقریبا میشه گفت به دو شاحه اصلی تقسیم میشد. گفتم. شرح دادم و خودم را خلاص کردم. و در پی هر خلاصی با کمال خونسردی جواب و راه حل میشنیدم. میریختم بیرون و ازین بیرون ریختن حس فارغ شدت بهم دست میداد. حس فردیکه ادرار دارد و بعد از شاشیدن چه آزادی ای نسیب اندام تناسلی اش میش.ود؟ همان... در این میان او برایم حرف میزد و من آرامش را جست و جو میکردم. آرام میشدم. و این برایم خیلی خوب بود. ساعاتی طول کشید. او با خونسردی جوابم را میداد و گاهی با طنز های تلخش قهقه ام را سر میداد. خلاصع آرام شدم و شب را آرام کپیدم. شبش خابای بحالی میدیدم. یکیش را که یادم مانده این بود که در خواب دعوا میکردم با یکی و در این مبارزه من اورا زدم لت و پار کردم. مشت هایم صاف میخورد به هدف، صورتش. در صورتی که معمولا در واقعیت کتک خوره ام ملس است. بیشتر میخورم تا برنم. اما در خواب زدم آقا زدم. صبح هم از خواب بیدار که شدم حالم قبراق ترین بود. سرزنده، بشاش، برنده، و همون حال خوبه. حاضر شدم و آمدم که از خانه به در شوم دیدم خدای من، هوا هوای کار های نامتعارف است. خیلی سخسی است و باید گناه کرد. گناه کرد. گناه کرد. و حتی، گناه را کرد... تا اینجا که هم صحبتم با شما گناه را نیافتم، شاید بیابم تا ساعاتی دیگر، شاید گناهی جدید یا همان گناه های قدیمم را مرتکب شوم، اما مهم قضیه آن بود هوا سخسی است و آب از چش و چال و دهن و لعب و لب آدم را میندازه. و ازهمه مهم تره، با یک تغییر نگرش چه زیبا همه چیز عوض شد و باب میلم گشت. خدای من ، چی باحالی تو<br><br></div>
+<div id=postdesc>  سه شنبه چهارم شهریور 1399 _
+	16:45 _توسط <a href="../mohsen051.mihanblog.com/post/author/1416660.html">he  </a><a target="_self" href="javascript:newComment(393)">نظرات  <script>setCommentCnt(393)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="../mohsen051.mihanblog.com/post/391.html"><b>با سند و مدرک حرف میزنم من همیشه، باور نداری بخوان</b></a></div>
+<div id=postbody><div>
+
+
+صدای من را از کافه میشنوید. اینجا همه مشغول حرف و گب زدن میباشند. بعنوان مثال میز کناری که تشکیل شده از سه عدد دختر میانسال، بحث گفتگوی آنها حول محور اینکه آیا برم خانه ممد یا نه؟ همه جا صحبت از ممد هاست. از همینجا درود میفرسام به تمامی ممد های روزگار. و بقولی(نقل قول از بچه های توییتر) هیچ دختری در این کره خاکی نیست که دور و برش ممدی نباشد. بگذریم. درباره چیز های مهم تری آمده ایم حرف بزنیم. چند صباحی هست که صبح ها با حال و احوال خوشایند و روی فرم از خواب با نمیشوم. صبخ ها کمی بد خلقم. ازین بابت خودم در صدر ضرر دیدگان هسام و بعد مادرم. مادرم هم اینروزها کلافه است از سرگرمه های درهمم. خودم میداتم دلیلش را. دلیل این کج اخلاقیاتم را. البته دقیق نه ولی حول و حوشش را میتواتم حدس بزنم. مرفین بی تاثیر نیسا قطعا. مدتی از کلنجار میروم با وی. در این جنگ رو در رو که او ارتش آلمان است و من لهستان بی دفاع(البته این اصطلاح را معمولا عاشقان برای چشمان حضرت یارشان میگویند و ازین تخلیصی که کردم باید عذر بخواهم) به هرحال، این منم که ازین ضرب العجل ضرب المثل گونه در جایی دیگر استفاده کردم. بماند/ من باید هرچه سریعتر بخود برگردم. میداتم امروز جمعه است و غروب دلگیرش بی تاثیر نیست در این غم فرسوده شده در دلم و هورمون هایم بدجور متلاطمن، اما چه میشود کرد که مدنی( نه چتدان بلند) هفت روز هفته ام جمعه است. البته در میان، تک و نوک بیش آمده که احساساتم با موضوعی جریحه دار شده است و سر به جتون گداشته ام. اما این منوالش نیست و من باید همیشه شاد و بیروز باشم. سربلند و سیته سبر و برووو. قد علم کنم برای روزگار و با بشا دستم بکوبانم دهن همه حقیران از ک.ره در رفته ی همیشه در کمین را بیارم بایین. اما اما اما ، حیف که من کمی رنحیده خاطرم. شاید یکی از دلایلش این باشد که کمی توقعم را از اطرافیان نه چندان محترم و مهمم بیاورم بایین. اینگونه شاید کمتر آزده ام خاطر شود(مقصود همون آزرده خاطره خودمونه) ازین هم بگذریم. یکی از دلایلی کع بیشتر از قبل به اینجا می آیم این است که دیگر در هیچ صفحه مجازی دیگری امنیت تدارم. قضاوت ها عجیب شده و من نمیتواتم بی بروا حرف هایم را آنجا بزنم و ترس نداشته باشم که قضاوت نشوم. یا حداقل در دیدار های رودررو به رویم نیاورند</div><div>افکارم منحسم نیستند. هی عرقم میکتد و هر کام سیگاری که میگیرم اتگار شریان های بدتم را خارح شدن آب(عرق) را بیدا میکنند و خود را بیرون می اندازند. روزنامه میخواندم اما اصلا افکارم متمرکز نیست. یک سطر را بزور تحلیل میکنم و تمرکزم به فنای سگ عظما مرعشی رفته است. این رسم و رسومش نباید باشد. من به خواندن متعلقم و باید بخوانم که بتوانم فکر کنم و بتوانم بر روی حوادث مهم زندگی ام تمرکز لازم را داشته باشم. اما میینید که اینطور نیست و من اصلا تمرکز حداقلی را هم ندارم. . این برای من ترسناک، وهم برانگیز، تاسف بار و نگران کننده اسا. آیا باید به کدام ضریح دخیل ببندم؟ باید به کدام دامن چنگ بیاندازم و از کدام خدای کمک بگیرم؟ از کدام معشوقه کمک بخواهم که موی هایش را برایم افشان کند که حالم خوب شود؟ از کدام رفیق طلب سنگ صبوری کنم؟ کدام مادر است که دل نسوزاند و شب ها را به قصه فرزتدش نخوابذ که من بروم و با او صحبت کنم؟ دردم را میبینید؟ دردم نبود گوش شنواست. ندارم آقا ندارم. خودمان را که نمیشود گول بزنیم. سرمان را که نمیتوانیم شیره بمالیم، کلا سره کی، خودمان کنیم؟ ما تنهاییم. به شدت همان مرد تنهایی که فرهاد ازو سخن میگوید و حرف میزند. من به همان اندازه شاید تنهایم. حتی زمان هایی که دست از سرم بر میدارد این یاز چندین ساله با من(تنهایی) باز هم تنها هستم ولی با این تفاوت که برای چند ساعتی اورا فراموش کرده ام. اما شما بگویید، مگر یار چندین و چند ساله میشود تنهایمان بگذارد؟ شاید او با من اخوت گرفته باشد و من هیچ راه فراری ازین قضیه تا به ابد نتوانم بیدا کنم .................................................................</div><div>همین الان بیش بایتان در یک آمارگیری که محتوایش این بود آیا چقدر تنها هستید و آیا واقعا تنها هستید یا این فقط یک وهمی بیش نیست شرکت کردم و از شما چه بنهان که جوابش این آند: حتما در شما تنهایی وجود&nbsp; دارد. آه ، دیدی گفنم، این هم سند و مدرکش ///<br></div><div><br></div><br></div>
+<div id=postdesc>  جمعه بیست و چهارم مرداد 1399 _
+	18:50 _توسط <a href="../mohsen051.mihanblog.com/post/author/1416660.html">he  </a><a target="_self" href="javascript:newComment(391)">نظرات  <script>setCommentCnt(391)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="../mohsen051.mihanblog.com/post/390.html"><b>حق با پدرم است</b></a></div>
+<div id=postbody>همیشه برایم شگفت بود ، و در بعضی اوقات که تعدادشان هم کم نبود برایم تنفر برانگیز. پدرم خیلی اهل سکوت است. از آنان که با هرکس دهان به دهان نمیشود. کم حرف میزد و معمولا بجا. جوان تر که بود و من که آنزمان بچه تر بودم، پدرم خیلی محکم تر بود. معمولا جواب بی ادبی هارا نمیداد و خنده ای رها میکرد. از اعتقاداتش این بود که نباید پشت کسی حرف زد. ما هیچگاه نفهمیدیدم از کی خوشش می آید و از کی بدش. اصلا بروز نمیداد. تو دار بود و ماخوذ به حیا. بزرگتر که شدم کمی ماجرا فرق کرد. پدر پیر تر پیر تر میشد. دستانش زمخت تر میشد. چین صورتش بیشتر و متاسفانه تو چشم ترین جزع آدم که گواه پیری اوست، ینی سپیدی موی های او روز به روز بیشتر میشد. من نره خر تر میشدم روز به روز. افکارم تغییر میکرد و به فرت همین که پشت لبم سبز میشد فکر میکردم عقل کل شده ام. برای همین با پدر در مساعلی به مشکل میخوردیم. من کوتاه بیا نبودم. پدر هم پیر شده بود و فشار های دوران کهن سالی او را کمی لجباز کرده بود. اما باز هم صفت لجباز برای او زیادی ست.او بارهم دهان به دهان کسی نمیگذاشت. بر اعتقادش مسر بود، غیبت نمیکرد. جواب بی ادبی ها را نمیداد و تنها تفاوتش این بود که دیگر آن لبخند را رها نمیکرد. انگار توقع داشت آدم ها مراعاتش را بکنند حداقل. اما او خوب میدانست آدم ها همینند که هستند، برای همین هیچگاه از دست آدم ها گلایه نمیکرد و ناراحت نبود.&nbsp; من کم کم فاصله ام با او بیشتر و بیشتر میشد. خیلی جاها و موقعیت ها بود که به وجود پدر احتیاج بود. مثلا نیاز داشتم با پدرم حرف بزنم و از تنگنا هایی که درونش گیر افتاده ام اورا باخبر سازم. اما نمیشد. فرهنگ اینجور مراوده ها در خانواده ما کمرنگ بود. معمولا رسم به این منوال بود که نکند جوش بزند، نکند حرص بخورد پس دم نزنیم بهتر است. این بود که بساط حرف زدن تعطیل میشد. یا دلایلی دیگر هم بود که بماند . بهرحال مهم این است که پدر با من کم حرف میزد یا بهتر است بگویم با همه کم حرف میزد. برای همین من آزرده شدم ازین همه سکوت. یکجور هایی متنفر. اما امروز به یک نتیجه ای هم رسیدم و آمدم اینجا که ثبتش کنم. آن این است که، آدمی خیلی وقت ها حوصله ندارد! حوصله به زبان آوردن. و در ادامه با خودش میگوید حالا تکرار کنم که چی؟ به بقیه بگویم که چی؟ مثلا وقتی ازم میپرسند که چته؟ بگویم فلان، او میخواهد مثلا چکار کند؟ اصلا کاری از دستش بر می آید که بکند؟ اگر هم بیاید قضاوت چی؟ قضاوت نمیکند و بعد از اینکه خوب شدم(موقت) دیگر با آن عینک قبلی مرا نمی نگرد؟ مینگرد آقا مینگرد. مگر میشود آدمیزاد باشی و قضاوت نکنی؟ مگر میشود آدمیزاد باشی و حرام زادگی ات را در جایی به رخ نکشی؟ نمیشود آقا نمیشود. به هرحال حال یا به عبارتی به هر سمت و سویی ؛ ما سعی میکردیم کمتر سکوت کنیم تا مثل پدر نباشیم. اما انگار در هربار حرف زدن بیجا، میریدم. انگار سکوت بهترین تصمیم ممکن بود و تنها ترین آن. بعضی اوقات هم بود که دهانم قفل میشد. با خودم در نبرد بودم و همین ستیز و جنگ باعث میشد حرف نزنم. صبح بخیر نگویم و شب ها در اتاقم بالای پشت بام که دوست دارم عین این کتابها آن را بالای سرسرا بنامم ، میماندم و جم نمیخوردم تا ساعت ها. آسمان سیاه میشد و دلم من هم. هنگام غروب ترس برم میداشت، با آنکه طبقه پایین پدرم و مادرم میزیستند. اما چه سود؟ من اینور احساس غربت میکردم. راستش، این اواخر خیلی به این موضوع فکر میکردم. اینکه جقدر من عوض شده ام. یا اصلا شاید عوضی شده ام. من اینقدر سست بنیان نبودم. اینقدر قلبم زود نمیرنجید. اینقدر در قلبم رخت نمیشستند قدیما. رخت شور خانه شده است این اواخر(اواخر منظورم همین چند سال اخیر است!) به هرحال، این من بودم که من بودم. این خودم بودم و آینه اینرا به من میگفت. با آنکه زیر چشمانم گاهی گور بود، گاهی سیاه و چشمانم خسته بود، لبانم سیاه، ریه ام به گا رفته بود و سمت چپم گاهی درد میگرفت، و این اواخر لاخ های سفید موی، این و آن از شقیقه و سرم پیدا کردند، اما این من بودم ، جای فرار نیست، باید میپذیرفت. باید مطیع بود و خضوع بخرج داد. باید انعطاف داشت و کمی با حقیقت کنار آمد. بنظرم سوال بجایی باشد که آیا میگویند حقیقت تلخ است، حقیقت واقعا تلخ است؟<br></div>
+<div id=postdesc>  پنجشنبه بیست و سوم مرداد 1399 _
+	08:26 _توسط <a href="../mohsen051.mihanblog.com/post/author/1416660.html">he  </a><a target="_self" href="javascript:newComment(390)">نظرات  <script>setCommentCnt(390)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="../mohsen051.mihanblog.com/post/389.html"><b>اینجا، صدای من، می آید؟</b></a></div>
+<div id=postbody>امروز چهارشنبه است. به رسم عادت باید فردا میامدم و مینوشتم، اما امروز آمدم چون سرم خیلی خلوت بود. چند روزی است در محل کار به معنای واقی مگس میپرانم. برای همین در اینروزها تمام پایگاه های خبری را زیر و رو میکنم. جالبست اما چند روزی انگار خسته از خواندنم. حتی کمتر کتاب های افتاده در کنار جسد رختخوابم را هم ورق میزنم. عنایتم به آنها به فاک رفته. آه ببخشید فرزندانم. بهرحال، کمی خستم. به یک فرآیند اساسی نیاز دارم. در پست قبلی گفتم پنجشنبه شود میترکانم و جبران مافات میکنم. همینطور هم خواهد شد به احتمال غریب باتفاق. فقط باید تا فردا صبوری را کرررد. امروز هم یه برنامه دارم. از شما چه پنهان، از آن برنامه ها. برنامه های شصت و نه ی. آه . حالا باید ببینم چی میشه. خبرتان میکنم و باز میایم اینجا برایتان از عقوبت کار مینویسم. البته اگر عفت و حیا بگذارد. میگذارد. کی به کیه؟ اصن اینجا کسی هست صدای منو بشنوه ؟&nbsp;<br></div>
+<div id=postdesc>  چهارشنبه پانزدهم مرداد 1399 _
+	11:48 _توسط <a href="../mohsen051.mihanblog.com/post/author/1416660.html">he  </a><a target="_self" href="javascript:newComment(389)">نظرات  <script>setCommentCnt(389)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="../mohsen051.mihanblog.com/post/388.html"><b>شنبه شب خود را اینگونه شروع نکنید</b></a></div>
+<div id=postbody><div>سگ سیاه افسردگی امشب تا دلت بخواهد سر به سرم گذاشت. تمام خاطرات سیاه و خاکستری را برایم یادآور شد. البته قطعا چند موردی را از قلم انداخت ولی تا همینجا هم خوب بیش(p) رفت. سخت است در این شرایط حرف زدن. حرفم نمی آید. مثلا مادر امشب برای چند دقیقه سعی کرد کرد باهام حرف بزند و ببیند چه مرگم شده اما موفق نشد و باز دوباره انگار از فرزندش که قرار بود دلبندش از آب در بیاید نا امید شد. البته در این بین من هم گلایه ای دارم که بماند. گلایه های من ازین زندگی مدت هاست که روی هم تلنبار شده است و هیچ مرحمی نیامده و هیچ عهدی در بی(p) تصحیح آن بر نیامده. مدت هاست گلایه هایی زین زندگی دارم. مثلا این مدل از زندگی که صبح ها شب میشوند و شب ها صبح. البته بعضی شب ها هم صبح نمیشوند. بههرجال، من گلایه هایی دارم. زندگی برای من در این سنین باید از شادی بیشتری برخوردار باشد. مثلا آینطرف و آنطرف رفتنمان بیشتر باشد. مثلا بیشتر درباره همه چیز هم کلام شویم و این سیاست و کرونای لعنتی را ول کنیم و درباره دیگر چیز ها کمی ضر بزنیم. بسس آقا بسس. تف به همه چیز که بی چیزمان کرد. اخته شدیم رفت. خایه هایمان را گرفتند و مردانگی مان به گای سگ رفنه. دیگر غیرت آنقدر برایمان رنگ و بو ندارد. گاها رنگ و بوی زنانه میدهیم آقا. صورتی هم شد رنگ آقا؟ صورتی بسند(P) شدیم آقا. اخته شدیم رفت. آنقدر شب ها در حقمان کم لطفی کرد که چین و چروک است که بیشانی امان را بر کرده. شاید به منجلابی دیگر کشیده شوم. برای تسکین این روند اگر راهی بیدا نکنم احتمال نزدیک به یقین به بیراهه جدیدی سوق بیدا میکنم. مثلا شراب خوب است. هم اکنون که مینویسم چاوشی در گوشم میخواند:</div><div>مثل شراب با من ، بانوی من تو در من</div><div>سرگیجه های بعد از نوشیدن شرابی</div><div>منتظرم به سرعت روز های هفتع گذر کنند و به آخر هفته برسند. بنجشنبه دوسداشتنی و لعنتی. همان بنج شنبه ای که همه چیز از آن شروع شد. شور و نشاط نوجوانی. نبوغ آنروزها. درس خواندن هایی جست و گریخته در کتابخوانه کوثر. و بعد ها که کله شق تر شدم و با خیابان آشنا شدم، دود. خوشگذرانی های باره وقت در شب جمعه با دوستان هرچند ناخلفم. همه اینها در خاطرم هست و میماند و همین رسم است که من هنوز به بنج شنبه ها بای بندم. بدجوری هم بای بتدم. گاهی خرابات میشوم در اینچنین روزی. قطعا در آینده هم همین است. مثلا روزگاری که همسر اختیار کنم بنج شنبه ها را میترکانیم. فطعا تا نیمه های شب، تا صبح حتی، تا سبیده دم، بیدار میمانیم و به صحبت و فضولی و ادا و اطوار و خیلی کارهای ناشایست دیگر که برای من شایسنه اند دست میزنیم. داشتم ازین میگفتم که کشیده شدم به همسر و کارهای ناشایست بالای هیجده سال. به هرحال. بنج شنبه این هفته را به خرامان ترین حالت ممکن میگذرانم، شک نکن. باید اینطوری سبری اش کنم تا مگر مرض ها و کخ های درونیم ریخته بشه. بنج شنبه بیااااااااااااا. دوستان اهل دل را باید از همین حالا گلچین کنم. البته دیگر خیلی حال و حوصله ندارم و با خیلی ها جور در نمی آیم. مثلا همین چندی بیش گرد هم درآمده بودیم. همان رفیق هایی که خودمان آوردیم به جمع رفیقای دیگرمان حالا شده بودند هوا خواه بد خواهامون. مهم نیست بگذریم. گرد هم در آمده بودیم و یک مشت عشق لوتی دور هم نشسته بودند و داشتند کم کم بساط خالی بندی را بهن میکردند. من ازین کونی هایی که عشق اینجور کارا رو دارند بدم میاد. معتقدم باید انگشتشان کرد. یسری شان واقعا کونی اند و در دوران دبیرستان گوز بعضی کون های دیگر بودند. اصلا آن زمان کسی آنها را عدد تلقی نمیگرد و کلاس و مدرسه دست ما بود. اما شاید باورت نشود. همان هایی که کلاس و مدرسه روی انگشت کوچیکشون میچرخید الان دیگر یا ازشان خبری نیست یا دیگر رمقی برایشان نمانده. هر کداممان سمت و سویی هستیم و در گودی تا خرتناق غرقیم. ای بابا. روزگار انگار تو کتش نمیرفت های مستان مارو ببینه و هرکدوممون رو یجوری از کون به دار آویخت. امشب چقدر بد دهن شدم. ازین بابت مرا ببخشید. تازگی تمایلم به حرف های رکیک خیلی شده و بنظرم باید هرچه زودتر یک چاره ای بیاندیشم ازین همه بد دهنی. فحش آخر را میدهم و بعد تصمیم میگیرم که دیگر فحش تدم. البته که میدانم موفق نمیشوم ولی چون بشما اثبات کنم که ازین بابت ناراحتم و عذاب وجدان دارم میخواهم تصمیم را بگیرم، هرچند موفق نشوم. فحش آخر. ای روزگار دیوث؟ تف توت که بعضی شبا سگ سیاه افسردگی رو میفرستی سمتمون. ای به تموم حفره هات. ای به دهنت. ای به خودت و اجدادت. به چند روش سامورایی مخصوصا داگی ، نمودمت . تمام<br></div><br></div>
+<div id=postdesc>  شنبه یازدهم مرداد 1399 _
+	23:19 _توسط <a href="../mohsen051.mihanblog.com/post/author/1416660.html">he  </a><a target="_self" href="javascript:newComment(388)">نظرات  <script>setCommentCnt(388)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="../mohsen051.mihanblog.com/post/387.html"><b>خودکارش با من</b></a></div>
+<div id=postbody>
+
+
+
+
+
+
+<font face="Mihan-Yekan" size="2">امروز از آن دنده بلند شده ام و علاقه مندم یکی را بکوبم و مخصوصا اگر آن شخص سیاسی باشد و بویی از مذهب را هم همزمان بخود دیده باشد. خب ، نوک پیکانم میرود سمت سیاست مداران و حکومت ران ها. هردو این قشر ویژگی های لازم را دارند، هم مذهبی افراطی اند و هم سیاست گذارند(گرازند) و واویلا که چنین ویژگی هایی که هردو در یک شخص خلاصه شود و واویلاتر ماجرا در آنجا ست که او(همان سیاست گراز) سیاست گذار است و نقش عقل کل را دارد و مغز به اصطلاح متفکر یک جامعه را تشکیل میدهد. یعنی به تفسیر دیگر، اوست که میگوید ما یونجه و علف بخوریم یا کباب و بریون. اوست که تعیین میکند ما بتوانیم دور دنیارا بگردیم یا زندانی شویم در سلول انفرادی جغرافیایی از پیش تعیین شده مان. اوست که میگوید قانون برابری زن و مرد کشک است یا محترم(!) اوست که تعیین میکند دوچرخه سواری را بر مرد باید و زن نباید یا هردو ازین حق برخوردار باشند. اوست که میگوید مراوده داشته باشیم با کشور هایی که جهان اولی محسوب میشوند و خوب بلدند جهنم را به بهشت تبدیل کنند یا آنکه کنج عزلت برگزینیم به اسم استکبار کوفتی جهانی(غرب ستیزی بقول خودشان) با آنها لجاجت کنیم و به تقلید از پیشینیان و شعب ابی طالب سنگ به رحم ببندیم و قحطی(تحریم) را بر خود گوارا کنیم یا این سوال را برای خود بوجود بیاوریم چه حقی مگر بر گردنمان داریم که با سیاست گذاری هایمان یک ملت تشکیل شده از هشتاد و اندی میلیون نفر را به باد فنا بگیریم که تهش بگیم: اسلام نباید بخطر بیافتد؟</font><div><font face="Mihan-Yekan" size="2">خدایا؟ بهتر است گفتمانم در همینجا به پایان برسد والا احتمال منکر شدن نکیر و منکری که این انتر الصوات ها بوجود آورده اند هست. خدایا؟ تو که خوب میدانی و همانطور که حسین آزاده ات فریاد زد اگر دین ندارید آزاده باشید و همانطور که او و پدرش به بی دین ها هم با لبخند و خضوع سخن میگفتند، میدانی که این رسمش نیست. اینها خون مارا در شیشه کردند. مارا ختنه کردند و عقیم فکری مان کردند. مارا در آخر از امید، این مایه حیات، ناامید کردند. دیگر حتی سرابش را هم نمیبینیم. خدایا؟ میخواهم بحث را کمی رنگ و لعاب عاشقی بدهم(با اجازه بزرگترها) شما فرض کن(خطاب به آقا یزدان) جوانی عاشق شده است و دلباخته چشم و گیسوی کمند و سیه یار. دو دلباخته و دو مجنون و لیلی عصر زمان. در تنگنا های زندگی دست در دست یکدیگر. در بیراهه ها، در راه های هموار، همراه. اما؛ با این گرانی باک دارند. نمیتواند جرعتشان را علم کنند و بروند زیر یک سقف. آخر این دو احمد و آیدای قصه ما همانطور که احساساتشان رقیق است عقلشان هم سرجایش هست دیگر. نمیتوانند دکمه عقلشان را بزنند و خود را کور بپندارند و سریع دوان دوان برن زیر یک سقف که. حداقل قبلش باید یک برآور هزینه داشته باشند. خب، برآورد هزینه. یخچال چند است یزدان؟(بالفرض اینکه یزدان هنوز مثلا حواسش پیش ماست) جان؟خبر نداری؟ اوکی میگویمت. یخچال بقول بچههای توییتر 70میلیون فاکینگ تومان پول ناقابل است. بله، هفتاد و اندی فاکینگ. فکرش را میکردی یزدان؟ یزدان جان؟ من زمانی که قیمت همین یک قلم کالا بدستم رسید با آنکه عاشق پیشه نبودم ولی ترسیدم، لرزیدم. یعنی پیش پیش ترسیدم و لرزیدم. از ترس آنروزی که عاشق شوم و بی او هیچ تسکینی نباشد علاج. خب اینجا دیگه بیا از ما قبول کن که راه حل هیچ نیست جز چهاردیواری و سقف مشترک و سفره و این دم و دستگاه. خدایا؟ فرش ما به لرزه درآمد عرش شما چطور؟</font></div><div><font face="Mihan-Yekan" size="2">خدایا؟ هنوزم نمیخوای شخصا ظهور کنی بیای مارو به مراد دلمون(همان اوضاه تقریبا مطلوب و متبوع چندی پیش) برسانی؟ خدایا؟ من دیگر چه بگویم. این ویروس لعنتی که معلوم نیست چه گهی خورده که نمره اش را نونزده آورده هم که رد و پایش پیدا شده. تازگی ها زمزمه قدرت تو و ضعف بشر و کوفت زهر مارهای دیگر هم که زیاد شده. خدایا؟ تو که خودت میدونی من به قدرت لایتناهی تو باندازه ارزنی شک ندارم. حتی امروز موقعی که ماشینم را سر صبح از حیاط(گاراژ) بیرون می آوردم هم به یادم آمد و متذکر شدم که من واقعا از تو میترسم ای حق! من روزگاری که ازتو فاصله گرفته بودم را یادم هست. شب هایی که با همه خلوت میکردم جز تو را در خاطرم هست. میترسم و میدانی که ازت حساب میبرم. اما حالا اگر گاهی اوقات غلط اضافی میکنم(بقول حامد بهداد تو فیلم جرم مسعود کیمیایی، ماهم همچین گاه گاه) شما زیر سیبیلی رد کن. آخ قربون مرامت.&nbsp;</font></div><div><font face="Mihan-Yekan" size="2">خلاصه- دلمان خیلی پر است. مردم بی لبخند شده اند و دیگر همان بغل کردن سابق را هم ازما گرفته اند. بعد میگن چرا ازدواج نمیکنی. ازدواجی که نشه طرفت را بغل کنی که به درد جرز دیوار هم نمیخوره آخه یزدان. اوضاع داغونه، برای اینکه چرخ اقتصادی زندگی بچرخه باید هردو زوج عزیز کار کنند(ترجیحا پاره وقت که حداقل ساعات عصر را دیگه بالاغیرتا مال هم باشیم) و کار کردن در این اوضاع هم یعنی رفتن در دل شیر(شهرمان اوضاعش قرمز است) خب، از کجا معلوم که من یا او(جون به او) با خودش کرونا به بالین نیاوریم؟ تضمینش را کی میکند؟ اگر تضمین میکنی بنویس و امضا کن. خودکارش با من</font></div><div><font face="Mihan-Yekan" size="2">#سالم_و_بدون_کافعین</font></div><div><font face="Mihan-Yekan" size="2">#چراهشتگ_هام_آبی_نمیشه؟</font></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br></div>
+<div id=postdesc>  پنجشنبه نهم مرداد 1399 _
+	08:37 _توسط <a href="../mohsen051.mihanblog.com/post/author/1416660.html">he  </a><a target="_self" href="javascript:newComment(387)">نظرات  <script>setCommentCnt(387)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="../mohsen051.mihanblog.com/post/385.html"><b>من به خلاصه نویسی اعتقادی ندارم</b></a></div>
+<div id=postbody>آه خدای من<div>احساس غربت من را فرا گرفته. احساس میکنم زبانم متفاوت است&nbsp; با دیگران. احساس شهروندی را دارم که با آنکه ملیت آن کشور را رسما دارا میباشد ولی از هیچگونه امکاناتی بهره نمیبرد. غربت یعنی همین. در میان جمع بودن ولی گوشه ای تنها نشستن. سیاوش قمیشی عزیزم. متولد خرداد ماه، غیور مرد.</div><div>&nbsp;حال اینها بماند. از خودم بگویم. امروز داخل توییتر میخواندم با این سوال مواجه شدم که اگر شغل بودم چه بودم؟ یکی مینوشت دکتر، مهندس. یکی میگفت کتاب فروش و فاز روشن فکری را فیتیله پیچ میکرد. دیگری سارق و کلاهبردار و کوفت و زهر مار(تازگی آمار سرانه استفادم از کلمه کوفت و زهر مار زیاد شده. هنوز هم نرم دکتر اعصاب و روان؟) به هرحال. چند دقیقه ای فکر کردم. با خودم کنکاش کردم که من چی؟ من دوسدارم یا اصلا روزگار برایم چه شغلی در نظر میگرفت اگر دنیا به همین سادگی ها بود؟ در ثانیه های پایانی جواب جرقه ای بود در سرم. نویسنده. آه محسن بیخیال. فاز روشن فکری و کروات و پاپیون و دستمال گردن و دکمه سر دستی و پیراهن مشکی و اینارو نگیر. قهوه نخورده روشن فکر شدی؟ اما نه جناب صدای درون. اینبار هم به مانند هر دفعه ی دیگر فاز نیست. اتفاقا آنچنان هم که فکر میکنی جذاب نیست. بگذار بیشتر توضیح دهم. دقیقا نویسنده ای که مدت هاست مینویسد اما آنچنان طرفداری پیدا نکرده. نویسنده ای که نهایته طرفدارانش به کلمه&nbsp;معدود ختم میشوند. آنهم طرفدارانی که کور سوی امیدشان از زندگی به تاریکی مطلق تبدیل شده است. دقیقا من همانم. اگر خیلی بخواهد آفاق و طبیعت و کردار روزگار به حالم خوش یمن باشد و نهایت صلح و صفایش را در حقم پاس بدارد میشود نویسنده ای که بعد از رفتنش همه در نهایت در یک جمله از او به یاد می آورند(پذیرایی میکنند): آدم خوبی بود، کاری به کار کسی نداشت... آه محسن. این جمله برای من خیلی غمگین است. بقول فرهاد من همانم که روزی میخواستم خورشیدو با دست بگیرم. چه شد؟ از آنهمه های و هوی مساته و مستان چه شد؟ من اصلا آدم بی صدایی نیستم. فقط چند سالی میشود فریاد زدن را از من گرفته اند. دیگر بیشتر با خودم حرف میزنم. کمتر افکارم را در معرض عموم میگذارم. از قضاوت ها دوری میکنم. چه قضاوت بشوم ، چه قضاوت بکنم. از هردو دوری میکنم. صدای درونم فعال اما صدای بیرون خرامان در سکوت. این برای من قبل از آنکه غمگین باشد جای عجب دارد. مگر میشود؟ من همانم که خطبه های بلند بالایم در سر کلاس های دبیرستان و دانشگاه معمولا موی به تن آدم سیخ میکرد. همانم که اساتید را یا مجبور به همراهی میکرد تا نظم دوباره برقرار شود یا مجبور به اخراج که فقط از جلوی چشمش خفه شم. من همانم که در سر داشتم نهاد کنم سندیکا های گوناگونی در دانشگاه( در راس آنها انجمن تیاتر آزاد_ ثانیا پایگاه خبری با نام هویدا ) اما چه شد؟ چرا سوختم. چرا ساکت شدم ؟ چرا در خود فرو رفتم و قوز کردم ؟ چرا مجسن؟ زندگی تعریفش در این چند ماه گذشته بشدت تغییر کرده. دیگر بعد و زوایای زندگی را از پنجره ای دیگر در میابم. مثلا با آنان که با صدای بلند صحبت میکنند نمیتوانم اصلا خو بگیرم. یا آنان که سکوت برایشان مرده. آنان که حرف زدن را بلدند اما گوش کردن را نه. آنان که در همه موضوعات صاحب نظرند، مخصوصا سیاست لعنتیه بی پدر مادر... متنقرم. همین موضوع کمی تنهایم کرده. آخر اینچنین آدمی کم پیدا میشود. کم آقا کم. گاهی اوقات دوست دارم سطحیو دم دستی باشم. شخصیتی نه چندان عمیق داشته باشم و اینقدر فلاسفه در زندگی ام پر رنگ نشود. بی مهابا شوخی کنم ، دست به شانه دیگران بیاندازم و اذیتشان کنم و در فکر این نباشم که شاید شوخی ام مناسب نباشد. از تمام موضوعات خیلی راحت صحبت کنم و نظرم را بی مهابا بگویم. در مورد سکس، زن ، دختر، عشق، محبت، دوستی، و دوباره سکس. در جایی خواندم و حتی از کسی شنیدم که علاقه داشتت درباره سکس بداند و بیشتر با طرفش صحبت کند. او (وی) شخصیتی بسیار آرامی داشت. متین بود و با وقار. آرام طبع بود. از او چیز های زیادی یاد گرفتم. او خودش نییست ولی تمام نکته هایی که از او یاد گرفته روزانه در یادم می آیند و میروند، بی آنکه این نکته ها را بطور مستقیم علنی کند. او هیچوقت شعار نمیداد. حرف یا وراجی نمیکرد. کم گوی و گزیده گوی مصداق بارز شخصیت وی بود. داشتم اینرا میگفتم. او ؛ دوست داشت درباره موضوعی بنام سکس حرف بزند. برایم جالب میامد که چطور چنین شخصیتی چنین علاقه ای&nbsp; دارد. البته میدانستم نیاز جنسی انکار نا پذیر است اما در باورم هنوز گنجانیده نشده بود که میشود بی پروا دم از این موضوع زد. او دوست داشت بداند، بخواند، بفهمد و در نهایت خودش ببیند و با پوست و استخوان لمسش کند. آه محسن. پوست و استخوان... به هرحال، او ازین بابت بیم نداشت و سکس را مقدس میشمرد(البته با شرطی باشکوه) من هم اینروزها نگرشم به او نزدیک شده. چرا؟ به این دلیل که احساس میکنم سکس انتهای محبت و عشق و علاقه است. کوچه آخر اما زیبا و باشکوه دوست داشتن است. اگر این فعل با علاقه قبلی درهم بیامیزد ، وااااااااای ؛ چقدر مقدس و زیبا و دل هوسانه و ژرف میشود(دلم خواست آقا دلم خلوت شبانه خواست)</div><div>از او چیز دیگری هم آموختم. او معتقد بود آدمی مخصوصا در این سن و سال که تفاوت سنی اش با من سه سال بود، بسیار تغییر پذیر است. یعنی انسان در این برهه سن و سال به سرعت تغییر میکند. مقصود صحبتش ظاهر نبود، بلکه باطن بود. دقیقا منظورش تفکر آدمی بود. تفکری که منجر به همچیز میشود. او ( وی ) معتقد بود سال چیه بابا؟ آدم میتواند در عرض چند ماه، حتی مثلا دو یا سه ماه چنان تغییری کند که با اولیه خود فرق داشته باشد. من همانطور که چایم را هورت میکشیدم و دود سیگارم به چشمم میرفت و چشمانم خنده ی زیرکانه ای با خودش داشت، به او با دقت مینگریستم و علاوه بر آنکه زوایای صورتش را به دقت بررسی میکردم با حرف هایش هم گوش میدادم. در انتها ، لجاجت کردم و با او سر مخالفت برخواستم. گفتم نه ، من تغییر نمیکنم... البته اینرا باید بگویم که بحث درباره موضوعی بود که او داشت میگفت که این حس شاید تغییر کند. اما من میگفتم حس من جاودان است و تغییر ناپذیر. او میگفت شاید اشتباهی صورت گرفته و من میگفتم ابدا. او میگفت شاید بازی هورمونی سلول های بدنت هست و نباید خیلی جدی شان بگیری، من میگفتم نه این یک بازی نیست. او میگفت آدم ها تغییر میکنند و شاید حرف الانت حرف چند ماه و چند سال دیگرت نباشد؛ اما من قاطعانه میگفتم نه، اینطور نیست. هر بار که به مخالفت بر میخواستم در دلم شوری به جریان میافتاد. با خودم در پی هر نه گفتن میگفتم نکند او درست میگوید و اینقدر هاهم که فکر میکنم موضوع بزرگ نیست... اما بگذارید اعترافی کنم. مدت ها گذشته از آن خلوت های شبانه در کافی شاپ های دنج شهر. شبهایی که مینشستیم و حرف میزدیم از زمین و زمان. اساتید را زیر و بالیشان را آباد میکردیم و جد و آبادشان را به دودمان خاکستر تبدیل میکردیم. یا ، در لابلای گفتگویمان اگر دچار وسواس میشدیم و تردید داشتیم از حافظ کمک میگرفتیم. خوب یادم است، شبی سر موضوعی بشدت مهم مردد شد. من نه ، او . سکوت کرد. سرش را انداخت پایین و به پایین دوخته شد. بعد از چند ثانیه گفت بگذار از حافظ کمک بگیرم. کمک گرفت. حافظ به دادمان رسید. بهتر است بگویم به دادم رسید. فالی آمد سرتاسر عشق و جنون. آه محسن. چقدر خوب بود. لبخند زد و من قهقهه سر دادم.&nbsp; گفت بخوان حافظ را. از دستش گرفتم و برعکسش کردم. جلویم قرار دادم و صدایم را صاف کردم و خواندم. در جاهایی که به اشتباه میخواندم میپرید به میان خواندنم و تصحیح میکرد. دقیقا عین یک کارکشته شعر خوان. عین یک مادر... در نهایت، گفتم خب؟ دیدی حافظ هم مقدره ما را خوب تلقی میکند و آینده را گل و بلبل میبیند؟ خندید و هیچ نگفت. شب خوبی بود. مادر مکرر زنگ میزد و گاه به گاه این زنگ زدنش اعصابم را تخمی میکرد. گوشی را جواب میدادم. و هر دفعه که تماس به پایان میرسید در انتها میگفت: شما دیرتان شده، بهتر است برویم...&nbsp; اما منکه دوست نداشتم برویم بهانه ای جور میکردم به ماندن. ثانیه ها هم حتی برایم گرانبها شده بودن. میماندیم...&nbsp; اما بلخره تصمیم به رفتن گرفتیم. موقعی که موقع پرداخت حساب مبشد هر دفعه کارتش را در میاورد و میگفت هر کی حساب خودش. و هر دفعه میگفتم نه، تا مرد اینجا نشسته زن نباید دست در جیبش(کیفش) کند. این جمله را البته معتقد نیستم و به دنگی دنگی بیشتر معتقدم من. اما برای او به جمله "تا مرد هست چرا زن" بیشتر معتقد بودم. چون او واقعا فرق داشت با دیگران. سو استفاده گر نبود. عاقل بود. نامردی در مرامش نبود. و غیره...&nbsp; &nbsp;به هرحال، در این بین که کافه چی دو لیوان چایی مان را حساب مبکرد آمدم شوخی ریزی هم کرده باشم. کافه چی موهایش بلند بود و با کش موهایش را بسته بود. تیپ هنری و اشعار کمخطری و کمری(بقول نجفی). اینجور شمایلی به خود دیده بود. اصلا به تیپش نمی آمد طرفدار جمهوری مکانیزم شده اسلامی باشد. آنطرف تر عکس خامنه ای را گذاشته بود. تعجب کردم. در همان حین که سرش پایین بود(کافی چی را میگویم) ازو پرسیدم عکسی که گذاشته اید از سر اجبار است یا قویا باب دل تان است و محبوب؟ نمیدانم خنده کرد یا نه ولی میدانم جوابم را با روی خوش داد. دوست دخترش هم چند قدم آنطرف تر نشته بود و پایش را انداخته بود روی ران پای دیگرش. صدای موسیقی راک هم از آنطرف مجلس گرم کن بود. جواب داد: نه آقا، محبوب چیه؟ از سر اجبار است که اماکن که می آید فکر کند از خودشان هستیم و کمتر بهمان گیر بدهند. یکجور علامت حاکم بزرگ است و با این نشانه کسی کار به کارمان کمتر دارد...&nbsp; خنده ای کردم و نمیدانم چه گفتم و رو به دوست دخترش کردم و دیدم که او به دقت به من نگاه میکند و جوراب قرمزش خودنمایی میکرد و شلوارش آنقدر رفته بود بالا که در پی این اتفاق ساق پایش دیده میشد. من هم تیپ سر تا سر(سرتا پا) مشکی زده بودم و احساس میکردم که احساس میکنند اماکن یا از بچه های بالا هستم که به صورت مخفیانه آمده ام و دارم این سوال های تفتیش گونه را میپرسم. اما من همراهی داشتم که قطعا این گمان را از دم باطل میکرد. به هرحال. حساب کردیم و آمدیم بیرون(یادش بخیر). تا آمدیم بیرون همراهم بهم گفت:آخر این چه کاریست که از دیگران ازین قبیل سوال ها میپرسی؟ آنهم با رنگ و بوی سیاست. راست میگفت. الان که فکر میکنم میبینم اصلا دلیلی ندارد ازین دست سوالات. شاید اگر الان من بجای آن کافی چی بودم کسی از من این سوال را می پرسید، اگر آنروز حال و حوصله نداشتم و از دنده لج با دنیا از خواب پا شده بودم قطعا در دم در جواب این سوال میگفتم به شما چه مربوط! یا نهایتا در یک جواب سرسری و غد مآب میگفتم خیر(جوابی نامعلوم) به هرحال، او راست میگفت، این سوال ها احمقانه هستند...&nbsp; نشستیم داخل ماشین. دوباره متذکر شد که انگار امشب باید زودتر بروید خانه، پس بهتر است من خودم بروم. منکه باز مخالفت کردم و گفتم نه میبرمت به این دیر رسیدن به خانه ها خیلی اهمیت نده، اما او اینبار کوتاه نیامد و گفت نه شایسته نیست بخاطر من دیر به خانه برسید؛ بهتر است تاکسی بگیرم. او که از ماشین های رهگذر و تاکسی های اینترنتی میترسید، زنگ زد به یک شماره چهار رقمی و سفارش یک تاکسی کرد. چند قدم بالا تر از کافه بردمش که راحت تر تاکسی زرد بیاید و پیدایش کند. دور میدان. منتظر ماندیم و تاکسی آمد. تاکسی آمد و او رفت. و من هم رفتم خانه، اما خاطرات آن شب همانطور که میبینید نرفتند. همراهم باقی مانده و مرورش زیبا است برایم...&nbsp; به هرحال، خاطرات گرانبها مرورشان هم بخودش افسوس دارد و هم خوشحالی. افسوسش برای یاران از دست رفته و زمان هایی که شاید دیگر تکرار نشوند و خوشحالیش بابت آنکه چه لحظات بکری را با هم رقم زدیم. ازین خاطراتِ سکوت و آرام و قدم زدن های نرمک نرمک در فصل پاییز زیاد است. مجالش باشد و از همه مهمتر حوصله اش، حتما باز هم مینویسم و میگویم. با آنکه هیچکس نمی آید بخواند(خنده/گریه) آنهم متن به این بلند بالایی... به هرحال، همانطور که میبینید هنگامه ای که لب به سخن باز میکنم و سفره خاطرات را پهن میکنم، به طول می انجامد. جالب اینجاست که این ها را زمانی مینویسم که پنج شنبه است و آخر هفته و در دفتر کار. رییس سوسا نیستند و از صبح هیچ کاری نداشتم و نکردم. بجاش تمام پایگاه های خبری را زیر و رو کردم و از بزرگترین دستاورد این موضوع این بود که مطلع شدم فردا سالروز فوت احم شاملو نازنین است. یکی از موضوعات دیگری که گفتم فرق کرده برایم این است که به شعر نو(سپید) علاقه پیدا کرده ام. اولین دیوان شعر نویی که سفارش دادم از فروغ بود. برایم شیرین بود. چندی پیش هم در نتیجه گشت و گذار هایی که در فضای مجازی داشتم با اشعار شاملو هم مواجعه شدم که برایم بشدت بعضی هایشان(اکثرشان) لذت بخش بود. یکی از آنها این بود:</div><div>سکوت آب میتواند خشکی باشد و فریاد عطش</div><div>سکوت گندم میتواند گرسنگی باشد</div><div>و غریو پیروز مندانه قحط</div><div>همچنان که سکوت آفتاب&nbsp;</div><div>ظلمات است</div><div>اما سکوت آدمی فقدان جهان است</div><div>فریاد را تصویر کن</div><div>.....</div><div>چراکه تنها یک سخن، یک سخن در میانه بود:</div><div>آزادی !</div><div>ما نگفتیم</div><div>تو تصویرش کن ..</div><div>&nbsp;</div><div>این شعر بشدت برایم حماسه گون است. بشدت بوی عصیان علیه استکبار میدهد. چه این استکبار درونی باشد و بین خودت و خودت، چه وسعتش جهانی باشد و با دیگری. به هرحال، شعر از محبوب هاست. یا یک جمله دیگرش که میگوید: سیاست ، به قداست زندگی نمی اندیشد. ادامه دارد و ادامه اش هم گریزی به هنر میزند، اما حفظ نیستم. این هم فوق العادس برایم. همانطور که میبینید ، جمیع تمام اینها باعث شد به سمت شاملو سوق پیدا کنم و تصمیم بگیرم بیشتر و بیشتر با او آشنا شوم. زین سبب، کتابی از او از سایت شهر کتاب که معمولا کتاب هایم را هرچند وقت یکبار از آنجا سفارش میدهم ، خرید کنم. کتابی که سفارش داده ام اصطلاحا کتاب جیبی است و کوچک است. میشود با خودم اینور و آنور کنم. به همین دلیل میتواند همراه خوبی باشد. بی صبرانه منتظر رسیدنش هستم. البته در کنارش کتوب دیگری هم سفارش داده ام که هرکدامشان قطعا جذابیت های خودشان را دارند... چند وقت پیش رمان وداع با اسلحه ارنست همینگوی را تموم کردم.با ترجمه نجف دریابندری که چندی پیش پر کشید. این رمان فوق العاده بود. آخر داستان کام آدم را تلخ میکند، احساس غربت و انزوا و خفگی به آدم دست میدهد، اما بازهم ازین همه بیخیالی متعجب میکند آدم را(حداقل مرا، اگر هنوز جزو ضمره آدم های قابلم بدانید) باری ، رمانی این سری که سفارش دادم جنایات و مکافات است از داستایوفسکی. منتظرش هستم ... من کم کم باید بروم. منشی بنظرمک آنطرف منتظر است که کار من تمام شود و درب دفتر را چار قفله کند و برود. بنده ی خدا. بهتر است بروم ...........</div><br></div>
+<div id=postdesc>  پنجشنبه دوم مرداد 1399 _
+	10:37 _توسط <a href="../mohsen051.mihanblog.com/post/author/1416660.html">he  </a><a target="_self" href="javascript:newComment(385)">نظرات  <script>setCommentCnt(385)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="../mohsen051.mihanblog.com/post/384.html"><b>دکتر</b></a></div>
+<div id=postbody><div>
+
+
+از شما چه بنهان. شاید همین ر.ز ها بیش دکتر بروم و سفره دلم را برایش باز کنم. ازین قرار است که کمی بی حوصله ام. کمی سفت و سخت شده ام و دیگر از خنده های بلند بلند خبری نیست. دیگر در نتیجه این حنده ها اشک از کنار چشمانم بایین نمی آید. دیگر کمتر خوش زبانی(وراجی) می کنم. سکوت قد علم کرده در این روزها. خودی نشان میدهد، اما نه آنطور که موقت باشد، تقریبا میشود حساب کرد خیلی وقت است که آمده و رفتنی درکار نیست. <br></div><div>خب، دکتر چرا محسن؟ مگر سکوت بد است؟ نه، سکوت بد نیست. بجث من سر چیزی دیگری ست. چیزی بنام کور شدن احساسات. چیزی تحتعنوان دل مردگی. از ترس های زندگی ام همیشه این بوده و هست که نکند روزگاری دل مردگی به سراغم بیاید و با بنجه های سیاهش به جانم بیافتد.من را از من واقعی ام بگیرد. من تحت هر شرایطی باید اورا از خودم دور کنم زیرا در سایه بودن او نه من میتوانم کسی را دوست داشته باشم، نه عشق ورزیدن در یادم میماند و نه آبی آسمان جلوه گر خواهد بود و نه خیلی چیز های دیگر.</div><div>من باید بروم. خواهر زاده ام آمد به سراغم. بروم کمی از خوشی زندگی که او باشد لذت ببرم. از نشانه های بارز زندگی زیبا ،&nbsp; ، ، اوست<br></div><br></div>
+<div id=postdesc>  چهارشنبه یکم مرداد 1399 _
+	15:29 _توسط <a href="../mohsen051.mihanblog.com/post/author/1416660.html">he  </a><a target="_self" href="javascript:newComment(384)">نظرات  <script>setCommentCnt(384)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+  <FONT color=#313131>
+<div id=post>
+<div id=posttitle><a href="../mohsen051.mihanblog.com/post/383.html"><b>با خودت تکرار کن</b></a></div>
+<div id=postbody>
+
+
+اینکه اینجارا خاکبرداشته و دیگر جز خودم کسی نمی آید و برود یک خوبی و یک بدی دارد. خوبیش آنکه با خیالی آسوده خود را به باد میسبارم و بقولی هرچه دل تنگم میخواهد میگویم. بدی اش هم اینکه خب بلخره هرکسی دوسدارد حرف هایش را یک کسی باشد که بخواند ، و این نبود بیننده و شنونده و خواننده حتی برای منی که عادت کرده ام به حلوتی ایام هم ناخوشایند است. باری، این بازی ست که زمانه راه انداخته و هیچ چاره ای نیست جز ادامه دادن و دست و بنجه نرم کردن و گیس و گیس کشی. به هرحال ، آمدم چند خطی بنویسم و اولین موضوعی که به ذهنم آمد را بدون وقفه به دکمه های کیبورد اعتماد کردم و جانشان دادم و باز شدم خدایی که خلق میکند چیزی را. خدایی که از اعماق احساساتش مینویسد و بر میتابد که با این نوشتن حالی شود. خالی شود. خالی شود. خالی شود. تکرار کن ؛ خالی شود ، خالی شود ،خالی شود ... من میروم ولی تو با خودت همچنان تکرار کن : خالی .. ؟<br><br></div>
+<div id=postdesc>  دوشنبه سی ام تیر 1399 _
+	22:09 _توسط <a href="../mohsen051.mihanblog.com/post/author/1416660.html">he  </a><a target="_self" href="javascript:newComment(383)">نظرات  <script>setCommentCnt(383)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+           <hr width="60%" size="1" color="#747474" align="center" >
+</div>
+
+<center><br>
+<table style="border-right: #8996a4 1px solid; border-top: #8996a4 1px solid; border-left: #bccad9 1px solid; direction: rtl; border-bottom: #bccad9 1px solid; height: 7px; color:#80868d; font-size: 7pt;">
+<tr><td> <a href="http://www.pichak.net" target=_blank>Design By</a> : <a href="http://pichak.net" target=_blank>Pichak</a> <br></td></tr>
+</table><br><FONT color=#717171>
+
+<!-.-.-Design By : pichak.net-.-.->
+
+</div>
+
+
+<div id=sidebar>  
+<br>
+
+<center>
+
+<center>
+
+<FONT style="FONT-SIZE: 8pt">
+<b>
+<div class="link1" >
+<div align=left>
+	<div class="link2"> About </div>
+</b>
+<br>
+<center>
+<center>
+<center>
+دعای مادر لبخند دوس
+<center>
+مرگ سرما تو ودکای روز
+<center>
+
+<!-.-.-Design By : pichak.net-.-.->
+<div align=right>
+<div id=about><FONT style="FONT-SIZE: 8pt">
+</div>
+<center>
+
+<center>
+
+<FONT style="FONT-SIZE: 10pt">
+<b>
+<div class="link1" >
+<div align=left>
+	<div class="link2"> Archive</div>
+</b>
+<br>
+
+<div id=mmenu>
+<ul>
+<li><a href="../mohsen051.mihanblog.com/post/archive/1399/9.html"> آذر 1399  3 </a></li><li><a href="../mohsen051.mihanblog.com/post/archive/1399/7.html"> مهر 1399  2 </a></li><li><a href="../mohsen051.mihanblog.com/post/archive/1399/6.html"> شهریور 1399  2 </a></li><li><a href="../mohsen051.mihanblog.com/post/archive/1399/5.html"> مرداد 1399  7 </a></li><li><a href="../mohsen051.mihanblog.com/post/archive/1399/4.html"> تیر 1399  2 </a></li><li><a href="../mohsen051.mihanblog.com/post/archive/1399/3.html"> خرداد 1399  5 </a></li><li><a href="../mohsen051.mihanblog.com/post/archive/1399/2.html"> اردیبهشت 1399  9 </a></li><li><a href="../mohsen051.mihanblog.com/post/archive/1397/6.html"> شهریور 1397  7 </a></li><li><a href="../mohsen051.mihanblog.com/post/archive/1397/5.html"> مرداد 1397  1 </a></li></ul>
+</div>
+
+<center>
+
+
+<div id=mmenu>
+<ul>
+<center>
+<!-.-.-Design By : pichak.net-.-.->
+<FONT style="FONT-SIZE: 10pt">
+<b>
+<div class="link1" >
+<div align=left>
+	<div class="link2"> Links </div>
+</b>
+<br>
+
+<div id=mmenu>
+<ul>
+<li><a target="_blank" href="http://kiyarash10.blogfa.com">هرگز تسلیم نشو</a></li><li><a target="_blank" href="https://shahreketabonline.com">شهر کتاب</a></li><li><a target="_blank" href="http://kazzab.blogfa.com">یعقوب کذاب</a></li><li><a target="_blank" href="http://www.sarosedaha.blogfa.com">سیگار متبرک ملعون</a></li><li><a target="_blank" href="http://papenhaym.blogfa.com/">خانم پاپن هایم</a></li><li><a target="_blank" href="http://almatavakollll.blogfa.com/">خرمالوی سیاه</a></li><li><a target="_blank" href="http://r-kh-a.blogfa.com">خواندن دارد !</a></li><li><a target="_blank" href="http://nikolaa.blogfa.com">نیکولای آبی</a></li><li><a target="_blank" href="http://www.khorzojan.blogfa.com/">اندیشه های او</a></li><li><a target="_blank" href="http://divane.blogfa.com">حرفهایی از جنس دیوانگی</a></li><li><a target="_blank" href="http://vaselina.blogfa.com">-something ‌‌[...]-</a></li><li><a target="_blank" href="http://zu14.blogfa.com">مستر جِی</a></li><li><a target="_blank" href="http://mohreyemaar.mihanblog.com/">مهره مار</a></li><li><a target="_blank" href="http://mardesighehei.blogfa.com/">مرد صیغه ای</a></li><li><a target="_blank" href="http://arshia000092.blogfa.com">یه پسر نسبتا خط خطی</a></li><li><a target="_blank" href="http://beta.vajehyab.com/?q=">واژه یاب</a></li><li><a target="_blank" href="http://www.pichak.net"></a></li>
+</ul>
+</div>
+<center>
+
+
+<div id=mmenu>
+<ul style="border:none">
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'mohsen051.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

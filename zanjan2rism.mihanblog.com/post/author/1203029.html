@@ -1,0 +1,2128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc@rsd" />
+<script type="text/javascript" src="../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1454637*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[45]='17';commentCnt[46]='14';commentCnt[47]='13';commentCnt[48]='14';commentCnt[49]='4';commentCnt[50]='5';commentCnt[51]='6';commentCnt[52]='8';commentCnt[53]='7';commentCnt[54]='14';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[45]='0';
+mihanblogDisLikeArrCnt[45]='0';
+mihanblogLikeArrCnt[46]='0';
+mihanblogDisLikeArrCnt[46]='0';
+mihanblogLikeArrCnt[47]='0';
+mihanblogDisLikeArrCnt[47]='0';
+mihanblogLikeArrCnt[48]='0';
+mihanblogDisLikeArrCnt[48]='0';
+mihanblogLikeArrCnt[49]='0';
+mihanblogDisLikeArrCnt[49]='0';
+mihanblogLikeArrCnt[50]='0';
+mihanblogDisLikeArrCnt[50]='0';
+mihanblogLikeArrCnt[51]='0';
+mihanblogDisLikeArrCnt[51]='0';
+mihanblogLikeArrCnt[52]='0';
+mihanblogDisLikeArrCnt[52]='0';
+mihanblogLikeArrCnt[53]='0';
+mihanblogDisLikeArrCnt[53]='0';
+mihanblogLikeArrCnt[54]='0';
+mihanblogDisLikeArrCnt[54]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://zanjan2rism.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://zanjan2rism.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','52');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','پنجشنبه 7 مرداد 1395');
+	
+	setStatVar('today_view','50');
+	setStatVar('yesterday_view','291');
+	
+	setStatVar('this_month_view','2841');
+	setStatVar('last_month_view','3458');
+
+	setStatVar('total_view','432309');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (15:34)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://zanjan2rism.mihanblog.com/statupdate/?data[refereruri]=http://zanjan2rism.mihanblog.com/&data[postid]=&data[requesturi]=/post/author/1203029&data[sdate]=1607774876&data[hash]=2c076765f32a996a47b1fd0686b0a62e&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://zanjan2rism.mihanblog.com/post/author/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://zanjan2rism.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://zanjan2rism.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://zanjan2rism.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://zanjan2rism.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://zanjan2rism.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://zanjan2rism.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://zanjan2rism.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://zanjan2rism.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://zanjan2rism.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://zanjan2rism.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://zanjan2rism.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://zanjan2rism.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://zanjan2rism.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://zanjan2rism.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://zanjan2rism.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>زنجان توریسم - مطالب دنیز </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="designer" content="Theme - Designer">
+<meta name="designerUrl" content="http://www.theme-designer.com/">
+<meta name="language" content="Farsi">
+<meta name="author" content="دنیز ">
+<meta name="description" content="زنجان توریسم - مطالب دنیز  - زنجان ، زنگان ، بناهای تاریخی زنجان ، گنبد سلطانیه ، zanjan ، زنجان توریسم ، آذربایجان ">
+<meta name="keywords" content="زنجان توریسم - مطالب دنیز , زنجان , زنجان توریسم , گنبد سلطانیه , zanjan , زنگان , بناهای تاریخی زنجان ">
+<link rel="alternate" type="application/rss+xml" title="زنجان توریسم - مطالب دنیز " href="../rss/index.html" />
+<script src="http://themeupload.theme-designer.com/55/jquery-1.4.3.min.js" type="text/javascript"></script>
+<script src="http://themeupload.theme-designer.com/55/jquery.tools.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://themeupload.theme-designer.com/55/scrolltopcontrol.js"></script> 
+<link href="http://themeupload.theme-designer.com/55/c.css" type="text/css" rel="stylesheet">
+<script language="javascript" type="text/javascript">
+        // execute your scripts when the DOM is ready. this is mostly a good habit
+        $(function() {
+
+            // initialize scrollable
+        $(".scrollable").scrollable({ circular: true }).autoscroll({ interval: 4000 });
+
+        });
+</script>
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+</head>
+<!-- template55-mihanblog -->
+<!-- Design By : wWw.Theme-Designer.Com -->
+<!-- Version: 4.0 -->
+
+<body bgcolor="#FFFFFF">
+
+<div align="center">
+<table border="0" width="898" cellspacing="0" cellpadding="0" dir="rtl">
+<tr>
+<td>
+
+<!---------- he ---------------------------->
+<!---------- address-image --------->
+<div style="width:898px; overflow:hidden; height:228px; overflow:hidden;
+background-image:url('http://s5.picofile.com/file/8140182326/deniz.png');
+background-repeat:no-repeat">
+<!---------- address-image --------->
+
+<table border="0" width="100%" height="78" cellspacing="0" cellpadding="0" class="theme-designer-com-heder1">
+<tr>
+<td valign="top">
+
+<div class="alibehnamfar-ir-margin">
+<ul id="alibehnamfar-ir" align="right">
+	<li><a href="../../index.html" class="home" title="صفحه ی نخست">
+    <span class="hidden">صفحه ی اصلی</span></a></li>
+    <li><a href="javascript:messageForm()" class="tamas" title="تماس با ما">
+    <span class="hidden">تماس با ما</span></a></li>
+    <li><a target="_blank" href="mailto:" class="email" title="پست الکترونیک">
+    <span class="hidden">پست الکترونیک</span></a></li>
+    <li><a href="../archive.html" class="archive" title="آرشیو مطالب">
+    <span class="hidden">آرشیو مطالب</span></a></li>
+    <li><a target="_blank" href="../rss/index.html" class="rss" title="لینك rss">
+    <span class="hidden">لینك rss</span></a></li>
+    <li><a target="_blank" href="http://zanjan2rism.mihanblog.com/m/" class="mobile" title="نسخه موبایل">
+    <span class="hidden">نسخه موبایل</span></a></li>
+  </ul>
+</div>
+</div>
+
+</td>
+<td width="197" valign="top">
+
+
+
+<div class="theme-designer-com-icon">
+<div class="icon-shabake-padding">
+<div class="icon-shabake-2"><a target="_blank" href="http://instagram.com"><img border="0" src="http://themeupload.theme-designer.com/55/image/9.png"></a></div>
+<div class="icon-shabake"><a target="_blank" href="../rss/index.html"><img border="0" src="http://themeupload.theme-designer.com/55/image/8.png"></a></div>
+<div class="icon-shabake"><a target="_blank" href="http://youtube.com"><img border="0" src="http://themeupload.theme-designer.com/55/image/7.png"></a></div>
+<div class="icon-shabake"><a target="_blank" href="http://plus.google.com"><img border="0" src="http://themeupload.theme-designer.com/55/image/6.png"></a></div>
+<div class="icon-shabake"><a target="_blank" href="http://cloob.com"><img border="0" src="http://themeupload.theme-designer.com/55/image/5.png"></a></div>
+<div class="icon-shabake"><a target="_blank" href="http://balatarin.com"><img border="0" src="http://themeupload.theme-designer.com/55/image/4.png"></a></div>
+<div class="icon-shabake"><a target="_blank" href="http://twitter.com"><img border="0" src="http://themeupload.theme-designer.com/55/image/3.png"></a></div>
+<div class="icon-shabake"><a target="_blank" href="http://facebook.com"><img border="0" src="http://themeupload.theme-designer.com/55/image/2.png"></a></div>
+</div>
+</div>
+
+</td>
+</tr>
+</table>
+</div>
+<!---------- he ---------------------------->
+
+
+</td>
+</tr>
+</table>
+</div>
+
+
+<!---------- slideshow ---------------------------->
+<div align="center">
+<table border="0" width="930" cellspacing="0" cellpadding="0" dir="rtl">
+<tr>
+<td>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="13"><a class="next browse right"><img border="0" src="http://themeupload.theme-designer.com/55/image/15.gif"></a></td>
+<td>
+
+<div style="margin:10px 10px 0px 0px;">
+<div class="scrollable">
+<div class="items">
+<!---------- address-image size:898-203 --------->
+<div>
+<a target='_parent' href='http://zanjan2rism.mihanblog.com/post/author/%D8%A2%D8%AF%D8%B1%D8%B3%20%D9%84%DB%8C%D9%86%DA%A9%20%D8%B9%DA%A9%D8%B3' title="زنجان"><img src="http://s6.picofile.com/file/8195812600/%D8%B2%D9%86%D8%AC%D8%A7%D9%86_min.png"></a>
+</div>
+<!---------- /address-image --------->
+<!---------- address-image size:898-203 --------->
+<div>
+<a target='_parent' href='http://zanjan2rism.mihanblog.com/post/author/%D8%A2%D8%AF%D8%B1%D8%B3%20%D9%84%DB%8C%D9%86%DA%A9%20%D8%B9%DA%A9%D8%B3' title="گنبد سلطانیه"><img src="http://s6.picofile.com/file/8195812626/%D8%B3%D9%84%D8%B7%D8%A7%D9%86%DB%8C%D9%87_min.png"></a>
+</div>
+<!---------- /address-image --------->
+<!---------- address-image size:898-203 --------->
+<div>
+<a target='_parent' href='http://zanjan2rism.mihanblog.com/post/author/%D8%A2%D8%AF%D8%B1%D8%B3%20%D9%84%DB%8C%D9%86%DA%A9%20%D8%B9%DA%A9%D8%B3' title="عمارت دارایی"><img src="http://s3.picofile.com/file/8195812634/%D8%B9%D9%85%D8%A7%D8%B1%D8%AA_%D8%AF%D8%A7%D8%B1%D8%A7%DB%8C%DB%8C_min.png"></a>
+</div>
+<!---------- /address-image --------->
+<!---------- address-image size:898-203 --------->
+<div>
+<a target='_parent' href='http://zanjan2rism.mihanblog.com/post/author/%D8%A2%D8%AF%D8%B1%D8%B3%20%D9%84%DB%8C%D9%86%DA%A9%20%D8%B9%DA%A9%D8%B3' title="عمارت ذوالفقاری"><img src="http://s3.picofile.com/file/8195812650/%D8%B9%D9%85%D8%A7%D8%B1%D8%AA_%D8%B0%D9%88%D8%A7%D9%84%D9%81%D9%82%D8%A7%D8%B1%DB%8C_min.png"></a>
+</div>
+<!---------- /address-image --------->
+<!---------- address-image size:898-203 --------->
+<div>
+<a target='_parent' href='http://zanjan2rism.mihanblog.com/post/author/%D8%A2%D8%AF%D8%B1%D8%B3%20%D9%84%DB%8C%D9%86%DA%A9%20%D8%B9%DA%A9%D8%B3' title="مقبره چلپی اوغلی"><img src="http://s6.picofile.com/file/8195812492/%DA%86%D9%84%D9%BE%DB%8C_min.png"></a>
+</div>
+<!---------- /address-image --------->
+<!---------- address-image size:898-203 --------->
+<div>
+<a target='_parent' href='http://zanjan2rism.mihanblog.com/post/author/%D8%A2%D8%AF%D8%B1%D8%B3%20%D9%84%DB%8C%D9%86%DA%A9%20%D8%B9%DA%A9%D8%B3' title="کوههای رنگی ماهنشان"><img src="http://s6.picofile.com/file/8195812692/%DA%A9%D9%88%D9%87%D9%87%D8%A7%DB%8C_%D8%B1%D9%86%DA%AF%DB%8C_min.png"></a>
+</div>
+<!---------- /address-image --------->
+<!---------- address-image size:898-203 --------->
+<div>
+<a target='_parent' href='http://zanjan2rism.mihanblog.com/post/author/%D8%A2%D8%AF%D8%B1%D8%B3%20%D9%84%DB%8C%D9%86%DA%A9%20%D8%B9%DA%A9%D8%B3' title="حمام سالار"><img src="http://s3.picofile.com/file/8195812534/%D8%AD%D9%85%D8%A7%D9%85_%D8%B3%D8%A7%D9%84%D8%A7%D8%B1_min.png"></a>
+</div>
+<!---------- /address-image --------->
+<!---------- address-image size:898-203 --------->
+<div>
+<a target='_parent' href='http://zanjan2rism.mihanblog.com/post/author/%D8%A2%D8%AF%D8%B1%D8%B3%20%D9%84%DB%8C%D9%86%DA%A9%20%D8%B9%DA%A9%D8%B3' title="معبد داش کسن"><img src="http://s3.picofile.com/file/8195812542/%D8%AF%D8%A7%D8%B4_%DA%A9%D8%B3%D9%86_min.png"></a>
+</div>
+<!---------- /address-image --------->
+<!---------- address-image size:898-203 --------->
+<div>
+<a target='_parent' href='http://zanjan2rism.mihanblog.com/post/author/%D8%A2%D8%AF%D8%B1%D8%B3%20%D9%84%DB%8C%D9%86%DA%A9%20%D8%B9%DA%A9%D8%B3' title="بنای رختشویخانه"><img src="http://s3.picofile.com/file/8195812584/%D8%B1%D8%AE%D8%AA%D8%B4%D8%AE%D9%88%DB%8C%D8%AE%D8%A7%D9%86%D9%87_min.png"></a>
+</div>
+<!---------- /address-image --------->
+<!---------- address-image size:898-203 --------->
+<div>
+<a target='_parent' href='http://zanjan2rism.mihanblog.com/post/author/%D8%A2%D8%AF%D8%B1%D8%B3%20%D9%84%DB%8C%D9%86%DA%A9%20%D8%B9%DA%A9%D8%B3' title="غار کتله خور"><img src="http://s6.picofile.com/file/8195812676/%D8%BA%D8%A7%D8%B1_%DA%A9%D8%AA%D9%84%D9%87_%D8%AE%D9%88%D8%B1_min.png"></a>
+</div>
+<!---------- /address-image --------->
+<!---------- address-image size:898-203 --------->
+<div>
+<a target='_parent' href='http://zanjan2rism.mihanblog.com/post/author/%D8%A2%D8%AF%D8%B1%D8%B3%20%D9%84%DB%8C%D9%86%DA%A9%20%D8%B9%DA%A9%D8%B3' title="چمن سلطانیه"><img src="http://s6.picofile.com/file/8195812500/%DA%86%D9%85%D9%86_%D8%B3%D9%84%D8%B7%D8%A7%D9%86%DB%8C%D9%87_min.png"></a>
+</div>
+<!---------- /address-image --------->
+</div>
+</div>
+</div>
+
+</td>
+<td width="13"><a class="prev browse left"><img border="0" src="http://themeupload.theme-designer.com/55/image/14.gif"></a></td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</div>
+<!---------- slideshow ---------------------------->
+
+
+<div align="center">
+<table border="0" width="898" cellspacing="0" cellpadding="0" dir="rtl">
+<tr>
+<td>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="12" valign="top">&nbsp;</td>
+
+<td width="209" valign="top">
+<div class="theme-designer-com-menu1"></div>
+
+<div align="right">
+
+<div class="theme-designer-com-menu2"><img border="0" src="http://themeupload.theme-designer.com/55/image/title/1.png"></div>
+<div class="menu-space2"></div>
+<div align="center"><div class="theme-designer-com-menu3"><div align="right">
+<div align="center" style="margin:10px 0px 10px 0px;"><img src="../../../static.mihanblog.com/public/user_data/web_photo/485/1454637.jpg@9387"  /></div>
+با سلام حضور دوستان عزیز<br />
+بسیار مفتخرم که در این وبلاگ به خدمتی هرچند ناچیز در بیان ، معرفی و شناساندن استان زیبایم زنجان که پنجره ای رو به دیدگان شما عزیزان است، برآمدم . موفقیت روزافزون شهر عزیزم زنجان در مسیر توسعه و ارتقاء قابلیتهای گردشگری آن امید و آرزوی همه ی مردم این دیار است . صمیمانه پذیرای حضور پرمحبت شما بزرگواران هستم .<br />
+<br>
+&nbsp; :: <a target="_blank" href="1203029.html">مدیر وب سایت  : دنیز </a>
+</div></div></div><div class="menu-space1"></div>
+
+
+
+		
+<div class="theme-designer-com-menu2"><img border="0" src="http://themeupload.theme-designer.com/55/image/title/2.png"></div>
+<div class="menu-space2"></div>
+<div class="theme-designer-com-menu4">
+<div class="vmenu"><a href="../category/5.html" title="7" >
+پروژه های عمرانی</a></div><div class="vmenu"><a href="../category/7.html" title="1" >
+علمی و پژوهشی</a></div><div class="vmenu"><a href="../category/11.html" title="2" >
+بهداشت و درمان</a></div><div class="vmenu"><a href="../category/9.html" title="6" >
+مشاهیر و مفاخر</a></div><div class="vmenu"><a href="../category/2.html" title="7" >
+امکانات رفاهی</a></div><div class="vmenu"><a href="../category/1.html" title="10" >
+بناهای تاریخی</a></div><div class="vmenu"><a href="../category/13.html" title="4" >
+صنایع دستی</a></div><div class="vmenu"><a href="../category/12.html" title="4" >
+نمای شهر</a></div><div class="vmenu"><a href="../category/4.html" title="21" >
+گردشگری</a></div><div class="vmenu"><a href="../category/10.html" title="1" >
+سفرنامه</a></div><div class="vmenu"><a href="../category/3.html" title="4" >
+ورزشی</a></div><div class="vmenu"><a href="../category/6.html" title="9" >
+فرهنگ</a></div><div class="vmenu"><a href="../category/8.html" title="15" >
+طبیعت</a></div></div>
+<div class="menu-space1"></div>
+
+<div class="theme-designer-com-menu2"><img border="0" src="http://themeupload.theme-designer.com/55/image/title/3.png"></div>
+<div class="menu-space2"></div>
+<div class="theme-designer-com-menu4">
+<div class="vmenu"><a target="_blank" href="../../../kaleybarcity.mihanblog.com/index.html" title="" >کلیبر سیتی</a></div><div class="vmenu"><a target="_blank" href="../../../tabrizlinks.mihanblog.com/index.html" title="" >تبریز ویکی لینکلر</a></div><div class="vmenu"><a target="_blank" href="../../../geotabz.mihanblog.com/index.html" title="" >جغرافیا از نو</a></div><div class="vmenu"><a target="_blank" href="../../../quranic-knowlege.mihanblog.com/index.html" title="" >دانستنی هایی درباره قرآن</a></div><div class="vmenu"><a target="_blank" href="http://aliakbarsaharkhiz.blogfa.com/" title="" >از دیار خراسان</a></div><div class="vmenu"><a target="_blank" href="http://mina1379.blogfa.com/" title="" >آموزش ابتدایی زیربنای آموزش و پرورش</a></div><div class="vmenu"><a target="_blank" href="../../../aliakbarsaharkhiz.mihanblog.com/index.html" title="" >از دیار خراسان (وبلاگ جدید )</a></div><div class="vmenu"><a target="_blank" href="../../../zanjani.mihanblog.com/index.html" title="" >علمای زنجان , شهدای راست قامت زنجانی</a></div><div class="vmenu"><a target="_blank" href="../../../khotbehsara.mihanblog.com/index.html" title="" >آنایوردوم ایران سرای امید</a></div><div class="vmenu"><a target="_blank" href="../../../taroompix.mihanblog.com/index.html" title="" >طبیعت زیبای شهرستان طارم</a></div><div class="vmenu"><a target="_blank" href="http://irph.blogfa.com/" title="" >پروژه های عمرانی ایران</a></div><div class="vmenu"><a target="_blank" href="http://sinixkorpu.blogfa.com/" title="" >سهلان.ساوالان.ساغلان.سآلان</a></div><div class="vmenu"><a target="_blank" href="http://sinixkorpu.arzublog.com/" title="" >سهلان.ساوالان.ساغلان.سآلان (وبلاگ جدید)</a></div><div class="vmenu"><a target="_blank" href="http://ghultoogh.persianblog.ir/" title="" >آنایوردوم قلتوق</a></div><div class="vmenu"><a target="_blank" href="http://menegsahram.persianblog.ir/" title="" >منینگ صحرام</a></div><div class="vmenu"><a target="_blank" href="../../../alibagherie.mihanblog.com/index.html" title="" >شعروادبیات</a></div><div class="vmenu"><a target="_blank" href="http://y-stak.persianblog.ir/" title="" >استاک</a></div><div class="vmenu"><a target="_blank" href="../../../anayourdumazarbaijan.mihanblog.com/index.html" title="" >آنایوردوم آذربایجان</a></div><div class="vmenu"><a target="_blank" href="../../../huseynvahedi.mihanblog.com/index.html" title="" >خاطیره لر  دوراغی</a></div><div class="vmenu"><a target="_blank" href="http://nazlibakhish.persianblog.ir/" title="" >باخیش</a></div><div class="vmenu"><a target="_blank" href="http://safidantabriz.blogfa.com/" title="" >اسپیران تبریز</a></div><div class="vmenu"><a target="_blank" href="http://www.khiyavtraxtorchi.blogfa.com/" title="" >مشگین شهر</a></div><div class="vmenu"><a target="_blank" href="http://turkcetenzler.arzublog.com/" title="" >تورکجه طنزلر</a></div><div class="vmenu"><a target="_blank" href="http://katoul-afraz.persianblog.ir/" title="" >جاذبه های طبیعی وگردشگری کتول-محمدرضاافراز</a></div><div class="vmenu"><a target="_blank" href="http://waterfall.blog.ir/" title="" >زیباترین آبشارها و مناظر طبیعی ایران</a></div><div class="vmenu"><a target="_blank" href="../../../mihanamiranzamin.mihanblog.com/index.html" title="" >میهنم ایران زمین</a></div><div class="vmenu"><a target="_blank" href="../../link/index.html" >لیست کامل لینک دوستان</a></div>
+</div>
+<div class="menu-space1"></div>
+
+<div class="theme-designer-com-menu2"><img border="0" src="http://themeupload.theme-designer.com/55/image/title/5.png"></div>
+<div class="menu-space2"></div>
+<div class="theme-designer-com-menu4">
+<div class="vmenu"><a href="1203029.html" title="52" >دنیز </a></div></div>
+<div class="menu-space1"></div>
+
+<div class="theme-designer-com-menu2"><img border="0" src="http://themeupload.theme-designer.com/55/image/title/12.png"></div>
+<div class="menu-space2"></div>
+<div align="center"><div class="theme-designer-com-menu3"><div align="right">
+<a href="../tag/zanjan.html" style="font-size:1.12em">
+zanjan</a> , <a href="../tag/سفر.html" style="font-size:1em">
+سفر</a> , <a href="../tag/رودخانه.html" style="font-size:1em">
+رودخانه</a> , <a href="../tag/استان+زنجان.html" style="font-size:1.08em">
+استان زنجان</a> , <a href="../tag/زنجان.html" style="font-size:2em">
+زنجان</a> , <a href="../tag/صنایع+دستی.html" style="font-size:1.08em">
+صنایع دستی</a> , <a href="../tag/دانشمند.html" style="font-size:1.04em">
+دانشمند</a> , <a href="../tag/گردشگری.html" style="font-size:1.12em">
+گردشگری</a> , <a href="../tag/ورزش.html" style="font-size:1em">
+ورزش</a> , <a href="../tag/طبیعت.html" style="font-size:1.04em">
+طبیعت</a> , </div></div></div>
+<div class="menu-space1"></div>
+
+<div class="theme-designer-com-menu2"><img border="0" src="http://themeupload.theme-designer.com/55/image/title/4.png"></div>
+<div class="menu-space2"></div>
+<div class="theme-designer-com-menu4">
+<div class="vmenu"><a target="_blank" href="http://Www.palic.ir" title="دانشنامه  علمی پالیک -خانه ریاضی زنجان" >
+دانشنامه  علمی پالیک -خانه ریاضی زنجان</a></div><div class="vmenu"><a target="_blank" href="http://www.haz.ir/" title="" >
+حسینیه اعظم زنجان</a></div><div class="vmenu"><a target="_blank" href="http://www.zums.ac.ir/" title="" >
+دانشگاه علوم پزشکی زنجان</a></div><div class="vmenu"><a target="_blank" href="http://www.tebyan-zn.ir/" title="" >
+تبیان زنجان</a></div><div class="vmenu"><a target="_blank" href="http://shahabzanjan.ir/" title="" >
+شهاب زنجان</a></div><div class="vmenu"><a target="_blank" href="http://www.mojerasa.ir/" title="" >
+موج رسا</a></div><div class="vmenu"><a target="_blank" href="http://www7.zanjan.irna.ir/firstpage.aspx" title="" >
+ایرنا زنجان</a></div>
+<div class="vmenu"><a  target="_blank" href="../../linkdaily/index.html" >لیست کامل پیوندهای روزانه</a></div>
+<div class="vmenu"><a  href="javascript:linkdailyForm()" >ارسال پیوند</a></div>
+</div>
+<div class="menu-space1"></div>
+
+<div class="theme-designer-com-menu2"><img border="0" src="http://themeupload.theme-designer.com/55/image/title/11.png"></div>
+<div class="menu-space2"></div>
+<div class="theme-designer-com-menu4">
+<div class="vmenu"><a href="../archive/1395/5.html" title="1">
+ مرداد 1395</a></div><div class="vmenu"><a href="../archive/1395/3.html" title="4">
+ خرداد 1395</a></div><div class="vmenu"><a href="../archive/1394/12.html" title="1">
+ اسفند 1394</a></div><div class="vmenu"><a href="../archive/1394/10.html" title="1">
+ دی 1394</a></div><div class="vmenu"><a href="../archive/1394/8.html" title="1">
+ آبان 1394</a></div><div class="vmenu"><a href="../archive/1394/7.html" title="3">
+ مهر 1394</a></div><div class="vmenu"><a href="../archive/1394/6.html" title="3">
+ شهریور 1394</a></div><div class="vmenu"><a href="../archive/1394/5.html" title="6">
+ مرداد 1394</a></div><div class="vmenu"><a href="../archive/1394/4.html" title="6">
+ تیر 1394</a></div><div class="vmenu"><a href="../archive/1394/3.html" title="3">
+ خرداد 1394</a></div><div class="vmenu"><a href="../archive/1394/2.html" title="2">
+ اردیبهشت 1394</a></div><div class="vmenu"><a href="../archive/1394/1.html" title="2">
+ فروردین 1394</a></div></div>
+<div class="menu-space1"></div>
+
+<div class="theme-designer-com-menu2"><img border="0" src="http://themeupload.theme-designer.com/55/image/title/14.png"></div>
+<div class="menu-space2"></div>
+<div class="theme-designer-com-menu4">
+<div class="vmenu"><a href="../54.html" title="چهارشنبه 6 مرداد 1395" > حمام تاریخی و سفره خانه سنتی حاج داداش </a></div><div class="vmenu"><a href="../53.html" title="یکشنبه 23 خرداد 1395" > سد کینه ورس ابهر </a></div><div class="vmenu"><a href="../52.html" title="یکشنبه 23 خرداد 1395" > پارک بانوان زنجان </a></div><div class="vmenu"><a href="../51.html" title="پنجشنبه 20 خرداد 1395" > ورزشگاه زیتون زنجان </a></div><div class="vmenu"><a href="../50.html" title="پنجشنبه 13 خرداد 1395" > اسکای لاین زنجان </a></div><div class="vmenu"><a href="../49.html" title="پنجشنبه 13 خرداد 1395" > روستای چرگر  </a></div><div class="vmenu"><a href="../48.html" title="شنبه 1 اسفند 1394" > زنگان </a></div><div class="vmenu"><a href="../47.html" title="شنبه 19 دی 1394" > حکیم هیدجی </a></div><div class="vmenu"><a href="../46.html" title="جمعه 29 آبان 1394" > چاروق زنجان </a></div><div class="vmenu"><a href="../45.html" title="شنبه 25 مهر 1394" > حسینیه اعظم زنجان 93 </a></div><div class="vmenu"><a href="../44.html" title="شنبه 25 مهر 1394" > انجمن خیریه مهرانه </a></div><div class="vmenu"><a href="../42.html" title="یکشنبه 19 مهر 1394" > حمام سالار سلطانیه </a></div><div class="vmenu"><a href="../41.html" title="یکشنبه 22 شهریور 1394" > بالیخلی بولاغی گرماب </a></div><div class="vmenu"><a href="../40.html" title="پنجشنبه 12 شهریور 1394" > شهرک صنایع دستی و گردشگری نور زنجان </a></div><div class="vmenu"><a href="../39.html" title="سه شنبه 10 شهریور 1394" > دهمین جشنواره آش ایرانی / زنجان </a></div><div class="vmenu"><a href="../38.html" title="جمعه 16 مرداد 1394" > طرح گذر چله تابستان در زنجان </a></div><div class="vmenu"><a href="../37.html" title="جمعه 16 مرداد 1394" > قلعه لک لک ها / زنجان </a></div><div class="vmenu"><a href="../36.html" title="پنجشنبه 15 مرداد 1394" > زنجان دیار غواصان دریادل </a></div><div class="vmenu"><a href="../35.html" title="جمعه 9 مرداد 1394" > چاقوی زنجان </a></div><div class="vmenu"><a href="../34.html" title="جمعه 9 مرداد 1394" > ییلاق آب بر </a></div><div class="vmenu"><a href="../33.html" title="سه شنبه 6 مرداد 1394" > روز ملی زنجان - روز بزرگداشت شیخ شهاب الدین سهروردی </a></div><div class="vmenu"><a href="../31.html" title="پنجشنبه 25 تیر 1394" > نورپردازی های شهر زنجان </a></div><div class="vmenu"><a href="../32.html" title="پنجشنبه 25 تیر 1394" > زردآلوی ماهنشان </a></div><div class="vmenu"><a href="../30.html" title="یکشنبه 21 تیر 1394" > پرواز بر فراز زنجان </a></div><div class="vmenu"><a href="../29.html" title="شنبه 13 تیر 1394" > معبد داش کسن  </a></div><div class="vmenu"><a href="../28.html" title="شنبه 13 تیر 1394" > نمایشگاه بین المللی کاسپین زنجان </a></div><div class="vmenu"><a href="../27.html" title="پنجشنبه 4 تیر 1394" > آهوی دشت سهرین </a></div><div class="vmenu"><a href="../26.html" title="سه شنبه 2 تیر 1394" > ییلاق قارقالان ماهنشان </a></div><div class="vmenu"><a href="../25.html" title="چهارشنبه 27 خرداد 1394" > چشمه شاه بولاغی </a></div><div class="vmenu"><a href="../24.html" title="یکشنبه 24 خرداد 1394" > کارخانه کبریت زنجان </a></div></div>
+<div class="menu-space1"></div>
+
+<div class="theme-designer-com-menu2"><img border="0" src="http://themeupload.theme-designer.com/55/image/title/7.png"></div>
+<div class="menu-space2"></div>
+<div class="menu-space2"></div>
+<div align="center"><div class="theme-designer-com-menu3">
+<div align="right">
+ » تعداد مطالب : <script>getStatVar('total_post');</script><br>
+
+ » بازدید امروز : <script>getStatVar('today_view');</script><br>
+
+ » بازدید کل : <script>getStatVar('total_view');</script><br>
+
+</div><center></center>
+</div></div>
+<div class="menu-space1"></div>
+
+<!-- Begin ToolsIR.com Jalali code -->
+<script src="http://jalali.toolsir.com/shamsi.php?color=khakestari" type="text/javascript"></script><div style="display:none;"><h2><a href="http://www.toolsir.com/">دریافت کد تاریخ شمسی</a></h2></div>
+<!-- End ToolsIR.com Jalali code -->
+
+
+<!-- start logo cod off https://instagram.com/zanjan.2rism/ --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="https://instagram.com/zanjan.2rism/" ” target="_blank"><img border="0" src="http://s3.picofile.com/file/8220378692/%D8%A7%DB%8C%D9%86%D8%B3%D8%AA%D8%A7%DA%AF%D8%B1%D8%A7%D9%85.jpg"  width="180" height="235" alt=" اینستاگرام زنجان توریسم"></a></p><!--finish logo cod off https://instagram.com/zanjan.2rism/ -->
+
+<!-- start logo cod off http://www.lenzor.com/zanjan2rism --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="http://www.lenzor.com/zanjan2rism" ” target="_blank"><img border="0" src="http://s6.picofile.com/file/8216988718/%D9%84%D9%86%D8%B2%D9%88%D8%B1.jpg"  width="180" height="210" alt=" لنزور زنجان توریسم"></a></p><!--finish logo cod off http://www.lenzor.com/zanjan2rism -->
+
+<!-- start logo cod off http://zanjan.ir/default.aspx --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="http://zanjan.ir/default.aspx" ” target="_blank"><img border="0" src="http://s6.picofile.com/file/8212202084/9.png"  width="180" height="180" alt=" شهرداری زنجان"></a></p><!--finish logo cod off http://zanjan.ir/default.aspx -->
+
+<!-- start logo cod off https://cafebazaar.ir/app/com.example.zanjaninpocket/?l=fa --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="https://cafebazaar.ir/app/com.example.zanjaninpocket/?l=fa" ” target="_blank"><img border="0" src="http://s6.picofile.com/file/8212205384/10.png"  width="180" height="200" alt=" نرم افزار اندرویدی گردشگری استان زنجان"></a></p><!--finish logo cod off https://cafebazaar.ir/app/com.example.zanjaninpocket/?l=fa -->
+
+<!-- start logo cod off http://www.oojooz.com/?l=fa --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="http://www.oojooz.com/?l=fa" ” target="_blank"><img border="0" src="http://s6.picofile.com/file/8214405184/11.png"  width="180" height="150" alt="تخفیف های زنجان"></a></p><!--finish logo cod off http://www.oojooz.com/?l=fa -->
+
+<!-- start logo cod off http://www.mobaraktoy.com/ --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="http://www.mobaraktoy.com/" ” target="_blank"><img border="0" src="http://s3.picofile.com/file/8212195518/6.png"  width="180" height="160" alt=" بنیاد ازدواج کوثر زنجان"></a></p><!--finish logo cod off http://www.mobaraktoy.com/ -->
+
+<!-- start logo cod off http://zanjanet.ir/ --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="http://zanjanet.ir/" ” target="_blank"><img border="0" src="http://s6.picofile.com/file/8197799000/2.png"  width="180" height="140" alt="زنجانت"></a></p><!--finish logo cod off http://zanjanet.ir/ -->
+
+<!-- start logo cod off http://azarbaijanpress.ir/ --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="http://azarbaijanpress.ir/" ” target="_blank"><img border="0" src="http://s6.picofile.com/file/8197801034/3.png"  width="180" height="140" alt="آذربایجان"></a></p><!--finish logo cod off http://azarbaijanpress.ir/ -->
+
+<!-- start logo cod off http://tabrizlinks.mihanblog.com/ --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="http://tabrizlinks.mihanblog.com/" ” target="_blank"><img border="0" src="http://tabrizlinks.persiangig.com/video/tabrizlinks.jpg"  width="155" height="150" alt="تبریز ویکی لینکلر"></a></p><!--finish logo cod off http://tabrizlinks.mihanblog.com/ -->
+
+<!-- start logo cod off http://zanjanam.ir/ --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="http://zanjanam.ir/" ” target="_blank"><img border="0" src="http://s4.picofile.com/file/8181328268/2015_04_08_120732.png"  width="180" height="140" alt="زنجانم"></a></p><!--finish logo cod off http://zanjanam.ir/ -->
+
+<!-- start logo cod off http://zanjankf.org/ --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="http://zanjankf.org/" ” target="_blank"><img border="0" src="http://s4.picofile.com/file/8181331592/2015_04_08_121901.png"  width="180" height="140" alt="انجمن کلیوی زنجان"></a></p><!--finish logo cod off http://zanjankf.org/ -->
+
+<!-- start logo cod off http://www.roozbeh-charity.ir/ --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="http://www.roozbeh-charity.ir/" ” target="_blank"><img border="0" src="http://s5.picofile.com/file/8140107500/2014_09_11_112804.png"  width="180" height="140" alt="موسسه خیریه روزبه"></a></p><!--finish logo cod off http://www.roozbeh-charity.ir/ -->
+
+<!-- start logo cod off http://www.mehranehcharity.ir/fa/ --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="http://www.mehranehcharity.ir/fa/" ” target="_blank"><img border="0" src="http://s5.picofile.com/file/8140107526/2014_09_11_113845.png"  width="180" height="140" alt="مهرانه"></a></p><!--finish logo cod off http://www.mehranehcharity.ir/fa/ -->
+
+<!-- start logo cod off http://www.rbiran.ir/zanjan --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="http://www.rbiran.ir/zanjan" ” target="_blank"><img border="0" src="http://s5.picofile.com/file/8140107592/2014_09_11_112925.png"  width="180" height="140" alt="راهنمای برتر زنجان"></a></p><!--finish logo cod off http://www.rbiran.ir/zanjan -->
+
+<!-- start logo cod off http://asrezanjan.ir/ --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="http://asrezanjan.ir/" ” target="_blank"><img border="0" src="http://s5.picofile.com/file/8140107618/2014_09_11_113252.png"  width="180" height="140" alt="عصر زنجان"></a></p><!--finish logo cod off http://asrezanjan.ir/ -->
+
+<!-- start logo cod off http://zanghan.ir/ --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="http://zanghan.ir/" ” target="_blank"><img border="0" src="http://s5.picofile.com/file/8140467918/2014_09_13_110525.png"  width="180" height="140" alt="کانون وبلاگ نویسان جوان زنجان"></a></p><!--finish logo cod off http://zanghan.ir/ -->
+
+<!-- start logo cod off http://www.mehrezanjan.ir/ --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="http://www.mehrezanjan.ir/" ” target="_blank"><img border="0" src="http://s4.picofile.com/file/8181326868/2015_04_08_120021.png"  width="180" height="140" alt=" مهر زنجان"></a></p><!--finish logo cod off http://www.mehrezanjan.ir/ -->
+
+<!-- start logo cod off http://zanjan.divar.ir/browse/? --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="http://zanjan.divar.ir/browse/?" ” target="_blank"><img border="0" src="http://s4.picofile.com/file/8181325176/divar.png"  width="150" height="120" alt="   دیوار"></a></p><!--finish logo cod off http://zanjan.divar.ir/browse/? -->
+
+<!-- start logo cod off http://zanjan.sheypoor.com/all/c0? --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="http://zanjan.sheypoor.com/all/c0?" ” target="_blank"><img border="0" src="http://s3.picofile.com/file/8197802350/4.png"  width="180" height="140" alt=" شیپور "></a></p><!--finish logo cod off http://zanjan.sheypoor.com/all/c0? -->
+
+<!-- start logo cod off http://www.nasimezanjan.ir/ --><script language="javascript" type="text/javascript" ></script><p align="center"><p align="center"><a href="http://www.nasimezanjan.ir/" ” target="_blank"><img border="0" src="http://s6.picofile.com/file/8220385292/ksdl.png"  width="180" height="140" alt=" نسیم زنجان"></a></p><!--finish logo cod off http://www.nasimezanjan.ir/ -->
+
+</div>
+</td>
+
+<td width="13" valign="top">&nbsp;</td>
+<td width="1" class="theme-designer-com1" valign="top">
+<img border="0" src="http://themeupload.theme-designer.com/55/image/18.jpg">
+</td>
+
+<td width="13" valign="top">&nbsp;</td>
+<td width="650" valign="top">
+
+<div class="theme-designer-com-title1"></div>
+
+<div align="center">
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class="theme-designer-com-title3"></td>
+<td class="theme-designer-com-title4">
+<div class="blogtitle"><div class="title"><h1><p dir="rtl" align="center"><a href="../../index.html">زنجان توریسم</a></h1></div></div>
+<div class="blogdescription"><p dir="rtl" align="center"></div>
+</td>
+<td class="theme-designer-com-title2"></td>
+</tr>
+</table>
+<div class="theme-designer-com-title5"></div>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div align="right">
+<div class="theme-designer-com-post1"></div>
+<div class="theme-designer-com-post3">
+<div class="title-post"><div class="link-title-post"><a href="../54.html">حمام تاریخی و سفره خانه سنتی حاج داداش</a></div></div>
+<div class="theme-designer-com-post4">
+چهارشنبه 6 مرداد 1395 ساعت 11:00 ب.ظ | 
+<!-- bazdid by www.theme-designer.com --->
+<script type="text/javascript" src="http://www.theme-designer.com/s/stat/posts/count.php?color=0e73b8&bg=FFFFFF&size=8&url=zanjan2rism.mihanblog.com//post/54"></script>
+<!-- bazdid by www.theme-designer.com ---> | 
+نوشته ‌شده به دست دنیز  | <span class="post-link"><a target="_self" href="javascript:newComment(54)">نظرات(<script>setCommentCnt(54)</script>)</span>
+</div>
+</div>
+<div class="theme-designer-com-post2"></div>
+<div align="center"><div class="post6"><div align="right">
+<div class="post8"><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+<br><br><div align="center"><font color="#666600" face="Mihan-IransansBold" size="5">حاج داداش <br><br>معماری باشکوه در قلب زنجان </font><br></div><br><br><div align="center"><img src="http://s1.picofile.com/file/8261461642/large_DSC008811_2015_04_21_17_34_12_0_56110700.jpg" alt="سفره خانه حاج داداش" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><br><font face="Mihan-Iransans" size="3">حمام حاج داداش یکی از قدیمی‌ترین بناهای تاریخی شهر زنجان است که در بازار قدیمی شهر زنجان و روبروی مسجد میرزایی واقع شده است.<br></font><br></div><div align="center"><span style="color: #000000; font-family: Tahoma; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 18px; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #eff7f7; display: inline !important; float: none;"><span style="font-size: 13px;"><span style="background-color: rgb(255, 255, 255);"><font face="Mihan-Iransans" size="3">سفره خانه سنتی حاج داداش یکی از بناهای تاریخی و منحصر به فرد شهر زنجان می باشد.</font><br><br></span><br><img src="http://s1.picofile.com/file/8261461276/large_DSC00884_2015_04_21_17_34_23_0_39572700.JPG" alt="سفره خانه حاج داداش" align="bottom" border="0" hspace="0" vspace="0"><br><br></span></span><br><font face="Mihan-Iransans" size="3">با حضور در فضای گرم و صمیمی این سفره‌خانه و تماشای معماری های بی‌نظیر&nbsp; حس آرامش بی نظیری در انسان به وجود می‌آید.</font><br><br><br><br><img src="http://s2.picofile.com/file/8261461242/9981cdf6258c150c7badc39d9c4d3893.jpg" alt="سفره خانه حاج داداش" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><span style="background-color: rgb(255, 255, 255);"><font face="Mihan-Iransans" size="3">سفره‌خانه
+ حاج داداش در قلب بازار قدیمی زنجان چندصد سال قبل به عنوان حمام 
+احداث شد. هم‌اکنون با حفظ بافت حمام و اندکی تغییر و ایجاد تزئینات زیبای 
+سنتی به عنوان سفر‌ه‌خانه برای پذیرایی گردشگران و اهالی شهر استفاده 
+می‌شود که مسافران و توریست های زیادی را به این مکان جذب کرده است.</font><br><br><br></span></div><div align="center"><br><img src="http://s2.picofile.com/file/8261461384/large_DSC00912_2015_04_21_17_36_41_0_30061500.JPG" alt="سفره خانه حاج داداش" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><img src="http://s1.picofile.com/file/8261461592/large_DSC00965_2015_04_21_17_34_58_0_88375700.JPG" alt="سفره خانه حاج داداش" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><font face="Mihan-Iransans" size="3"><span style="background-color: rgb(255, 255, 255);">از
+ سازنده اصلی این بنا اطلاعات دقیقی در دست نیست، ولی به گفته بعضی از 
+سالخوردگان فردی به نام حاج داداش بانی بنا است و از همان زمان حمام فوق به
+ نام حاج داداش مشهور شد.</span></font><br><br><br><img src="http://s1.picofile.com/file/8261461434/large_DSC00934_2015_04_21_17_37_31_0_44348300.JPG" alt="سفره خانه حاج داداش" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><img src="http://s2.picofile.com/file/8261461318/large_DSC00887_2015_04_21_17_34_31_0_81920900.JPG" alt="سفره خانه حاج داداش" align="bottom" border="0" hspace="0" vspace="0"><br><br><span style="background-color: rgb(255, 255, 255);"><br><br><font face="Mihan-Iransans" size="3">زمان
+ احداث سفره‌خانه سنتی و بنای تاریخی حاج داداش زنجان اوایل دوره قاجار 
+است. این بنای زیبا 150 تا 200 سال از دوران صفویه به بعد مرکز داد و ستد و
+ فرهنگ بومی و محلی بوده و مقابل مسجد آیت‌الله قائمی یکی از مساجد قدیمی و
+ مهم زنجان است.</font></span><br><br><br><img src="http://s2.picofile.com/file/8261461350/large_DSC00899_2015_04_21_17_35_33_0_65374600.JPG" alt="سفره خانه حاج داداش" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s1.picofile.com/file/8261461418/large_DSC00922_2015_04_21_17_37_22_0_19795400.JPG" alt="سفره خانه حاج داداش" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><img src="http://s1.picofile.com/file/8261461484/large_DSC00937_2015_04_21_17_37_45_0_59729200.JPG" alt="سفره خانه حاج داداش" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><span class="items"><span><span><font face="Mihan-Iransans" size="3">بنای باشکوه حاج داداش&nbsp; حدود 400 متر مربع زیربنا در زمینی بالغ بر 2 هزار و 500 متر مربع 
+واقع شده که از سه نقطه می‌توان به آن رفت و آمد کرد.این مجموعه تا سال 68 
+به عنوان حمام مورد استفاده قرار می‌گرفت سپس به مدت 10 سال بدون استفاده 
+ماند تا اینکه از اردیبهشت ماه سال 77 مرمت و بازسازی آن برای تبدیل به 
+مکانی فرهنگی و خدماتی آغاز و در سال 78 به بهره‌برداری رسید.
+</font><br><br></span></span></span><br><img src="http://s1.picofile.com/file/8261461526/large_DSC00946_2015_04_21_17_37_55_0_04283300.JPG" alt="سفره خانه حاج داداش" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><img src="http://s1.picofile.com/file/8261461542/large_DSC00949_2015_04_21_17_38_06_0_13846700.JPG" alt="سفره خانه حاج داداش" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><font face="Mihan-Iransans" size="3"><span class="items"><span><span>&nbsp;ورودی این بنا در ضلع شمالی رو به مسجد از دو لنگه درب چوبین و ضخامتی حدود
+ سه سانتی‌متر است. گل میخ‌های آهنی از تزئینات ماندگار این بنا جلوه خاصی 
+دارد. در ساخت حمام حاج داداش همانند مصالح سایر بناهای تاریخی از آجرهای  
+20 در 20 استفاده شده است. سقف بنای حاج داداش در قسمت‌های مختلف دارای 
+تزئینات گچ‌کاری است و از دیگر مصالح به کار رفته در ساخت این بنا می‌توان 
+ملات گچ و آهک، ساروج، سنگ تراورتن و کاشی‌های فاقد نقش نام برد.</span></span></span></font><br><br><br><img src="http://s2.picofile.com/file/8261461376/large_DSC00903_2015_04_21_17_35_46_0_59248600.JPG" alt="سفره خانه حاج داداش" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s2.picofile.com/file/8261461568/large_DSC00957_2015_04_21_17_35_09_0_82438300.JPG" alt="سفره خانه حاج داداش" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s2.picofile.com/file/8261460484/6.jpg" alt="سفره خانه حاج داداش" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><br><font face="Mihan-Iransans" size="3"><span class="items"><span><span>&nbsp;سیستم آب‌رسانی این بنا از طریق دو یا سه چاه در ضلع شرقی بنا بوسیله دلو 
+از چاه بالا می‌آمد و در نهایت داخل حوض می‌ریخت. این بنای تاریخی با 
+کاشی‌هایی به رنگ فیروزه‌ای، آبی روشن، آبی‌سیر و زرد تزئین شده است. فضای 
+بینه، زیباترین بخش این حمام سنتی است که طاق اصلی بر روی چهار ستون سنگی 
+مزین به سر ستون‌های مکعبی شکل و بدنه مارپیچی (از نوع ستون‌های ترکیبی) 
+قرار دارد.</span></span></span></font><br><br><br><img src="http://s1.picofile.com/file/8261460442/4.jpg" alt="سفره خانه حاج داداش" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s2.picofile.com/file/8261460376/1.jpg" alt="سفره خانه حاج داداش" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s2.picofile.com/file/8261460392/3.jpg" alt="سفره خانه حاج داداش" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><span class="items"><span><span><font face="Mihan-Iransans" size="3">گنبد اصلی حمام حاج داداش قدیمی‌ترین بناهای تاریخی شهر زنجان و 
+تنها حمام ستون سنگی این شهر بر روی چهار ستون سنگی است و این ستون ها در 
+زمان خود توسط هنرمندان همدانی تراشیده شده است.</font><br></span></span></span><br><br><br><img src="http://s1.picofile.com/file/8261460384/2.jpg" alt="سفره خانه حاج داداش" align="bottom" border="0" hspace="0" vspace="0"><br></div><span class="items"><span><span></span></span></span><br><span class="items"><span><span></span></span></span><div align="center"><div align="center"><font face="Mihan-Iransans" size="3"><br></font><p><font face="Mihan-Iransans" size="3">زنجان، ورودی بازار: خیابان امام، خیابان فردوسی، بازار پایین، پلاک ۴۵</font></p>
+                                                                                        <font face="Mihan-Iransans" size="3"><span id="neshanAdd"></span></font>        
+                            <p><font face="Mihan-Iransans" size="3">زنجان، ورودی پارکینگ: مابین سبزه میدان و چهارراه امیرکبیر، کوچه شهید خلیل نوروزی (سیدلر)</font></p>
+                         
+                                     
+                                        <font face="Mihan-Iransans" size="3"><span id="neshanPhone"></span></font>
+                <p><font face="Mihan-Iransans" size="3">۰۲۴-۳۳۳۳۶۸۲۰-۳۳۳۲۲۰۲۰</font></p>
+                                                                                                 
+                                        <font face="Mihan-Iransans" size="3"><span id="neshanFaxNumber"></span></font>
+                <p><font face="Mihan-Iransans" size="3">۰۲۴-۳۳۳۲۲۲۳۷</font></p><p><br><font color="#006600" face="Mihan-IransansBold" size="5"><font color="#000000" face="Mihan-IransansLight" size="1"><font size="3"><font class="foth9dg" style="font-size: 8pt" color="#333333" face="Tahoma"><font class="foth9dg" style="font-size: 11pt" color="#333333" face="Tahoma"><font class="foth9dg" style="font-size: 8pt" color="#333333" face="Tahoma"><font class="foth9dg" style="font-size: 11pt" color="#333333" face="Tahoma"><a href="http://parsskin.com" target="_blank"><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/248.jpg" border="0" height="49" width="353"></a></font></font></font></font></font><br>
+
+
+
+
+
+
+
+
+
+
+
+
+ </font></font></p><font face="Mihan-Iransans" size="3"><span class="items"><span><span></span></span></span></font></div></div>
+
+
+
+
+
+
+ </div><br><br>
+
+<br>:: مرتبط با: <a href="../category/2.html">
+امکانات رفاهی</a> , <a href="../category/1.html">
+بناهای تاریخی</a> , <a href="../category/4.html">
+گردشگری</a> , 
+<br>:: برچسب‌ها: <a href="../tag/سفره&#32;خانه.html">
+سفره خانه</a> , <a href="../tag/حمام&#32;تاریخی.html">
+حمام تاریخی</a> , <a href="../tag/دیدنی&#32;های&#32;زنجان.html">
+دیدنی های زنجان</a> , <a href="../tag/سفره&#32;خانه&#32;حاج&#32;داداش.html">
+سفره خانه حاج داداش</a> , <a href="../tag/بازار&#32;تاریخی.html">
+بازار تاریخی</a> , <a href="../tag/زنجان.html">
+زنجان</a> , <a href="../tag/سفر.html">
+سفر</a> , <br>
+
+</div></div></div>
+<div class="post7"></div>
+</div>
+<div align="right">
+<div class="theme-designer-com-post1"></div>
+<div class="theme-designer-com-post3">
+<div class="title-post"><div class="link-title-post"><a href="../53.html">سد کینه ورس ابهر</a></div></div>
+<div class="theme-designer-com-post4">
+یکشنبه 23 خرداد 1395 ساعت 03:54 ب.ظ | 
+<!-- bazdid by www.theme-designer.com --->
+<script type="text/javascript" src="http://www.theme-designer.com/s/stat/posts/count.php?color=0e73b8&bg=FFFFFF&size=8&url=zanjan2rism.mihanblog.com//post/53"></script>
+<!-- bazdid by www.theme-designer.com ---> | 
+نوشته ‌شده به دست دنیز  | <span class="post-link"><a target="_self" href="javascript:newComment(53)">نظرات(<script>setCommentCnt(53)</script>)</span>
+</div>
+</div>
+<div class="theme-designer-com-post2"></div>
+<div align="center"><div class="post6"><div align="right">
+<div class="post8"><br><div align="center"><br><font color="#003333" face="Mihan-IransansBold" size="5">سد کینه ورس ابهر</font><br><br><img src="http://s6.picofile.com/file/8255489918/1427041052898947262.jpg" alt="سد کینه ورس ابهر" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><font size="3"><b>سد کینه ورس</b> در استان زنجان و در فاصله ۱۴ كیلومتری جنوب‌غربی شهرستان ابهر و حدود ۵ كیلومتری روستای كینه ‌ورس قرار دارد. این سد بر روی شاخه‌كینه‌ ورس از رودخانه ابهررود كه از جنوب به طرف شمال جریان داشته و به دشت تاكستان وارد می شود . </font><br><br><br><img src="http://s7.picofile.com/file/8255489650/4.jpg" alt="سد کینه ورس ابهر" align="bottom" border="0" hspace="0" vspace="0"><br><br><font size="3">دریاچه سد کینه ورس محل مناسبی برای تفریح، گذران اوقات فراغت، ماهیگیری و 
+ورزش های آبی است که مردم استان زنجان به خصوص شهرستان ابهر، در فرصت های 
+مناسب از طبیعت اطراف دریاچه این سد استفاده می کنند.</font><br><br><img src="http://s7.picofile.com/file/8255489718/5.jpg" alt="سد کینه ورس ابهر" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8255489768/8.jpg" alt="سد کینه ورس ابهر" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><font face="Mihan-Iransans" size="3">مهمترین اهداف این سد تأمین آب شرب شهرهای ابهر و خرمدره به میزان 5/5 میلیون متر مکعب در سال و 7/5 متر مکعب آب کشاورزی برای تأمین آب یکهزار و ششصد اراضی حقابه بران تحت پوشش منطقه ، آب صنعت و نیازهای زیست محیطی می باشد . </font><br><br><br><img src="http://s6.picofile.com/file/8255489850/9.jpg" alt="سد کینه ورس ابهر" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s7.picofile.com/file/8255489734/7.jpg" alt="سد کینه ورس ابهر" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><font face="Mihan-Iransans"><font size="3">روستای کینه ورس در دهستان ابهررود قرار دارد . <br>اهالی این روستا ترک نژاد و شیعه دوازده امامی هستند و به زبان ترکی آذربایجانی صحبت می کنند .</font><br><br></font><br><img src="http://s6.picofile.com/file/8255489618/3.jpg" alt="سد کینه ورس ابهر" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8255489584/2.jpg" alt="سد کینه ورس ابهر" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><img src="http://s7.picofile.com/file/8255489568/1.jpg" alt="سد کینه ورس ابهر" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><font color="#006600" face="Mihan-IransansBold" size="5"><font color="#000000" face="Mihan-IransansLight" size="1"><font size="3"><font class="foth9dg" style="font-size: 8pt" color="#333333" face="Tahoma"><font class="foth9dg" style="font-size: 11pt" color="#333333" face="Tahoma"><font class="foth9dg" style="font-size: 8pt" color="#333333" face="Tahoma"><font class="foth9dg" style="font-size: 11pt" color="#333333" face="Tahoma"><a href="http://parsskin.com" target="_blank"><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/248.jpg" border="0" height="49" width="353"></a></font></font></font></font></font><br>
+
+
+
+
+
+
+
+
+
+
+
+
+ </font></font><p><br></p><br></div>
+
+
+ </div><br><br>
+
+
+<br>:: برچسب‌ها: <a href="../tag/سد.html">
+سد</a> , <a href="../tag/ابهر.html">
+ابهر</a> , <a href="../tag/زنجان.html">
+زنجان</a> , <a href="../tag/سد&#32;کینه&#32;ورس&#32;ابهر.html">
+سد کینه ورس ابهر</a> , <a href="../tag/استان&#32;زنجان.html">
+استان زنجان</a> , <a href="../tag/رودخانه.html">
+رودخانه</a> , <a href="../tag/ابهررود.html">
+ابهررود</a> , <br>
+
+</div></div></div>
+<div class="post7"></div>
+</div>
+<div align="right">
+<div class="theme-designer-com-post1"></div>
+<div class="theme-designer-com-post3">
+<div class="title-post"><div class="link-title-post"><a href="../52.html">پارک بانوان زنجان</a></div></div>
+<div class="theme-designer-com-post4">
+یکشنبه 23 خرداد 1395 ساعت 03:00 ب.ظ | 
+<!-- bazdid by www.theme-designer.com --->
+<script type="text/javascript" src="http://www.theme-designer.com/s/stat/posts/count.php?color=0e73b8&bg=FFFFFF&size=8&url=zanjan2rism.mihanblog.com//post/52"></script>
+<!-- bazdid by www.theme-designer.com ---> | 
+نوشته ‌شده به دست دنیز  | <span class="post-link"><a target="_self" href="javascript:newComment(52)">نظرات(<script>setCommentCnt(52)</script>)</span>
+</div>
+</div>
+<div class="theme-designer-com-post2"></div>
+<div align="center"><div class="post6"><div align="right">
+<div class="post8">
+<br><br><div align="center"><font color="#009900" face="Mihan-IransansBold" size="5"><br>پارک بانوان زنجان</font><br></div><br><div align="center"><img src="http://s7.picofile.com/file/8255487792/87.jpg" alt="پارک بانوان زنجان" align="bottom" border="0" hspace="0" vspace="0"></div><br><div align="center"><br></div><br><div align="center"><img src="http://s6.picofile.com/file/8255093292/10899017_888982181208850_68453830_n.jpg" alt="پارک بانوان زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><span style="font-size:12.0pt;line-height:115%;font-family:&quot;B Nazanin&quot;;
+mso-bidi-language:FA" lang="FA">پارک بانوان در بزرگراه 22 بهمن، در قسمت شمال غربی پارک
+ملت واقع شده است. این مجموعه شامل زمین­های ورزشی، استخر و مسیر دوچرخه سواری
+مخصوص بانوان می­باشد و ورود پسران زیر 7 سال نیز در این پارک مجاز می­باشد.&nbsp;</span><div style="overflow: hidden; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); text-decoration: none; border: medium none;"><br><br></div><br><img src="http://s6.picofile.com/file/8255093326/10011512_399867963517269_2116961374_n.jpg" alt="پارک بانوان زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><font size="3"><b><font face="Mihan-Iransans">بانوان زنجانی&nbsp; تفریحات خود اعم از پیاده روی ، ورزش ، دوچرخه سواری ، لذت از طبیعت ، دورهمی ، جشن های خصوصی و ... را به صورت آزادانه در این پارک انجام می دهند . <br><br>بانوان زنجانی از جشن‌ها و برنامه‌های پارك بانوان زنجان اسقبال بالایی دارند.<br></font></b></font><br><br><img src="http://s6.picofile.com/file/8255093392/12080565_434910250047544_522558533_n.jpg" alt="پارک بانوان زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s7.picofile.com/file/8255093426/12328275_977855722305083_87225136_n.jpg" alt="پارک بانوان زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s7.picofile.com/file/8255093468/12501999_152806291769173_1088408851_n.jpg" alt="پارک بانوان زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s7.picofile.com/file/8255093500/12918498_1679666812300226_428326564_n.jpg" alt="پارک بانوان زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s7.picofile.com/file/8255093550/13267548_1709742555959431_1918184485_n.jpg" alt="پارک بانوان زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><font face="Mihan-Iransans" size="3"><br>پروژه احداث مجتمع فرهنگی پارک بانوان زنجان توسط اداره كل راه
+وشهرسازی استان در زمینی به مساحت <span style="mso-spacerun:yes">&nbsp;</span>1200 مترمربع
+وبا زیر بنای 1320 مترمربع ساختمان وبا اعتبار <span style="mso-spacerun:yes">&nbsp;</span>22 هزار وصدو یك میلیون ریال ، شامل:نگارخانه- سالن همایش 150 نفره- کارگاههای آموزشی شامل هنرهای تجسمی،تئاتر،مجسمه
+سازی، خوشنویسی،شعر و داستان،موسیقی،فیلم سازی- اتاقهای اداری و پشتیبانی و فضاهای
+تاسیسات احداث شده است <br><br></font><br><font size="3"><b>فرهنگسرای زندگی پارك بزرگ بانوان<br><br><img src="http://s7.picofile.com/file/8255487900/IMG_9618.jpg" alt="پارک بانوان زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8255488026/Picture4.jpg" alt="پارک بانوان زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s7.picofile.com/file/8255487992/Picture2.jpg" alt="پارک بانوان زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8255487700/80.jpg" alt="پارک بانوان زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s7.picofile.com/file/8255487726/85.jpg" alt="پارک بانوان زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8255487842/IMG_5125.JPG" alt="پارک بانوان زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s7.picofile.com/file/8255487768/86.jpg" alt="پارک بانوان زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br></b></font><font color="#006600" face="Mihan-IransansBold" size="5"><font color="#000000" face="Mihan-IransansLight" size="1"><font size="3"><font class="foth9dg" style="font-size: 8pt" color="#333333" face="Tahoma"><font class="foth9dg" style="font-size: 11pt" color="#333333" face="Tahoma"><font class="foth9dg" style="font-size: 8pt" color="#333333" face="Tahoma"><font class="foth9dg" style="font-size: 11pt" color="#333333" face="Tahoma"><a href="http://parsskin.com" target="_blank"><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/248.jpg" border="0" height="49" width="353"></a></font></font></font></font></font><br>
+
+
+
+
+
+
+
+
+
+
+
+
+ </font></font><p><br></p><br></div>
+
+
+
+
+ </div><br><br>
+
+<br>:: مرتبط با: <a href="../category/5.html">
+پروژه های عمرانی</a> , <a href="../category/2.html">
+امکانات رفاهی</a> , <a href="../category/4.html">
+گردشگری</a> , <a href="../category/8.html">
+طبیعت</a> , <a href="../category/3.html">
+ورزشی</a> , 
+<br>:: برچسب‌ها: <a href="../tag/پارک&#32;بانوان&#32;زنجان.html">
+پارک بانوان زنجان</a> , <a href="../tag/زنجان.html">
+زنجان</a> , <a href="../tag/تفریح.html">
+تفریح</a> , <a href="../tag/ورزش.html">
+ورزش</a> , <a href="../tag/امکانات&#32;رفاهی.html">
+امکانات رفاهی</a> , <a href="../tag/فرهنگسرا.html">
+فرهنگسرا</a> , <a href="../tag/زنان.html">
+زنان</a> , <br>
+
+</div></div></div>
+<div class="post7"></div>
+</div>
+<div align="right">
+<div class="theme-designer-com-post1"></div>
+<div class="theme-designer-com-post3">
+<div class="title-post"><div class="link-title-post"><a href="../51.html">ورزشگاه زیتون زنجان</a></div></div>
+<div class="theme-designer-com-post4">
+پنجشنبه 20 خرداد 1395 ساعت 08:00 ب.ظ | 
+<!-- bazdid by www.theme-designer.com --->
+<script type="text/javascript" src="http://www.theme-designer.com/s/stat/posts/count.php?color=0e73b8&bg=FFFFFF&size=8&url=zanjan2rism.mihanblog.com//post/51"></script>
+<!-- bazdid by www.theme-designer.com ---> | 
+نوشته ‌شده به دست دنیز  | <span class="post-link"><a target="_self" href="javascript:newComment(51)">نظرات(<script>setCommentCnt(51)</script>)</span>
+</div>
+</div>
+<div class="theme-designer-com-post2"></div>
+<div align="center"><div class="post6"><div align="right">
+<div class="post8">
+
+<br><br><div align="center"><font size="6"><b><font face="Mihan-IransansBold" color="#666600">ورزشگاه زیتون زنجان</font></b></font><br><br><br><br><img src="http://s7.picofile.com/file/8255089334/1.jpg" alt="ورزشگاه زیتون زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p><font face="Mihan-Iransans" size="3"><br></font></p><p><font face="Mihan-Iransans" size="3">ورزشگاه
+ ۱۵ هزار نفری زیتون زنجان یک استادیوم فوتبال در حال ساخت با گنجایش 
+پانزده هزار نفر تماشاگر و در شمال شهر زنجان در کنار مجموعه تفریحی ائل داغی می‌باشد.</font></p><p><br></p><p><img src="http://s6.picofile.com/file/8255089376/45534_jpg.jpg" alt="ورزشگاه زیتون زنجان" align="bottom" border="0" hspace="0" vspace="0"></p><p><br></p><p><img src="http://s6.picofile.com/file/8255089392/photo_2015_09_23_17_36_04.jpg" alt="ورزشگاه زیتون زنجان" align="bottom" border="0" hspace="0" vspace="0"></p>
+<p><font face="Mihan-Iransans" size="4">این استادیوم با ۶۰۶۰۶ متر مربع زیر بنا یکی از پروژه‌های عمرانی شرکت توسعه و نگهداری اماکن ورزشی کشور می‌باشد.</font></p><font face="Mihan-Iransans" size="4">
+</font><p><font face="Mihan-Iransans" size="4">این پروژه عمرانی یک از طرح‌های مهرماندگار استان زنجان است و برای 
+نخستین‌بار در منطقه شمال‌غرب از سیستم گرمایشی از کف در این استادیوم 
+استفاده خواهد شد.</font></p><p><img src="http://s6.picofile.com/file/8255089418/photo_2016_05_10_12_26_28.jpg" alt="ورزشگاه زیتون زنجان" align="bottom" border="0" hspace="0" vspace="0"></p><p>
+ <font face="Mihan-Iransans" size="4">اجرای این سیستم 900 میلیون تومان اعتبار به طرح تحمیل کرده است.</font></p><font face="Mihan-Iransans" size="4">
+</font><p><font face="Mihan-Iransans" size="4">موقعیت جقرافیای پروژه:</font></p><font face="Mihan-Iransans" size="4">
+</font><p><font face="Mihan-Iransans" size="4">۴۸ درجه ۳۱ دقیقه ۳۲ ثانیه شرقی</font></p><font face="Mihan-Iransans" size="4">
+</font><p><font face="Mihan-Iransans" size="4">۳۶ درجه و ۴۲ دقیقه ۲۹ ثانیه شمالی</font></p><p><img src="http://s7.picofile.com/file/8255089442/zanjan_91_04.jpg" alt="ورزشگاه زیتون زنجان" align="bottom" border="0" hspace="0" vspace="0"></p><p><img src="http://s6.picofile.com/file/8255089492/zanjan_91_03.jpg" alt="ورزشگاه زیتون زنجان" align="bottom" border="0" hspace="0" vspace="0"></p><p><br></p><p><img src="http://s6.picofile.com/file/8255089534/zanjan9306.jpg" alt="ورزشگاه زیتون زنجان" align="bottom" border="0" hspace="0" vspace="0"></p><p><br></p><p><img src="http://s6.picofile.com/file/8255089576/zanjan9308.jpg" alt="ورزشگاه زیتون زنجان" align="bottom" border="0" hspace="0" vspace="0"></p><p><br></p><p><img src="http://s6.picofile.com/file/8255089618/zanjan9309.jpg" alt="ورزشگاه زیتون زنجان" align="bottom" border="0" hspace="0" vspace="0"></p><p><br></p>
+<p><font face="Mihan-Iransans" size="4">برای این پروژه تا به امروز ۱۳ میلیارد تومان هزینه شده و امسال 4.5 
+میلیارد تومان اختصاص یافته و در صورت اختصاص 4.5 میلیارد دیگر در هفته 
+دولت سال 95 می‌تواند به مرحله افتتاح برسد.</font></p>
+</div></div></div><br><img src="http://s7.picofile.com/file/8254054192/3088878_4980467.jpg" alt="ورزشگاه زیتون زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><a target="_self"><br></a><font face="Mihan-IransansBold" color="#006600" size="5"><font face="Mihan-IransansLight" color="#000000" size="1"><font size="3"><font class="foth9dg" style="font-size: 8pt" face="Tahoma" color="#333333"><font class="foth9dg" style="font-size: 11pt" face="Tahoma" color="#333333"><font class="foth9dg" style="font-size: 8pt" face="Tahoma" color="#333333"><font class="foth9dg" style="font-size: 11pt" face="Tahoma" color="#333333"><a href="http://parsskin.com" target="_blank"><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/248.jpg" border="0" height="49" width="353"></a></font></font></font></font></font><br>
+
+
+
+
+
+
+
+
+
+
+
+
+ </font></font><p><br></p><br></div>
+
+
+
+
+
+
+ </div><br><br>
+
+<br>:: مرتبط با: <a href="../category/5.html">
+پروژه های عمرانی</a> , <a href="../category/2.html">
+امکانات رفاهی</a> , <a href="../category/3.html">
+ورزشی</a> , 
+<br>:: برچسب‌ها: <a href="../tag/زنجان.html">
+زنجان</a> , <a href="../tag/ورزشگاه.html">
+ورزشگاه</a> , <a href="../tag/استادیوم.html">
+استادیوم</a> , <a href="../tag/فوتبال.html">
+فوتبال</a> , <a href="../tag/زیتون.html">
+زیتون</a> , <a href="../tag/ورزش.html">
+ورزش</a> , <a href="../tag/پروژه&#32;های&#32;عمرانی.html">
+پروژه های عمرانی</a> , <br>
+
+</div></div></div>
+<div class="post7"></div>
+</div>
+<div align="right">
+<div class="theme-designer-com-post1"></div>
+<div class="theme-designer-com-post3">
+<div class="title-post"><div class="link-title-post"><a href="../50.html">اسکای لاین زنجان</a></div></div>
+<div class="theme-designer-com-post4">
+پنجشنبه 13 خرداد 1395 ساعت 02:44 ب.ظ | 
+<!-- bazdid by www.theme-designer.com --->
+<script type="text/javascript" src="http://www.theme-designer.com/s/stat/posts/count.php?color=0e73b8&bg=FFFFFF&size=8&url=zanjan2rism.mihanblog.com//post/50"></script>
+<!-- bazdid by www.theme-designer.com ---> | 
+نوشته ‌شده به دست دنیز  | <span class="post-link"><a target="_self" href="javascript:newComment(50)">نظرات(<script>setCommentCnt(50)</script>)</span>
+</div>
+</div>
+<div class="theme-designer-com-post2"></div>
+<div align="center"><div class="post6"><div align="right">
+<div class="post8">
+
+
+<br><font face="Mihan-IransansBold" color="#333399" size="5"><br></font><div align="center"><font face="Mihan-IransansBold" color="#006600" size="6">گؤزل زنگان</font><br></div><br><div align="center"><br><img src="http://s7.picofile.com/file/8254049676/13248853_642752455882356_1025231381_n.jpg" alt="زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8254051284/13266810_629998497153696_1232277068_n.jpg" alt="زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8254050926/13129997_589210541246401_312623771_n.jpg" alt="زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s7.picofile.com/file/8255092976/13130022_853294911441494_729666004_n.jpg" alt="گؤزل زنگان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s7.picofile.com/file/8255092926/12918489_1711718525767982_1746375468_n.jpg" alt="گؤزل زنگان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8254049726/13258957_512360985631611_373939713_n.jpg" alt="زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s7.picofile.com/file/8254050850/12965019_637486469725464_496170707_n.jpg" alt="زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8254049576/13150748_1608561259462453_325979975_n.jpg" alt="زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s7.picofile.com/file/8254049526/12976469_158725884523121_1245070614_n.jpg" alt="زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s7.picofile.com/file/8254049634/13118216_461738350692050_1299343556_n.jpg" alt="زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s7.picofile.com/file/8254049476/13277782_1716387535315467_1098551950_n.jpg" alt="زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s7.picofile.com/file/8254049542/12918594_1701494086787312_1169944293_n.jpg" alt="زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8254054034/3088878_4980462.jpg" alt="زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s7.picofile.com/file/8254054192/3088878_4980467.jpg" alt="زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><br><div align="center"><b><font face="Arial Black" color="#ff0000" size="4">گوزل زنگان</font></b><br></div><span style="font-size: 10pt; font-family: Tahoma;" dir="rtl" lang="FA"><span style="font-size: 10pt; font-family: Tahoma;" dir="rtl" lang="AR-SA"></span></span><br><span style="font-size: 10pt; font-family: Tahoma;" dir="rtl" lang="FA"><span style="font-size: 10pt; font-family: Tahoma;" dir="rtl" lang="AR-SA"></span></span><br><span style="font-size: 10pt; font-family: Tahoma;" dir="rtl" lang="FA"><span style="font-size: 10pt; font-family: Tahoma;" dir="rtl" lang="AR-SA">
+<p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="4"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">گوزل زنگان شهرلرین 
+باشیدی</span></span></font></p><font face="Mihan-Iransans" size="4">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="2"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">لعل و مرجان توپراغیدی 
+داشیدی</span></span></font></p><font face="Mihan-Iransans" size="2">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="2"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">ایران اوزوك زنگان اوزوك 
+قاشیدی</span></span></font></p><font face="Mihan-Iransans" size="2">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="2"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">سلام زنگان سلام آرزیم 
+دیله گیم</span></span></font></p><font face="Mihan-Iransans" size="2">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="2"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">سن اولماسان قدرت تاپماز 
+بیله گیم</span></span></font></p><font face="Mihan-Iransans" size="2">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="2"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">گزمه لیدی زنگان چله خانا
+ سی</span></span></font></p><font face="Mihan-Iransans" size="2">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="2"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">گورمه لیدی سولطانیه 
+بناسی</span></span></font></p><font face="Mihan-Iransans" size="2">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="2"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">آی قهرمان ایگیت لرین 
+آناسی</span></span></font></p><font face="Mihan-Iransans" size="2">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="2"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">سلام سیزه سلام سیزین 
+ائلیزه</span></span></font></p><font face="Mihan-Iransans" size="2">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="2"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">سلام گوزل گویچك توركو 
+دیلیزه</span></span></font></p><font face="Mihan-Iransans" size="2">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="2"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">گوزل زنگان سنه اوره ك 
+یانان یوخ</span></span></font></p><font face="Mihan-Iransans" size="2">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="2"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">دردلریوی درك ائله ییب 
+قانان یوخ</span></span></font></p><font face="Mihan-Iransans" size="2">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="2"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">آنا یوردو سنی دوغرو 
+سانان یوخ</span></span></font></p><font face="Mihan-Iransans" size="2">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="2"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">باخانی وار اصفهانین 
+كاشانین</span></span></font></p><font face="Mihan-Iransans" size="4">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="4"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">یوخ كیمسه سی آنام یوردو 
+زنگانین</span></span></font></p><font face="Mihan-Iransans" size="4">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="4"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">اویرنجی لر گلیب بوردا 
+یاشاللار</span></span></font></p><font face="Mihan-Iransans" size="4">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="4"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">اوزلرینی دولدوراللار 
+داشاللار</span></span></font></p><font face="Mihan-Iransans" size="4">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="4"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">آتی مینیب دولاییدان 
+آشللار</span></span></font></p><font face="Mihan-Iransans" size="4">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="4"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">زنگان باخار گوزگوسونه 
+اوزونه</span></span></font></p><font face="Mihan-Iransans" size="4">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="4"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">یاش چیله نر چیلله خانا 
+دوزونه</span></span></font></p><font face="Mihan-Iransans" size="4">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="4"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">آچ قوللارین سال بوینوما 
+جان كیمی</span></span></font></p><font face="Mihan-Iransans" size="4">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="4"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">قوی چالیشیم داماریندا 
+قان كیمی</span></span></font></p><font face="Mihan-Iransans" size="4">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="4"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">ائل غمینده قلبیم اولوب 
+شان كیمی</span></span></font></p><font face="Mihan-Iransans" size="4">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="4"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">بیر شاعیرم اوره ك باغلی 
+ائلیمه</span></span></font></p><font face="Mihan-Iransans" size="4">
+</font><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="4"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">چالیشیرام فرهنگیمه 
+دیلیمه</span></span></font></p><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><br><font face="Mihan-Iransans" size="4"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);"></span></span></font></p><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><br><font face="Mihan-Iransans" size="4"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);"></span></span></font></p><p style="margin: 0in 0in 0pt;" dir="rtl" class="MsoNormal"><font face="Mihan-Iransans" size="4"><span style="font-weight: normal; font-size: 10pt;" lang="AR-SA"><span style="color: rgb(0, 0, 0);">استاد هوشنگ جعفری<br></span></span></font></p></span></span><br><font face="Mihan-IransansBold" color="#006600" size="5"><font face="Mihan-IransansLight" color="#000000" size="1"><font size="3"><font class="foth9dg" style="font-size: 8pt" face="Tahoma" color="#333333"><font class="foth9dg" style="font-size: 11pt" face="Tahoma" color="#333333"><font class="foth9dg" style="font-size: 8pt" face="Tahoma" color="#333333"><font class="foth9dg" style="font-size: 11pt" face="Tahoma" color="#333333"><a href="http://parsskin.com" target="_blank"><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/248.jpg" border="0" height="49" width="353"></a></font></font></font></font></font><br>
+
+
+
+
+
+
+
+
+
+
+
+
+ </font></font><p><br></p></div>
+
+
+
+
+
+
+
+
+ </div><br><br>
+
+<br>:: مرتبط با: <a href="../category/12.html">
+نمای شهر</a> , <a href="../category/4.html">
+گردشگری</a> , <a href="../category/8.html">
+طبیعت</a> , 
+<br>:: برچسب‌ها: <a href="../tag/زنجان.html">
+زنجان</a> , <a href="../tag/آسمان.html">
+آسمان</a> , <a href="../tag/عکس&#32;های&#32;زیبا.html">
+عکس های زیبا</a> , <a href="../tag/عکاسی.html">
+عکاسی</a> , <a href="../tag/شهر&#32;زنجان.html">
+شهر زنجان</a> , <a href="../tag/سفر.html">
+سفر</a> , <a href="../tag/گردشگری.html">
+گردشگری</a> , <br>
+
+</div></div></div>
+<div class="post7"></div>
+</div>
+<div align="right">
+<div class="theme-designer-com-post1"></div>
+<div class="theme-designer-com-post3">
+<div class="title-post"><div class="link-title-post"><a href="../49.html">روستای چرگر </a></div></div>
+<div class="theme-designer-com-post4">
+پنجشنبه 13 خرداد 1395 ساعت 02:04 ب.ظ | 
+<!-- bazdid by www.theme-designer.com --->
+<script type="text/javascript" src="http://www.theme-designer.com/s/stat/posts/count.php?color=0e73b8&bg=FFFFFF&size=8&url=zanjan2rism.mihanblog.com//post/49"></script>
+<!-- bazdid by www.theme-designer.com ---> | 
+نوشته ‌شده به دست دنیز  | <span class="post-link"><a target="_self" href="javascript:newComment(49)">نظرات(<script>setCommentCnt(49)</script>)</span>
+</div>
+</div>
+<div class="theme-designer-com-post2"></div>
+<div align="center"><div class="post6"><div align="right">
+<div class="post8">
+<div align="center"><font face="Mihan-IransansBold" color="#006600" size="5"><br>چرگر<br><br>کهن ترین روستای استان زنجان<br><font face="Mihan-IransansLight" color="#000000" size="1"><br><img src="http://s7.picofile.com/file/8254044126/3_min.jpg" alt="روستای چرگر" align="bottom" border="0" hspace="0" vspace="0"><br><br></font></font><br><font face="Mihan-IransansBold" color="#006600" size="5"><font face="Mihan-IransansLight" color="#000000" size="1"><font face="times new roman,times,serif" size="3"><font face="Mihan-Iransans">چرگر یکی از کهن ترین روستاهای شهرستان ابهر در استان زنجان است و در حدفاصل شهرهای ابهر و زنجان در بخش منطقه ای دهستان صائین قلعه قرار دارد. کوه سندان که یکی از مرتفع ترین کوههای استانهای قزوین و زنجان
+ است در نزدیکی چرگر قراردارد. سد خاکی چرگر که در دهه 1370 احداث شده است 
+یکی از اماکن دیدنی این روستا است. گفته می شود که چرگر در سالیان گذشته تا
+ هزار خانوار ساکن داشته است. اکنون حدود سیصد خانوار در چرگر ساکنند.</font><br><br><br></font><img src="http://s6.picofile.com/file/8254046050/mahsa12_min.jpg" alt="روستای چرگر" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s7.picofile.com/file/8254046084/mahsa02_min.jpg" alt="روستای چرگر" align="bottom" border="0" hspace="0" vspace="0"><br><br></font></font><br><h4><font face="Mihan-Iransans" size="3"><span class="mw-headline" id=".D8.A2.D8.AB.D8.A7.D8.B1_.D8.AA.D8.A7.D8.B1.DB.8C.D8.AE.DB.8C">آثار تاریخی</span></font></h4><font face="Mihan-Iransans" size="3">
+</font><p><font face="Mihan-Iransans" size="3">چرگر روستایی بسیار قدیمی است و شاهد این مدعا آثار تاریخی آن است که در فهرست آثار ملی نیز ثبت شده اند. این آثار عبارتند از: <font color="#000000"><a href="https://fa.wikipedia.org/wiki/%D8%AC%DB%8C%D8%B1%D8%A7%D9%86_%D8%AA%D9%BE%D9%87" title="جیران تپه">جیران تپه</a>، <a href="https://fa.wikipedia.org/wiki/%D8%AA%D9%BE%D9%87_%D8%B2%D8%B1%D9%86%DA%AF%D9%88%D9%84_1" title="تپه زرنگول 1" class="mw-redirect">تپه زرنگول 1</a></font> و <a href="https://fa.wikipedia.org/wiki/%D8%AA%D9%BE%D9%87_%D8%B2%D8%B1%D9%86%DA%AF%D9%88%D9%84_3" title="تپه زرنگول 3" class="mw-redirect">تپه زرنگول 3</a> همگی از عصر آهن و <a href="https://fa.wikipedia.org/wiki/%D8%AA%D9%BE%D9%87_%D9%82%D8%A7%D9%86%DA%86%DB%8C_%D8%AE%D8%B1%D8%A7%D8%A8%D9%87_%D8%B3%DB%8C" title="تپه قانچی خرابه سی">تپه قانچی خرابه سی</a> مربوط به دوره های ایلخانی و صفوی.</font></p><font face="Mihan-IransansBold" color="#006600" size="5"><font face="Mihan-IransansLight" color="#000000" size="1"><br><img src="http://s6.picofile.com/file/8254044134/14_min.jpg" alt="روستای چرگر" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8254045676/1_min.png" alt="روستای چرگر" align="bottom" border="0" hspace="0" vspace="0"><br><br></font></font><br><font face="Mihan-IransansBold" color="#006600" size="5"><font face="Mihan-IransansLight" color="#000000" size="1"><font size="3"><font face="Mihan-Iransans">اصالت ساکنان چرگر به ایل بزرگ مقدم برمی گردد که تنه اصلی آن در شهرستان 
+مراغه ساکن است. گفته می شود که مقدم ها در دوره صفویه و یا قبل از آن با 
+نام ایل اتوزایکی درحوزه قراباغ زندگی می -کردند و پس از تشکیل دولت صفویه 
+به شهرسنان مراغه کوچ کرده و بخشی از آنان هم از مراغه به استان زنجان آمده
+ اند. البته در کتاب مراَه البلدان هم از ایل مقدم مراغه و هم از ایل مقدم 
+زنجان نام برده شده است. گفته شده که نامگذاری ایشان هم با عنوان ایل مقدم 
+به این خاطر بوده که در لشکرکشی ها، مقدم و جلودار سپاه بودند. </font><br><br></font><img src="http://s7.picofile.com/file/8254044150/23_min.jpg" alt="روستای چرگر" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8254044168/25_min.jpg" alt="روستای چرگر" align="bottom" border="0" hspace="0" vspace="0"><br><br></font></font><br><font face="Mihan-IransansBold" color="#006600" size="5"><font face="Mihan-IransansLight" color="#000000" size="1"><font face="Mihan-Iransans" size="3">مقدم ها علاوه بر چرگر در دیگر روستاهای زنجان مانند ذاکر و بویون (در شمال
+ سلطانیه) و الوند، خراسانلو، حسین آباد، قلعه حسینیه، جداقیا، نصیرآباد، 
+پیرسقا و غیره نیز ساکن شده اند. در این بین آبادی چرگر موقعیت ممتاز و 
+ویژه ای داشته است به این دلیل که محل اقامت خوانین مقدم بوده است. چرگر 
+ظاهراً قدمت بیشتری نیز دارد. چنان که متون تاریخی ذکر شده که دوره 
+ایلخانان، خواجه رشیدالدین فضل اله در ده چرگر کشته شد. همچنین مرآه 
+البلدان در دوره قاجاریه به دو ده چرگر و جداقیا اشاره کرده است و نوشته که
+ به خوانین مقدم چرگرمتعلق بوده است.<br><br></font><img src="http://s6.picofile.com/file/8254044284/DSC04227_min.JPG" alt="روستای چرگر" align="bottom" border="0" hspace="0" vspace="0"><br><br></font></font><br><p style="text-align: right;" align="center"><font face="Mihan-Iransans" size="2"><span style=" "><strong>موقیعت روستا:</strong></span></font></p><div align="center"><font face="Mihan-Iransans" size="2"><span style=" ">
+</span></font></div><p style="text-align: right;" align="center"><font face="Mihan-Iransans" size="2"><span style=" ">از سمت تهران به زنجان ، سی و پنج&nbsp; کیلومتر 
+بعد از شهرستان ابهر و پنجاه و پنج کیلومتر مانده به شهر زنجان ، &nbsp;در هشت 
+کیلومتری سمت شمالی جاده ترانزیت و شش کیلومتری سمت شمالی اتوبان قزوین به 
+زنجان واقع شده است&nbsp;.&nbsp;از تقاطع جاده ترانزیت به سمت شمال ، جاده آسفالته 
+چرگر که دو طرف آن را باغات زرین دشت و شرکت ها و کارخانجات صنعتی و 
+دامداری ها و مرغداری های صنعتی احاطه کرده است ، به طول هشت کیلومتر که طی
+ می نماییم به دهکده تاریخی ، گردشگری و خوش آب و هوای چرگر می 
+رسیم&nbsp;.&nbsp;البته در دو کیلومتری این جاده ، اتوبان قزوین&nbsp;–&nbsp;زنجان به موازات 
+جاده ترانزیت قرار دارد&nbsp;.</span></font></p><font face="Mihan-IransansBold" color="#006600" size="5"><font face="Mihan-IransansLight" color="#000000" size="1"><br><img src="http://s7.picofile.com/file/8254044342/DSC04248_min.JPG" alt="روستای چرگر" align="bottom" border="0" hspace="0" vspace="0"><br><br></font></font><br><p style="text-align: right;"><font face="Mihan-Iransans" size="3"><span style=" "><strong>مکان های دیدنی:</strong></span></font></p><font face="Mihan-Iransans" size="3"><span style=" ">
+</span><span style=" ">ابتدای دهکده امام زاده ای در سمت شرق جاده 
+به چشم می خورد&nbsp;.&nbsp;بعد از امام زاده دو راهی سد چرگر قرار دارد&nbsp;.&nbsp;سد چرگر که
+ در دهه&nbsp;۱۳۷۰&nbsp;احداث شده است محل تفریح و تفرجگاه منطقه گشته است&nbsp;.&nbsp;در سمت 
+شمالی دهکده قله سربه فلک کشیده کوه سندان به چشم می خورد کوه سندان یکی از
+ دو قله مرتفع استان زنجان می باشد&nbsp;.&nbsp;همه ساله کوهنوردان زیادی از هیئت 
+کوهنوردی زنجان و شهرستان های استان زنجان جهت کوهنوردی به این قله صعود می
+ نمایند&nbsp;<a href="http://www.asemoni.com/">.&nbsp;</a>این دهکده در سمت شمال 
+راه ابریشم و در دامنه جنوبی رشته کوه های البرز بنا شده است&nbsp;.&nbsp;وجود سه 
+روستای باستانی تخریب شده در قرن های دور به نام های زرین گل و قاشقچی و سر
+ دهه در اطراف این دهکده موجب شده است تا از نظر وسعت زمین های حاصلخیز جزء
+ بزرگترین روستاهای استان محسوب گردد&nbsp;.&nbsp;ده ها هزار هکتار زمین زراعی و ده 
+ها هزار هکتار مراتع سر سبز اطراف این دهکده زیبا را فرا گرفته است&nbsp;.هزاران
+ هکتار زمین زیر کشت مکانیزه در منطقه زرین دشت این دهکده به چشم می 
+خورد&nbsp;.&nbsp;کوه ها و دامنه های سرسبز آن دارای متنوع ترین و بیشترین نوع گونه 
+گیاهی ، به خصوص گیاهان دارویی می باشد&nbsp;.&nbsp;مزرعه بسیار زیبای زرین گل در سمت
+ شرق و مزارع قاشقچی و سردهه در سمت غرب و زرین دشت در سمت جنوب این دهکده 
+قرار دارند&nbsp;.&nbsp;زرین گل این روستای عصر آهن که قرن ها پیش به علل نامعلوم 
+تخریب شده است و امروزه باغات و چشمه های زیبای آن دل هر بیننده ای را فریب
+ می دهد&nbsp;.&nbsp;به لحاظ موقعیت جغرافیایی بهترین آب و هوا را داراست</span></font><font face="Mihan-IransansBold" color="#006600" size="5"><font face="Mihan-IransansLight" color="#000000" size="1"> .<br><br><br><font size="4"><b><font face="Mihan-Iransans" color="#990000">سد چرگر</font></b></font><br><br><img src="http://s6.picofile.com/file/8254044226/DSC04159_min.JPG" alt="روستای چرگر" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s7.picofile.com/file/8254044192/DSC04153_min.JPG" alt="روستای چرگر" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8254044326/DSC04239_min.JPG" alt="روستای چرگر" align="bottom" border="0" hspace="0" vspace="0"><br><br><font color="#990000"><b><font face="Mihan-Iransans" size="3">امامزاده عباس (ع) چرگر<br><br></font></b></font><img src="http://s7.picofile.com/file/8254044426/mahsa10_min.JPG" alt="روستای چرگر" align="bottom" border="0" hspace="0" vspace="0"><br><br></font></font><br><p style="text-align: right;"><font face="Mihan-Iransans" size="3"><span style=" "><strong>مراکز تفریحی:</strong></span></font></p><font face="Mihan-Iransans" size="3"><span style=" ">
+</span></font><p style="text-align: right;"><font face="Mihan-Iransans" size="3"><span style=" ">قله سر به فلک کشیده سندان<br>سد زیبای چرگر<br>دربند قاشقچی<br>دربند سردهه<br>دربند چرگر<br>دربند چشمه علی<br>دربند سندان<br>فضای فوق زیبای زرین گل</span></font></p><font face="Mihan-IransansBold" color="#006600" size="5"><font face="Mihan-IransansLight" color="#000000" size="1"><br><img src="http://s6.picofile.com/file/8254044450/mahsa11_min.jpg" alt="روستای چرگر" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s7.picofile.com/file/8254044476/mahsa13_min.jpg" alt="روستای چرگر" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8254045684/mahsa09_min.JPG" alt="روستای چرگر" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8254045718/mahsa06_min.JPG" alt="روستای چرگر" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8254044526/ZarinGol_min.jpg" alt="روستای چرگر" align="bottom" border="0" hspace="0" vspace="0"><br><br></font></font><br><font face="Mihan-IransansBold" color="#006600" size="5"><font face="Mihan-IransansLight" color="#000000" size="1"><font size="3"><font class="foth9dg" style="font-size: 8pt" face="Tahoma" color="#333333"><font class="foth9dg" style="font-size: 11pt" face="Tahoma" color="#333333"><font class="foth9dg" style="font-size: 8pt" face="Tahoma" color="#333333"><font class="foth9dg" style="font-size: 11pt" face="Tahoma" color="#333333"><a href="http://parsskin.com" target="_blank"><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/248.jpg" border="0" height="49" width="353"></a></font></font></font></font></font><br>
+
+
+
+
+
+
+
+
+
+
+
+
+ </font></font><p><br></p><font face="Mihan-IransansBold" color="#006600" size="5"><font face="Mihan-IransansLight" color="#000000" size="1"><br></font></font></div>
+
+
+
+
+ </div><br><br>
+
+<br>:: مرتبط با: <a href="../category/1.html">
+بناهای تاریخی</a> , <a href="../category/4.html">
+گردشگری</a> , <a href="../category/8.html">
+طبیعت</a> , 
+<br>:: برچسب‌ها: <a href="../tag/زنجان.html">
+زنجان</a> , <a href="../tag/ابهر.html">
+ابهر</a> , <a href="../tag/روستای&#32;چرگر.html">
+روستای چرگر</a> , <a href="../tag/گردشگری.html">
+گردشگری</a> , <a href="../tag/سد.html">
+سد</a> , <a href="../tag/رودخانه.html">
+رودخانه</a> , <a href="../tag/قله.html">
+قله</a> , <br>
+
+</div></div></div>
+<div class="post7"></div>
+</div>
+<div align="right">
+<div class="theme-designer-com-post1"></div>
+<div class="theme-designer-com-post3">
+<div class="title-post"><div class="link-title-post"><a href="../48.html">زنگان</a></div></div>
+<div class="theme-designer-com-post4">
+شنبه 1 اسفند 1394 ساعت 11:52 ب.ظ | 
+<!-- bazdid by www.theme-designer.com --->
+<script type="text/javascript" src="http://www.theme-designer.com/s/stat/posts/count.php?color=0e73b8&bg=FFFFFF&size=8&url=zanjan2rism.mihanblog.com//post/48"></script>
+<!-- bazdid by www.theme-designer.com ---> | 
+نوشته ‌شده به دست دنیز  | <span class="post-link"><a target="_self" href="javascript:newComment(48)">نظرات(<script>setCommentCnt(48)</script>)</span>
+</div>
+</div>
+<div class="theme-designer-com-post2"></div>
+<div align="center"><div class="post6"><div align="right">
+<div class="post8">
+
+
+
+
+<div align="center"><br><font face="Mihan-IransansBold" color="#333300" size="5"><br>آنایوردوم وطنیم زنگان</font><br><br><font face="Mihan-Iransans" color="#666600" size="3">آنایوردوم وطنیم زنگانیما قوربان اولوم<br>شهریمین او یاراشیقلی آدینا قوربان اولوم<br>دولانیم دؤره سینه ، باغینا دروازه سینه<br>آغ چیچک لر آچیلاندا یازینا قوربان اولوم<br>او گؤزل منظره سی ، بهشته بنزر هاواسی<br>او سرین دردیمه درمان سویونا قوربان اولوم<br>گون چیخاندا او طراوتلی آغاج لار باشینا<br>گون آشاندان سورا گؤیچک آیینا قوربان اولوم<br><br>نئجه لذتلی زامان لار ، نه شیرین خاطیره لر<br>اؤلکه مین صولح و صفا ایّامینا قوربان اولوم<br>دانیشاندا او شیرین تورکو گؤزل لهجه سینه<br>ائلیمین سئوملی گؤیچک دیلینه قوربان اولوم<br>نه قدر وصف ائله سم زنگانیمی آز دئمیشم<br>او صفالی یارادان آللاهینا قوربان اولوم<br>فاصیله محو ائده بیلمز بو گؤزل موهبتی<br>جان کیمین دیر ، من او جان پاره سینه قوربان اولوم<br></font><br><br><font face="Mihan-Iransans" color="#333300"><b>شاعر : آزاده دارایی « آنایوردوم وطنیم زنگان » کیتابی</b></font><br><br><br><br><font face="Mihan-IransansBold" color="#003333" size="6">معرفی استان زنجان</font><br><br><br><font face="Mihan-IransansBold" size="4"><b><font color="#FF6666">جغرافیای استان </font></b></font><br><font face="Mihan-Iransans" size="3"><br>استان زنجان در شمال غربی کشور قرار دارد و مساحت آن 22164 کیلومتر مربع می باشد . همسایگی با هفت استان موقعیت بسیار ممتازی را برای استان ایجاد کرده است . استان زنجان دارای هشت شهرستان ( زنجان ، ابهر ، خرم دره ، خدابنده ، ایجرود ، ماهنشان ، سلطانیه ، طارم ) و هفده شهر می باشد .<br>طبق آخرین آمارها حدود یک میلیون نفر در استان زندگی می کنند . افراد شاغل در استان 38 درصد در بخش کشاورزی ، 29/7 درصد در بخش صنعت و 32/3 درصد در بخش خدمات مشغول فعالیت هستند .<br>آب و هوای استان معتدل کوهستانی است که در زمستان ها سرد و در تابستان ها معتدل خشک می باشد . <br>این استان به علت دارا بودن موقعیت کوهستانی و بارش برف و باران دارای رودخانه های نسبتاً پرآبی است که از لحاظ کشاورزی و اقتصادی تأثیر به سزایی در رونق اقتصادی استان دارد . <br>نام رودخانه های استان به قرار ذیل است :<br>1- قیزیل اؤزن 2- زنگان چایی 3- ابهر چایی 4- هجه چایی ( ایجرود ) 5- سجاس چایی 6- خرزه چایی 7- بیزین چایی ( بزینه رود )<br>استان زنجان در گوشه شمال غربی فلات مرکزی ایران واقع شده است که فلات آذربایجان را به دشت قزوین متصل می کند . رشته کوه های موجود در این استان متعلق به دوره کواترنری باعث پیدایش سرزمین های هموار و حاصلخیز در این استان شده است . <br></font><br><font color="#FF6666" size="4"><b><font face="Mihan-IransansBold">تاریخ استان </font></b></font><br><br><font face="Mihan-Iransans" size="3">قدیمی ترین آثار زیستی در استان زنجان به دوران پیش از تاریخ بر می گردد که متعلق به فرهنگ بردوستین بوده و حدود 30 هزار سال قدمت دارد . <br>مکان زیستی این تمدن در غار تاریخی گلجیک واقع در 35 کیلومتری جنوب غربی شهر زنجان است . آثار تمدنی بعد از نوسنگی از روشن ترین تمدن هایی است که در مطالعه و مقایسه ی تمدن های پیش از تاریخ فلات ایران نقش کلیدی دارد . آثار این تمدن از هزاره ی پنجم قبل از میلاد روشن و مشخص شده است . بقایای زیستی و تمدنی « تیکمه تپه » در قشلاقات افشار و تپه ی امان خدابنده نشانگر تمدن درخشان این استان است که آثار تکنیکی و هنری آنها مورد توجه نسل امروز و باستان شناسان می باشد . <br>سومین دوره تاریخ شناسی این استان دوران موسوم به « آغاز ادبیات » است . این دوران از هزاره ی سوم تا اواخر هزاره ی دوم قبل از میلاد است که آثار آن را در منطقه ی ایجرود می توان دید . وجود نقوش و خطوط هنری سیاه رنگ در سفال های مکشوفه از محوطه های تاریخی این مسأله را روشن می کند .<br>چهارمین دوره بررسی تاریخ موسوم به « دوران تاریخی » است . این دوره تحول جدیدی را متناسب با روند تکاملی جامعه شناسی نشان می دهد . بارزترین پدیده ی قابل لمس آن نوعی سفال خاکستری رنگ ساده است . این آثار مکرر و همزمان در سراسر منطقه و علی الخصوص مناطقی که دارای امکانات بالقوه ی زیستی در اواخر هزاره ی دوم قبل از میلاد بوده است ، دیده می شود . منطقه ی فعلی استان زنجان در قرن هفتم قبل از میلاد تحت عنوان پادشاهی ماد بوده که نیمه غربی آن حوزه استحفاظی ماد سفلی بوده است . آخرین دوره بررسی تاریخی استان زنجان موسوم به « دوره اسلامی » است که از قرن اول تا اواخر قرن 14 هجری است . </font><br><br><font color="#FF6666" size="4"><b><font face="Mihan-IransansBold">فرهنگ و زبان مردم استان </font></b></font><br><br><font face="Mihan-Iransans" size="3">زبان مردم استان زنجان تورکی آذربایجانی است . ترکیب جمعیتی و نِِِِِِِِِژادی مردم استان متأثر از وجود اقوام باستانی ساکن در این مناطق مانند : اورارتو ، قوتتی ، لولوبی ، ماننایی ، و مادها می باشد . این اقوام ، آسیایی بوده و قبل از مهاجرت آریایی ها در این مناطق ساکن بوده اند و زبانشان نیز همانند زبان تورکی مربوط به زبان های التصاقی یا پسوندی بوده است . <br>شهر زنجان به عنوان مرکز استان یکی از شهرهای قدیمی است که در اصل و نیز زبان محاوره « زنگان » می باشد که معرب آن به « زنجان » تبدیل شده است . <br>بعضی از زبان شناسان معتقدند که کلمه زنگان برگرفته از سنگان ، ساینگان ، یا سئین است که وجود مشتقاتی از این کلمه در نام بعضی از اماکن و آبادی های اطراف شهر می تواند نمونه بارزی برای این گفته باشد . اسامی مکان هایی مثل سایان ، سایین قلعه ، ( سایین و سایان در زبان تورکی به معنی محترم و محتشم می باشد ) خود شاهد این گفته هاست . برخی از زبان شناسان نیز معتقدند که کلمه زنگان برگرفته از کلمه زنگین است . ( زنگین در تورکی به معنی وزین ، پربرکت ، دارا و باعظمت است )<br>مردم استان ، مردمی مهمان نواز بوده و دارای تعلقات دینی و میهنی خاصی هستند . همچنین وجود بیش از 15 نشریه فعال از جلوه های فرهنگی در این استان است . هنر آشیقی همراه با موسیقی محلی و اشعاری که سراینده آن خود آشیق ها هستند نمونه قابل توجهی از فرهنگ اصیل مردمی این خطه به حساب می آید .</font><br><br><br><br><font color="#333300"><b><font face="Mihan-IransansBold">برگرفته از : ویژه نامه ماهنامه بایرام زنجان</font></b></font><br><br><br><font size="3"><font class="foth9dg" style="font-size: 8pt" face="Tahoma" color="#333333"><font class="foth9dg" style="font-size: 11pt" face="Tahoma" color="#333333"><font class="foth9dg" style="font-size: 8pt" face="Tahoma" color="#333333"><font class="foth9dg" style="font-size: 11pt" face="Tahoma" color="#333333"><a href="http://parsskin.com" target="_blank"><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/248.jpg" height="49" border="0" width="353"></a></font></font></font></font></font><br>
+
+
+
+
+
+
+
+
+
+
+
+
+ <p><br></p><br></div>
+
+
+
+
+
+
+
+
+
+
+
+
+ </div><br><br>
+
+<br>:: مرتبط با: <a href="../category/4.html">
+گردشگری</a> , <a href="../category/6.html">
+فرهنگ</a> , <a href="../category/8.html">
+طبیعت</a> , 
+<br>:: برچسب‌ها: <a href="../tag/استان&#32;زنجان.html">
+استان زنجان</a> , <a href="../tag/زنگان.html">
+زنگان</a> , <a href="../tag/معرفی&#32;استان&#32;زنجان.html">
+معرفی استان زنجان</a> , <a href="../tag/تاریخ.html">
+تاریخ</a> , <a href="../tag/فرهنگ.html">
+فرهنگ</a> , <a href="../tag/جغرافیا.html">
+جغرافیا</a> , <br>
+
+</div></div></div>
+<div class="post7"></div>
+</div>
+<div align="right">
+<div class="theme-designer-com-post1"></div>
+<div class="theme-designer-com-post3">
+<div class="title-post"><div class="link-title-post"><a href="../47.html">حکیم هیدجی</a></div></div>
+<div class="theme-designer-com-post4">
+شنبه 19 دی 1394 ساعت 09:42 ب.ظ | 
+<!-- bazdid by www.theme-designer.com --->
+<script type="text/javascript" src="http://www.theme-designer.com/s/stat/posts/count.php?color=0e73b8&bg=FFFFFF&size=8&url=zanjan2rism.mihanblog.com//post/47"></script>
+<!-- bazdid by www.theme-designer.com ---> | 
+نوشته ‌شده به دست دنیز  | <span class="post-link"><a target="_self" href="javascript:newComment(47)">نظرات(<script>setCommentCnt(47)</script>)</span>
+</div>
+</div>
+<div class="theme-designer-com-post2"></div>
+<div align="center"><div class="post6"><div align="right">
+<div class="post8"><div align="center"><br><font size="2"><font color="#000066" size="5"><font face="Mihan-IransansBold"><b>زندگی نامه محمد حکیم هیدجی</b></font></font><font size="3"><br></font></font><p><b><font size="3" face="tahoma,verdana,arial,helvetica,sans-serif"><img src="http://s3.picofile.com/file/8232531400/1239406_603815586372999_64351398_n.jpg" alt="حکیم هیدجی" align="bottom" border="0" hspace="0" vspace="0"></font></b></p><p><b><font size="3" face="tahoma,verdana,arial,helvetica,sans-serif"><br></font></b></p><p><b><font size="3" face="tahoma,verdana,arial,helvetica,sans-serif">محمد حکیم هیدجی از بزرگان فلسفه و از عرفای بسیار مشهور هیدج از توابع زنجان است که در سال ۱۲۷۰ هجری قمری به دنیا آمد</font></b></p><p><font size="3" face="tahoma,verdana,arial,helvetica,sans-serif">حکیم
+ ملا محمد علی هیدجی یکی از شاعران اندیشمند و بلندآوازه‌ی منسوب به 
+روحانیت شیعه است که بیشترین آثار منظوم خود را به زبان ترکی آذربایجانی 
+سروده است. وی به آثار حکمی و فلسفی اسلامی تسلطی کامل داشت و جامع‌ترین 
+تعلیق و حواشی را بر منظومه‌ی حاج ملاهادی سبزواری نگاشته است. او استاد 
+اکثر اساتید فلسفه در قرن گذشته بوده و سال‌ها «منظومه» و «اسفار» تدریس 
+کرده است.<br>دیوان اشعار ترکی حکیم هیدجی در سال 1387 به تصحیح دکتر حسین 
+محمدزاده صدیق (دوزگون) و با مقدمه‌ای جامع&nbsp; به همراه تحشیه چاپ شده است. 
+این دیوان دارای انواع شعری زیر است:<br>14قصیده، 24غزل، 3قطعه، 1مربع 23بندی، 2تخمیس، 1ترجیع‌بند، 3ترکیب‌بند، 12مثنوی، 2مناظره و 1ملمّع.<br>در
+ آخر دیوان حکیم هیدجی که بیانگر حالات عرفانی اوست وصیّت‌نامهٔ او آورده 
+شده است. او پس از حمد خداوند و شهادت و تقسیم اثاثیّه و کتابهای خود چنین 
+گفته: از رفقا تقاضا دارم وقتی من مُردم عمامهٔ مرا روی عماری نگذارند، های
+ و هوی لازم نیست، و برای مجلس ختم من موی دماغ کسی نشوند زیرا که عمر من 
+در این جهان (مادی) ختم شده و عمل من خاتمه یافته است. دوستان من خوش باشند
+ زیرا من از زندان طبیعت (این جهان مادی) خلاص (می‌شوم) و به سوی مطلوب خود
+ (خداوند) می‌روم و عمر جاودان می‌یابم... دوست داشتم پولی داشتم و به رفقا
+ می‌دادم که در شب رحلت من مجلس سوری تهیّه کرده و سروری فراهم آورند، زیرا
+ که آن شب، شب وصال (و رسیدن) من (به خداوند) است.... هیدجی عارف هنگام شب 
+وفات خود همهٔ طلاّّب مدرسهٔ منیریّه، را جمع می‌کند و به آنها نصیحت و 
+اندرز می‌دهد و به اخلاق اسلامی دعوت می‌نماید. هیدجی نماز صبح خود را در 
+اوّل فجر صادق می‌خواند و بعد از ساعتی در سال ۱۳۱۴ در تهران در سن ۴۴ 
+سالگی وفات می‌کند</font></p><p><font size="3" face="tahoma,verdana,arial,helvetica,sans-serif"><img src="http://s6.picofile.com/file/8232530168/hidaji.jpg" alt="حکیم هیدجی" align="bottom" border="0" hspace="0" vspace="0"></font></p><p class="BasicParagraph" dir="RTL" style="margin-right: 2.85pt; text-align: justify;" align="center"><strong><span style="font-size: 20pt; font-family: 'B Mitra';" lang="FA"><span style="color: rgb(255, 0, 0);">حکیم هیدجی دن بیر غزل</span></span><span style="font-family: 'B Mitra';" lang="AR-YE"><font size="3"><br></font></span></strong></p><p class="BasicParagraph" dir="RTL" style="margin-right: 2.85pt; text-align: justify;" align="center"><strong><span style="font-family: 'B Mitra';" lang="AR-YE"><font size="3">گؤگلوم
+توتولوبدور بیری یوخ، دیل بیلن اولسون</font></span></strong></p><div class="PostBody"><p class="BasicParagraph" dir="RTL" style="margin-right: 2.85pt; text-align: justify;" align="center"><strong><span style="font-family: 'B Mitra';" lang="AR-YE"><font size="3">آچ
+بو قاپینی، منزیله شاید گلن اولسون</font></span></strong></p><p class="BasicParagraph" dir="RTL" style="margin-right: 2.85pt; text-align: justify;" align="center"><strong><span style="font-family: 'B Mitra';" lang="AR-YE"><font size="3">بس
+آغلادیم اولدو جگریم قان یئتیر آللاه</font></span></strong></p><p class="BasicParagraph" dir="RTL" style="margin-right: 2.85pt; text-align: justify;" align="center"><strong><span style="font-family: 'B Mitra';" lang="AR-YE"><font size="3">بیر
+کس گؤزومون یاشینی اوزدن سیلن اولسون</font></span></strong></p><p class="BasicParagraph" dir="RTL" style="margin-right: 2.85pt; text-align: justify;" align="center"><strong><span style="font-family: 'B Mitra';" lang="AR-YE"><font size="3">یولداش
+منه چوخ دور دولانیم عالمی شاید</font></span></strong></p><p class="BasicParagraph" dir="RTL" style="margin-right: 2.85pt; text-align: justify;" align="center"><strong><span style="font-family: 'B Mitra';" lang="AR-YE"><font size="3">بیر
+کیمسه تاپیم دردیمه درمان قیلان اولسون</font></span></strong></p><p class="BasicParagraph" dir="RTL" style="margin-right: 2.85pt; text-align: justify;" align="center"><strong><span style="font-family: 'B Mitra';" lang="AR-YE"><font size="3">اوخ
+هر نه ایتی اولسا، گمان ائیله‌مه شخصین</font></span></strong></p><p class="BasicParagraph" dir="RTL" style="margin-right: 2.85pt; text-align: justify;" align="center"><strong><span style="font-family: 'B Mitra';" lang="AR-YE"><font size="3">دونیادا
+شماتت کیمی باغرین دلن اولسون</font></span></strong></p><p class="BasicParagraph" dir="RTL" style="margin-right: 2.85pt; text-align: justify;" align="center"><strong><span style="font-family: 'B Mitra';" lang="AR-YE"><font size="3">آللاه
+بو شهین بختی دؤنوب تختی دولانسین</font></span></strong></p><p class="BasicParagraph" dir="RTL" style="margin-right: 2.85pt; text-align: justify;" align="center"><strong><span style="font-family: 'B Mitra';" lang="AR-YE"><font size="3">&nbsp;مشکل بونون عهدینده دوداغی گولن اولسون</font></span></strong></p><p class="BasicParagraph" dir="RTL" style="margin-right: 2.85pt; text-align: justify;" align="center"><strong><span style="font-family: 'B Mitra';" lang="AR-YE"><font size="3">ای
+مایه‌سی آز، چوخ ائله­مه ناله و فریاد</font></span></strong></p><p class="BasicParagraph" dir="RTL" style="margin-right: 2.85pt; text-align: justify;" align="center"><strong><span style="font-family: 'B Mitra';" lang="AR-YE"><font size="3">سن
+دردیوی دئ، بلکه دواسین بیلن اولسون</font></span></strong></p><p class="BasicParagraph" dir="RTL" style="margin-right: 2.85pt; text-align: justify;" align="center"><strong><span style="font-family: 'B Mitra';" lang="AR-YE"><font size="3"><br></font></span></strong></p>
+
+</div><font color="#330000" size="2">
+</font><p dir="RTL"><font color="#330000" size="3">در زیر بخشی از مقدمه دکتر صدیق را درباره‌ی حیات و زندگی این حکیم بلندپایه، به زبان ترکی آذربایجانی به شما تقدیم می‌کنم:</font></p><font size="2"><strong><span> 1ـ &nbsp;هیده‌جی‌نین یازدیغی اؤز کئچمیشی</span></strong></font>
+<p dir="RTL"><font size="2"><span>حکیم ملامحمد هیده‌جی یازدیغی و نشر ائتدیگی "<strong>شرح منظومه</strong>" کیتابی‌نین سونوندا، اؤز کئچمیشینی قیسا اولاراق بئله یازمیشدیر:</span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>« باری من بنده حاجی ملامحمد پسر حاج 
+معصومعلی هیده‌جی، آغاز شباب در مدرسه‌ی واقعه در قریه‌ی مزبوره و چندگاهی 
+در دارالسلطنه‌ی قزوین به آموختن علوم رسمیه مانند نحو و صرف و منطق و 
+معانی و بیان اشتغال داشته[ام.]، از آن پس در دارالخلافه‌ی تهران از بهشتی 
+روان جناب آقای آقا میرزا حسین سبزواری، که از سرآمد شاگردان دانشور یگانه و
+ آموزگار فرزانه حاج ملاهادی سبزواری ـ علیهما رحمة الله الباری ـ بود، 
+بهری از علوم کلامیه و رسوم ریاضیه استفاضه نموده، در محضر حکیم بارع، و 
+متأله شامخ، آقامیرزا ابوالحسن متخلص به جلوه ـ قدّس سره ـ اخذ معارف حقه و
+ تحصیل فنون حکمیه کرده و سایر علوم را از فقه و اصول و حدیث از هر کدام به
+ لیاقت و مناسبت استعداد از مظان خود استفاده نموده[ام.] مدت بیست و پنج 
+سال است در مدرسه‌ی منیریه واقعه در جنب معصوم‌زاده سید</em>&nbsp;<em>ناصرالدین به عنوان تدریس معقول، به درس و بحث با طلاب مشغولم، الفتی با مردم و کلفتی با کس ندارم. شعر:</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>&nbsp;</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>من مونسی گزیده‌ام از بهر خود مرا،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>یک لحظه بر مفارقتش صبر و تاب نیست.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>خوش‌رو و نغزگو، ادب‌آموزِ نکته‌دان،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>هرگز نیاورد سخنی کان صواب نیست.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>گوینده بی‌زبان و سراینده بی‌صدا،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>رأیش به قیل و قال و سؤال و جواب نیست.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>بی‌هیچ کلفتی نبود الفتی، ولی،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>زین دوست زحمتی به‌ من از هیچ باب نیست.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>قلیان نمی‌‌کشد، نخورد چای و حاجتش،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>بر فرش، متکّا و طعام و شراب نیست.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>بیهوده خواهشی نکند، خشم ناورد،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>چون دید بر مراد خودش کامیاب نیست.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>این همدم عزیز که شد وصف او بیان،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>هر کس شنید، گفت که این جز کتاب نیست.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>آنان که عاقلند، ملامت نمی‌کنندـ</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>برمن، مگر کسی که سرش در حساب نیست.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>وز صحبت خسان که عذابی است بس الیم،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>کو آن ستوده جان که دلش در عذاب نیست.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>&nbsp;</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>جز حج بیت الله الحرام و زیارت مشاهد 
+مشرفه‌ی ائمه‌ی انام ـ علیهم السلام ـ به جایی مسافرت نکرده [ام.] بعد از 
+فوت والد مرحوم، علایق خود را از ارث پدری، از ملک و مواشی و اثاث البیت به
+ برادران بخشیده، خود را به کنار کشیدم، هیرسایی گزیدم، نه از روی علتی که 
+در خلقت داشته باشم، بلکه از راهی که بیرون از دستور شرع نبوی ـ صلی اله 
+علیه و آله ـ نبوده [است.] &nbsp;لَقَدْ قَنَعَتْ هِمَّتِی بِالْخُمُولِ وَ 
+صَدَّتْ عَنْ الرُّتْبَةِ الْعَالِیَّةِ فَوَ اللهِ مَا جَهِلَتْ طَیْبَ 
+الْعُلَی وَلکِنَّها تُؤثِّرُ الْعَافِیَة.<sup>1</sup></em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>&nbsp;</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>همانا من از این جهان فراخ،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>قناعت نمودم به این تنگ کاخ.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>به خود خانمانی نیاراستم،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>تن آسایی خویش را خواستم.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>بریدم ز پیوند خویش و تبار،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>نه بگزیدم از بهر خود جفت یار.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>ز بیگانگان روی برکاشتم،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>به دل آرزوی دگر داشتم.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>&nbsp;</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>از مؤلفات و منشآت، آن‌چه مرغوب طلاب واقع شده است، «</em><strong>تعلیقه</strong><em>» بر منظومه‌ی حاجی سبزواری علیه رحمة الباری، در منطق و حکمت، و «</em><strong>مجموعه</strong><em>»
+ که مشتمل است به نظم و نثر پارسی و ترکی و عربی، در حکمت و اخلاق و امثال و
+ حکایات و مطایبات و غیرها ... این بی‌بضاعت بسیار مدتی است که از معاشرت 
+ملول و در زاویه‌ی خمول به حال خود مشغولم:</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>&nbsp;</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>به پاکی دل پیران پارسا سوگند،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>که من به‌ جاه و جلال جهان نیم در بند.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>من از تمام جهانم به گوشه‌ای خوشنود،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>من از تمام جهانم به توشه‌ای خورسند.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>ز مال و مکنت دنیا نگاه پوشیدم،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>چه از نخست چنین داد پیر راهم پند.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>که:«ـ ای جوان ز جمال جهان فریب مخور،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>دل از محبت این پیره زال باید کند.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>منه به مال و به فرزند دل، نبخشد سود،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>تو را به روز قیامت نه مال و نه فرزند.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>بدان که عزت جان است با قناعت جفت،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>چنان که ذلت آن است با طمع پیوند.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>قسم به کیش مسیحا که هیده‌جی زین پس،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>به پای خود نگذارد کسی گذارد بند!</em>&nbsp;<em>»</em></span></font></p>
+<p dir="RTL"><font size="2"><span>&nbsp;</span></font></p>
+<p dir="RTL"><font size="2"><strong><span>2 ـ &nbsp;دوغومو</span></strong></font></p>
+<p dir="RTL"><font size="2"><span>حکیم آخوند ملامحمد هیده‌جی، هیجری 1270ـ نجی ایلده دۆنیایا گؤز آچمیشدیر.</span></font></p>
+<p dir="RTL"><font size="2"><span>بعضی آراشدیریجیلار اونون دوغومو تاریخی مسأله‌سینی بوروشوق حالا گتیریرلر. میثال اۆچۆن، غلامحسین رضانژاد «<strong>دانشنامه</strong>»‌ده گلن آشاغیداکی بئیته:</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>ندیدی چه‌سان شد در این روزگار،</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>گرفتار کردار خود، شهریار؟</span></font></p>
+<p dir="RTL"><font size="2"><span>&nbsp;</span></font></p>
+<p dir="RTL"><font size="2"><span>استناد ائده‌رک«در این روزگار» ترکیبندن «در این سال» 
+معناسینی چیخاریر و 1312هـ . یعنی ناصرالدین شاهین مقتول اولماسی ایلده، 
+هیده‌جی‌نی 50 یاشیندا ظن ائدیر!<sup>2</sup>&nbsp;حال بو کی، او 1310 هـ . ایلینده یازدیغی "<strong>رساله‌ی دخانیه</strong>" اثرینده اؤزۆ صراحتله 40 یاشیندا اولماسینا تأکید ائدیر.<sup>3</sup></span></font></p>
+<p dir="RTL"><font size="2"><span>یعنی قطعیاً دئمه‌لییک کی او 1270ﻫ. ق. ایلینده هیده‌جده (هییه کندینده) دۆنیایا گلمیشدیر. همین تاریخی، "<strong>تاریخ عرفا و حکمای زنجان</strong>" کیتابی‌نین مؤلفی و محمدرضاکریمی‌ده قبول ائدیرلر.</span></font></p>
+<p dir="RTL"><font size="2"><span>&nbsp;</span></font></p>
+<p dir="RTL"><font size="2"><strong><span>3 ـ &nbsp;هیدج</span></strong></font></p>
+<p dir="RTL"><font size="2"><span>آذربایجانین خمسه ولایتینه باغلی ابهر چایی کندلریندن 
+ساییلان و ایندی بیر شهر کیمی اداره ائدیلن و زنگانین 60 کیلومترلیگینده 
+یئرلشن "هیده‌ج" فورماسیندا یازیلان کندین اصیل تۆرکجه آدی «هییه» Hiyə 
+دیر. بو سؤزجۆگۆن کؤکۆ هیی hiy دیر، اونون معناسی ایسه: قاباریلمیش، گؤزه 
+گلن، گؤرۆنن، برجسته و بو کیمی آنلاملاردیر. اؤلکه‌میز و قونشو اؤلکه‌لرین 
+تۆرک‌نشین بؤلگه‌لرینده بو آددا کندلره چوخ راست گلیریک. ایراندا اونو 
+هییَجHiyəc ، هییَقHiyəq ، هیده‌ج Hidəc و گاهدا اصیل فورمایا یاخین 
+اولاراق&nbsp;<em>هییه</em>Hiyəیازمیشلار.</span></font></p>
+<p dir="RTL"><font size="2"><span>حکیم هیده‌جی دوغولدوغو کنده، اثرلری‌نین مختلیف 
+یئرلرینده اشاره ائدیر، اورانین صفالی طبیعتی و خلقی‌نین گؤزه‌ل خوی و 
+عادتلریندن افتخار حسی ایله یاد ائدیر:</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>اولار کی وصف ائله‌ییبلر صفادا شیرازی،</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>منه گۆمان یوخو ترجیح هیده‌جه شیراز.</span></font></p>
+<p class="a2" dir="RTL" align="center"><br><font size="2"><span></span></font></p>
+<p dir="RTL"><font size="2"><span>***</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>های! خمسه‌نین اول سویوق سولاری،</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>وه! هیده‌جین اول سرین هاواسی!</span></font></p>
+<p class="a2" dir="RTL" align="center"><br><font size="2"><span></span></font></p>
+<p dir="RTL"><font size="2"><span>***</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>فغان کی حسرتی قالدی اۆره‌کده هیده‌جین، اول،</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>سویوق بولاقلاری، باشی دومانلی داغلاری!</span></font></p>
+<p class="a2" dir="RTL" align="center"><br><font size="2"><span></span></font></p>
+<p dir="RTL"><font size="2"><span>***</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>تیکیلدی چیگنیمه هیده‌جده داغلاغان آغاجی،</span></font></p>
+<p class="a2" dir="RTL" align="center"><br><font size="2"><span></span></font></p>
+<p dir="RTL"><font size="2"><span>***</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>آسیلدی بؤرکۆمه هیده‌جده مؤهره، بو ایام.</span></font></p>
+<p class="a2" dir="RTL" align="center"><br><font size="2"><span></span></font></p>
+<p dir="RTL"><font size="2"><span>***</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>مولدم بود هیده‌ج، بخت سست و طالع کج،</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>گاه ساکن تهران، گه مقیم قزوینم!</span></font></p>
+<p dir="RTL"><font size="2"><span>&nbsp;</span></font></p>
+<p dir="RTL"><font size="2"><strong><span>4 ـ &nbsp;آتاسی</span></strong></font></p>
+<p dir="RTL"><font size="2"><span>هیده‌جی یازدیغی اؤز کئچمیشینده اؤز آدینی محمد، لقبینی
+ ملاّ، آتاسینی ایسه ملامعصومعلی معرفی ائدیر. گؤرۆنۆر کی اونون آتاسی 
+روحانی و دین عالیمی اولموشدور. بیر چوخ قایناقلاردا اونو حاج ملا معصومعلی
+ آدلاندیریرلار. بورادان اونون مکّه‌یه مشرف اولماسی دا آیدینلاشیر.</span></font></p>
+<p dir="RTL"><font size="2"><span>&nbsp;</span></font></p>
+<p dir="RTL"><font size="2"><strong><span>5 ـ &nbsp;آدی، لقبی و تخلّصو</span></strong></font></p>
+<p dir="RTL"><font size="2"><span>حکیم هیده‌جی اؤزۆنۆ محمد آدلاندیریر. یازیلی 
+قایناقلاردا، محمدعلی ده یازیلیر و حاجی آخوند هیده‌جی، ملامحمد هیده‌جی، 
+حکیم هیده‌جی لقبلری ایله تانینیر. حاجی لقبی، اونون مکه‌یه مشرف اولماسی و
+ «حکیم» لقبی فلسفه و حکمت ایله اوغراشدیغینا اشاره‌دیر.</span></font></p>
+<p dir="RTL"><font size="2"><span>ملامعصومعلی اوغلو هیده‌جلی ملامحمد گنجلیک دؤورۆندن شعر یازماغا ماراق گؤسترمیشدیر. گنجلیگینده مغنّی تخلص ائدیرمیش:</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>مغنیّا! دل، به توبه و پند،</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>ز مطرب و می نمی‌توان کند!</span></font></p>
+<p dir="RTL"><font size="2"><span>&nbsp;</span></font></p>
+<p dir="RTL"><font size="2"><span>سونرالار تخلّصۆنۆ « هیده‌جی» و «هیده‌جلی»یه چئویرمیشدیر:</span></font></p>
+<p dir="RTL"><font size="2"><span>خدا بیلیر کی محبت یولوندا هیده‌جلی،</span></font></p>
+<p dir="RTL"><font size="2"><span>بئلی بۆکۆلدۆ، قوجالدی، آغاردی ساققالی!</span></font></p>
+<p dir="RTL"><font size="2"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br></span></font></p>
+<p dir="RTL"><font size="2"><strong><span>6 ـ &nbsp;تحصیلاتی</span></strong></font></p>
+<p dir="RTL"><font size="2"><span>حکیم هیده‌جی ایلک تحصیلینی هیده‌ج قریه‌سینده و چوخ 
+گۆمان کی آتاسی یانیندا آلمیشدیر. اؤزۆنۆن دئدیگی کیمی، بو قریه‌ده واقع 
+اولان مدرسه‌ده درس اوخوموشدور. سونرا قزوین شهرینه گئتمیش اورادا صرف، 
+نحو، منطق، معانی و بیان اوخوموشدور.</span></font></p>
+<p dir="RTL"><font size="2"><span>قزوین شهرینه کؤچدۆگۆ زامان 25 یاشیندا ایمیش. اورادا 4
+ ـ 5 ایل حسن‌خان ـ حسین‌خان مدرسه‌سینده اقامت و تحصیل ائتمیشدیر. بعضی 
+قئیدلره گؤره قزوین علمیه حوزه‌سینده سیدعلی خوئینی‌نین شاگیردی اولموشدور و
+ عقلی علملر و فلسفه‌یه ماراغی ایسه اونون تأثیری آلتیندا الده ائتمیشدیر.</span></font></p>
+<p dir="RTL"><font size="2"><span>سونرا تهرانا کؤچمۆش،&nbsp;<em>حسین سبزواری</em>&nbsp;و&nbsp;<em>ابوالحسن جیلوه</em>&nbsp;یانیندا تحصیلینه دوام ائتمیشدیر.</span></font></p>
+<p dir="RTL"><font size="2"><span><em>میرزا حسین سبزواری</em>&nbsp;تهراندا «<em>عبدالله‌خان</em>» مدرسه‌سینده ساکن ایدی. او، کلام و حکمت ایله بیرلیکده ریاضیات علملرینی ده همین مدرسه‌ده تدریس ائدیرمیش. حکیم هیده‌جی، اونو&nbsp;<em>حاجی</em>&nbsp;<em>ملاهادی سبزواری</em>‌نین ان یئتگین و بیلگین شاگیردی آدلاندیریر، کلام و ریاضیات علملرینه اونون یانیندا یئیه‌لنمه‌سینه فخر ائدیر.</span></font></p>
+<p dir="RTL"><font size="2"><span>تهراندا، اونون ایکینجی اوستادی&nbsp;<em>سیدابوالحسن جیلوه</em>، دارالشفا مدرسه‌سینده ادبی علملر و حکمت تدریس ائدیرمیش.</span></font></p>
+<p dir="RTL"><font size="2"><span>بئله‌لیکله حکیم هیده‌جی اون ایله یاخین تهراندا «<em>عبدالله‌خان</em>» و «<em>دارالشفا</em>» مدرسه‌لرینده تحصیل آلدیقدان سونرا،&nbsp;<em>عتبات&nbsp;</em>و&nbsp;<em>مشهده</em>گئتمیش،&nbsp;<em>مکه‌</em>یه مشرف اولموشدور. هر یئرده ایسه نقلی و عقلی علملری تحصیل ائتمه‌گه ماراق و مئیل گؤسترمیشدیر:</span></font></p>
+<p dir="RTL"><font size="2"><span>&nbsp;</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>کجا انجمن بود، بردم سری،</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>اگر دیدم آنجاست دانشوری.</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>شدم گوش گفتار آن نامدار،</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>که بینم چه می‌گوید آموزگار!</span></font></p>
+<p dir="RTL"><font size="2"><span>&nbsp;</span></font></p>
+<p dir="RTL"><font size="2"><strong><span>7 ـ &nbsp;سفرلری</span></strong></font></p>
+<p dir="RTL"><font size="2"><span>حکیم هیده‌جی ایلک دفعه هیده‌جدن قزوینه، سونرا قزویندن
+ تهرانا مهاجرت ائتمیشدیر. اوتۆز بئش یاشیندا کربلایا سفر گئتمیشدیر. سفر 
+اثناسیندا، جبل‌حمرین محلّینده یول کسنلره معروض قالمیشدیر:</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>کیمین عشقین منی چکدی جبل حمرینه،</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>وئردی دینیم کیمی سامانیمی کیم تالانه؟</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>من کی سینّیم ده‌گیل اول قدر کی اینسان قوجالا،</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>بیلمیرم شک واریم اوتوز بئش اولوبدور یا نه؟</span></font></p>
+<p class="a2" dir="RTL" align="center"><br><font size="2"><span></span></font></p>
+<p dir="RTL"><font size="2"><span>&nbsp;</span></font></p>
+<p dir="RTL"><font size="2"><span>کربلادان باشقا، شعرلریندن آنلاشیلدیغی کیمی،&nbsp;<em>نجف</em>،&nbsp;<em>کاظمین</em>،&nbsp;<em>سامرا&nbsp;</em>و&nbsp;<em>مشهد</em>ده ‌ده زیارته گئتمیش و مکه‌یه ده مشرف اولموشدور. بعضی قصیده‌لری‌نین باشلیقلاریندا بو سفرلره اشاره واردیر، میثال اۆچۆن:</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>یا حضرت علی‌رضا، شاه عرش جاه،</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>شاه و گدایا بارِ گُنه‌دیر پناهگاه.</span></font></p>
+<p class="a2" dir="RTL" align="center"><br><font size="2"><span></span></font></p>
+<p dir="RTL"><font size="2"><span>&nbsp;</span></font></p>
+<p dir="RTL"><font size="2"><span>مطلعلی قصیده‌نین باشلیغی:</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span><em>«ارض اقدسه وارد اولاندا عرض اولدو»</em></span></font></p>
+<p dir="RTL"><font size="2"><span>&nbsp;</span></font></p>
+<p dir="RTL"><font size="2"><span>و:</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>بو دۆشگۆن قوصصه و غمدن یئتیبدیر جانا یا مولا،</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span>یئترسین تا اؤزۆن بو صحن و بو ایوانا یا مولا!</span></font></p>
+<p class="a2" dir="RTL" align="center"><br><font size="2"><span></span></font></p>
+<p dir="RTL"><font size="2"><span>&nbsp;</span></font></p>
+<p dir="RTL"><font size="2"><span>مطلعلی قصیده‌نین باشلیغی:</span></font></p>
+<p class="a2" dir="RTL"><font size="2"><span><em>«نجف اشرفه وارد اولاندا عرض اولدو.»</em></span></font></p>
+<p dir="RTL"><font size="2"><span>&nbsp;</span></font></p>
+<p dir="RTL"><font size="2"><span>یازیلمیشدیر.</span></font></p>
+<p dir="RTL"><font size="2"><span>&nbsp;</span></font></p>
+<p dir="RTL"><font size="2"><strong><span>8 ـ &nbsp;تدریسی</span></strong></font></p>
+<p dir="RTL"><font size="2"><span>حکیم هیده‌جی یازدیغی اؤز کئچمیشینده دئییر:</span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>«... مدت بیست و پنج سال است در مدرسه‌ی 
+منیریه واقعه در جنب معصوم‌زاده سید نصرالدین به عنوان تدریس معقول به درس و
+ بحث با طلاب مشغولم...»</em></span></font></p>
+<p dir="RTL"><font size="2"><span>عؤمرۆنۆن سون ایللرینی همین مدرسه‌ده «<strong>منظومه</strong>» و «&nbsp;<strong>اسفار</strong>» تدریسی و شرحی ایله مشغول ایدی. همده قدیم ریاضیات، هیأت و نجوم تدریس ائده‌ردی.</span></font></p>
+<p dir="RTL"><font size="2"><span>&nbsp;</span></font></p>
+<p dir="RTL"><font size="2"><strong><span>9 ـ &nbsp;ائولنمه‌سی</span></strong></font></p>
+<p dir="RTL"><font size="2"><span>حکیم هیده‌جی عؤمرۆنۆن سونونا قده‌ر مجرّد و یالقیز 
+یاشادی. بو باره‌ده غلامحسین رضانژاد، مرحوم آیت الله محمد سنگلجی‌دن بئله 
+بیر روایت ائدیر:</span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>« از حاج آخوند هیده‌جی برایم نقل کرد 
+که:« در نیمه‌ی نخستین عمر، زنی از اهالی سامان خویش برگزیدم و چون آن زن 
+بسیار زیبا بود، و من مردی گوشه‌گیر و زاهد و از دنیا گذشته؛ دریغم آمد که 
+آن زن، عمر و جوانی خود را در کار و زندگی سراسر قناعت و زهد من که از هر 
+گونه خودنمایی و تحصیل نام و ثروت به دور بود، تباه کند و با فقر و خرسندی 
+من بسازد. و به همین دلیل پیش از زفاف، مهریه‌ی او را بدو دادم و با رضایت 
+وی رهایش کردم، و از وصله‌ی آن پارچه‌ی گرانبها به لباس کرباسین خود، 
+جلوگیری و خودداری کردم و از آن پس، دیگر بدین اندیشه میدان ندادم. »</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>&nbsp;</em></span></font></p>
+<p dir="RTL"><font size="2"><span>او، بو روایتی نقل ائتدیکدن سونرا سؤزلرینه بئله دوام ائدیر:</span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>« و نیز قریب به همین معنی را درباره‌ی 
+او از شاگرد دیگرش شادروان آیت ‌الله ملاعلی معصومی همدانی شنیدم که مؤید 
+سخنان آیت الله آقا محمد سنگلجی بود، و چنان که خود در منظومه‌‌ی 
+دانشنامه‌اش سروده است:</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>سر خود گرفتم، ز مردم کنار،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>بریدم ز پیوند خویش و تبار.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>ز یاران خود، روی برگاشتم،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>به دل آرزوی دگر داشتم.</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>بنگزیدم، از بهر خود یار و جفت،</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>همی درد دل داشتم، در نهفت. »</em></span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>&nbsp;</em></span></font></p>
+<p dir="RTL"><font size="2"><span>بیزجه، اونون ازدواج ائتمه‌مه‌ سببی‌نی، فلسفی دۆنیا 
+گؤرۆشۆنده آختارمالیییق. بو گؤرۆشه گؤره، او عشقی بؤیۆک بیر شاعیردیر، هر 
+زامان ایلاهی بیر عشق ایله مشغول اولان هیده‌جی، بیر نوع تجسّده اینانیر و 
+«ازلی ذرّ»ی او قده‌ر سئویر کی اونون اۆچۆن غزللر دیوانی ترتیب ائدیر، گئجه
+ ـ گۆندۆز اونا فیکر ائدیر و اونو دۆشۆنۆر و بلکه بونا گؤره‌ده 
+ایسته‌مه‌میش اؤزۆنۆ دۆنیوی عشق ایله مشغول ائتسین.</span></font></p>
+<p dir="RTL"><font size="2"><span>&nbsp;</span></font></p>
+<p dir="RTL"><font size="2"><strong><span>10 ـ &nbsp;اؤلۆمۆ</span></strong></font></p>
+<p dir="RTL"><font size="2"><span>حکیم هیده‌جی عؤمرۆنۆن سون ایللرینده خسته‌لنمیش و 
+آریقلامیشدیر. او، هیجری 1346ـ نجی ایلده مریض و خسته بیر حالدا تهراندا 
+امام‌زاده سیدنصرالدین مدرسه‌سینده وفات ائتمیشدیر. جنازه‌سینی قم شهرینه 
+آپارمیشلار و جنازه نامازینی «قم علمیه حوزه»سی‌نی بانیسی آیت الله حائری ـ
+ رحمت الله ـ&nbsp; قیلمیشدیر. ناماز قیلیندیقدان سونرا، جنازه‌نی ایندی «تکیه 
+تولیت» دئییلن یئرده دفن ائتمیشلر.</span></font></p>
+<p dir="RTL"><font size="2"><span>اونون یاشاییشی‌نین سون ایللری و اؤلۆمۆ حاققیندا یئنه ده رضانژاد بئله بیر روایت ائدیر:</span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>« شادروان آیت الله آقا محمد سنگلجی نقل 
+می‌کرد که من در اواخر عمر استادم هیده‌جی، او را برای بردن به حمام بر دوش
+ می‌کشیدم و از او جز مشتی رگ و پوست و استخوان باقی نمانده بود، سپس اضافه
+ می‌کرد، آن‌گاه که از حمام او را بر دوش خود به منزلش در سیدنصرالدین 
+می‌بردم، همه‌ی بینندگان صلوات می‌فرستاند. »</em></span></font></p>
+<p dir="RTL"><font size="2"><span>&nbsp;</span></font></p>
+<p dir="RTL"><font size="2"><strong><span>11 ـ &nbsp;مزاری</span></strong></font></p>
+<p dir="RTL"><font size="2"><span>دئدیگیمیز کیمی حکیم هیده‌جی‌نین مزاری قم شهرینده « 
+تکیه تولیت» محلّینده‌دیر. بورادا اونون مزاری بیر کیچیک اوتاقدا 
+یئرله‌شیر. بو اوتاغین قاپی‌سی‌نین باشیندا بئله یازیلمیشدیر:</span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>« مقبره‌ی عالم ربانی و فیلسوف اعظم، مرحوم حاج ملامحمد مشهور به حکیم هیده‌جی، صاحب تألیفات و دیوان. »</em></span></font></p>
+<p dir="RTL"><font size="2"><span>قاپی‌نین باشقا طرفینده بئله بیر یازی دا واردیر:</span></font></p>
+<p class="a" dir="RTL"><font size="2"><span><em>« و مقبره‌ی عالم متقی و فیلسوف بزرگ مرحوم محمدبن محمد مفید، مشهور به قاضی سعید قمی، صاحب تألیفات. »</em></span></font></p>
+<p dir="RTL"><font size="2"><span>دئمه‌لی اونون مزاری« شرح بر توحید شیخ صدوق» کیتابی‌نین یازاری قاضی سعید قمی مزاری یانیندادیر.</span></font></p>
+<p dir="RTL"><font size="2"><span>مزارین باش داشیندا هیده‌جی‌نین اؤلۆم تاریخی 1314 ش. (1366ق.) ضبط ائدیلمیشدیر.</span></font></p>
+<p dir="RTL"><font size="2"><span>&nbsp;</span></font></p>
+<p dir="RTL"><font size="2"><strong><span>12 ـ &nbsp;شاگیردلری</span></strong></font></p>
+<p dir="RTL"><font size="2"><span>حکیم هیده‌جی اوتوز ایله یاخین تدریس زامانیندا، چوخلو 
+عالیم، ادیب و حکیم تربیت ائتمیشدیر. اونلارین آراسیندان بیر نئچه نفردن آد
+ آپاریریق:</span></font></p>
+<ol><li><font size="2"><span>میرزا مهدی سنگلجی‌دن.</span></font></li><font size="2">
+&nbsp;
+</font><li><font size="2"><span>میرزا رضاقلی سنگلجی شریعتمدار.</span></font></li><font size="2">
+&nbsp;
+</font><li><font size="2"><span>هر ایکی نفرین قارداشی آیت الله محمد سنگلجی، تهران دانشگاهی‌نین، قاباقکی منطق و فلسفه اوستادی.</span></font></li><font size="2">
+&nbsp;
+</font><li><font size="2"><span>« شرح منظومه» کیتابینا تعلیقات یازان شیخ‌ محمدتقی ‌آملی.</span></font></li><font size="2">
+&nbsp;
+</font><li><font size="2"><span>آیت الله میرزا احمد آشتیانی.</span></font></li><font size="2">
+&nbsp;
+</font><li><font size="2"><span>میرزا مهدی آشتیانی.</span></font></li><font size="2">
+&nbsp;
+</font><li><font size="2"><span>سید جلال الدین تهرانی.</span></font></li><font size="2">
+&nbsp;
+</font><li><font size="2"><span>آیت الله سید ابوالحسن رفیعی قزوینی.</span></font></li><font size="2">
+&nbsp;
+</font><li><font size="2"><span>آیت الله میرزا ابوالحسن شعرانی.</span></font></li><font size="2">
+&nbsp;
+</font><li><font size="2"><span>آیت الله ملاعلی معصومی همدانی.</span></font></li><font size="2">
+&nbsp;
+</font><li><font size="2"><span>شیخ محمد جعفربن حاج ملا لنکرانی.</span></font></li><font size="2">
+&nbsp;
+</font><li><font size="2"><span><span>میرزا محمد ثابتی همدانی.</span></span></font></li></ol><p><br></p><p><a target="_self"><br></a><font size="3"><font class="foth9dg" style="font-size: 8pt" color="#333333" face="Tahoma"><font class="foth9dg" style="font-size: 11pt" color="#333333" face="Tahoma"><font class="foth9dg" style="font-size: 8pt" color="#333333" face="Tahoma"><font class="foth9dg" style="font-size: 11pt" color="#333333" face="Tahoma"><a href="http://parsskin.com" target="_blank"><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/248.jpg" border="0" height="49" width="353"></a></font></font></font></font></font><br>
+
+
+
+
+
+
+
+
+
+
+
+
+ </p><p><br></p></div><font size="2">
+
+
+</font> </div><br><br>
+
+<br>:: مرتبط با: <a href="../category/9.html">
+مشاهیر و مفاخر</a> , <a href="../category/6.html">
+فرهنگ</a> , 
+<br>:: برچسب‌ها: <a href="../tag/حکیم&#32;هیدجی.html">
+حکیم هیدجی</a> , <a href="../tag/مفاخر&#32;آذربایجان.html">
+مفاخر آذربایجان</a> , <a href="../tag/مشاهیر&#32;زنجان.html">
+مشاهیر زنجان</a> , <a href="../tag/هیدج.html">
+هیدج</a> , <a href="../tag/اشعار&#32;ترکی.html">
+اشعار ترکی</a> , <a href="../tag/ترکی&#32;آذربایجانی.html">
+ترکی آذربایجانی</a> , <a href="../tag/دانشمند.html">
+دانشمند</a> , <br>
+
+</div></div></div>
+<div class="post7"></div>
+</div>
+<div align="right">
+<div class="theme-designer-com-post1"></div>
+<div class="theme-designer-com-post3">
+<div class="title-post"><div class="link-title-post"><a href="../46.html">چاروق زنجان</a></div></div>
+<div class="theme-designer-com-post4">
+جمعه 29 آبان 1394 ساعت 05:00 ب.ظ | 
+<!-- bazdid by www.theme-designer.com --->
+<script type="text/javascript" src="http://www.theme-designer.com/s/stat/posts/count.php?color=0e73b8&bg=FFFFFF&size=8&url=zanjan2rism.mihanblog.com//post/46"></script>
+<!-- bazdid by www.theme-designer.com ---> | 
+نوشته ‌شده به دست دنیز  | <span class="post-link"><a target="_self" href="javascript:newComment(46)">نظرات(<script>setCommentCnt(46)</script>)</span>
+</div>
+</div>
+<div class="theme-designer-com-post2"></div>
+<div align="center"><div class="post6"><div align="right">
+<div class="post8">
+
+
+
+
+<div align="center"><font face="Mihan-IransansBold"><b><font color="#330000" size="6"><br>چاروق زنجان</font><font size="5"><font color="#999900"> </font><br></font></b><font size="5" face="Mihan-Iransans"><br></font><font color="#660000" size="5" face="Mihan-Iransans">ظرافت صنعت دست هنرمندان زنجان با ابریشم و چرم </font><b><font size="5"><br></font></b></font><br><br><img src="http://s3.picofile.com/file/8223785942/8_min.jpg" alt="چاروق زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><font color="#CC0000" size="2"><b>المان چاروق نماد صنایع دستی زنجان در بلوار اشراق</b></font><br><b><font size="3"><br><br><br>چاروق‎‌دوزی یکی از صنایع‌دستی بومی استان زنجان است که دست‎های ظریف هنرمندان زنجانی در تولید آن مهارت ویژه‎ای دارند.</font></b><br><br><font size="3"><span itemprop="description" class="intro-text">تلفیق زیبای ابریشم و چرم
+ و هنر و تجربه پدیدآور ظرافتی زیبا و ماندگار به نام چاروق است، هنری ظریف
+ و خاص و مختص هنرمندان شهر زنجان به نام چاروق، پاپوشی تاریخی و اعیانی که
+ دارای قدمت طولانی تاریخی است.</span></font><br><br><img src="http://s6.picofile.com/file/8223785884/5_min.jpg" alt="چاروق زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><b><font size="3">دراصطلاح محلی ترکی زنجان چاروق را "چارخ" تلفظ می‌کنند. چاروق اکنون در زنجان بصورت یک صنعت دستی ظریف ساخته و عرضه می‌شود.<br></font></b><br><img src="http://s6.picofile.com/file/8223786026/10_min.jpg" alt="چاروق زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><p dir="rtl">
+	<font size="3">نخ ابریشمی رنگی، نخ گلابتون، مخمل، پاشنه‌های چوبی، نوار زیگزاگ، چرم گاو
+ و... از جمله موادی است که در چاروق دوزی مورد استفاده قرار می‌گیرد و 
+گزن، سوزن، درفش، قلاب، چکش و مشته از ابزارهای چاروق دوزی است که مشابه 
+ابزار کفاشی&nbsp;است&nbsp;و چاروق، از صنایع دستی معروف زنجان است.</font></p><br><br><img src="http://s6.picofile.com/file/8223785984/9_min.jpg" alt="چاروق زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><p dir="rtl">
+	<font size="3">قبل از ورود کفش‌های پلاستیکی به زنجان، سه نوع کفش با عملکرد جداگانه در 
+این شهر رایج بوده است. کفش‌هایی از نوع چاروق و گیوه برای کارهای روزانه و
+ کفش دوبندی که در مهمانی و مسافرت‌ها مورد استفاده قرار می‌گرفته است.</font></p><font size="3">
+</font><p dir="rtl"><font size="3">
+	تمرکز کفاشان در دو بازار بالا و پایین و اختصاص یافتن راسته های گوناگون 
+به این فن حکایت از رونق آن را در ادوار گذشته دارد. همچنین وجود محله بزرگ
+ دباغها در شهر، این فکر را قوت بخشیده است.</font></p><br><br><img src="http://s3.picofile.com/file/8223786076/11_min.jpg" alt="چاروق زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><p dir="rtl">
+	<font size="3">&nbsp;به علت ورود کفشهای کارخانه ای و علل دیگر، کفاشی بومی از رونق افتاد و اساتید آن به چاروق دوزی روی آوردند.</font></p><font size="3">
+
+	چاروق عبارت از پاپوش و پای افزار است که از قدیم الایام مورد استفاده 
+بوده و به اشکال مختلف&nbsp;تهیه و ساخته می شده و قسمت اعظم ساختمان آن در قدیم
+ از چرم بوده است. در فرهنگ معین&nbsp;برای معنی&nbsp;چاروق چنین نوشته شده است "چارق
+ { ترکی = چارغ = چاروق} کفش چرمی که بندها بساق پا پیچیده می شود. <br></font><br><img src="http://s6.picofile.com/file/8223786192/14_min.jpg" alt="چاروق زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><font size="3">این چاروقها مشخصا زنانه بوده و استفاده از آن جنبه تشریفاتی و تفننی دارد،
+ چاروقها از دو قسمت کف و رو تشکیل شده است کف آن از چرم ظریف و رویه آن از
+ نخهای نازک رنگی و گاهی از ابریشم و در طرحها و گونه های فراوان ساخته و 
+بافته می شود، چنانچه مصنوعات آن باب طبع ایرانی و خارجی است و مناسبترین 
+سوغات شهر زنجان محسوب می شود.</font><br><br><img src="http://s6.picofile.com/file/8223786134/12_min.jpg" alt="چاروق زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><p class="rtejustify">
+		<font size="3">ارزش فرهنگی و هنری این صنعت اصیل، هنرشناسان داخلی و خارجی را شیفته 
+نقوش انتزاعی خود کرده و قدمت آن به دوره ساسانی و اوج تزئینات آن به دوره 
+صفوی می‎رسد.</font></p><font size="3">
+	</font><p class="rtejustify"><font size="3">
+		وجود محله بزرگ دباغ‏ها در شهر زنجان حکایت از رونق صنعت کفاشی در دوران مختلف در این شهر دارد.</font></p><font size="3">
+	</font><p class="rtejustify"><font size="3">
+		چاروق‏های تولید شده در شهر زنجان زنانه بوده و معمولاً برای راه رفتن روی قالی و اتاق‏های مفروش دوخته می‌شود.</font></p><br><br><img src="http://s3.picofile.com/file/8223700642/3_min.jpg" alt="چاروق زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><font size="3">چاروق هنوز هم میان اهالی زنجان طرفدار دارد و چاروق دوزی برای برخی از 
+مردم یک شغل محسوب می‌شود. استاد&nbsp; "مردعلی حیدری" متولد 1335 یکی از قدیمی ترین 
+چاروق دوزان زنجان است که مدت 40 سال است برای مردم زنجان پاپوش می‌دوزد. </font><br><br><img src="http://s3.picofile.com/file/8223786484/25_min.jpg" alt="چاروق زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><font size="7"><b><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">بر
+ اساس کشفیات باستانشناسی، چکمه چرمی متعلق به مرد نمکی شماره 1، می توان 
+ریشه صنایع چرمی در استان زنجان را حداقل در 2000 قبل از میلاد جست. </span></b></font><br><br><img src="http://s3.picofile.com/file/8223786284/20_min.jpg" alt="چاروق زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8223786226/18_min.jpg" alt="چاروق زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><b><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">ابزار و مواد اولیه چاروق دوزی:</span></b><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">1- قیچی: برش چرم و مقوای صنعتی</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">2- قیچی ظریف: برش مخمل ونخ ابریشم</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">3- قالب چاروق: شکل دادن به چرم در اندازه های مختلف</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">4- کارکش: کشیدن چرم روی قالب وکشیدن دور چاروق</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">5- میخ کش: کشیدن میخ</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">6- گَزن: برش چرم و مقوا</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">7- چکش کفاشی: کوبیدن چرم،میخ،دور چاروق</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">8- مُشتی: کوبیدن چرم و صاف کردن چرم</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">9- درفش: سوراخ کردن چرم،مقوا،رویه چاروق وبستن نوک</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">10- قلاب: بافت پرده بند وشیرازه- مغار: برش چرم دوره و زیره چاروق</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">11- شانه چوبی: شانه کردن گل چاروق</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">12- سنگ تیز کن: تیز کردن ابزار(گزن، درفش، سوزن)</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">13- یراق</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">14– پاشنه</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">15– میخ تِل</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">16– میخ سایه</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">17– روتکس</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">18– سیم گلابتون</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">19– نخ دوک چینی</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">20– ابریشم</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">21– فنر کفش</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">22– چسب</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">23- سریشم</span><br><br><br><img src="http://s6.picofile.com/file/8223786376/22_min.jpg" alt="چاروق زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8223786426/23_min.jpg" alt="چاروق زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><font size="3"><b><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">مراحل ساخت چاروق :</span></b><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">برش
+ چرم ، خیساندن چرم در آب حداقل به مدت چهار ساعت ، خارج کردن از آب و خارج
+ کردن آب اضافی آن،ماساژ دادن چرم ،برش نوک چاروق،بستن نوک چاروق ، کشیدن 
+چرم به قالب چوبی ، کوبیدن میخ جهت ثابت ماندن چرم روی قالب و فرم دادن آن ،
+ پیرایش چرم توسط گزن روی قالب، پیرایش نهایی لبه های چرم بعد از بیرون 
+آوردن از قالب بوسیله قیچی، گذاشتن مقوای صنعتی یا تکسون بعنوان کفی داخل 
+چرم و چسباندن آن به ترتیب با سریشم و چسب کفاشی ، گذاشتن فنر بین پاشنه و 
+پنجه، دوختن دور فنر، کشیدن مخمل داخل چاروق، دوخت نوار به لبه چاروق ، 
+گذاشتن پاشنه از جنس چوب یا پلاستیک ،گذاشتن مجدد در قالب، بافت رویه با 
+انواع نخهای ابریشمی رنگی(ویسکوز) ،بافت شیرازه و پرده بند با قلاب ،قلاب 
+زنی روی چاروق ،بستن اضافات نخ و ایجادگل بالایی، خارج از قالب، بستن گل 
+چاروق نوک چاروق(گل پایینی) ، شانه کردن گلها با شانه چوبی ، پرداخت گل .</span><br><br><span style="font-size: small; font-family: tahoma,arial,helvetica,sans-serif; color: #000000;">رویه چاروق پرده بند دارای بافت متراکم تری نسبت به نوع توری آن میباشد.</span></font><br><br><img src="http://s3.picofile.com/file/8223786450/24_min.jpg" alt="چاروق زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><p class="rtejustify">
+		<font size="3">بزرگ‌ترین چاروق دنیا توسط مرد علی حیدری چاروق‌دوز زنجانی دوخته شد و 
+شاید با دوخت این چاروق بود که این هنر دستی زنجان دوباره زنده شد.</font></p><font size="3">
+	
+		طول این اثر ماندگار یک متر و عرض آن 40 سانتی‎متر است که از چرم گاو هلندی تهیه شده است. </font><br><br><img src="http://s3.picofile.com/file/8223786342/21_min.jpg" alt="چاروق زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s3.picofile.com/file/8223786218/16_min.jpg" alt="چاروق زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s3.picofile.com/file/8223700592/2_min.jpg" alt="چاروق زنجان" align="bottom" border="0" hspace="0" vspace="0"><br><br><p class="rtejustify">
+		<font size="3">اطلاع‌رسانی و آگاهی دادن در زمینه صنایع‌دستی‏های مختلف استان زنجان به 
+ویژه چاروق به عنوان یک صنایع‌دستی زینتی و سنتی ویژه بانوان از اهمیت 
+بسیار زیادی برخوردار است.</font></p><font size="3">
+	</font><p class="rtejustify"><font size="3">
+		امروزه استقبال مردم و به ویژه گردشگران و مسافران ورودی به شهر زنجان از
+ صنایع‌دستی و هنرهای سنتی این شهر از مهمترین اهداف مسئولان در 
+برنامه‌ریزی‌ها است.</font></p><a target="_self"><br></a><font size="3"><font class="foth9dg" style="font-size: 8pt" color="#333333" face="Tahoma"><font class="foth9dg" style="font-size: 11pt" color="#333333" face="Tahoma"><font class="foth9dg" style="font-size: 8pt" color="#333333" face="Tahoma"><font class="foth9dg" style="font-size: 11pt" color="#333333" face="Tahoma"><a href="http://parsskin.com" target="_blank"><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/248.jpg" border="0" height="49" width="353"></a></font></font></font></font></font><br>
+
+
+
+
+
+
+
+
+
+
+
+
+ <br>
+
+
+
+
+
+
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+ </div><br><br>
+
+<br>:: مرتبط با: <a href="../category/13.html">
+صنایع دستی</a> , 
+<br>:: برچسب‌ها: <a href="../tag/چاروق.html">
+چاروق</a> , <a href="../tag/پاپوش.html">
+پاپوش</a> , <a href="../tag/سوغات.html">
+سوغات</a> , <a href="../tag/صنایع&#32;دستی.html">
+صنایع دستی</a> , <a href="../tag/چاروق&#32;زنجان.html">
+چاروق زنجان</a> , <a href="../tag/ابریشم.html">
+ابریشم</a> , <a href="../tag/چرم.html">
+چرم</a> , <br>
+
+</div></div></div>
+<div class="post7"></div>
+</div>
+<div align="right">
+<div class="theme-designer-com-post1"></div>
+<div class="theme-designer-com-post3">
+<div class="title-post"><div class="link-title-post"><a href="../45.html">حسینیه اعظم زنجان 93</a></div></div>
+<div class="theme-designer-com-post4">
+شنبه 25 مهر 1394 ساعت 06:00 ب.ظ | 
+<!-- bazdid by www.theme-designer.com --->
+<script type="text/javascript" src="http://www.theme-designer.com/s/stat/posts/count.php?color=0e73b8&bg=FFFFFF&size=8&url=zanjan2rism.mihanblog.com//post/45"></script>
+<!-- bazdid by www.theme-designer.com ---> | 
+نوشته ‌شده به دست دنیز  | <span class="post-link"><a target="_self" href="javascript:newComment(45)">نظرات(<script>setCommentCnt(45)</script>)</span>
+</div>
+</div>
+<div class="theme-designer-com-post2"></div>
+<div align="center"><div class="post6"><div align="right">
+<div class="post8">
+
+<div align="center"><br><br><img src="http://s6.picofile.com/file/8217736476/Picture1.png" alt="حسینیه اعظم زنجان 93" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s3.picofile.com/file/8217733750/_1393_31_20141104_1894415445.jpg" alt="حسینیه اعظم زنجان 93" align="bottom" border="0" hspace="0" vspace="0"><br><br><b><font size="3">ارادت مردم استان زنجان به خصوص در ماه های محرم و صفر به اهل‌بیت بی‌نظیر 
+است و بصیرت و دلدادگی مردم استان زنجان تبدیل به حرکت حسینی شده و یک 
+الگوی بی‌بدیل است.<br><br></font></b><br><b><font size="3">حسینیه اعظم زنجان یکی از مساجد قدیمی این شهر محسوب می‌شود که ۱۳ شب ماه 
+محرم برنامه عزاداری ویژه‌ای برگزار می‌کند و روز هشتم محرم مصادف با عصر 
+تاسوعای حسینی، دسته عظیم عزاداری در این محل تشکیل می‌شود.<br><br></font></b><img src="http://s6.picofile.com/file/8217733050/_1393_13_20141104_1668643275.jpg" alt="حسینیه اعظم زنجان 93" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s3.picofile.com/file/8217732584/_1393_6_20141102_1380867607.jpg" alt="حسینیه اعظم زنجان 93" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8217732550/_1393_4_20141102_1145765210.jpg" alt="حسینیه اعظم زنجان 93" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s3.picofile.com/file/8217732692/_1393_2_20141104_1733202693.jpg" alt="حسینیه اعظم زنجان 93" align="bottom" border="0" hspace="0" vspace="0"><br><br><b><font size="3"><span dir="RTL">حسینیه اعظم زنجان با آیین عزاداری منحصر به فرد خود به 
+ویژه در ایام محرم فرصت مناسبی برای جذب گردشگر مذهبی است البته به دلیل 
+حال و هوا و فضای معنوی خاص&nbsp; این محل برنامه ریزی ها نیز باید به صورت ویژه
+ مورد توجه باشد. <br><br></span></font></b><br><font size="3"><span dir="RTL"><b>آیین عزاداری حسیینه اعظم&nbsp; ظرفیت های این مكان مذهبی را بالفعل كرده و سفر به این شهر را در طول سال جذاب كرده&nbsp; است. </b><br><br></span></font><img src="http://s3.picofile.com/file/8217732726/_1393_5_20141104_1752003237.jpg" alt="حسینیه اعظم زنجان 93" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8217732834/_1393_7_20141104_2030603486.jpg" alt="حسینیه اعظم زنجان 93" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8217732900/_1393_8_20141104_1411806917.jpg" alt="حسینیه اعظم زنجان 93" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8217732968/_1393_11_20141104_1919061130.jpg" alt="حسینیه اعظم زنجان 93" align="bottom" border="0" hspace="0" vspace="0"><br><br><h2 itemprop="headline">زنجان ، پایتخت شور و شعور حسینی آماده استقبال از گردشگران مذهبی حسینیه اعظم در دهه محرم است .<br></h2><br><br><img src="http://s3.picofile.com/file/8217733126/_1393_15_20141104_1970318161.jpg" alt="حسینیه اعظم زنجان 93" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8217733334/_1393_20_20141104_1400578250.jpg" alt="حسینیه اعظم زنجان 93" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s3.picofile.com/file/8217733942/_1393_37_20141104_1746081958.jpg" alt="حسینیه اعظم زنجان 93" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8217733376/_1393_21_20141104_1720253373.jpg" alt="حسینیه اعظم زنجان 93" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s6.picofile.com/file/8217733292/_1393_19_20141104_1239036302.jpg" alt="حسینیه اعظم زنجان 93" align="bottom" border="0" hspace="0" vspace="0"><br><br><img src="http://s3.picofile.com/file/8217733642/_1393_27_20141104_1672835246.jpg" alt="حسینیه اعظم زنجان 93" align="bottom" border="0" hspace="0" vspace="0"><br><br><span style="font-size: small;"><span style="font-family: tahoma,geneva,sans-serif;"><span style="line-height: 115%;"></span></span><b><font size="3"><span style="line-height: 115%; font-family: tahoma,geneva,sans-serif;">مراسم
+ دسته عزاداری شب تاسوعای حسینی که همه ساله با حضور صدها هزار نفری 
+عزاداران حسینی برگزار می شود ، در 15 دی ماه 1387 به عنوان دهمین میراث 
+معنوی کشور در فهرست میراث فرهنگی، صنایع دستی و گردشگری به ثبت رسید. 
+مجموعه این مسجد امروز در ظل توجهات خاصه حضرت امام حسین (ع) با بیش از 
+دوازده هزار متر مربع مساحت دارای امکانات و فضاهای متعدد فرهنگی، مذهبی، 
+درمانی و خدماتی از جمله کتابخانه، شبستانهای مختلف، دارالشفاء ، صندوق قرض
+ الحسنه و ... است و از مهمترین مراکز تأثیرگذار فرهنگی و مذهبی شهر زنجان 
+است.</span></font></b></span><br><br><img src="http://s3.picofile.com/file/8217732642/_1393_1_20141030_1777013164.jpg" alt="حسینیه اعظم زنجان 93" align="bottom" border="0" hspace="0" vspace="0"><br><br><font size="3"><font class="foth9dg" style="font-size: 8pt" face="Tahoma" color="#333333"><font class="foth9dg" style="font-size: 11pt" face="Tahoma" color="#333333"><font class="foth9dg" style="font-size: 8pt" face="Tahoma" color="#333333"><font class="foth9dg" style="font-size: 11pt" face="Tahoma" color="#333333"><a href="http://parsskin.com" target="_blank"><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/248.jpg" border="0" height="49" width="353"></a></font></font></font></font></font><br>
+
+
+
+
+
+
+
+
+
+
+
+
+ <br></div>
+
+
+
+
+
+
+ </div><br><br>
+
+<br>:: مرتبط با: <a href="../category/4.html">
+گردشگری</a> , <a href="../category/6.html">
+فرهنگ</a> , 
+<br>:: برچسب‌ها: <a href="../tag/حسینه&#32;اعظم&#32;زنجان.html">
+حسینه اعظم زنجان</a> , <a href="../tag/عزاداری.html">
+عزاداری</a> , <a href="../tag/پایتخت&#32;شور&#32;و&#32;شعور&#32;حسینی.html">
+پایتخت شور و شعور حسینی</a> , <a href="../tag/دسته&#32;عزاداری.html">
+دسته عزاداری</a> , <a href="../tag/مسجد.html">
+مسجد</a> , <br>
+
+</div></div></div>
+<div class="post7"></div>
+</div>
+
+<!-- ------------comment------------ -->
+<!-- ------------/comment------------ -->
+
+
+
+<table border="0" width="100%" id="table3" cellspacing="0" cellpadding="0">
+<tr>
+<td width="10">&nbsp;</td>
+<td>
+<table border="0" width="100%" id="table4" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center">
+<p align="right">
+<div id="styleone2">
+  <ul>
+    <li><a href="1203029.html"> تعداد کل صفحات: 6 </a></li>
+    <li><a href="http://zanjan2rism.mihanblog.com/post/author/1203029/page/1"><b>1</b></a></li><li><a href="http://zanjan2rism.mihanblog.com/post/author/1203029/page/2"><span>2</span></a></li><li><a href="http://zanjan2rism.mihanblog.com/post/author/1203029/page/3"><span>3</span></a></li><li><a href="http://zanjan2rism.mihanblog.com/post/author/1203029/page/4"><span>4</span></a></li><li><a href="http://zanjan2rism.mihanblog.com/post/author/1203029/page/5"><span>5</span></a></li><li><a href="http://zanjan2rism.mihanblog.com/post/author/1203029/page/6"><span>6</span></a></li>  </ul>
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="10">&nbsp;</td>
+</tr>
+</table>
+<br>
+<br>
+
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</div>
+
+<div align="center">
+<table border="0" width="898" cellspacing="0" cellpadding="0" dir="rtl">
+<tr>
+<td>
+<div class="footer1"></div>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="12"></td>
+<td width="61"><div class="footer2"><a rel="nofollow" target="_blank" title="تم دیزاینر" href="http://www.theme-designer.com"><img border="0" src="http://themeupload.theme-designer.com/55/image/30.gif"></a></div></td>
+<td width="12"></td>
+<td>
+<div class="copyright" style="line-height: 25px" align="right">
+تمام حقوق این وب سایت و مطالب آن متعلق به <a href="../../index.html"> زنجان توریسم </a>می باشد
+.<br>
+كد نویسی و گرافیك قالب توسط : <a target="_blank" title="قالب وبلاگ" href="http://www.theme-designer.com">تم دیزاینر</a>
+</div>
+</td>
+<td width="110"><div align="right"><a rel="nofollow" href="1203029.html#top"><img border="0" src="http://themeupload.theme-designer.com/55/image/29.gif"></a></div></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'zanjan2rism.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

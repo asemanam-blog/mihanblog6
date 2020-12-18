@@ -1,0 +1,1433 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*641954*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','504');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','چهارشنبه 5 آذر 1399');
+	
+	setStatVar('today_view','277');
+	setStatVar('yesterday_view','81');
+	
+	setStatVar('this_month_view','5506');
+	setStatVar('last_month_view','3943');
+
+	setStatVar('total_view','251721');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (06:28)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://zendegimoon.mihanblog.com/statupdate/?data[refereruri]=http://zendegimoon.mihanblog.com/post/archive/page/2&data[postid]=&data[requesturi]=/post/archive/1395/2&data[sdate]=1608173896&data[hash]=3aa6edfb4ac2c196d0717f3a4be33638&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[107]='6';commentCnt[108]='0';commentCnt[109]='2';commentCnt[110]='1';commentCnt[112]='1';commentCnt[113]='4';commentCnt[114]='2';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[107]='0';
+mihanblogDisLikeArrCnt[107]='0';
+mihanblogLikeArrCnt[108]='0';
+mihanblogDisLikeArrCnt[108]='0';
+mihanblogLikeArrCnt[109]='0';
+mihanblogDisLikeArrCnt[109]='0';
+mihanblogLikeArrCnt[110]='0';
+mihanblogDisLikeArrCnt[110]='0';
+mihanblogLikeArrCnt[112]='0';
+mihanblogDisLikeArrCnt[112]='0';
+mihanblogLikeArrCnt[113]='0';
+mihanblogDisLikeArrCnt[113]='0';
+mihanblogLikeArrCnt[114]='0';
+mihanblogDisLikeArrCnt[114]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://zendegimoon.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://zendegimoon.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<title>زندگی یک زوج ایرانی آلمانی - مطالب  اردیبهشت 1395</title>
+<base href="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Language" content="fa">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="alternate" type="application/rss+xml" title="زندگی یک زوج ایرانی آلمانی" href="../../rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title="زندگی یک زوج ایرانی آلمانی"  href="../../atom/index.html" />
+<style type="text/css">
+
+body { font-family: Tahoma; font-size: 8pt; text-align: center; direction: ltr; line-height: 18px; margin: 0px; background-color: #F3B08E; }
+.page { width: 990px; margin-right: auto; margin-left: auto; direction: rtl; background-color: #FADED0; margin-top: 0px; margin-bottom: 0px; padding: 0px; }
+/******************* header ******************/
+.header { height: 400px; width: 990px; text-align: center; background-repeat: no-repeat; margin-bottom: 0px; background-image: url(http://s7.picofile.com/file/8252907026/theme_01.jpg); }
+.header-mid { width: 90%; margin-left: auto; padding-top: 50px; text-align: right; margin-right: auto; }
+.header h1 { font-family: Arial; font-size: 28px; font-weight: bold; margin: 0px; }
+.header h3 { font-family: Tahoma; font-size: 12px; margin: 0px; padding-top: 20px; color: #F6D0C0; }
+.header A { color: #F6D0C0; text-decoration: none; }
+/****************** navbar ******************/
+.navbar { height: 60px; width: 990px; text-align: center; margin-top: 0px; margin-bottom: 10px; background-repeat: no-repeat; background-position: center top; background-image: url(http://s6.picofile.com/file/8252907042/theme_02.jpg); }
+.navbar-mid { width: 90%; margin-right: auto; margin-left: auto; padding-top: 18px; }
+.navbar ul { padding: 0px; margin: 0px 30px 0px 0px; }
+.navbar li { float: right; list-style-type: none; font-size: 9pt; font-weight: bold; margin-left: 40px; }
+.navbar li a:link { color: #000000; text-decoration: none; }
+.navbar li a:visited { color: #000000; text-decoration: none; }
+.navbar li a:hover { color: #626262; text-decoration: none; }
+/***************** content *******************/
+.main { width: 990px; }
+.content { float: right; width: 550px; }
+.bodypost { width: 550px; margin-bottom: 15px; background-image: url(http://s7.picofile.com/file/8252907192/theme_10.jpg); background-repeat: repeat-y; }
+.bodypost a:link { color: #808080; text-decoration: none; }
+.bodypost a:visited { color: #808080; text-decoration: none; }
+.bodypost a:hover { color: #000000; text-decoration: none; }
+.ptitle { height: 60px; text-align: center; background-repeat: no-repeat; background-position: center; background-image: url(http://s6.picofile.com/file/8252907092/theme_07.jpg); }
+.ptitle-mid { text-align: right; width: 450px; margin-right: 80px; margin-left: 20px; padding-top: 20px; }
+.ptitle a:link { color: #000; text-decoration: none; }
+.ptitle a:visited { color: #000; text-decoration: none; }
+.ptitle a:hover { color: #000; text-decoration: none; }
+.ptitle h2 { margin: 0px; font-family: Arial; font-size: 12pt; font-weight: bold; }
+.ptext { text-align: center; font-family: Tahoma; font-size: 9pt; }
+.ptext-mid { width: 95%; margin-right: auto; margin-left: auto; padding-top: 3px; padding-bottom: 3px; text-align: right; }
+.ptext img { max-width: 95%; height: auto; }
+.ptext img:hover { }
+.pinfo { }
+.pinfo-mid { width: 95%; margin-right: auto; margin-left: auto; text-align: right; padding-bottom: 10px; }
+.author { float: right; width: 45%; }
+.date { float: left; width: 45%; }
+.pcat { }
+.pcat-mid { width: 95%; margin-right: auto; margin-left: auto; text-align: right; padding-top: 3px; padding-bottom: 5px; }
+.pcomore { font-size: 9pt; }
+.pcomore-mid { text-align: right; width: 95%; margin-right: auto; margin-left: auto; padding-top: 12px; }
+.pcomore a:link { color: #000000; }
+.pcomore a:visited { color: #000000; }
+.pcomore a:hover { color: #000000; }
+.pmore { float: right; width: 40%; }
+.pcomment { float: left; width: 40%; }
+.p-bbg { height: 20px; background-repeat: no-repeat; background-position: center; background-image: url(http://s7.picofile.com/file/8252907284/theme_12.jpg); }
+.paper { width: 550px; background-color: #FCF1EB; border-radius: 10px; border: 1px solid #F09F76; }
+.paper-tbg { height: 10px; }
+.paper-text { text-align: center; font-family: Tahoma; font-size: 9pt; font-weight: bold; background-repeat: repeat-y; background-position: center; }
+.paper-text-mid { width: 90%; margin-top: auto; margin-bottom: auto; padding-top: 5px; padding-bottom: 5px; }
+.paper-text a:link { color: #000; text-decoration: none; }
+.paper-text a:visited { color: #000; text-decoration: none; }
+.paper-text a:hover { color: #535353; text-decoration: none; }
+.paper-text ul { margin: 0px; padding: 0px; }
+.paper-text li { float: right; margin-left: 20px; list-style-type: none; }
+.paper-text li a:link { color: #000; text-decoration: none; }
+.paper-text li a:visited { color: #000; text-decoration: none; }
+.paper-text li a:hover { color: #535353; text-decoration: none; }
+.paper-bbg { height: 10px; }
+.rpapers { float: right; width: 49%; }
+.lpapers { float: left; width: 49%; }
+/***************** rbar **********************/
+.right { float: right; width: 200px; margin-left: 10px; margin-right: 10px; }
+.rm { margin-bottom: 10px; }
+.rmtitle { height: 60px; text-align: center; font-family: Arial; font-size: 11pt; font-weight: bold; color: #000; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907068/theme_05.jpg); }
+.rmtitle-mid { width: 160px; margin-right: auto; margin-left: auto; padding-top: 20px; text-align: right; }
+.rmtext { text-align: center; background-repeat: repeat-y; background-image: url(http://s7.picofile.com/file/8252907126/theme_09.jpg); }
+.rmtext-mid { width: 90%; margin-right: auto; margin-left: auto; text-align: right; padding-top: 5px; padding-bottom: 5px; }
+.rmtext a:link { color: #000; text-decoration: none; }
+.rmtext a:visited { color: #000; text-decoration: none; }
+.rmtext a:hover { color: #666; text-decoration: none; }
+.rmtext ul { padding: 0px; margin: 0px; }
+.rmtext li { list-style-type: none; }
+.rmtext li a:link { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.rmtext li a:visited { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.rmtext li a:hover { color: #666; text-decoration: none; display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; }
+.rmtext img { max-width: 98%; height: auto; }
+.rmtext img:hover { }
+.rm-bbg { height: 20px; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907268/theme_11.jpg); }
+/***************** lbar ***********************/
+.left { float: left; width: 200px; margin-left: 10px; }
+.lm { margin-bottom: 10px; }
+.lmtitle { height: 60px; text-align: center; font-family: Arial; font-size: 11pt; font-weight: bold; color: #000; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907068/theme_05.jpg); }
+.lmtitle-mid { width: 160px; margin-right: auto; margin-left: auto; padding-top: 20px; text-align: right; }
+.lmtext { text-align: center; background-repeat: repeat-y; background-image: url(http://s7.picofile.com/file/8252907126/theme_09.jpg); }
+.lmtext-mid { width: 90%; margin-right: auto; margin-left: auto; text-align: right; padding-top: 5px; padding-bottom: 5px; }
+.lmtext a:link { color: #000; text-decoration: none; }
+.lmtext a:visited { color: #000; text-decoration: none; }
+.lmtext a:hover { color: #666; text-decoration: none; }
+.lmtext ul { padding: 0px; margin: 0px; }
+.lmtext li { list-style-type: none; }
+.lmtext li a:link { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.lmtext li a:visited { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.lmtext li a:hover { color: #666; text-decoration: none; display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; }
+.lmtext img { max-width: 98%; height: auto; }
+.lmtext img:hover { }
+.lm-bbg { height: 20px; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907268/theme_11.jpg); }
+/*************** footer **************************/
+.footer { height: 240px; width: 990px; margin-top: 10px; margin-bottom: 0px; font-family: Tahoma; font-size: 10pt; color: #000; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907334/theme_14.jpg); }
+.footer-mid { width: 80%; margin-right: auto; margin-left: auto; padding-top: 100px; text-align: center; }
+.footer a:link { color: #000; text-decoration: none; font-weight: normal; }
+.footer a:visited { color: #000; text-decoration: none; font-weight: normal; }
+.footer a:hover { color: #000; text-decoration: none; font-weight: normal; }
+/************** etc class **************************/
+.profile-img { text-align: center; margin-top: 5px; margin-bottom: 5px; }
+.profile-text { text-align: justify; }
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="header-mid">
+      <h1><a href="../../../index.html">زندگی یک زوج ایرانی آلمانی</a></h1>
+      <h3>خاطرات زندگی من در آلمان</h3>
+    </div>
+  </div>
+  <!--- e header --->
+  
+  <div class="navbar">
+    <div class="navbar-mid">
+      <ul>
+        <li><a href="../../../index.html">خانه</a></li>
+        <li><a href="../../archive.html">آرشیو</a></li>
+        <li><a href="mailto:">ایمیل</a></li>
+        <li><a href="../../rss/index.html">RSS</a></li>
+        <li><a href="http://cafeskin.blogfa.com/">قالب وبلاگ</a></li>
+        <li><a href="../../list.html">عناوین </a></li>
+      </ul>
+    </div>
+  </div>
+  <!--- e navbar ---->
+  
+  <div class="main">
+    <div class="right">
+      <div class="rm">
+        <div class="rmtitle">
+          <div class="rmtitle-mid">درباره من</div>
+        </div>
+        <div class="rmtext">
+          <div class="rmtext-mid">
+            <div class="profile-img"> <img src="http://static.mihanblog.com//public/user_data/web_photo/214/641954.jpg?9035"  /></div>
+            <div class="profile-text">می روم راه دور...خیلی دور..آسمان وطن خدا حافظ<br />
+شهر سرد قدیمی ام بدرود،ایران زیبای من خدا حافظ<br />
+<br />
+می روم راه دور خیلی دور،دورم از چشمهای روشن تو<br />
+منتظر می شوم تو هم برسی،تا دلم بشکفد به دیدن تو<br />
+<br />
+کوله بارم چه قدر سنگین است&quot;از وطن نان و نور آوردم<br />
+عطردلچسب چادر مادر،عشق را با غرور آوردم<br />
+<br />
+شانه های برادرم اینجاست،موی خوشبوی مادرم اینجاست<br />
+گرمی مهربان دست پدر،کیف قرآن و دفترم اینجاست<br />
+<br />
+می روم راه دور خیلی دور،تو همیشه کنار من هستی<br />
+دوستت دارم و دلم با توست،دور و نزدیک،یار من هستی</div>
+          </div>
+        </div>
+        <div class="rm-bbg"></div>
+      </div>
+              <div class="rm">
+          <div class="rmtitle">
+            <div class="rmtitle-mid">موضوعات</div>
+          </div>
+          <div class="rmtext">
+            <div class="rmtext-mid">
+              <ul>
+                                  <li> <a href="../../category/6.html">ادبی&nbsp;(14) </a> </li>
+                                  <li> <a href="../../category/4.html">مقاله&nbsp;(17) </a> </li>
+                                  <li> <a href="../../category/16.html">همسرم&nbsp;(3) </a> </li>
+                                  <li> <a href="../../category/5.html">نومزدنگ&nbsp;(5) </a> </li>
+                                  <li> <a href="../../category/2.html">بعد ازدواجمون&nbsp;(42) </a> </li>
+                                  <li> <a href="../../category/9.html">آشپزی های من&nbsp;(13) </a> </li>
+                                  <li> <a href="../../category/15.html">آموزش زبان آلمانی&nbsp;(15) </a> </li>
+                                  <li> <a href="../../category/1.html">پیش از ازدواجمون&nbsp;(20) </a> </li>
+                                  <li> <a href="../../category/8.html">ایده واسه زندگیمون&nbsp;(5) </a> </li>
+                                  <li> <a href="../../category/14.html">آموزش و پرورش آلمان&nbsp;(51) </a> </li>
+                                  <li> <a href="../../category/7.html">منو بیشتر بشناسین&nbsp;(2) </a> </li>
+                                  <li> <a href="../../category/11.html">مراحل اداری ازدواج ما&nbsp;(3) </a> </li>
+                                  <li> <a href="../../category/13.html">تجربه های مسافرت ما&nbsp;(36) </a> </li>
+                                  <li> <a href="../../category/17.html">فستیوال ها و جشن های آلمان&nbsp;(5) </a> </li>
+                                  <li> <a href="../../category/10.html">فرهنگ آلمانی و زندگی در آلمان&nbsp;(170) </a> </li>
+                                  <li> <a href="../../category/12.html">عقاید خودم و همسر راجع به زندگی&nbsp;(26) </a> </li>
+                              </ul>
+            </div>
+          </div>
+          <div class="rm-bbg"></div>
+        </div>
+                    <div class="rm">
+          <div class="rmtitle">
+            <div class="rmtitle-mid">نویسندگان</div>
+          </div>
+          <div class="rmtext">
+            <div class="rmtext-mid">
+              <ul>
+                                  <li><a href="../../author/123269.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/42/123269.jpg" style="width:16px;" /></a> <a href="../../author/123269.html" style="display:inline;"> باران &nbsp;(504) 	            خیلی فعال و پر جنب و جوشم...اراده قوی دارم و اعتماد به نفس بالایی هم دارم.کمی زود رنجم،خصوصیت بارزم شجاعتمه.عاشق ورزشم هر جا ورز</a></li>
+                              </ul>
+            </div>
+          </div>
+          <div class="rm-bbg"></div>
+        </div>
+                                <div class="rm">
+          <div class="rmtitle">
+            <div class="rmtitle-mid">آرشیو</div>
+          </div>
+          <div class="rmtext">
+            <div class="rmtext-mid">
+              <ul>
+                                  <li><a href='../1399/9.html'> آذر 1399</a></li>
+                                  <li><a href='../1399/8.html'> آبان 1399</a></li>
+                                  <li><a href='../1399/7.html'> مهر 1399</a></li>
+                                <li><a href="../../archive.html"><b>کل آرشیوها</b></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="rm-bbg"></div>
+        </div>
+          </div>
+    <!--- e right --->
+    
+    <div class="content">
+              
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		          <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../114.html">
+                <h2>مراحل اداری</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : یکشنبه 26 اردیبهشت 1395 08:18 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+دوستان اولین کاری که میکنین وقتی وارد آلمان میشین اینه که برین و اسم و ادرستون رو ثبت کنین تو شهرداری یا(einwohnermeldeamt ).ما 120 یورو برای این برگه پرداخت کردیم. وقتی همه مراحل اداریش انجام شد به شما یه کارت شهروندی میدن که همون کارت ملی خودمونه.ما این کارو 2-3 روز بعد از ورودمون به آلمان انجام دادیم و یه برگه به من دادن و برام ترجمه کردن که معنیش چیه و من امضاش کردم:<br><br>توی این برگه که من امضا کردم نوشته که:<br>من با این مشخصات...با همسرم با این مشخصات...در این ادرس زندگی میکنیم و دلیل موندن ما توی آلمان فقط ازدواجه و ما قصد داریم تا همیشه با هم زندگی کنیم و در صورتی که از هم جدا بشیم من حق زندگی در آلمان رو ندارم.و توی این برگه نوشته بعضی اوقات ممکنه یه بازرس بفرستن که زندگی ما با هم دیگه رو چک کنه و اگر با هم زندگی نکردیم من بلافاصله باید از آلمان خارج بشم.<br>و ضمنا شما باید برین و برای بیمه درمانیتون اقدام کنین .من چون از یک ماه دیگه شغل دارم تونستم خیلی راحت بیمه بشم.<br>
+
+
+
+
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/11.html">مراحل اداری ازدواج ما</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../114.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(114)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../113.html">
+                <h2>پاسخ به سوال </h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : شنبه 25 اردیبهشت 1395 01:26 ق.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 سوال یکی از دوستان:<br><br><table style="border:1px solid #336666; border-collapse: collapse;font-family:tahoma,arial,helvetica,sans-serif;font-size:11;width: 100%;" align="" cellpadding="1" cellspacing="1"><tbody><tr><td style="border:1px solid #336666; border-collapse: collapse;width: 100%;">&nbsp;سلام شماچجوری بایه آددم ازفرهنگ دیگه ملیت دیگه دین دیگه ازدواج کردین  
+البته ببخشیدهاباورکنین منظوری ندارم براجالبه شماایرانی بادین اسلام 
+بافرهنگ ایرانی اونوقت بایه اروپایی کنارچجوری میتونین بیاین؟؟بچتون باچ 
+دینی قراره بزرگ بشه قراره چ چیزایی روبپزیره فرهنگ ایران رویاآلمان رو؟/من
+ معذرت می خوام ببخشین اگ زیادی سوال کردم ببخشیدخوشبخت بشین...					</td></tr></tbody></table>دوست گلم هر ازدواجی نیاز به تغییر داره فرقی نمیکنه توی مورد من این مطمئنا پیچیده تره ولی از نظر من همسر من از تمام مسلمونا مسلمون تره و واسه من این مهمه که طرف پاک سیرت باشه که هست خدا رو شکر...و دین خیلی خیلی به قلبه نه به ظواهر و نماز خوندن و اینا<br>بچه ما هم خودش تمصمیم میگیره من دوست ندارم بچمونو اجبار کنم خودش میتونه تصمیم بگیره چه دینی رو میخواد...<br>کنار اومدن با یه فرهنگ اروپایی سخت نیست چون فرهنگ خیلی ساده ایه...مردم همونی هستن که میبینی...هیچ نقابی نیست...هیچ دروغی نمیشنوی....همه راسته...ولی ساده هم نیست چون تطابق هم نیاز داره...که به نظرم توی هر ازدواجی باید تطابق وجود داشته باشه....<br>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/10.html">فرهنگ آلمانی و زندگی در آلمان</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../113.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(113)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../112.html">
+                <h2>تجربه های اولیه زندگی در آلمان</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : شنبه 25 اردیبهشت 1395 01:22 ق.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+
+
+<font size="3">سلام دوستان<br>اینقدر اینجا تجربه های جدید هست که&nbsp; فرصت اینکه بیام و با تفصیل بگم نیست اما هرچیزی که برام جدید و جالب باشه رو حتما اینجا مینویسم<br>به طور کلی زندگی خیلی اینجا متفاوته<br>همه چی متفاوته<br>از فرهنگ رانندگی بگیر تا زندگی روزمره و کار...<br>اول بگم مردم خیلی برخوردشون خوبه هیچ بی احترامی ازشون ندیدم همه خوش برخوردن نمیگن این خارجیه.چند وقت پیش توی سوپر مارکت من حدود 3-4 تا چیز داشتم اومدم وایسادم توی صف و یه خانمی&nbsp; که سبدش پر بود بهم گفت میتونی بری جلو بایستی.من رفتم جلو و نفر بعدیم گفت برو جلوی من و من یه لحظه یادم به برخورد همشهریای خودمون افتاد که اصلا معنی حق و ناحقی رو نمیفهمن خیلی راحت حق یکی رو میخورن...خیلی مردم ما خود محور و خود شیفته اند...دور از جونم نداره هممون همین طوریم کاش یه کم خودمونو عوض کنیم....من با زندگی با همسرم دارم سعی میکنم این مشکلات فرهنگی رو توی خودم رفع کنم....<br>خیلی به عقاید هم احترام میذارن و روز اول به من گفتن این تصمیم خودته که میخوای چطور باشی حجاب داشته باشی یا نه و منم تمصیم خودمو گرفتم.با حجاب خیلی راحت ترم و دلیلش فقط و فقط اینه که با حجاب راحت ترم...اینجا اینقدر با حجاب هست که اصلا ادم حس ناراحتی بهش دست نمیده.راحت میتونین حجاب داشته باشین و هیچ برخوردی باهاتون بد نمیشه...هیچ متلکی از پسرا نمیشنوین.هیچکی نمیگه چکار کن چکار نکن...ازادین واسه خودتون تصمیم بگیرین...<br>اینا خوبیای اینجاست و اما صد در صد یه تطبیقایی نیازه...<br>کل زندگی اینجا با ایران متفاوته.از شب و روزش بگیر تا عادتهای زندگی مردم.اینجا خیلی زود افتاب طلوع میکنه(حدود 6 صبح)و شب ساعت 9 تاریک میشه و هر چی به طرف تابستون میریم غروب دیرتر اتفاق میفته...برای ما که عادت نداریم ممکنه توی خواب یه کم اختلال درست کنه چون هوا روشنه ممکنه از خواب بپرین و به خاطر اینکه از صبح خیلی زود پرنده ها اواز میخونن از سر و صدا ممکنه خوابتون نگیره.<br>اینجا حق و حقوق فردی خیلی برای همه مهمه اگر طبق قانون رفتار کنین از مردم احترام میبینین ولی اگر یه بار حتی یه بار یه قانونی رو خواسته یا ناخواسته بشکنین اون وقت مردم حسابی شکایت میکنن.<br><br></font>
+
+
+
+
+
+
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/10.html">فرهنگ آلمانی و زندگی در آلمان</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../112.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(112)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../110.html">
+                <h2>سیم کارت آلمانی</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : شنبه 25 اردیبهشت 1395 12:59 ق.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <h1 data-reactid=".4.1.0.0.2.1.0.0"><font size="2"><span title="Bearbeitet" data-reactid=".4.1.0.0.2.1.0.0.1"><span data-reactid=".4.1.0.0.2.1.0.0.1.0">توی
+ آلمان سیم کارتهای متفاوت میشه پیدا کرد یه مدل ارزونش disco telهست.ماهیانه پانصد مگابایت اینترنت همراه +صد تماس و صد پیامک شاملش 
+میشه و برای همه اینا فقط ماهی هشت یورو باید پرداخت کنین که به نظرم 
+عالیه.برای هر مقداری بیشتر پیامک تماس یا نت شش سنت باید پرداخت کنین</span></span></font></h1> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/10.html">فرهنگ آلمانی و زندگی در آلمان</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../110.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(110)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../109.html">
+                <h2>سر و صدای ذهن و روشهای غلبه بر آن</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : چهارشنبه 22 اردیبهشت 1395 01:31 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <br><div class="post-byline">
+					</div>
+					
+										
+					
+					
+						
+						<div class="entry-inner" id="changeSize">
+							<figure class="postThumbnail"><img src="http://www.mardoman.net/wp-content/uploads/2016/05/305.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="سر و صدای ذهن و روشهای غلبه بر آن" height="585" width="820"></figure>
+							<p style="text-align: justify;">سر و صدای ذهن آن زمزمه‌های مداومی
+ است که در ذهن خود می‌شنوید و هیچوقت قطع نمی‌شوند. درواقع مکالمه درونی 
+است که بی‌وقفه در ذهن اتفاق می‌افتد.</p>
+<p style="text-align: justify;">ممکن است همیشه از این سروصدا آگاه نباشید چون به عادتی قدیمی و عمیق تبدیل شده و بخش طبیعی و لاینفک زندگی تلقی می‌شود.</p>
+<p style="text-align: justify;">این صدا مثل یک صدای پس‌زمینه است که 
+هیچوقت قطع نمی‌شود، از لحظه‌ای که صبح از خواب بیدار می‌شوید تا وقتی که 
+شب به خواب می‌روید ادامه دارد. گاهی‌اوقات حتی جلوی خوابیدن شما را هم 
+می‌گیرد. یک نوع صدای درونی است که به طور مداوم هر چیزی را در زندگی‌تان، 
+محیط اطرافتان و آدمهایی که با آنها ملاقات می‌کنید، تحلیل می‌کند. صدایی 
+در سر است که مدام حرف می‌زند و حرف می‌زند.</p>
+<p style="text-align: justify;">ذهن هم مدام همان افکار را تکرار می‌کند، 
+مثل ضبط‌ صوتی که هیچوقت قطع نمی‌شود. اگر این افکار، افکاری مثبت باشند 
+اشکالی ندارد. ولی بیشتر وقت‌ها این افکار منفی هستند که باعث تشدید استرس،
+ نگرانی، عصبانیت و خستگی در شما می‌شوند. آنها افکاری هستند که واقعاً هیچ
+ نیازی به آنها ندارید.</p>
+<p style="text-align: justify;">فکر کردن فعالیتی مثبت و مفید است که برای
+ حل مشکلات، تحلیل کردن، مقایسه کردن، درس خواندن، برنامه ریختن به آن نیاز
+ دارید. ولی خیلی وقت‌ها ذهن به جاهایی می‌رود که خودش دوست دارد و توجه 
+شما را درگیر مسائل جزئی و پیش‌پاافتاده می‌کند. فکر کردن بیخودی فقط زمان و
+ انرژی شما را می‌گیرد.</p>
+<p style="text-align: justify;"><span style="color: #0000ff;"><strong>صدای ذهن چیست و چطور می‌توانید آن را تشخیص دهید:</strong></span></p>
+<p style="text-align: justify;">– افکاری که مثل نوار با آهنگی یکنواخت تکرار می‌شوند.</p>
+<p style="text-align: justify;">– فکر کردن دوباره به اتفاقات و موقعیت‌های قدیمی و تجسم دوباره‌ی ترس‌ها.</p>
+<p style="text-align: justify;">– زندگی کردن در گذشته یا آینده. این باعث
+ می‌شود نتوانیم از زمان حال لذت ببریم. گذشته، گذشته است و‌ آینده محصول 
+فکر و عمل امروزمان است. تنها زمانی که وجود دارد، اکنون است.</p>
+<p style="text-align: justify;">– مونولوگ درونی وسواسی که آرامشمان را بر هم زده و ذهنمان را مشغول نگه می‌دارد.</p>
+<p style="text-align: justify;">– هیچوقت در زمان حال نیستید. همیشه به 
+چیزی دیگر فکر می‌کنید به جای اینکه روی کاری که آن لحظه انجام می‌دهید 
+تمرکز کنید. اگر همیشه به چیزی دیگر فکر کنیم، هیچوقت از زمان حال لذت 
+نخواهیم برد.</p>
+<p style="text-align: justify;">– تحلیل مداوم موقعیت‌ها، واکنش‌ها و 
+رفتارهای خودمان و دیگران. تحلیل گذشته، آینده، چیزهایی که نیاز دریم یا 
+می‌خواهیم، روزمان، دیروزمان و گذشته دورمان.</p>
+<p style="text-align: justify;">– تقریباً تمام فکر کردن‌ها و 
+رویاپردازی‌های غیرارادی نوعی صدای ذهن هستند. این نوعی صدای پس‌زمینه است 
+که در همه کارهایمان اخلال ایجاد می‌کند.</p>
+<p style="text-align: justify;">بیشتر وقت‌ها این صدا خسته‌کننده است و 
+باعث می‌شود بازده کاری‌مان پایین آمده و تنبل شویم. این مکالمه مداوم 
+درونی چون حواس ما را از اتفاق‌هایی که در زمان حال می‌افتد پرت می‌کند، 
+باعث می‌شود موقعیت‌هایمان را هم از دست بدهیم.</p>
+<p style="text-align: justify;">ذهن ابزاری بسیار مفید است ولی باید تحت 
+کنترل باشد. به نظرتان عالی نیست اگر می‌توانستیم طوری باشیم که هروقت 
+خودمان خواستیم فکر کنیم، مثلاً وقتی می‌خواهیم مشکلی را حل کنیم یا 
+برنامه‌ریزی کنیم و بعد می‌توانستیم ذهنمان را خاموش کنیم؟</p>
+<p style="text-align: justify;">خاموش کردن ذهن نوعی آرامش درونی می‌آورد.
+ این همان چیزی است که همه سنت‌ها و آموزه‌های معنوی از دیرباز به دنبال آن
+ بوده‌اند و برای کسانیکه به دنبال معنویات هستند و می‌خواهند زندگی‌شان را
+ ارتقا دهند بسیار مفید است.</p>
+<p style="text-align: justify;">یک لحظه دست از خواندن بکشید و ببینید می‌توانید ذهنتان را خاموش کنید؟ دست از فکر کردن بکشید ، ببینید چه اتفاقی می‌افتد.</p>
+<p style="text-align: justify;">متوجه می‌شوید که دارید به متوقف کردن فکر
+ کردنتان فکر می‌کنید و این یعنی هنوز دارید فکر می‌کنید. بعد از چند لحظه 
+احتمالاً یادتان می‌رود که هدفتان کنترل افکارتان بوده و ذهنتان به فعالیت 
+قطع‌نشدنی خود ادامه می‌دهد. این نشان می‌دهد که ذهن تا چه اندازه بی‌قرار 
+است و هیچ قانونی نمی‌پذیرد.</p>
+<p style="text-align: justify;">گاهی‌اوقات در موارد نادر به لحظه‌ای 
+آرامش درونی دست پیدا می‌کنید، بدون هیچ صدایی در ذهنتان. این به صورت 
+غیرارادی اتفاق می‌افتد، وقتی توجهتان به یک فعالیت بسیار جذاب یا تماشای 
+یک منظره بسیارزیبا معطوف می‌شود.</p>
+<p style="text-align: justify;">خاموش کردن ارادی ذهن، یعنی هر زمان که 
+بخواهید، با کتاب خواندن به دست نمی‌آید. این توانایی به تدریج و با 
+گذراندن تمرینات تمرکز و مدیتیشن ایجاد می‌شود.</p>
+<p style="text-align: justify;">ولی خیلی‌ها ممکن است بگویند که مدیتیشن 
+انجام می‌دهند ولی نمی‌توانند ذهنشان را آرام کند. اگر قدرت تمرکز ضعیف 
+باشد، ذهن خیلی ساده از فکری به فکر دیگر غوطه می‌خورد، پس چطور می‌توان 
+مدیتیشن کرد؟ می‌نشینید که مدیتیشن کنید ولی اینکه اجازه بدهید ذهنتان هر 
+جا که می‌خواهد برود و هر چیزی که می‌خواهد را تجسم کند مدیتیشن نیست.</p>
+<p style="text-align: justify;">به همین دلیل است که اول باید درجاتی از توانایی تمرکز را به دست آورید تا بتوانید مدیتیشن کردن را شروع کنید.</p>
+<p style="text-align: justify;">وقتی قدرت تمرکزتان قوی‌تر شد، می‌توانید 
+بدون کلمات، تصاویر و افکار ذهنی مدیتیشن کنید. آنوقت آرامش درونی‌تان 
+ابتدا در زمان مدیتیشن و بعد در کل زندگی موقع کار کردن، خواندن، حرف زدن و
+ هر کار دیگری به تدریج بیشتر و عمیق‌تر می‌شود.</p>
+<p style="text-align: justify;">آنوقت صداهای ذهنی کمتر و کمتر شده و به تدریج قطع می‌شوند.</p>
+<p style="text-align: justify;">البته این وضعیت باعث نمی‌شود که نتوانید 
+فکر کنید، برعکس، وقتی لازم باشد که فکر کنید، بسیار واضح و روشن فکر 
+خواهید کرد. ذهنتان هوشیارتر، متمرکزتر و قوی‌تر خواهد شد. آنوقت می‌توانید
+ هروقت خواستید ذهنتان را روشن یا خاموش کنید.</p>
+<p style="text-align: justify;">بیشتر افراد وقتی می‌خواهند به یک چیز خاص
+ فکر کنند، حتی بعد از رسیدن به یک نتیجه یا پیدا کردن راه‌حل هم 
+نمی‌توانند آن فکر را متوقف کنند. ذهنشان به فکر کردن درمورد آن موضوع خاص 
+همچنان ادامه می‌دهد. مثل یک نوار خراب می‌ماند که یک آهنگ را مدام تکرار 
+می‌کند. به همین دلیل خیلی مهم است که یاد بگیرید چطور فکرتان را متوقف 
+کنید.</p>
+<p style="text-align: justify;">خاموش کردن صدای ذهن به معنی آرامش درونی 
+است. این باعث می‌شود انرژی ذهنی زیادی را ذخیره کنید و دیگر زمانتان را 
+برای فکر کردن به مسائل جزئی و پیش‌پاافتاده تلف نکنید.</p>
+<p style="text-align: justify;">
+													</p></div>
+						<div class="sharrre-container">
+	<span>اشتراک</span>
+	
+	<div class="sharrre" id="facebook" data-url="http://www.mardoman.net/life/%d8%b3%d8%b1-%d9%88-%d8%b5%d8%af%d8%a7%db%8c-%d8%b0%d9%87%d9%86-%d9%88-%d8%b1%d9%88%d8%b4%d9%87%d8%a7%db%8c-%d8%ba%d9%84%d8%a8%d9%87-%d8%a8%d8%b1-%d8%a2%d9%86" data-text="سر و صدای ذهن و روشهای غلبه بر آن" data-title="Like"><a class="box" href="http://www.mardoman.net/life/%d8%b3%d8%b1-%d9%88-%d8%b5%d8%af%d8%a7%db%8c-%d8%b0%d9%87%d9%86-%d9%88-%d8%b1%d9%88%d8%b4%d9%87%d8%a7%db%8c-%d8%ba%d9%84%d8%a8%d9%87-%d8%a8%d8%b1-%d8%a2%d9%86#"><div class="count" href="http://www.mardoman.net/life/%d8%b3%d8%b1-%d9%88-%d8%b5%d8%af%d8%a7%db%8c-%d8%b0%d9%87%d9%86-%d9%88-%d8%b1%d9%88%d8%b4%d9%87%d8%a7%db%8c-%d8%ba%d9%84%d8%a8%d9%87-%d8%a8%d8%b1-%d8%a2%d9%86#">0</div></a></div>
+	<div class="sharrre" id="googleplus" data-url="http://www.mardoman.net/life/%d8%b3%d8%b1-%d9%88-%d8%b5%d8%af%d8%a7%db%8c-%d8%b0%d9%87%d9%86-%d9%88-%d8%b1%d9%88%d8%b4%d9%87%d8%a7%db%8c-%d8%ba%d9%84%d8%a8%d9%87-%d8%a8%d8%b1-%d8%a2%d9%86" data-text="سر و صدای ذهن و روشهای غلبه بر آن" data-title="+1"><a class="box" href="http://www.mardoman.net/life/%d8%b3%d8%b1-%d9%88-%d8%b5%d8%af%d8%a7%db%8c-%d8%b0%d9%87%d9%86-%d9%88-%d8%b1%d9%88%d8%b4%d9%87%d8%a7%db%8c-%d8%ba%d9%84%d8%a8%d9%87-%d8%a8%d8%b1-%d8%a2%d9%86#"><div class="count" href="http://www.mardoman.net/life/%d8%b3%d8%b1-%d9%88-%d8%b5%d8%af%d8%a7%db%8c-%d8%b0%d9%87%d9%86-%d9%88-%d8%b1%d9%88%d8%b4%d9%87%d8%a7%db%8c-%d8%ba%d9%84%d8%a8%d9%87-%d8%a8%d8%b1-%d8%a2%d9%86#">0</div></a></div>
+	<div class="sharrre" id="pinterest" data-url="http://www.mardoman.net/life/%d8%b3%d8%b1-%d9%88-%d8%b5%d8%af%d8%a7%db%8c-%d8%b0%d9%87%d9%86-%d9%88-%d8%b1%d9%88%d8%b4%d9%87%d8%a7%db%8c-%d8%ba%d9%84%d8%a8%d9%87-%d8%a8%d8%b1-%d8%a2%d9%86" data-text="سر و صدای ذهن و روشهای غلبه بر آن" data-title="Pin It"><a class="box" href="http://www.mardoman.net/life/%d8%b3%d8%b1-%d9%88-%d8%b5%d8%af%d8%a7%db%8c-%d8%b0%d9%87%d9%86-%d9%88-%d8%b1%d9%88%d8%b4%d9%87%d8%a7%db%8c-%d8%ba%d9%84%d8%a8%d9%87-%d8%a8%d8%b1-%d8%a2%d9%86#" rel="nofollow"><div class="count" href="http://www.mardoman.net/life/%d8%b3%d8%b1-%d9%88-%d8%b5%d8%af%d8%a7%db%8c-%d8%b0%d9%87%d9%86-%d9%88-%d8%b1%d9%88%d8%b4%d9%87%d8%a7%db%8c-%d8%ba%d9%84%d8%a8%d9%87-%d8%a8%d8%b1-%d8%a2%d9%86#">0</div></a></div>
+</div>
+
+							
+
+						
+
+														 <div class="postDetailsItem">منبع مقاله : successconsciousness.com	</div> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/4.html">مقاله</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../109.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(109)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../108.html">
+                <h2>حل تعارضات و ناسازگاری ها در روابط سالم و ناسالم</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : یکشنبه 19 اردیبهشت 1395 06:16 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+<h1 class="post-title"><br></h1>
+					
+										
+					
+					
+					<div class="entry share">	
+						<div class="entry-inner" id="changeSize">
+							<figure class="postThumbnail"><img src="http://www.mardoman.net/wp-content/uploads/2016/05/296.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="حل تعارضات و ناسازگاری ها در روابط سالم و ناسالم" height="667" width="1000"></figure>
+							<h4 style="text-align: justify;"><span style="color: #0000ff;">حل ناسازگاری ها در روابط سالم</span></h4>
+<p style="text-align: justify;">در همه روابط ناسازگاری و مشکل پیش 
+می‌آید. منظور از این مشکلات، تضادها و کشمکش‌های کلامی است. آدمها گاهی با
+ هم مخالفت می‌کنند و این لزوماً چیز بدی نیست. درواقع، شما حق دارید نظر 
+متفاوتی نسبت به طرفتان داشته باشید.</p>
+<p style="text-align: justify;">در یک رابطه سالم، حرف زدن رمز کار است. 
+وقتی بتوانید به طور موثری با هم صحبت کنید، طرفتان را بهتر درک خواهید کرد
+ و رابطه‌تان قوی‌تر خواهد شد. وقتی بتوانید این تضادهای بین خودتان را به 
+طور خوبی برطرف کنید، یک رابطه سالم و کامل ساخته‌اید.</p>
+<p style="text-align: justify;">بااینکه تعارض و تضاد کاملاً طبیعی است 
+ولی می‌تواند نشانه قسمتی از رابطه‌تان باشد که مشکل دارد. اگر تضادهایتان 
+سر این است که چه فیلمی تماشا کنید، با کدام دوستتان بیرون بروید یا چه کسی
+ باید ظرفها را بشوید، می‌توانید از این نکات برای حل این کشمکش‌ها به 
+طریقی سالم استفاده کنید:</p>
+<p style="text-align: justify;"><span style="color: #0000ff;"><strong>مرز تعیین کنید.</strong> </span>هرکسی
+ شایسته این است که با احترام با او برخورد شود – حتی در طول جدال‌ها و 
+کشمکش‌ها. اگر طرفتان بدزبانی می‌کند یا مسخره‌تان می‌کند یا فحش می‌دهد، 
+از او بخواهید که بس کند. اگر بس نکرد، از او دور شوید و بگویید نمی‌خواهید
+ در آن زمان با او بحث کنید.</p>
+<p style="text-align: justify;"><span style="color: #0000ff;"><strong>مشکل اصلی را پیدا کنید.</strong></span>
+ معمولاً تعارض و کشمکش زمانی اتفاق می‌افتد که نیازهای یکی از طرفین 
+برآورده نمی‌شود. سعی کنید ببینید مشکل واقعاً کجاست. اگر طرفتان به نظر 
+مستاصل می‌اید، شاید فقط نسبت به رابطه احساس امنیت نمی‌کند و نیاز به 
+تشویق شما دارد. اگر عصبانی می‌شوید که چرا همسرتان آشغال‌ها را بیرون 
+نگذاشته است، ممکن است واقعاً ناراحت باشید چون فکر می‌کنید همه کارهای 
+خانه به گردن شما افتاده است. یاد بگیرید درمورد مشکل اصلی حرف بزنید تا 
+بتوانید جلو بحث کردن‌ها و دعوا کردن‌های مداوم را بگیرید.</p>
+<p style="text-align: justify;"><span style="color: #0000ff;"><strong>توافق کنید که توافق نکنید.</strong></span>
+ اگر شما و طرفتان نتوانستید مشکل را حل کنید، گاهی‌اوقات بهتر است آن را 
+بی‌خیال شوید. نمی‌توانید درمورد همه چیز با هم هم‌عقیده باشید. روی 
+چیزهایی که بیشتری اهمیت را دارند تمرکز کنید. اگر این مسئله خیلی مهم است و
+ نمی‌توانید آن را فراموش کنید، شاید شما دو نفر واقعاً به درد همدیگر 
+نمی‌خورید.</p>
+<p style="text-align: justify;"><span style="color: #0000ff;"><strong>در صورت امکان مصالحه کنید.</strong></span>
+ گفتنش راحت است ولی عمل کردن به آن نه. کوتاه آمدن و مصالحه کردن بخش مهمی
+ از حل مشکل و تعارضات در روابط سالم و موفق است. طرفتان می‌خواهید غذای 
+چینی بخورد و شما غذای هندی دوست دارید؟ مصالحه کنید، امشب غذای چینی 
+بگیرید و دفعه بعدی که برای غذا خوردن بیرون رفتید به رستوران هندی بروید. 
+باید بتوانید حد وسط را پیدا کنید تا هر دو شما از نتیجه کار راضی بمانید.</p>
+<p style="text-align: justify;"><span style="color: #0000ff;"><strong>همه چیز را در نظر بگیرید.</strong> </span>آیا
+ این مسئله واقعاً مهم است؟ آیا روی احساس شما نسبت به همدیگر تاثیر 
+می‌گذارد؟ آیا بخاطر آن مجبورید عقاید و اخلاقیاتتان را کنار بگذارید؟ اگر 
+اینطور است، خیلی مهم است که سر حرفتان بایستید. اگر اینطور نیست، شاید بد 
+نباشد که با او مصالحه کنید. همچنین، حرف‌ها و نظرات طرفتان را در نظر 
+بگیرید. چرا به نظرتان نظر او نادرست است؟ شما چطور به آن موضوع نگاه 
+می‌کنید؟ آیا غیرطبیعی است که طرفتان بخاطر چنین مسئله‌ای ناراحت شده باشد؟
+ آیا طرفتان اهل مصالحه کردن و کوتاه آمدن است؟</p>
+<p style="text-align: justify;">با رعایت این نکات باز هم دعوا می‌کنید؟ 
+شاید وقت آن رسیده که ببینید اصلاً این رابطه به دردتان می‌خورد یا نه. هر 
+دو شما شایسته یک رابطه سالم بدون جر و بحث‌های مداوم هستید.</p>
+<p style="text-align: justify;">
+</p><h4 style="text-align: justify;"><span style="color: #0000ff;">حل ناسازگاری‌ ها در روابط ناسالم</span></h4>
+<p style="text-align: justify;">بااینکه دعوا کردن و تضاد داشتن کاملاً 
+طبیعی است، این دعواها و بحث‌ها نباید به حمله‌های شخصی کشیده شود و 
+هیچکدام از شما نباید سعی کند اعتمادبه‌نفس طرف دیگر را پایین بیاورد. اگر 
+نمی‌توانید بدون ترس از تلافی کردن طرف‌مقابل حرفتان را بزنید، احتمالاً 
+مورد آزار در رابطه هستید.</p>
+<p style="text-align: justify;">یادتان باشد، یک نشانه روابط آسیب‌زا این است که طرفتان کنترل شما را به دست گیرد. آیا همسرتان به دلایل زیر ناراحت است؟</p>
+<p style="text-align: justify;">می‌خواهید به جای وقت گذراندن با او برای بازی بسکتبال بروید؟</p>
+<p style="text-align: justify;">تلفنتان را چک کردید و پیام‌ها و تماس‌هایی که از طرف او دریافت کرده‌اید را دوست نداشتید؟</p>
+<p style="text-align: justify;">فقط می‌خواهید با دوستان وقت بگذرانید ولی او فکر می‌کند به او خیانت می‌کنید؟</p>
+<p style="text-align: justify;">برای داشتن رابطه‌جنسی آمادگی ندارید؟</p>
+<p style="text-align: justify;">می‌خواهید درس بخوانید ولی او می‌خواهد با شما حرف بزند؟</p>
+<p style="text-align: justify;">اگر سر این مسائل با هم بحث و دعوا می‌کنید، بد نیست پیش یک مشاور خانواده بروید تا ببینید با هم سازگاری و تفاهم دارید یا خیر.</p>
+<p style="text-align: justify;">
+													</p></div>
+						<div class="sharrre-container">
+	<span>اشتراک</span>
+	
+	<div class="sharrre" id="facebook" data-url="http://www.mardoman.net/slideshow/%d8%ad%d9%84-%d8%aa%d8%b9%d8%a7%d8%b1%d8%b6%d8%a7%d8%aa-%d9%88-%d9%86%d8%a7%d8%b3%d8%a7%d8%b2%da%af%d8%a7%d8%b1%db%8c-%d9%87%d8%a7-%d8%af%d8%b1-%d8%b1%d9%88%d8%a7%d8%a8%d8%b7-%d8%b3%d8%a7%d9%84%d9%85" data-text="حل تعارضات و ناسازگاری ها در روابط سالم و ناسالم" data-title="Like"><a class="box" href="http://www.mardoman.net/slideshow/%D8%AD%D9%84-%D8%AA%D8%B9%D8%A7%D8%B1%D8%B6%D8%A7%D8%AA-%D9%88-%D9%86%D8%A7%D8%B3%D8%A7%D8%B2%DA%AF%D8%A7%D8%B1%DB%8C-%D9%87%D8%A7-%D8%AF%D8%B1-%D8%B1%D9%88%D8%A7%D8%A8%D8%B7-%D8%B3%D8%A7%D9%84%D9%85#"><div class="count" href="http://www.mardoman.net/slideshow/%D8%AD%D9%84-%D8%AA%D8%B9%D8%A7%D8%B1%D8%B6%D8%A7%D8%AA-%D9%88-%D9%86%D8%A7%D8%B3%D8%A7%D8%B2%DA%AF%D8%A7%D8%B1%DB%8C-%D9%87%D8%A7-%D8%AF%D8%B1-%D8%B1%D9%88%D8%A7%D8%A8%D8%B7-%D8%B3%D8%A7%D9%84%D9%85#">0</div></a></div>
+	<div class="sharrre" id="googleplus" data-url="http://www.mardoman.net/slideshow/%d8%ad%d9%84-%d8%aa%d8%b9%d8%a7%d8%b1%d8%b6%d8%a7%d8%aa-%d9%88-%d9%86%d8%a7%d8%b3%d8%a7%d8%b2%da%af%d8%a7%d8%b1%db%8c-%d9%87%d8%a7-%d8%af%d8%b1-%d8%b1%d9%88%d8%a7%d8%a8%d8%b7-%d8%b3%d8%a7%d9%84%d9%85" data-text="حل تعارضات و ناسازگاری ها در روابط سالم و ناسالم" data-title="+1"><a class="box" href="http://www.mardoman.net/slideshow/%D8%AD%D9%84-%D8%AA%D8%B9%D8%A7%D8%B1%D8%B6%D8%A7%D8%AA-%D9%88-%D9%86%D8%A7%D8%B3%D8%A7%D8%B2%DA%AF%D8%A7%D8%B1%DB%8C-%D9%87%D8%A7-%D8%AF%D8%B1-%D8%B1%D9%88%D8%A7%D8%A8%D8%B7-%D8%B3%D8%A7%D9%84%D9%85#"><div class="count" href="http://www.mardoman.net/slideshow/%D8%AD%D9%84-%D8%AA%D8%B9%D8%A7%D8%B1%D8%B6%D8%A7%D8%AA-%D9%88-%D9%86%D8%A7%D8%B3%D8%A7%D8%B2%DA%AF%D8%A7%D8%B1%DB%8C-%D9%87%D8%A7-%D8%AF%D8%B1-%D8%B1%D9%88%D8%A7%D8%A8%D8%B7-%D8%B3%D8%A7%D9%84%D9%85#">0</div></a></div>
+	<div class="sharrre" id="pinterest" data-url="http://www.mardoman.net/slideshow/%d8%ad%d9%84-%d8%aa%d8%b9%d8%a7%d8%b1%d8%b6%d8%a7%d8%aa-%d9%88-%d9%86%d8%a7%d8%b3%d8%a7%d8%b2%da%af%d8%a7%d8%b1%db%8c-%d9%87%d8%a7-%d8%af%d8%b1-%d8%b1%d9%88%d8%a7%d8%a8%d8%b7-%d8%b3%d8%a7%d9%84%d9%85" data-text="حل تعارضات و ناسازگاری ها در روابط سالم و ناسالم" data-title="Pin It"><a class="box" href="http://www.mardoman.net/slideshow/%D8%AD%D9%84-%D8%AA%D8%B9%D8%A7%D8%B1%D8%B6%D8%A7%D8%AA-%D9%88-%D9%86%D8%A7%D8%B3%D8%A7%D8%B2%DA%AF%D8%A7%D8%B1%DB%8C-%D9%87%D8%A7-%D8%AF%D8%B1-%D8%B1%D9%88%D8%A7%D8%A8%D8%B7-%D8%B3%D8%A7%D9%84%D9%85#" rel="nofollow"><div class="count" href="http://www.mardoman.net/slideshow/%D8%AD%D9%84-%D8%AA%D8%B9%D8%A7%D8%B1%D8%B6%D8%A7%D8%AA-%D9%88-%D9%86%D8%A7%D8%B3%D8%A7%D8%B2%DA%AF%D8%A7%D8%B1%DB%8C-%D9%87%D8%A7-%D8%AF%D8%B1-%D8%B1%D9%88%D8%A7%D8%A8%D8%B7-%D8%B3%D8%A7%D9%84%D9%85#">0</div></a></div>
+</div>
+
+							
+
+						<div class="postDetails">
+
+														 <div class="postDetailsItem">منبع مقاله : loveisrespect.org	</div>
+														
+							
+															<div class="postDetailsItem"> مترجم : زینب آرمند</div>
+							
+						</div>
+
+					</div> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/4.html">مقاله</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../108.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(108)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../107.html">
+                <h2>سلام ما اومدیم آلمان</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : یکشنبه 19 اردیبهشت 1395 02:31 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+<font color="#336666" size="3">سلام دوستان امیدوارم همه خوب باشین ما اومدیم آلمان الان پنج روزی میشه.همه چی خوبه اینجا هوا خیلی عالیه مث بهشته مث اون دفعه ای که اومدم نیست حتی این روزا خیلی گرم شده.بالاخره باید یه روزی دل میکندیم من از همسری خواستم هر چه زودتر این کارو بکنیم و بلیطو بگیریم ویزا واسه ما خیلی طولی نکشید حدود دو ماهه ما ویزا رو گرفتیم و همون طور که میدونین واسه ویزای ازدواج باید امتحان آلمانی میدادم من این امتحانو دادم خیلی سخت نبود ولی واقعا باید خوب خوده باشین وگرنه شانستون خیلی کمه واسه قبولی.<br>یکی از دوستان پرسیده:<br></font><table style="border: 1px solid rgb(0, 0, 0); border-collapse: collapse; font-family: tahoma,arial,helvetica,sans-serif; font-size: 11px;" align="" cellpadding="1" cellspacing="1" height="28" width="724"><tbody><tr><td style="border:1px solid #000000; border-collapse: collapse;width: 50%;"><font color="#336666" size="3">&nbsp;من یه سوال داشتم تشرف همسرتون ب دین اسلام تو شناسنامه و پاسپورت ایشون هم ثبت میشه ویا فقط همون برگه کافیع؟؟؟</font></td></tr></tbody></table><font size="3"><font color="#336666">خب اولا آلمانیها مث ما شناسنامه ندارن&nbsp; و فقط یه کارت شناسایی ملی دارن و ضمنا تشرف به اسلام هیچ جایی نوشته نمیشه فقط یه برگه بهش دادن که داخلش نوشته ایشون مشرف شده به اسلام که برای ازدواج ایرانی نشون دادن اون برگه اجباریه ولی یه نکته ای که هست اینه که اگر کسی بخواد به عقد ایرانی انجام بده باید مسلمون بشه و من خیلیا رو میشناسم که خانم رفته به کشور نامزدش و اونها اونجا با هم عقد کردن و توی این مورد نیازی به نشون دادن هیچ برگه ای نیست و ازدواج توی هر کشوری طبق قوانین همون کشوره ولی در مورد ما چون خانواده من یه مقدار مذهبی هستن این اجازه رو ندادن که من بدون ازدواج برم کشورشون و واسه همین ما اول به روش ایرانی عقد کردیم و بعدش اومدیم آلمان.<br>ضمنا توی پاسپورت هیچ اطلاعاتی به جز ویزا نیست و مسلمونی توی پاسپورت نوشته نمیشه.<br><br></font><br>
+
+
+</font>
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/2.html">بعد ازدواجمون</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../107.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(107)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                    
+      <!--- e bodypost --->
+      
+            <!--- e barge ---->
+      
+            
+      <!--- e paper --->
+      
+      <style>
+
+.text100 , .text100 a{color: #000000;font-size: 8pt;text-transform: none;}
+.text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+.text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+.com{width: 100%;float: left;background-color: #ECECEC;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;margin: 10px auto;padding: 0 0 10px 0;}
+.com a { text-decoration: none;}
+.com1{width: 98%;float: left;background-color: #D9D9D9;	-webkit-border-radius: 5px;	-moz-border-radius: 5px;border-radius: 5px;margin: 10px 20px 0 10px;padding: 0 0 3px 0;}
+.com3{ width:50%; float:left; text-align:right; direction:rtl; line-height:27px;}
+.com2{ width:30%px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+.com4{ width:96%; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:12px;}
+.com5{width: 96%;float: left;background-color: #E9E9E9; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;margin: 3px 3px 0 3px;
+	padding: 7px;direction: rtl;	text-align: right;-moz-box-shadow: inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;	box-shadow: inset #444 0px 0px 5px;
+	font-size: 12px;}
+.com6{ width:97%; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+.com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+.comment_form .comment_form_msg {background: none repeat scroll 0 0 #F6F6F6;border: 1px solid #E6E6E6; margin: 5px;    padding: 5px;}
+</style>
+          </div>
+    <!--- e content --->
+    
+    <div class="left">
+      <div class="lm">
+        <div class="lmtitle">
+          <div class="lmtitle-mid">جستجو در وبلاگ</div>
+        </div>
+        <div class="lmtext">
+          <div class="lmtext-mid">
+            <form id="frm-16081738965fdac948b2427" method="get" action="http://zendegimoon.mihanblog.com/post/search/fid/16081738965fdac948b2427"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+              <input type="text" name="search_text"/>
+              <input type="submit" value="جستجو"/>
+            <input type="hidden" name="frm-id" value="16081738965fdac948b2427" id="frm-id" /></form>          </div>
+        </div>
+        <div class="lm-bbg"></div>
+      </div>
+              <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">تازه ترین مطالب</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                                  <li><a href="../../544.html" title="چهارشنبه 5 آذر 1399"> پیش بینی آینده... </a></li>
+                                  <li><a href="../../543.html" title="دوشنبه 3 آذر 1399"> از شیر گرفتن آقا پسر </a></li>
+                                  <li><a href="../../542.html" title="شنبه 24 آبان 1399"> قبل از آشنایی با همسر </a></li>
+                                <li><a href="../../list.html">لیست تمام مطالب</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+                    <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid"> لینک های روزانه </div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                                  <li><a href="http://behzadwin.blogsky.com/" title="" target="_blank">مخمور جام عشق</a> </li>
+                                  <li><a href="http://mamooli.persianblog.ir/" title="" target="_blank">یه دختر معمولی با یه زندگی معمولی</a> </li>
+                                  <li><a href="http://elmiradad.blogfa.com/" title="" target="_blank">روزگار تلخ و شیرین من در غربت</a> </li>
+                                  <li><a href="http://tanhaian.persianblog.ir/" title="" target="_blank">دل نوشته های من در غربت</a> </li>
+                                  <li><a href="http://khateratemanca.blogfa.com/" title="" target="_blank">زندگی من در غربت</a> </li>
+                                  <li><a href="http://www.cafealone.com" title="شعر,مینیمال,جملات فلسفی,داستان کوتاه" target="_blank">کافه تنهایی</a> </li>
+                                  <li><a href="http://dinon.ir/" title="" target="_blank">آمــوزش و پاسخگــویی به سوالات علــوم کامپیوتــر</a> </li>
+                                  <li><a href="http://66darjostojoo.blogfa.com/" title="" target="_blank">در جست و جو</a> </li>
+                                  <li><a href="http://pzi.parsiblog.com/" title="" target="_blank">..••●●ساعت به وقت غربت●●••..</a> </li>
+                                  <li><a href="http://moalem-ko0cho0lo0.blogfa.com/" title="" target="_blank">خاطرات معلم کــوچــولــو 1</a> </li>
+                                <li><a href="../../../linkdaily/index.html"><b>همه لینکها</b></a></li>
+                <li><a href="javascript:linkdailyForm()"><b>ارسال لینک</b></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+            
+		<form id="frm-16081738965fdac948b2bff" method="post" action="http://zendegimoon.mihanblog.com/poll/new/fid/16081738965fdac948b2bff/atrty/1608173896/avrvy/0/key/4906c1cea6e9dced300d0909f169539c/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="356955" id="data[pollid]" />		
+        <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">نظرسنجی</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid"> دوست دارین بیشتر راجع به چی بنویسم؟<br>
+               <label><input type="radio" name="data[answer]" value="v1">فرهنگ آلمانی</label><br>
+               <label><input type="radio" name="data[answer]" value="v2">زندگی در آلمان</label><br>
+               <label><input type="radio" name="data[answer]" value="v3">ویزا و مراحل اداری ازدواج</label><br>
+               <label><input type="radio" name="data[answer]" value="v4">زندگی با همسرم در آلمان</label><br>
+                            <input type="submit" value="ثبت"/>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+      
+		<input type="hidden" name="frm-id" value="16081738965fdac948b2bff" id="frm-id" /></form>              <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">دوستان</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                <li><a href="http://cafeskin.blogfa.com/">قالب وبلاگ</a></li>
+                                  <li> <a href="http://deutschlernen1.blogsky.com/" title=""  target="_blank"> بزرگترین سایت کتب و پادکست های زبان آلمانی</a></li>
+                                  <li> <a href="http://mamoolii.blogsky.com" title=""  target="_blank"> یه دختر معمولی با یه زندگی معمولی</a></li>
+                                  <li> <a href="http://mamoolii.blogsky.com" title=""  target="_blank"> یه دختر معمولی با یه زندگی معمولی 2</a></li>
+                                  <li> <a href="http://travle.blogsky.com/" title=""  target="_blank"> سفر - کوچ سرفینگ - تجربه متفاوت</a></li>
+                                  <li> <a href="http://aalmaan.blogfa.com/" title=""  target="_blank"> یادداشت‌های پراکنده در مورد آلمان</a></li>
+                                  <li> <a href="http://studieindeutsch.blogspot.com" title=""  target="_blank"> مهاجرت،تحصیل و زندگی در آلمان</a></li>
+                                  <li> <a href="http://moalem-ko0cho0lo0.blogsky.com/" title=""  target="_blank"> خاطرات معلم کــوچــولــو 2</a></li>
+                                  <li> <a href="http://www.mehditravel87.blogfa.com/" title=""  target="_blank"> سفر به کل دنیا با دوچرخه</a></li>
+                                  <li> <a href="http://wonderland.blog.ir/" title=""  target="_blank"> آزاده در سرزمین عجایب</a></li>
+                                  <li> <a href="http://bluecardgermany.blogsky.com/" title=""  target="_blank"> اقامت کاری کشور آلمان</a></li>
+                                  <li> <a href="http://leiligermany.blogsky.com/" title=""  target="_blank"> زندگی پر از خاطره است</a></li>
+                                  <li> <a href="http://habibashtari.blogfa.com/" title=""  target="_blank"> سفر به دنیا با دوچرخه</a></li>
+                                  <li> <a href="http://booyehbehesht.niniweblog.com/" title=""  target="_blank"> ♡ ♡ بوی بهشت ♡ ♡</a></li>
+                                  <li> <a href="http://weineurope.blogsky.com/" title=""  target="_blank"> من و همسرم در اروپا</a></li>
+                                  <li> <a href="http://ebrahimnejad.persianblog.ir/" title=""  target="_blank"> یک ایرانی در بوستون</a></li>
+                                  <li> <a href="http://aroshayeasemani.persianblog.ir/" title=""  target="_blank"> عروس های آسمانی</a></li>
+                                  <li> <a href="http://bhb.blogfa.com/" title=""  target="_blank"> بلندی های بادگیر</a></li>
+                                  <li> <a href="http://mennomen.mihanblog.com" title=""  target="_blank"> my white house</a></li>
+                                  <li> <a href="http://www.mybabydream.blogfa.com/" title=""  target="_blank"> رویای کودکی من</a></li>
+                                  <li> <a href="http://delavarenoor.persianblog.ir/" title=""  target="_blank"> از رویا تا واقعیت</a></li>
+                                <li><a href="../../../link/index.html"><b>همه لینکها</b></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+            <div class="lm">
+        <div class="lmtitle">
+          <div class="lmtitle-mid">لینک های مفید</div>
+        </div>
+        <div class="lmtext">
+          <div class="lmtext-mid"> 
+            <!--- Start links  ----><ul>
+<li><a href="http://wallz.ir/" target="_blank" title="گرافیک">والز</a></li>
+<li><a href="http://kiosk724.ir/" target="_blank" title="کتاب و مجله الکترونیکی">کیوسک 724</a></li>
+<li><a href="http://sitesetup.ir/" target="_blank" title="طراحی سایت و قالب وبلاگ">سایت ستاپ</a></li>
+<li><a href="http://theme.sitesetup.ir/" target="_blank" title="قالب حرفه ای وبلاگ">قالب وبلاگ حرفه ای</a></li>
+</ul> <!--- End links  ---->  
+          </div>
+        </div>
+        <div class="lm-bbg"></div>
+      </div>
+      <div class="lm">
+        <div class="lmtitle">
+          <div class="lmtitle-mid">ابزارک های وبلاگ</div>
+        </div>
+        <div class="lmtext">
+          <div class="lmtext-mid"> <br>
+            <a href="http://cafeskin.blogfa.com/">قالب وبلاگ</a><br>
+            <br>
+                          <ul>
+                <li>کل بازدید:<script>getStatVar('total_view');</script></li>
+                <li>بازدید امروز :<script>getStatVar('today_view');</script></li>
+                <li>یازدید دیروز : <script>getStatVar('yesterday_view');</script></li>
+                <li>بازدید این ماه : <script>getStatVar('this_month_view');</script></li>
+                <li>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></li>
+                <li>تعداد نویسندگان : <script>getStatVar('total_author');</script></li>
+                <li>تعداد کل مطالب : <script>getStatVar('total_post');</script></li>
+                <li>آخرین بازدید : <script>getStatVar('last_view_date');</script></li>
+                <li>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></li>
+              </ul>
+                        <br>
+            <div style="text-align:center;"> <!-- Begin https://dornamusic.com -->
+<center><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><audio style="width:100%" controls autoplay loop><source src="http://s.dornamusic.com/mp3/17/4/26/Reza-Sadeghi-Man-Ba-Toam-128-DornaMusic.Com.mp3" type="audio/mpeg" /></audio></br>
+<a title="دانلود آهنگ جدید من با توام – رضا صادقی" target="_blank" href="https://dornamusic.com/songs/reza-sadeghi-man-ba-toam/">دانلود آهنگ جدید من با توام – رضا صادقی</a></center>
+<!-- End https://dornamusic.com -->
+
+
+
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=3660612&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=3660612" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code --> </div>
+          </div>
+        </div>
+        <div class="lm-bbg"></div>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+    <!--- e left --->
+    
+    <div style="clear:both"></div>
+  </div>
+  <!--- e main --->
+  
+  <div class="footer">
+    <div class="footer-mid">تمام حقوق وبلاگ متعلق به نویسنده‌ی آن می باشد :: <a href="http://cafeskin.blogfa.com/"> قالب وبلاگ: کافه اسکین</a> 
+      <!--- برای حفظ حقوق طراح قالب لطفا نام و آدرس طراح را تغییر نداده و پاک نفرمایید. سپاس ---> 
+    </div>
+  </div>
+  <!--- e footer ---> 
+  
+</div>
+<!--- e page --->
+
+</body>
+</html>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'zendegimoon.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

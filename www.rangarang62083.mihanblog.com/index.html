@@ -1,0 +1,781 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://rangarang62083.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1321691*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[8]='0';commentCnt[9]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','5');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','شنبه 12 مهر 1393');
+	
+	setStatVar('today_view','5');
+	setStatVar('yesterday_view','18');
+	
+	setStatVar('this_month_view','232');
+	setStatVar('last_month_view','273');
+
+	setStatVar('total_view','68763');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (06:45)');
+
+
+
+    
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://rangarang62083.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="../rangarang62083.mihanblog.com/'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://rangarang62083.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://rangarang62083.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://rangarang62083.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://rangarang62083.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://rangarang62083.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://rangarang62083.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://rangarang62083.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://rangarang62083.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://rangarang62083.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://rangarang62083.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://rangarang62083.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://rangarang62083.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://rangarang62083.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://rangarang62083.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://rangarang62083.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="rtl" lang="fa-IR">
+<head>
+
+
+
+
+
+<script type="text/javascript">
+var needpop = 1;
+
+var vc_cn = "jot9843504";
+var vc_url = "http://kavir.takshop91.biz/product.php?id=37";
+if (readCookie(vc_cn)) {
+needpop = 0;
+}else{
+needpop = 1;
+}
+var PopWidth = 1024;
+var PopHeight = 768;
+var PopTargetingMethod = 100;
+var PopUseDivLayer = 1;
+var RTSDomain = vc_url;
+var debugDomain = vc_url;
+var Page_Popped = false;
+var Page2_Popped = false;
+var Page_Loaded = false;
+var Page_Enter;
+var MySiteDomain = window.location.href.split('/');
+if (needpop == 1) {
+InitPop()
+}
+function InitPop() {
+Page_Enter = new Date();
+if (window.captureEvents) {
+window.captureEvents(Event.CLICK);
+window.onclick = LoadStandardPop
+} else document.onclick = LoadStandardPop
+}
+function SiteEnter() {
+Page_Loaded = true
+}
+function createCookie(name, value, days) {
+if (days) {
+var date = new Date();
+date.setTime(date.getTime()+(2*60*60*1000));
+var expires = "; expires=" + date.toGMTString()
+} else var expires = "";
+document.cookie = name + "=" + value + expires + "; path=/";
+}
+function readCookie(name) {
+var ca = document.cookie.split(';');
+var nameEQ = name + "=";
+for (var i = 0; i < ca.length; i++) {
+var c = ca[i];
+while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length)
+}
+return null
+}
+function RetrieveCount() {
+var cookieName = vc_cn;
+var popSuccesses = readCookie(cookieName);
+if (popSuccesses != null) popSuccesses = parseInt(popSuccesses);
+else popSuccesses = 0;
+return popSuccesses
+}
+function IncrementCount() {
+var cookieName = vc_cn;
+var popSuccesses = readCookie(cookieName);
+if (popSuccesses != null) createCookie(cookieName, parseInt(popSuccesses) + 1, 1);
+else createCookie(cookieName, 1, 1)
+}
+function LoadStandardPop() {
+if (Page_Popped == true) return;
+var pLoaded = false;
+if (window.SymRealWinOpen) {
+open = SymRealWinOpen
+}
+if (window.NS_ActualOpen) {
+open = NS_ActualOpen
+}
+var pxLeft = 0;
+var pxTop = 0;
+if (screen.width > 0 && screen.height > 0) {
+pxLeft = (screen.width / 2) - (PopWidth / 2);
+pxTop = (screen.height / 2) - (PopHeight / 2) - 50;
+if (pxLeft < 0) pxLeft = 0;
+if (pxTop < 0) pxTop = 0
+}
+pLoaded = open(vc_url, '', 'toolbar=1,scrollbars=1,location=1,statusbar=1,men ubar=1,resizable=1,top=' + pxTop + ',left=' + pxLeft + ',width=' + PopWidth + ',height=' + PopHeight);
+if (pLoaded) {
+Page_Popped = true;
+IncrementCount()
+} else {
+Page_Popped = true;
+if (Page_Loaded) initAdLayer();
+else XBrowserAddHandlerPops(window, "load", "initAdLayer")
+}
+window.focus()
+}
+
+</script>
+</script>
+
+
+
+
+<title>آموزش تصویری بافتنی</title>
+    <base href="" />
+	<meta name="generator" content="ParsTools.Com | Hesam B" />
+	<meta content="fa" http-equiv="Content-Language" />
+	<meta http-equiv="content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="" />
+	<meta name="keywords" content="rangarang62083,آموزش تصویری بافتنی, " />
+	<link rel="alternate" type="application/rss+xml" title="آموزش تصویری بافتنی" href="http://rangarang62083.mihanblog.com/post/rss/" />
+	<link rel="alternate" type="application/atom+xml" title="آموزش تصویری بافتنی"  href="http://rangarang62083.mihanblog.com/post/atom/" />
+
+<script type="text/javascript" src="http://tem.parstools.com/pisces/js/jquery.js"></script>
+<script type="text/javascript" src="http://tem.parstools.com/pisces/js/jqueryui.js"></script>
+<script type="text/javascript" src="http://tem.parstools.com/pisces/js/libs.js"></script> 
+
+<link rel="shortcut icon" href="http://tem.parstools.com/pisces/images/favicon.ico" />
+<link href="http://tem.parstools.com/pisces/style/styles.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+<div class="wwide pagebg">
+	<div id="headbar">
+		<div id="header">
+			<div class="wrapper">
+				<div class="container">
+					
+					<h1>
+						<a href="index.html" title="آموزش تصویری بافتنی">
+							<img src="http://s5.picofile.com/file/8144042626/rangarang62083_mihanblog_com0.png" alt="Logo"/>
+						</a>
+					</h1>
+		
+					<div class="headlinks">
+						<a href="http://rangarang62083.mihanblog.com/post/rss/" title="RSS">
+							<img src="http://tem.parstools.com/pisces/images/rss.png" alt="RSS"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="speedbar">
+			<div class="wrapper">
+				<div class="container">
+					 <span id='dle-speedbar'><a href="index.html" title="آموزش تصویری بافتنی"><h1 id="blog_title">آموزش تصویری بافتنی</h1></a></span> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div id="toolbar" class="container">
+			<ul id="topmenu" class="rcol reset">
+				
+
+
+
+						<li class="sublnk"><a href="http://rangarang62083.mihanblog.com/m"><b>نسخه موبایل</b></a></li>
+						<li class="sublnk"><a href="http://rangarang62083.mihanblog.com/post/list"><b> بافتنی آرشیو</b></a></li>
+						<li class="sublnk"><a href="index.html"><b>آموزش بافتنی</b></a></li>
+			</ul>
+			<form id="frm-16075960845fd1f83497ae2" method="get" action="http://rangarang62083.mihanblog.com/post/search/fid/16075960845fd1f83497ae2"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+				<ul class="searchbar reset">
+					<li class="lfield"><input id="story" name="search_text" value="جستجو..." onblur="if(this.value=='') this.value='جستجو...';" onfocus="if(this.value=='جستجو...') this.value='';" type="text" /></li>
+					<li class="lbtn"><input title="بگرد" alt="بگرد" type="image" src="http://tem.parstools.com/pisces/images/spacer.gif" /></li>
+				</ul>
+			<input type="hidden" name="frm-id" value="16075960845fd1f83497ae2" id="frm-id" /></form>		</div>
+		
+		<script type="text/javascript" src="http://tem.parstools.com/pisces/js/slides.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#slides').slides({
+					effect: 'fade',
+					play: 5000,
+					pause: 2500,
+					generatePagination: true,
+					preload: true,
+					hoverPause: true
+				});
+			});
+		</script>
+		
+		
+		<div class="shadlr"><div class="shadlr">
+			<div class="container">
+				<div id="vseptop" class="wsh"><div class="wsh">&nbsp;</div></div>
+				<div class="vsep"><div class="vsep">
+					<div id="midside" class="lcol">
+						
+						<div class="hban">
+							<div class="hban">
+								<div class="dpad">
+									<div align="center">
+
+
+
+
+<div style="text-align: center;"><table cellspacing="1" cellpadding="1" align="absmiddle" style="border:3px dashed #FF0000; border-collapse: collapse;background-color:#99FF99;font-family:tahoma,arial,helvetica,sans-serif;font-size:11;width: 100%;"><tbody><tr><td style="text-align: center;border-top-width: 3px; border-right-width: 3px; border-bottom-width: 3px; border-left-width: 3px; border-top-style: dashed; border-right-style: dashed; border-bottom-style: dashed; border-left-style: dashed; border-top-color: rgb(255, 0, 0); border-right-color: rgb(255, 0, 0); border-bottom-color: rgb(255, 0, 0); border-left-color: rgb(255, 0, 0); border-collapse: collapse; width: 100%; "><font class="Apple-style-span" face="arial, helvetica, sans-serif"><font class="Apple-style-span" color="#3333FF"><span class="Apple-style-span" style="font-size: x-large;"><b>&nbsp;برای خرید توضیحات و عکسهای بیشتر روی بنر مورد نظر کلیک کنید</b></span></font></font></td></tr></tbody></table></div><br>
+
+
+
+<div style="text-align: center;"><br></div><div style="text-align: center;"><table cellspacing="1" cellpadding="1" align="absmiddle" style="border:3px dashed #FF0000; border-collapse: collapse;font-family:tahoma,arial,helvetica,sans-serif;font-size:11;width: 100%;"><tbody><tr><td style="text-align: center;border-top-width: 3px; border-right-width: 3px; border-bottom-width: 3px; border-left-width: 3px; border-top-style: dashed; border-right-style: dashed; border-bottom-style: dashed; border-left-style: dashed; border-top-color: rgb(255, 0, 0); border-right-color: rgb(255, 0, 0); border-bottom-color: rgb(255, 0, 0); border-left-color: rgb(255, 0, 0); border-collapse: collapse; width: 100%; "><div style="text-align: center;"><div style="text-align: center;"><a href="http://shop2kharid.eshopfa.biz/Detail.aspx?q=cd3397&amp;s=31720" target="_blank" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://poiweq2213.com/nabimages/HB/1392091617111h-crochet.gif" alt=""></a></div><div style="text-align: center;"><br></div><div style="text-align: center;"><a href="http://shop2kharid.eshopfa.biz/cd1947_31720_%DA%98%D9%88%D8%B1%D9%86%D8%A7%D9%84-%D8%A8%D8%A7%D9%81%D8%AA.html" target="_blank" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://poiweq2213.com/nabimages/HB/Hjurnal.gif" alt=""></a></div><div style="text-align: center;"><br></div><div style="text-align: center;"><a href="http://tak.dayanshop.net/products/category/42/" target="_blank" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://01.dayanshop.net/thetba-contents/userfiles/banners/86dbe3e8-6229-480c-be9a-f1be426cdf88.gif" alt=""></a></div><div style="text-align: center;"><br></div><div style="text-align: center;"><a href="http://tak.dayanshop.net/products/category/74/" target="_blank" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://poiweq2213.com/nabimages/HB/13930603122014h-led.gif" alt=""></a></div></div></td></tr></tbody></table></div><div style="text-align: center;"></div>
+
+
+
+
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="dpad"><div class="sortn"><div class="sortn">آموزش تصویری بافتنی لباس مردانه دخترانه زنانه بافت ژاکت پیراهن جلیغه اموزش بافت دستکش بافتن لباس بلند بافت مانتو بافت پالتو فیلم</div></div></div>
+						
+<div id='dle-content'>
+
+
+
+
+
+   
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+			
+	<div class="base shortstory">
+	<div class="dpad">
+		<h3 class="btl"><a href="http://rangarang62083.mihanblog.com/post/8" title="خرید پستی آموزش بافتنی آموزش 8 الگوی مختلف بافتنی">خرید پستی آموزش بافتنی آموزش 8 الگوی مختلف بافتنی</a></h3>
+		<p class="binfo small">نویسنده : <a href="http://rangarang62083.mihanblog.com/post/author/394239">ادمین </a> | تاریخ : 03:19 ق.ظ - شنبه 12 مهر 1393</p>
+		
+		<div class="maincont">
+			
+			<span class="argcoms"><a target="_self" href="javascript:newComment(8)"><b><script>setCommentCnt(8)</script></b></a></span>
+			
+			<div>
+					 <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<div style="text-align: center;"><span class="Apple-style-span" style="font-size: small;"><b><font class="Apple-style-span" color="#CC9933"><i><u>خرید پستی آموزش بافتنی آموزش 8 الگوی مختلف بافتنی</u></i></font></b></span></div><div style="text-align: center;"><br></div><div style="text-align: center;"><p style="text-align: center;"><img src="http://s5.picofile.com/file/8144043050/rangarang62083_mihanblog_com.jpg" border="0" alt="خرید پستی آموزش بافتنی آموزش 8 الگوی مختلف بافتنی" title="خرید پستی آموزش بافتنی آموزش 8 الگوی مختلف بافتنی" width="385" height="336"></p></div><div style="text-align: center;"><div style="text-align: center;"><br></div><div style="text-align: -webkit-auto;"><div style="text-align: center;"><br></div><div style="text-align: center;">در این مجموعه آموزشی شما را با چندین الگو آشنا می كنیم و یاد خواهید گرفت چگونه آنها را خلق كنید.</div><div style="text-align: center;"><br></div><div style="text-align: center;">&nbsp;الگوی سوئیت پی&nbsp;&nbsp;الگوی ردیف های شبكه ای&nbsp;&nbsp;الگوی ذرتی&nbsp;&nbsp;الگوی جعبه پف كرده</div><div style="text-align: center;"><br></div><div style="text-align: center;">&nbsp;الگوی سالاد شاه توت&nbsp;&nbsp;الگوی نخ چهارگره&nbsp;الگوی حلقه های پیوند خورده&nbsp;الگوی دانه های زمستانه</div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: justify;">شما با این آموزش :دیگر نیازی به&nbsp;خرید لباس زمستانی&nbsp;نداریدهمه با دیدن&nbsp;مدل های جدید و زیبایتان&nbsp;شگفت زده&nbsp;خواهند شدو بیش از هر كسی خودتان &nbsp;لذت خواهید بردمجموعه ای استثنایی و ضروری برای بافندگانمجموعه ای بی نظیردر منزل و در كمترین&nbsp; وقت با كمترین هزینه می توانید&nbsp;بهترین&nbsp;بافت&nbsp;را داشته باشید</div><div style="text-align: justify;"><br></div><div style="text-align: justify;"><br></div><div style="text-align: justify;">بافتنی یك دهه است كه مورد توجه همه قرار گرفته است و دید بسیار جدیدی در زندگی و الگوهای بافندگی به وجود آورده است&nbsp;.این آموزش&nbsp;به شما چگونگی بافتن طرح ها و الگوها را با قلاب نشان می دهد با این الگو ها شما می توانید هر چیزی را از راه ساده تا حرفه ای را خلق كنید این مجموعه برای استفاده تمام سنین تهیه شده است.</div><div style="text-align: center;"><br></div></div></div><div style="text-align: center;"><div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; text-align: center; font-family: Tahoma, 'Trebuchet MS', Helvetica, sans-serif; font-size: 13px; color: rgb(44, 44, 44); line-height: 17px; "><br></div><div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; text-align: center; font-family: Tahoma, 'Trebuchet MS', Helvetica, sans-serif; font-size: 13px; color: rgb(44, 44, 44); line-height: 17px; "><span class="Apple-style-span" style="color: rgb(216, 38, 66); font-family: tahoma; line-height: 15px; font-size: 9px; "><strong><span style="font-family: Tahoma; "><strong><span style="font-family: Tahoma; ">خـرید پستی &gt;&gt; قیمت یک عدد دی وی دی: 6500 تـومان</span></strong></span></strong></span></div><div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; text-align: center; font-family: Tahoma, 'Trebuchet MS', Helvetica, sans-serif; font-size: 13px; color: rgb(44, 44, 44); line-height: 17px; "><a href="http://shop2kharid.eshopfa.biz/Detail.aspx?q=cd1908&amp;s=31720" target="_blank" title="" style="color: rgb(68, 161, 199); text-decoration: none; outline-style: none; outline-width: initial; outline-color: initial; "><img hspace="0" border="0" align="baseline" vspace="0" src="http://shop2kharid.eshopfa.biz/template/4/img/detailshop.gif" alt="" style="border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-color: initial; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px; border-width: initial; border-color: initial; max-width: 660px; "></a></div></div>
+
+
+
+
+ 
+						<br />						<br /><br />
+						برچسب محصول :   						<a href="http://rangarang62083.mihanblog.com/post/tag/%D8%AE%D8%B1%DB%8C%D8%AF%20%D9%BE%D8%B3%D8%AA%DB%8C%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C" title="خرید پستی آموزش بافتنی" >خرید پستی آموزش بافتنی</a> , 						<a href="http://rangarang62083.mihanblog.com/post/tag/%D8%AE%D8%B1%DB%8C%D8%AF%20%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA%DB%8C%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C" title="خرید اینترنتی آموزش بافتنی" >خرید اینترنتی آموزش بافتنی</a> , 						<a href="http://rangarang62083.mihanblog.com/post/tag/%D8%AE%D8%B1%DB%8C%D8%AF%20%D9%BE%D8%B3%D8%AA%DB%8C%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C%20%D8%B2%D9%86%D8%A7%D9%86%D9%87" title="خرید پستی آموزش بافتنی زنانه" >خرید پستی آموزش بافتنی زنانه</a> , 						<a href="http://rangarang62083.mihanblog.com/post/tag/%D8%AE%D8%B1%DB%8C%D8%AF%20%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C%202014" title="خرید آموزش بافتنی 2014" >خرید آموزش بافتنی 2014</a> , <br />															</div>
+			<div class="clr"></div>
+		</div>
+		
+		<div class="mlink"><div class="mlink">
+			<span class="argmore"><b></b></span>
+		</div></div>
+	</div>
+</div>
+<div class="bsep">&nbsp;</div>
+  	
+	<div class="base shortstory">
+	<div class="dpad">
+		<h3 class="btl"><a href="http://rangarang62083.mihanblog.com/post/9" title="خرید اینترنتی CD مجموعه ژورنال بافت زنانه دخترانه">خرید اینترنتی CD مجموعه ژورنال بافت زنانه دخترانه</a></h3>
+		<p class="binfo small">نویسنده : <a href="http://rangarang62083.mihanblog.com/post/author/394239">ادمین </a> | تاریخ : 03:28 ق.ظ - پنجشنبه 10 مهر 1393</p>
+		
+		<div class="maincont">
+			
+			<span class="argcoms"><a target="_self" href="javascript:newComment(9)"><b><script>setCommentCnt(9)</script></b></a></span>
+			
+			<div>
+					 <div style="text-align: justify;">خرید اینترنتی CD مجموعه ژورنال بافت زنانه دخترانه ژورنال بافتمجموعه ای استثنایی و ضروری برای بافندگاندر منزل و در كمترین&nbsp; وقت با كمترین هزینه می توانید&nbsp;بهترین&nbsp;بافت&nbsp;را انتخاب كنیداولین ژورنال تخصصی ویژه&nbsp;بافت&nbsp;شامل بیش از&nbsp;1000&nbsp;مدل لباس&nbsp;2011از طراحان معروف دنیاگلچینی از بهترین و جدیدترین مدلهای لباس زنانه&nbsp; در سال20111CDهمراه با كتاب و سی دی</div><div style="text-align: center;"><p style="text-align: center;">&nbsp;</p><p style="text-align: center;"><img src="http://s5.picofile.com/file/8144043392/rangarang62083_mihanblog_com444.jpg" border="0" alt="خرید اینترنتی CD مجموعه ژورنال بافت زنانه دخترانه" title="خرید اینترنتی CD مجموعه ژورنال بافت زنانه دخترانه" width="385" height="339"></p></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div>قابل استفاده برای علاقمندان-كارآموزان ، بافندگان گرامی همچنین برای تمام كسانی كه&nbsp;میخواهند زیباترین و به روزترین بافت ها را داشته باشند و در مراسم مختلف آنها را&nbsp;پوشیده و بدرخشند.<div><br></div><div><br></div><div><br></div><div><span class="Apple-style-span" style="font-family: Tahoma, 'Trebuchet MS', Helvetica, sans-serif; font-size: 13px; color: rgb(44, 44, 44); line-height: 17px; "><div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; text-align: center; font-family: Tahoma, 'Trebuchet MS', Helvetica, sans-serif; font-size: 13px; color: rgb(44, 44, 44); line-height: 17px; "><span class="Apple-style-span" style="color: rgb(216, 38, 66); font-family: tahoma; line-height: 15px; font-size: 9px; "><strong><span style="font-family: Tahoma; "><strong><span style="font-family: Tahoma; ">خـرید پستی &gt;&gt; قیمت یک عدد دی وی دی: 5500 تـومان</span></strong></span></strong></span></div><div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; text-align: center; font-family: Tahoma, 'Trebuchet MS', Helvetica, sans-serif; font-size: 13px; color: rgb(44, 44, 44); line-height: 17px; "><a href="http://shop2kharid.eshopfa.biz/cd1947_31720_%DA%98%D9%88%D8%B1%D9%86%D8%A7%D9%84-%D8%A8%D8%A7%D9%81%D8%AA.html" target="_blank" title=""><img hspace="0" border="0" align="baseline" vspace="0" src="http://shop2kharid.eshopfa.biz/template/4/img/detailshop.gif" alt="" style="border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-color: initial; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px; border-width: initial; border-color: initial; max-width: 660px; border-color: initial; border-width: initial; border-color: initial; "></a></div></span></div> 
+						<br />						<br /><br />
+																					</div>
+			<div class="clr"></div>
+		</div>
+		
+		<div class="mlink"><div class="mlink">
+			<span class="argmore"><b></b></span>
+		</div></div>
+	</div>
+</div>
+<div class="bsep">&nbsp;</div>
+  
+	
+
+		
+	<div class="base shortstory">
+	<div class="dpad">
+		<h3 class="btl">آخرین مطالب</h3>
+		<div class="maincont">
+			<div>
+			    								
+						&raquo; <a href="http://rangarang62083.mihanblog.com/post/8">خرید پستی آموزش بافتنی آموزش 8 الگوی مختلف بافتنی</a> ( شنبه 12 مهر 1393 )<br />
+												
+						&raquo; <a href="http://rangarang62083.mihanblog.com/post/9">خرید اینترنتی CD مجموعه ژورنال بافت زنانه دخترانه</a> ( پنجشنبه 10 مهر 1393 )<br />
+												
+						&raquo; <a href="http://rangarang62083.mihanblog.com/post/5">سی دی آموزش تصویری بافتنی</a> ( جمعه 29 آذر 1392 )<br />
+												
+						&raquo; <a href="http://rangarang62083.mihanblog.com/post/3">آموزش بافت دستكش دخترانه بدون انگشت</a> ( جمعه 29 آذر 1392 )<br />
+												
+						&raquo; <a href="http://rangarang62083.mihanblog.com/post/1">آموزش ساده بافت كلاه زمستانی برای نوزادان</a> ( جمعه 1 آذر 1392 )<br />
+							</div>
+			<div class="clr"></div>
+		</div>
+
+	</div>
+</div>
+<div class="bsep">&nbsp;</div>
+	
+
+	
+	<div class="base shortstory">
+	<div class="dpad">
+		<div class="maincont">
+
+				<div style="text-align:center;">
+					 	 صفحات سایت:
+												   <a href="http://rangarang62083.mihanblog.com/page/1">[ <b>1</b> ]</a>
+												   <a href="http://rangarang62083.mihanblog.com/page/2">[ <span>2</span> ]</a>
+												   <a href="http://rangarang62083.mihanblog.com/page/3">[ <span>3</span> ]</a>
+									    </div>
+			<div class="clr"></div>
+		</div>
+
+	</div>
+	</div>
+<div class="bsep">&nbsp;</div>
+	
+
+</div>
+					</div>
+					<div id="sidebar" class="rcol">
+
+<div class="block leftmenu">
+			<div class="dcont">
+		<ul class="reset">
+							<li>
+					<a href="http://rangarang62083.mihanblog.com/post/archive/1393/7" > مهر 1393</a>
+				</li>
+							<li>
+					<a href="http://rangarang62083.mihanblog.com/post/archive/1392/9" > آذر 1392</a>
+				</li>
+							<li>
+					<a href="http://rangarang62083.mihanblog.com/post/archive">نمایش تمام مطالب</a>
+				</li>
+		</ul>
+	</div>
+		<div class="dtop">&nbsp;</div>
+	<div class="dbtm">&nbsp;</div>
+</div>
+
+	<div id="bcalendar" class="block">
+		<h4 class="btl"><span class="green">نویسندگان</span> سایت</h4>
+		<div class="dcont">
+		  <ul>
+							<li>
+					<a title="" href="http://rangarang62083.mihanblog.com/post/author/394239">ادمین  (5)</a>
+				</li>
+					  </ul>
+		</div>
+		<div class="dtop">&nbsp;</div>
+		<div class="dbtm">&nbsp;</div>
+	</div>
+
+
+		
+	
+<div id="popular" class="block">
+	<h4 class="btl"><span class="green">لینکستان</span></h4>
+	<div class="dcont">
+				<ul>
+											<li><a href="http://www.baghenegaheto.blogfa.com" title="" target="_blank"><span>آموزش پرورش قارچ</span></a></li>
+											<li><a href="http://winxyjoon.mihanblog.com" title="آموزش تصویری کاشت ناخن" target="_blank"><span>آموزش تصویری کاشت ناخن</span></a></li>
+											<li><a href="http://starshahrokh.mihanblog.com" title="مدل لباس بافتنی" target="_blank"><span>مدل لباس بافتنی</span></a></li>
+										<li>
+					<a href="http://rangarang62083.mihanblog.com/link/"><span>لیست لینک ها</span></a>
+					</li>
+				</ul>
+	</div>
+	<div class="dtop">&nbsp;</div>
+	<div class="dbtm">&nbsp;</div>
+</div>
+
+
+<div id="barchives" class="block">
+	<h4 class="btl"><span class="green">تبلیغات </span>بازدید</h4>
+	<div class="dcont">
+			
+	</div>
+	<div class="dtop">&nbsp;</div>
+	<div class="dbtm">&nbsp;</div>
+</div>
+
+
+<div id="news-partner" class="block2"><div class="dtop">
+	<div class="dcont">
+		<h4 class="btl">درباره ما</h4>
+		<div class="informer">
+				<center><div style="text-align:center"></div></center>
+			<br />
+					آموزش تصویری بافتنی لباس مردانه دخترانه زنانه بافت ژاکت پیراهن جلیغه اموزش بافت دستکش بافتن لباس بلند بافت مانتو بافت پالتو فیلم بافتنی خرید بافتنی					<br />ایجاد کننده وبلاگ : <a href="http://rangarang62083.mihanblog.com/post/author/394239">ادمین </a>
+						
+				<br /><br />
+				<center><script type="text/javascript" src="http://feedgorji.zarshop.biz/TextAds.aspx?s=31720&r=56847&f=0&bt=3&rc=10&cc=1&dn=bazarbuy.eshopfa.biz&gc=&bgColor=C6EE1C&titleColor=11BCEA&descColor=FEAC00&borderColor=B7B7B7" language="javascript"></script>
+
+
+<script type="text/javascript" src="http://feedgorji.zarshop.biz/TextAds.aspx?s=31720&r=1769&f=0&bt=1&rc=10&cc=1&dn=bazarbuy.eshopfa.biz&gc=&bgColor=C6EE1C&titleColor=11BCEA&descColor=FEAC00&borderColor=B7B7B7" language="javascript"></script>
+
+
+
+<script type="text/javascript" src="http://feedgorji.zarshop.biz/TextAds.aspx?s=31720&r=11511&f=0&bt=2&rc=10&cc=1&dn=bazarbuy.eshopfa.biz&gc=&bgColor=C6EE1C&titleColor=11BCEA&descColor=FEAC00&borderColor=B7B7B7" language="javascript"></script>
+
+
+<br> <div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><scripttype="text javascript"="" src="https://apis.google.com/js/plusone.js"><style type="text/css">.ggoogle{background:url(http://s2.picofile.com/file/7125621505/1322988345.png);border:1px solid #00aeff;color:#000099; font-size:0px;line-height:0px;padding:0px;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;text-align:center}</style><div class="ggoogle" style="position:fixed;Right:2px;bottom:2px;z-index:1000;"><div style="text-align: justify;"><a href="http://buy24.takshop91.biz/category.php?id=3" target="_blank" title=""><img style="width: 120px; height: 180px;" src="http://s5.picofile.com/file/8145309192/Copy_of_54454545.gif" alt="" align="bottom" border="0" hspace="0" vspace="0"></a></div><div style="text-align: justify;"><br></div><g:plusone href=""></g:plusone></div><g:plusone></g:plusone></scripttype="text>
+</center>
+				<br />
+		</div>
+	</div>
+</div></div>
+					</div>
+					<div class="clr"></div>
+				</div></div>
+				<div id="vsepfoot" class="wsh"><div class="wsh">&nbsp;</div></div>
+			</div>
+		</div></div>
+	</div>
+</div>
+<div class="wwide footbg">
+	<div class="wrapper">
+		<div class="container">
+		<br />
+						<div class="blocktags radial">
+								
+								   <a href="http://rangarang62083.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%D8%A8%D8%A7%D9%81%D8%AA+%D8%AF%D8%B3%D8%AA%D9%83%D8%B4+%D8%AF%D8%AE%D8%AA%D8%B1%D8%A7%D9%86%D9%87" 
+									style="font-size:1em">
+										   آموزش بافت دستكش دخترانه 
+								   </a>
+								
+								   <a href="http://rangarang62083.mihanblog.com/post/tag/%D8%AE%D8%B1%DB%8C%D8%AF+%D9%BE%D8%B3%D8%AA%DB%8C+%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C+%D8%B2%D9%86%D8%A7%D9%86%D9%87" 
+									style="font-size:1em">
+										   خرید پستی آموزش بافتنی زنانه 
+								   </a>
+								
+								   <a href="http://rangarang62083.mihanblog.com/post/tag/%D8%AE%D8%B1%DB%8C%D8%AF+%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA%DB%8C+%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C" 
+									style="font-size:1em">
+										   خرید اینترنتی آموزش بافتنی 
+								   </a>
+								
+								   <a href="http://rangarang62083.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C+%D8%AF%D8%B3%D8%AA%D9%83%D8%B4+%D8%AF%D8%AE%D8%AA%D8%B1%D8%A7%D9%86%D9%87" 
+									style="font-size:1em">
+										   آموزش بافتنی دستكش دخترانه 
+								   </a>
+								
+								   <a href="http://rangarang62083.mihanblog.com/post/tag/%D8%A8%D8%A7%D9%81%D8%AA+%D8%AF%D8%B3%D8%AA%D9%83%D8%B4+%D8%A8%D8%AF%D9%88%D9%86+%D8%A7%D9%86%DA%AF%D8%B4%D8%AA" 
+									style="font-size:1em">
+										   بافت دستكش بدون انگشت 
+								   </a>
+								
+								   <a href="http://rangarang62083.mihanblog.com/post/tag/%D8%AE%D8%B1%DB%8C%D8%AF+%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C+2014" 
+									style="font-size:1em">
+										   خرید آموزش بافتنی 2014 
+								   </a>
+								
+								   <a href="http://rangarang62083.mihanblog.com/post/tag/%D8%AE%D8%B1%DB%8C%D8%AF+%D9%BE%D8%B3%D8%AA%DB%8C+%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%D8%A8%D8%A7%D9%81%D8%AA%D9%86%DB%8C" 
+									style="font-size:1em">
+										   خرید پستی آموزش بافتنی 
+								   </a>
+										</div>
+						
+		</div>
+	</div>
+</div>
+<div class="wwide footer">
+	<div class="wrapper">
+		<div class="container">
+
+			<span class="copyright">
+					آموزش تصویری بافتنی لباس مردانه دخترانه زنانه بافت ژاکت پیراهن جلیغه اموزش بافت دستکش بافتن لباس بلند بافت مانتو بافت پالتو فیلم بافتنی خرید بافتنیکیسه های فریزر	 <a href="index.html" title="rangarang62083 Group">rangarang62083 Group</a> , All Rights Reserved<br/>
+			</span>
+
+		</div>
+		<a href="index.html#" onclick="scroll(0,0); return false" class="thide toptop">بالا</a>
+	</div>
+</div>
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'rangarang62083.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

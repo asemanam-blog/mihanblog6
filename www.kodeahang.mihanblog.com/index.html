@@ -1,0 +1,902 @@
+<!DOCTYPE HTML>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://kodeahang.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1768559*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[1]='0';commentCnt[3]='0';commentCnt[4]='0';commentCnt[5]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','4');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','چهارشنبه 7 بهمن 1394');
+	
+	setStatVar('today_view','8');
+	setStatVar('yesterday_view','70');
+	
+	setStatVar('this_month_view','520');
+	setStatVar('last_month_view','484');
+
+	setStatVar('total_view','52763');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (05:51)');
+
+
+
+    
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://kodeahang.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="../kodeahang.mihanblog.com/'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://kodeahang.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://kodeahang.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://kodeahang.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://kodeahang.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://kodeahang.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://kodeahang.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://kodeahang.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://kodeahang.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://kodeahang.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://kodeahang.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://kodeahang.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://kodeahang.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://kodeahang.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://kodeahang.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://kodeahang.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+	<head>
+        <title>دانلود آهنگ</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Language" content="fa">
+        <meta name="description" content="دانلود آهنگ جدید 95,کد آهنگ,آهنگ جدید,دانلود آهنگ جدید ایرانی,دانلود آهنگ جدید با لینک مستقیم
+" />
+        <meta name="keywords" content="دانلود آهنگ جدید 95,کد آهنگ,آهنگ جدید,دانلود آهنگ جدید ایرانی,دانلود آهنگ جدید با لینک مستقیم" />
+<meta name="google-site-verification" content="4mVak08FghAEdCINr7LQVmUeXg6lIqBF3GHbsydYcl8" />
+<meta name="google-site-verification" content="qWGCMV5wnBDjbJsaqSGDdNUTqsyQbEHxru7fHuMkLQE" />
+        <link rel="alternate" type="application/rss+xml" title="دانلود آهنگ" href="http://kodeahang.mihanblog.com/post/rss/" />
+        <link rel="alternate" type="application/atom+xml" title="دانلود آهنگ"  href="http://kodeahang.mihanblog.com/post/atom/" />
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="http://www.naqweb.ir/cdn/skins/res2/skin20/css/style4.css" rel="stylesheet" type="text/css" media="all" />
+		<script src="http://www.naqweb.ir/cdn/skins/res2/skin20/js/jquery.js" type="text/javascript"></script>
+
+		<script type="text/javascript" src="http://www.naqweb.ir/cdn/skins/res2/skin20/js/jquery.openCarousel.js"></script>
+		<script src="http://www.naqweb.ir/cdn/skins/res2/skin20/js/star-rating.js"></script>
+		<script src="http://www.naqweb.ir/cdn/skins/res2/skin20/js/jquery.easydropdown.js"></script>
+		<script type="text/javascript" src="http://www.naqweb.ir/cdn/skins/res2/skin20/js/jquery.easing.js"></script>
+        <script type="text/javascript" src="http://www.naqweb.ir/cdn/skins/res2/skin20/js/jquery.ulslide.js"></script>
+        <script src="http://www.naqweb.ir/cdn/skins/res2/skin20/js/easyResponsiveTabs2.js" type="text/javascript"></script>
+		<!----Calender -------->
+		  <link rel="stylesheet" href="http://www.naqweb.ir/cdn/skins/res2/skin20/css/clndr.css" type="text/css" />
+		  <script src="http://www.naqweb.ir/cdn/skins/res2/skin20/js/underscore-min.js" type="text/javascript"></script>
+		  <script src= "http://www.naqweb.ir/cdn/skins/res2/skin20/js/moment-2.2.1.js" type="text/javascript"></script>
+		  <script src="http://www.naqweb.ir/cdn/skins/res2/skin20/js/clndr.js" type="text/javascript"></script>
+		  <script src="http://www.naqweb.ir/cdn/skins/res2/skin20/js/site.js" type="text/javascript"></script>
+  		<!----End Calender -------->
+  		<script type="text/javascript" src="http://www.naqweb.ir/cdn/skins/res2/skin20/js/smk-accordion.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($){
+
+				$(".accordion").smk_Accordion({
+					showIcon: true, //boolean
+					animation: true, //boolean
+					closeAble: false, //boolean
+					slideSpeed: 300 //integer, miliseconds
+				});
+			});
+		</script>
+	<!---- Slider ------>
+	 <link rel="stylesheet" href="http://www.naqweb.ir/cdn/skins/res2/skin20/css/slider.css" type="text/css" />
+	<script type="text/javascript" src="http://www.naqweb.ir/cdn/skins/res2/skin20/js/jquery.cslider.js"></script>
+	<script type="text/javascript" src="http://www.naqweb.ir/cdn/skins/res2/skin20/js/modernizr.custom.28468.js"></script>
+	<script type="text/javascript">
+			$(function() {
+
+				$('#da-slider').cslider({
+					autoplay	: true,
+					bgincrement	: 450
+				});
+
+			});
+		</script>
+      <script type="text/javascript" src="http://www.naqweb.ir/cdn/skins/res2/skin20/js/show-date.js"></script>
+      <script type="text/javascript" src="http://www.naqweb.ir/cdn/skins/res2/skin20/js/set-dropdown.js"></script>
+
+	</head>
+	<body>
+		<!---start-wrap---->
+		<div class="wrap">
+			<div class="header">
+		<!---  Header-left  ---->
+		   <div class="header-left">
+				<div class="top-left-grid">
+				  <div class="icon-dropdown">
+					<div id="dd2" class="wrapper-dropdown-3"><i class="dropdown-icon"> </i>
+						<ul class="dropdown" dir="rtl">
+							<li><a href="http://kodeahang.mihanblog.com/post/author/1458377"> مدیر سایت: دانلود آهنگ 95</a></li>
+							<li><a href="mailto:"> پست الکترونیک</a></li>
+						</ul>
+					</div>
+				 </div>
+					  <div class="menu">
+						<a class="toggleMenu" href="index.html#"> <span> </span></a>
+							<ul class="nav" dir="rtl">
+								<li  class="test"><a href="index.html">دانلود آهنگ</a></li>
+								<li><a href="http://kodeahang.mihanblog.com/post/archive">آرشیو</a></li>
+                               								<li><a href="javascript:messageForm()">تماس با ما</a></li>
+                                <li><a href="http://kodeahang.mihanblog.com/post/rss/">RSS</a></li>
+                                <li><a href="http://kodeahang.mihanblog.com/sitemap.xml">sitemap</a></li>
+
+								<div class="clear"> </div>
+							</ul>
+							 <script type="text/javascript" src="http://www.naqweb.ir/cdn/skins/res2/skin20/js/responsive-nav.js"></script>
+						</div>
+					 <div class="top-search-box" dir="rtl">
+                      <form id="frm-16077976725fd50ba8beb66" method="get" action="http://kodeahang.mihanblog.com/post/search/fid/16077976725fd50ba8beb66"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+						<input type="text" name="search_text" onBlur="if (this.value == '')
+            this.value = this.defaultValue;" onFocus="if (this.value == this.defaultValue)
+            this.value = '';" value="جستجو">
+						<input type="submit" value=" " />
+                      <input type="hidden" name="frm-id" value="16077976725fd50ba8beb66" id="frm-id" /></form>					</div>
+				<div class="clear"> </div>
+		</div>
+
+		</div>
+
+
+				<div class="clear"> </div>
+			</div>
+					<!---  End Header ----->
+
+		<!----- Content ------------->
+		          <div class="content_top site-info">
+                    <div style="padding: 20px; text-align: center;">
+                    <h1><a href="index.html">دانلود آهنگ</a></h1>
+                    <p></p>
+                    </div>
+		          </div>
+
+					<div class="content_middle">
+					<div class="grid1">
+                       <div class="content_top-grid3">
+		          		 <div class="profile">
+		          		  <div class="profile-details" dir="rtl">
+		          		 	<div class="profile_picture">
+		          		 		 <div class="profile_picture_name">
+					            	<h2><a>درباره سایت</a></h2>
+					            	<p><a href="http://kodeahang.mihanblog.com/post/author/1458377">مدیر سایت: دانلود آهنگ 95</a></p>
+					             </div>
+					        		<a href="index.html"></a>
+					        	 	<p><a href="mailto:"></a></p>
+                                    <p class="about-text">دانلود آهنگ جدید 95,کد آهنگ,آهنگ جدید,دانلود آهنگ جدید ایرانی,دانلود آهنگ جدید با لینک مستقیم<br />
+</p>
+					          </div>
+					          <div class="follow">
+					          	 <a href="javascript:messageForm()">تماس با ما</a>
+					          </div>
+					       </div>
+					        <div class="clear"> </div>
+					     </div>
+		          		 </div>
+                           <div class="clear"> </div>
+
+                   
+
+
+                          
+                 <div class="header-right" style="width: 100%; margin-bottom: 30px;">
+					<div class="day-cal" >
+						<div class="day-cal-top">
+							<div class="day-cal-top-left">
+								<img src="http://www.naqweb.ir/cdn/skins/res2/skin20/images/calendar2.png" alt="">
+							</div>
+							<div class="day-cal-top-right" dir="rtl">
+								<label>امروز</label>
+								<p> <script>showdate()</script></p>
+							</div>
+							<div class="clear"> </div>
+						</div>
+						<div class="day-cal-mid-search" dir="rtl">
+							<div class="day-cal-mid-search-right">
+                            	<form  target="_new" method="get" action="http://www.google.com/search" id="search" >
+								<input type="submit" name="sitesearch" value="http://kodeahang.mihanblog.com" style="text-indent: 10000px;"  ><input name="q" type="text" onBlur="if (this.value == '')
+            this.value = this.defaultValue;" onFocus="if (this.value == this.defaultValue)
+            this.value = '';" value="جستجو" class="search-icon">
+                                </form>
+							</div>
+							<div class="clear"> </div>
+						</div>
+						<div class="clear"> </div>
+					</div>
+				</div>
+                <div class="clear"> </div>
+
+
+
+
+
+
+                                                                <div class="priceing-tabel1 priceing-tabel1-dark_blue" dir="rtl">
+									<div class="priceing-header">
+										<h4>آرشیو</h4>
+
+									</div>
+									<ul>
+                                       										<li><a href="http://kodeahang.mihanblog.com/post/archive/1394/11" title="همه نوشته های  بهمن 1394"> بهمن 1394<!--<label class="digits">2</label>--></a></li>
+                                       										<li><a href="http://kodeahang.mihanblog.com/post/archive/1394/10" title="همه نوشته های  دی 1394"> دی 1394<!--<label class="digits">2</label>--></a></li>
+                                       										<li><a href="http://kodeahang.mihanblog.com/post/archive">آرشیو کل</a></li>
+
+									</ul>
+								</div>
+                               <div class="clear"> </div>
+                               
+                                                            <div class="priceing-tabel1 priceing-tabel1-dark_blue" dir="rtl">
+									<div class="priceing-header">
+										<h4>نویسندگان</h4>
+									</div>
+									<ul>
+                                        										<li><a href="http://kodeahang.mihanblog.com/post/author/1458377" title="همه نوشته های دانلود آهنگ 95">دانلود آهنگ 95<label class="digits">4</label></a></li>
+                                        									</ul>
+								</div>
+                               <div class="clear"> </div>
+                                                           						    <div class="tag-list">
+		                        <a href="http://kodeahang.mihanblog.com/post/tag/%D9%BE%D9%88%D8%B1+%D8%B9%D9%84%DB%8C+%DA%AF%D9%86%D8%AC%DB%8C+%D9%87%D9%85+%D8%AA%DB%8C%D9%85%DB%8C+%DA%98%D8%A7%D9%88%DB%8C+%D8%B4%D8%AF" title="همه مطالب با برچسب پور علی گنجی هم تیمی ژاوی شد:  1 مطلب">پور علی گنجی هم تیمی ژاوی شد</a><a href="http://kodeahang.mihanblog.com/post/tag/%D9%81%D8%A7%D9%84+%D8%A7%D9%85%D8%B1%D9%88%D8%B2+10+%D8%AF%DB%8C" title="همه مطالب با برچسب فال امروز 10 دی:  1 مطلب">فال امروز 10 دی</a><a href="http://kodeahang.mihanblog.com/post/tag/%D8%A2%DB%8C%D8%A7+%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87+7+%D8%AF%DB%8C+%D9%85%D8%AF%D8%A7%D8%B1%D8%B3+%D8%AA%D9%87%D8%B1%D8%A7%D9%86+%D8%AA%D8%B9%D8%B7%DB%8C%D9%84+%D8%A7%D8%B3%D8%AA" title="همه مطالب با برچسب آیا دوشنبه 7 دی مدارس تهران تعطیل است:  1 مطلب">آیا دوشنبه 7 دی مدارس تهران تعطیل است</a><a href="http://kodeahang.mihanblog.com/post/tag/%D8%AA%D8%B9%D8%B7%DB%8C%D9%84%DB%8C+%D9%85%D8%AF%D8%A7%D8%B1%D8%B3+%D8%AA%D9%87%D8%B1%D8%A7%D9%86+7+%D8%AF%DB%8C+94" title="همه مطالب با برچسب تعطیلی مدارس تهران 7 دی 94:  1 مطلب">تعطیلی مدارس تهران 7 دی 94</a>		                        <div class="clear"></div>
+		                    </div>
+                            <div class="clear"> </div>
+                            						          	 <div class="codes">
+                                     <div class="inner">
+						          	 	<img src="http://www.naqweb.ir/cdn/skins/res2/skin20/images/extra5.png" alt="" />
+						          	 	<h3>امکانات سایت</h3>
+						          	 	  <div class="codes-desc">
+						          	 	  	<p></p>
+						          	 	  </div>
+                                     </div>
+						          	 </div>
+
+
+						</div>
+
+						<div class="grid2">
+
+
+                                                      <div class="news" DIR="RTL">
+							  	  <h3>آخرین عناوین</h3>
+							  	 <ul>
+                                   							  	   <li>
+							  	   	  <div class="news_desc">
+							  	   	  	 <h4><a href="http://kodeahang.mihanblog.com/post/5">سفر روحانی به فرانسه</a></h4>
+							  	   	  	 <p>چهارشنبه 7 بهمن 1394</p>
+							  	   	  </div>
+							  	   	  <div class="clear"> </div>
+							  	   </li>
+                                   							  	   <li>
+							  	   	  <div class="news_desc">
+							  	   	  	 <h4><a href="http://kodeahang.mihanblog.com/post/4">تا پایان فصل بر عهده خواهد داشت</a></h4>
+							  	   	  	 <p>چهارشنبه 7 بهمن 1394</p>
+							  	   	  </div>
+							  	   	  <div class="clear"> </div>
+							  	   </li>
+                                   							  	   <li>
+							  	   	  <div class="news_desc">
+							  	   	  	 <h4><a href="http://kodeahang.mihanblog.com/post/3">فال 10 دی 94</a></h4>
+							  	   	  	 <p>چهارشنبه 9 دی 1394</p>
+							  	   	  </div>
+							  	   	  <div class="clear"> </div>
+							  	   </li>
+                                   							  	   <li>
+							  	   	  <div class="news_desc">
+							  	   	  	 <h4><a href="http://kodeahang.mihanblog.com/post/1">خبر تعطیلی مدارس تهران 7 دی</a></h4>
+							  	   	  	 <p>یکشنبه 6 دی 1394</p>
+							  	   	  </div>
+							  	   	  <div class="clear"> </div>
+							  	   </li>
+                                   							  	   <li>
+							  	   	  <div class="news_desc">
+							  	   	  	 <h4><a href="http://kodeahang.mihanblog.com/post/list">لیست کامل مطالب سایت</a></h4>
+							  	   	  	 <p>لیست کامل </p>
+							  	   	  </div>
+							  	   	  <div class="clear"> </div>
+							  	   </li>
+							  	  </ul>
+							  </div>
+                              <div style="clear: both;"></div>
+                                                              
+                                                   
+						     		 <div class="social_network_likes">
+				      		 <ul>
+				      		 	<li><a href="http://twitter.com/home?status=http://kodeahang.mihanblog.com" class="tweets"><div class="social_network"><i class="twitter-icon"> </i> </div></a></li>
+				      			<li><a href="http://www.facebook.com/share.php?u=http://kodeahang.mihanblog.com " class="facebook-followers"><div class="social_network"><i class="facebook-icon"> </i> </div></a></li>
+				      			<li><a href="javascript:messageForm()" class="email"><div class="social_network"><i class="email-icon"> </i></div> </a></li>
+				      			<li><a href="http://kodeahang.mihanblog.com/post/rss/" class="dribble"><div class="social_network"><i class="dribble-icon"> </i></div></a></li>
+				      			<div class="clear"></div>
+				    	     </ul>
+		          	     	 </div>
+                             <div class="clear"></div>
+
+
+		 <div class="simple-coursal">
+<!--			 <div class="simple-search-box">
+				<input type="text" value="Subscribe" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subscribe';}">
+				<input type="submit" value="" />
+			 </div>-->
+			   <div class="coursal">
+			   	 <ul id="slide">
+			   	 	 	<li>
+			                <img src="http://www.naqweb.ir/cdn/skins/res2/skin20/images/coursel_img1m.jpg" alt="" />
+			            </li>
+			            <li>
+			                <img src="http://www.naqweb.ir/cdn/skins/res2/skin20/images/coursel_img2m.jpg" alt="" />
+			            </li>
+			              <li>
+			                <img src="http://www.naqweb.ir/cdn/skins/res2/skin20/images/coursel_img1m.jpg" alt="" />
+			            </li>
+			            <li>
+			                <img src="http://www.naqweb.ir/cdn/skins/res2/skin20/images/coursel_img3m.jpg" alt="" />
+			            </li>
+			            <li>
+			                <img src="http://www.naqweb.ir/cdn/skins/res2/skin20/images/coursel_img4m.jpg" alt="" />
+			            </li>
+			        </ul>
+					<div class="slide_prev-next">
+					<a href="index.html#" id="slide_prev"> <i class="slide_prev"> </i> </a>
+					<a href="index.html#" id="slide_next"><i class="slide_next"> </i> </a>
+			       </div>
+			        <script type="text/javascript">
+			            $(function() {
+			                $('#slide').ulslide({
+			                    width:80,
+			                    height:120,
+								effect: {
+									type: 'carousel', // slide or fade
+			                        axis: 'x',        // x, y
+									showCount: 2
+								},
+			                    nextButton: '#slide_next',
+			                    prevButton: '#slide_prev',
+			                    duration: 800,
+			                    /*autoslide: 2000,*/
+								easing: 'easeOutBounce'
+			                });
+			            });
+			        </script>
+			   </div>
+	    </div>
+         <div class="clear"></div>
+
+
+                            		          		    <!-- Accordion begin -->
+							  <div class="accordion">
+								<!-- Section 1 -->
+								<div class="accordion_in acc_active">
+								<div class="acc_head"><span>آمار سایت</span> <div class="clear"></div></div>
+								<div class="acc_content">
+								    <ul dir="rtl">
+								    	<li><a><span>بازدید کل</span><label class="digits"><script>getStatVar('total_view');</script></label><div class="clear"></div></a></li>
+								    	<li><a><span>بازدید امروز</span><label class="digits"><script>getStatVar('today_view');</script></label><div class="clear"></div></a></li>
+								    	<li><a><span>بازدید دیروز</span><label class="digits"><script>getStatVar('yesterday_view');</script></label><div class="clear"></div></a></li>
+                                        <li><a><span>بازدید ماه قبل</span><label class="digits"><script>getStatVar('last_month_view');</script></label><div class="clear"></div></a></li>
+                                        <li><a><span>بازدید این ماه</span><label class="digits"><script>getStatVar('this_month_view');</script></label><div class="clear"></div></a></li>
+                                        <li><a><span>آخرین بازدید</span><label class="digits" style="font-size: 10px; border: none;"><script>getStatVar('last_view_date');</script></label><div class="clear"></div></a></li>
+								    </ul>
+								</div>
+							   </div>
+							<!-- Section 2 -->
+							<div class="accordion_in">
+							<div class="acc_head"><span>آمار مطالب </span><div class="clear"></div></div>
+							<div class="acc_content">
+							        <ul dir="rtl">
+								    	<li><a><span>تعداد مطالب</span><label class="digits"><script>getStatVar('total_post');</script></label><div class="clear"></div></a></li>
+								    	<li><a><span>نویسندگان</span><label class="digits"><script>getStatVar('total_author');</script></label><div class="clear"></div></a></li>
+								    	<li><a><span>بروزرسانی</span><label class="digits" style="font-size: 10px; border: none;"><script>getStatVar('modify_date');</script></label><div class="clear"></div></a></li>
+								    </ul>
+							</div>
+							</div>
+							</div>
+							<!-- Accordion end -->
+                            
+						  </div>
+
+						<div class="grid3">
+
+		
+
+
+
+
+             <div class="clear"></div>
+                                           
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		              <div class="blog_entry" dir="rtl">
+					   	   	  <div class="blog_posts">
+						       <div class="blog_date">
+									<figure>چهارشنبه 7 بهمن 1394 <span>07:30 ب.ظ</span></figure>
+							    </div>
+							       <div class="blog_desc">
+											<h4><a href="http://kodeahang.mihanblog.com/post/5" class="blog-post-link"> سفر روحانی به فرانسه</a></h4>
+											<p><span class="author"><a href="http://kodeahang.mihanblog.com/post/author/1458377">دانلود آهنگ 95</a></span>   <span class="comment"><a target="_self" href="javascript:newComment(5)" >نظرات  <script>setCommentCnt(5)</script></a></span> </p>
+								  </div>
+						     <div class="clear"></div>
+						    </div>
+						     <div class="blog_posts" style="margin-top: 0px;">
+						       <!--<div class="blog_button">
+									<a href="#">ادامه مطلب</a>
+							    </div>-->
+							          <div class="blog_data" style="width: 100%; margin-left: 0px;">
+                                      <div class="postbody" style="padding: 20px;">
+                                                                                    <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><h2 style="margin: 0px; padding: 0px; font-family: Arial, Helvetica, sans-serif, 'Arial Black'; font-weight: normal; line-height: 20.9px;"><a href="http://hdmusic.blog.ir/1394/11/07/%D8%B3%D9%81%D8%B1-%D8%B1%D9%88%D8%AD%D8%A7%D9%86%DB%8C-%D8%A8%D9%87-%D9%81%D8%B1%D8%A7%D9%86%D8%B3%D9%87" style="margin: 0px; padding: 0px; font-family: IRANSans-web; text-decoration: none; color: rgb(8, 146, 205); border: 0px; cursor: pointer; transition-duration: 0.2s; line-height: 1.7em; font-size: 25px;">سفر روحانی به فرانسه</a></h2>
+
+
+                                          
+                                      </div>
+                                      <div class="glossy-social-buttons" style="margin-top: 0px; margin-bottom: 0px;">
+        					        	 <ul style="padding: 5px;">
+        					        	 	<li><a class="facebook" href="http://www.facebook.com/share.php?u=http://kodeahang.mihanblog.com/post/5"> </a></li>
+        					        	 	<li><a class="twitter" href="http://twitter.com/home?status=http://kodeahang.mihanblog.com/post/5"> </a></li>
+                                            <li><a class="googleplus" href="http://plus.google.com/share?url=http://kodeahang.mihanblog.com/post/5"> </a></li>
+        					        	 	<li><a class="tumblr" href="http://www.farstwitter.ir/share/link/add/?url=http://kodeahang.mihanblog.com/post/5"> </a></li>
+        					        	 	<li><a class="delicious" href="https://delicious.com/post?url=http://kodeahang.mihanblog.com/post/5"> </a></li>
+                                           <div class="blog_button more-link" style="float: right;width: 130px;">
+            									            							   </div>
+        					        	 	<div class="clear"> </div>
+        					        	 </ul>
+					                 </div>
+								     </div>
+						     <div class="clear"></div>
+						    </div>
+					   	  </div>
+                          <div class="clear"></div>
+                                <div class="tag-list">
+                                
+                                		                    </div>
+                             <div class="clear"></div>
+
+                                     <div class="blog_entry" dir="rtl">
+					   	   	  <div class="blog_posts">
+						       <div class="blog_date">
+									<figure>چهارشنبه 7 بهمن 1394 <span>02:16 ب.ظ</span></figure>
+							    </div>
+							       <div class="blog_desc">
+											<h4><a href="http://kodeahang.mihanblog.com/post/4" class="blog-post-link"> تا پایان فصل بر عهده خواهد داشت</a></h4>
+											<p><span class="author"><a href="http://kodeahang.mihanblog.com/post/author/1458377">دانلود آهنگ 95</a></span>   <span class="comment"><a target="_self" href="javascript:newComment(4)" >نظرات  <script>setCommentCnt(4)</script></a></span> </p>
+								  </div>
+						     <div class="clear"></div>
+						    </div>
+						     <div class="blog_posts" style="margin-top: 0px;">
+						       <!--<div class="blog_button">
+									<a href="#">ادامه مطلب</a>
+							    </div>-->
+							          <div class="blog_data" style="width: 100%; margin-left: 0px;">
+                                      <div class="postbody" style="padding: 20px;">
+                                                                                    
+<span style="font-size: 13px; line-height: 20px; text-align: justify;">به گزارش "ورزش سه"، چلسی دو ماه پیش مورینیو را از نیمکت خود اخراج کرد و گاس هیدینک را جانشین او کرد. هیدینک هدایت چلسی را تا پایان فصل بر عهده خواهد داشت و پس از آن مربی دیگری روی کار خواهد آمد</span><br style="font-size: 13px; line-height: 20px; text-align: justify;"><span style="font-size: 13px; line-height: 20px; text-align: justify;">گفته می‌شد که دیگو سیمئونه،‌خورخه سامپائولی و دیدیه دشان در لیست چلسی قرار دارند. نام گواردیولا نیز مطرح بود ولی به نظر می‌رسد رومن آبراموویچ، شکست را در جذب او در رقابت با سیتی و یونایتد قبول کرده&nbsp; است. حال روزنامه تایمز از یک نام چهارم پرده برداری کرد.</span><br style="font-size: 13px; line-height: 20px; text-align: justify;"><span style="font-size: 13px; line-height: 20px; text-align: justify;">مائوریسیو پوچتینو،‌سرمربی تاتنهام که در این دوفصل با این تیم نتایج خوبی گرفته و تیمش نیز عملکرد خوبی داشته،‌نفر چهارم لیست چلسی برای انتخاب مربی در تابستان است. همکاری خوب او با بازیکنان جوان در ساوتهمپتون و تاتنهام باعث شده تا چلسی در اندیشه جذب او باشد.</span>
+
+
+
+
+                                          
+                                      </div>
+                                      <div class="glossy-social-buttons" style="margin-top: 0px; margin-bottom: 0px;">
+        					        	 <ul style="padding: 5px;">
+        					        	 	<li><a class="facebook" href="http://www.facebook.com/share.php?u=http://kodeahang.mihanblog.com/post/4"> </a></li>
+        					        	 	<li><a class="twitter" href="http://twitter.com/home?status=http://kodeahang.mihanblog.com/post/4"> </a></li>
+                                            <li><a class="googleplus" href="http://plus.google.com/share?url=http://kodeahang.mihanblog.com/post/4"> </a></li>
+        					        	 	<li><a class="tumblr" href="http://www.farstwitter.ir/share/link/add/?url=http://kodeahang.mihanblog.com/post/4"> </a></li>
+        					        	 	<li><a class="delicious" href="https://delicious.com/post?url=http://kodeahang.mihanblog.com/post/4"> </a></li>
+                                           <div class="blog_button more-link" style="float: right;width: 130px;">
+            									            							   </div>
+        					        	 	<div class="clear"> </div>
+        					        	 </ul>
+					                 </div>
+								     </div>
+						     <div class="clear"></div>
+						    </div>
+					   	  </div>
+                          <div class="clear"></div>
+                                <div class="tag-list">
+                                
+                                                                <a class="i-title">برچسب ها</a>
+                                    								<a href="http://kodeahang.mihanblog.com/post/tag/%D9%BE%D9%88%D8%B1%20%D8%B9%D9%84%DB%8C%20%DA%AF%D9%86%D8%AC%DB%8C%20%D9%87%D9%85%20%D8%AA%DB%8C%D9%85%DB%8C%20%DA%98%D8%A7%D9%88%DB%8C%20%D8%B4%D8%AF" title="همه مطالب با برچسب پور علی گنجی هم تیمی ژاوی شد" > پور علی گنجی هم تیمی ژاوی شد </a>
+                                		                        <div class="clear"></div>
+                                		                    </div>
+                             <div class="clear"></div>
+
+                                     <div class="blog_entry" dir="rtl">
+					   	   	  <div class="blog_posts">
+						       <div class="blog_date">
+									<figure>چهارشنبه 9 دی 1394 <span>07:07 ب.ظ</span></figure>
+							    </div>
+							       <div class="blog_desc">
+											<h4><a href="http://kodeahang.mihanblog.com/post/3" class="blog-post-link"> فال 10 دی 94</a></h4>
+											<p><span class="author"><a href="http://kodeahang.mihanblog.com/post/author/1458377">دانلود آهنگ 95</a></span>   <span class="comment"><a target="_self" href="javascript:newComment(3)" >نظرات  <script>setCommentCnt(3)</script></a></span> </p>
+								  </div>
+						     <div class="clear"></div>
+						    </div>
+						     <div class="blog_posts" style="margin-top: 0px;">
+						       <!--<div class="blog_button">
+									<a href="#">ادامه مطلب</a>
+							    </div>-->
+							          <div class="blog_data" style="width: 100%; margin-left: 0px;">
+                                      <div class="postbody" style="padding: 20px;">
+                                                                                    <p class="rtejustify" style="text-align: justify; padding: 0px; margin: 0px 0px 18px; font-stretch: normal; font-size: 13px; font-family: Tahoma; line-height: 24px;">به گزارش خبرنگار ورزشی&nbsp;<font color="#b02525">خبرگزاری فارس</font>، هفته بیست‌وچهارم لیگ برتر فوتسال عصر امروز با برگزاری 6 دیدار آغاز شد که تیم صدرنشین تاسیسات دریایی مقابل میهمان خود آذرخش بندرعباس با نتیجه یک بر یک متوقف شد و با توجه به پیروزی مس سونگون مقابل شهیدمنصوری شاگردان علی افضل به صدر جدول بازگشتند.&nbsp;</p><p class="rtejustify" style="text-align: justify; padding: 0px; margin: 0px 0px 18px; font-stretch: normal; font-size: 13px; font-family: Tahoma; line-height: 24px;">تیم فوتسال دبیری با شکست مقابل مقاومت البرز 42 امتیازی باقی ماند و با توجه به اختلاف 6 امتیازی از صدر جدول و همچنین باقی ماندن 2 هفته از لیگ برتر شاگردان جواد اصغری مقدم شانس بسیار کمی برای رسیدن به قهرمانی دارند.</p><p class="rtejustify" style="text-align: justify; padding: 0px; margin: 0px 0px 18px; font-stretch: normal; font-size: 13px; font-family: Tahoma; line-height: 24px;">تیم‌های مس با 48 امتیاز، تاسیسات با 46 امتیاز و گیتی‌پسند هم با 46 امتیاز و به علت تفاضل گل کمتر در رده‌های اول تا سوم قرار گرفته‌اند.</p>
+
+
+                                          
+                                      </div>
+                                      <div class="glossy-social-buttons" style="margin-top: 0px; margin-bottom: 0px;">
+        					        	 <ul style="padding: 5px;">
+        					        	 	<li><a class="facebook" href="http://www.facebook.com/share.php?u=http://kodeahang.mihanblog.com/post/3"> </a></li>
+        					        	 	<li><a class="twitter" href="http://twitter.com/home?status=http://kodeahang.mihanblog.com/post/3"> </a></li>
+                                            <li><a class="googleplus" href="http://plus.google.com/share?url=http://kodeahang.mihanblog.com/post/3"> </a></li>
+        					        	 	<li><a class="tumblr" href="http://www.farstwitter.ir/share/link/add/?url=http://kodeahang.mihanblog.com/post/3"> </a></li>
+        					        	 	<li><a class="delicious" href="https://delicious.com/post?url=http://kodeahang.mihanblog.com/post/3"> </a></li>
+                                           <div class="blog_button more-link" style="float: right;width: 130px;">
+            									            							   </div>
+        					        	 	<div class="clear"> </div>
+        					        	 </ul>
+					                 </div>
+								     </div>
+						     <div class="clear"></div>
+						    </div>
+					   	  </div>
+                          <div class="clear"></div>
+                                <div class="tag-list">
+                                
+                                                                <a class="i-title">برچسب ها</a>
+                                    								<a href="http://kodeahang.mihanblog.com/post/tag/%D9%81%D8%A7%D9%84%20%D8%A7%D9%85%D8%B1%D9%88%D8%B2%2010%20%D8%AF%DB%8C" title="همه مطالب با برچسب فال امروز 10 دی" > فال امروز 10 دی </a>
+                                		                        <div class="clear"></div>
+                                		                    </div>
+                             <div class="clear"></div>
+
+                                     <div class="blog_entry" dir="rtl">
+					   	   	  <div class="blog_posts">
+						       <div class="blog_date">
+									<figure>یکشنبه 6 دی 1394 <span>05:29 ب.ظ</span></figure>
+							    </div>
+							       <div class="blog_desc">
+											<h4><a href="http://kodeahang.mihanblog.com/post/1" class="blog-post-link"> خبر تعطیلی مدارس تهران 7 دی</a></h4>
+											<p><span class="author"><a href="http://kodeahang.mihanblog.com/post/author/1458377">دانلود آهنگ 95</a></span>   <span class="comment"><a target="_self" href="javascript:newComment(1)" >نظرات  <script>setCommentCnt(1)</script></a></span> </p>
+								  </div>
+						     <div class="clear"></div>
+						    </div>
+						     <div class="blog_posts" style="margin-top: 0px;">
+						       <!--<div class="blog_button">
+									<a href="#">ادامه مطلب</a>
+							    </div>-->
+							          <div class="blog_data" style="width: 100%; margin-left: 0px;">
+                                      <div class="postbody" style="padding: 20px;">
+                                                                                    
+<span style="font-family: IRANSans, Tahoma, Arial; font-size: 12px; line-height: 27px; text-align: justify;">خبرگزاری فارس: مسعود ثقفی سخنگوی اداره کل آموزش و پرورش تهران درباره جزئیات نشست کار گروه اضطرار آلودگی هوای پایتخت، اظهار داشت: این نشست ساعت 14:30 امروز تشکیل شد و تصمیمی بر تعطیلی مدارس گرفته نشد.</span><br style="font-family: IRANSans, Tahoma, Arial; font-size: 12px; line-height: 27px; text-align: justify;"><br style="font-family: IRANSans, Tahoma, Arial; font-size: 12px; line-height: 27px; text-align: justify;"><span style="font-family: IRANSans, Tahoma, Arial; font-size: 12px; line-height: 27px; text-align: justify;">وی افزود:</span>
+
+                                          
+                                      </div>
+                                      <div class="glossy-social-buttons" style="margin-top: 0px; margin-bottom: 0px;">
+        					        	 <ul style="padding: 5px;">
+        					        	 	<li><a class="facebook" href="http://www.facebook.com/share.php?u=http://kodeahang.mihanblog.com/post/1"> </a></li>
+        					        	 	<li><a class="twitter" href="http://twitter.com/home?status=http://kodeahang.mihanblog.com/post/1"> </a></li>
+                                            <li><a class="googleplus" href="http://plus.google.com/share?url=http://kodeahang.mihanblog.com/post/1"> </a></li>
+        					        	 	<li><a class="tumblr" href="http://www.farstwitter.ir/share/link/add/?url=http://kodeahang.mihanblog.com/post/1"> </a></li>
+        					        	 	<li><a class="delicious" href="https://delicious.com/post?url=http://kodeahang.mihanblog.com/post/1"> </a></li>
+                                           <div class="blog_button more-link" style="float: right;width: 130px;">
+            									<a href='http://kodeahang.mihanblog.com/post/1'>ادامه مطلب</a>            							   </div>
+        					        	 	<div class="clear"> </div>
+        					        	 </ul>
+					                 </div>
+								     </div>
+						     <div class="clear"></div>
+						    </div>
+					   	  </div>
+                          <div class="clear"></div>
+                                <div class="tag-list">
+                                
+                                                                <a class="i-title">برچسب ها</a>
+                                    								<a href="http://kodeahang.mihanblog.com/post/tag/%D8%AA%D8%B9%D8%B7%DB%8C%D9%84%DB%8C%20%D9%85%D8%AF%D8%A7%D8%B1%D8%B3%20%D8%AA%D9%87%D8%B1%D8%A7%D9%86%207%20%D8%AF%DB%8C%2094" title="همه مطالب با برچسب تعطیلی مدارس تهران 7 دی 94" > تعطیلی مدارس تهران 7 دی 94 </a>
+                                    								<a href="http://kodeahang.mihanblog.com/post/tag/%D8%A2%DB%8C%D8%A7%20%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87%207%20%D8%AF%DB%8C%20%D9%85%D8%AF%D8%A7%D8%B1%D8%B3%20%D8%AA%D9%87%D8%B1%D8%A7%D9%86%20%D8%AA%D8%B9%D8%B7%DB%8C%D9%84%20%D8%A7%D8%B3%D8%AA" title="همه مطالب با برچسب آیا دوشنبه 7 دی مدارس تهران تعطیل است" > آیا دوشنبه 7 دی مدارس تهران تعطیل است </a>
+                                		                        <div class="clear"></div>
+                                		                    </div>
+                             <div class="clear"></div>
+
+                                                                     <style>
+                       .more-link {
+                         background: none;
+                       }
+
+                       .more-link a {
+                         padding: 8px 3.2em 8px 2.3em;
+
+                       }
+                       </style>
+                                                        
+                                                                 
+					    </div>
+						  <div class="clear"> </div>
+					   </div>
+
+					   <div class="content_bottom">
+                          <div class="social-icons">
+		          	          	 <ul>
+		          	          	 	<li><a href="http://twitter.com/home?status=http://kodeahang.mihanblog.com" class="twitter_icon"> </a></li>
+		          	          	 	<li><a href="http://plus.google.com/share?url=http://kodeahang.mihanblog.com" class="googleplus"> </a></li>
+		          	          	 	<li><a href="http://www.facebook.com/share.php?u=http://kodeahang.mihanblog.com" class="facebook_icon"> </a></li>
+		          	          	 	<li><a href="https://delicious.com/post?url=http://kodeahang.mihanblog.com" class="delicious"> </a></li>
+		          	          	 </ul>
+		          	          	 <div class="clear"> </div>
+		          	          </div>
+                              <style>
+                              .privacy {
+                                float: right;
+                                color: #333;
+                                font-size: 13px;
+                                font-weight: normal;
+                              }
+                              .privacy a {
+                                color: #FF9900;
+                              }
+
+                              </style>
+                              <div class="privacy">
+                              کلیه حقوق این سایت محفوظ است.   طراح قالب: ـنقـاش
+                              </div>
+
+					   	 <div class="clear"> </div>
+					   </div>
+					</div>
+		<!----- End Content ------------->
+		  <!--	</div>-->
+		<!---//End-wrap---->
+	</body><!--  1394/9/23  96729231851514  -->
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'kodeahang.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

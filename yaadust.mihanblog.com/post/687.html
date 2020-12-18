@@ -1,0 +1,1085 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc%3Frsd.html" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*242877*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','3795');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','چهارشنبه 22 آبان 1398');
+	
+	setStatVar('today_view','4122');
+	setStatVar('yesterday_view','36');
+	
+	setStatVar('this_month_view','11916');
+	setStatVar('last_month_view','8674');
+
+	setStatVar('total_view','1319899');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (08:56)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://yaadust.mihanblog.com/statupdate/?data[refereruri]=http://yaadust.mihanblog.com/post/archive/1389/8&data[postid]=687&data[requesturi]=/post/687&data[sdate]=1608182762&data[hash]=b751e6fd72a466f35075cda8241ca824&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[687]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+			} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://yaadust.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://yaadust.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Theme Designer" content="www.MyTheme.ir">
+
+    <meta name="description" content="عماد افروغ :  الـگـو بودن مـدیـریـت جنگ ، در هر سطحی ... "/>
+    <meta name="keywords" content="عماد,افروغ,الـگـو,نمـدیـریـت,جنگ,،,هر,سطحی,"/>
+    <link rel="alternate" type="application/rss+xml" title="وقتی خـــدا غـریـبـــه-ست، آدم شـدن مـحـالـه ..." href="rss/index.html" />
+    <link rel="alternate" type="application/atom+xml" title="وقتی خـــدا غـریـبـــه-ست، آدم شـدن مـحـالـه ..." href="atom/index.html" />
+    <link href="http://mihanblog.com/public/public/user_data/template/2099932/style.css" type="text/css" rel="stylesheet">
+
+    <title>وقتی خـــدا غـریـبـــه-ست، آدم شـدن مـحـالـه ... - عماد افروغ :  الـگـو بودن مـدیـریـت جنگ ، در هر سطحی ... </title>
+</head>
+
+<body>
+
+<div align="center">
+<table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;</td>
+<td class=div2>
+<div class=div00>
+
+<div class=div60>
+    <div class=div101>
+        <div class=div10><font class=title>وقتی خـــدا غـریـبـــه-ست، آدم شـدن مـحـالـه ...</font></div></div>
+    <div class=div11>
+        <div class=div12><font class=des>با مردم بودن قریحه-ی ادبی وَ هنری را بیشتر رشد مـیـدهـد ...</font></div></div>
+</div>
+
+<div class=ss>
+    <div class=s1><form id="frm-16081827625fdaebea3aa1a" method="get" action="http://yaadust.mihanblog.com/post/search/fid/16081827625fdaebea3aa1a"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+        <div class=s2>
+            <input type="text" name="search_text" size="20" style="border: 0px none; background: none; font-family:Tahoma; font-size:9pt; direction:ltr"></div>
+        <div class=s3><input type="image" src="http://mihanblog.com/public/public/user_data/template/2099932/blank.gif" width=22 height=21 value="جستجو"></div>
+    <input type="hidden" name="frm-id" value="16081827625fdaebea3aa1a" id="frm-id" /></form></div>
+
+    <div class=s4>
+        <div class=s5><font class=text10>
+            <a href="../index.html">صفحه نخست</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:messageForm()">تماس با مدیر</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="mailto:farsiblog@yahoo.com">پست الکترونیک</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="rss/index.html">RSS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="atom/index.html">ATOM</a></font></div></div>
+</div>
+
+<div class=mdiv17></div>
+
+<div class=mdiv170>
+
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>درباره وبلاگ</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341>
+            <div class=mdiv31><font class=text1><center><img src="http://static.mihanblog.com//public/user_data/web_photo/81/242877.jpg?4584"  /><br><br>
+                گر در طلب لقمه نانی،<br />
+نانی /<br />
+گر در طلب گوهر كانی،<br />
+كانی /<br />
+این نكته رمز اگر بدانی،<br />
+دانی /<br />
+هر چیز كه اندر پی آنی،<br />
+آنی ...<br />
+<br />
+مـــولانـــا<br />
+<br />
+<br />
+امام خمینی:<br />
+<br />
+همه باید نظر خودشان را بدهند /<br />
+<br />
+و هیچ کدام هم برایشان حتی جایز نیست که یک چیزی را بفهمند و نگویند. /<br />
+<br />
+باید وقتی می فهمند، اظهار کنند. /<br />
+<br />
+این موافق هر که باشد ، باشد ، مخالف هرکه هم باشد ، باشد. /<br />
+<br />
+( صحیفه امام،ج13،ص102) <br />
+</center><br>
+                <b>مدیر وبلاگ :</b> <a href="author/144112.html">عـبـــد عـا صـی </a></font></div>
+        </div><div class=mdiv30></div>
+    </div>
+
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>مطالب اخیر</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341><font class=text1><ul>
+            <li><a href="4092.html">    دومین عامل مرگ وُ میر ...  </a></li><li><a href="4091.html">   چـــرا بـرای بـسـیـاری از مـسؤلین کلاسـهـای اخـــلاق اسـلامی اجـبـاری نـشـده؟؟؟!!! ...  </a></li><li><a href="4090.html">    عروسک‌هایی با شخصیت‌های دینی ... </a></li><li><a href="4089.html">       طلبه ای که به لوستر های حرم امیر المومنین اعتراض داشت </a></li><li><a href="4087.html">     سریال سایه بان     </a></li><li><a href="4086.html">    چه عواملی باعث دورشدن همسر می‌شود؟   </a></li><li><a href="4084.html">        برگزیده-ی سخنان امام علی (ع) امیرالمومنین     </a></li><li><a href="4082.html">   به تو می اندیشم    </a></li><li><a href="4081.html"> «نسیه و وجه دستی داده می شود!» </a></li><li><a href="4080.html">کریمان جان فدای دوست کردند</a></li><li><a href="4079.html">کشت وُ کار «خسروی» هر چی بکاری میدروَی (درومیکنی) ... </a></li><li><a href="4077.html">    «هرجایی»‌ها و هیچ‌انگاری!</a></li><li><a href="4076.html">     فـقـط یـــاد گـــرفتی ایـــراد بـگـیـــری وُ بـــری بالا مـنـبـــر! ...  </a></li><li><a href="4075.html">علی آشکاترین حقیقت و ...</a></li><li><a href="4074.html"> این فتح الفتوح در تاریخ ماندنی شد ...  </a></li><li><a href="4073.html">محمد مهاجری: بزرگترین آفت صدا و سیما ...   </a></li><li><a href="4072.html">  درک فیتزجرالد از رباعیات خیام ...   </a></li><li><a href="4071.html"> محمد رضا زائری: باید فریاد بزنیم که این دین نیست! ...</a></li><li><a href="4070.html">  فرض كنید كسی هم هشدار داده بود!  </a></li><li><a href="4069.html">صد رحمت به شرم وُ حیای گربه ...</a></li><li><a href="4068.html">    مـــدیـــریـت وَ انـســـانـیـت ...   </a></li><li><a href="4067.html">بـــاج گـیـــری ...  </a></li><li><a href="4066.html">  اینا هَمَش بخاطر انتخاباته ...  </a></li><li><a href="4065.html"> فامیل خدا</a></li><li><a href="4064.html">علت چاقی ناگهانی چیست؟</a></li><li><a href="4063.html"> ناکامی علت اصلی بروز خشونت در جامعه </a></li><li><a href="4061.html">مسعود پزشکیان: اگر بنا بر استیضاح باشد باید همه ما استیضاح شویم</a></li><li><a href="4060.html">این دو  شکایت بجایی نرسیده!؟</a></li><li><a href="4059.html"> اصلاح‌طلبان و اصولگراها دست‌شان در دست هم است؟</a></li><li><a href="4058.html"> زیباکلام: اتفاقا باید استیضاح رئیس جمهور مطرح شود</a></li>        </ul></font></div><div class=mdiv30></div>
+    </div>
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>آرشیو وبلاگ</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341><font class=text1><ul>
+            <li><a href="archive/1398/8.html"> آبان 1398</a></li><li><a href="archive/1398/7.html"> مهر 1398</a></li><li><a href="archive/1398/6.html"> شهریور 1398</a></li><li><a href="archive/1398/4.html"> تیر 1398</a></li><li><a href="archive/1398/3.html"> خرداد 1398</a></li><li><a href="archive/1398/2.html"> اردیبهشت 1398</a></li><li><a href="archive/1398/1.html"> فروردین 1398</a></li><li><a href="archive/1397/12.html"> اسفند 1397</a></li><li><a href="archive/1397/11.html"> بهمن 1397</a></li><li><a href="archive/1397/10.html"> دی 1397</a></li><li><a href="archive/1397/9.html"> آذر 1397</a></li><li><a href="archive/1397/8.html"> آبان 1397</a></li><li><a href="archive/1397/7.html"> مهر 1397</a></li><li><a href="archive/1397/6.html"> شهریور 1397</a></li><li><a href="archive/1397/5.html"> مرداد 1397</a></li><li><a href="archive/1397/4.html"> تیر 1397</a></li><li><a href="archive/1397/3.html"> خرداد 1397</a></li><li><a href="archive/1397/2.html"> اردیبهشت 1397</a></li><li><a href="archive/1397/1.html"> فروردین 1397</a></li><li><a href="archive/1396/12.html"> اسفند 1396</a></li><li><a href="archive/1396/11.html"> بهمن 1396</a></li><li><a href="archive/1396/10.html"> دی 1396</a></li><li><a href="archive/1396/9.html"> آذر 1396</a></li><li><a href="archive/1396/8.html"> آبان 1396</a></li><li><a href="archive/1396/7.html"> مهر 1396</a></li><li><a href="archive/1396/6.html"> شهریور 1396</a></li><li><a href="archive/1396/5.html"> مرداد 1396</a></li><li><a href="archive/1396/4.html"> تیر 1396</a></li><li><a href="archive/1396/3.html"> خرداد 1396</a></li>            <li><b><a href="archive.html">آرشیو كل مطالب</a></b></li>
+        </ul></font></div><div class=mdiv30></div>
+    </div>
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>نویسندگان</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341><font class=text1><ul>
+            <li><a href="author/144112.html">عـبـــد عـا صـی  (3795)</a></li>        </ul></font></div><div class=mdiv30></div>
+    </div>
+    
+		
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>برچسبها</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341><font class=text1><ul>
+            <li><a href="http://yaadust.mihanblog.com/post/tag/%D9%81%D8%A7%D8%B5%D9%84%D9%87+%D8%B7%D8%A8%D9%82%D8%A7%D8%AA%DB%8C">فاصله طبقاتی</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%B9%D8%B4%D9%82">عشق</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%B3%D8%B9%DB%8C%D8%AF+%D8%AC%D9%84%DB%8C%D9%84%DB%8C">سعید جلیلی</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A7%D8%B5%D9%88%D9%84%DA%AF%D8%B1%D8%A7%DB%8C%D8%A7%D9%86">اصولگرایان</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%B3%DB%8C%D8%AF%D8%AD%D8%B3%D9%86+%D8%AE%D9%85%DB%8C%D9%86%DB%8C">سیدحسن خمینی</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85+%D8%AE%D9%85%DB%8C%D9%86%DB%8C">امام خمینی</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D9%83%D8%B1%D8%A8%D9%84%D8%A7">كربلا</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%AE%D8%B4%D9%88%D9%86%D8%AA">خشونت</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A7%D8%B9%D8%AA%DB%8C%D8%A7%D8%AF">اعتیاد</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D8%A7%D8%AA+%D9%85%D8%AC%D9%84%D8%B3">انتخابات مجلس</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%AD%D8%B3%D9%86+%D8%B1%D9%88%D8%AD%D8%A7%D9%86%DB%8C">حسن روحانی</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A8%D8%B1%D8%AC%D8%A7%D9%85">برجام</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%B0%D9%84%D8%AA">ذلت</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%B4%D9%88%D8%B1%D8%A7%DB%8C+%D8%B4%D9%87%D8%B1+%D8%AA%D9%87%D8%B1%D8%A7%D9%86">شورای شهر تهران</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%B3%D9%87%D8%B1%D8%A7%D8%A8+%D8%B3%D9%BE%D9%87%D8%B1%DB%8C">سهراب سپهری</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%B2%DB%8C%D9%86%D8%A8">زینب</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%B2%DB%8C%D8%A8%D8%A7+%DA%A9%D9%84%D8%A7%D9%85">زیبا کلام</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D9%81%D9%82%DB%8C%D8%B1">فقیر</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%AA%D9%88%D8%A7%D9%81%D9%82+%D9%87%D8%B3%D8%AA%D9%87%E2%80%8C%D8%A7%DB%8C">توافق هسته‌ای</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A7%D8%B5%D9%84%D8%A7%D8%AD+%D8%B7%D9%84%D8%A8%D8%A7%D9%86">اصلاح طلبان</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A8%D9%86%D8%AF%DA%AF%DB%8C">بندگی</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%AF%DA%A9%D8%AA%D8%B1+%D8%B9%D9%84%DB%8C+%D8%B4%D8%B1%DB%8C%D8%B9%D8%AA%DB%8C">دکتر علی شریعتی</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D9%85%D8%AD%DB%8C%D8%B7+%D8%B2%DB%8C%D8%B3%D8%AA">محیط زیست</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%AD%D8%B3%DB%8C%D9%86">حسین</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A7%D9%88%D8%A8%D8%A7%D9%85%D8%A7">اوباما</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%B8%D8%B1%DB%8C%D9%81">ظریف</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A7%D9%86%D8%B5%D8%A7%D9%81">انصاف</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D9%81%D8%B3%D8%A7%D8%AF">فساد</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%AE%D8%A8%D8%B1%DA%AF%D8%A7%D9%86+%D8%B1%D9%87%D8%A8%D8%B1%DB%8C">خبرگان رهبری</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A7%D8%AD%D9%85%D8%AF%DB%8C+%D9%86%DA%98%D8%A7%D8%AF">احمدی نژاد</a></li>        </ul></font></div><div class=mdiv30></div>
+    </div>
+</div>
+
+<div class=div20>
+
+    		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="687.html">عماد افروغ :  الـگـو بودن مـدیـریـت جنگ ، در هر سطحی ... </a></font></div>
+            <div class=div58><font class=text7>جمعه 21 آبان 1389 :: نویسنده : <a href="author/144112.html">عـبـــد عـا صـی </a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><P style="TEXT-ALIGN: center; LINE-HEIGHT: 2.5; unicode-bidi: embed; DIRECTION: rtl" dir=rtl align=center><SPAN style="COLOR: #333333; FONT-SIZE: 9pt" lang=AR-SA></SPAN>&nbsp;</P>
+<P style="TEXT-ALIGN: center; LINE-HEIGHT: 2.5; unicode-bidi: embed; DIRECTION: rtl" dir=rtl align=center><FONT color=#0022e6 size=5 face="Microsoft Sans Serif"><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">عماد افروغ: </SPAN></FONT><SPAN style="BACKGROUND-COLOR: #ffe3ff; FONT-WEIGHT: 700"><FONT color=#a20e02 size=5 face=Arial>&nbsp;الـگـو بودن مـدیـریـت جنگ ، </FONT></SPAN></P>
+<P style="TEXT-ALIGN: center; LINE-HEIGHT: 2.5; unicode-bidi: embed; DIRECTION: rtl" dir=rtl align=center><SPAN style="BACKGROUND-COLOR: #ffe3ff; FONT-WEIGHT: 700"><FONT color=#a20e02 size=5 face=Arial>&nbsp;در هر سطحی ... </FONT></SPAN></P>
+<P style="TEXT-ALIGN: center; LINE-HEIGHT: 2.5; unicode-bidi: embed; DIRECTION: rtl" dir=rtl align=center>&nbsp;</P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#009900 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700">&nbsp;این مدیریت چه در صف، چه در ستاد و چه در سطح مدیریت دولت وقت مثال زدنی است و میزان تورم، رکود اقتصادی و گرانی دوران جنگ ثبت شده است و می توان آن را با شرایط حال حاضر که جنگی هم وجود ندارد، مقایسه کرد. </SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR></SPAN><SPAN style="BACKGROUND-COLOR: #cccccc; FONT-WEIGHT: 700">اشاره -</SPAN><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"> </SPAN></FONT><FONT color=#a20e02 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffe3ff; FONT-WEIGHT: 700">«امروز دیگر گفتن بعضی حرف ها سخت شده است و متاسفانه تا می گوییم نظامیان و در سطحی حتی بسیجیان نباید به معنای مصطلح آن وارد سیاست شوند، به اینکه مخالف حضور دین در سیاست هستیم، متهم می شویم ».</SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">این ها را رییس اصول گرای کمیسیون فرهنگی مجلس هفتم می گوید. </SPAN></FONT><FONT color=#ff0000 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700">وی این روزها از مسائلی می گوید که خیلی ها آنها را از خط قرمزهای نظام تلقی می کنند.</SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffff00; FONT-WEIGHT: 700"> </SPAN></FONT><SPAN style="BACKGROUND-COLOR: #ffff00; FONT-WEIGHT: 700"><FONT color=#800080 size=4 face=Arial>وی با صراحت لهجه از بسیجی نماهایی می گوید که نسبتی با دفاع مقدس ندارند و آتش جنگ و مقاومت را نچشیده اند ولی فرهنگ غنی و مقدس بسیج را از آن خود می‌دانند.</FONT></SPAN><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffff00; FONT-WEIGHT: 700"> </SPAN></FONT><FONT color=#009900 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700">عماد افروغ از بسیجی های واقعی می خواهد که وارد عرصه شوند و به تحلیل وقایع دوران دفاع مقدس را عهده دار شوند تا تحریفی در این باره صورت نگیرد و مردم بیش از این به این فرهنگ بدبین نشوند.</SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">دکتر عماد افروغ جامعه شناس و نماینده اصولگرای مجلس هفتم، در گفتگویی تفصیلی با خبرنگار پایگاه اطلاع رسانی و خبری جماران به مناسبت هفته دفاع مقدس، با بیان اینکه این دوران 8 ساله یکبار دیگر توانست "دولت - ملت" سازی ما را احیا کند، می گوید:</SPAN></FONT><FONT color=#009900 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700"> مدیریت ویژه جنگ از سوی حضرت امام سبب شده بود که شرایط کشور با سایر کشورهای درگیر جنگ متفاوت باشد و شاهد حاکم شدن یک نگاه سلسله مراتبی و تمرکزگرایی سلب کننده آزادی و توسعه سیاسی و اعمال محدودیت هایی در امر افتراق و تفکیک در این دوران نباشیم و</SPAN><SPAN style="BACKGROUND-COLOR: #ffff00; FONT-WEIGHT: 700"> در اوج جنگ، اجازه تفکیک مجمع روحانیون از جامعه روحانیت از سوی امام داده می شود </SPAN><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700">که این درس مهمی برای کسانی است که فکر می کنند می توان با یک دست کردن جامعه </SPAN><SPAN style="BACKGROUND-COLOR: #ffff00; FONT-WEIGHT: 700">و با غلبه بخشیدن به یک جناح و نادیده انگاشتن سایر جناح ها و گروه ها، کشور را به تعالی رساند.</SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffff00; FONT-WEIGHT: 700"> <BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700">وی در پاسخ به سوالی درباره اینکه در شرایط کنونی و با توجه به ویژگی های نسل امروز، چگونه باید از دفاع مقدس حرف زد و کدام جنبه از دفاع مقدس را باید برجسته کرد</SPAN><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">، گفت: آنچه اکنون می توان درباره دفاع مقدس مطرح نمود،</SPAN></FONT><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><FONT color=#008000 size=4 face=Arial> جنبه وحدت بخشی و جنبه ملی جنگ است چرا که همه اقشار و گروه های مختلف در دفاع مقدس نقش داشتند و فارغ از هر تحلیلی که بتوان از جنگ و از اندیشه های مشهود آن بدست داد،</FONT></SPAN><FONT color=#009900 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffff00; FONT-WEIGHT: 700"> دفاع مقدس یکبار دیگر توانست دولت ملت سازی ما را احیا کند و وحدتی بین تمام اقشار و گرو ه های مختلف اجتماعی و قومیت ها به وجود آورد.</SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR>وی با بیان اینکه در دوران دفاع مقدس وحدت ملی یک بار دیگر از طریق جنگ در برابر دشمن خارجی حفظ شد و اتفاقات مبارکی در این دوران رخ داد، اظهار کرد: خصلت هر جنگی اینطور است که وقتی کشوری در معرض تهاجم قرار می گیرد، وحدت درونی آن ارتقا می یابد و</SPAN></FONT><FONT color=#009900 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffff00; FONT-WEIGHT: 700"> در دوران دفاع مقدس هم خط و خطوط و چپ و راست مطرح نبود که امروزه هم پرداختن به این بخش ضروری، می تواند جلوی تفرقه ها و انشقاق ها را بگیرد.</SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #009900; FONT-WEIGHT: 700">&nbsp;دفاع مقدس ، محیط تجلی ارزش ها بوده است <BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffff00; FONT-WEIGHT: 700">&nbsp;افروغ با اشاره به سایر تجلیات و مشخصه های متفاوت جنگ 8 ساله ما با سایر جنگ های دنیا، عنوان کرد: </SPAN></FONT><FONT color=#009900 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700">&nbsp;جنگ و دفاع مقدس در کل بیش از اینکه منشا ایجاد ارزش ها بوده باشد، محیط تجلی ارزش هایی بوده که در تاریخ و فرهنگ ما مستقر بوده است، ارزش هایی که از سوی دین مبین اسلام مطرح شد و در فرهنگ ما ریشه دواند، به صورت بالقوه در زمان جنگ به فعلیت می رسد و در واقع جنگ محیطی می شود برای تجلی و ظهور ارزش ها و نه تولید و ایجاد ارزش ها.</SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR><BR></SPAN></FONT><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">&nbsp;هدایت ویژه از سوی مدیریت جنگ <BR></SPAN></FONT><FONT color=#009900 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700">در اوج جنگ امام اجازه می دهند مجمع روحانیون از جامعه روحانیت تفکیک شود<BR></SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffff00; FONT-WEIGHT: 700">وی با بیان اینکه نکته قابل توجه دیگر درباره دوران دفاع مقدس، هدایت ویژه آن از سوی مدیریت جنگ است </SPAN><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">، افزود: مدیریت ویژه جنگ چه در کسوت فرماندهی سپاه و ارتش و چه فرماندهی کل قوا و چه در سطح مشاغل و مقامات ذیربط به گونه ای انجام می شد که خللی به وحدت ملی وارد نشود و</SPAN></FONT><FONT color=#009900 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700"> حتی امام دستور داده بودند که یکی از روزنامه ها در جبهه ها توزیع نشود تا به روحیه رزمندگان آسیب وارد نشود؛ چرا که بر این باور بودند که گرچه ممکن است یک مساله سیاسی اقتضای خاص خود را داشته باشد و دیدگاه های مختلف درباره آن وجود داشته باشد، ولی روحیه رزمنده ای که در صف اول می جنگد نباید دست خوش این رقابت ها و بازی های سیاسی قرار گیرد.</SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR><BR></SPAN></FONT><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">&nbsp;امام به هیچ عنوان نگران مسائل مرتبط با توسعه سیاسی نبود <BR></SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">وی با اشاره به مورد دیگری از ویژگی های خاص دوران دفاع مقدس که به راحتی شامل سایر کشورها نمی شود، گفت: آنچه در سایر جنگ ها دیده می شود، حاکم شدن یک نگاه سلسله مراتبی و تمرکزگرایی است، به گونه ای که این رویکرد سلب کننده آزادی و توسعه سیاسی و انتخابات می شود و محدودیت هایی را در امر افتراق و تفکیک ایجاد می کند و این در حالیست که ما شاهد بودیم که در این دوران در کشور ما، انتخابات ها با شکوه هرچه تمام تر برگزار می شد و در اوج جنگ امام اجازه می دهند مجمع روحانیون از جامعه روحانیت جدا و تفکیک شود؛ در واقع امام به هیچ عنوان نگران مسائلی که مرتبط با توسعه سیاسی و لازمه یک جامعه سالم است، نیستند و مانع ظهور و بروز زمینه های لازم برای توسعه سیاسی نبودند که این درس مهمی برای کسانی است که فکر می کنند می توان با یک دست کردن جامعه و با غلبه بخشیدن به یک جناح و نادیده انگاشتن سایر جناح ها و گرو ه ها، کشور را به تعالی رساند. <BR><BR></SPAN></FONT><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">&nbsp;نگاه ویژه امام سبب شد تا جنگ به رغم همه مشخصه های خود، باعث تصمیمات انقباضی نشود <BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">&nbsp;افروغ با تاکید بر اینکه</SPAN><SPAN style="BACKGROUND-COLOR: #ffff00; FONT-WEIGHT: 700"> امام در اوج جنگی که از اقتضائات آن تمرکزگرایی و بی توجهی به فرآیند تفکیک است، به تفکیک دیدگاه های مختلف توجه داشتند و مانعیت و رادعیتی در این خصوص ایجاد نکردند </SPAN><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">، اظهار کرد:</SPAN></FONT><FONT color=#009900 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700"> این رویکرد نشان دهنده، نگاه ویژه امام و سعه صدر و جامع نگری ایشان است که این باور را ایجاد می کند که حتی جنگ هم به رغم همه مشخصه های خود، باعث نمی شود که ارزش ها و اهداف اصلی دستخوش یکسری تصمیمات انقباضی شود و باید گفت، اینکه امروزه دفاع مقدس به عنوان یک خاطره مثبت و یک نوستالژی مبارک در ذهن مردم نقش بسته است تا حدی معلول این مدیریت و ویژگی ها و تجلی این صفات و خصایص است و دوران دفاع مقدس یادآور اوج ایثار و از خودگذشتگی و عرفان و معنویت است و از این بابت است که مردم خاطرات خوشی از آن دوران دارند.</SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700"><FONT color=#ffffd0 size=4 face=Arial>&nbsp;</FONT></SPAN><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">مدیریت جنگ در هر سطحی مثال زدنی بود<BR></SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR>وی با بیان اینکه مدیریت جنگ در هر سطحی مثال زدنی بوده است، گفت: این مدیریت چه در صف، چه در ستاد و چه در سطح</SPAN></FONT><FONT color=#008000 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffff00; FONT-WEIGHT: 700"> مدیریت دولت وقت مثال زدنی است و میزان تورم، رکود اقتصادی و گرانی دوران جنگ ثبت شده است و می توان آن را با شرایط حال حاضر که جنگی هم وجود ندارد، مقایسه کرد.</SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR>وی افزود:</SPAN></FONT><FONT color=#008000 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700"> به عنوان مثال وقتی تصمیم گرفته می شود مبنی بر اینکه رییس جمهور وقت از نخست وزیر دیگری استفاده کند، محسن رضایی به عنوان فرمانده سپاه نزد امام رفته و به ایشان می گویند حتما باید آقای میرحسین موسوی رییس دولت باشند، چرا که ایشان کاملا در خدمت جنگ و آرمان های جنگ بوده است.</SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">&nbsp;فرمانده سپاه از مدیریت اجرایی کشور راضی بود </SPAN></FONT><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><FONT color=#0022e6 size=4 face=Arial><BR>به گفته وی، حداقل نتیجه ای که از این رویکرد می توان گرفت این است که </FONT><FONT color=#008000 size=4 face=Arial>فرمانده سپاه از مدیریت اجرایی کشور راضی بوده و وساطت می کند که این مدیریت عوض نشود.</FONT><FONT color=#0022e6 size=4 face=Arial><BR>&nbsp;</FONT></SPAN></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">&nbsp;کشوری که قدر سرمایه های خود را نداند عاقبت خوشی نخواهد داشت <BR></SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR>افروغ با بیان اینکه قطعا کشورهایی که قدر سرمایه های خود را ندانند، عاقبت خوشی نخواهند داشت، گفت:</SPAN></FONT><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700"><FONT color=#009900 size=4 face=Arial> کشوری که نمی تواند هضم و درک کند که در چه شرایطی و وضعیتی و در چه مقطع و حساسیتی، چه افرادی ایفای نقش کرده و دین خود را به کشور ادا کرده اند، نمی تواند به تعالی برسد چرا که یکی از راه های رسیدن به تعالی، </FONT><FONT color=#008000 size=4 face=Arial>قدردان گذشته بودن و توجه به مفاخر است و باید توجه داشته باشیم که اختلاف سلیقه ها، نباید مانعی برای قضاوت منصفانه و عاملی برای بی توجهی به شخصیت های تاریخی ما باشد و قطعا زیبنده کشور نیست که بر همه مفاخر تاریخی خود چوب تاراج بزنیم ولو اینکه اختلاف سلیقه داشته باشیم. </FONT></SPAN><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR><BR></SPAN></FONT><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">&nbsp;بر اساس اعتقاد امام اختلاف سلیقه ها نباید به قیمت حذف رقیب باشد <BR></SPAN></FONT><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><FONT color=#0022e6 size=4 face=Arial><BR>این عضو هیات علمی دانشگاه با تاکید بر اینکه</FONT><FONT color=#a20e02 size=4 face=Arial> اختلاف سلیقه ها نباید به قیمت حذف رقیب باشد</FONT><FONT color=#0022e6 size=4 face=Arial>، عنوان کرد:</FONT></SPAN><FONT color=#008000 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700"> این نکته ایست که امام بارها به آن پرداختند و ایشان بر آزادی بیان و آزادی مطبوعات در عین رقابت تاکید داشتند و می گفتند همه اینها تا جایی است که به حذف رقیب نیانجامد و شاخصه امام برای آزادی بیان بر این مهم متکی است و بر اساس دیدگاه امام هر کس که به نظام و قانون اساسی التزام دارد، می تواند در عرصه حضور داشته باشد.<BR></SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR></SPAN></FONT><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">&nbsp;در زمان جنگ ، مدیریت کشور در دست یک جناح نبود <BR></SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR>وی افزود: در زمان جنگ، چه در جبهه ها و چه در پشت جبهه ها، شاهد حضور همه گروه ها بودیم و واقعیت این است که در آن زمان مدیریت کشور در دست یک جناح نبود و همه جناح ها علیرغم اختلاف سلیقه ها، در سطوح و رده های مختلف حضور داشتند و این مهم از ویژگی های مثبت دفاع مقدس است که باید به ما به ارث برسد. همواره نیازمنداین رویکرد هستیم چرا که اگر کشور یکدست شده و تحت سیطره یک جناح قرار گیرد، قطعا دوام نمی آورد و شاخصه های یک جامعه سالم را نخواهد داشت و در معرض تلاشی قرار می گیرد و عده ای احساس می کنند هیچ مشارکت و سهمی در اداره کشور ندارند، لذا منزوی شده و در شرایط بحرانی حاضر به ایفای نقش و حضود در صحنه نخواهند شد.<BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700"><FONT color=#ffffd0 size=4 face=Arial>&nbsp;</FONT></SPAN><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">ابعاد عرفانی دینی و معنوی دفاع مقدس </SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">افروغ در ادامه با اشاره به ابعاد عرفانی، دینی و معنوی دفاع مقدس، گفت: در آن دوران یک حالت معنوی و روحانی و نوعی اتصال در رزمندگان ایجاد شده بود که شاید بهترین تعبیری که می توان از این حالات داشت همان است که</SPAN></FONT><FONT color=#009900 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700"> امام فرمودند "خرمشهر را خدا آزاد کرد" که این جمله یک دنیا معانی عرفانی را در خود نهفته دارد و بدین معنی است که همه خدایی شده بودند و همه به گونه ای احساس اتصال به خدا را داشتند، </SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">ارتباطی با خلوص که باعث شد بتوانیم شاهد آزادی خرمشهر به عنوان سمبل مقاومت در دفاع مقدس باشیم.<BR><BR></SPAN></FONT><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">&nbsp;ارزیابی مجموعه فعالیت های فرهنگی، هنری انجام شده در حوزه دفاع مقدس <BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">این جامعه شناس در پاسخ به سوالی درباره ارزیابی مجموعه فعالیت های فرهنگی، هنری و ... انجام شده در حوزه دفاع مقدس و نشر ارزش های آن گفت: علیرغم اختلاف سلیقه ها تا آنجا که من مطالعه و بررسی کرده و حسب وظایف نمایندگی خود در مجلس هفتم به آن پرداخته ام، کارهای خوبی به ویژه در حوزه هنری و توسط سوره مهر در این باره انجام می شود؛ چاپ خاطرات رزمندگان و فرماندهان در سوره مهر و چاپ رمان «دا» به عنوان پرفروش ترین کتاب بخش رمان دفاع مقدس و انقلاب اسلامی از جمله این توفیقاتی است که نشان می دهد بین نسل قدیم و جدید با محوریت دفاع مقدس پلی ارتباطی برقرار شده است.<BR>وی افزود: باید ببینیم، این کتاب توسط چه شیرزنی روایت شده است و چه ویژگی ها و صفاتی داشته و از چه روحیه و اخلاقیاتی برخوردار بوده است و اکنون چقدر به زنانی احتیاج داریم که چنین نگاهی به جنگ و دفاع مقدس و حیات انقلاب و حیات بشری داشته باشند.<BR><BR></SPAN></FONT><SPAN style="BACKGROUND-COLOR: #ffff00; FONT-WEIGHT: 700"><FONT color=#a20e02 size=4 face=Arial>&nbsp;متاسفانه عده ای به نام دفاع مقدس ، نان سیاسی می خورند <BR>&nbsp;</FONT></SPAN></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><FONT color=#0022e6 size=4 face=Arial>وی در ادامه با انتقاد و ابراز تاسف از اینکه عده ای به نام دفاع مقدس، نان سیاسی می خورند، اظهار کرد: بین نان خوردن سیاسی و هزینه دادن و چوب خوردن فاصله زیادی است و کسانی که فقط حسب قرب الهی و بدون چشم داشتی وارد این عرصه می شدند و از تمام زندگی خود می گذشتند، با کسانی که به نام خدا، نان سیاسی می خورند خیلی فاصله وجود دارد و </FONT><FONT color=#800080 size=4 face=Arial>متاسفانه امروز شاهد یک رنگ و لعاب و شعاری از این مفاهیم هستیم ولی وقتی پای عمل و محتوا و مضمون به میان می آید، می بینیم که تا رسیدن به این مضامین بلند فاصله زیادی داریم و این مضامین بعضا در قالب شعار، ابزار نان خوردن سیاسی عده ای شده است.<BR></FONT><FONT color=#0022e6 size=4 face=Arial><BR></FONT></SPAN><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">&nbsp;از دفاع مقدس در ابعاد و قلمروهای مختلف می توان عبرت گرفت <BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">افروغ اظهار کرد: در کل باید گفت،</SPAN></FONT><FONT color=#009900 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffff00; FONT-WEIGHT: 700"> دفاع مقدس عرصه و قلمرویی است که می شود در ابعاد و قلمروهای مختلف از آن عبرت گرفت، چه در خصوص مقاومت و شجاعت، چه عرفان و معنویت، چه در خصوص یک زیستن اخلاقی و چه مدیریت صحیح اقتصادی سیاسی و فرهنگی کشور.</SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR><BR></SPAN></FONT><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">&nbsp;امام فرمودند سر فرصت به مساله پذیرش قعنامه 598 پرداخته شود <BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">وی در پاسخ به سوالی درباره تحریفات صورت گرفته درباره دوران دفاع مقدس از زبان برخی ها، با اشاره به ابهامتی که از سوی برخی در باره پایان جنگ و پذیرش قطعنامه مطرح می شود، گفت:</SPAN><SPAN style="BACKGROUND-COLOR: #ffff00; FONT-WEIGHT: 700"> به هر حال امام هم فرمودند مسائلی درباره پذیرش قطعنامه 598 وجود دارد که باید سر فرصت به آن پرداخته شود که به نظر من الان می تواند زمانی باشد که این مساله با حضور کارشناسان منصف و دست اندرکاران امر بررسی شود که آیا شرایط به گونه ای بوده و می توانسته است به نتیجه ای غیر از پذیرش قطعنامه منجر شود.<BR></SPAN><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR></SPAN></FONT><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">&nbsp;نباید قضاوت را به کسانی که آتش جنگ و مقاومت را نچشیده اند، سپرد <BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">افروغ در عین حال تاکید کرد: باید توجه شود که واقعیت این است که امام این مساله را تایید کردند و در واقع جام زهر را نوشیدند و اسم این جام زهر را هم شهد شیرین عسل نگذاشتند. امام مایل بودند این جنگ تا پایان و تا نابودی صدام حسین ادامه یابد ولی حسب یکسری محدودیت ها این اتفاق نیافتاد و قطعنامه را پذیرفتند. اما مسائل گوناگون و عدیده ای در پذیرش این قطعنامه وجود دارد و نمی توان یک طرفه به قضاوت نشست و یا اینکه قضاوت را به کسانی سپرد که اصلا آتش جنگ و آتش مقاومت را نچشیده اند و در جریان مستقیم جنگ نبوده اند.<BR>وی افزود:</SPAN></FONT><SPAN style="BACKGROUND-COLOR: #ffe3ff; FONT-WEIGHT: 700"><FONT color=#a20e02 size=4 face=Arial>&nbsp; امروز هستندکسانی که چفیه می بندند ولی هیچ بویی از جبهه نبرده اند و بسیجی دوران جنگ نیستند، </FONT><FONT color=#800080 size=4 face=Arial>برخی هستند که نام بسیجی را روی خود می گذارند ولی تحت تاثیر القائات و اغوائات قدرت طلبانه دین به دنیا فروشی عده ای هستند و خیلی داغ تر از رزمندگان، عرفا و سلکای جبهه های موضع می گیرند</FONT><FONT color=#a20e02 size=4 face=Arial> و کسانی هستند که داعیه دفاع از ارزش ها را دارند و معلوم نیست که اگر صحنه کارزار شود بتوانند حضور مردانه ای همانند کسانی داشته باشند که از نزدیک آتش جنگ را حس کرده اند.<BR></FONT></SPAN><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR></SPAN></FONT><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">&nbsp;آنهایی که در جریان جنگ بوده و با مدیریت آن آشنا بوده اند، این مسائل را ریشه یابی کنند<BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">افروغ خاطرنشان کرد:</SPAN></FONT><FONT color=#00a600 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffff00; FONT-WEIGHT: 700"> در حقیقت آنهایی که در جریان جنگ بوده اند و به گونه ای با مدیریت جنگ در ابعاد مختلف آشنا بوده اند، باید سر فرصت بر اساس نظر امام، مسائل را ریشه یابی کنند که به اعتقاد من اگر پیش از این ریشه یابی می کردیم شاید شاهد بسیاری از مشکلات موجود نبودیم. </SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR>به گفته وی، در این تحلیل ها باید به این مهم توجه شود که آنچه در پایان جنگ اتفاق افتاده است یک اتفاق طبیعی بوده و حداقل حسب مصلحت، امام آن را تایید کرده بودند و بر اساس تفکیکی که ایشان برای مصلحت و حقیقت قایل بودند گفتند سر فرصت به این مساله پرداخته شود تا دست اندر کاران هم درباره این قضیه مصلحت اندیشانه برخورد نکنند و حقیقت گرایانه به عوامل پذیرش قطعنامه بپردازند.<BR><BR></SPAN></FONT><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">&nbsp;فرهنگ بسیجی بیش از آنکه صورت باشد، محتوا و روح و جوهر است <BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700">این جامعه شناس در پاسخ به سوالی درباره فرهنگ بسیجی و چگونگی احیا و بازگشت به فرهنگ بسیجی واقعی، گفت:</SPAN><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"> فرهنگ بسیج تعریف شده است و بیش از آنکه صورت باشد، محتواست و بیش از اینکه قالب و نماد باشد یک روح و جوهر است.</SPAN></FONT><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #00a600; FONT-WEIGHT: 700"> فرهنگ بسیجی فرهنگ تواضع، زیستن اخلاقی، افتادگی، فتوت و مردانگی است. فرهنگی است که با ایثار و گذشت میانه خوبی دارد و اینها همه مفاهیم شناخته شده ای هستند و اینکه خودمان را با منافع عده ای گره بزنیم و همه این ارزش ها را در استخدام پیش برد منافع یک جناح در آوریم، معرف فرهنگ بسیجی نیست.<BR></SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">افروغ با بیان اینکه امام می گفتند که نظامیان و در سطحی حتی بسیجیان نباید به معنای مصطلح آن وارد سیاست شوند، گفت: این بدین معنی نیست که بینش و موضع گیری سیاسی نداشته باشند اما بر اساس اعتقاد امام نباید به نفع یک جناح و گروه وارد قضایا شوند و خود را به عنوان مبلغان یک جناح و یک گروه خاص قرار دهند.<BR><BR></SPAN></FONT><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">&nbsp;بسیجی نباید به عنوان یک طرفدار احساساتی و عاطفی به هرگونه اختلاف سلیقه بتازد <BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">وی با انتقاد از ایجاد شرایطی که گفتن این حرف ها سخت شده است، گفت: متاسفانه تا این مسائل مطرح می شود و تا کسی این رویکردها را مذموم بدانند، ممکن است به اینکه مخالف حضور دین در سیاست است، متهم شود ولی اینگونه نیست؛ بلکه به اعتقاد ما می توان حضور مدبرانه و حکیمانه در سیاست داشت ولی</SPAN></FONT><FONT color=#00a600 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700"> نباید به عنوان یک طرفدار احساساتی و عاطفی به هرگونه اختلاف سلیقه تاخت و اسم آن را فرهنگ بسیجی گذاشت که قطعا فرهنگ بسیجی اینگونه نیست.</SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700"><FONT color=#ffffd0 size=4 face=Arial>&nbsp;</FONT></SPAN><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">بسیجی و سپاهی باید به گونه‌ای موضع بگیرند که مردم به آنها امید ببندند </SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">وی با تاکید بر اینکه</SPAN></FONT><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #00a600; FONT-WEIGHT: 700"> فرهنگ بسیجی، فرهنگ گذشت و ایثار است و بیشتر بر اشتراکات تاکید دارد تا بر تفاوت ها، عنوان کرد: بسیجی و سپاهی باید به گونه‌ای موضع بگیرد که مردم به آنها امید ببندند و در شرایط بحرانی به آنها ارجاع کنند </SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">اما وقتی سپاه و بسیج به یک دولت و جناح تقلیل می یابد و همه ارزش‌های خود را خرج یک جناح می کنند، نباید توقع داشت که مردمی که با آن جناح و دولت خاص اختلاف سلیقه و دیدگاه دارند، بتوانند آن نگاه امیدبخش و همراه با خوش بینی را نسبت به سپاه و بسیج داشته باشند.<BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700"><FONT color=#ffffd0 size=4 face=Arial>&nbsp;</FONT></SPAN><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">نباید دفاع از دست آوردهای انقلاب را با منافع یک گروه گره زد </SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">افروغ اظهار کرد:</SPAN></FONT><FONT color=#00a600 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700"> من به عنوان کسی که سال ها، در برهه ای از دوران جنگ مسئولیت پیگیری فرمان امام در سپاه در منطقه ای از کشور را عهده دار بوده ام، بخوبی می دانم که امام تا چه حدی نسبت به موضع گیری علنی سپاه و برخی از رده های بالای بسیج حساس بوده اند؛ این رویکرد بدین معنی نیست که نباید بینش سیاسی داشته باشند بلکه باید بینش سیاسی داشته باشد و از دست آورهای انقلاب دفاع کنند</SPAN></FONT><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><FONT color=#0022e6 size=4 face=Arial> </FONT><FONT color=#008000 size=4 face=Arial>ولی نباید دفاع از دست آوردهای انقلاب را با منافع یک گروه گره زد و خیلی وقت ها بسیجی باید خویشتن دار باشد و بیشتر بر اشتراکات توجه داشته باشد و از قدرت و فضیلت قدرت مدنی در ابعاد مختلف اجتماعی سیاسی فرهنگی و اقتصادی غافل نشود.<BR>&nbsp;</FONT></SPAN></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">&nbsp;بسیجی با زیستن اخلاقی و معنویت و گذشت و فتوت پیوند دارد <BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">وی درباره ابزار معرفی فرهنگ بسیجی واقعی به مردم، عنوان کرد: در آثار و رمان های منتشر شده، فرهنگ بسیجی و ماهیت آن کاملا مشخص است. می توان برای معرفی این فرهنگ و معرفی آن از قالب های مختلف استفاده کرد. به اعتقاد من از هر ابزاری می توان در این زمینه استفاده کرد،</SPAN></FONT><FONT color=#00a600 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700"> اما نکته اساسی جوهر و روح و محتواست. معنای بسیجی پیوندی با زیستن اخلاقی و معنویت و گذشت و ایثار و فداکاری و فتوت دارد و من بیشتر دل مشغول محتوا و مضمونی هستم که باید حفظ شود که فکر نمی کنم این مضامین برای ما شناخته شده نباشد. <BR></SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700">مدیر گروه علم و دین پژوهشگاه علوم انسانی و مطالعات فرهنگی با بیان اینکه انقلاب اسلامی ما روی موجی از این ارزش ها بوجود آمده است، خاطرنشان کرد: الگوی ما الگوی امام حسین(ع) در قیام معروف کربلاست. کربلا برای ما یک عرصه مثال زدنی است که شروع آن و وقایع آن برای ما درس عبرتی باشد. زینب(س) و امام حسین(ع) برای ما الگو هستند. فلسفه پیام امام حسین(ع)، پیام ها و گفته های ایشان می تواند برای ما الگو باشد.<BR><BR></SPAN></FONT><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">&nbsp;باید ببینیم فرماندهان شیعه و اسوه های شهادت در دفاع مقدس چگونه می زیستند؟ <BR></SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR>وی افزود: ما باید ببینیم فرماندهان شیعه و اسوه های شهادت در دفاع مقدس چگونه می زیستند؟ ما باید وصیت نامه های شهدا را بخوانیم و به آنها عمل کنیم.<BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">&nbsp;فقط نباید به مراسم بزرگداشت شهدا اکتفا کرد <BR></SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR>به گفته وی،</SPAN></FONT><FONT color=#00a600 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffff00; FONT-WEIGHT: 700"> مرحوم جلال آل احمد به زیبایی می گوید از زمانیکه ما اصل شهادت را فراموش کرده و به بزرگداشت شهدا اکتفا کرده ایم و به برپایی مجالس شهدا قناعت کردیم، دربانان گورستان شده اییم که به اعتقاد من هم اکنون هم یکسری از افراد را به عنوان زینت المجالس این مراسم ها شناسایی می کنیم تا حرف های تکراری بزنند که این یعنی قالب گرایی و صورت گرایی.</SPAN><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700"> اگر قرار است فرهنگ بسیجی زنده بماند فقط نباید به بزرگداشت و برگزاری مراسم برای شهدا اکتفا کرد بلکه باید روح، اخلاق، معنویت، جوهر و معنای زیستن شهید گونه را در جامعه نشر داد.</SPAN></FONT><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><BR>وی افزود: ایثارهای اقتصادی، گذشت های اقتصادی و خدمات اقتصادی که بسیج می تواند بدون چشم داشت و توقع سیاسی به مردم داشته باشند، به احیای فرهنگ بسیجی کمک می کند و وقتی بسیجی بیش از حد آلوده دنیا می شود، نمی توان توقع الگو بودن از وی داشت.<BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700"><FONT color=#ffffd0 size=4 face=Arial>&nbsp;</FONT></SPAN><FONT color=#ffffd0 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #008000; FONT-WEIGHT: 700">متاسفانه به نام کمیت، جوهرسوزی و کیفیت سوزی می شود<BR></SPAN></FONT><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"><FONT color=#0022e6 size=4 face=Arial><BR>افروغ در خاتمه با بیان اینکه انتقال جوهر و معنا با کیفیت رابطه دارد تا با کمیت، گفت: </FONT><FONT color=#a20e02 size=4 face=Arial>وقتی کمیت گرایی ملاک عمل می شود، باید منتظر شویم که روح و جوهر هم بسوزد که متاسفانه شاهد این مساله هستیم که به نام کمیت، جوهرسوزی و کیفیت سوزی می شود و بر این اساس فرهنگ بسیجی دستخوش نمادگرایی شده است</FONT><FONT color=#0022e6 size=4 face=Arial> و فقط صورتی از فرهنگ بسیجی را برخی ها خوب می فهمند و از روح و معنای آن غافلند که برای درک این روح، باید به زندگینامه و وصیت نامه شهدا و تجربیات فرماندهان جنگ در عصر حاضر توجه کرد که از این طریق می توان فرهنگ بسیجی واقعی را حفظ کرده و ترویج داد. <BR><BR></FONT></SPAN><FONT size=5 face=Arial><SPAN style="BACKGROUND-COLOR: #ffff00"><A class=__feedview__feedItemUnreadTitleLink href="http://risheh.com/view-7001.html">مـــرجـــع </A></SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><SPAN style="BACKGROUND-COLOR: #ffffd0; FONT-WEIGHT: 700"><FONT size=4 face=Arial><FONT color=#0022e6>&nbsp;پنجشنبه ، 20 آبان 1389</FONT> </FONT></SPAN></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal><FONT color=#0022e6 size=4 face=Arial><SPAN style="BACKGROUND-COLOR: #ffff00; FONT-WEIGHT: 700">عنوان اصلی متن :</SPAN><SPAN style="BACKGROUND-COLOR: #ffffff; FONT-WEIGHT: 700"> مدیریت جنگ در هر سطحی مثال زدنی بود <BR>&nbsp;</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; LINE-HEIGHT: 2.5; TEXT-INDENT: 30px; MARGIN: 30px; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 30px" dir=rtl class=MsoNormal>&nbsp;</P>
+<P style="TEXT-ALIGN: center; LINE-HEIGHT: 2.5; TEXT-INDENT: 15pt; MARGIN: 15pt; unicode-bidi: embed; DIRECTION: rtl; WORD-SPACING: 20px" dir=rtl><FONT color=#001693 size=6 face=Arial>«</FONT><FONT face=Tahoma><B> </B></FONT><FONT color=#000080 size=4 face=Arial>تهیه وَ تدوین :</FONT><FONT face=Arial> <FONT color=#0000ff size=5>عـبـــد عـا صـی </FONT><FONT color=#001693 size=6>»</FONT></FONT></P>
+<CENTER>
+<DIV id=container>
+<DIV id=middle>
+<DIV id=Limage>&nbsp;</DIV>
+<DIV id=Post>
+<P align=justify>&nbsp;&nbsp;&nbsp; </P></DIV></DIV></DIV></CENTER>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="687.html#commentlist">نظرات (<script>setCommentCnt(687)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('687','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        <div class="com">
+            <a name='commentlist'></a>            <div class="com6 , text101"><style>
+
+
+#imageCodeWrapper div{
+	float: right;
+}
+#imageCodeWrapper .imageCode_input #imgstr{
+	width:83px;
+	height:34px;
+	font-size:25px;
+}
+#imageCodeWrapper .imageCode_number{
+	margin:1px 5px 0px 0px;
+}
+#imageCodeWrapper .imageCode_number img{
+ 	border: 0px;
+ 	width: 122px;
+ 	height: 37px;
+}
+#imageCodeWrapper .imageCode_refresh{
+	cursor:pointer;
+	margin: 3px 3px 0px 0px;
+
+	width: 16px;
+	height: 16px;
+
+    background:url(http://static.mihanblog.com//public/images/icon/gen/refresh.gif) center right no-repeat;
+}
+
+.clearfix {display: inline-block;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+
+
+.comment_form .err-msg{
+	padding-right: 110px;
+	color: #F00;
+}
+.comment_form{
+	direction: rtl;
+}
+
+.comment_form label{
+	width: 110px;
+	display: block;
+	float: right;
+}
+.comment_form .comment_form_msg{
+	background: none repeat scroll 0 0 #8CDA5C;
+    border: 1px solid #249224;
+    padding: 5px;
+    margin: 5px;
+}
+.comment_form .required{
+	background: url(http://static.mihanblog.com//public/images/icon/require2.gif) no-repeat right top;
+	padding-right: 20px;
+}
+
+.comment_form .required{
+	width: 90px;
+}
+.comment_form .controls{
+	text-align: center;
+}
+.comment_form .btn{
+	font-family: tahoma;
+}
+.smileLayer{
+    position:absolute;
+    display:none;
+    background-color:#fff;
+    border:1px solid #555;
+}
+    .msgbody{
+        float:right;
+        width:260px
+    }
+    .msgtitle{
+        float:right;
+        -width:57px;
+        text-align:right;
+        -padding-right:64px;
+    }
+</style>
+
+<script>
+    var mihanBlog_commentBody_cursorPos=0;
+    function set_mihanBlogCommentBodyCursorPos(textarea_id){
+        mihanBlog_commentBody_cursorPos = c_$(textarea_id).selectionStart;
+    }
+</script>
+
+<form id="frm-16081827625fdaebea3b5d2" method="post" action="http://yaadust.mihanblog.com/post/comment/new/687/fromtype/postone/fid/16081827625fdaebea3b5d2/atrty/1608182762/avrvy/0/key/818dae36c7dd5dbc2b4b3a3db3a2baf4/#post_form" >
+	<a name="post_form"></a>
+	<div class="comment_form">
+
+					<div class="comment_form_row clearfix">
+				<label for="full_name">نام (فارسی):</label>
+				<input type="text" name="data[full_name]" id="full_name" value="" class="comment_form_textbox" />			</div>
+
+			<div class="comment_form_row clearfix">
+				<label for="email">ایمیل :</label>
+				<input type="text" name="data[email]" id="email" value="" class="comment_form_textbox english" />			</div>
+
+			<!--
+            <div class="comment_form_row clearfix">
+				<label for="web">آدرس وب/وبلاگ :</label>
+				<input type="text" name="data[web]" id="web" value="" class="comment_form_textbox english" />			</div>
+            -->
+
+			<div class="comment_form_row clearfix">
+				<label for="remember">مرا بخاطر بسپار :</label>
+				<input type="checkbox"  name="data[remember]" id="remember" value="1" />			</div>
+
+			<div class="comment_form_row clearfix">
+
+                <div class="msgtitle" for="title">
+                	<label class="required">
+                    	متن نظر (فارسی): 					</label>
+                     <!--   
+                    <div id="showsmile" style="position: relative;">
+                        <img src="http://static.mihanblog.com//public/rte/images_new/smiley.gif" onClick="showMihanBlogSmileBox('body')" style="cursor:pointer" />                    </div>
+                    <div class="smileLayer" id="MihanBlogSmiles_body"><table cellpadding="0"  cellspacing="0"  width="120"><tr><td colspan=2>&nbsp;</td><td style="cursor:pointer;text-align:left;padding:3px 0px 0px 3px;" onclick="showMihanBlogSmileBox('body')"><img src="http://static.mihanblog.com//public/images/icon/close.gif"  /></td></tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/1.gif" onClick="MihanBlogShowSmile('لبخند','body')" title="لبخند" alt="لبخند" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/2.gif" onClick="MihanBlogShowSmile('ناراحت','body')" title="ناراحت" alt="ناراحت" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/3.gif" onClick="MihanBlogShowSmile('چشمک','body')" title="چشمک" alt="چشمک" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/4.gif" onClick="MihanBlogShowSmile('نیشخند','body')" title="نیشخند" alt="نیشخند" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/6.gif" onClick="MihanBlogShowSmile('بغل','body')" title="بغل" alt="بغل" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/7.gif" onClick="MihanBlogShowSmile('سوال','body')" title="سوال" alt="سوال" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/8.gif" onClick="MihanBlogShowSmile('قلب','body')" title="قلب" alt="قلب" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/9.gif" onClick="MihanBlogShowSmile('خجالت','body')" title="خجالت" alt="خجالت" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/10.gif" onClick="MihanBlogShowSmile('زبان','body')" title="زبان" alt="زبان" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/11.gif" onClick="MihanBlogShowSmile('ماچ','body')" title="ماچ" alt="ماچ" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/13.gif" onClick="MihanBlogShowSmile('تعجب','body')" title="تعجب" alt="تعجب" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/14.gif" onClick="MihanBlogShowSmile('عصبانی','body')" title="عصبانی" alt="عصبانی" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/16.gif" onClick="MihanBlogShowSmile('عینک','body')" title="عینک" alt="عینک" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/19.gif" onClick="MihanBlogShowSmile('شیطان','body')" title="شیطان" alt="شیطان" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/20.gif" onClick="MihanBlogShowSmile('گریه','body')" title="گریه" alt="گریه" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/21.gif" onClick="MihanBlogShowSmile('خنده','body')" title="خنده" alt="خنده" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/24.gif" onClick="MihanBlogShowSmile('قهقهه','body')" title="قهقهه" alt="قهقهه" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/27.gif" onClick="MihanBlogShowSmile('خداحافظ','body')" title="خداحافظ" alt="خداحافظ" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/31.gif" onClick="MihanBlogShowSmile('سبز','body')" title="سبز" alt="سبز" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/33.gif" onClick="MihanBlogShowSmile('قهر','body')" title="قهر" alt="قهر" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/36.gif" onClick="MihanBlogShowSmile('هورا','body')" title="هورا" alt="هورا" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/41.gif" onClick="MihanBlogShowSmile('دست','body')" title="دست" alt="دست" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/53.gif" onClick="MihanBlogShowSmile('گل','body')" title="گل" alt="گل" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/39.gif" onClick="MihanBlogShowSmile('تفکر','body')" title="تفکر" alt="تفکر" style="cursor:pointer" /></td>	</tr>	</table></div>                    -->
+                </div>
+                
+                <div class="msgbody">
+				    <textarea name="data[body]" id="body" class="comment_form_textarea" onkeyup="showCaptcha();set_mihanBlogCommentBodyCursorPos('body');" onkeypress="set_mihanBlogCommentBodyCursorPos('body');" onclick="set_mihanBlogCommentBodyCursorPos('body');" rows="8" cols="40"></textarea>                </div>
+
+                <script type="text/javascript">
+
+                                        var showCaptcha = function(){
+                                                    if(c_$('body').value.length>5){
+                                c_$("imageCodeWrapper").style.display="";
+                            }
+                                            }
+                </script>
+			</div>
+
+			<div class="comment_form_row clearfix">
+				<label for="private">ارسال نظر خصوصی :</label>
+				<input type="checkbox"  name="data[private]" id="private" value="1" />			</div>
+        
+							<div class="comment_form_row clearfix">
+					نظرات پس از تایید نشان داده خواهند شد.				</div>
+			
+			<div class="controls clearfix">
+				
+        		<style>
+        		    #imgstr{
+        		        font-size:12px;
+        		    }
+        		</style>
+        		<div id="imageCodeWrapper" class="comment_form_row clearfix">
+	        			<label class="required" for="imgstr">عبارت تصویر :</label>
+	        			
+	        			<div class="imageCode_input">
+	        				<input type="text" name="imgstr" id="imgstr" style="" class="comment_form_textbox">
+	        			</div>
+		        		<div class="imageCode_number">
+	        				<img id="imgcodepage_464154" style="width: auto; height: auto;max-width:140px" src="http://yaadust.mihanblog.com/public/public/html/imgcode.php?str=cef16f77b12734ced97ac999ed7a1e90____gcroirio27" >
+	        			</div>
+	        			<div class="imageCode_refresh" title="تعویض عبارت تصویری" onclick="changeImgCode_464154();"></div>	
+	        	</div>
+	        	<input type="hidden" name="imgcode" id="imgcode_464154" value="cef16f77b12734ced97ac999ed7a1e90____gcroirio27">
+        		<script>
+        		var imgCodeChangeNum_464154 = 0 ;
+        		changeImgCode_464154 = function (){
+	        		var ImgCodeArr_464154 = new Array();
+	        		ImgCodeArr_464154[1]="d8888c17ad53e108ea7c1b1345721581____bebnyodmd59";
+	        		ImgCodeArr_464154[2]="639dba2ba23479c7f3c68ba5c3a9baa3____jllprjphu67";
+	        		ImgCodeArr_464154[3]="656b5db919724873ea42feacaec1a34b____asakkmosra43";
+	        		ImgCodeArr_464154[4]="23e340c71e2e94975c689f288501ec23____iivldlpbl35";
+	        		
+	        		
+	        		if(imgCodeChangeNum_464154<4){
+	        			imgCodeChangeNum_464154 ++ ;
+	        		}
+	        		else{
+	        			imgCodeChangeNum_464154 = 1 ;
+	        		}
+	        		
+	        		c_$("imgcode_464154").value = ImgCodeArr_464154[imgCodeChangeNum_464154];
+	        		document.getElementById("imgcodepage_464154").src = "/public/public/html/imgcode.php?str="+ImgCodeArr_464154[imgCodeChangeNum_464154];
+        		}
+        		</script>
+        		<input type="submit" value="ارسال" class="btn" classRow="comment_form_row" onclick="click_send()" />
+			</div>
+	</div>
+
+<input type="hidden" name="frm-id" value="16081827625fdaebea3b5d2" id="frm-id" /></form>
+<script>
+function click_send(){
+
+	Delete_Cookie( 'CMDinfo','/post/', '.mihanblog.com' );
+
+	if(c_$('remember').checked){
+		var cookieStr = c_$('full_name').value +"_____"+c_$('email').value+"_____"+c_$('web').value;
+		Set_Cookie( 'CMDinfo', cookieStr , 1, '/post/', '.mihanblog.com', 0 );
+	}
+}
+
+
+//LOAD
+var CMDinfo = Get_Cookie('CMDinfo');
+
+if(CMDinfo)
+{
+	CMDinfo = CMDinfo.split("_____");
+	c_$('full_name').value = CMDinfo[0];
+	c_$('email').value = CMDinfo[1];
+	c_$('web').value = CMDinfo[2];
+	c_$('remember').checked = true;
+}
+
+</script></div>
+        </div>
+    </div>
+    <div class=div29></div>
+    <div class=div28><font class=text9>
+                <br><br>
+            </font>
+    </div>
+</div>
+
+<div class=div17>
+
+    <div class=div170>
+
+        
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=mtext5>پیوندهای روزانه</font></div></div>
+            <div class=sm2></div>
+            <div class=div341><font class=mtext1><ul>
+                <li><a href="http://farsiblog.mihanblog.com" title="اگـر از آفـتـــاب بـیـم نـداشـتـنـــد ، هـر شـمـعی را گـردن نـمـیـــزدند! ..." target="_blank">آفـتـــاب در زنـجـیـــر! ...</a></li><li><a href="http://1001shayadobayad.mihanblog.com/" title="فرهنگی ، هنری ، اجتماعی ، سیاسی ، وَ ..." target="_blank">هزار و یک شاید و باید</a></li><li><a href="http://jamaran.ir/fa/" title="سـیـاسـی، مـذهـبـی، فـرهـنـگـی، اجـتـمـــاعـی، وَ ..." target="_blank">پـایـگاه اطـلاع رسانـی و خـبـــری جـمـــاران</a></li><li><a href="http://mohakeme.com/" title="سیاسی-مذهبی" target="_blank">مـحـاکـمـه</a></li><li><a href="http://enteghad10.blogfa.com/" title="سیاسی ، اجتماعی ، مذهبی ، وَ ..." target="_blank">انتقادات دهم</a></li>                <li><b><a href="../linkdaily/index.html">همه پیوندهای روزانه</a></b></li>
+                <li><b><a href="javascript:linkdailyForm()">ارسال پیوند روزانه</a></b></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+        
+        
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=mtext5>آمار وبلاگ</font></div></div>
+            <div class=sm2></div>
+            <div class=div341><font class=mtext1><ul>
+                <li>کل بازدید : <script>getStatVar('total_view');</script></li>
+                <li>بازدید امروز :<script>getStatVar('today_view');</script></li>
+                <li>بازدید دیروز : <script>getStatVar('yesterday_view');</script></li>
+                <li>بازدید این ماه : <script>getStatVar('this_month_view');</script></li>
+                <li>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></li>
+                <li>تعداد نویسندگان : <script>getStatVar('total_author');</script></li>
+                <li>تعداد کل پست ها : <script>getStatVar('total_post');</script></li>
+                <li>آخرین بازدید : <script>getStatVar('last_view_date');</script></li>
+                <li>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div024><center></center>
+            <style>
+                .mihan_logo {
+                    background: url("http://mihanblog.com/public/public/images/logo/poweredby.gif") no-repeat scroll center top transparent;
+                    height: 131px;
+                    margin-top: 10px;
+                    text-align: center;
+                }
+            </style>
+            <div class="mihan_logo"></div>
+
+        </div>
+    </div>
+
+</div>
+
+</div>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+    <td class=b1>&nbsp;</td>
+    <td class=b2>
+        <div class=div6></div>
+        <div class=div7>
+            <a href="http://www.mytheme.ir" target="_blank">
+                <img src="http://mihanblog.com/public/public/user_data/template/2099932/blank.gif" border=0 width=182 height=35></a></div>
+    </td>
+    <td class=b1>&nbsp;</td>
+</tr>
+</table>
+</div>
+<style>
+    img{
+        max-width : 500px;
+    }
+</style>
+</body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'yaadust.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

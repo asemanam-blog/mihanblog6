@@ -1,0 +1,1019 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*926957*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[59]='2';commentCnt[60]='1';commentCnt[61]='8';commentCnt[62]='20';commentCnt[64]='20';commentCnt[65]='21';commentCnt[66]='10';commentCnt[69]='10';commentCnt[70]='9';commentCnt[71]='7';commentCnt[73]='9';commentCnt[74]='7';commentCnt[75]='9';commentCnt[76]='24';commentCnt[77]='7';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[60]='0';
+mihanblogDisLikeArrCnt[60]='0';
+mihanblogLikeArrCnt[62]='0';
+mihanblogDisLikeArrCnt[62]='0';
+mihanblogLikeArrCnt[69]='0';
+mihanblogDisLikeArrCnt[69]='0';
+mihanblogLikeArrCnt[75]='0';
+mihanblogDisLikeArrCnt[75]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://we--plus.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://we--plus.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','273');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','جمعه 10 مهر 1394');
+	
+	setStatVar('today_view','12');
+	setStatVar('yesterday_view','21');
+	
+	setStatVar('this_month_view','604');
+	setStatVar('last_month_view','1104');
+
+	setStatVar('total_view','331079');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (17:50)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://we--plus.mihanblog.com/statupdate/?data[refereruri]=http://we--plus.mihanblog.com/page/12&data[postid]=&data[requesturi]=/page/15?/s&data[sdate]=1608216331&data[hash]=6a746637b0f260d48996951fb48d7d06&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Theme Designer" content="www.payamblog.com">
+<meta name="description" content=""/>
+<meta name="keywords" content=""/> 
+<link rel="alternate" type="application/rss+xml" title=" علیرضا حقیقی" href="../post/rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title=" علیرضا حقیقی" href="../post/atom/index.html" />
+<script language="javascript" type="text/javascript" src="http://payamblog.com/tem/16/payamblog.js"></script>
+
+<title> علیرضا حقیقی</title>
+
+</head>
+
+<body>
+
+<div align="left">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td class=div2 valign=top>
+
+<div class=div60></div>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>درباره وبلاگ</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div31><center><img src="http://static.mihanblog.com//public/user_data/web_photo/309/926957.jpg?6396"  /></center><br>
+<font class=text1><br>
+مدیر وبلاگ : <a href="../post/author/783854.html">مریم </a></font></div>
+</div><div class=div30></div>
+</div>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>مطالب اخیر</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="../post/316.html">:-(</a></font></div><div class=div32><font class=text1><a href="../post/315.html">آوار 12 هزار نفری بر سر آمریکا</a></font></div><div class=div32><font class=text1><a href="../post/314.html">من اومدم!</a></font></div><div class=div32><font class=text1><a href="../post/312.html"> *10* مقدس!</a></font></div><div class=div32><font class=text1><a href="../post/311.html">سلاممممم</a></font></div><div class=div32><font class=text1><a href="../post/310.html">.......!!!!</a></font></div><div class=div32><font class=text1><a href="../post/309.html">بازم عکس!</a></font></div><div class=div32><font class=text1><a href="../post/308.html">تسلیت....+ عکس</a></font></div><div class=div32><font class=text1><a href="../post/307.html">اینم از پست!!!!!!!!!!!!! :-))))))))</a></font></div><div class=div32><font class=text1><a href="../post/306.html">سلامممممممممممم!:-))))))))))</a></font></div><div class=div32><font class=text1><a href="../post/305.html">تولد علیرضا مبارررررررررررک! :-))</a></font></div><div class=div32><font class=text1><a href="../post/303.html">تولدت مبارک نسیم جونم! :-*</a></font></div><div class=div32><font class=text1><a href="../post/302.html">آخرین پست 92! :-)</a></font></div><div class=div32><font class=text1><a href="../post/301.html">:-))</a></font></div><div class=div32><font class=text1><a href="../post/300.html">تولدم مبارک! یه دنیا ممنون! :-)</a></font></div></div><div class=div30></div>
+</div>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>آرشیو وبلاگ</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="../post/archive/1394/7.html"> مهر 1394</a></font></div><div class=div32><font class=text1><a href="../post/archive/1394/4.html"> تیر 1394</a></font></div><div class=div32><font class=text1><a href="../post/archive/1394/3.html"> خرداد 1394</a></font></div><div class=div32><font class=text1><a href="../post/archive/1393/9.html"> آذر 1393</a></font></div><div class=div32><font class=text1><a href="../post/archive/1393/7.html"> مهر 1393</a></font></div><div class=div32><font class=text1><a href="../post/archive/1393/6.html"> شهریور 1393</a></font></div><div class=div32><font class=text1><a href="../post/archive/1393/5.html"> مرداد 1393</a></font></div><div class=div32><font class=text1><a href="../post/archive/1393/4.html"> تیر 1393</a></font></div><div class=div32><font class=text1><a href="../post/archive/1393/2.html"> اردیبهشت 1393</a></font></div><div class=div32><font class=text1><a href="../post/archive/1393/1.html"> فروردین 1393</a></font></div><div class=div32><font class=text1><a href="../post/archive/1392/12.html"> اسفند 1392</a></font></div><div class=div32><font class=text1><a href="../post/archive/1392/11.html"> بهمن 1392</a></font></div><div class=div32><font class=text1><a href="../post/archive.html">آرشیو كل مطالب</a></font></div>
+</div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>پیوندهای روزانه</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="http://www.grin.ir/" title="" target="_blank">خرید اینترنتی</a></font></div><div class=div32><font class=text1><a href="http://www.upsara.com/" title="با افتخار میزبان عکس ها و فایل های شما هستیم.
+آپلود رایگان و دائمی عکس
+
+با لینک کردن ما آدرس ما رو فراموش نکنید و از ما حمایت کنید
+
+باتشکر
+آپسرا" target="_blank">آپلود عکس</a></font></div><div class=div32><font class=text1><a href="http://buying.blog.ir/" title="" target="_blank">فروشگاه اینترنتی</a></font></div><div class=div32><font class=text1><a href="http://www.persepolisnews.ir/" title="" target="_blank">خبرگزاری باشگاه پرسپولیس ایران</a></font></div><div class=div32><font class=text1><a href="http://www.ffiri.ir" title="" target="_blank">فدراسیون فوتبال جمهوری اسلامی ایران</a></font></div><div class=div32><font class=text1><a href="http://www.sh3klak.blogfa.com/" title="" target="_blank">تصاویر مخصوص</a></font></div><div class=div32><font class=text1><a href="http://fc-perspolis.com" title="" target="_blank">وب سایت رسمی باشگاه فرهنگی ورزشی پرسپولیس</a></font></div><div class=div32><font class=text1><a href="http://www.rubin-kazan.ru" title="" target="_blank">وبسایت رسمی باشگاه روبین کازان</a></font></div><div class=div32><font class=text1><a href="../linkdaily/index.html">همه پیوندهای روزانه</a></font></div>
+<div class=div32><font class=text1><a href="javascript:linkdailyForm()">ارسال پیوند روزانه</a></font></div>
+</div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>پیوندها</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="http://sunrise-girl-1379.blogfa.com/" title="" target="_blank"> ✿◕ ‿ ◕✿ SuNRiSE ✿◕ ‿ ◕✿</a></font></div><div class=div32><font class=text1><a href="http://www.volleyball-saeid2014.blogfa.com/" title="" target="_blank">تـــک کــــــــاپــیـــتـان قلــــــــبم</a></font></div><div class=div32><font class=text1><a href="http://shima014.blogfa.com/" title="" target="_blank">دخملای فوتبالی</a></font></div><div class=div32><font class=text1><a href="http://koolbehvolleyball25.blogfa.com/" title="" target="_blank">·٠•●♥کلبه والیبالیست ها♥●•٠·(صدف جووون)</a></font></div><div class=div32><font class=text1><a href="http://2009mz.shakheh.com/" title="" target="_blank">✔️ والیبال و فوتبال ✔️(مبینا جووون)</a></font></div><div class=div32><font class=text1><a href="http://deltangivman.blogfa.com/" title="" target="_blank">دلتنگى و من(نسیم جوووونم)</a></font></div><div class=div32><font class=text1><a href="http://pro-volleyball.mihanblog.com/" title="" target="_blank">ولیبال حرفه ای(ریحانه جوووونم)</a></font></div><div class=div32><font class=text1><a href="http://reyhaneh6617.blogfa.com" title="" target="_blank">غاتی پاطی (اجی جووونم)</a></font></div><div class=div32><font class=text1><a href="http://perspolis-66.shakheh.com/" title="" target="_blank">پرسپولیس ( اونم از نوع دو آتیشه)(مبینا جون)</a></font></div><div class=div32><font class=text1><a href="http://like-perspolis.blogfa.com/" title="" target="_blank">♥فقط پرسپولیس♥پیـام صادقیان♥حسین ماهینے♥</a></font></div><div class=div32><font class=text1><a href="http://lovebadminton.rozblog.com/" title="" target="_blank">پوئن 25 تیم قهرمان من(نیکی جووون)</a></font></div><div class=div32><font class=text1><a href="http://talacheh.mihanblog.com/" title="" target="_blank">زیور الات دست ساز (طناز جووونم)</a></font></div><div class=div32><font class=text1><a href="http://mirsaeedmarouf4.blogfa.com/" title="" target="_blank">میر سعید معروف 4(میشا جووون)</a></font></div><div class=div32><font class=text1><a href="http://alirezayaghootesorkh.blogfa.com" title="" target="_blank">علیرضا حقیقی یاقوت سرخ(غزل جووون)</a></font></div><div class=div32><font class=text1><a href="http://hosein7744.mihanblog.com" title="" target="_blank">وبلاگ رسمی حسین اسدالهی</a></font></div><div class=div32><font class=text1><a href="http://just-ehsanalikhani-.mihanblog.com/" title="" target="_blank">احسان علیخانی(سپیده جووون)</a></font></div><div class=div32><font class=text1><a href="http://fano0o0s.mihanblog.com" title="" target="_blank">فانوس(ریحانه ودلارام جوووووونم)</a></font></div><div class=div32><font class=text1><a href="http://www.mylovea20.blogfa.com/" title="" target="_blank">alireza haghighi my love(نادیا جووون)</a></font></div><div class=div32><font class=text1><a href="http://nimkat2012.blogfa.com" title="" target="_blank">نیمکت(هدی و حدیث جووون)</a></font></div><div class=div32><font class=text1><a href="http://khatemarzi.mihanblog.com/" title="" target="_blank">فقط طنز برای وقت هایی که بی کاریی</a></font></div><div class=div32><font class=text1><a href="http://meysamvr.blogfa.com/" title="" target="_blank">فوتبال یعنی زندگی(آقا میثم)</a></font></div><div class=div32><font class=text1><a href="http://www.realgoalkeeper.blogfa.com/" title="" target="_blank">منو درگیر خودت کن(رومینا جووون)</a></font></div><div class=div32><font class=text1><a href="http://valibal2013.mihanblog.com" title="" target="_blank">سایت تخصصی والیبال(آقا میثم)</a></font></div><div class=div32><font class=text1><a href="http://feshangchi75.blogfa.com/" title="" target="_blank">امیر حسین فشنگچی(مهسا جووون)</a></font></div><div class=div32><font class=text1><a href="http://patoghmabahala.blogfa.com/" title="" target="_blank">کلیک کن...پاتوق باحالاست...(الناز جووون)</a></font></div><div class=div32><font class=text1><a href="http://peykan-bazargard.mihanblog.com/" title="" target="_blank">کلوپ هواداران پیکان و مهدی بازارگرد(اقا علیرضا)</a></font></div><div class=div32><font class=text1><a href="http://dehkadeh-emroozi.blogfa.com/" title="" target="_blank">دهکده ی امروزی(سارا جووون)</a></font></div><div class=div32><font class=text1><a href="http://silvermooninbluesky.blogfa.com/" title="" target="_blank">قلب شیشه ای(نیایش جووون)</a></font></div><div class=div32><font class=text1><a href="http://www.miladakbari1374.blogfa.com/" title="" target="_blank">نوشاد عالمیان(اقا میلاد)</a></font></div><div class=div32><font class=text1><a href="http://alirezahaghighi20.blogfa.com/" title="" target="_blank">فقط علیرضاحقیقی(پریا جووون)</a></font></div><div class=div32><font class=text1><a href="http://www.sarbazanvatan.blogfa.com" title="" target="_blank">سربازان وطن(اقا ارش)</a></font></div><div class=div32><font class=text1><a href="http://www.HTMVI.blogfa.com" title="" target="_blank">هواداران تیم ملی والیبال</a></font></div><div class=div32><font class=text1><a href="http://description27.blogfa.com/" title="" target="_blank">Ϡ₡ بِـــِـבפּלּ شـَـرح ... Ϡ₡(ملیکا جووون)</a></font></div><div class=div32><font class=text1><a href="http://volleyball-stars.mihanblog.com" title="" target="_blank">♥ستاره های والیبال♥(مهسا جووون)</a></font></div><div class=div32><font class=text1><a href="http://elina-note.blogfa.com/" title="" target="_blank">ღ با یک جفت کتونی خیس ღ(الینا جووون)</a></font></div><div class=div32><font class=text1><a target="_blank" href="http://www.payamblog.com">بهترین قالب های وبلاگ</a></font></div>
+<div class=div32><font class=text1><a href="../link/index.html">همه پیوندها</a></font></div>
+</div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>نویسندگان</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="../post/author/783854.html">مریم  (273)</a></font></div></div><div class=div30></div>
+</div>
+
+
+		
+
+<form id="frm-16082163305fdb6f0aba1e2" method="get" action="http://we--plus.mihanblog.com/post/search/fid/16082163305fdb6f0aba1e2"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> <div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>جستجو</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><center><input type="text" name="search_text"><br>
+<input type="submit" value="جستجو" style="font-family: Tahoma; font-size: 9pt"></center></div>
+</div><div class=div30></div>
+</div><input type="hidden" name="frm-id" value="16082163305fdb6f0aba1e2" id="frm-id" /></form>
+
+<div class=div24> <div class=div35> <div class=div25><font class=text5>آمار وبلاگ</font></div></div> <div class=div342></div> <div class=div341> <div class=div32><font class=text1>کل بازدید : <script>getStatVar('total_view');</script></font></div> <div class=div32><font class=text1>بازدید امروز :<script>getStatVar('today_view');</script></font></div> <div class=div32><font class=text1>بازدید دیروز : <script>getStatVar('yesterday_view');</script></font></div> <div class=div32><font class=text1>بازدید این ماه : <script>getStatVar('this_month_view');</script></font></div> <div class=div32><font class=text1>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></font></div> <div class=div32><font class=text1>تعداد نویسندگان : <script>getStatVar('total_author');</script></font></div> <div class=div32><font class=text1>تعداد کل پست ها : <script>getStatVar('total_post');</script></font></div> <div class=div32><font class=text1>آخرین بازدید : <script>getStatVar('last_view_date');</script></font></div> <div class=div32><font class=text1>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></font></div> </div><div class=div30></div> </div>
+
+<div class=div24><center>
+</center></div>
+
+</td>
+
+<td class=div1 valign=top>
+
+<div class=div61>
+<div class=div10><font class=title> علیرضا حقیقی</font></div>
+<div class=div12><font class=des></font></div>
+</div>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../post/77.html">رتبه دوازدهم ایران در المپیک مردم روسیه را شگفت‌زده کرد.</a></font></div>
+<div class=div58><font class=text7>پنجشنبه 19 مرداد 1391 :: نویسنده : <a href="../post/author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<span id="bodyHolder_newstextDetail_nwstxtBodyPane" style="text-align: right; background-color: rgb(249, 235, 232); "><p align="justify" class="rtejustify" style="font-family: Tahoma; color: rgb(51, 51, 51); "><br></p><p align="justify" class="rtejustify" style="font-family: Tahoma; color: rgb(51, 51, 51); "><img src="http://media.farsnews.com/media/Uploaded/Files/Images/1390/09/29/13900929125050_PhotoA.jpg" alt="خبرگزاری فارس: رتبه دوازدهم ایران در المپیک مردم روسیه را شگفت‌زده کرد">
+</p><p align="justify" class="rtejustify"><font size="3" face="georgia, 'times new roman', times, serif" color="#ff0000">یکم برو اون ور اهان خوب شد.....!!!!</font></p><p align="justify" class="rtejustify" style="color: rgb(51, 51, 51); "><font size="3" face="georgia, 'times new roman', times, serif">علیرضا حقیقی در گفت‌وگو با خبرنگار ورزشی خبرگزاری فارس، ضمن تبریک روز خبرنگار اظهار داشت: از رسانه‌ها عذرخواهی می‌کنم که با یک روز تأخیر روز بزرگ خبرنگار را به آنها تبریک می‌گویم. خبرنگاران ایرانی بسیار باهوش، زرنگ و افرادی هستند که به کار خود عشق و علاقه فراوانی دارند و باعث شده‌اند ورزش ما در المپیک جهش خوبی داشته باشد. همیشه برای خبرنگاران احترام خاصی قائل هستم و سعی کردم از انتقادها و سایر نوشته‌های آنها برای رسیدن به موفقیت‌های بیشتر استفاده کنم.</font></p><p align="justify" class="rtejustify"><font size="3" face="georgia, 'times new roman', times, serif"><font color="#333333">وی در خصوص شرایطش در روبین‌کازان روسیه گفت: شرایطم عالی است. بازی حساسی مقابل تیم دینامو داریم و به همین دلیل کادر فنی به من اعلام کرد پس از این بازی می‌توانم به جمع ملی‌پوشان اضافه شوم.(</font><font color="#ff0000">اخ جووووون)</font></font></p><p align="justify" class="rtejustify" style="color: rgb(51, 51, 51); "><font size="3" face="georgia, 'times new roman', times, serif">حقیقی خاطرنشان کرد: بازی بسیار سختی مقابل لبنان داریم. شاید خیلی از کارشناسان و اهالی فوتبال می‌گویند این بازی راحت است اما در عمل اینطور نیست و از این به بعد تمام بازی‌های ما بسیار حساس و سخت است.</font></p><p align="justify" class="rtejustify"><font size="3" face="georgia, 'times new roman', times, serif"><span style="color: rgb(51, 51, 51); ">دروازه‌بان روبین‌کازان روسیه درباره موفقیت‌های ورزشکاران ایرانی در المپیک 2012لندن گفت: حضور ایران در رتبه دوازدهم المپیک مردم و علاقه‌مندان به ورزش در روسیه را شگفت‌زده کرد. بازیکنان تیم که المپیک را دنبال می‌کنند به من تبریک می‌گویند. انشاا‌لله پس از موفقیت کاروان ایران در المپیک نوبت فوتبال می‌رسد تا با رفتن به جام جهانی دل مردم را شاد کنند.(</span><font color="#ff0000">ایشالا....)</font></font><font face="Tahoma"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/77.gif"></font></p></span>
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(77)">نظرات (<script>setCommentCnt(77)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../post/76.html">شب رویایی ورزش ایران....</a></font></div>
+<div class=div58><font class=text7>چهارشنبه 18 مرداد 1391 :: نویسنده : <a href="../post/author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4>
+
+
+<font face="georgia, 'times new roman', times, serif" size="3">سلاااااااااااااااااااااااااااااااااااااام</font><div><font face="georgia, 'times new roman', times, serif" size="3">تبریک..... واقعا نمیدونم چی بگم فقط منم در پوست خودم نمیگنجم 2تا طلا 2تا نقره</font></div><div><font face="georgia, 'times new roman', times, serif" size="3">شییییییییییییییییییییییییییییییییییییییییییییره ایران<img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"></font></div><div><font face="georgia, 'times new roman', times, serif" size="3"><br></font></div><div><font face="georgia, 'times new roman', times, serif" size="3">-اول بریم سراغ کشتی فرنگی.....</font></div><div>&nbsp;</div><div><br></div><div><br></div><div><img src="http://www.jamnews.ir/Images/News/Smal_Pic/18-5-1391/IMAGE634800363440341112.jpg">
+</div><div><br></div><div><br></div><div><font color="#ff0000" face="georgia, 'times new roman', times, serif" size="3">قاسم رضایی...............</font></div><div><br></div><div><br></div><div><img src="http://news.jamnews.ir/Images/News/Editor/image/soheil/3691jamnews_ir%20(28).JPG"></div><div><br></div><div><br></div><div><font face="georgia, 'times new roman', times, serif" size="3">شییییییییییییییییییره</font></div><div><br></div><div><br></div><div><br></div><div><img src="http://news.jamnews.ir/Images/News/Editor/image/soheil/3691jamnews_ir%20(23).JPG">
+</div><div><br></div><div><font face="georgia, 'times new roman', times, serif" size="3"><br></font></div><div><font face="georgia, 'times new roman', times, serif" size="3">واقعا دست این مربی درد نکنه .......شییییییییییره <font color="#ff0000">محمد بنا</font> بهترین مربی کشتی(به افتخارش)<img src="http://mihanblog.com/public/public/rte/images_new/smiles/41.gif"></font></div><div><font face="georgia, 'times new roman', times, serif" size="3"><br></font></div><div><font face="georgia, 'times new roman', times, serif" size="3"><br></font></div><div><font face="georgia, 'times new roman', times, serif" size="3"><span style="line-height: 23px; text-align: right; background-color: rgb(248, 252, 255); "><font color="#ff0000">-</font>قاسم رضایی با كسب سومین مدال طلای المپیك، كشتی فرنگی ایران را قهرمان المپیك كرد.</span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"></font></div><div><font face="georgia, 'times new roman', times, serif" size="3"><span style="line-height: 23px; text-align: right; background-color: rgb(248, 252, 255); ">فرنگی‌كار وزن<font color="#ff0000"> 96 </font>كیلوگرم ایران در فینال رقابت‌های المپیك مقابل رستم توترف از روسیه قرار گرفت و این پیكار تماشایی و حساس را در دو تایم<font color="#ff0000"> ( 2-0، 1-0)</font> به سود خود به پایان برد تا نقشه ناجوانمردانه‌ای كه برای نرسیدن ایران به سومین مدال طلا روی عبدولی اجرا شده بود، خنثی شود.</span>
+</font></div><div><span style="line-height: 23px; text-align: right; background-color: rgb(248, 252, 255); "><font face="georgia, 'times new roman', times, serif" size="3"><br></font></span></div><div><span style="line-height: 23px; text-align: right; background-color: rgb(248, 252, 255); "><font face="georgia, 'times new roman', times, serif" size="3"><br></font></span></div><div><span style="line-height: 23px; text-align: right; background-color: rgb(248, 252, 255); "><font face="georgia, 'times new roman', times, serif" size="3"><br></font></span></div><div style="text-align: right;"><font face="georgia, 'times new roman', times, serif" size="3"><font color="#ff0000"><span style="line-height: 23px;">-البته در کشتی باید یه خسته نباشید و شیییییییییره به&nbsp;</span></font><span style="color: rgb(0, 55, 120); font-weight: bold; ">&nbsp;</span><span style="font-weight: bold; "><font color="#ff0000">سعید عبدولی</font></span><span style="color: rgb(0, 55, 120); font-weight: bold; "> </span><span style="font-weight: bold; ">بگیم چون واقعا با ناداوری به حریف فرانسوی باخت..</span></font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/20.gif"></div><div style="text-align: right;"><br></div><div style="text-align: right;"><br></div><div style="text-align: right;"><img src="http://afkarnews.ir/images/docs/files/000131/nf00131688-2.jpg">
+</div><div style="text-align: right;"><br></div><div style="text-align: right;"><font size="3" face="georgia, 'times new roman', times, serif"><br></font></div><div style="text-align: right;"><font size="3" face="georgia, 'times new roman', times, serif">الااااااااااااااااااااااااهی.....<img src="http://mihanblog.com/public/public/rte/images_new/smiles/2.gif"></font></div><div style="text-align: right;"><font face="georgia, 'times new roman', times, serif" size="3"><br></font></div><div style="text-align: right;"><font size="3" face="georgia, 'times new roman', times, serif"><br></font></div><div style="text-align: right;"><font color="#ff0000" size="3" face="georgia, 'times new roman', times, serif">-خوووووووب حالا بریم سراغ کی؟اگه گفتین!؟؟؟؟؟</font></div><div style="text-align: right;"><font color="#ff0000" size="3" face="georgia, 'times new roman', times, serif">(وزنه برداری)&nbsp;</font></div><div style="text-align: right;"><font face="georgia, 'times new roman', times, serif" size="3">راستی بچه ها دیروز کیانوش رستمی رو هم دیدید اون کنار ایستاده بود اخی عزیزم..<img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"></font></div><div style="text-align: right;"><font face="georgia, 'times new roman', times, serif" size="3"><br></font></div><div style="text-align: right;"><font face="georgia, 'times new roman', times, serif" size="3"><br></font></div><div style="text-align: right;"><font face="georgia, 'times new roman', times, serif" size="3"><br></font></div><div style="text-align: right;"><font face="georgia, 'times new roman', times, serif" size="3"><span style="line-height: 20px; text-align: justify; "><font color="#ff0000">-</font>'بهداد سلیمی' قوی ترین مرد جهان با ثبت رکورد 455 کیلوگرم، به مدال طلای مسابقه های وزنه برداری بازی های المپیک 2012 لندن دست یافت.</span><br style="line-height: 20px; text-align: justify; "></font></div><div style="text-align: right;"><font face="georgia, 'times new roman', times, serif" size="3"><br></font></div><div style="text-align: right;"><font face="georgia, 'times new roman', times, serif" size="3">&nbsp;</font></div><div><span style="text-align: justify; "><font size="3" face="georgia, 'times new roman', times, serif"><font color="#ff0000">-</font>سجاد انوشیروانی پس از کسب مدال نقره المپیک 2012 لندن در دسته 105+ کیلوگرم مسابقات وزنه‌برداری المپیک لندن ضمن بیان مطلب فوق گفت: المپیک نهایت ورزش جهان بوده و مسابقات در آن در بالاترین سطح برگزار می‌شود. خدا را شکر در این رقابت مهم توانستم یکی از بهترین مدال‌ها را کسب کنم.</font></span>
+</div><div style="text-align: justify;"><font face="georgia, 'times new roman', times, serif" size="3"><br></font></div><div><img src="http://www.mehrnews.ir/mehr_media/image/2012/08/835427_orig.jpg">
+</div><div><br></div><div><br></div><div><font size="3" face="georgia, 'times new roman', times, serif">اخی چقدر من این صحنه رو دوست دارم........<img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"></font></div><div><font size="3" face="georgia, 'times new roman', times, serif"><br></font></div><div><font size="3" face="georgia, 'times new roman', times, serif"><br></font></div><div><font color="#ff0000" size="3" face="georgia, 'times new roman', times, serif">-حالا بریم سراغ دوو میدانی با احسان حدادی....</font></div><div><font color="#ff0000" size="3" face="georgia, 'times new roman', times, serif"><br></font></div><div><font color="#ff0000" size="3" face="georgia, 'times new roman', times, serif"><br></font></div><div><font size="3" face="georgia, 'times new roman', times, serif"><span style="text-align: justify; ">-احسان حدادی، قهرمان&nbsp;پرتاب دیسک ایران و آسیا در مرحله نهایی رقابت‌های&nbsp;این&nbsp;ماده در&nbsp;بازی‌های المپیک 2012 لندن&nbsp;به مصاف حریفان خود رفت که در پایان با رکورد&nbsp;68 متر و 18 سانتیمتر در جایگاه دوم&nbsp;قرار گرفت و مدال نقره المپیک را به گردن آویخت.</span>
+</font></div><div><br></div><div><br></div><div><img src="http://img.irna.ir/1391/13910518/80266618/T80266618-2813854.jpg" alt="1391/05/18 - 09:30">
+</div><div><br></div><div><br></div><div><font face="georgia, 'times new roman', times, serif" size="3">و از همشون تشکر میکنیم وخسته نباشید......</font></div><div><br></div>
+
+
+
+
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(76)">نظرات (<script>setCommentCnt(76)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../post/75.html">پیروزی روبین کازان در غیاب علیرضا حقیقی!!!</a></font></div>
+<div class=div58><font class=text7>سه شنبه 17 مرداد 1391 :: نویسنده : <a href="../post/author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4>
+
+<font face="georgia, 'times new roman', times, serif" size="3"><p style="font-weight: bold; color: rgb(102, 102, 102); text-align: justify; "><span style="color: rgb(0, 0, 0); ">تیم فوتبال روبین‌کازان در هفته دوم لیگ روسیه به پیروزی رسید.</span><strong><font face="georgia, 'times new roman', times, serif" size="3"></font></strong><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"></p></font><font face="georgia, 'times new roman', times, serif" size="3"><span style="font-weight: 800;">&nbsp;</span></font><div><img src="http://media.farsnews.com/media/Uploaded/Files/Images/1390/11/24/13901124000175_PhotoA.jpg" alt="خبرگزاری فارس: یاران حقیقی با رئیس جمهور تاتارستان دیدار کردند">
+</div><div><font face="georgia, 'times new roman', times, serif" size="3"><span style="font-weight: 800;"><br></span></font></div><div><font face="georgia, 'times new roman', times, serif" size="3"><p style="font-weight: bold; "></p><p style="font-weight: bold; text-align: justify; "><span style="color: rgb(0, 0, 0); ">&nbsp;این در حالی است که مانند اکثر اوقات در فصل گذشته و بازی هفته نخست فصل جدید لیگ روسیه،‌علیرضا حقیقی جایی در فهرست 18 نفره این تیم نداشت.</span><font color="#ff0000">(هیچ اشکالی نداره)</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/2.gif"></p><p style="font-weight: bold; "></p><p style="font-weight: bold; text-align: justify; "><span style="color: rgb(0, 0, 0); ">تیم روبین کازان در ادامه هفته دوم لیگ روسیه با نتیجه 2 بر یک برابر وولگا نیژنی به پیروزی رسید تا نخستین بردش را در فصل جدید به دست آورد.</span><font color="#ff0000">(به افتخارش)</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/41.gif"></p><p style="font-weight: bold; "></p><p style="font-weight: bold; text-align: justify; "><font color="#666666">&nbsp;</font><span style="color: rgb(0, 0, 0); ">این در حالی است که در این بازی مانند اکثر اوقات نیم فصل دوم لیگ روسیه در سال گذشته و همچنین بازی نخست روبین کازان در فصل جدید، علیرضا حقیقی جایی در فهرست</span><font color="#ff0000"> 18</font><span style="color: rgb(0, 0, 0); "> نفره این تیم نداشت و مجبور بود از روی سکوهای ورزشگاه بازی تیمش را تماشا کند.</span></p><p style="font-weight: bold; color: rgb(102, 102, 102); text-align: justify; ">&nbsp;<span style="color: rgb(0, 0, 0); ">روبین کازان در حال حاضر با سه امتیاز از دو بازی در رده پنجم لیگ روسیه قرار دارد.</span></p></font>
+
+
+
+
+</div>
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(75)">نظرات (<script>setCommentCnt(75)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../post/74.html">کسب مدال طلا/مدال نقره</a></font></div>
+<div class=div58><font class=text7>سه شنبه 17 مرداد 1391 :: نویسنده : <a href="../post/author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><div><img src="http://www.iransport.net/News/image_news/noroozi_omid_1.gif">
+</div><span style="text-align: justify; "><div style="font-size: small; "><br></div><div><font color="#ff0000"><font size="3">شیییییییییییییییییییییییییییییییییییییییییییره</font><font size="2">!!!!!!!!!</font></font><font size="2"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"></font></div><div style="font-size: small; ">&nbsp;</div><div><span style="text-align: justify; "><font size="3" face="georgia, 'times new roman', times, serif"><br></font></span></div><font size="3" face="georgia, 'times new roman', times, serif">امید نوروزی كشتی گیر وزن <font color="#ff0000">60</font> كیلوگرم تیم ملی كشتی فرنگی ایران با برتری مقابل كشتی گیر گرجستان، دومین مدال طلای تاریخ كشتی فرنگی كشورمان در بازی های المپیك را برای كشورمان به ارمغان آورد.&nbsp;</font></span><font size="3" face="georgia, 'times new roman', times, serif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"><br style="text-align: justify; "><br style="text-align: justify; "><span style="text-align: justify; ">'امید نوروزی' در دیدار نهایی رقابت های وزن <font color="#ff0000">60 </font>كیلوگرم مسابقه های كشتی فرنگی بازی های المپیك <font color="#ff0000">2012</font> لندن كه در ورزشگاه 'اكسل' شهر لندن برگزار شد، 'ریواز لاشخی' كشتی گیر تیم گرجستان را در دو وقت پی در پی و با نتایج یك بر صفر و یك بر صفر شكست داد و به مقام قهرمانی و مدال طلای المپیك دست یافت.&nbsp;(<font color="#cc0000">شییییییییییییییییییره)</font></span></font><div><div style="text-align: justify;"><font color="#cc0000" size="3" face="georgia, 'times new roman', times, serif"><br></font></div><div style="text-align: justify;"><font color="#cc0000" size="3" face="georgia, 'times new roman', times, serif">و</font></div><div style="text-align: justify;"><font color="#cc0000" size="2">.</font></div><div style="text-align: justify;"><font color="#cc0000" size="2">.</font></div><div style="text-align: justify;"><font color="#cc0000" size="2">.</font></div><div style="text-align: justify;"><font color="#cc0000" size="2">.</font></div><div style="text-align: justify;"><font color="#cc0000" size="2">.</font></div><div style="text-align: justify;"><img src="http://media.isna.ir/content/225-15.jpg/3" alt="225-15.jpg">
+</div><div style="text-align: justify;"><p style="text-align: justify; margin-top: 1.5em; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; line-height: 23px; background-color: rgb(248, 252, 255); "><font face="georgia, 'times new roman', times, serif"><font color="#ff0000" size="4">شیییییییییییییییییییییییییییییره</font><font size="3"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"></font></font></p><p style="text-align: justify; margin-top: 1.5em; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; line-height: 23px; background-color: rgb(248, 252, 255); "><font size="3" face="georgia, 'times new roman', times, serif">وزنه بردار دسته <font color="#ff0000">105 </font>كیلوگرم ایران به نشان نقره المپیك دست یافت.(<font color="#ff0000">واقعا دستت درد نکنه ما ک خیلییییییییییی راضییم!)</font>&nbsp;</font></p><p style="margin-top: 1.5em; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; line-height: 23px; text-align: right; background-color: rgb(248, 252, 255); "></p><p style="margin-top: 1.5em; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; line-height: 23px; text-align: right; background-color: rgb(248, 252, 255); "><font size="3" face="georgia, 'times new roman', times, serif">&nbsp; نواب نصیر شلال در رقابت‌های دسته 1<font color="#ff0000">05</font> كیلوگرم با بالا بردن وزنه‌ی <font color="#ff0000">184</font> كیلوگرم در یك‌ضرب و <font color="#ff0000">227</font> در دو ضرب و مجموع <font color="#ff0000">411</font> كیلوگرم به نشان نقره دست یافت و چهارمین مدال كاروان ایران به دست آمد.<img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif" style="text-align: justify; "></font></p><p style="margin-top: 1.5em; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; line-height: 23px; text-align: right; background-color: rgb(248, 252, 255); "></p><p style="margin-top: 1.5em; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; line-height: 23px; text-align: right; background-color: rgb(248, 252, 255); "><font size="3" face="georgia, 'times new roman', times, serif">نصیرشلال در یك‌ضرب دو بار وزنه <font color="#ff0000">183 </font>كیلوگرم را روی زمین انداخت اما در آخرین شانس خود وزنه <font color="#ff0000">184</font> كیلوگرم را بالای سر برد.</font></p></div></div><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(74)">نظرات (<script>setCommentCnt(74)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../post/73.html">تبریییییییییییییک</a></font></div>
+<div class=div58><font class=text7>دوشنبه 16 مرداد 1391 :: نویسنده : <a href="../post/author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4>
+
+
+
+
+سلااااااااااااااااااااااام بچه ها...<div>تبریک میگم کسب اولین مدال طلای المپیک ایران و توسط<font color="#ff0000">&nbsp;حمید سوریان&nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"></div><div>واقعا دستش درد نکنه بعد از 40 سال دل همرو شاد کرد</div><div>از اینجا بهش خسته نباشید میگیم&nbsp;.</div><div><br></div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<img src="http://www.iransport.net/News/image_news/sorian_3.gif">
+</div><div><br></div><div><br></div><div>شیییییییییییییییییره<img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"></div><div><br></div><div><br></div><div><br></div><div><img src="http://www.mahansky.com/wp-content/uploads/2012/08/ha3.jpg" alt="ha3 عکس های حمید سوریان">&nbsp;</div>
+
+
+
+
+
+
+
+
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(73)">نظرات (<script>setCommentCnt(73)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../post/71.html">شعار هواداران پرسپولیس علیه بازیكنان/ درخشان: این تیم باید درست شود</a></font></div>
+<div class=div58><font class=text7>دوشنبه 16 مرداد 1391 :: نویسنده : <a href="../post/author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4>سلام<img src="http://mihanblog.com/public/public/rte/images_new/smiles/2.gif"><div>&nbsp;امیدوارم خوب باشید من که &nbsp;حالم از بازی دیشب بد جوری گرفته!!!!!!!!<img src="http://mihanblog.com/public/public/rte/images_new/smiles/20.gif"></div><div>اینو میزارم ولی بگم کار تماشا چیا خییییییییییییییییییییلی زشت بود!&nbsp;<img src="http://mihanblog.com/public/public/rte/images_new/smiles/68.gif"></div><div><br></div><div><br></div><div><img src="http://jamnews.ir/Images/News/Smal_Pic/15-5-1391/IMAGE634798148807411315.jpg">
+</div><div><br></div><div><p style="margin-top: 1.5em; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; line-height: 23px; text-align: right; background-color: rgb(248, 252, 255); "><font size="3" face="georgia, 'times new roman', times, serif">باخت پرسپولیس مقابل صبا نارضایتی هواداران این تیم را به دنبال داشت.(<font color="#ff0000">بله با اجازتون!!!</font></font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/45.gif">)</p><p style="margin-top: 1.5em; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; line-height: 23px; text-align: right; background-color: rgb(248, 252, 255); "><span style="font-family: georgia, 'times new roman', times, serif; font-size: medium; ">&nbsp; پس از این كه پرسپولیس گل دوم را از صبای قم دریافت كرد، شعارهای تماشاگران شروع شد اما بعضی از هواداران با صدای سوت مانع سر دادن شعار می‌شدند. همچنین عده‌ای از تماشاگران نیز علی دایی را تشویق كردند كه البته این شعار اكثر هواداران نبود.</span></p><p style="margin-top: 1.5em; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; line-height: 23px; text-align: right; background-color: rgb(248, 252, 255); "></p><p style="margin-top: 1.5em; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; line-height: 23px; text-align: right; background-color: rgb(248, 252, 255); "><font size="3" face="georgia, 'times new roman', times, serif">هنگام خروج بازیكنان پرسپولیس از زمین هواداران این تیم شعار "بی‌غیرت، بی‌غیرت" را سر دادند. پرسپولیسی‌ها در مقابل هنگام خارج شدن بازیكنان صبای قم آن‌ها را تشویق كردند.(<font color="#ff0000">دستتون درد نکنه واقعا!)</font></font></p><p style="margin-top: 1.5em; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; line-height: 23px; text-align: right; background-color: rgb(248, 252, 255); "></p><p style="margin-top: 1.5em; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; line-height: 23px; text-align: right; background-color: rgb(248, 252, 255); "><font size="3" face="georgia, 'times new roman', times, serif">كارلوس كی‌روش، سرمربی تیم ملی فوتبال پس از اینكه پرسپولیس گل دوم را دریافت كرد از ورزشگاه خارج شد.</font></p><p style="margin-top: 1.5em; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; line-height: 23px; text-align: right; background-color: rgb(248, 252, 255); "></p><p style="margin-top: 1.5em; margin-right: 0px; margin-bottom: 1.5em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; line-height: 23px; text-align: right; background-color: rgb(248, 252, 255); "><font size="3" face="georgia, 'times new roman', times, serif">حمید درخشان بعد از پایان بازی در حالی كه به شدت ناراحت بود، گفت: این تیم باید درست شود، علی پروین باید تصمیم بگیرد كه كمیته فنی در این موقعیت تشكیل شود یا نه، پرسپولیس واقعا خوب نبود.(<font color="#ff0000">خداییش خوب نبود)</font></font></p></div><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(71)">نظرات (<script>setCommentCnt(71)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../post/70.html">سعید محمدپور: از اینكه به مدال المپیك دست نیافتم شرمنده ام</a></font></div>
+<div class=div58><font class=text7>یکشنبه 15 مرداد 1391 :: نویسنده : <a href="../post/author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><h2 style="color: rgb(3, 56, 93); font-family: Arial, Helvetica, sans-serif; line-height: 20px; text-align: right; font-size: 16px; ">لندن - وزنه بردار جوان كشورمان كه در مسابقات امشب دسته 94 كیلوگرم به مقام پنجم المپیك دست یافت، گفت: از اینكه نتوانستم به مدال برسم، شرمنده ملت بزرگ ایران و خانواده ام هستم.<img src="http://mihanblog.com/public/public/rte/images_new/smiles/12.gif"></h2><div><img src="http://img.irna.ir/1391/13910515/80261315/T80261315-2803993.jpg" alt="1391/05/15 - 05:13">
+</div><div><br></div><div><br></div><div>یااااااا علی.....</div><div><br></div><div><p style="line-height: 28px; text-align: right; "><font color="#333333" style="font-family: georgia, 'times new roman', times, serif; font-size: medium; ">به گزارش خبرنگار اعزامی ایرنا، 'سعید محمد پور' پس از پایان این مسابقه در محل سالن اكسل لندن در گفت و گو با خبرنگاران افزود: من جوان ترین وزنه بردار این دسته بودم و همه تلاشم را برای كسب موفقیت انجام دادم ولی متاسفانه نتیجه آن چیزی نشد كه دلم می خواست.(</font><font color="#ff0000" style="font-family: georgia, 'times new roman', times, serif; font-size: medium; ">ما که راضییم)</font><font>&nbsp; &nbsp;</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/6.gif"></p><p style="color: rgb(51, 51, 51); line-height: 28px; text-align: right; "><font size="3" face="georgia, 'times new roman', times, serif">وی اظهارداشت: مسابقه &nbsp;دیشب مسابقه بسیار سنگینی بود كه در آن هم ركورد جهان و هم ركورد المپیك شكسته شد.</font></p><p style="line-height: 28px; text-align: right; "><font size="3" face="georgia, 'times new roman', times, serif"><font color="#333333">محمد پور گفت: از اینكه در حركت دوم دوضرب تمركزم به هم ریخت و نتوانستم وزنه را بالای سر ببرم از مردم ایران عذر می خواهم.(</font><font color="#ff0000">بابا اینقدر خودتو عذاب نده ما که حرفی نداریم)</font></font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/32.gif"></p><p style="color: rgb(51, 51, 51); line-height: 28px; text-align: right; "><font size="3" face="georgia, 'times new roman', times, serif">دارنده مدال برنز رقابت های جهانی سال 2011 اظهارداشت: من بلافاصله پس از مسابقات جهانی فرانسه در پاییز گذشته، تمرینات خودم را شروع كردم و همه تلاشم را برای موفقیت در المپیك به كار گرفتم.</font></p><p style="color: rgb(51, 51, 51); line-height: 28px; text-align: right; "><font size="3" face="georgia, 'times new roman', times, serif">وی تاكید كرد: مربیان هرچه صلاح بدانند من همان كار را انجام می دهم، چون معتقدم كه آنان تاكنون هرچه از من خواسته اند به صلاح خودم بوده است.</font></p><p style="color: rgb(51, 51, 51); line-height: 28px; text-align: right; "><font size="3" face="georgia, 'times new roman', times, serif">محمدپور شنبه شب به وقت محلی با ثبت ركورد 402 كیلوگرم، در مكان پنجم دسته 94 كیلوگرم رقابت های وزنه برداری بازی های المپیك 2012 لندن ایستاد.</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"></p><p style="color: rgb(51, 51, 51); line-height: 28px; text-align: right; "><font size="3" face="georgia, 'times new roman', times, serif">در این دسته، 'ایلیا ایلین' از قزاقستان و دارنده مدال طلای بازی های المپیك 2008 پكن، با ركورد 418 كیلوگرم علاوه بر كسب مدال طلای این دسته، ركورد جهان و المپیك را نیز بهبود بخشید.</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/45.gif"></p><p style="color: rgb(51, 51, 51); line-height: 28px; text-align: right; "><font size="3" face="georgia, 'times new roman', times, serif">'الكساندر ایوانوف' از روسیه با ركورد 409 كیلوگرم و 'آناتولی سیریكو' از مولداوی با 407 كیلوگرم به ترتیب مدال های نقره و برنز این دسته را به خود اختصاص دادند.</font></p></div><div><font size="3" face="georgia, 'times new roman', times, serif"><br></font></div><div><br></div>
+
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(70)">نظرات (<script>setCommentCnt(70)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../post/69.html">علت از دست رفتن طلای وزنه برداری از زبان کیانوش رستمی</a></font></div>
+<div class=div58><font class=text7>شنبه 14 مرداد 1391 :: نویسنده : <a href="../post/author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4>
+
+
+<span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">سلام بچه ها چطورید؟؟؟؟؟</span></span><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">من خیلی خوش حالم&nbsp;</span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">اولین مدال کاروان المپیک ایران وبهتون تبریک میگم!!!!!!!!!!!!!!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">(همه با هم) &nbsp; &nbsp;شیییییییییییییییییییییییییییییییییییییره کیانوش رستمی</span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"></span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">با این که مدال برنز از ان ایران شد ولی عیبی نداره از همین جا بهش خسته نباشید میگیم چون عالی کار کرد</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">هنوز وقت زیاد داره!!!!!!!!!!!!</span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/1.gif"></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">حالا از زبون خودش که چرا طلا رو نگرفتیم؟؟&nbsp;</span></span></div><div><br></div><div><br></div><div><img hspace="0" border="0" align="texttop" vspace="0" src="http://mmfhmm.persiangig.com/image/IMAGE634796381932211003.jpg" alt=""><br></div><div><br></div><div><br></div><div><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><br></span></span></div><div><span class="Apple-style-span" style="line-height: 18px; "><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;">دارنده نشان برنز المپیک <span class="Apple-style-span" style="color: rgb(204, 0, 0);">2012</span> جو سنگین المپیک را عامل ناکامی در تکرار رکوردهای تمرین و از دست رفتن مدال طلا دانست.</span></span></span><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><br></span></span></div><div><span class="Apple-style-span" style="font-family: georgia; font-size: 16px; line-height: 18px;"><br></span></div><div><span class="Apple-style-span" style="line-height: 18px;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><br></span></span></span></div><span class="Apple-style-span" style="font-family: Tahoma; font-size: 13px; line-height: 20px; "><p style="margin-top: 4px; margin-right: 0px; margin-bottom: 4px; margin-left: 0px; "><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;">به گزارش سرویس ورزشی جام نیوز، رستمی پس از قرار گرفتن در رده‌ی سوم المپیک گفت: «خدا را شکر در حرکت دو ضرب من بهتر از حریفانم بودم اما متاسفانه جو مسابقه‌های المپیک بسیار سنگین است و استرس بالایی دارد من چندین بار وزنه <span class="Apple-style-span" style="color: rgb(255, 0, 0);">220</span> کیلوگرمی را زده بودم اما اینجا نتوانستم این وزنه را مهار کنم. استرسم در مسابقه خیلی بالا بود و در نهایت وزنه <span class="Apple-style-span" style="color: rgb(255, 0, 0);">209</span> کیلویی را مهار کردم.»<br>&nbsp;</span></span></p><p style="margin-top: 4px; margin-right: 0px; margin-bottom: 4px; margin-left: 0px; "><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;">وی در پاسخ به سوالی درباره اینکه اگر وزنه <span class="Apple-style-span" style="color: rgb(204, 0, 0);">174</span> کیلوگرمی را در حرکت یک ضرب می‌زد در حرکت دو ضرب کار راحت‌تری برای گرفتن طلا داشت گفت: «چطور بگویم المپیک میدان بزرگی است و من استرس زیادی داشتم. من با آمادگی کامل به این مسابقه‌ها آمدم اما نمی‌دانم چه اتفاقی افتاد که به علت استرس بالا نتوانستم در حرکت یک ضرب وزنه <span class="Apple-style-span" style="color: rgb(255, 0, 0);">174</span> را بزنم.»(عیبی نداره)<img src="http://mihanblog.com/public/public/rte/images_new/smiles/3.gif"><br>&nbsp;</span></span></p><p style="margin-top: 4px; margin-right: 0px; margin-bottom: 4px; margin-left: 0px; "><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;">رستمی&nbsp;با اشاره به اینکه دو بار در مهار وزنه <span class="Apple-style-span" style="color: rgb(204, 0, 0);">214</span> کیلوگرم در حرکت دو ضرب ناکام بود گفت: «وقتی وزنه را میخواستم بالا ببرم سرم گیج رفت و نفسم گرفت. یک لحظه نتوانستم جلو را ببینم به همین خاطر وزنه از من جلوتر رفت و در نهایت افتاد.»<br>اولین مدال آور کاروان المپیک ایران&nbsp;در پاسخ به سوالی درباره حذف حریفان چینی و بلاروس خود گفت: «من قطعا هیچ گاه آرزو نمی‌کنم که حریفانم ناکام باشند اما برای من رقابت دوستانه و جوانمردانه خیلی لذت‌بخش‌تر است.»<br>&nbsp;</span></span></p><p style="margin-top: 4px; margin-right: 0px; margin-bottom: 4px; margin-left: 0px; "><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;">رستمی در پاسخ به این سوال که سهراب مرادی چرا اوت کرد و حذف شد گفت: «خیلی ناراحت شدم مرادی در تمرین <span class="Apple-style-span" style="color: rgb(204, 0, 0);">176</span> کیلوگرم را در یک ضرب و <span class="Apple-style-span" style="color: rgb(204, 0, 0);">220</span> کیلوگرم را در دو ضرب زده بود. اگر من و سهرا ب رکوردهای تمرین‌مان را تکرار کرده بودیم طلا و نقره از آن ایران بود.»<br>&nbsp;</span></span></p><p style="margin-top: 4px; margin-right: 0px; margin-bottom: 4px; margin-left: 0px; "><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;">دارنده برنز المپیک درباره حذف ریباکو رکورددار حرکت یک‌ضرب جهان نیز گفت: «فکر می‌کنم بدن او آماده نبود. فکرش را نمی‌کردم که حذف شود. به هر حال جو المپیک برای همه سنگین است.»<br>&nbsp;</span></span></p><p style="margin-top: 4px; margin-right: 0px; margin-bottom: 4px; margin-left: 0px; "><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;">رستمی با بیان اینکه <span class="Apple-style-span" style="color: rgb(204, 0, 0);">21</span> سال دارد و می‌تواند در المپیک‌های بعدی درخشان ظاهر شود گفت: «امیدوارم در سال‌های آینده با کاهش استرس و افزایش تجربه بتوانم مدال‌های خوش‌رنگ‌تری بگیرم.»(بله پس چی؟؟؟؟)</span></span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"></p></span>
+
+
+
+
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(69)">نظرات (<script>setCommentCnt(69)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../post/66.html">جواب نظرسنجی!!!!!!!!!!</a></font></div>
+<div class=div58><font class=text7>جمعه 13 مرداد 1391 :: نویسنده : <a href="../post/author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">سلاااااااام</span></span><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">واین هم جواب نظر سنجی بهترین بازیکن والیبال:   </span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/86.gif"></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">به وضوح میبینیم که تو بین این همه اقایون مدعی والیبالیست جناب</span><span class="Apple-style-span" style="font-size: large;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);"> اقای داداش</span></span><span class="Apple-style-span" style="font-size: medium;"> (مهدی مهدوی) </span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">با بیشترین رای که به خودش اختصاص داده نشون داد اوله!!!</span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/67.gif"> </span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">البته ما به بقیه اقایون هم احترام میزاریم وبه ترتیب سن بعد از داداش دوم تا اخرن!!!!!!!!!!!!!!!!!!!!!!</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/24.gif"></span></span><br></div><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(66)">نظرات (<script>setCommentCnt(66)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../post/65.html">تیراندازی در محل تمرین پرسپولیس!</a></font></div>
+<div class=div58><font class=text7>چهارشنبه 11 مرداد 1391 :: نویسنده : <a href="../post/author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4>
+<span class="Apple-style-span" style="font-family: Tahoma; font-size: 13px; "><div style="direction: rtl; "><div class="body" style="text-align: justify; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; font: normal normal normal 13px/normal Tahoma, Arial; font-weight: normal; color: rgb(0, 0, 0); margin-top: 10px; line-height: 180%; "><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">تمرین تیم فوتبال پرسپولیس بعدازظهر امروز تحت تاثیر یک اتفاق عجیب پیگیری شد.<span class="Apple-style-span" style="font-family: Tahoma; font-size: 13px; "><img src="http://mihanblog.com/public/public/rte/images_new/smiles/86.gif"></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> </span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">به گزارش خبرگزاری فارس، تمرین تیم فوتبال پرسپولیس پس از تساوی برابر گهر از ساعت 18:30 و پشت درهای بسته در ورزشگاه درفشی‌فر دنبال شد. در این تمرین بازیکنان اصلی در بازی روز گذشته همراه با یک توپ دور زمین ریکاوری کردند و بازیکنان ذخیره به کارهای سرعتی و تاکتیکی پرداختند.</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);">*</span> قبل از تمرین امروز مقابل ورزشگاه درفشی‌فر اتفاق عجیبی رخ داد. چند فرد مسلح برای گرفتن یک ماشین 206 در مقابل ورزشگاه درفشی‌فر با این افراد درگیر شدند. این خودرو قصد فرار داشت اما ماموران با شلیک چند گلوله این خودرو را متوقف کردند. این موضوع تعجب برخی بازیکنان پرسپولیس را در بر داشت.</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);">*</span> امیر حسین فشنگچی در هنگام ورود به ورزشگاه با یک خودرو تصادفی جزئی کرد اما مشکلی پیش نیامد.<span class="Apple-style-span" style="font-family: Tahoma; font-size: 13px; "><img src="http://mihanblog.com/public/public/rte/images_new/smiles/42.gif"></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);">* </span>سوسا یک ساعت قبل از تمرین امروز در کلینک باشگاه حضور داشت و زیر نظر دکتر چشمه سری به تمرین پرداخت. سوسا امروز بعد از ظهر از زانوی مصدومش MRI گرفت و فردا قرار است نتیجه را بگیرد.</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);">*</span> یک هوادار بروجردی که ناشنوا بود در تمرین امروز حضور پیدا کرد و با آوردن پلاکاردی با این مضمون که "در روزهای تاریک پرسپولیس و در ژرفای تابناک و در غروب غم انگیز پرسپولیس علی کریمی، تو دل روشن پرسپولیس هستی" آن را به کریمی داد.<span class="Apple-style-span" style="font-family: Tahoma; font-size: 13px; "><img src="http://mihanblog.com/public/public/rte/images_new/smiles/41.gif"></span></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);">*</span> فیلم بازی با گهر و بازی‌های صبا امروز به بازیکنان و کادر فنی داده شد.</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);">*</span> دروازه‌بان‌های پرسپولیس با نصب یک سبد به تیرهای دروازه توپ را به داخل آن پرتاب می‌کردند. احمد ناجی مربی دروازه‌بان پرسپولیس تمرین دفع توپ‌های بلند را برای گلرهای پرسپولیس در نظر گرفت.</span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><br></span></span></div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="color: rgb(204, 0, 0);">*</span> علی کریمی با بازیکنان ذخیره تمرین کرد.</span></span></div></div></div></span>
+
+
+
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(65)">نظرات (<script>setCommentCnt(65)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../post/64.html">اولین پیروزی یاران حقیقی در لیگ روسیه</a></font></div>
+<div class=div58><font class=text7>سه شنبه 10 مرداد 1391 :: نویسنده : <a href="../post/author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-weight: bold; line-height: 18px; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">خبرگزاری فارس: تیم فوتبال روبین کازان روسیه اولین پیروزی خود را در لیگ این کشور به دست آورد.</span></span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/36.gif"></span></span><div><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-size: 13px; font-weight: bold; line-height: 18px;"><span class="Apple-style-span" style="color: rgb(0, 0, 0); font-family: Tahoma; font-size: 12px; font-weight: normal; "><p class="rtejustify" style="font: normal normal normal 13px/24px Tahoma; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; text-align: justify; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">به گزارش خبرگزاری فارس، در یکی از دیدارهای هفته اول لیگ روسیه تیم فوتبال روبین کازان روسیه که علیرضا حقیقی سنگربان ملی‌پوش کشورمان در اختیار دارد، موفق شد در خانه خود با نتیجه 3 بر یک الینا را شکست دهد. در این دیدار علیرضا حقیقی 90 دقیقه روی نیمکت روبین کازان روسیه حضور داشت.</span></span></p><p class="rtejustify" style="font: normal normal normal 13px/24px Tahoma; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; text-align: justify; "><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><img hspace="0" border="0" align="right" vspace="0" src="http://mmfhmm.persiangig.com/image/13901004182320_PhotoA.jpg" alt=""></span></p><p class="rtejustify" style="font: normal normal normal 13px/24px Tahoma; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; text-align: justify; "><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><br></span></p><p class="rtejustify" style="font: normal normal normal 13px/24px Tahoma; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; text-align: justify; "><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><br></span></p><p class="rtejustify" style="font: normal normal normal 13px/24px Tahoma; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; text-align: justify; "><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"> </span></p><p class="rtejustify" style="font: normal normal normal 13px/24px Tahoma; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; text-align: justify; "><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><br></span></p><p class="rtejustify" style="font: normal normal normal 13px/24px Tahoma; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; text-align: justify; "><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><br></span></p><p class="rtejustify" style="font: normal normal normal 13px/24px Tahoma; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; text-align: justify; "><span class="Apple-style-span" style="font-family: georgia; font-size: 16px;"><span class="Apple-style-span" style="font-family: Tahoma; font-size: 13px; ">روبین کازان در فصل گذشته موفق شده بود در دو جام حذفی و سوپر لیگ به مقام قهرمانی دست پیدا کند.</span><br></span></p></span></span></div><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(64)">نظرات (<script>setCommentCnt(64)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../post/62.html">گشت وگذار در ترکیه!!!</a></font></div>
+<div class=div58><font class=text7>دوشنبه 9 مرداد 1391 :: نویسنده : <a href="../post/author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4>
+<span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;">سلاااااام  دوستای گلم</span></span><div><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;">خودتون ببینید دیگه.........................</span></span></div><div><br></div><div><br></div><div><br></div><div><img hspace="0" border="0" align="right" vspace="0" src="http://mmfhmm.persiangig.com/image/2012070622443926.jpg" alt=""></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;">یکم بیشتر تا میدادی!!!</span></span><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/21.gif"></span></span></div><div> </div><div><br></div><div><br></div><div><img hspace="0" border="0" align="right" vspace="0" src="http://mmfhmm.persiangig.com/image/2012070622443923.jpg" alt=""></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div> </div><div><br></div><div></div><div> </div><div><br></div><div><br></div><div><br></div><div> </div><div><br></div><div><br></div><div><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;">کجایی من نیم ساعته  اینجا موندم؟</span></span><span class="Apple-style-span" style="font-size: medium;"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/80.gif"></span></span></div><div><br></div><div><br></div><div><br></div><div><img hspace="0" border="0" align="right" vspace="0" src="http://mmfhmm.persiangig.com/image/2012070622443929.jpg" alt=""></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><img src="http://mihanblog.com/public/public/rte/images_new/smiles/85.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/85.gif"></div><div><br></div><div><br></div><div><br></div><div><img hspace="0" border="0" align="right" vspace="0" src="http://mmfhmm.persiangig.com/image/2012070622444035.jpg" alt=""></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div> </div><div><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">ای جاااااااان!!!!</span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"></span></span></div><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(62)">نظرات (<script>setCommentCnt(62)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../post/61.html">علیرضا حقیقی در تمرینات روبین کازان</a></font></div>
+<div class=div58><font class=text7>یکشنبه 8 مرداد 1391 :: نویسنده : <a href="../post/author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4>
+سلام بچه ها چطورید؟؟؟ <img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"><div>اینا یه سری از عکس های علیرضا در تمریناتشه..  باید زودتر از اینا میذاشتم.<img src="http://mihanblog.com/public/public/rte/images_new/smiles/77.gif"></div><div>دیگه شرمنده.....</div><div><br><br><img hspace="0" border="0" align="right" vspace="0" src="http://mmfhmm.persiangig.com/image/haghighi-1.jpg" alt=""></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div>1.2.3 شوووووووووووووووووووووووووووووت!!!</div><div><br></div><div><br></div><div><br></div><div><br></div><div><img hspace="0" border="0" align="right" vspace="0" src="http://mmfhmm.persiangig.com/image/haghighi-2.jpg" alt=""></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div>ای جان.....نگاش کن....<img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"></div><div><br></div><div><br></div><div><br></div><div><img hspace="0" border="0" align="right" vspace="0" src="http://mmfhmm.persiangig.com/image/haghighi-3.jpg" alt=""></div><div><br> </div>
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(61)">نظرات (<script>setCommentCnt(61)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../post/60.html"> دو هافبک ترکیه ای و اسپانیایی همبازی حقیقی در روبین کازان روسیه</a></font></div>
+<div class=div58><font class=text7>یکشنبه 8 مرداد 1391 :: نویسنده : <a href="../post/author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4> <span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Tahoma; "><font size="3"> </font><font><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">واحد مرکزی خبر:</span></span></font><p align="justify"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">دو هافبک ترکیه ای و اسپانیایی به تیم فوتبال روبین قازان روسیه منتقل شدند.<br>به گزارش یوفا ، گوخان توره هافبک ترکیه ای و پابلو اورباییس هافبک سابق تیم ملی اسپانیا قراردادهای خود را با روبین کازان امضا کردند.<br>توره 20 ساله که در آلمان متولد شده ، با قراردادی 4 ساله از تیم هامبورگ راهی روسیه شد.او 10 بازی در تیم ملی ترکیه انجام داده و فصل قبل تنها در 22 بازی برای هامبورگ به میدان آمد. </span></span></p><p align="justify"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">اورباییس 33 ساله پس از جدایی از تیم آتلتیک بیلبائو قراردادی 12 ماهه با روبین کازان امضا کرد. وی سابقه بازی در اوساسونا را هم دارد و 4 بار پیراهن تیم اسپانیا را به تن کرده است.اورباییس فصل گذشته را به صورت قرضی در المپیاکو یونان سپری کرد. </span></span></p><p align="justify"><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">تیم روبین کازان علیرضا حقیقی دروازه بان ایرانی را نیز در اختیار دارد.<span class="Apple-style-span" style="font-family: Tahoma; font-size: 11px; "><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"></span></span></span></p></span><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(60)">نظرات (<script>setCommentCnt(60)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="../post/59.html">لیگ روسیه اغاز شد</a></font></div>
+<div class=div58><font class=text7>یکشنبه 8 مرداد 1391 :: نویسنده : <a href="../post/author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><span class="Apple-style-span" style="line-height: 30px; "><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> </span></span><span class="Apple-style-span" style="line-height: normal; "><span style=""><span style="text-align: justify; widows: 2; text-transform: none; text-indent: 0px; display: inline !important; font-style: normal; font-variant: normal; font-weight: normal; line-height: 30px; white-space: normal; orphans: 2; float: none; letter-spacing: normal; color: rgb(0, 0, 0); word-spacing: 0px; "><span style=""><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">به گزارش رویترز ،</span></span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> </span></span><span style=""><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">در نخستین دیدار فصل تیم لوکوموتیو مسکو 3 - 2 در خانه موردوفیا به برتری رسید.</span></span></span></span></span><span style="text-align: justify; widows: 2; text-transform: none; text-indent: 0px; display: inline !important; font-style: normal; font-variant: normal; font-weight: normal; line-height: 30px; white-space: normal; orphans: 2; float: none; letter-spacing: normal; color: rgb(0, 0, 0); word-spacing: 0px; "><span style=""><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">در این رقابت ها تیم روبین کازان با علیرضا حقیقی نیز حضور دارد که بر طبق برنامه اولین بازی</span></span></span><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;"> </span></span><span style=""><span class="Apple-style-span" style="font-family: georgia, 'times new roman', times, serif;"><span class="Apple-style-span" style="font-size: medium;">این تیم روز دوشنبه 2 مرداد برابر تیم کراسنودار برگزار خواهد شد. <img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"></span></span></span></span></span></span><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(59)">نظرات (<script>setCommentCnt(59)</script>)</a></font></div>
+</div>
+</div>
+<div class=div29></div>
+<div class=div28><font class=text4>
+<br><br>
+( کل صفحات : 19 )   
+<a href="11.html" class=text4><i>...</i></a>   <a href="12.html" class=text4><span>12</span></a>   <a href="13.html" class=text4><span>13</span></a>   <a href="14.html" class=text4><span>14</span></a>   <a href="15.html" class=text4><b>15</b></a>   <a href="16.html" class=text4><span>16</span></a>   <a href="17.html" class=text4><span>17</span></a>   <a href="18.html" class=text4><span>18</span></a>   <a href="19.html" class=text4><i>...</i></a>   </font>
+</div>
+
+</td>
+<td class=div0> </td>
+<td class=div3> </td>
+</tr>
+<tr>
+<td class=div2 valign=top>
+
+ </td>
+
+<td class=div01 valign=top>
+<div class=div6></div>
+<div class=div7>
+<a href="http://www.payamblog.com" target="_blank">
+<img src="http://payamblog.com/tem/16/blank.gif" border=0 width=189 height=35></a></div></td>
+<td class=div0> </td>
+<td class=div3> </td>
+</tr>
+</table>
+</div><div id="seo"><h1><a title="قالب بلاگفا" href="http://blogfa.payamblog.com/">قالب بلاگفا</a></h1><h2><a title="قالب وبلاگ"  href="http://www.payamblog.com">قالب وبلاگ</a></h2><h2><a title="vpn" href="http://www.purchasevpn.com">purchase vpn</a></h2><h2><a title="بازی اندروید"  href="http://www.download0098.com/category/mobile/android-games/">بازی اندروید</a></h2></div><script type=text/javascript>document.getElementById('s'+'e'+'o').style.display='none';</script>
+
+</body>
+
+</html>
+
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'we--plus.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.targetedwebtraffic.com" target="_blank">Buy Website Traffic</a> | <a href="https://www.seo25.com" target="_blank">Buy Targeted Website Traffic</a>
+    </div>
+</center>

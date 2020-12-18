@@ -1,0 +1,2433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://commentsender.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*2132101*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[1]='0';commentCnt[2]='0';commentCnt[3]='0';commentCnt[4]='0';commentCnt[5]='0';commentCnt[6]='0';commentCnt[7]='0';commentCnt[8]='0';commentCnt[9]='0';commentCnt[10]='0';commentCnt[11]='1';commentCnt[12]='0';commentCnt[13]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','13');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','سه شنبه 26 دی 1396');
+	
+	setStatVar('today_view','0');
+	setStatVar('yesterday_view','3');
+	
+	setStatVar('this_month_view','85');
+	setStatVar('last_month_view','76');
+
+	setStatVar('total_view','3074');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (14:07)');
+
+
+
+    
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://commentsender.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="../commentsender.mihanblog.com/'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://commentsender.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://commentsender.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://commentsender.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://commentsender.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://commentsender.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://commentsender.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://commentsender.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://commentsender.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://commentsender.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://commentsender.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://commentsender.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://commentsender.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://commentsender.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://commentsender.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://commentsender.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<style>
+
+    /*
+    Theme Name: Gossip City
+    Theme URI: http://wp-themes.designdisease.com/
+    Description: Designed by <a href="http://www.designdisease.com">Elena G.</a> for  <a href="http://www.celebrific.com">Celebrific</a>
+    Version: 2
+    Author: Design Disease
+    Author URI: http://wp-themes.designdisease.com/
+    */
+
+
+body { background: #FFFFFF; font-family: tahoma,Verdana, Arial, Helvetica, sans-serif; font-size: 12px; padding: 0px; margin: 0px; color:#35383d;}
+
+html { padding: 0; margin: 0;}
+
+a:link { text-decoration: none; color : #ff3399; border: 0px; -moz-outline-style: none;}
+a:active { text-decoration: underline; color : #ff3399; border: 0px; -moz-outline-style: none;}
+a:visited { text-decoration: none; color : #ff3399; border: 0px; -moz-outline-style: none;}
+a:hover	{ text-decoration: underline; color : #0099cc; border: 0px; -moz-outline-style: none;}
+a:focus { outline: none;-moz-outline-style: none;}
+
+h1, h2, h3, h4 { font-family: Verdana,Arial, Helvetica, sans-serif;}
+
+img { padding: 0px; margin: 0px; border: none; text-align: center; max-width:455px;}
+hr { border-left:0px solid #abb0b5; border-right:0px solid #abb0b5; border-top:1px dotted #abb0b5; border-bottom:0px solid #abb0b5; height : 1px;  }
+
+form { padding: 0px; margin: 0px;}
+input { font-family: 'Verdana'; color: #282b31; font-size: 11px;}
+textarea { font-family: 'Verdana'; color: #282b31; font-size: 11px;}
+select { font-family: 'Verdana'; color: #282b31; font-size: 11px;}
+
+    /* Header +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.HBG { background: url(http://mihanblog.com/public/public/user_data/template/19/images/HeaderBkg.gif) repeat-x center top; width: 100%; float: left;}
+
+    /**/ * html .Header { height: 140px;} /* */
+.Header { background: url(http://mihanblog.com/public/public/user_data/template/19/images/Stars.gif) no-repeat top left; width: 900px; margin: 0 auto; position:relative; min-height: 140px;}
+
+
+.Header .LogoImg { position: absolute; top: 56px; right: 0px;}
+.Header .LogoImg h1 {direction:rtl;text-align:right; margin: 0; padding: 0;padding-top:20px;}
+.Header .LogoImg h1 a { display: block; }
+
+.Header .LogoText h1 { font-size: 42px; line-height: 42px; letter-spacing: -2px; padding: 0px 0px 0px 35px; margin: 0px; font-weight: bold; font-family: 'Arial'; background: url(http://mihanblog.com/public/public/user_data/template/19/images/LogoIcon.png) no-repeat left top; position: absolute; top: 70px;}
+.Header .LogoText a { color:#000066; text-decoration: none; }
+.Header .LogoText a:visited { color:#000066; text-decoration: none; }
+.Header .LogoText a:hover { color:#000066; text-decoration: none; }
+
+.Header .Desc { right:0px;position: absolute; top: 20px; color:#fff; font-size: 16px; line-height: 16px; font-weight: bold; letter-spacing: -1px; font-family: tahoma; padding: 0px; margin: 0px; }
+
+
+
+.SUBH {direction:ltr; background: #f3e4eb url(http://mihanblog.com/public/public/user_data/template/19/images/MRight.gif) no-repeat right top; margin: 0 auto; width: 900px; padding: 0px; position: relative; height: 41px}
+
+    /* Menu +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Menu { direction:rtl;background: #f3e4eb url(http://mihanblog.com/public/public/user_data/template/19/images/MLeft.gif) no-repeat left top; width: 880px; padding: 0px; height: 41px}
+.Menu em { display: none}
+.Menu ul { float:right;list-style: none; margin: 0px; padding: 12px 0px 0px 15px;}
+.Menu ul li { padding: 0px 5px 0px 5px; margin: 0px; display: inline; font-size: 11px; border-left: solid 1px #b092a2; }
+.Menu ul li a { color:#660033;}
+.Menu ul li ul { display: none;}
+
+
+    /* Syndicate +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Syn { position:absolute; left: 215px; top: 14px; }
+.Syn ul { margin: 0px; padding: 0px;}
+.Syn li { background: url(http://mihanblog.com/public/public/user_data/template/19/images/SynIco.png) no-repeat left center; margin: 0px 5px 0px 0px; padding: 3px 0px 3px 15px; list-style-type: none; font-size: 10px; color:#cc0066; display: inline; font-weight: bold;}
+.Syn li a {}
+
+    /* Search ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Search { background: url(http://mihanblog.com/public/public/user_data/template/19/images/Search.gif) no-repeat right top; position: absolute; top: 10px; left: 0px; width: 195px; padding: 0px 0px 0px 0px; height: 34px; }
+.Search form { padding: 2px 0px 0px 0px; margin: 0px;}
+.Search input { height:18px;border: none; color: #330033; font-size: 11px;}
+
+.Search  input.keyword {margin-left:32px;direction:rtl;background: none; border: none; padding: 3px 2px 2px 0px; width: 160px; border: none; color:#fff; }
+.Search  input.search { width: 19px; background: url(http://mihanblog.com/public/public/user_data/template/19/images/SearchButton.gif) no-repeat;}
+
+.Search .bt { padding: 0px; margin: 0px; top: 0px; background: none; position: absolute; left: 0px; }
+
+
+    /* Container +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.CONBG { width: 100%; float: left; }
+.CON { width: 900px; position: relative; margin: 0 auto; padding: 0px; margin-top: 25px;text-align:right;}
+
+    /* Side Central Single +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SCS { width: 455px; float: left; padding: 0px 0px 20px 0px;}
+.SCS h1 { font-size: 26px; font-weight: normal; letter-spacing: -1px; border-bottom: solid 1px #d0c1c1; padding-bottom: 15px; padding-top: 0px; margin-top: 0px; color:#000066;}
+.SCS h2 { font-size: 18px; font-weight: normal; }
+.SCS h3 { font-size: 14px; font-weight: bold; }
+
+.SCS { padding: 0px; font-size: 11px; line-height: 1.4em ; color:#63565f;}
+.SCS p { font-size: 11px; line-height: 1.4em; color:#63565f;}
+.SCS p strong {}
+.SCS img {}
+.SCS ul { padding: 10px 0px; margin: 0px; }
+.SCS li { padding: 3px 0px 3px 15px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/19/images/PostContentLiIco.png) no-repeat left top; font-size: 12px; line-height: 16px; color:#63565f; }
+.SCS blockquote { padding: 5px 25px; margin: 0px; color:#993366; font-family: 'Georgia'; font-style: italic; border-top: dashed 1px #cc99cc; border-bottom: dashed 1px #cc99cc; }
+.SCS blockquote p { font-size: 13px; padding: 5px 0px; margin: 5px 0px; line-height: 18px; color:#993366; }
+.SCS blockquote li { padding: 3px 0px 3px 15px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/19/images/PostContentBlockLiIco.png) no-repeat left top; font-size: 13px; line-height: 18px; color:#993366; }
+
+    /* Side Central +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SC { margin:0px;width: 455px; float: right; padding: 0px 0px 20px 0px;direction:rtl;}
+.SC h2 { font-weight: normal;}
+.pagetitle { font-size: 26px; font-weight: normal; letter-spacing: -1px; border-bottom: solid 1px #d0c1c1; padding-bottom: 15px; padding-top: 0px; margin-top: 0px; color:#000066;}
+
+    /* Post +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Post {border-bottom:0px dashed #ccc;width:455px;overflow:hidden;padding: 20px 0px; position: relative;border-bottom:1px dotted #CC3366;}
+
+.PostHead h1 { font-size: 24px; line-height: 24px; letter-spacing: -1px; font-weight: bold; padding: 0px 1px 1px 0px; margin: 0px; color:#000066;}
+.PostHead h1 a { color: #cc3366; text-decoration: none;}
+.PostHead h1 a:visited { color: #cc3366; text-decoration: none;}
+.PostHead h1 a:hover { color:#ff0066; text-decoration: none;}
+
+.PostTime { right:3px;padding: 1px 0px; margin: 0px; font-size: 11px; color:#999; font-weight: bold; font-family: tahoma,arial; position: absolute; letter-spacing:0px; top: 0px; text-transform: lowercase;}
+
+.PostDet { padding: 1px 0px; margin: 0px; font-size: 10px; color:#cc9966; font-weight: bold;}
+.PostDet a { color:#cc9966; text-decoration: underline;}
+.PostDet a:visited { color:#cc9966; text-decoration: underline;}
+.PostDet a:hover { color:#cc9966; text-decoration: none;}
+
+.PostContent {padding: 10px 0px 0px 0px; font-size: 11px; line-height: 1.4em ; color:#63565f;}
+.PostContent p { font-size: 11px; line-height: 1.4em; color:#63565f;}
+.PostContent p strong {}
+.PostContent img {}
+.PostContent ol { padding: 10px 0px 10px 25px; margin: 0px; }
+.PostContent ol li { padding: 2px 0px 2px 0px; font-size: 11px; line-height: 15px; color:#63565f; }
+.PostContent ul { padding: 10px 0px; margin: 0px; }
+.PostContent ul li { padding: 2px 0px;list-style-image: url(http://mihanblog.com/public/public/user_data/template/19/images/PostContentLiIco.png); font-size: 11px; line-height: 15px; color:#63565f;}
+.PostContent blockquote { padding: 5px 0px; margin: 0px; color:#993366; font-style: italic; border-top: dashed 1px #cc99cc; border-bottom: dashed 1px #cc99cc; }
+.PostContent blockquote p { font-size: 11px; padding: 3px 0px; margin: 3px 0px; line-height: 15px; color:#993366; }
+.PostContent blockquote li { padding: 2px 0px 2px 15px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/19/images/PostContentBlockLiIco.png) no-repeat left top; font-size: 11px; line-height: 15px; color:#993366; }
+.PostContent a { text-decoration: underline;}
+
+.PostCom { padding-top: 15px;}
+.PostCom ul { padding: 0px; margin: 0px;}
+.PostCom li { float:left;padding: 5px 24px 5px 0px; margin: 0px; list-style-type: none; color:#336699; font-size: 12px; background: url(http://mihanblog.com/public/public/user_data/template/19/images/PostCom.png) no-repeat right center; }
+.PostCom li.noBg { background: transparent; } 
+.PostCom li a { text-decoration: underline; }
+
+
+    /* Note ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.Note { padding: 0px; margin: 0px;}
+.Note li { padding: 3px 0px 3px 15px; margin: 0px; list-style-type: none; font-size: 12px;}
+.NoteRss { background: url(http://mihanblog.com/public/public/user_data/template/19/images/NoteRss.png) no-repeat left top;}
+.NoteTrackBack { background: url(http://mihanblog.com/public/public/user_data/template/19/images/NoteTrackBack.png) no-repeat left top;}
+
+    /* TrackbackList ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.TrackList { background: #f4ebef url(http://mihanblog.com/public/public/user_data/template/19/images/TrackListBottom.gif) no-repeat bottom; padding: 15px; margin-top: 20px; position:relative;}
+.TrackListTop { background: #f4ebef url(http://mihanblog.com/public/public/user_data/template/19/images/TrackListTop.gif) no-repeat top; position: absolute; top: 0px; left: 0px; width: 455px; height:10px; }
+.TrackList h3 { font-size: 14px; font-weight: bold; margin: 0px 0px 5px 0px; padding: 0px 0px 5px 0px; color:#333366; letter-spacing: -1px; border-bottom: dashed 1px #beb4c1;}
+.TrackList ul { padding: 0px; margin: 0px;}
+.TrackList li { padding: 0px 0px 0px 10px; margin: 0px; list-style-type: none; font-size: 11px; background:url(http://mihanblog.com/public/public/user_data/template/19/images/TrackListIco.gif) no-repeat left top;}
+.TrackList li a { color:#cc3366; }
+
+    /* Navigation - PlugIn +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.NavEnd {width:32px;height: 33px;float:right;background:#cde7f7 url(http://mihanblog.com/public/public/user_data/template/19/images/NavEnd.gif) no-repeat right 0%;   margin: 0px; margin-top:15px;}
+    /*.NavEnd { background: url(http://mihanblog.com/public/public/user_data/template/19/images/NavEnd.gif); width: 15px; height: 33px; position: absolute; top: 0px; margin: 0px; right: 0px;}*/
+
+
+.Nav {float:right;width:410px;height:33px;font-size: 11px; background: #cde7f7 url(http://mihanblog.com/public/public/user_data/template/19/images/NavLeft.gif) no-repeat left top; color:#003366;margin-top:15px;}
+.Nav div{width:390px; padding:10px 10px 0 0;}
+    /*.Nav {height:13px;font-size: 11px; background: #cde7f7 url(http://mihanblog.com/public/public/user_data/template/19/images/NavLeft.gif) no-repeat left top; padding: 10px; color:#003366; position: relative;}*/
+
+.Nav a { padding: 1px 6px 1px 4px; border-left: solid 1px #91bdd8; font-size: 11px;}
+.Nav a:visited { padding: 1px 6px 1px 4px; border-left: solid 1px #91bdd8;}
+.Nav a:hover { padding: 1px 6px 1px 4px; border-left: solid 1px #91bdd8; text-decoration: none;}
+.Nav span { color:#6666;}
+.Nav b {font-size: 11px; color:#003366;text-decoration:underline;}
+
+    /* Comments ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Comments { margin: 20px 0px 0px 0px;}
+.Comments h3 { font-size: 16px; font-weight: bold; margin: 0px 0px 5px 0px; padding: 5px 0px; color:#999; letter-spacing: -1px; border-bottom: dashed 1px #999;}
+
+    /* Comments List  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.List h3 { font-size: 16px; font-weight: bold; margin: 0px 0px 5px 0px; padding: 5px 0px; color:#999; letter-spacing: -1px; border-bottom: dashed 1px #999;}
+.List ol { padding: 0px; margin: 0px;}
+.List li { position: relative; padding: 65px 5px 10px 5px; margin: 0px 0px 10px 0px; list-style-type: none;}
+.List .ComListLi { background: #fff4c3 url(http://mihanblog.com/public/public/user_data/template/19/images/ComListLiBottom.gif) no-repeat left bottom; }
+    /**/ * html .List .ComListLiTop { left: -5px;} /**/
+.List .ComListLiTop { position: absolute; background: url(http://mihanblog.com/public/public/user_data/template/19/images/ComListLiTop.gif) no-repeat left top; height: 73px; width: 455px; left: 0px; top: 0px; padding: 35px 0px 0px 0px;}
+
+    /**/ * html .List .ListNr { right: 25px;} /**/
+.List .ListNr { color:#dfd08f; position: absolute; top: 35px; font-size: 28px; line-height: 28px; font-family: 'Arial'; font-weight: normal; letter-spacing: -1px; padding: 0px; right: 25px; }
+
+    /**/ * html .List .ListGrav { left: 10px;} /* */
+.List .ListGrav { position: absolute; top: 35px; left: 15px;}
+.List .ListGrav img { border: solid 1px #fff;}
+
+.List big { margin: 0px; padding: 2px 0px 2px 55px; font-size: 14px; line-height: 14px; letter-spacing: -1px; color:#996633; font-weight: bold; display: block; font-family: 'Arial';}
+.List small { color:#996633; padding: 2px 0px 2px 55px; margin: 0px; font-size: 11px; }
+.List small a { color:#996633; text-decoration: none;}
+.List small a:visited { text-decoration: none;}
+
+.List .ListContent { margin: 15px 0px 0px 0px; padding: 5px 10px; font-size: 11px; line-height: 15px; background: #fff url(http://mihanblog.com/public/public/user_data/template/19/images/ComListContent.gif) no-repeat left top; display: block;}
+.List .ListContent blockquote { padding: 0px 15px; margin: 0px; color:#cc6600; font-family: 'Georgia'; font-style: italic; border-top: dashed 1px #cc6600; border-bottom: dashed 1px #cc6600; }
+.List .ListContent blockquote p { font-size: 12px; padding: 5px 0px; margin: 5px 0px; line-height: 16px; color:#cc6600; }
+.List .ListContent ul { padding: 0px; margin: 0px; }
+.List .ListContent ul li { padding: 0px; list-style-type: none; background: none; font-size: 11px; line-height: 13px; color:#63565f; }
+
+    /* Comments Form ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Comments .Form { background: #f9c6c6 url(http://mihanblog.com/public/public/user_data/template/19/images/ComFormBottom.gif) no-repeat left bottom; padding: 10px 15px 15px 15px; position: relative;}
+    /**/ *html .Comments .FormTop  { left: -15px;} /**/
+.Comments .FormTop { background: url(http://mihanblog.com/public/public/user_data/template/19/images/ComFormTop.gif) no-repeat left top; position: absolute; top: 0px; left: 0px; width: 504px; height: 7px;}
+.Comments .Form form {margin: 0px; padding: 0px;}
+.Comments .Form a { text-decoration: underline;}
+.Comments .Form p { padding: 0px 0px 2px 0px; margin: 0px; color:#330000; }
+.Comments .Form p small strong { font-size: 10px; font-weight: bold; color:#FF3300;}
+.Comments .Form p small { font-size: 13px; display: block; padding: 5px 0px;}
+.Comments .Form .TextField { background: #fff; border: solid 2px #e2a3a3; padding: 6px; font-size: 12px; display: block;}
+.Comments .Form .TextArea { background: #fff; border: solid 2px #e2a3a3; padding: 6px; font-size: 12px;}
+
+.Comments .Form input.SubmitComment { width: 204px; height: 26px; background: url(http://mihanblog.com/public/public/user_data/template/19/images/SubmitComment.png) no-repeat; margin-top: 8px;}
+.Comments .Form input.SubmitComment:hover { background: url(http://mihanblog.com/public/public/user_data/template/19/images/SubmitComment.png) no-repeat 0 -26px; margin-top: 8px;}
+.Comments .Form input.SubmitCommentIE { width: 204px; height: 26px; background: url(http://mihanblog.com/public/public/user_data/template/19/images/SubmitComment.png) no-repeat 0 -26px; margin-top: 10px; margin-top: 8px;}
+
+
+    /* Side Right +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SR { width: 415px; float: left; position: relative; padding: 0px 0px 20px 0px; }
+.SR h2 { font-size: 14px; letter-spacing: -1px; font-weight: bold; background: url(http://mihanblog.com/public/public/user_data/template/19/images/SRH3.png) repeat-x left bottom; color:#666; padding: 5px 0px 5px 0px; margin: 0px; border-bottom: dashed 1px #efe4e4; }
+.SR h3 { font-size: 15px; letter-spacing: -1px; font-weight: bold; background: url(http://mihanblog.com/public/public/user_data/template/19/images/SRH3.png) no-repeat right center; color:#666; padding: 5px 20px 5px 0; margin: 0px; border-bottom: dashed 1px #efe4e4; }
+
+
+.SR ul { margin: 0px; padding: 0px;}
+.SR li { margin: 0px; padding: 2px 20px 3px 0px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/19/images/CategLi.png) no-repeat right top; border-bottom: dashed 1px #efe4e4; font-size: 11px;}
+.SR li a { color:#cc3366; }
+.SR li a:visited { color:#cc3366; }
+.SR li a:hover { color:#cc0066;}
+
+.SR .simple li {list-style:none;background:none;}
+
+
+
+    /* Side Right Left +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.SRL { direction:rtl;width: 230px; float: right; padding: 0px;}
+
+    /* Side Right Right +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.SRR { direction:rtl;width: 160px; float: left; padding: 0px;}
+.SRR .about_box {line-height:15px;}
+.SRR .about_box #user_logo img{width:150px;height:150px;margin-bottom:10px;margin-top:5px}
+
+    /* Categories +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Categ {}
+
+.Categ ul { margin: 0px; padding: 0px;}
+.Categ ul li { margin: 0px; padding: 1px 20px 2px 0px; list-style-type: none; font-size: 11px; background: url(http://mihanblog.com/public/public/user_data/template/19/images/CategLi.png) no-repeat right top; border-bottom: dashed 1px #efe4e4; color:#999;}
+.Categ ul li a { color:#cc0066;}
+.Categ ul li a:visited { color:#cc0066;}
+.Categ ul li a:hover { color:#663366;}
+
+.Categ ul ul { margin: 2px 0px 0px 0px; padding: 0px; list-style-type: none; background: none; border-bottom: none;}
+.Categ ul li li { margin: 0px; padding: 1px 0px; list-style-type: none; background: none; border-bottom: none; font-size: 10px; }
+.Categ ul li li a { color:#ff6699;}
+.Categ ul li li a:visited { color:#ff6699;}
+.Categ ul li li a:hover { color:#663366;}
+
+    /* Flickr RSS - PlugIn ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Flickr { margin-bottom: 10px;}
+.Flickr h3 { background: url(http://mihanblog.com/public/public/user_data/template/19/images/FlickrH3.gif) no-repeat left center; padding: 5px 0px 5px 20px; margin: 0px; color:#ff3366; letter-spacing: -1px; font-size: 14px; font-weight: bold;}
+.Flickr ul { padding: 10px 0px; margin: 0px;}
+.Flickr li { background: none; padding: 0px; margin: 0px 6px 0px 0px; list-style-type: none; display: inline; border-bottom: none;}
+.Flickr li a img { background: #fff; padding: 1px; border: solid 4px #d4e7f2; width: 53px; height: 53px; margin-bottom: 5px;}
+.Flickr li a:hover img { background: #fff; padding: 1px; border: solid 4px #ff3366; margin-bottom: 5px;}
+
+
+
+    /* Extra ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.EBG {direction:rtl;background: url(http://mihanblog.com/public/public/user_data/template/19/images/ExtraBkg.gif); width: 100%; float: left; border-top: solid 1px #ecdce3; border-bottom: solid 1px #ecdce3; padding: 20px 0px;}
+.Extra { width: 90%; margin: 0 auto;}
+
+    /* Latest Comments  - PlugIn ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Cols { width: 250px; float: left;margin:0 0 0 45px;}
+.Cols h3 { font-size: 16px; margin: 0px; color:#333366; letter-spacing: -1px; padding-bottom: 10px; border-bottom: dashed 1px #beb4c1; }
+.Cols ul { margin: 0px; padding: 10px 0px 0px 0px;}
+.Cols li { display: block; color:#333366; margin: 0px; padding: 2px 15px 3px 0px; list-style-type: none; font-size: 11px; background: url(http://mihanblog.com/public/public/user_data/template/19/images/LatestCom.png) no-repeat right top; font-size: 11px; }
+.Cols li a { font-size: 11px; font-weight: normal; color:#cc3366;}
+
+.Cols .stat span {color:#CC3366;}
+
+    /* Footer ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.FBG { background: #fff; width: 100%; float: left; padding: 10px 0px;}
+.Footer { width: 860px; margin: 0 auto; background: url(http://mihanblog.com/public/public/user_data/template/19/images/FooterIco.png) no-repeat left center; padding: 10px 0px 10px 40px;}
+.Footer p { font-size: 10px; color:#706c79; padding: 0px; margin: 0px; }
+.Footer strong { font-size: 9px;}
+.Footer strong a{text-decoration:none}
+.Footer a,.Footer a:visited { color:#706c79}
+
+
+.owner_photo{
+    color:#fff;
+    float:right;
+    margin:5px 5px 5px 17px;
+
+}
+
+.clearfix {display: inline-block;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+
+.cloud{
+    margin:0;
+    padding:0;
+    width:600px;
+}
+.cloud a:link {
+    color:#cc3366;
+}
+
+.search_btn{
+    margin:2px 11px;
+    background: url(http://mihanblog.com/public/public/user_data/template/19/images/SearchButton.gif) no-repeat 0px 0px;
+    width:19px;
+}
+.btn_general{
+    margin:2px 11px;
+    background-color:#f3e4eb;
+    -x-system-font:none;
+    color:#005773;
+    cursor:pointer;
+    float:none;
+    font-family:Tahoma;
+    font-size:12px;
+    font-size-adjust:none;
+    font-stretch:normal;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    height:24px;
+    line-height:normal;
+    text-align:center;
+    padding:0 3px;
+}
+
+.mihan_logo{
+    background: url(http://mihanblog.com/public/public/images/logo/poweredby.gif) no-repeat top center;
+    text-align:center;
+    height:131px;
+    margin-top:10px;
+}
+#parentheses p{
+    float:right;
+    /*color:#602600;*/
+    padding:0px;
+    margin:0px;
+    direction:rtl;
+    text-align:right;
+    text-decoration:none;
+}
+#parentheses p:hover,#parentheses a:visited,#parentheses a:hover{
+    text-decoration: underline;
+    color:#CC0066;
+}
+.cb_general{
+    line-height:20px;
+}
+
+.cb_share{
+    text-align:left;
+    padding-top:15px;
+}
+.cb_share a{
+    font-size:11px;
+    text-decoration:none
+}
+.cb_share a img{
+    padding:0 0 0 5px;
+}
+
+
+
+
+.cblike{
+    margin:4px 0px;
+}
+.cblike a {
+    float:left;
+    padding:3px;
+    text-align:center;
+    font-size:12px;
+    color:#FFF;
+    display:block;
+    line-height:15px;
+    text-decoration: none;
+}
+
+
+
+
+.cblike a.clike_plus {
+    background-color:#009900 ; /*green #039B03*/
+
+    border-radius: 5px ;
+
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    /*border:1px solid green;
+             border-right:0px;*/
+}
+.cblike a.clike_minus {
+    background-color:#CC0000;
+    border-radius: 5px ;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+    /*border:1px solid red;
+             border-left:0px;*/
+}
+.cblike a.clike_minus:hover {
+    background-color:red;
+    text-decoration: none;
+}
+.cblike a.clike_plus:hover {
+    background-color:green;
+    text-decoration: none;
+}
+.cblike a span{
+    font-weight:bold;
+    font-size:13px;
+
+    color:#fff;
+}
+
+</style>
+
+
+<title>کامنت سندر ، دانلود فیلم ایرانی</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name='description' content='' />
+<meta name='keywords' content='' />
+
+<link rel="alternate" type="application/rss+xml" title="کامنت سندر ، دانلود فیلم ایرانی" href="http://commentsender.mihanblog.com/post/rss/" />
+<link rel="alternate" type="application/atom+xml" title="کامنت سندر ، دانلود فیلم ایرانی" href="http://commentsender.mihanblog.com/post/atom/" />
+
+
+
+</head>
+
+<body>
+
+<div class="HBG">
+
+    <div class="Header"><div class="Stars"></div>
+
+        <!-- START Logo -->
+        <div class="LogoImg">
+            <h1><a href="index.html">کامنت سندر ، دانلود فیلم ایرانی</a></h1>
+
+        </div>
+        <!-- END Logo -->
+
+        <p class="Desc"></p>
+    </div>
+
+    <div class="SUBH">
+        <div class="Menu">
+            <ul>
+                <li><a href="mailto:" title="ارسال ایمیل به مدیر وب لاگ"><span>پست الکترونیک</span></a></li>
+                <li><a href="javascript:messageForm()" title="تماس با مدیر وب لاگ">تماس با ما</a></li>
+
+            </ul>
+        </div>
+
+
+        <form id="frm-16076636055fd2fff577aac" method="get" action="http://commentsender.mihanblog.com/post/search/fid/16076636055fd2fff577aac"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+            <div class="Search">
+                <input type="text" value="جستجو" name="search_text" class="keyword" onfocus="this.value='';"/>
+                <div class="bt">
+                    <input class="search_btn" type="submit" value=""/>
+                    <!--	<input name="submit" type="image" class="btn" title="Search" src="http://wp-themes.designdisease.com/testrun/wp-content/themes/wp_gossipcity2/gossipcity/images/ButtonTransparent.png" alt="Search" />-->
+                </div>
+            </div>
+        <input type="hidden" name="frm-id" value="16076636055fd2fff577aac" id="frm-id" /></form>
+        <div class="Syn">
+            <ul>
+                <li><a href="http://commentsender.mihanblog.com/post/atom/">Atom</a></li>
+
+                <li><a href="http://commentsender.mihanblog.com/post/rss/">RSS</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+<!-- END Header --><!-- Container -->
+<div class="CONBG">
+<div class="CON">
+
+<!-- Start SC -->
+
+<div class="SC">
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		    <div class="Post clearfix" id="13">
+
+        <div class="PostHead"><div class="PHT"></div>
+            <h1><a title="" href="http://commentsender.mihanblog.com/post/13" rel="bookmark">دانلود انیمیشن slugterra into the shadows 2016 با دوبله فارسی</a></h1>
+            <small class="PostTime">سه شنبه 26 دی 1396</small>
+            <small class="PostDet"> نویسنده: <a href="http://commentsender.mihanblog.com/post/author/1573429">امین مظفری</a> | </small>
+
+
+
+        </div>
+
+        <div class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://commentsender.mihanblog.com/post/13&amp;title=دانلود انیمیشن slugterra into the shadows 2016 با دوبله فارسی">
+                ارسال به <img align="top" title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+        <div class="PostContent">
+
+            <p><span class="owner_photo clearfix"></span><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><h2 style="text-align: center;">دانلود انیمیشن slugterra into the shadows 2016 با دوبله فارسی</h2><h3 style="text-align: center;"><strong>دانلود <span style="color: #ff0000;">رایگان</span> انیمیشن slugterra into the shadows 2016 با <span style="color: #008000;">لینک مستقیم</span></strong></h3><p style="text-align: center;"><span style="color: #ff0000;"><b>کیفیت 720HD + 480p قرار گرفت</b></span></p><p style="text-align: center;"><a href="http://dlrooz.com/theshadows"><img class="alignnone size-full wp-image-2566" src="http://dlrooz.com/wp-content/uploads/2018/01/2-7.jpg" alt="دانلود انیمیشن slugterra into the shadows 2016 با دوبله فارسی" width="717" height="999"></a></p><p style="text-align: center;"><span style="color: #993300;">نام انیمیشن : <span style="color: #333333;"><strong>slugterra into the shadows 2016</strong></span></span></p><p style="text-align: center;"><span style="color: #993300;"><strong>ژانر: انیمیشن </strong>&nbsp;</span></p><p style="text-align: center;"><span style="color: #993300;"><strong>مخاطب</strong> : <span style="color: #333333;">بزرگسال</span></span></p><p style="text-align: center;"><span style="color: #993300;"><strong>نوع </strong>: <span style="color: #333333;">انیمیشن</span></span></p><p style="text-align: center;"><span style="color: #993300;"><strong>محصول</strong> : </span><span style="color: #993300;">آمریکا</span></p><p style="text-align: center;"><span style="color: #993300;"><strong>کارگردان</strong> :&nbsp;<span style="color: #333333;"> asaph fip ke</span></span></p><p style="text-align: center;"><span style="color: #993300;"><strong>خلاصه <a href="http://dlrooz.com/theshadows">انیمیشن slugterra into the shadows 2016</a></strong> :<span style="color: #333333;"> داستان سرباز تازه واردی است که به تازگی وارد قبیله شین کانگ شده است و قراره با رئیس قبیله مبارزه کند</span></span></p><p>&nbsp;</p><p><!--more--></p><p style="text-align: center;"><a href="http://dlrooz.com/theshadows"><span style="color: #0000ff;"><strong>انیمیشن slugterra into the shadows 2016</strong></span></a></p><p style="text-align: center;">برای درج آخرین اخبار در کانال ما عضو شوید : &nbsp;<a href="https://t.me/dlrooz_com">DLROOZ_com@</a></p><p>دانلود دیگر انیمیشن ها »&nbsp;<a href="http://dlrooz.com/category/انیمیشن/"><span style="color: #ff0000;"><strong>دانلود انیمیشن ایرانی</strong></span></a></p><p>____________________________________</p><p><span style="color: #ff6600;"><strong>دانلود انیمیشن slugterra into the shadows 2016 با کیفیت 1080p</strong></span></p><p><a href="http://uploadboy.me/jzbec9tf9sk1/Slugterra.Into.the.Shadows.2016.1080p.WEB-DL.Farsi.{DLROOZ.COM}.mkv.html"><strong>DOWNLOAD</strong></a></p><p><span style="color: #ff6600;"><strong>دانلود انیمیشن slugterra into the shadows 2016 با کیفیت 720p</strong></span></p><p><a href="http://uploadboy.me/5nfz0toi17ix/Slugterra.Into.the.Shadows.2016.720p.WEB-DL.Farsi.{DLROOZ.COM}.mkv.html"><strong>DOWNLOAD</strong></a></p><p>&nbsp;</p><p><span style="color: #ff6600;"><strong>دانلود صوت دوبله انیمیشن slugterra into the shadows 2016</strong></span></p><p><a href="http://uploadboy.me/i5o284ubdlch/Slugterra.Into.the.Shadows.2016.Farsi.{DLROOZ.COM}.Audio.mka.html"><strong>DOWNLOAD</strong></a></p><p>____________________________________</p>
+
+
+</p>
+            <p>&nbsp;&nbsp;&nbsp;            </p><br>
+
+
+            <ul class="clearfix">
+                
+                            </ul>
+
+        </div>
+
+        <div class="PostCom">
+            <ul>
+                <li style="float:left;"><a target="_self" href="http://commentsender.mihanblog.com/post/13#commentlist" class="comment-link">نظرات(<script>setCommentCnt(13)</script>)</a>&nbsp;</li>
+                <li class="noBg" style="float: left; margin-left: 10px; margin-top: -6px;"><script>mihanblogPostLike('13','like')</script></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="12">
+
+        <div class="PostHead"><div class="PHT"></div>
+            <h1><a title="" href="http://commentsender.mihanblog.com/post/12" rel="bookmark">دانلود فیلم بلید رانر Blade Runner 2049 2017 با دوبله فارسی</a></h1>
+            <small class="PostTime">سه شنبه 26 دی 1396</small>
+            <small class="PostDet"> نویسنده: <a href="http://commentsender.mihanblog.com/post/author/1573429">امین مظفری</a> | </small>
+
+
+
+        </div>
+
+        <div class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://commentsender.mihanblog.com/post/12&amp;title=دانلود فیلم بلید رانر Blade Runner 2049 2017 با دوبله فارسی">
+                ارسال به <img align="top" title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+        <div class="PostContent">
+
+            <p><span class="owner_photo clearfix"></span><h2 style="text-align: center;">دانلود فیلم بلید رانر Blade Runner 2049 2017 با دوبله فارسی</h2><h3 style="text-align: center;"><strong>دانلود <span style="color: #ff0000;">رایگان</span> فیلم Blade Runner 2049 2017 با <span style="color: #008000;">لینک مستقیم</span></strong></h3><p style="text-align: center;"><span style="color: #ff0000;"><b>کیفیت 1080p +720HD + 480p قرار گرفت</b></span></p><p style="text-align: center;"><a href="http://dlrooz.com/bladerunner"><img class="alignnone size-full wp-image-2561" src="http://dlrooz.com/wp-content/uploads/2018/01/1-6.jpg" alt="دانلود فیلم بلید رانر Blade Runner 2049 2017 با دوبله فارسی" width="740" height="1080"></a></p><p style="text-align: center;"><span style="color: #993300;">نام فیلم : <span style="color: #333333;"><strong>Blade Runner 2049 2017</strong></span></span></p><p style="text-align: center;"><span style="color: #993300;"><strong>ژانر فیلم :</strong> <span style="color: #333333;">درام ، اکشن ، هیجان انگیز</span></span></p><p style="text-align: center;"><span style="color: #993300;"><strong>مخاطب</strong> : <span style="color: #333333;">بزرگسال</span></span></p><p style="text-align: center;"><span style="color: #993300;"><strong>نوع </strong>: <span style="color: #333333;">فیلم</span></span></p><p style="text-align: center;"><span style="color: #993300;"><strong>محصول</strong> : </span><span style="color: #993300;">آمریکا</span></p><p style="text-align: center;"><span style="color: #993300;"><strong>کارگردان</strong> :&nbsp;<strong><span style="color: #333333;">Denis Villeneuve</span></strong></span></p><p style="text-align: center;"><span style="color: #993300;"><strong>بازیگران</strong>&nbsp;:&nbsp;<span style="color: #333333;">Dave Bautista <a href="http://dlrooz.com/">,</a>Harrison Ford, Ryan Gosling, Ana de Armas</span></span></p><p style="text-align: center;"><span style="color: #993300;"><strong>خلاصه<a href="http://dlrooz.com/bladerunner"> فیلم Blade Runner 2049 2017</a></strong><a href="http://dlrooz.com/bladerunner"> :</a><span style="color: #333333;"> پس از 30 سال پلیس افسر ماجرای مشکوکی را بررسی میکند و سرنخ هایی پیدا میکند و هرچه زودتر به دنبال پیدا کردن مضنون است</span></span></p><p>&nbsp;</p><p><!--more--></p><p style="text-align: center;"><a href="http://dlrooz.com/bladerunner"><span style="color: #0000ff;"><strong>فیلم Blade Runner 2049 2017</strong></span></a></p><p style="text-align: center;">برای درج آخرین اخبار در کانال ما عضو شوید : &nbsp;<a href="https://t.me/dlrooz_com">DLROOZ_com@</a></p><p>دانلود دیگر فیلم ها »&nbsp;<a href="http://dlrooz.com/category/فیلم/"><span style="color: #ff0000;"><strong>دانلود فیلم ایرانی</strong></span></a></p><p>____________________________________</p><p><span style="color: #ff6600;"><strong>دانلود فیلم Blade Runner 2049 2017 با کیفیت 1080p</strong></span></p><p><a href="http://uploadboy.me/hcu7ohdmeb2n/Blade.Runner.2049.2017.1080p.Farsi.{DLROOZ.COM}.mkv.html"><strong>DOWNLOAD</strong></a></p><p><span style="color: #ff6600;"><strong>دانلود فیلم Blade Runner 2049 2017 با کیفیت 720p</strong></span></p><p><a href="http://uploadboy.me/s1mtmjkco6cv/Blade.Runner.2049.2017.720p.Farsi.{DLROOZ.COM}.mkv.html"><strong>DOWNLOAD</strong></a></p><p><span style="color: #ff6600;"><strong>دانلود فیلم Blade Runner 2049 2017 با کیفیت 480p</strong></span></p><p><a href="http://uploadboy.me/gpsbyqn1e5mc/Blade.Runner.2049.2017.480p.Farsi.{DLROOZ.COM}.mkv.html"><strong>DOWNLOAD</strong></a></p><p><span style="color: #ff6600;"><strong>دانلود صوت دوبله فیلم Blade Runner 2049 2017</strong></span></p><p><a href="http://uploadboy.me/xw0n0b26nhxh/Blade.Runner.2049.2017.{DLROOZ.COM}.Audio.mka.html"><strong>DOWNLOAD</strong></a></p><p>____________________________________</p><p>&nbsp;</p>
+
+
+</p>
+            <p>&nbsp;&nbsp;&nbsp;            </p><br>
+
+
+            <ul class="clearfix">
+                
+                            </ul>
+
+        </div>
+
+        <div class="PostCom">
+            <ul>
+                <li style="float:left;"><a target="_self" href="http://commentsender.mihanblog.com/post/12#commentlist" class="comment-link">نظرات(<script>setCommentCnt(12)</script>)</a>&nbsp;</li>
+                <li class="noBg" style="float: left; margin-left: 10px; margin-top: -6px;"><script>mihanblogPostLike('12','like')</script></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="11">
+
+        <div class="PostHead"><div class="PHT"></div>
+            <h1><a title="" href="http://commentsender.mihanblog.com/post/11" rel="bookmark">دانلود فیلم جشن دلتنگی</a></h1>
+            <small class="PostTime">دوشنبه 18 دی 1396</small>
+            <small class="PostDet"> نویسنده: <a href="http://commentsender.mihanblog.com/post/author/1573429">امین مظفری</a> | </small>
+
+
+
+        </div>
+
+        <div class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://commentsender.mihanblog.com/post/11&amp;title=دانلود فیلم جشن دلتنگی">
+                ارسال به <img align="top" title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+        <div class="PostContent">
+
+            <p><span class="owner_photo clearfix"></span><h2 style="text-align: center;"><span style="color: #800080;">دانلود فیلم جشن دلتنگی با&nbsp;کیفیت عالی</span></h2><h3 style="text-align: center;"><span style="color: #008000;"><a href="http://dlrooz.com/tag/دانلود-رایگان/">دانلود رایگان </a>فیلم جشن دلتنگی به کارگردانی پوریا آذربایجانی همراه با دو کیفیت</span></h3><p style="text-align: center;"><a href="http://dlrooz.com/jashne-deltangi"><img class="alignnone size-full wp-image-2444" src="http://dlrooz.com/wp-content/uploads/2018/01/cover-1.jpg" alt="دانلود فیلم جشن دلتنگی" width="581" height="301"></a></p><p><strong>نام فیلم&nbsp;</strong>: جشن دلتنگی</p><p><span style="color: #800000;">ژانر فیلم&nbsp;</span>: اجتماعی</p><p><span style="color: #800000;">مخاطب </span>:&nbsp;بزرگسالان</p><p><span style="color: #800000;">نوع</span> : فیلم سینمایی</p><p><span style="color: #800000;">محصول</span> : ایران</p><p><span style="color: #800000;">کارگردان</span> :&nbsp;پوریا آذربایجانی</p><p><span style="color: #993300;">تهیه کننده</span> :&nbsp;علی قائم‌ مقامی</p><p><span style="color: #993300;">نویسندگان</span>:&nbsp;پوریا آذربایجانی ُ مونا سرتوه</p><p><span style="color: #800000;"><strong>بازیگران</strong>&nbsp;</span>:&nbsp;بابک حمیدیان، محسن کیایی،&nbsp;ساغر قناعت&nbsp; بهنام تشکر، مینا ساداتی و پانته آ پناهی ها</p><p><span style="color: #800000;"><strong>خلاصه فیلم <a href="http://dlrooz.com/jashne-deltangi">جشن دلتنگی</a></strong><a href="http://dlrooz.com/raftan/">&nbsp;</a>:</span> داستان&nbsp;<a href="http://dlrooz.com/category/%D9%81%DB%8C%D9%84%D9%85/">فیلم ایرانی</a><strong>&nbsp;</strong>جشن دلتنگی داستان انسان هایی میباشد که با شبکه اجتماعی (دنیای مجازی) به قول گفتنی معتاد شده اند و سر نوشتشون به هم بستگی دارد...</p><p><!--more--></p><p>____________________________________</p><p><span style="color: #008000;"><strong>دانلود فیلم جشن دلتنگی با کیفیت 720p بزودی...</strong></span></p><p><strong>DOWNLOAD</strong></p><p><span style="color: #008000;"><strong>دانلود فیلم جشن دلتنگی با کیفیت 480p بزودی...</strong></span></p><p><strong>DOWNLOAD</strong></p><p>____________________________________</p><h3><span style="color: #333399;">عوامل ساخت فیلم سینمایی جشن دلتنگی :<br> </span></h3><p>» 1 -&nbsp;<span style="color: #008000;"><strong>کارگردان</strong></span>&nbsp;:&nbsp;پوریا آذربایجانی &nbsp;«</p><p>» 2 -&nbsp;<strong><span style="color: #008000;">نویسندگان</span>&nbsp;</strong>: &nbsp;پوریا آذربایجانی ُ مونا سرتوه «</p><p>» 3 - <span style="color: #008000;"><b>تهیه کننده</b></span>&nbsp;:&nbsp;علی قائم‌ مقامی «</p><p>» 4 - <span style="color: #008000;"><strong>مدیر</strong> <strong>تصویر</strong> <strong>برداری</strong></span> : علیرضا زرین دست «</p><p>» 5 -&nbsp;<span style="color: #008000;">&nbsp;<strong>مدیر صدا برداری</strong>&nbsp;</span>:&nbsp;&nbsp;آرش برومند «</p><p>» 6 - <span style="color: #008000;"><strong>تدوین</strong> </span>: : خشایار موحدیان«</p><p>» 7 -<span style="color: #008000;">&nbsp;<strong>طراح</strong> </span><strong><span style="color: #008000;">صحنه و لباس</span>&nbsp;</strong>: &nbsp;مهرداد میرکیانی «</p><p>» 8 - <span style="color: #008000;"><b>عکاس</b>:</span> مونا سرتوه «</p><h3>___________________________</h3><h3><span style="color: #333399;">عکس های فیلم سینمایی جشن دلتنگی :<br> </span></h3><p><img class="alignnone size-full wp-image-2445" src="http://dlrooz.com/wp-content/uploads/2018/01/1-1-1.jpg" alt="فیلم حشن دلتنگی" width="448" height="298"> <img class="alignnone size-full wp-image-2446" src="http://dlrooz.com/wp-content/uploads/2018/01/2-2.jpg" alt="داستان فیلم جشن دلتنگی" width="448" height="323"> <img class="alignnone size-full wp-image-2447" src="http://dlrooz.com/wp-content/uploads/2018/01/3-1.jpg" alt="عوامل فیلم داستان فیلم جشن دلتنگی" width="448" height="323"> <img class="alignnone size-full wp-image-2448" src="http://dlrooz.com/wp-content/uploads/2018/01/4-1.jpg" alt="محسن کیایی در داستان فیلم جشن دلتنگی" width="448" height="323"> <img class="alignnone size-full wp-image-2449" src="http://dlrooz.com/wp-content/uploads/2018/01/5-1.jpg" alt="بشت صحنه داستان فیلم جشن دلتنگی" width="500" height="361"> <img class="alignnone size-full wp-image-2450" src="http://dlrooz.com/wp-content/uploads/2018/01/6.jpg" alt="دانلود داستان فیلم جشن دلتنگی" width="444" height="296"> <img class="alignnone size-full wp-image-2451" src="http://dlrooz.com/wp-content/uploads/2018/01/7.jpg" alt="کارگردان فیلم جشن دلتنگی" width="450" height="313"> <img class="alignnone size-full wp-image-2452" src="http://dlrooz.com/wp-content/uploads/2018/01/8.jpg" alt="بازیگران و هنرمندان جشن دلتنگی" width="500" height="330"> <img class="alignnone size-full wp-image-2453" src="http://dlrooz.com/wp-content/uploads/2018/01/9.jpg" alt="سلفی در فیلم جشن دلتنگی" width="500" height="412"></p>
+
+
+</p>
+            <p>&nbsp;&nbsp;&nbsp;            </p><br>
+
+
+            <ul class="clearfix">
+                
+                            </ul>
+
+        </div>
+
+        <div class="PostCom">
+            <ul>
+                <li style="float:left;"><a target="_self" href="http://commentsender.mihanblog.com/post/11#commentlist" class="comment-link">نظرات(<script>setCommentCnt(11)</script>)</a>&nbsp;</li>
+                <li class="noBg" style="float: left; margin-left: 10px; margin-top: -6px;"><script>mihanblogPostLike('11','like')</script></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="10">
+
+        <div class="PostHead"><div class="PHT"></div>
+            <h1><a title="" href="http://commentsender.mihanblog.com/post/10" rel="bookmark">دانلود فیلم ساخت آمریکا ۲۰۱۷ American Made دوبله فارسی</a></h1>
+            <small class="PostTime">یکشنبه 17 دی 1396</small>
+            <small class="PostDet"> نویسنده: <a href="http://commentsender.mihanblog.com/post/author/1573429">امین مظفری</a> | </small>
+
+
+
+        </div>
+
+        <div class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://commentsender.mihanblog.com/post/10&amp;title=دانلود فیلم ساخت آمریکا ۲۰۱۷ American Made دوبله فارسی">
+                ارسال به <img align="top" title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+        <div class="PostContent">
+
+            <p><span class="owner_photo clearfix"></span><DIV id=explanation>
+<H1>دانلود فیلم ساخت آمریکا 2017 American Made دوبله فارسی<SPAN class=small> </SPAN></H1>
+<P><ACRONYM title="Really Simple Syndication"></P>
+<P></P></DIV>
+<DIV id=content>
+<UL>
+<DIV class=article>
+<LI><A href="index.html" rel=bookmark>دانلود فیلم ساخت آمریکا 2017 American Made دوبله فارسی</A> 
+<DIV>
+<H3><STRONG>دانلود <SPAN>رایگان</SPAN> فیلم American Made 2017 با <SPAN>لینک مستقیم</SPAN></STRONG></H3>
+<P><SPAN><B>کیفیت ۷۲۰HD + 480p + 1080p قرار گرفت</B></SPAN></P>
+<P><SPAN><STRONG>صوت دوبله فارسی درج شد</STRONG></SPAN></P>
+<P><A href="http://dlrooz.com/american/"><IMG class="alignnone size-full wp-image-2431" alt="دانلود فیلم ساخت آمریکا 2017 American Made دوبله فارسی" src="http://dlrooz.com/wp-content/uploads/2018/01/1.png" width=600 height=950 sizes="(max-width: 600px) 100vw, 600px" srcset="http://dlrooz.com/wp-content/uploads/2018/01/1.png 600w, http://dlrooz.com/wp-content/uploads/2018/01/1-189x300.png 189w"></A></P>
+<P><SPAN>نام فیلم : <SPAN><STRONG>American Made 2017</STRONG></SPAN></SPAN></P>
+<P><SPAN><STRONG>ژانر فیلم :</STRONG> <SPAN>درام</SPAN></SPAN></P>
+<P><SPAN><STRONG>مخاطب</STRONG> : <SPAN>بزرگسال</SPAN></SPAN></P>
+<P><SPAN><STRONG>نوع </STRONG>: <SPAN>فیلم</SPAN></SPAN></P>
+<P><SPAN><STRONG>محصول</STRONG> : </SPAN><SPAN>آمریکا</SPAN></P>
+<P><SPAN><STRONG>کارگردان</STRONG> :<SPAN>&nbsp;Doug Liman</SPAN></SPAN></P>
+<P><SPAN><STRONG>بازیگران</STRONG>&nbsp;:&nbsp; <SPAN>Domhnall Gleeson,</SPAN>&nbsp;<SPAN></SPAN>Tom Cruise, Sarah Wright</P>
+<P><SPAN><STRONG>خلاصه فیلم&nbsp;<A href="http://dlrooz.com/american/"> American Made 2017</A></STRONG> :<SPAN> تام کروز نقش یک خلبان ماهر و زبردست رو دارد که برای سازمان سیاه استخدام میشود و ماجرای جدیدی به وجود می آید</SPAN></SPAN></P>
+<P><SPAN><STRONG>فیلم American Made 2017</STRONG></SPAN></P>
+<P>برای درج آخرین اخبار در کانال ما عضو شوید : &nbsp;<A href="https://t.me/dlrooz_com">DLROOZ_com@</A></P>
+<P>دانلود دیگر فیلم ها »<A href="http://dlrooz.com/category/%D9%81%DB%8C%D9%84%D9%85-%D8%AE%D8%A7%D8%B1%D8%AC%DB%8C/"><SPAN>&nbsp;<STRONG>دانلود فیلم خارجی</STRONG></SPAN></A></P>
+<P>____________________________________</P>
+<P><SPAN><STRONG>دانلود فیلم American Made 2017 با کیفیت ۱۰۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/vknz4n4ewezr/American%20Made%202017%201080p%20Dubble%20%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود فیلم American Made 2017 با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/kcmad95owghx/American%20Made%202017%20720p%20Dubble%20%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود فیلم American Made 2017 با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/s0hd4di2lu0u/American%20Made%202017%20480p%20Dubble%20%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود صوت دوبله فارسی فیلم American Made 2017</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/hmq60eqxfutu/American.Made.2017.Dubbed.%7BDLROOZ.COM%7D.mka.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>____________________________________</P></DIV></LI></DIV></UL></DIV></SPAN></ACRONYM></p>
+            <p>&nbsp;&nbsp;&nbsp;            </p><br>
+
+
+            <ul class="clearfix">
+                
+                            </ul>
+
+        </div>
+
+        <div class="PostCom">
+            <ul>
+                <li style="float:left;"><a target="_self" href="http://commentsender.mihanblog.com/post/10#commentlist" class="comment-link">نظرات(<script>setCommentCnt(10)</script>)</a>&nbsp;</li>
+                <li class="noBg" style="float: left; margin-left: 10px; margin-top: -6px;"><script>mihanblogPostLike('10','like')</script></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="9">
+
+        <div class="PostHead"><div class="PHT"></div>
+            <h1><a title="" href="http://commentsender.mihanblog.com/post/9" rel="bookmark">دانلود فیلم Geostorm 2017</a></h1>
+            <small class="PostTime">یکشنبه 17 دی 1396</small>
+            <small class="PostDet"> نویسنده: <a href="http://commentsender.mihanblog.com/post/author/1573429">امین مظفری</a> | </small>
+
+
+
+        </div>
+
+        <div class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://commentsender.mihanblog.com/post/9&amp;title=دانلود فیلم Geostorm 2017">
+                ارسال به <img align="top" title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+        <div class="PostContent">
+
+            <p><span class="owner_photo clearfix"></span><DIV id=explanation>
+<H1>دانلود فیلم Geostorm 2017 | دانلود روز<SPAN class=small> </SPAN></H1>
+<P><ACRONYM title="Really Simple Syndication"></P>
+<P></P></DIV>
+<DIV id=content>
+<UL>
+<DIV class=article>
+<LI><A href="index.html" rel=bookmark>دانلود فیلم Geostorm 2017 | دانلود روز</A> 
+<DIV>
+<H3><STRONG>دانلود <SPAN>رایگان</SPAN> فیلم Geostorm 2017 با <SPAN>لینک مستقیم</SPAN></STRONG></H3>
+<P><SPAN><B>کیفیت ۷۲۰HD قرار گرفت</B></SPAN></P>
+<P><A href="index.html"><IMG class="alignnone size-full wp-image-2428" alt="دانلود فیلم Geostorm 2017" src="http://dlrooz.com/wp-content/uploads/2018/01/۱.jpg" width=420 height=550 sizes="(max-width: 420px) 100vw, 420px" srcset="http://dlrooz.com/wp-content/uploads/2018/01/۱.jpg 420w, http://dlrooz.com/wp-content/uploads/2018/01/۱-229x300.jpg 229w"></A></P>
+<P><SPAN>نام فیلم : <SPAN><STRONG>Geostorm 2017</STRONG></SPAN></SPAN></P>
+<P><SPAN><STRONG>ژانر فیلم :</STRONG> <SPAN>درام</SPAN></SPAN></P>
+<P><SPAN><STRONG>مخاطب</STRONG> : <SPAN>بزرگسال</SPAN></SPAN></P>
+<P><SPAN><STRONG>نوع </STRONG>: <SPAN>فیلم</SPAN></SPAN></P>
+<P><SPAN><STRONG>محصول</STRONG> : </SPAN><SPAN>آمریکا</SPAN></P>
+<P><SPAN><STRONG>کارگردان</STRONG> :<SPAN>&nbsp;Dean Devlin</SPAN></SPAN></P>
+<P><SPAN><STRONG>بازیگران</STRONG>&nbsp;:&nbsp;&nbsp;<SPAN>Gerard Butler, Jim Sturgess, Abbie Cornish</SPAN></SPAN></P>
+<P><SPAN><STRONG>خلاصه فیلم <A href="index.html">Geostorm 2017</A></STRONG> :<SPAN> داستان این فیلم که ژانر تخیلی علمی دارد تمام کشور های جهان تحت تاثیر سونامی و طوفان شده اند دانشمندان سعی میکنند در تمام جهان با یکدیگر سیستمی بسازند که جلوی این سونامی و طوفان را بگیرد</SPAN></SPAN></P>
+<P><SPAN><STRONG>فیلم <A href="index.html">Geostorm 2017</A></STRONG></SPAN></P>
+<P>برای درج آخرین اخبار در کانال ما عضو شوید : &nbsp;<A href="https://t.me/dlrooz_com">DLROOZ_com@</A></P>
+<P>دانلود دیگر فیلم ها »<SPAN>&nbsp;<STRONG><A href="http://dlrooz.com/category/%D9%81%DB%8C%D9%84%D9%85-%D8%AE%D8%A7%D8%B1%D8%AC%DB%8C/">دانلود فیلمخارجی</A></STRONG></SPAN></P>
+<P>____________________________________</P>
+<P><SPAN><STRONG>دانلود فیلم Geostorm 2017 با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/fkzpm4pn5j5u/Geostorm.2017.720p.WEB-DL%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>____________________________________</P></DIV></LI></DIV></UL></DIV></ACRONYM></p>
+            <p>&nbsp;&nbsp;&nbsp;            </p><br>
+
+
+            <ul class="clearfix">
+                
+                            </ul>
+
+        </div>
+
+        <div class="PostCom">
+            <ul>
+                <li style="float:left;"><a target="_self" href="http://commentsender.mihanblog.com/post/9#commentlist" class="comment-link">نظرات(<script>setCommentCnt(9)</script>)</a>&nbsp;</li>
+                <li class="noBg" style="float: left; margin-left: 10px; margin-top: -6px;"><script>mihanblogPostLike('9','like')</script></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="8">
+
+        <div class="PostHead"><div class="PHT"></div>
+            <h1><a title="" href="http://commentsender.mihanblog.com/post/8" rel="bookmark">دانلود فیلم ۲۰۱۷ The Foreigner دوبله فارسی</a></h1>
+            <small class="PostTime">یکشنبه 17 دی 1396</small>
+            <small class="PostDet"> نویسنده: <a href="http://commentsender.mihanblog.com/post/author/1573429">امین مظفری</a> | </small>
+
+
+
+        </div>
+
+        <div class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://commentsender.mihanblog.com/post/8&amp;title=دانلود فیلم ۲۰۱۷ The Foreigner دوبله فارسی">
+                ارسال به <img align="top" title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+        <div class="PostContent">
+
+            <p><span class="owner_photo clearfix"></span><DIV id=explanation>
+<H1>دانلود فیلم 2017 The Foreigner دوبله فارسی<SPAN class=small> </SPAN></H1>
+<P><ACRONYM title="Really Simple Syndication"></P>
+<P></P></DIV>
+<DIV id=content>
+<UL>
+<DIV class=article>
+<LI><A href="index.html" rel=bookmark>دانلود فیلم 2017 The Foreigner دوبله فارسی</A> 
+<DIV>
+<H3><STRONG>دانلود <SPAN>رایگان</SPAN> فیلم The Foreigner 2017 با <SPAN>لینک مستقیم</SPAN></STRONG></H3>
+<P><SPAN><B>کیفیت Bluray 720 پرده قرار گرفت</B></SPAN></P>
+<P><A href="index.html"><IMG class="alignnone size-full wp-image-2424" alt="دانلود فیلم 2017 The Foreigner دوبله فارسی" src="http://dlrooz.com/wp-content/uploads/2017/10/1-9.jpg" width=630 height=1200 sizes="(max-width: 630px) 100vw, 630px" srcset="http://dlrooz.com/wp-content/uploads/2017/10/1-9.jpg 630w, http://dlrooz.com/wp-content/uploads/2017/10/1-9-158x300.jpg 158w, http://dlrooz.com/wp-content/uploads/2017/10/1-9-538x1024.jpg 538w"></A></P>
+<P><SPAN>نام فیلم : <SPAN><STRONG>The Foreigner 2017</STRONG></SPAN></SPAN></P>
+<P><SPAN><STRONG>ژانر فیلم :&nbsp;درام ، اکشن</STRONG></SPAN></P>
+<P><SPAN><STRONG>مخاطب</STRONG> : <SPAN>بزرگسال</SPAN></SPAN></P>
+<P><SPAN><STRONG>نوع </STRONG>: <SPAN>فیلم</SPAN></SPAN></P>
+<P><SPAN><STRONG>محصول</STRONG> : <SPAN>آمریکا</SPAN></SPAN></P>
+<P><SPAN><STRONG>کارگردان</STRONG> :&nbsp;</SPAN>Martin Campbell</P>
+<P><SPAN><STRONG>بازیگران</STRONG>&nbsp;:&nbsp;, </SPAN>Jackie Chan,&nbsp;Katie Leung Rufus Jones</P>
+<P><SPAN><STRONG>خلاصه فیلم <A href="index.html">The Foreigner 2017</A></STRONG></SPAN><STRONG>:&nbsp;</STRONG>فیلم جدی و هیجان انگیز خارجی&nbsp;فریگنر جکی چان <A href="http://dlrooz.com/">،</A> داستان&nbsp;صاحب یک رستوران است&nbsp;که&nbsp;پس از اینکه فرزندش در یک بمب‌گذاری دلخراش کشته می‌شود ، تصمیم می‌گیرد از افرادی که باعت مرگ فرزندش شده‌اند ، انتقام بگیرد. اما…</P>
+<P><SPAN><STRONG>فیلم The Foreigner 2017 با دوبله فارسی</STRONG></SPAN></P>
+<P>برای درج آخرین اخبار در کانال ما عضو شوید : &nbsp;<A href="https://t.me/dlrooz_com">DLROOZ_com@</A></P>
+<P>دانلود دیگر فیلم ها »&nbsp;<SPAN><STRONG><A href="http://dlrooz.com/category/%D9%81%DB%8C%D9%84%D9%85-%D8%AE%D8%A7%D8%B1%D8%AC%DB%8C/">دانلود فیلم&nbsp;خارجی</A></STRONG></SPAN></P>
+<P>____________________________________</P>
+<P><SPAN><STRONG>دانلود فیلم The Foreigner 2017 با کیفیت ۷۲۰ دوبله فارسی</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/2ucveq2kqrqz/The%20Foreigner%202017%20720p%20Dubble%20%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود فیلم The Foreigner 2017 با کیفیت ۱۰۸۰ HD-CAM</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/99vke4drec04/The_LEGO_Ninjago_Movie_2017_HDRip_1080p.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>____________________________________</P>
+<P><STRONG>آنونس فیلم&nbsp;</STRONG></P>
+<P><A href="http://uploadboy.me/g4nui8jng2kb/The_Foreigner_Official_Trailer.mp4.html"><STRONG>DOWNLOAD</STRONG></A></P></DIV></LI></DIV></UL></DIV></ACRONYM></p>
+            <p>&nbsp;&nbsp;&nbsp;            </p><br>
+
+
+            <ul class="clearfix">
+                
+                            </ul>
+
+        </div>
+
+        <div class="PostCom">
+            <ul>
+                <li style="float:left;"><a target="_self" href="http://commentsender.mihanblog.com/post/8#commentlist" class="comment-link">نظرات(<script>setCommentCnt(8)</script>)</a>&nbsp;</li>
+                <li class="noBg" style="float: left; margin-left: 10px; margin-top: -6px;"><script>mihanblogPostLike('8','like')</script></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="7">
+
+        <div class="PostHead"><div class="PHT"></div>
+            <h1><a title="" href="http://commentsender.mihanblog.com/post/7" rel="bookmark">دانلود فیلم کارگر ساده نیازمندیم</a></h1>
+            <small class="PostTime">شنبه 16 دی 1396</small>
+            <small class="PostDet"> نویسنده: <a href="http://commentsender.mihanblog.com/post/author/1573429">امین مظفری</a> | </small>
+
+
+
+        </div>
+
+        <div class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://commentsender.mihanblog.com/post/7&amp;title=دانلود فیلم کارگر ساده نیازمندیم">
+                ارسال به <img align="top" title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+        <div class="PostContent">
+
+            <p><span class="owner_photo clearfix"></span><DIV id=explanation>
+<H1>دانلود فیلم کارگر ساده نیازمندیم<SPAN class=small> </SPAN></H1>
+<P><ACRONYM title="Really Simple Syndication"></P>
+<P></P></DIV>
+<DIV id=content>
+<UL>
+<DIV class=article>
+<LI><A href="index.html" rel=bookmark>دانلود فیلم کارگر ساده نیازمندیم</A> 
+<DIV>
+<H3><STRONG>دانلود <SPAN>رایگان</SPAN> فیلم کارگر ساده نیازمندیم با <SPAN>لینک مستقیم</SPAN></STRONG></H3>
+<P><SPAN><STRONG>لینک دانلود همراه با ۵ کیفیت درج شد</STRONG></SPAN></P>
+<P><A href="http://http;//dlrooz.com/kargarsadeh/"><IMG class="alignnone size-full wp-image-128" alt="دانلود فیلم کارگر ساده نیازمندیم" src="http://dlrooz.com/wp-content/uploads/2017/09/9-2.jpg" width=530 height=553 sizes="(max-width: 530px) 100vw, 530px" srcset="http://dlrooz.com/wp-content/uploads/2017/09/9-2.jpg 530w, http://dlrooz.com/wp-content/uploads/2017/09/9-2-288x300.jpg 288w"></A></P>
+<P><SPAN>نام فیلم : <SPAN><STRONG>کارگر ساده نیازمندیم</STRONG></SPAN></SPAN></P>
+<P><SPAN><STRONG>ژانر فیلم :</STRONG> <SPAN>اجتماعی</SPAN></SPAN></P>
+<P><SPAN><STRONG>مخاطب</STRONG> : <SPAN>بزرگسال</SPAN></SPAN></P>
+<P><SPAN><STRONG>نوع فیلم</STRONG> : <SPAN>سینمایی</SPAN></SPAN></P>
+<P><SPAN><STRONG>محصول</STRONG> : <SPAN>ایران</SPAN></SPAN></P>
+<P><SPAN><STRONG>کارگردان</STRONG> :&nbsp;</SPAN><STRONG>&nbsp;</STRONG>منوچهر هادی</P>
+<P><SPAN><B>نویسنده</B> :&nbsp;</SPAN>پدرام کریمی</P>
+<P><SPAN><STRONG>تهیه کننده :&nbsp;</STRONG></SPAN>منوچهر هادی</P>
+<P><SPAN><STRONG>بازیگران</STRONG>&nbsp;:&nbsp;</SPAN>آتیلا پسیانی , یکتا ناصر , سیامک صفری , سحر قریشی , فاطمه رستمی , مهران احمدی , بهرام افشاری , سیروس همتی , مجید اصغری , مهدی محرابی و با معرفی روژین رحیمی طهرانی و همراه با هنرمند خردسال آرین اسماعیلی و آرمیتا اسماعیلی</P>
+<P><SPAN><STRONG>خلاصه فیلم <A href="http://http;//dlrooz.com/kargarsadeh/">کارگر ساده نیازمندیم</A></STRONG> : <SPAN>داستان کارگر ساده ای است که از روستا برای کار مدتی است به تهران می آیند برای کار و برای کسب در آمد هر کاری رو به جون میخرن…</SPAN></SPAN></P>
+<P><SPAN><STRONG>فیلم <A href="http://http;//dlrooz.com/kargarsadeh/">کارگر ساده نیازمندیم</A>&nbsp;بزودی پس از پخش در شبکه خانگی</STRONG></SPAN></P>
+<P>برای درج آخرین اخبار در کانال ما عضو شوید : &nbsp;<A href="https://t.me/dlrooz_com">DLROOZ_com@</A></P>
+<P>دانلود دیگر فیلم ها »&nbsp;<A href="http://dlrooz.com/category/%D9%81%DB%8C%D9%84%D9%85/"><SPAN><STRONG>دانلود فیلم ایرانی</STRONG></SPAN></A></P>
+<P>____________________________________</P>
+<P><SPAN><STRONG>دانلود و خرید قانونی و تمامی قسمت ها</STRONG></SPAN></P>
+<P><A href="https://shop.upera.co/ref/2kor/8pZ8oxaj"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود و خرید قانونی و حلال کیفیت ۱۰۸۰HQ</STRONG></SPAN></P>
+<P><A href="https://shop.upera.co/ref/2kor/8pZbift6"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود و خرید قانونی و حلال کیفیت ۱۰۸۰</STRONG></SPAN></P>
+<P><A href="https://shop.upera.co/ref/2kor/8pZcj2fy"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود و خرید قانونی و حلال کیفیت ۷۲۰</STRONG></SPAN></P>
+<P><A href="https://shop.upera.co/ref/2kor/8pZTfzyn"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود و خرید قانونی و حلال کیفیت ۴۸۰</STRONG></SPAN></P>
+<P><A href="https://shop.upera.co/ref/2kor/8pZd6xr1"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود و خرید قانونی و حلال کیفیت ۲۴۰</STRONG></SPAN></P>
+<P>____________________________________</P></DIV></LI></DIV></UL></DIV></ACRONYM></p>
+            <p>&nbsp;&nbsp;&nbsp;            </p><br>
+
+
+            <ul class="clearfix">
+                
+                            </ul>
+
+        </div>
+
+        <div class="PostCom">
+            <ul>
+                <li style="float:left;"><a target="_self" href="http://commentsender.mihanblog.com/post/7#commentlist" class="comment-link">نظرات(<script>setCommentCnt(7)</script>)</a>&nbsp;</li>
+                <li class="noBg" style="float: left; margin-left: 10px; margin-top: -6px;"><script>mihanblogPostLike('7','like')</script></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="6">
+
+        <div class="PostHead"><div class="PHT"></div>
+            <h1><a title="" href="http://commentsender.mihanblog.com/post/6" rel="bookmark">دانلود فیلم هوس</a></h1>
+            <small class="PostTime">شنبه 16 دی 1396</small>
+            <small class="PostDet"> نویسنده: <a href="http://commentsender.mihanblog.com/post/author/1573429">امین مظفری</a> | </small>
+
+
+
+        </div>
+
+        <div class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://commentsender.mihanblog.com/post/6&amp;title=دانلود فیلم هوس">
+                ارسال به <img align="top" title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+        <div class="PostContent">
+
+            <p><span class="owner_photo clearfix"></span><DIV id=explanation>
+<H1>دانلود فیلم هوس | دانلود روز<SPAN class=small> </SPAN></H1>
+<P><ACRONYM title="Really Simple Syndication"></P>
+<P></P></DIV>
+<DIV id=content>
+<UL>
+<DIV class=article>
+<LI><A href="index.html" rel=bookmark>دانلود فیلم هوس | دانلود روز</A> 
+<DIV>
+<H3><SPAN><A href="http://dlrooz.com/tag/دانلود-رایگان/">دانلود رایگان </A>فیلم هوس به کارگردانی محمد خراط زاده همراه با دو کیفیت</SPAN></H3>
+<P><A href="index.html"><IMG class="alignnone size-full wp-image-2413" alt="دانلود فیلم هوس" src="http://dlrooz.com/wp-content/uploads/2018/01/havas.jpg" width=675 height=1000 sizes="(max-width: 675px) 100vw, 675px" srcset="http://dlrooz.com/wp-content/uploads/2018/01/havas.jpg 675w, http://dlrooz.com/wp-content/uploads/2018/01/havas-203x300.jpg 203w"></A></P>
+<P><STRONG>نام فیلم&nbsp;</STRONG>: هوس</P>
+<P><SPAN>ژانر فیلم&nbsp;</SPAN>: اجتماعی</P>
+<P><SPAN>مخاطب </SPAN>:&nbsp;بزرگسالان</P>
+<P><SPAN>نوع</SPAN> : فیلم سینمایی</P>
+<P><SPAN>محصول</SPAN> : ایران</P>
+<P><SPAN>کارگردان</SPAN> : محمد خراط زاده</P>
+<P><SPAN>تهیه کننده</SPAN> : محمد جواد عباسی</P>
+<P><SPAN>نویسنده</SPAN>:محمد خراط زاده</P>
+<P><SPAN><STRONG>بازیگران</STRONG>&nbsp;</SPAN>: محمدرضا شریفی نیا ، علیرام نورایی ، نرگس محمدی ، نیما شاهرخ شاهی ، رز رضوی</P>
+<P><SPAN><STRONG>خلاصه فیلم <A href="index.html">هوس</A></STRONG><A href="http://dlrooz.com/raftan/">&nbsp;</A>:</SPAN> داستان&nbsp;<A href="http://dlrooz.com/category/%D9%81%DB%8C%D9%84%D9%85/">فیلم ایرانی</A><STRONG>&nbsp;</STRONG>هوس داستان یک جاعل قدیمی میباشد که برای دختری که دوست داشت پاسپورت جعل کرد و به روانه زندان شد</P>
+<P>پس از ۳ سال حبس یک دفتر هواپیمایی زد و باز یک پیشنهاد هوسناک جعل به او میخورد که…</P>
+<P>____________________________________</P>
+<P><SPAN><STRONG>دانلود و خرید قانونی و تمامی قسمت ها</STRONG></SPAN></P>
+<P><A href="https://shop.upera.co/ref/2kor/8pZ8oxaj"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود و خرید قانونی و حلال کیفیت ۱۰۸۰HQ</STRONG></SPAN></P>
+<P><A href="https://shop.upera.co/ref/2kor/8pZbift6"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود و خرید قانونی و حلال کیفیت ۱۰۸۰</STRONG></SPAN></P>
+<P><A href="https://shop.upera.co/ref/2kor/8pZcj2fy"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود و خرید قانونی و حلال کیفیت ۷۲۰</STRONG></SPAN></P>
+<P><A href="https://shop.upera.co/ref/2kor/8pZTfzyn"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود و خرید قانونی و حلال کیفیت ۴۸۰</STRONG></SPAN></P>
+<P><A href="https://shop.upera.co/ref/2kor/8pZd6xr1"><STRONG>DOWNLOAD</STRONG></A><BR>____________________________________</P></DIV></LI></DIV></UL></DIV></ACRONYM></p>
+            <p>&nbsp;&nbsp;&nbsp;            </p><br>
+
+
+            <ul class="clearfix">
+                
+                            </ul>
+
+        </div>
+
+        <div class="PostCom">
+            <ul>
+                <li style="float:left;"><a target="_self" href="http://commentsender.mihanblog.com/post/6#commentlist" class="comment-link">نظرات(<script>setCommentCnt(6)</script>)</a>&nbsp;</li>
+                <li class="noBg" style="float: left; margin-left: 10px; margin-top: -6px;"><script>mihanblogPostLike('6','like')</script></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="5">
+
+        <div class="PostHead"><div class="PHT"></div>
+            <h1><a title="" href="http://commentsender.mihanblog.com/post/5" rel="bookmark">دانلود فیلم من و شارمین</a></h1>
+            <small class="PostTime">جمعه 15 دی 1396</small>
+            <small class="PostDet"> نویسنده: <a href="http://commentsender.mihanblog.com/post/author/1573429">امین مظفری</a> | </small>
+
+
+
+        </div>
+
+        <div class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://commentsender.mihanblog.com/post/5&amp;title=دانلود فیلم من و شارمین">
+                ارسال به <img align="top" title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+        <div class="PostContent">
+
+            <p><span class="owner_photo clearfix"></span><DIV id=explanation>
+<H1>دانلود فیلم من و شارمین<SPAN class=small> </SPAN></H1>
+<P><ACRONYM title="Really Simple Syndication"></P>
+<P></P></DIV>
+<DIV id=content>
+<UL>
+<DIV class=article>
+<LI><A href="index.html" rel=bookmark>دانلود فیلم من و شارمین</A> 
+<DIV>
+<H3><STRONG>دانلود <SPAN>رایگان</SPAN> فیلم من و شارمین با <SPAN>لینک مستقیم</SPAN></STRONG></H3>
+<P><SPAN><STRONG>لینک دانلود همراه ۵ کیفیت درج شد</STRONG></SPAN></P>
+<P><SPAN>با کیفیت HD720p , 480p +HD1080HQ</SPAN></P>
+<P><A href="index.html"><IMG class="alignnone size-full wp-image-577" alt="دانلود فیلم من و شارمین" src="http://dlrooz.com/wp-content/uploads/2017/09/6-10.jpg" width=500 height=714 sizes="(max-width: 500px) 100vw, 500px" srcset="http://dlrooz.com/wp-content/uploads/2017/09/6-10.jpg 500w, http://dlrooz.com/wp-content/uploads/2017/09/6-10-210x300.jpg 210w"></A></P>
+<P><SPAN>نام فیلم : <SPAN><STRONG>من و شارمین</STRONG></SPAN></SPAN></P>
+<P><SPAN><STRONG>ژانر فیلم :</STRONG> <SPAN>اجتماعی ، کمدی</SPAN></SPAN></P>
+<P><SPAN><STRONG>مخاطب</STRONG> : <SPAN>بزرگسال</SPAN></SPAN></P>
+<P><SPAN><STRONG>نوع فیلم</STRONG> : <SPAN>سینمایی</SPAN></SPAN></P>
+<P><SPAN><STRONG>محصول</STRONG> : <SPAN>ایران</SPAN></SPAN></P>
+<P><SPAN><STRONG>کارگردان</STRONG>&nbsp;<STRONG>و&nbsp;</STRONG></SPAN><SPAN><B>نویسنده</B> :&nbsp;<STRONG>بیژن شیرمرز</STRONG>&nbsp;</SPAN></P>
+<P><SPAN><STRONG>تهیه کننده :&nbsp;</STRONG></SPAN><STRONG>یوسف صمدزاده&nbsp;</STRONG></P>
+<P><SPAN><STRONG>بازیگران</STRONG>&nbsp;:&nbsp;</SPAN>ویشکا آسایش<A href="http://dlrooz.com/">،</A> پژمان بازغی، سحر قریشی، نیما شاهرخ شاهی، رامین ناصرنصیر، محمود جعفری، آتش تقی پور، زهره حمیدی، پوراندخت مهیمن<A href="http://dlrooz.com/">،</A> فریبا نادری، نیلوفر پارسا&nbsp; &nbsp;گوهر خیراندیش و مجید صالحی</P>
+<P><SPAN><STRONG>خلاصه فیلم<A href="index.html"> من و شارمین</A></STRONG> :&nbsp;</SPAN>مضمونی اجتماعی دارد و داستان زندگی دختر جوانی به نام تینا را روایت می کند که پیشگویی های عمه خود را باور دارد .</P>
+<P><SPAN><STRONG>فیلم <A href="index.html">من و شارمین</A>&nbsp;بزودی از رسانه دانلود روز</STRONG></SPAN></P>
+<P>برای درج آخرین اخبار در کانال ما عضو شوید : &nbsp;<A href="https://t.me/dlrooz_com">DLROOZ_com@</A></P>
+<P>دانلود دیگر فیلم ها »&nbsp;<A href="http://dlrooz.com/category/%D9%81%DB%8C%D9%84%D9%85/"><SPAN><STRONG>دانلود فیلم ایرانی</STRONG></SPAN></A></P>
+<P>____________________________________</P>
+<P><SPAN><STRONG>دانلود و خرید قانونی و تمامی قسمت ها</STRONG></SPAN></P>
+<P><A href="http://upnama.ir/download.php?id=xv6vsl6yvt7uniaooz4jq24aul8zzu"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود و خرید قانونی و حلال کیفیت ۱۰۸۰HQ</STRONG></SPAN></P>
+<P><A href="http://upnama.ir/download.php?id=xv6vsl6yvt7uniaooz4jq24aul8zzu&amp;quality=1080HQ"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود و خرید قانونی و حلال کیفیت ۱۰۸۰</STRONG></SPAN></P>
+<P><A href="http://upnama.ir/download.php?id=xv6vsl6yvt7uniaooz4jq24aul8zzu&amp;quality=1080p"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود و خرید قانونی و حلال کیفیت ۷۲۰</STRONG></SPAN></P>
+<P><A href="http://upnama.ir/download.php?id=xv6vsl6yvt7uniaooz4jq24aul8zzu&amp;quality=720p"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود و خرید قانونی و حلال کیفیت ۴۸۰</STRONG></SPAN></P>
+<P><A href="http://upnama.ir/download.php?id=xv6vsl6yvt7uniaooz4jq24aul8zzu&amp;quality=480p"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>____________________________________</P>
+<P><STRONG><SPAN>عکس های فیلم&nbsp;من و شارمین :</SPAN></STRONG></P>
+<P><IMG class="alignnone size-full wp-image-578" alt="" src="http://dlrooz.com/wp-content/uploads/2017/09/Mano-SharminDLROOZ.COM-1.jpg" width=555 height=464 sizes="(max-width: 555px) 100vw, 555px" srcset="http://dlrooz.com/wp-content/uploads/2017/09/Mano-SharminDLROOZ.COM-1.jpg 555w, http://dlrooz.com/wp-content/uploads/2017/09/Mano-SharminDLROOZ.COM-1-300x251.jpg 300w"><IMG class="alignnone size-full wp-image-579" alt="" src="http://dlrooz.com/wp-content/uploads/2017/09/Mano-SharminDLROOZ.COM-2.jpg" width=530 height=317 sizes="(max-width: 530px) 100vw, 530px" srcset="http://dlrooz.com/wp-content/uploads/2017/09/Mano-SharminDLROOZ.COM-2.jpg 530w, http://dlrooz.com/wp-content/uploads/2017/09/Mano-SharminDLROOZ.COM-2-300x179.jpg 300w"><IMG class="alignnone size-full wp-image-580" alt="" src="http://dlrooz.com/wp-content/uploads/2017/09/Mano-SharminDLROOZ.COM-3.jpg" width=530 height=308 sizes="(max-width: 530px) 100vw, 530px" srcset="http://dlrooz.com/wp-content/uploads/2017/09/Mano-SharminDLROOZ.COM-3.jpg 530w, http://dlrooz.com/wp-content/uploads/2017/09/Mano-SharminDLROOZ.COM-3-300x174.jpg 300w"></P>
+<P>____________________________________</P>
+<P><SPAN><STRONG>تیزر فیلم&nbsp;من و شارمین :</STRONG></SPAN></P></DIV></LI></DIV></UL></DIV></ACRONYM></p>
+            <p>&nbsp;&nbsp;&nbsp;            </p><br>
+
+
+            <ul class="clearfix">
+                
+                            </ul>
+
+        </div>
+
+        <div class="PostCom">
+            <ul>
+                <li style="float:left;"><a target="_self" href="http://commentsender.mihanblog.com/post/5#commentlist" class="comment-link">نظرات(<script>setCommentCnt(5)</script>)</a>&nbsp;</li>
+                <li class="noBg" style="float: left; margin-left: 10px; margin-top: -6px;"><script>mihanblogPostLike('5','like')</script></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="4">
+
+        <div class="PostHead"><div class="PHT"></div>
+            <h1><a title="" href="http://commentsender.mihanblog.com/post/4" rel="bookmark">دانلود فصل سوم برنامه دورهمی با کیفیت عالی</a></h1>
+            <small class="PostTime">جمعه 15 دی 1396</small>
+            <small class="PostDet"> نویسنده: <a href="http://commentsender.mihanblog.com/post/author/1573429">امین مظفری</a> | </small>
+
+
+
+        </div>
+
+        <div class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://commentsender.mihanblog.com/post/4&amp;title=دانلود فصل سوم برنامه دورهمی با کیفیت عالی">
+                ارسال به <img align="top" title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+        <div class="PostContent">
+
+            <p><span class="owner_photo clearfix"></span><DIV id=explanation>
+<H1>دانلود فصل سوم برنامه دورهمی<SPAN class=small> </SPAN></H1>
+<P><ACRONYM title="Really Simple Syndication"></P>
+<P></P></DIV>
+<DIV id=content>
+<UL>
+<DIV class=article>
+<LI><A href="index.html" rel=bookmark>دانلود فصل سوم برنامه دورهمی</A> 
+<DIV>
+<H3><SPAN><A href="http://dlrooz.com/tag/دانلود-رایگان/">دانلود رایگان </A>فصل سوم برنامه دورهمی به کارگردانی مهران مدیری همراه با دو کیفیت</SPAN></H3>
+<P><SPAN><STRONG>قسمت <SPAN>۹ نهم</SPAN> با حضور <SPAN>( فرشاد پیوس )</SPAN> موضوع برنامه <SPAN>( فیک )</SPAN></STRONG></SPAN></P>
+<P><A href="index.html"><IMG class="alignnone size-full wp-image-2393" alt="دانلود فصل سوم برنامه دورهمی" src="http://dlrooz.com/wp-content/uploads/2018/01/cover.jpg" width=555 height=370 sizes="(max-width: 555px) 100vw, 555px" srcset="http://dlrooz.com/wp-content/uploads/2018/01/cover.jpg 555w, http://dlrooz.com/wp-content/uploads/2018/01/cover-300x200.jpg 300w"></A></P>
+<P><STRONG>نام فصل سوم برنامه</STRONG> : <B>دورهمی</B></P>
+<P><SPAN>مخاطب</SPAN> : بزرگسال</P>
+<P><SPAN>پخش</SPAN> : شبکه نسیم</P>
+<P><SPAN>نوع</SPAN> : فصل سوم برنامه</P>
+<P><SPAN>محصول</SPAN> : ایران</P>
+<P><SPAN>کارگردان</SPAN>&nbsp;: مهران مدیری</P>
+<P><SPAN>تهیه کنندگان</SPAN> :هاشم رضایت ، حمید رحیمی نادی</P>
+<P><SPAN><STRONG>بازیگران</STRONG>&nbsp;</SPAN>: سروش رضایی ، مهران مدیری</P>
+<P><STRONG><SPAN>خلاصه فصل سوم برنامه</SPAN> <A href="index.html">دورهمی</A></STRONG>&nbsp;: داستان&nbsp;<A href="http://dlrooz.com/category/%D8%B3%D8%B1%DB%8C%D8%A7%D9%84/">فصل سوم برنامه ایرانی</A><STRONG>&nbsp;</STRONG><SPAN>دورهمی فصل سوم در آذر ۹۶ کلید خورد و این برنامه پر بیننده با اجرا و کارگردانی مهران مدیری</SPAN></P>
+<P>باز شروع به کار کرد…</P>
+<P>____________________________________</P>
+<P><SPAN><STRONG>دانلود قسمت ۱ <SPAN>فصل سوم</SPAN> برنامه دورهمی با کیفیت ۷۲۰p&nbsp;<SPAN> با حضور&nbsp;[<SPAN>محمدرضا شریفی نیا<SPAN>]</SPAN></SPAN> موضوع برنامه<SPAN> {شایعه}</SPAN></SPAN></STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/09n14tcm6at0/Dorehami_S03E01_720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱ <SPAN>فصل سوم</SPAN> برنامه دورهمی با کیفیت ۴۸۰p&nbsp; <SPAN>با حضور&nbsp;[<SPAN>محمدرضا شریفی نیا<SPAN>]</SPAN></SPAN>&nbsp;موضوع برنامه <SPAN>{شایعه}</SPAN></SPAN></STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/ki5hvr2n53c3/Dorehami%20S03E01%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>++++++++++++++++++++++++++++++++++++</P>
+<P><SPAN><STRONG>دانلود قسمت ۲ <SPAN>فصل سوم</SPAN> برنامه دورهمی با کیفیت ۷۲۰p&nbsp;<SPAN> با حضور [<SPAN>حمید هیراد</SPAN>] موضوع برنامه {<SPAN>ممیزی</SPAN>}</SPAN></STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/wyq6gmhnbtt8/Dorehami%20S03E02%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲ <SPAN>فصل سوم</SPAN> برنامه دورهمی با کیفیت ۴۸۰p&nbsp; <SPAN>با حضور [<SPAN>حمید هیراد</SPAN>] موضوع برنامه {<SPAN>ممیزی</SPAN>}</SPAN></STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/y5qtly1vfw5t/Dorehami%20S03E02%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>++++++++++++++++++++++++++++++++++++</P>
+<P><SPAN><STRONG>دانلود قسمت ۳ <SPAN>فصل سوم</SPAN> برنامه دورهمی با کیفیت ۷۲۰p&nbsp;<SPAN> با حضور [<SPAN>مجید مظفری و نیکی مظفری</SPAN>] موضوع برنامه {<SPAN>بازنشستگان</SPAN>}</SPAN></STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/ddxyotoa6kfy/Dorehami%20S03E03%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۳ <SPAN>فصل سوم</SPAN> برنامه دورهمی با کیفیت ۴۸۰p&nbsp; <SPAN>با حضور [<SPAN>مجید مظفری و نیکی مظفری</SPAN>] موضوع برنامه {<SPAN>بازنشستگان</SPAN>}</SPAN></STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/8q84jh6hpbak/Dorehami%20S03E03%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>++++++++++++++++++++++++++++++++++++</P>
+<P><SPAN><STRONG>دانلود قسمت ۴ <SPAN>فصل سوم</SPAN> برنامه دورهمی با کیفیت ۷۲۰p&nbsp;<SPAN> با حضور [<SPAN>دال بند</SPAN>] موضوع برنامه {<SPAN>وجدان کاری</SPAN>}</SPAN></STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/pi4ffx82ovgw/Dorehami%20S03E04%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۴ <SPAN>فصل سوم</SPAN> برنامه دورهمی با کیفیت ۴۸۰p&nbsp; <SPAN>با حضور [<SPAN>دال بند</SPAN>] موضوع برنامه {<SPAN>وجدان کاری</SPAN>}</SPAN></STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/qd99czfzu0g4/Dorehami%20S03E04%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>++++++++++++++++++++++++++++++++++++</P>
+<P><SPAN><STRONG>دانلود قسمت ۵ <SPAN>فصل سوم</SPAN> برنامه دورهمی با کیفیت ۷۲۰p&nbsp;<SPAN> با حضور [<SPAN>علی اوجی و نرگس محمدی</SPAN>] موضوع برنامه {<SPAN>ویژه برنامه شب یلدا</SPAN>}</SPAN></STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/58od07sgx0x5/Dorehami%20S03E05%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۵ <SPAN>فصل سوم</SPAN> برنامه دورهمی با کیفیت ۴۸۰p&nbsp; <SPAN>با حضور [<SPAN>علی اوجی و نرگس محمدی</SPAN>] موضوع برنامه {<SPAN>ویژه برنامه شب یلد</SPAN>ا}</SPAN></STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/y9ve3kuydoco/Dorehami%20S03E05%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>++++++++++++++++++++++++++++++++++++</P>
+<P><SPAN><STRONG>دانلود قسمت ۶ <SPAN>فصل سوم</SPAN> برنامه دورهمی با کیفیت ۷۲۰p&nbsp;<SPAN> با حضور [<SPAN>نیوشا ضیعمی و همسرش</SPAN>] موضوع برنامه {<SPAN>مرگ</SPAN>}</SPAN></STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/iaz9hsr3ix23/Dorehami%20S03E06%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۶ <SPAN>فصل سوم</SPAN> برنامه دورهمی با کیفیت ۴۸۰p&nbsp; <SPAN>با حضور [<SPAN>نیوشا ضیعمی و همسرش</SPAN>] موضوع برنامه {<SPAN>مرگ</SPAN>}</SPAN></STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/37qg15hdm62o/Dorehami%20S03E06%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>++++++++++++++++++++++++++++++++++++</P>
+<P><SPAN><STRONG>دانلود قسمت ۷ <SPAN>فصل سوم</SPAN> برنامه دورهمی با کیفیت ۷۲۰p&nbsp;<SPAN> با حضور [<SPAN>علیرام نوریی</SPAN>] موضوع برنامه {<SPAN>عشق واقعی</SPAN>}</SPAN></STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/06aurfv8n68p/Dorehami%20S03E07%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۷ <SPAN>فصل سوم</SPAN> برنامه دورهمی با کیفیت ۴۸۰p&nbsp; <SPAN>با حضور&nbsp;[<SPAN>علیرام نوریی</SPAN>] موضوع برنامه {<SPAN>عشق واقعی</SPAN>}</SPAN></STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/iz8ix4lm64df/Dorehami%20S03E07%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>++++++++++++++++++++++++++++++++++++</P>
+<P><SPAN><STRONG>دانلود قسمت ۸ <SPAN>فصل سوم</SPAN> برنامه دورهمی با کیفیت ۷۲۰p&nbsp;<SPAN> با حضور [<SPAN>هوروش بند</SPAN>] موضوع برنامه {<SPAN>فرهنگ سازی</SPAN>}</SPAN></STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/x2xecbn6hci2/Dorehami%20S03E08%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۸ <SPAN>فصل سوم</SPAN> برنامه دورهمی با کیفیت ۴۸۰p&nbsp; <SPAN>با حضور [<SPAN>هوروش بند</SPAN>] موضوع برنامه {<SPAN>فرهنگ سازی</SPAN>}</SPAN></STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/zbtt10ubcsap/Dorehami%20S03E08%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>++++++++++++++++++++++++++++++++++++</P>
+<P><SPAN><STRONG>دانلود قسمت ۹ <SPAN>فصل سوم</SPAN> برنامه دورهمی با کیفیت ۷۲۰p&nbsp;<SPAN> با حضور [<SPAN>فرشاد پیوس</SPAN>] موضوع برنامه {<SPAN>فیک</SPAN>}</SPAN></STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/0wzrzys1om58/Dorehami%20S03E09%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۹ <SPAN>فصل سوم</SPAN> برنامه دورهمی با کیفیت ۴۸۰p&nbsp;<SPAN>&nbsp;با حضور [<SPAN>فرشاد پیوس</SPAN>] موضوع برنامه {<SPAN>فیک</SPAN>}</SPAN></STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/90mbh2112rjm/Dorehami%20S03E09%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>____________________________________</P>
+<H3><SPAN>عوامل فصل سوم برنامه دورهمی :</SPAN></H3>
+<P>» ۱ –&nbsp;<SPAN><STRONG>کارگردان</STRONG>&nbsp;</SPAN>: مهران مدیری&nbsp; «</P>
+<P>» ۲ – <SPAN><B>تهیه کنندگان</B></SPAN>&nbsp;:&nbsp;&nbsp;هاشم رضایت ، حمید رحیمی نادی&nbsp;«</P>
+<P>____________________________________</P>
+<H3><SPAN>عکس های فصل سوم برنامه دورهمی :</SPAN></H3>
+<P><IMG class="alignnone size-full wp-image-2394" alt="سروش جمشیدی در برنامه دورهمی" src="http://dlrooz.com/wp-content/uploads/2018/01/1.jpg" width=600 height=338 sizes="(max-width: 600px) 100vw, 600px" srcset="http://dlrooz.com/wp-content/uploads/2018/01/1.jpg 600w, http://dlrooz.com/wp-content/uploads/2018/01/1-300x169.jpg 300w"><IMG class="alignnone size-full wp-image-2395" alt="حمید هیراد در دورهمی" src="http://dlrooz.com/wp-content/uploads/2018/01/2.jpg" width=600 height=338 sizes="(max-width: 600px) 100vw, 600px" srcset="http://dlrooz.com/wp-content/uploads/2018/01/2.jpg 600w, http://dlrooz.com/wp-content/uploads/2018/01/2-300x169.jpg 300w"><IMG class="alignnone size-full wp-image-2396" alt="محمدرضا شریفی نیا در دورهمی" src="http://dlrooz.com/wp-content/uploads/2018/01/3.jpg" width=600 height=338 sizes="(max-width: 600px) 100vw, 600px" srcset="http://dlrooz.com/wp-content/uploads/2018/01/3.jpg 600w, http://dlrooz.com/wp-content/uploads/2018/01/3-300x169.jpg 300w"><IMG class="alignnone size-full wp-image-2397" alt="فصل سوم دورهمی" src="http://dlrooz.com/wp-content/uploads/2018/01/4.jpg" width=600 height=338 sizes="(max-width: 600px) 100vw, 600px" srcset="http://dlrooz.com/wp-content/uploads/2018/01/4.jpg 600w, http://dlrooz.com/wp-content/uploads/2018/01/4-300x169.jpg 300w"><IMG class="alignnone size-full wp-image-2398" alt="دانلود فصل سوم برنامه دورهمی" src="http://dlrooz.com/wp-content/uploads/2018/01/5.jpg" width=600 height=338 sizes="(max-width: 600px) 100vw, 600px" srcset="http://dlrooz.com/wp-content/uploads/2018/01/5.jpg 600w, http://dlrooz.com/wp-content/uploads/2018/01/5-300x169.jpg 300w"></P></DIV></LI></DIV></UL></DIV></ACRONYM></p>
+            <p>&nbsp;&nbsp;&nbsp;            </p><br>
+
+
+            <ul class="clearfix">
+                                    <li>
+                        <b>برچسب ها: </b>
+                                                    <a href="http://commentsender.mihanblog.com/post/tag/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF" title="دانلود">دانلود</a>&nbsp;،
+                                                    <a href="http://commentsender.mihanblog.com/post/tag/%D9%81%D8%B5%D9%84" title="فصل">فصل</a>&nbsp;،
+                                                    <a href="http://commentsender.mihanblog.com/post/tag/%D8%B3%D9%88%D9%85" title="سوم">سوم</a>&nbsp;،
+                                                    <a href="http://commentsender.mihanblog.com/post/tag/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87" title="برنامه">برنامه</a>&nbsp;،
+                                                    <a href="http://commentsender.mihanblog.com/post/tag/%D8%AF%D9%88%D8%B1%D9%87%D9%85%DB%8C" title="دورهمی">دورهمی</a>&nbsp;،
+                                                    <a href="http://commentsender.mihanblog.com/post/tag/%D8%A8%D8%A7" title="با">با</a>&nbsp;،
+                                                    <a href="http://commentsender.mihanblog.com/post/tag/%DA%A9%DB%8C%D9%81%DB%8C%D8%AA" title="کیفیت">کیفیت</a>&nbsp;،
+                                            </li>
+                
+                            </ul>
+
+        </div>
+
+        <div class="PostCom">
+            <ul>
+                <li style="float:left;"><a target="_self" href="http://commentsender.mihanblog.com/post/4#commentlist" class="comment-link">نظرات(<script>setCommentCnt(4)</script>)</a>&nbsp;</li>
+                <li class="noBg" style="float: left; margin-left: 10px; margin-top: -6px;"><script>mihanblogPostLike('4','like')</script></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="3">
+
+        <div class="PostHead"><div class="PHT"></div>
+            <h1><a title="" href="http://commentsender.mihanblog.com/post/3" rel="bookmark">دانلود سریال محکومین با کیفیت عالی</a></h1>
+            <small class="PostTime">پنجشنبه 14 دی 1396</small>
+            <small class="PostDet"> نویسنده: <a href="http://commentsender.mihanblog.com/post/author/1573429">امین مظفری</a> | </small>
+
+
+
+        </div>
+
+        <div class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://commentsender.mihanblog.com/post/3&amp;title=دانلود سریال محکومین با کیفیت عالی">
+                ارسال به <img align="top" title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+        <div class="PostContent">
+
+            <p><span class="owner_photo clearfix"></span><DIV id=explanation>
+<H1>دانلود سریال محکومین با کیفیت عالی<SPAN class=small> </SPAN></H1>
+<P><ACRONYM title="Really Simple Syndication"></P>
+<P></P></DIV>
+<DIV id=content>
+<UL>
+<DIV class=article>
+<LI><A href="index.html" rel=bookmark>دانلود سریال محکومین با کیفیت عالی</A> 
+<DIV>
+<H3><SPAN><A href="http://dlrooz.com/tag/دانلود-رایگان/">دانلود رایگان </A>سریال محکومین به کارگردانی سیدجمال سیدحاتمی همراه با دو کیفیت</SPAN></H3>
+<P><SPAN><STRONG>قسمت <SPAN>۱۱ یازدهم</SPAN> این سریال در تاریخ<SPAN> ۱۳ دی ۹۶</SPAN> درج شد</STRONG></SPAN></P>
+<P><A href="index.html"><IMG class="size-full wp-image-2066 aligncenter" alt="دانلود سریال محکومین با کیفیت عالی" src="http://dlrooz.com/wp-content/uploads/2017/11/cover-min-5.jpg" width=600 height=418 sizes="(max-width: 600px) 100vw, 600px" srcset="http://dlrooz.com/wp-content/uploads/2017/11/cover-min-5.jpg 600w, http://dlrooz.com/wp-content/uploads/2017/11/cover-min-5-300x209.jpg 300w"></A></P>
+<P><STRONG>نام سریال</STRONG> : <B>محکومین</B></P>
+<P><SPAN>ژانر سریال</SPAN> : اجتماعی</P>
+<P><SPAN>مخاطب</SPAN> : بزرگسال</P>
+<P><SPAN>نوع</SPAN> : سریال</P>
+<P><SPAN>محصول</SPAN> : ایران</P>
+<P><SPAN>کارگردان</SPAN>&nbsp;:&nbsp;سیدجمال سیدحاتمی</P>
+<P><SPAN>تهیه کننده</SPAN> :&nbsp;بهروز مفید</P>
+<P><SPAN>نویسندگان :</SPAN>&nbsp;حسین قناعت ، محمد عبدی، طلا معتضدی</P>
+<P><SPAN><STRONG>بازیگران</STRONG>&nbsp;</SPAN>:، محمد حاتمی&nbsp;حسین مهری، لیلا زارع، علی شادمان</P>
+<P><STRONG><SPAN>خلاصه سریال</SPAN> <A href="index.html">محکومین</A></STRONG>&nbsp;: داستان&nbsp;<A href="http://dlrooz.com/category/%D8%B3%D8%B1%DB%8C%D8%A7%D9%84/">سریال ایرانی</A><STRONG>&nbsp;</STRONG><SPAN>محکومین ماجرای این سریال وکیلی هستش که دست به تلاش هستش زندانیان به جای مجازات و مشکلات براشون برن یه جای دیگه بدون انگ زندانی زندگی راحتی داشته باشند&nbsp;</SPAN></P>
+<P>____________________________________</P>
+<P><SPAN><STRONG>دانلود قسمت ۱ سریال محکومین با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/9xie9hgs8w99/Mahkoomin%20E01%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱ سریال محکومین با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/gzavpga5skin/Mahkoomin%20E01%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>================================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲ سریال محکومین با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/ygpspaep5917/Mahkoomin%20E02%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲ سریال محکومین با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/ug655f79b8ut/Mahkoomin%20E02%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>================================</P>
+<P><SPAN><STRONG>دانلود قسمت ۳ سریال محکومین با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/5vpffib80fxq/Mahkoomin%20E03%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۳ سریال محکومین با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/n0e55d3thx2u/Mahkoomin%20E03%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>================================</P>
+<P><SPAN><STRONG>دانلود قسمت ۴ سریال محکومین با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/btqfvf6oi153/Mahkoomin%20E04%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۴ سریال محکومین با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/psu5ghdw08ng/Mahkoomin%20E04%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>================================</P>
+<P><SPAN><STRONG>دانلود قسمت ۵ سریال محکومین با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/o3t1h43zoc0s/Mahkoomin%20E05%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۵ سریال محکومین با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/d15rd1lchuzj/Mahkoomin%20E05%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>================================</P>
+<P><SPAN><STRONG>دانلود قسمت ۶ سریال محکومین با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/fzwvu25uqzoi/Mahkoomin%20E06%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۶ سریال محکومین با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/ae05gcrzf6u6/Mahkoomin%20E06%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>================================</P>
+<P><SPAN><STRONG>دانلود قسمت ۷ سریال محکومین با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/d2l3p2devt5c/Mahkoomin%20E07%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۷ سریال محکومین با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/wewmyfyr2u7f/Mahkoomin%20E07%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>================================</P>
+<P><SPAN><STRONG>دانلود قسمت ۸ سریال محکومین با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/txmvzd9pb6m9/Mahkoomin%20E08%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۸ سریال محکومین با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/emuu0ukdskdp/Mahkoomin%20E08%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>================================</P>
+<P><SPAN><STRONG>دانلود قسمت ۹ سریال محکومین با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/ma9h0fao7iif/Mahkoomin%20E09%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۹ سریال محکومین با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/7gperlsy30ua/Mahkoomin%20E09%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>================================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۰ سریال محکومین با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><STRONG>DOWNLOAD</STRONG></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۰ سریال محکومین با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><STRONG>DOWNLOAD</STRONG></P>
+<P>================================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۱ سریال محکومین با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/7h6yv6vmx8oa/Mahkoomin%20E11%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۱ سریال محکومین با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/mlyfu8jzrdh2/Mahkoomin%20E11%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>____________________________________</P>
+<H3><SPAN>عوامل سریال محکومین :</SPAN></H3>
+<P>» ۱ –&nbsp;<SPAN><STRONG>کارگردان</STRONG>&nbsp;</SPAN>:&nbsp;سیدجمال سیدحاتمی «</P>
+<P>» ۲ –&nbsp;<STRONG><SPAN>نویسندگان</SPAN>&nbsp;</STRONG>: حسین قناعت ، محمد عبدی، طلا معتضدی «</P>
+<P>» ۳ – <SPAN><B>تهیه کننده</B></SPAN>&nbsp;:&nbsp; بهروز مفید «</P>
+<P>» ۴ – <SPAN><STRONG>مدیر</STRONG> <STRONG>تصویر</STRONG> <STRONG>برداری</STRONG></SPAN> : محمدرضا سکوت «</P>
+<P>» ۵ –&nbsp;&nbsp;<SPAN><STRONG>مدیر صدا برداری</STRONG></SPAN>&nbsp;:&nbsp;علیرضا نیازی «</P>
+<P>» ۶ – <SPAN><STRONG>طراح گریم&nbsp;</STRONG> </SPAN>: &nbsp;احسان روناسی «</P>
+<P>» ۷ –&nbsp;<SPAN><STRONG>طراح</STRONG> <STRONG>صحنه و لباس&nbsp;</STRONG></SPAN>: مرتضی پورحیدری «</P>
+<P>» ۸ – <SPAN><B>منشی صحنه</B></SPAN>: سارا مطلق «</P>
+<P>____________________________________</P>
+<H3><SPAN>عکس های سریال محکومین :</SPAN></H3>
+<P><IMG class="alignnone size-full wp-image-2071" alt="آنونس سریال محکومین" src="http://dlrooz.com/wp-content/uploads/2017/11/5-min-14.jpg" width=600 height=418 sizes="(max-width: 600px) 100vw, 600px" srcset="http://dlrooz.com/wp-content/uploads/2017/11/5-min-14.jpg 600w, http://dlrooz.com/wp-content/uploads/2017/11/5-min-14-300x209.jpg 300w"><IMG class="alignnone size-full wp-image-2067" alt="سریال محکومین" src="http://dlrooz.com/wp-content/uploads/2017/11/1-min-17.jpg" width=500 height=537 sizes="(max-width: 500px) 100vw, 500px" srcset="http://dlrooz.com/wp-content/uploads/2017/11/1-min-17.jpg 500w, http://dlrooz.com/wp-content/uploads/2017/11/1-min-17-279x300.jpg 279w"><IMG class="alignnone size-full wp-image-2068" alt="عکس های سریال محکومین" src="http://dlrooz.com/wp-content/uploads/2017/11/2-min-21.jpg" width=500 height=333 sizes="(max-width: 500px) 100vw, 500px" srcset="http://dlrooz.com/wp-content/uploads/2017/11/2-min-21.jpg 500w, http://dlrooz.com/wp-content/uploads/2017/11/2-min-21-300x200.jpg 300w"><IMG class="alignnone size-full wp-image-2069" alt="داستان سریال محکومین" src="http://dlrooz.com/wp-content/uploads/2017/11/3-min-17.jpg" width=600 height=418 sizes="(max-width: 600px) 100vw, 600px" srcset="http://dlrooz.com/wp-content/uploads/2017/11/3-min-17.jpg 600w, http://dlrooz.com/wp-content/uploads/2017/11/3-min-17-300x209.jpg 300w"><IMG class="alignnone size-full wp-image-2070" alt="تیزر سریال محکومین" src="http://dlrooz.com/wp-content/uploads/2017/11/4-min-23.jpg" width=600 height=418 sizes="(max-width: 600px) 100vw, 600px" srcset="http://dlrooz.com/wp-content/uploads/2017/11/4-min-23.jpg 600w, http://dlrooz.com/wp-content/uploads/2017/11/4-min-23-300x209.jpg 300w"></P></DIV></LI></DIV></UL></DIV></ACRONYM></p>
+            <p>&nbsp;&nbsp;&nbsp;            </p><br>
+
+
+            <ul class="clearfix">
+                
+                            </ul>
+
+        </div>
+
+        <div class="PostCom">
+            <ul>
+                <li style="float:left;"><a target="_self" href="http://commentsender.mihanblog.com/post/3#commentlist" class="comment-link">نظرات(<script>setCommentCnt(3)</script>)</a>&nbsp;</li>
+                <li class="noBg" style="float: left; margin-left: 10px; margin-top: -6px;"><script>mihanblogPostLike('3','like')</script></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="2">
+
+        <div class="PostHead"><div class="PHT"></div>
+            <h1><a title="" href="http://commentsender.mihanblog.com/post/2" rel="bookmark">دانلود سریال سایه بان با کیفیت عالی</a></h1>
+            <small class="PostTime">پنجشنبه 14 دی 1396</small>
+            <small class="PostDet"> نویسنده: <a href="http://commentsender.mihanblog.com/post/author/1573429">امین مظفری</a> | </small>
+
+
+
+        </div>
+
+        <div class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://commentsender.mihanblog.com/post/2&amp;title=دانلود سریال سایه بان با کیفیت عالی">
+                ارسال به <img align="top" title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+        <div class="PostContent">
+
+            <p><span class="owner_photo clearfix"></span><DIV id=explanation>
+<H1>دانلود سریال سایه بان با کیفیت عالی<SPAN class=small> </SPAN></H1>
+<P><ACRONYM title="Really Simple Syndication"></P>
+<P></P></DIV>
+<DIV id=content>
+<UL>
+<DIV class=article>
+<LI><A href="index.html" rel=bookmark>دانلود سریال سایه بان با کیفیت عالی</A> 
+<DIV>
+<H3><SPAN><A href="http://dlrooz.com/tag/دانلود-رایگان/">دانلود رایگان </A>سریال سایه بان به کارگردانی برادران محمودی همراه با دو کیفیت</SPAN></H3>
+<P><SPAN><STRONG>قسمت <SPAN>۳۵ سی و پنجم</SPAN> این سریال در تاریخ<SPAN> ۱۳ دی ۹۶</SPAN> درج شد</STRONG></SPAN></P>
+<P><IMG class="alignnone size-full wp-image-2381" alt="دانلود سریال سایه بان" src="http://dlrooz.com/wp-content/uploads/2017/10/sayeban-min.jpg" width=800 height=533 sizes="(max-width: 800px) 100vw, 800px" srcset="http://dlrooz.com/wp-content/uploads/2017/10/sayeban-min.jpg 800w, http://dlrooz.com/wp-content/uploads/2017/10/sayeban-min-300x200.jpg 300w, http://dlrooz.com/wp-content/uploads/2017/10/sayeban-min-768x512.jpg 768w"></P>
+<P><STRONG>نام سریال</STRONG> : <B>سایه بان</B></P>
+<P><SPAN>ژانر سریال</SPAN> : اجتماعی</P>
+<P><SPAN>مخاطب</SPAN> : بزرگسال</P>
+<P><SPAN>نوع</SPAN> : سریال</P>
+<P><SPAN>محصول</SPAN> : ایران</P>
+<P><SPAN>کارگردانان</SPAN>&nbsp;:&nbsp;برادران محمودی</P>
+<P><SPAN><STRONG>بازیگران</STRONG>&nbsp;</SPAN>:&nbsp;&nbsp;<SPAN>امین تارخ، هستی مهدوی، محمدرضا غفاری، مجتبی پیرزاده، محمد ولی زادگان، رویا جاویدنیا، کاوه خداشناس،کامران تفتی ، افسانه کمالی، حسام محمودی، خاطره حاتمی، سینا مهراد، افشین اخلاقی، زهرا بهروز منش با حضور پریوش نظریه، رویا تیموریان، بهزاد فراهانی و علی اوسیوند&nbsp;</SPAN></P>
+<P><STRONG>خلاصه سریال <A href="index.html">سایه بان</A></STRONG>&nbsp;: داستان&nbsp;<A href="http://dlrooz.com/category/%D8%B3%D8%B1%DB%8C%D8%A7%D9%84/">سریال ایرانی</A><STRONG>&nbsp;</STRONG><SPAN>سایه بان قصه زندگی امروز ما و شماست. دو رفیق که در منطقه ای کارگر نشین بزرگ شده اند<A href="index.html">،</A> تا پای جان تلاش می کنند که چراغ خانه هایشان را روشن نگه دارند. ایستاده اند در برابر سرنوشت سرکش. عشق و ایمان، خون می شود در رگ هایشان تا از پا نیفتند و دلخوش بمانند به رحمت خدا و فرداهای بهتر اما زخمی در راه است زخمی که سنگ محکیست برای رفاقت دیرینه شان …</SPAN></P>
+<P>____________________________________</P>
+<P><SPAN><STRONG>دانلود قسمت ۱ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/d0t3fg7cc1fo/Sayeban%20E01%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/s1wcdtdttgeg/Sayeban%20E01%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/39ut393vrwk2/Sayeban%20E02%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/uxs8lvwys0ct/Sayeban%20E02%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۳ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/i348n1tumvdr/Sayeban%20E03%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۳ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/c70zor54xkgn/Sayeban%20E03%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۴ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><STRONG>DOWNLOAD</STRONG></P>
+<P><SPAN><STRONG>دانلود قسمت ۴ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><STRONG>DOWNLOAD</STRONG></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۵ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><STRONG>DOWNLOAD</STRONG></P>
+<P><SPAN><STRONG>دانلود قسمت ۵ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><STRONG>DOWNLOAD</STRONG></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۶ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/gh5zbxr0hefg/Sayeban%20E06%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۶ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/gvi8yrklaxdr/Sayeban%20E06%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۷ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/xzks3gxf4uig/Sayeban%20E07%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۷ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/c5xbnmvskkyz/Sayeban%20E07%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۸ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/t9aeed6tq8b5/Sayeban%20E08%20720p%7BDLROOZ.COM%7Dmkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۸ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/bmblznasjkl2/Sayeban%20E08%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۹ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/psqv29pk0qhg/Sayeban%20E09%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۹ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/8x5d9o56ha37/Sayeban%20E09%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۰ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/9nhseuslavvu/Sayeban%20E10%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۰ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/fpmyehwzclua/Sayeban%20E10%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۱ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/90yd3ftu95w0/Sayeban%20E11%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۱ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/rpa09q2ekf6o/Sayeban%20E11%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۲ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/nr47034v7zoa/Sayeban%20E12%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۲ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/v4196xupzr9m/Sayeban%20E12%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۳ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/m3wb4z1z8flw/Sayeban%20E13%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۳ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/a9qygcr5gx4v/Sayeban%20E13%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۴ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/msznpo3dltcb/Sayeban%20E14%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۴ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/udti7otfzmkp/Sayeban%20E14%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۵ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/o984k5hzdn8b/Sayeban%20E15%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۵ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/1sxeanqv071m/Sayeban%20E15%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۶ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/xotdllicfmh9/Sayeban%20E16%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۶ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/hz12d6shhm4x/Sayeban%20E16%20480p%7BDLROOZ.COM%7Dmkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۷ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/7im5o4g65kno/Sayeban%20E17%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۷ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/v9wwsnl1wx7p/Sayeban%20E17%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۸ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/bkzrhb9zdjgq/Sayeban%20E18%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۸ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/4vcmqgb928t5/Sayeban%20E18%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۹ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/08wyh5bbqbwf/Sayeban%20E19%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۹ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/ofwexk9lo6wh/Sayeban%20E19%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲۰ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/f4qb15k3bh0y/Sayeban%20E20%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۰ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/kxk0nrz7wo46/Sayeban%20E20%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲۱ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/otdhwxv2n8qs/Sayeban%20E21%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۱ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/6mf14vn46dka/Sayeban%20E21%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲۲ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/mkb408dgotst/Sayeban%20E22%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۲ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/8jzf904b11yp/Sayeban%20E22%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲۳ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/cglsh2ezoyk6/Sayeban%20E23%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۳ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/r9er470r3gtu/Sayeban%20E23%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲۴ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/keaa18ueoite/Sayeban%20E24%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۴ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/zx8n4xvqf80g/Sayeban%20E24%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲۵ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/5trk7zw55no6/Sayeban%20E25%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۵ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/8iyyx0x92334/Sayeban%20E25%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲۶ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/psail9yx1o2c/Sayeban%20E26%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۶ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/r2yb6lr221au/Sayeban%20E26%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲۷ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/8rxbdttqcres/Sayeban%20E27%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۷ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/01rwnqle3iz5/Sayeban%20E27%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲۸ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/4e24k23el8xj/Sayeban%20E28%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۸ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/48jx9boqivz0/Sayeban%20E28%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲۹ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/8upvk6j80lg6/Sayeban%20E29%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۹ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/9ycky0s2kkic/Sayeban%20E29%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۳۰ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/7awjencad6ch/Sayeban%20E30%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۳۰ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/dxwe0jxe9v7m/Sayeban%20E30%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۳۱ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/qez6mxyky25y/Sayeban%20E31%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۳۱ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/qewvmqm5yg8q/Sayeban%20E31%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۳۲ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/h25xirl58qlf/Sayeban%20E32%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۳۲ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/egi83qb56jz2/Sayeban%20E32%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۳۳ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/shob5fzwzi84/Sayeban%20E33%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۳۳ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/o3auclajpodc/Sayeban%20E33%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۳۴ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/uwgzta8gvy9o/Sayeban%20E34%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۳۴ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/inbj8efea3wq/Sayeban%20E34%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۳۵ سریال سایه بان با کیفیت ۷۲۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/94e91497knk1/Sayeban%20E35%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۳۵ سریال سایه بان با کیفیت ۴۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/6eiyzscf38tz/Sayeban%20E35%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>____________________________________</P>
+<H3><SPAN>عوامل سریال سایه بان :</SPAN></H3>
+<P>[۱-<SPAN><STRONG>کارگردانان</STRONG> </SPAN>:&nbsp;برادران محمودی&nbsp;]</P>
+<P>[۲-<STRONG><SPAN>نویسندگان</SPAN> </STRONG>:&nbsp;سعید دولتخانی و جمشید محمودی ]</P>
+<P>[۳- <SPAN><STRONG>طرح قصه</STRONG></SPAN> : جمشید محمودی و نوید محمودی&nbsp;]</P>
+<P>[۴- <SPAN><STRONG>مدیر</STRONG> <STRONG>تصویر</STRONG> <STRONG>برداری</STRONG></SPAN> : امین موسوی&nbsp;]</P>
+<P>[۵- <SPAN><STRONG>مدیر صدابرداری</STRONG></SPAN> :&nbsp; سعید بجنوردی&nbsp;]</P>
+<P>۶- <SPAN><STRONG>تدوین</STRONG> </SPAN>: نیما جعفری جوزانی&nbsp;]</P>
+<P>[۷-<SPAN><STRONG>طراح</STRONG> <STRONG>صحنه</STRONG></SPAN> : امیر حسین بابائیان&nbsp;]</P>
+<P>[۸- <SPAN><STRONG>عکاس</STRONG></SPAN> : فتاح ذی نوری&nbsp;]</P>
+<P>[۹- <SPAN><STRONG>مجری</STRONG> <STRONG>طرح</STRONG></SPAN> : شیما قنبری&nbsp;]</P>
+<P>[۱۰- <SPAN><STRONG>مدیر</STRONG> <STRONG>تدارکات</STRONG> </SPAN>: امیر جهانگیری ]</P>
+<P>____________________________________</P>
+<H3><SPAN>عکس های سریال سایه بان :</SPAN></H3>
+<P><IMG class="alignnone size-full wp-image-1634" alt="عکس 1 سریال سایه بان" src="http://dlrooz.com/wp-content/uploads/2017/10/1-1-9.jpg" width=600 height=418 sizes="(max-width: 600px) 100vw, 600px" srcset="http://dlrooz.com/wp-content/uploads/2017/10/1-1-9.jpg 600w, http://dlrooz.com/wp-content/uploads/2017/10/1-1-9-300x209.jpg 300w"><IMG class="alignnone size-full wp-image-1635" alt="عکس 2 سریال سایه بان" src="http://dlrooz.com/wp-content/uploads/2017/10/2-2_1.jpg" width=1024 height=723 sizes="(max-width: 1024px) 100vw, 1024px" srcset="http://dlrooz.com/wp-content/uploads/2017/10/2-2_1.jpg 1024w, http://dlrooz.com/wp-content/uploads/2017/10/2-2_1-300x212.jpg 300w, http://dlrooz.com/wp-content/uploads/2017/10/2-2_1-768x542.jpg 768w"><IMG class="alignnone size-full wp-image-1636" alt="عکس 3 سریال سایه بان" src="http://dlrooz.com/wp-content/uploads/2017/10/3-3_1.jpg" width=600 height=400 sizes="(max-width: 600px) 100vw, 600px" srcset="http://dlrooz.com/wp-content/uploads/2017/10/3-3_1.jpg 600w, http://dlrooz.com/wp-content/uploads/2017/10/3-3_1-300x200.jpg 300w"><IMG class="alignnone size-full wp-image-1637" alt="عکس 4 سریال سایه بان" src="http://dlrooz.com/wp-content/uploads/2017/10/4-4_1.jpg" width=600 height=400 sizes="(max-width: 600px) 100vw, 600px" srcset="http://dlrooz.com/wp-content/uploads/2017/10/4-4_1.jpg 600w, http://dlrooz.com/wp-content/uploads/2017/10/4-4_1-300x200.jpg 300w"><IMG class="alignnone size-full wp-image-1638" alt="عکس 5 سریال سایه بان" src="http://dlrooz.com/wp-content/uploads/2017/10/5-5-9.jpg" width=800 height=533 sizes="(max-width: 800px) 100vw, 800px" srcset="http://dlrooz.com/wp-content/uploads/2017/10/5-5-9.jpg 800w, http://dlrooz.com/wp-content/uploads/2017/10/5-5-9-300x200.jpg 300w, http://dlrooz.com/wp-content/uploads/2017/10/5-5-9-768x512.jpg 768w"><IMG class="alignnone size-full wp-image-1639" alt="عکس 6 سریال سایه بان" src="http://dlrooz.com/wp-content/uploads/2017/10/6-6-2.jpg" width=1280 height=853 sizes="(max-width: 1280px) 100vw, 1280px" srcset="http://dlrooz.com/wp-content/uploads/2017/10/6-6-2.jpg 1280w, http://dlrooz.com/wp-content/uploads/2017/10/6-6-2-300x200.jpg 300w, http://dlrooz.com/wp-content/uploads/2017/10/6-6-2-768x512.jpg 768w, http://dlrooz.com/wp-content/uploads/2017/10/6-6-2-1024x682.jpg 1024w"><IMG class="alignnone size-full wp-image-1640" alt="عکس 7 سریال سایه بان" src="http://dlrooz.com/wp-content/uploads/2017/10/7-7-2.jpg" width=600 height=400 sizes="(max-width: 600px) 100vw, 600px" srcset="http://dlrooz.com/wp-content/uploads/2017/10/7-7-2.jpg 600w, http://dlrooz.com/wp-content/uploads/2017/10/7-7-2-300x200.jpg 300w"><IMG class="alignnone size-full wp-image-1641" alt="عکس 8 سریال سایه بان" src="http://dlrooz.com/wp-content/uploads/2017/10/8-8-2.jpg" width=600 height=400 sizes="(max-width: 600px) 100vw, 600px" srcset="http://dlrooz.com/wp-content/uploads/2017/10/8-8-2.jpg 600w, http://dlrooz.com/wp-content/uploads/2017/10/8-8-2-300x200.jpg 300w"></P></DIV></LI></DIV></UL></DIV></ACRONYM></p>
+            <p>&nbsp;&nbsp;&nbsp;            </p><br>
+
+
+            <ul class="clearfix">
+                
+                            </ul>
+
+        </div>
+
+        <div class="PostCom">
+            <ul>
+                <li style="float:left;"><a target="_self" href="http://commentsender.mihanblog.com/post/2#commentlist" class="comment-link">نظرات(<script>setCommentCnt(2)</script>)</a>&nbsp;</li>
+                <li class="noBg" style="float: left; margin-left: 10px; margin-top: -6px;"><script>mihanblogPostLike('2','like')</script></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="1">
+
+        <div class="PostHead"><div class="PHT"></div>
+            <h1><a title="" href="http://commentsender.mihanblog.com/post/1" rel="bookmark">دانلود سریال لیسانسه ها فصل دوم با کیفیت عالی</a></h1>
+            <small class="PostTime">پنجشنبه 14 دی 1396</small>
+            <small class="PostDet"> نویسنده: <a href="http://commentsender.mihanblog.com/post/author/1573429">امین مظفری</a> | </small>
+
+
+
+        </div>
+
+        <div class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://commentsender.mihanblog.com/post/1&amp;title=دانلود سریال لیسانسه ها فصل دوم با کیفیت عالی">
+                ارسال به <img align="top" title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+        <div class="PostContent">
+
+            <p><span class="owner_photo clearfix"></span><DIV id=explanation>
+<H1>دانلود سریال لیسانسه ها فصل دوم با کیفیت عالی<SPAN class=small> </SPAN></H1>
+<P><ACRONYM title="Really Simple Syndication"></P>
+<P></P></DIV>
+<DIV id=content>
+<UL>
+<DIV class=article>
+<LI><A href="index.html" rel=bookmark>دانلود سریال لیسانسه ها فصل دوم با کیفیت عالی</A> 
+<DIV>
+<H3><SPAN><A href="http://dlrooz.com/tag/دانلود-رایگان/">دانلود رایگان </A>سریال لیسانسه ها فصل دوم به کارگردانی سروش صحت همراه با دو کیفیت</SPAN></H3>
+<P><SPAN><STRONG>قسمت<SPAN> ۲۸ بیست و هشتم</SPAN> این سریال همراه با <SPAN>۳ کیفیت</SPAN> در تاریخ<SPAN> ۱۳ دی ۹۶</SPAN> درج شد</STRONG></SPAN></P>
+<P><A href="index.html"><IMG class="alignnone size-full wp-image-2389" alt="دانلود سریال لیسانسه ها فصل دوم با کیفیت عالی" src="http://dlrooz.com/wp-content/uploads/2018/01/licanse-ha-min.jpg" width=500 height=727 sizes="(max-width: 500px) 100vw, 500px" srcset="http://dlrooz.com/wp-content/uploads/2018/01/licanse-ha-min.jpg 500w, http://dlrooz.com/wp-content/uploads/2018/01/licanse-ha-min-206x300.jpg 206w"></A></P>
+<P><STRONG>نام سریال</STRONG> : <B>لیسانسه ها فصل دوم</B></P>
+<P><SPAN>ژانر سریال</SPAN> : اجتماعی</P>
+<P><SPAN>مخاطب</SPAN> : بزرگسال</P>
+<P><SPAN>نوع</SPAN> : سریال</P>
+<P><SPAN>محصول</SPAN> : ایران</P>
+<P><SPAN>کارگردان</SPAN>&nbsp;: سروش صحت</P>
+<P><SPAN>نویسندگان</SPAN> : <SPAN>سروش صحت ، ایمان صفایی</SPAN></P>
+<P><SPAN>تهیه کننده</SPAN> :&nbsp;رضا جودی</P>
+<P><SPAN><STRONG>بازیگران</STRONG>&nbsp;</SPAN>: امیر حسین رستمی ، هوتن شکیبا ، امیر کاظمی ، متینه ستوده <A href="http://dlrooz.com/">،</A> بهنام تشکر ، بیژن بنفشه خواه ، مهران رجبی ، نیلوفر شهیدی ، افشین سنگ چاپ ، فرخنده فرمانی زاده و مریم سرمدی</P>
+<P><STRONG><SPAN>خلاصه سریال</SPAN> <A href="index.html">لیسانسه ها فصل دوم</A></STRONG>&nbsp;: داستان&nbsp;<A href="http://dlrooz.com/category/%D8%B3%D8%B1%DB%8C%D8%A7%D9%84/">سریال ایرانی</A><STRONG>&nbsp;</STRONG><SPAN>لیسانسه ها فصل دوم آقای حبیب وضع مالی خیلی خوبی دارد ولی به دلیل خجالتی بودن و ضعف داشتن هنوز کیس مناسب ازدواج خودش رو نتونسته پیدا کنه دوست او مسعود در حال ازدواج است ولی مشکلات زیادی از جمله بی پولی دردسر های زیادی برایش به وجود می آورد که…</SPAN></P>
+<P>____________________________________</P>
+<P><SPAN><STRONG>دانلود قسمت ۱ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/dhtd3jse817w/Lisanseha%20S02E01%201080p%7BDLOOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/nr35dcdlsgnm/Lisanseha%20S02E01%20720p%7BDLOOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/8tcr1vs21kdi/Lisanseha%20S02E01%20480p%7BDLOOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/b69fwiki3v6q/Lisanseha%20S02E02%201080p%7BDLOOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/ge9zil1hdxy0/Lisanseha%20S02E02%20720p%7BDLOOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/ecgjh8irwtyi/Lisanseha%20S02E02%20480p%7BDLOOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۳ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><STRONG>DOWNLOAD</STRONG></P>
+<P><SPAN><STRONG>دانلود قسمت ۳ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><STRONG>DOWNLOAD</STRONG></P>
+<P><SPAN><STRONG>دانلود قسمت ۳ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><STRONG>DOWNLOAD</STRONG></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۴ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/w1ule1owxzae/Lisanseha%20S02E04%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۴ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/6kd5yvn241wo/Lisanseha%20S02E04%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۴ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/rjj25zt62yla/Lisanseha%20S02E04%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۵ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/x05z2bszxjaj/Lisanseha%20S02E05%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۵ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/42t46809dg4r/Lisanseha%20S02E05%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۵ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/wsyyjwzc8i3t/Lisanseha%20S02E05%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۶ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/t3jhk3b7g80x/Lisanseha%20S02E06%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۶ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/asu96p6ju0gi/Lisanseha%20S02E06%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۶ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/ty6r9l974f13/Lisanseha%20S02E06%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۷ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/z9tumnyc9qku/Lisanseha%20S02E07%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۷ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/omqvvu00ullk/Lisanseha%20S02E07%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۷ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/gk0dlwafx87j/Lisanseha%20S02E07%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۸ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/nhoj97r17389/Lisanseha%20S02E08%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۸ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/bitdto4p78k8/Lisanseha%20S02E08%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۸ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/ro7ganur8t8a/Lisanseha%20S02E08%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۹ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/5g8oat8731sf/Lisanseha%20S02E09%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۹ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/gr3olq31c0j6/Lisanseha%20S02E09%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۹ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/s1l2mf833f4c/Lisanseha%20S02E09%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۰ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/0wa77ng9cxum/Lisanseha%20S02E10%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۰ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/b4foct9p5m8j/Lisanseha%20S02E10%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۰ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/in52bu0u8kc1/Lisanseha%20S02E10%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۱ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/2odq9ypfwhto/Lisanseha%20S02E11%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۱ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/dbt91muefjlw/Lisanseha%20S02E11%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۱ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/bywirido70j6/Lisanseha%20S02E11%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۲ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/a2rh576xdq2o/Lisanseha%20S02E12%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۲ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/qgw3t8sp7dgk/Lisanseha%20S02E12%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۲ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/pblfwa064715/Lisanseha%20S02E12%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۳ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/dmul9tx6xfr5/Lisanseha%20S02E13%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۳ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/4ohl3awxolha/Lisanseha%20S02E13%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۳ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/dmghqbpiyn5f/Lisanseha%20S02E13%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۴ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/5ds11wpvm3lf/Lisanseha%20S02E14%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۴ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/u2rpcek1p6gs/Lisanseha%20S02E14%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۴ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/bztr4t097ls5/Lisanseha%20S02E14%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۵ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/bmpc1ott8pt6/Lisanseha%20S02E15%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۵ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/8yzn1q7yb8ex/Lisanseha%20S02E15%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۵ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/42b1g54a86u7/Lisanseha%20S02E15%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۶ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/gzvgk7i0dvn2/Lisanseha%20S02E16%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۶ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/k5huxv4sq3fm/Lisanseha%20S02E16%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۶ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/sv0vrgwqbnra/Lisanseha%20S02E16%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۷ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/r5vn0myyjcq3/Lisanseha%20S02E17%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۷ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/nhiy2ip8fmug/Lisanseha%20S02E17%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۷ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/qjzj00b3j2yk/Lisanseha%20S02E17%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۸ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/7wwrju9xw2f0/Lisanseha%20S02E18%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۸ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/3mqrt7vj4zzi/Lisanseha%20S02E18%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۸ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/mxh16hx2nn9y/Lisanseha%20S02E18%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۱۹ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/jh40mlb9pkn4/Lisanseha%20S02E19%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۹ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/38oxu6h941j9/Lisanseha%20S02E19%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۱۹ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/tu5z39yse1u6/Lisanseha%20S02E19%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲۰ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/gcg51zq70ddn/Lisanseha%20S02E20%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۰ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/0q5mza4r0j70/Lisanseha%20S02E20%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۰ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/27belg4rhn1h/Lisanseha%20S02E20%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲۱ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><STRONG>DOWNLOAD</STRONG></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۱ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/gshyqm271173/Lisanseha%20S02E21%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۱ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/nv3yfme89t2a/Lisanseha%20S02E21%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲۲ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/4vhzdjl33it7/Lisanseha%20S02E22%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۲ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/ba297gzi0r7m/Lisanseha%20S02E22%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۲ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/obz2aoc1lgn2/Lisanseha%20S02E22%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲۳ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/mbur03gpfwek/Lisanseha%20S02E23%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۳ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/go6nak39r9n3/Lisanseha%20S02E23%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۳ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/a7v4eug0j55o/Lisanseha%20S02E23%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲۴ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/x3hpwks2dpgj/Lisanseha%20S02E24%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۴ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/dn296jahhagr/Lisanseha%20S02E24%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۴ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/6i7hwm8awueo/Lisanseha%20S02E24%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲۵ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/77jglr31ht9d/Lisanseha%20S02E25%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۵ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/6n50ldbbcm5f/Lisanseha%20S02E25%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۵ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/2uif42aid3l5/Lisanseha%20S02E25%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲۶ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/nyak4o9tla5z/Lisanseha%20S02E26%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۶ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/9ad56xmtvopw/Lisanseha%20S02E26%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۶ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/nevueohtfisv/Lisanseha%20S02E26%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲۷ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/uhgxz8fho73w/Lisanseha%20S02E27%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۷ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/e7b3086nycxt/Lisanseha%20S02E27%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۷ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/65e1x2qf92n7/Lisanseha%20S02E27%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>=========================</P>
+<P><SPAN><STRONG>دانلود قسمت ۲۸ سریال لیسانسه ها فصل دوم با کیفیت ۱۰۸۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/an35rbr79xsm/Lisanseha%20S02E28%201080p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۸ سریال لیسانسه ها فصل دوم با کیفیت ۷۲۰p&nbsp;</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/iero17b4vrrv/Lisanseha%20S02E28%20720p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P><SPAN><STRONG>دانلود قسمت ۲۸ سریال لیسانسه ها فصل دوم با کیفیت ۴۸۰p</STRONG></SPAN></P>
+<P><A href="http://uploadboy.me/ck9nmt79sdi6/Lisanseha%20S02E28%20480p%7BDLROOZ.COM%7D.mkv.html"><STRONG>DOWNLOAD</STRONG></A></P>
+<P>___________________________________</P>
+<H3><SPAN>عوامل سریال لیسانسه ها فصل دوم :</SPAN></H3>
+<P>» ۱ –&nbsp;<SPAN><STRONG>کارگردان</STRONG>&nbsp;</SPAN>: سروش صحت&nbsp; «</P>
+<P>» ۲ –&nbsp;<STRONG><SPAN>نویسندگان</SPAN>&nbsp;</STRONG>:&nbsp;سروش صحت ، ایمان صفایی «</P>
+<P>» ۳ – <SPAN><B>تهیه کننده</B></SPAN>&nbsp;:&nbsp; رضا جودی «</P>
+<P>» ۴ – <SPAN><STRONG>مدیر</STRONG> <STRONG>تصویر</STRONG> <STRONG>برداری</STRONG></SPAN> : خسرو دادگر «</P>
+<P>» ۵ –&nbsp;&nbsp;<SPAN><STRONG>مدیر صدا برداری</STRONG></SPAN>&nbsp;: مسعود شاهوردی «</P>
+<P>» ۶ – <SPAN><STRONG>منشی صحنه</STRONG>&nbsp;</SPAN>: مژگان تمجیدی «</P>
+<P>» ۷ –&nbsp;<SPAN><STRONG>طراح</STRONG> <STRONG>صحنه و لباس&nbsp;</STRONG></SPAN>: :مهدی موسوی ، شبنم اصغری«</P>
+<P>» ۸ – <SPAN><B>مدیر تولید&nbsp;</B></SPAN>: وحید مرادی «</P>
+<P>» ۹ – <SPAN><STRONG>برنامه ریزی</STRONG></SPAN>&nbsp;: مسعود حقی «</P>
+<P>» ۱۰ – <SPAN><B>تدوین :</B></SPAN> مهدی جودی «</P>
+<P>____________________________________</P>
+<H3><SPAN>عکس های سریال لیسانسه ها فصل دوم :</SPAN></H3>
+<P><IMG class="alignnone size-full wp-image-2384" alt="سریال لیسانسه ها فصل دوم" src="http://dlrooz.com/wp-content/uploads/2018/01/1-min.jpg" width=450 height=300 sizes="(max-width: 450px) 100vw, 450px" srcset="http://dlrooz.com/wp-content/uploads/2018/01/1-min.jpg 450w, http://dlrooz.com/wp-content/uploads/2018/01/1-min-300x200.jpg 300w"><IMG class="alignnone size-full wp-image-2385" alt="دانلود سریال لیسانسه ها فصل دوم" src="http://dlrooz.com/wp-content/uploads/2018/01/2-min.jpg" width=600 height=401 sizes="(max-width: 600px) 100vw, 600px" srcset="http://dlrooz.com/wp-content/uploads/2018/01/2-min.jpg 600w, http://dlrooz.com/wp-content/uploads/2018/01/2-min-300x201.jpg 300w"><IMG class="alignnone size-full wp-image-2386" alt="کارگردان سریال لیسانسه ها فصل دوم" src="http://dlrooz.com/wp-content/uploads/2018/01/3-min.jpg" width=450 height=369 sizes="(max-width: 450px) 100vw, 450px" srcset="http://dlrooz.com/wp-content/uploads/2018/01/3-min.jpg 450w, http://dlrooz.com/wp-content/uploads/2018/01/3-min-300x246.jpg 300w"><IMG class="alignnone size-full wp-image-2387" alt="پشت صحنه سریال لیسانسه ها فصل دوم" src="http://dlrooz.com/wp-content/uploads/2018/01/4-min.jpg" width=1080 height=810 sizes="(max-width: 1080px) 100vw, 1080px" srcset="http://dlrooz.com/wp-content/uploads/2018/01/4-min.jpg 1080w, http://dlrooz.com/wp-content/uploads/2018/01/4-min-300x225.jpg 300w, http://dlrooz.com/wp-content/uploads/2018/01/4-min-768x576.jpg 768w, http://dlrooz.com/wp-content/uploads/2018/01/4-min-1024x768.jpg 1024w"><IMG class="alignnone size-full wp-image-2388" alt="خلاصه داستان سریال لیسانسه ها فصل دوم" src="http://dlrooz.com/wp-content/uploads/2018/01/5-min.jpg" width=600 height=400 sizes="(max-width: 600px) 100vw, 600px" srcset="http://dlrooz.com/wp-content/uploads/2018/01/5-min.jpg 600w, http://dlrooz.com/wp-content/uploads/2018/01/5-min-300x200.jpg 300w"></P></DIV></LI></DIV></UL></DIV></ACRONYM></p>
+            <p>&nbsp;&nbsp;&nbsp;            </p><br>
+
+
+            <ul class="clearfix">
+                
+                            </ul>
+
+        </div>
+
+        <div class="PostCom">
+            <ul>
+                <li style="float:left;"><a target="_self" href="http://commentsender.mihanblog.com/post/1#commentlist" class="comment-link">نظرات(<script>setCommentCnt(1)</script>)</a>&nbsp;</li>
+                <li class="noBg" style="float: left; margin-left: 10px; margin-top: -6px;"><script>mihanblogPostLike('1','like')</script></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clearer"></div>
+
+<!-- Comment -->
+
+
+<div>
+
+    <style>
+
+            /*** COMMENT BODY***/
+        .comment_body{
+            background: #F3E4EB;
+            margin:10px;
+            border-radius: 5px;
+            border-right:5px solid #e1c6d2;
+            overflow:hidden
+        }
+
+
+
+        .comment .comment_reply {
+            background: #e8d2dc;
+            border-right: 5px solid #d4b6c4;
+            border-radius: 5px;
+            font-size: 12px;
+            width: 350px;
+            margin-top:10px;
+            color:black;
+            overflow:hidden
+        }
+
+
+        .comment .name {
+            font-weight: 600;
+            color: #4E3E09;
+            padding-right: 5px;
+            text-align: right;
+            line-height: 26px;
+            float: right;
+        }
+
+
+        .comment .date {
+            font-size: 10px;
+            padding: 5px;
+            color: #7E7E7E;
+            float: left;
+        }
+
+
+        .comment .comemnt_web {
+            padding: 5px 0 5px 15px; color: #999; direction: ltr; text-align: left;
+
+        }
+
+
+        .comment .comemnt_web a {
+            color: #554c3d;
+            text-decoration: underline;
+        }
+
+
+
+        .comment_det{
+            border-bottom:1px solid #ebcad9;
+            padding:4px;
+
+        }
+
+
+        .comment .name,.date,.comemnt_text,.comment_reply{
+            margin-right:3px;
+            padding-right:3px;
+
+        }
+
+
+
+
+        .comment .name,.date,.comemnt_text,.comment_reply{
+            margin-right:3px;
+            padding-right:3px;
+
+        }
+
+            /**** COMMENT FORM ****/
+
+        .comment_form {
+            background: none repeat scroll 0 0 #d9a4bd;
+            border-radius: 5px 5px 5px 5px;
+            border-right: 5px solid #d482a8;
+            direction: rtl;
+            margin: 10px;
+            padding: 20px;
+        }
+
+
+
+        .comment_form label {
+            width: 100px;
+            display: block;
+            float: right;
+            text-align: left;
+            font-size: 11px;
+            color: #555;
+            padding-left: 10px;
+        }
+
+
+        .comment_form .comment_form_row {
+            margin: 3px 0;
+        }
+
+
+        #imageCodeWrapper .imageCode_input #imgstr {
+            font-size: 25px;
+            height: 34px;
+            width: 70px;
+        }
+
+
+        .comment_form input.btn{
+            margin:2px 11px;
+            background-color:#f3e4eb;
+            -x-system-font:none;
+            color:#005773;
+            cursor:pointer;
+            float:none;
+            font-family:Tahoma;
+            font-size:12px;
+            font-size-adjust:none;
+            font-stretch:normal;
+            font-style:normal;
+            font-variant:normal;
+            font-weight:normal;
+            height:24px;
+            line-height:normal;
+            text-align:center;
+            padding:0 3px;
+        }
+        .comment_form .comment_form_textarea, .comment_form .comment_form_textbox {
+            border: 1px solid #C5C5C5;
+        }
+
+
+        .comment_form_textbox {
+            width:240px;
+
+        }
+        .comment_form_textarea{
+            width:240px;
+        }
+
+    </style>
+
+    </div>
+<!-- End Comment-->
+
+
+
+<!-- Start Nav -->
+<!-- End Nav -->
+
+
+
+
+</div>
+<!-- End SC -->
+
+<div class="SR">
+
+
+
+    <div class="SRL">
+
+        
+
+
+
+                    <h3>آرشیو</h3>
+            <ul>
+                                    <li>
+                        <a href="http://commentsender.mihanblog.com/post/archive/1396/10"> دی 1396</a>
+                    </li>
+                                <li>
+                    <a href="http://commentsender.mihanblog.com/post/archive"><b>همه آرشیوها</b></a>
+                </li>
+            </ul>
+            <br />
+        
+
+
+        
+        
+
+    </div>
+
+    <div class="SRR">
+
+        <h3>درباره وبلاگ</h3>
+        <div class="about_box clearfix">
+            <div id="user_logo"></div>
+            <div id="about_text"></div>
+            <a href="http://commentsender.mihanblog.com/post/author/1573429"><b>امین مظفری</b></a>
+        </div>
+        <br />
+
+                    <h3>آخرین پستها</h3>
+            <ul>
+                                    <li><a  href="http://commentsender.mihanblog.com/post/13">دانلود انیمیشن slugterra into the shadows 2016 با دوبله فارسی</a>&nbsp;&nbsp;سه شنبه 26 دی 1396</li>
+                                    <li><a  href="http://commentsender.mihanblog.com/post/12">دانلود فیلم بلید رانر Blade Runner 2049 2017 با دوبله فارسی</a>&nbsp;&nbsp;سه شنبه 26 دی 1396</li>
+                                    <li><a  href="http://commentsender.mihanblog.com/post/11">دانلود فیلم جشن دلتنگی</a>&nbsp;&nbsp;دوشنبه 18 دی 1396</li>
+                                    <li><a  href="http://commentsender.mihanblog.com/post/10">دانلود فیلم ساخت آمریکا ۲۰۱۷ American Made دوبله فارسی</a>&nbsp;&nbsp;یکشنبه 17 دی 1396</li>
+                                    <li><a  href="http://commentsender.mihanblog.com/post/9">دانلود فیلم Geostorm 2017</a>&nbsp;&nbsp;یکشنبه 17 دی 1396</li>
+                                    <li><a  href="http://commentsender.mihanblog.com/post/8">دانلود فیلم ۲۰۱۷ The Foreigner دوبله فارسی</a>&nbsp;&nbsp;یکشنبه 17 دی 1396</li>
+                                    <li><a  href="http://commentsender.mihanblog.com/post/7">دانلود فیلم کارگر ساده نیازمندیم</a>&nbsp;&nbsp;شنبه 16 دی 1396</li>
+                                    <li><a  href="http://commentsender.mihanblog.com/post/6">دانلود فیلم هوس</a>&nbsp;&nbsp;شنبه 16 دی 1396</li>
+                                    <li><a  href="http://commentsender.mihanblog.com/post/5">دانلود فیلم من و شارمین</a>&nbsp;&nbsp;جمعه 15 دی 1396</li>
+                                    <li><a  href="http://commentsender.mihanblog.com/post/4">دانلود فصل سوم برنامه دورهمی با کیفیت عالی</a>&nbsp;&nbsp;جمعه 15 دی 1396</li>
+                                    <li><a  href="http://commentsender.mihanblog.com/post/3">دانلود سریال محکومین با کیفیت عالی</a>&nbsp;&nbsp;پنجشنبه 14 دی 1396</li>
+                                    <li><a  href="http://commentsender.mihanblog.com/post/2">دانلود سریال سایه بان با کیفیت عالی</a>&nbsp;&nbsp;پنجشنبه 14 دی 1396</li>
+                                    <li><a  href="http://commentsender.mihanblog.com/post/1">دانلود سریال لیسانسه ها فصل دوم با کیفیت عالی</a>&nbsp;&nbsp;پنجشنبه 14 دی 1396</li>
+                                <b><li><a  href="http://commentsender.mihanblog.com/post/list">لیست آخرین پستها</a></li></b>
+            </ul>
+            <br />
+        
+
+                    <h3>نویسندگان</h3>
+            <ul>
+                                    <li>
+                        <a href="http://commentsender.mihanblog.com/post/author/1573429"></a><a href="http://commentsender.mihanblog.com/post/author/1573429">&nbsp;امین مظفری (13)</a>
+                    </li>
+                            </ul>
+            <br/>
+        
+        
+        
+		
+        <div  align="center" class="clearfix"></div>
+
+        <div align="center" class="mihan_logo"></div>
+
+
+    </div>
+
+</div>
+
+
+<!-- Container -->
+</div></div>
+
+<div class="EBG"><div class="Extra">
+
+    <!-- Start Recent Comments -->
+            <div class="Cols clearfix cloud">
+            <h3>اَبر برچسبها</h3>
+                            <a href="http://commentsender.mihanblog.com/post/tag/%D8%B3%D9%88%D9%85" style="font-size:1em">سوم&nbsp;</a>
+                            <a href="http://commentsender.mihanblog.com/post/tag/%D8%AF%D9%88%D8%B1%D9%87%D9%85%DB%8C" style="font-size:1em">دورهمی&nbsp;</a>
+                            <a href="http://commentsender.mihanblog.com/post/tag/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF" style="font-size:1em">دانلود&nbsp;</a>
+                            <a href="http://commentsender.mihanblog.com/post/tag/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87" style="font-size:1em">برنامه&nbsp;</a>
+                            <a href="http://commentsender.mihanblog.com/post/tag/%D8%A8%D8%A7" style="font-size:1em">با&nbsp;</a>
+                            <a href="http://commentsender.mihanblog.com/post/tag/%D9%81%D8%B5%D9%84" style="font-size:1em">فصل&nbsp;</a>
+                            <a href="http://commentsender.mihanblog.com/post/tag/%DA%A9%DB%8C%D9%81%DB%8C%D8%AA" style="font-size:1em">کیفیت&nbsp;</a>
+                    </div>
+        <!-- End Recent Comments -->
+
+    <!-- Start Latest Entries -->
+    <div class="Cols">
+                    <h3>آمار وبلاگ</h3>	<!--#CC3366-->
+            <div class="stat clearfix">
+                کل بازدید : <span><script>getStatVar('total_view');</script></span><br>
+                بازدید امروز :<span><script>getStatVar('today_view');</script></span><br>
+                بازدید دیروز : <span><script>getStatVar('yesterday_view');</script></span><br>
+                بازدید این ماه : <span><script>getStatVar('this_month_view');</script></span><br>
+                بازدید ماه قبل : <span><script>getStatVar('last_month_view');</script></span><br>
+                تعداد نویسندگان : <span><script>getStatVar('total_author');</script></span><br>
+                تعداد کل پست ها : <span><script>getStatVar('total_post');</script></span><br>
+                آخرین بازدید : <span><script>getStatVar('last_view_date');</script></span><br>
+                آخرین بروز رسانی : <span><script>getStatVar('modify_date');</script></span><br>
+            </div><br/>
+            </div>
+    <!-- End Latest Entries -->
+
+</div></div>
+
+<div class="FBG">
+
+    <div class="Footer">
+        <p><strong>POWERED BY <a href="../www.mihanblog.com/index.html"><font color="#FF0000" size="2px">M</font>IHAN<font color="#FF0000" size="2px">B</font>LOG.COM</a></strong> <br />
+            Theme is created by: www.DesignDisease.com</p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'commentsender.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

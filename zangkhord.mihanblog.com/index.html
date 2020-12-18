@@ -1,0 +1,871 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://zangkhord.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*718886*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[249]='12';commentCnt[250]='5';commentCnt[251]='18';commentCnt[253]='8';commentCnt[254]='14';commentCnt[255]='11';commentCnt[257]='13';commentCnt[258]='11';commentCnt[259]='26';commentCnt[260]='7';commentCnt[261]='1';commentCnt[262]='8';commentCnt[263]='1';commentCnt[264]='3';commentCnt[265]='24';commentCnt[266]='4';commentCnt[267]='6';commentCnt[269]='2';commentCnt[270]='15';commentCnt[271]='21';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','151');
+	setStatVar('total_author','3');
+	setStatVar('modify_date','سه شنبه 31 اردیبهشت 1392');
+	
+	setStatVar('today_view','3');
+	setStatVar('yesterday_view','10');
+	
+	setStatVar('this_month_view','274');
+	setStatVar('last_month_view','266');
+
+	setStatVar('total_view','78600');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (06:21)');
+
+
+
+    
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://zangkhord.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://zangkhord.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://zangkhord.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://zangkhord.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://zangkhord.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://zangkhord.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://zangkhord.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://zangkhord.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://zangkhord.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://zangkhord.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://zangkhord.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://zangkhord.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://zangkhord.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://zangkhord.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://zangkhord.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://zangkhord.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<head><script language="JavaScript1.2">
+<!--
+top.window.moveTo(0,0);
+if (document.all) {
+top.window.resizeTo(screen.availWidth,screen.availHeight);
+}
+else if (document.layers||document.getElementById) {
+if (top.window.outerHeight<screen.availHeight||top.window.outerWidth<screen.availWidth){
+top.window.outerHeight = screen.availHeight;
+top.window.outerWidth = screen.availWidth;
+}
+}
+//-->
+</script>
+<!-.-.-Design By : pichak.net -.-.->
+<title>جایگاه مغز های خلاص</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="keywords" content="جایگاه مغز های خلاص,zangkhord">
+      <META NAME="description" CONTENT="جایگاه مغز های خلاص - ما در رویای فرا رسیدن فرداییم و فردا نمی آید.ما در رویای شکوه و افتخاری غوطه وریم که خود نمی خواهیمش.">
+      <meta name="copyright" content="© Pic hak, www.pichak.net">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="designer" content="pichak  | http://pichak.net" />
+      <link rel="alternate" type="application/rss+xml" title="جایگاه مغز های خلاص" href="http://zangkhord.mihanblog.com/post/rss/" />
+<!-.-.-Design By : pichak.net -.-.->
+<style>
+<!--
+body{font-family:Tahoma;font-size:8pt;padding:0px;margin:0px;color:#d1dcf3;background:#ebe7da}
+a, a:visited{color:#7d00a1;text-decoration: none}a:hover{color:#dd4040;text-decoration: none}
+body {
+	BACKGROUND: #f5f6f0 url('http://pichak.net/themes/23/06/image/pichak.jpg') no-repeat fixed  center; 
+}
+#page{background:url() center repeat-y;width:750px}img{border:none}
+#uwrapper {margin:0;padding:0;text-align:center;background-image:url(); background-repeat:repeat-x; background-position-y:top;}
+#header{height:0px;background:url() no-repeat right; }
+#header div{color:#2C2215;font-family:verdana;font-size:21pt;font-weight:bold;text-align:center;padding-top:50px}
+#header div p{margin-top:5px;margin-bottom:0px;color:#2C2215;font-family:Tahoma;font-size: 9pt;font-weight:normal;text-align:center;direction:rtl}
+#headerb{height:0px}
+#content{padding:0px 7px}
+#main{float:right;width:520px;text-align:right;overflow:hidden}
+#post{padding:0 0px;text-align:right}
+#posttitle{height:44px;background: url() center no-repeat;text-align:right;font-size:9pt;font-weight:42;direction:rtl;padding-top:14px;padding-right:60px}
+#posttitle a, #posttitle a:visited {color:#6b6b6b}#posttitle a:hover {color:#000000}
+#postbody{text-align: justify;padding:0px 17px 5px 3;font-size:8pt;color:#000000;line-height:1.5em;direction:rtl}
+#postbody p{margin-top:10px;margin-bottom:0px}
+#postdesc{padding-top:15px;padding-right:7px;padding-left:7px;color:#9b9b9b;direction:rtl}
+#space{height:20px}
+#sidebar{float:left; url() no-repeat;width:175px;padding-top:15px;line-height:1.5em;text-align:right}
+#mmenu{width:160px;ine-height: 1.5em;text-align:center;direction:rtl;}
+#sidebar ul{font-size:8pt;list-style-type: none;margin: 0px;padding:0 5px 20px 5px}
+#sidebar li {font-size:8pt;padding-right:5px;padding-bottom:0px;line-height:1.5em;direction:rtl}
+#photo{width:160px;padding-top:5px;padding-bottom:2px;text-align:center}
+#photo img{width:160px;padding:4px;border-top:1px solid #8E8C8C;border-left:1px solid #8E8C8C;border-bottom:1px solid #8E8C8C;border-right:1px solid #8E8C8C}
+#about{width:160px;text-align: justify;font-size:8pt;padding:10px 7px 20px 7px;color:#000000;direction:rtl}
+#feed{margin:0px;padding-bottom:10px;text-align:center}
+#custom{width:160px;color:#5e7161;overflow:auto;margin:10px 0;text-align:center;direction:rtl}
+-->
+</style>
+<script lang ="javascript">
+function GetBC(lngPostid)
+{
+intTimeZone=<-BlogTimeZone->;
+strBlogId="zangkhord";
+intCount=-1;
+strResult="";
+try {
+for (i=0;i<BlogComments.length;i+=2)
+{
+if (BlogComments[i]==lngPostid)
+intCount=BlogComments[i+1] ;
+}
+}  catch( e) {
+}
+if ( intCount==-1)  strResult="آرشیو نظرات";
+if ( intCount==0)  strResult="نظر بدهید";
+if ( intCount==1)  strResult="یک نظر";
+if ( intCount>1)  strResult=intCount + " نظر" ;
+strUrl="http://commenting.blogfa.com/?blogid=" +strBlogId + "&postid=" + lngPostid + "&timezone=" + intTimeZone ;
+strResult ="<a href="http://zangkhord.mihanblog.com/\&quot;javascript:void(0)\&quot;" onclick=\"javascript:window.open('" + strUrl + "','blogfa_comments','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px')\" >" +  strResult + " </a>" ;
+document.write ( strResult ) ;
+}
+function OpenLD()
+{
+window.open('LinkDump.aspx','blogfa_ld','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px');
+return true;
+}
+</script>
+<script language="javascript" type="text/javascript"          
+  src="http://pichak.net/p/js/themes/up.js"></script>
+</head>
+<body>
+<div id=uwrapper>
+<div align=center>
+<div id=page>
+
+<div id=content>
+<div id=main>
+<br><br>
+<FONT color=#000000><FONT style="FONT-SIZE: 14pt">
+<center><b>جایگاه مغز های خلاص</b><p>
+<FONT color=#000000><FONT style="FONT-SIZE: 8pt">
+ما در رویای فرا رسیدن فرداییم و فردا نمی آید.ما در رویای شکوه و افتخاری غوطه وریم که خود نمی خواهیمش.<p></center>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/271"><b>پایان.فصل آخر</b></a></div>
+<div id=postbody><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<div align="center"><font size="2">به نام خدا<br><br>سلام خواستم فقط بگم قصه این وبلاگ تموم شد!دفترش و می بندم!<br>صفحه آخرش مدتها باز بود و هیچکس هم نفهمید...<br>هیچکس هم نخواهد فهمید...<br>کلا کار بیهوده ایه که از دیگران بخوای بفهمن!<br>خداحافظ!<br></font></div>
+
+
+
+
+<br></div>
+<div id=postdesc> نوشته شده در سه شنبه 31 اردیبهشت 1392 | ساعت 
+	08:31 ب.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/588822">dark princess </a>|<a target="_self" href="javascript:newComment(271)">نظرات  <script>setCommentCnt(271)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/270"><b>خسته ام</b></a></div>
+<div id=postbody><P>&nbsp;</P>
+<P><A style="OUTLINE-WIDTH: 0px; FONT-FAMILY: Verdana; COLOR: black; TEXT-DECORATION: none" title="گروه اینترنتی درهم | www.darhami.com" href="http://shervin8060.persiangig.com/DarHam.htm" rel=nofollow target=_blank><IMG title="گروه اینترنتی درهم | www.darhami.com" border=0 alt="گروه اینترنتی درهم | www.darhami.com" src="http://upload.iranvij.ir/image_mordad91/98581508868714013831.jpg" width=650 height=589></A><BR><BR><BR><FONT color=#993399 size=4>خسته ام رفیق</FONT></P>
+<P><FONT color=#993399 size=4>خسته<BR>نه اینکه کوه کنده باشم<BR>دل کنده ام<BR><BR></FONT></P><br></div>
+<div id=postdesc> نوشته شده در چهارشنبه 10 آبان 1391 | ساعت 
+	10:04 ب.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/665940">لیدی پرپر  </a>|<a target="_self" href="javascript:newComment(270)">نظرات  <script>setCommentCnt(270)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/269"><b>؟؟؟؟؟</b></a></div>
+<div id=postbody><P><FONT color=#ff0000 size=5>سلام کی مطالب منو پاک می کنه <IMG src="http://mihanblog.com/public/public/rte/images_new/smiles/2.gif">خودش اعتراف کنه قابل توجه دو تا دوستای عززززیزم!!!!!!! <IMG src="http://mihanblog.com/public/public/rte/images_new/smiles/33.gif"></FONT></P><br></div>
+<div id=postdesc> نوشته شده در دوشنبه 10 مهر 1391 | ساعت 
+	05:59 ب.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/665940">لیدی پرپر  </a>|<a target="_self" href="javascript:newComment(269)">نظرات  <script>setCommentCnt(269)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/267"><b>چمدون:)</b></a></div>
+<div id=postbody><font size="2">روز اولی که اینجا رو ساختم <br>کلی جو زده بودم.با دوتا از دوستاام وبلاگ ساختم و خیر سرم شدم مدیر وبلاگ!<br>هه!<br>خوش گذشت.آرشیو پارسالو چک می کردم...چقدر مزخرف نوشته بودم.<br><br>چه دری وری هایی...!<br>اون داستان بی مزه ای که ساخته بودم...<img src="http://mihanblog.com/public/public/rte/images_new/smiles/21.gif"><br><br>فکر کنم همه اون چرندیاتو پاک کردم!<br><br>بچه بودم.توی این یه سال خیلی انگار بزرگتر شدم!<br><br>دیگه راجع به خرابکاری هام سر کلاس کامپیوتر نمی نویسم.<br><br>راجع به اون یارو که یه زمانی ...خخخخ!دیگه راجع به اونم نمی نویسم!<img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"><br><br>تصویر جالبی بود.از روند بزرگ شدن یه آدم.<br><br>سیر تغییر یه آدم.<br><br>هنوز تصمیم نگرفتم...اما به احتمال 80 درصد چمدونامو می بندم.<img src="http://mihanblog.com/public/public/rte/images_new/smiles/27.gif"><br></font><br>
+
+
+<br></div>
+<div id=postdesc> نوشته شده در چهارشنبه 5 مهر 1391 | ساعت 
+	06:36 ب.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/588822">dark princess </a>|<a target="_self" href="javascript:newComment(267)">نظرات  <script>setCommentCnt(267)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/266"><b>برو</b></a></div>
+<div id=postbody><P><IMG class="aligncenter size-full wp-image-800" title="شب ها خوابم نمی برد...  از درد ضربات شلاق خاطراتت روی قلبـــــم  بی انصاف...  محکم زدی ،  جایش مانده است..." alt="" src="http://naghmehsara.ir/wp-content/uploads/2012/09/Naghmehsara.ir587gfs.jpg" width=500 height=334><BR></P>
+<P><FONT size=5>حوصله ات را ندارم <BR><BR>اسباب بازی هایت راجمع کن وبرو<BR><BR>من برای همبازی شدنت پیرشدم</FONT></P><br></div>
+<div id=postdesc> نوشته شده در یکشنبه 19 شهریور 1391 | ساعت 
+	10:41 ق.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/665940">لیدی پرپر  </a>|<a target="_self" href="javascript:newComment(266)">نظرات  <script>setCommentCnt(266)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/265"><b>شاعران مرده</b></a></div>
+<div id=postbody>
+
+<font size="2">پسرها به کیتینگ خیره شدن.او هم متقابلا به آن ها خیره شد.سعی می کرد<br>برای آخرین بار چهره آنها را به خاطر بسپارد.بعد برگشت و به طرف در <br>رفت.تاد صدا زد:<br>ای ناخدا!ناخدای من!<br>کیتینگ برگشت و به تاد نگاه کرد.بقیه شاگردان هم برگشتند.تاد یک<br>پایش را روی میز تحریر گذاشت.خود را بالا کشید و در حالی که <br>می کوشید از ریختن اشکش جلوگیری کند رو به کیتینگ بر روی میز خود<br>&nbsp;ایستاد.نولان به طرف تاد رفت و فریاد کشید:<br>بشین سر جات!<br>وقتی نولان از میان میز ها به طرف تاد می رفت ناکس در طرف دیگر<br>اتاق آقای کیتینگ را صدا زد و او نیز بر روی میز تحریرش ایستاد.نولان <br>به سمت ناکس رفت.میکس هم به خود جرئت داد و بر بالای میز ایستاد.<br>پیتس هم چنین کرد.شاگردانی که در کلاس بودند تک تک و بعد گروه<br>گروه از آنها پیروی کردند و روی میزهایشان به نشانه بدرودی خاموش <br>رو به آقای کیتینگ ایستادند.نولان از مهار کردن کلاس دست کشید و <br>بی حرکت ایستاد.شگفت زده به این تجلیل فراگیر از معلم سابق ادبیات<br>نگاه کرد.<br>کیتینگ سرشار از عاطفه و احساس در آستانه در ایستاده بود.گفت:<br>متشکرم بچه ها...سپاسگذارم.<br>کیتینگ به چشمان تاد و بعد به چشمان تمام شاعران مرده نگاه کرد.سر<br>فرود آورد و سپس برگشت.از اتاق خارج شد و شاعران مرده را که بر<br>میز های خود به بدرودی خاموش ایستاده بود</font>ند <font size="2">ترک گفت.</font><br><br><font color="#FF0000">+به بهانه نزدیکی به شروع مدرسه ها.<br>و قاطی کردن دوباره من!<br>احتمالا دیگه به زورمیتونم جلوی افکار ناراحت کننده رو بگیرم.<br>آخرش یه بلایی سر خودم میارم.</font><br><img class="decoded" alt="http://www.peterweircave.com/dps/pics/assorted1.jpg" src="http://www.peterweircave.com/dps/pics/assorted1.jpg" height="331" width="513"><br>
+
+
+
+
+
+
+<br></div>
+<div id=postdesc> نوشته شده در شنبه 18 شهریور 1391 | ساعت 
+	11:30 ق.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/588822">dark princess </a>|<a target="_self" href="javascript:newComment(265)">نظرات  <script>setCommentCnt(265)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/264"><b>کمی اهسته تر</b></a></div>
+<div id=postbody><FONT color=#6633ff size=6>اندکی اهسته تر سکوت کن عزیز....<BR><BR>صدای بی تفاوت بودنت ازارم میدهد..!</FONT> <br></div>
+<div id=postdesc> نوشته شده در دوشنبه 13 شهریور 1391 | ساعت 
+	05:09 ب.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/665940">لیدی پرپر  </a>|<a target="_self" href="javascript:newComment(264)">نظرات  <script>setCommentCnt(264)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/263"><b>تصمیم</b></a></div>
+<div id=postbody><P>میدونید....همه ی ما باید تصمیم بگیریم.</P>
+<P>حتی خیلی وقتا حسابی رو خودمون کار میکنیم و تصمیم میگیریم تا اخرش بمونیم.</P>
+<P>ولی میدونی..اینا فقط یه بازیه..یه تصمیمایی خیلی جدی اند.مثل درس،ازدواج...</P>
+<P>ولی بعضی تصمیم هارو خودمون برای خودمون میگیریم که اکثرشون رو نمیتونیم اون طور که میخواستیم انجام بدیم.</P>
+<P>مثلا این که یه وبلاگ بسازم....این که یه داستان بنویسم....</P>
+<P>+اینجا یه رویا بوده.یه جایی که فقط توش ارزو مینوشتن و خاطره.و ناراحتی های یکسری قلب پاک!ولی خب...</P>
+<P>الان چیز زیادی ازش نمونده.</P>
+<P>من وب خودم دارم...تو وب خودتو داری...اونم وب خودشو داره...</P>
+<P>و این وقتیه که ما احساس میکنیم،چیزهایی توی قلبمون داریم که نمیخوایم خیلی ها ببیننش.</P>
+<P>دارم فکر مینم...خب،چرا که نه؟کار اشتباهی نبوده!فقط خواستیم راز ها و چیزایی که فکر میکنیم دیگران درکش نمیکنن یا برداشت بدی ازش میکنن رو،یه جای خصوصی تر بنویسیم.</P>
+<P>جدا میگم،چرا&nbsp;میخوای همیشه بدونی؟حقیقت اینه که دونستن خیلی هم خوب و قشنگ نیست!</P>
+<P>اینطوریه که تو نفرت رو میبینی،ولی لبخند میزنی.تو میدونی که کسی غمگینه ولی نمیتونی توضیح بدی که چرا میدونی!و خب...اگه هنوزم اصرار داری که دونستن خوبه، بهت میگم:عذاب اوره!</P>
+<P>من عاشق اون لبخند احمقانه اساده ام!که واقعا هیچی نمیدونه.فقط به چیزی که میبینه لبخند میزنه!واقعا از لبخند های دروغکی خسته شدم!</P>
+<P>خب راس میگین این حرفا به یه بچه ی همسن من نیومده!من باید فعلا درگیره بحران های سنم باشم!</P>
+<P>باید یکم توی خیابونا با&nbsp;دخترای همسنم بچرخم و پیراهن بخرم.حوصله ام از با ادب حرف زدن سر رفته...رک میگم! به زبون خودمونی میشه باید الان به فکر عشق و عاشقی باشم!باید دنبال مقایسه ی رنگ ماتیک ها باشم...این که کدوم کرم بیشتر بهم میاد...این که کی بهم چشمک زد...باید با دوستام سر تعداد شماره هایی که میگیرم کل بندازم...ولی خب..یکم امتحان کردم،ولی انگار جواب نمیده...به این نتیجه رسیدم که بهتره هر کس به همون جهنمی که ازش اومده برگرده!</P>
+<P>غیابم به همین دلیله.دارم برمیگردم به همون جهنمی که ازش اومدم.شاید اونجا کسانی باشن که مثل من فکر کنن.در این صورت اونجا بهشتیه برای من.</P>
+<P>دیگه زیادی دارم ور میزنم.کلا امروز رو مد خوبی نیستم.یکم خوشحالم یکم ناراحت..!فک کنم اثار نوجوونیه!خوب میشم...کم کم...</P><br></div>
+<div id=postdesc> نوشته شده در دوشنبه 13 شهریور 1391 | ساعت 
+	12:53 ق.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/528036">ccyano bellatrix </a>|<a target="_self" href="javascript:newComment(263)">نظرات  <script>setCommentCnt(263)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/262"><b>قدرت</b></a></div>
+<div id=postbody><p><font color="#400224"><span style="font-size: 12pt;">این روزا بیشتر از اون که بخوام غمگین باشم و احساس تنهایی کنم<br>
+</span></font></p><font color="#400224">
+<p><span style="font-size: 12pt;">حس میکنم بهتره راحت باشم.نه فقط من...<br>
+</span></p>
+<p><span style="font-size: 12pt;">همه "ما"هایی که همیشه نگران و غمگین بودیم.<br>
+</span></p>
+<p><span style="font-size: 12pt;">هممون یه زمانی احساس میکردیم تنهاییم.<br>
+</span></p>
+<p><span style="font-size: 12pt;">احساس میکردیم اضافی هستیم.<br>
+</span></p>
+<p><span style="font-size: 12pt;">فلسفی شده بودیم و حرفای قلنبه سلنبه میزدیم.<br>
+</span></p>
+<p><span style="font-size: 12pt;">خیال می کردیم خیلی بزرگ شدیم و میتونیم دنیا رو فقط با نوشتن چند تا کلمه<br>
+</span></p>
+<p><span style="font-size: 12pt;">که احساس درد و ترسمونو بیان کنه عوض کنیم!<br>
+</span></p>
+<p><span style="font-size: 12pt;">می گفتیم ناراحتیم و هیچکس درک نمیکنه.<br>
+</span></p>
+<p><span style="font-size: 12pt;">احساس درد می کردیم.و ترس.<br>
+</span></p>
+<p><span style="font-size: 12pt;">احساس بدی داشتیم.از اینکه چرا مامان و بابا هامون درکمون نمیکنن.<br>
+</span></p>
+<p><span style="font-size: 12pt;">اما هیچکدوم از اینا حقیقت نداشت.همه اینا دروغ بود.<br>
+</span></p>
+<p><span style="font-size: 12pt;">یه توهم بود.یه توهم واقعی!<br>
+</span></p>
+<p><span style="font-size: 12pt;">همه اینا وجود داشت و ما بیخودی سعی می کردیم عوضش کنیم.<br>
+</span></p>
+<p><span style="font-size: 12pt;">تنها سلاحمون هم احساساتمون بود.<br>
+</span></p>
+<p><span style="font-size: 12pt;">احساسات پر قدرتمون.دلم نمیخواد بگم احساساتی بودنمون نقطه ضعفمونه<br>
+</span></p>
+<p><span style="font-size: 12pt;">نه!این قدرت ماست!<br>
+</span></p>
+<p><span style="font-size: 12pt;">اما باز هم هیچکدوم از اینا واقعی نیست.<br>
+</span></p>
+<p><span style="font-size: 12pt;">تنها چیزی که واقعی بود...و هست...<br>
+</span></p>
+<p><span style="font-size: 12pt;">اینه که ما نوجوون هایی بودیم که داشتیم بزرگ می شدیم.<br>
+</span></p>
+<p><span style="font-size: 12pt;">ته تمام این خیال پردازی های کودکانه مون هم اینه که محکم با دست <br>
+</span></p>
+<p><span style="font-size: 12pt;">بزنیم زیرش و با صدای بلند داد بزنیم:بی خیالش!!</span></p></font>
+
+
+<br></div>
+<div id=postdesc> نوشته شده در شنبه 11 شهریور 1391 | ساعت 
+	05:30 ب.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/588822">dark princess </a>|<a target="_self" href="javascript:newComment(262)">نظرات  <script>setCommentCnt(262)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/261"><b>ارام تر</b></a></div>
+<div id=postbody><P><FONT color=#663366 size=7 face=impact>اندکی ارام تر سکوت کن عزیز...<BR>صدای بی تفاوت بودنت ازارم میدهد....!!1</FONT></P><br></div>
+<div id=postdesc> نوشته شده در شنبه 11 شهریور 1391 | ساعت 
+	01:58 ب.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/665940">لیدی پرپر  </a>|<a target="_self" href="javascript:newComment(261)">نظرات  <script>setCommentCnt(261)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/260"><b>خواب</b></a></div>
+<div id=postbody><FONT color=#993399 size=5>به خواب رفته را می توان بیدار کرد ، اما ان که خود را به خواب زده&nbsp; است <FONT size=6>هرگز .</FONT></FONT><br></div>
+<div id=postdesc> نوشته شده در یکشنبه 5 شهریور 1391 | ساعت 
+	10:43 ق.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/665940">لیدی پرپر  </a>|<a target="_self" href="javascript:newComment(260)">نظرات  <script>setCommentCnt(260)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/259"><b>پایانی برای خاطرات بچه های دهه شصت و هفتاد ایران نیست...</b></a></div>
+<div id=postbody><div align="center"><font color="#FF0000" size="2">*<font color="#000000">ای کاش به زمانی برمی گشتیم که بزرگترین غم</font></font><font size="2"><br></font><font color="#FF0000" size="2"><font color="#000000">زندگیمان شکسته شدن نوک مدادمان بود.<font color="#FF0000">*</font></font></font><font size="2"><br></font><font color="#3333FF" size="2">"یادش بخیر چقدر همه چیز ساده و بی ریا بود."<br><br></font><div align="center"><font size="2"><br></font><font color="#000000" size="2">علی کوچولو این مرد کوچک<br></font><div align="right"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; علی کوچولو تو قصه ها نیست</font><font color="#FF0000" size="2">_</font><font size="2">مثل من و توست!اون<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; دور دورا نیست</font><font color="#FF0000" size="2">_</font><font size="2">نه قهرمانه</font><font color="#FF0000" size="2">_</font><font size="2">نه خیلی ترسو</font><font color="#FF0000" size="2">_</font><font size="2"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; نه خیلی پرحرف</font><font color="#FF0000" size="2">_</font><font size="2">نه خیلی کم رو</font><font color="#FF0000" size="2">-</font><font size="2">خونشون در داره&nbsp; در خونشون کلون داره</font><font color="#FF0000" size="2">-</font><font size="2"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; حیاط داره ایوون داره</font><font color="#FF0000" size="2">_</font><font size="2">اتاقش تاقچه داره حیاطش<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; باغچه داره...<br><br>یادتونه؟!!...(اسم یه کتابه)<br>وای که من چقدر این کتابو دوست دارم!<br>کتاب یه دفتر صدبرگه!که توش هم با دست خط بچگی هامون توش نوشته داره <br>هم با دست خط آدم بزرگا!<br>تازه عکسم داره.عکس جیمبو.سرندی پیتی.کلاه قرمزی.وروجک و آقای نجار.مدرسه موشها<br><br></font><div align="center"><font size="2">ک مثل کپل&nbsp;&nbsp;&nbsp; صحرا شد پر زگل<br>گ مثل گردو&nbsp;&nbsp;&nbsp; بنگر به هر سو<br>ب مثل بهار(هچی هچی)<br>فکر کن بسیار...<br></font><div align="right"><font color="#FF0000" size="2">قصه های مجید:</font><font color="#3333FF" size="2">مجید!چهارده ام تشویق داررررررددد؟؟!!</font><font size="2"><br><br></font></div></div><font size="2"><img src="http://www.up.98ia.com/images/2pfucqtj5exhtqlmkco.jpg" alt="" border="0"><br><img src="http://www.up.98ia.com/images/vms7ugj9fniza3shv6jj.jpg" alt="" border="0"><br><img src="http://www.up.98ia.com/images/wtjnktmheqoi5ku5nuw.jpg" alt="" border="0"><br><br><br>وقتی رفته بودم شهرکتاب دیدم یه خانمه داره با صندوق داره راجع به این کتابه حرف میزنن.<br>کلی هم به دهه شصتی بودنشون می بالیدن!<br>بعد یهو خانمه گفت:ولی این دهه هفتادیا...<br>مرده گفت:اوففففففففف!آره دیدمشون!<img src="http://mihanblog.com/public/public/rte/images_new/smiles/31.gif"><br>به خدا دلم میخواست همون لحظه با لگد بیام تو دماغت!<img src="http://mihanblog.com/public/public/rte/images_new/smiles/14.gif"><br>بی تربیت!مگه چمونه؟<img src="http://mihanblog.com/public/public/rte/images_new/smiles/82.gif"><br></font><br></div></div></div>
+
+
+<br></div>
+<div id=postdesc> نوشته شده در جمعه 20 مرداد 1391 | ساعت 
+	03:34 ب.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/588822">dark princess </a>|<a target="_self" href="javascript:newComment(259)">نظرات  <script>setCommentCnt(259)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/258"><b>تغییر</b></a></div>
+<div id=postbody><font size="2">هه!نه به اون روزای اول که روزی دوتا پست میذاشتم<br>نه به حالا که هر دوماه یه پست میذارم!<br>اون موقع ها بعد از هرجمله یه شکلک میذاشتم<br>الان حتی حال ندارم پنجره شکلک ها رو باز کنم.<br>واقعا آدما چقدر تغییر میکنن...<br><br>یه هشت روز رفته بودم مسافرت.<br>شاید بتونم بگم این بهترین سفری بود که رفتم.<br>خبرای خوبی شنیدم از اونجا.<br>و خب...ایندفعه خیلی رفتیم بیرون.<br>یه عالمه میرفتیم جنگل و دریا و ...اووووووووووه!<br>و اونجا جای خوبی واسه فکر کردن بود.<br>فکر کنم که دیگه بسه!<br>چقدر میخوام به این افکار احمقانه ادامه بدم؟چه قدر من؟<br>چقدر فکر کنم که متفاوت بودن یعنی چی؟<br>چقدر قدر سعی کنم احساساتم رو برای دیگران توصیف کنم؟<br>راستش وقتی اون احساسات مزخرف زد و مخم رو پوکوند<br>رفتم یه وبلاگ دیگه ساختم و شروع کردم توش دری وری نوشتن.<br>نمیدونم بعد از اون همه فکر کردن به این که توی این دنیا فقط من نیستم که احساس میکنم<br>فکر کردن به اینکه فقط من نیستم که ناراحتم<br>و فکر کردن به خیلی چیزای دیگه <br>چی به سر اون یکی وبلاگم میاد.<br>ولی مهم نیست.بالاخره یه چیزی میشه دیگه!<br>چقدر دلم میخواد الان یه دل سیر بخندم.<br>هه!ولی الان گشنمه.خندم نمیاد.<br>پس...<br>فعلا بای!من میرم یه چیزی بخورم.<br><br>+این مدت اینقدر از بی کاری آهنگ گوش دادم <br>دیگه حالم داره از هرچی آهنگه به هم میخوره.<br>هه هه هه.......</font><br>
+
+
+<br></div>
+<div id=postdesc> نوشته شده در جمعه 6 مرداد 1391 | ساعت 
+	08:38 ق.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/588822">dark princess </a>|<a target="_self" href="javascript:newComment(258)">نظرات  <script>setCommentCnt(258)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/257"><b>دنیای شیشه ای</b></a></div>
+<div id=postbody><IMG style="PADDING-BOTTOM: 8px; WIDTH: 679px; PADDING-RIGHT: 8px; HEIGHT: 457px; PADDING-TOP: 8px" id=il_fi src="http://s1.picofile.com/file/6791766596/Glass_Lucent_Heart_by_Raingarden.jpg" width=678 height=452><BR><BR><FONT size=4>همیشه فک کن تویه ،یه دنیای شیشه ای زندگی می کنی تا به کسی سنگ پرتاب نکنی چون اولین چیزی که میشکنه دنیای</FONT>&nbsp; <FONT size=4>خودته</FONT> <br></div>
+<div id=postdesc> نوشته شده در شنبه 24 تیر 1391 | ساعت 
+	09:08 ب.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/665940">لیدی پرپر  </a>|<a target="_self" href="javascript:newComment(257)">نظرات  <script>setCommentCnt(257)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/255"><b>اشخاص عاقل</b></a></div>
+<div id=postbody><IMG class=rg_i name=M-vWpbl7KDF1BM: src="data:image/jpeg;base64,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" width=155 onload="google.stb.csi.onTbn(1, this)" height=98><BR><BR><FONT size=4>اشخاص عاقل وبااخلاق هرگز کلامی برزبان نمی اورند که احساسات دیگران را جریحه دار سازد</FONT><br></div>
+<div id=postdesc> نوشته شده در جمعه 16 تیر 1391 | ساعت 
+	02:10 ب.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/665940">لیدی پرپر  </a>|<a target="_self" href="javascript:newComment(255)">نظرات  <script>setCommentCnt(255)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/254"><b>دوست!!</b></a></div>
+<div id=postbody><P>سلام!خوبین؟تابستون خوش میگدره؟</P>
+<P>خوشحالید که دیگه زنگی وجود نداره که بخواد بخوره یا نخوره؟(زنگ مدرسه رو میگم!)</P>
+<P>البته برای بعضی ها!خیلی ها(مثه خواهرم)تازه دارن امتحان میدن!منظورم همون جماعت جوانه!دانشجو ها!</P>
+<P>خیلی های دیگه هر روز صبح باید بیدار بشن و برن مدرسه!مثه خواهر کوچیکم و پرنسس!</P>
+<P>خیلی ها مثه بابام تابستون ندارن!هر روز میرن اداره!</P>
+<P>و جماعت اندکی مثه من الافن!و تازه ساعت 7 صبح میخوابن!!<IMG src="http://www.mihanblog.com/public/public/rte/images_new/smiles/4.gif"></P>
+<P>از اول این هفته دو بار حجم اینترنتی رو که برای 6 ماه خریده شده بود رو تموم کردم!!!ولی به مامانم نگین!</P>
+<P>به هرحال میخواستم مرد و مردونه با (دوست)ها صحبت کنم!!</P><br><a href='http://zangkhord.mihanblog.com/post/254'>ادامه مطلب</a></div>
+<div id=postdesc> نوشته شده در سه شنبه 13 تیر 1391 | ساعت 
+	07:03 ب.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/528036">ccyano bellatrix </a>|<a target="_self" href="javascript:newComment(254)">نظرات  <script>setCommentCnt(254)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/253"><b>وانمود کن</b></a></div>
+<div id=postbody><P><IMG style="PADDING-BOTTOM: 8px; PADDING-RIGHT: 8px; PADDING-TOP: 8px" id=il_fi src="http://t2.gstatic.com/images?q=tbn:ANd9GcTwauJT6_m-JFjBSwa21c5FdFCllpN0UG32rvfILcHiHyGKLtbPeuO8q1HDPA" width=275 height=183><BR><BR><FONT size=4>اگر ادم خوبی به تو بدی کرد چنان وانمود کن که نفهمیده ای او توجه خواهد کرد و مدت زیادی مدیون تو خواهد بود.</FONT></P>
+<P><FONT size=4></FONT>&nbsp;</P><br></div>
+<div id=postdesc> نوشته شده در سه شنبه 13 تیر 1391 | ساعت 
+	08:56 ق.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/665940">لیدی پرپر  </a>|<a target="_self" href="javascript:newComment(253)">نظرات  <script>setCommentCnt(253)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/251"><b>others:دیگران</b></a></div>
+<div id=postbody><font size="2">امشب مامانم داشت ظرف می شست<br>به من گفت بیا آب بکش!<br>منم مثل یه دختر خوب بلند شدم رفتم ظرفا رو آب بکشم<br>دیدم چراغ آشپزخونه خاموشه.<br>به مامانم گفتم برقو روشن کن.<br>برقو روشن کرد.<br>می دونی چی بهم گفت؟<br>گفت:نور به قبرت بباره!!<br><br>من وقتی اینو شنیدم یاد فیلم" آدرز" یا "دیگران" افتادم.<br>و بچه های نیکول کیدمن توی اون فیلم که اگه نور بهشون می خورد<br>می مردن!همیشه با نور کم!<br>اینکه بچه های نیکول کیدمن فکر می کردن که چند نفر تو خونه شونن!<br>که فکر می کردن روح دیدن.<br>که بعدش فهمیدن خودشون مردن!<br>اتفاقا منم چند شب پیش صداهایی از کیس کامپیوترم شنیدم...<br>و این چند شب هم هی خواب می بینم یکی منو داره می کشه!<br>دفعه اول سرمو برید!<br>دفعه دوم از پشت خنجر زد...!<br><br>+خلاصه خواستم بگم که اگه من در طی چند روز آتی به رحمت ایزدی پیوستم<br>اصلا خودتونو نگران نکنین!<br>از اون دنیا براتون پست می ذارم.<br>یعنی آیا بهشت و جهنم&nbsp; ADSL داره؟<br><br>+حالا اگه نداشت به دوشیزه یا لیدی اس ام اس میزنم.<br>اونا پست های منو میذارن...<br><br>+ایشالا روز قیامت می بینمتون...<br><br><br><br></font><br>
+
+
+<br></div>
+<div id=postdesc> نوشته شده در جمعه 9 تیر 1391 | ساعت 
+	11:24 ب.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/588822">dark princess </a>|<a target="_self" href="javascript:newComment(251)">نظرات  <script>setCommentCnt(251)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/250"><b>همچو باران</b></a></div>
+<div id=postbody><IMG style="PADDING-BOTTOM: 8px; PADDING-RIGHT: 8px; PADDING-TOP: 8px" id=il_fi src="http://s1.picofile.com/file/7275574408/baran.gif" width=283 height=406><BR><FONT size=4>همچو باران باش<BR>رنج جداشدن&nbsp;از اسمان را<BR>درسبز کردن زندگی جبران کن</FONT> <br></div>
+<div id=postdesc> نوشته شده در سه شنبه 6 تیر 1391 | ساعت 
+	08:50 ب.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/665940">لیدی پرپر  </a>|<a target="_self" href="javascript:newComment(250)">نظرات  <script>setCommentCnt(250)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+  <FONT color=#000000>
+<div id=post>
+<div id=posttitle><a href="http://zangkhord.mihanblog.com/post/249"><b>وقتی سنگ ها پرنده بودند</b></a></div>
+<div id=postbody>
+<font size="2">خب این کتاب مال اون دورانیه که من کلا اهل کتاب خوندن نبودم<br>وقتی کلاس چهارم ابتدایی بودیم مارو بردن یه نمایشگاه کتاب<br>معلممون یه کتابی رو برداشت<br>و منم برای اینکه مثلا خودشیرینی کنم<br>رفتم و اون کتابو خریدم...<br>اصلا هم نگاش نکردم.<br>ولی یادم نمیاد چی شد که تصمیم گرفتم کتابو بخونم<br>اینقدر هم در رفتار با کتاب ها بی ملاحظه و بی شعور بودم<br>که کتابو ...ببخشید...گلاب به روتون .روم به دیفال(با لحن کلاه قرمزی)با خودم تو دست به آب هم میبردم!<br>واسه همین چیز زیادی از جلد کتاب باقی نمونده!!<br>و از اون جایی هم که قبلا ذکر شد که من خیلی بی شعور بودم<br>روی صفحه های اول کتاب <br>یعنی اونجا ها که کتاب رو معرفی میکنن<br>و صفحه آخر کتاب یه عالمه جمع و ضرب و تفریق <br>انجام داده بودم.<br>چک نویس واسه خودم گیر آورده بودم.دیوانه!<br>کتاب درمورد یه خانواده است که هفت -هشت- ده تا بچه دارن<br>همه شون هم با زایمان به دنیا اومدن.<br>اما یه پسر شون که اسمش<br><span style="font-weight: bold;">پکا</span> بود و معلولیت جسمی داشت با سزارین به دنیا اومد و <br>بچه ها اصلا برادرشون رو ندیدن.<br>تا وقتی که یه عالمه عمل جراحی روش انجام دادن تا بالاخره تقریبا عین آدم بشه.<br>پکا خیلی بچه بامحبتی بود.هروقت کسی میومد خونه شون <br>اون یک ساعت تمام به مهمون زل میزد و آخرسر با صمیمیت بهش میگفت:دوستت دارم!!<br>و همیشه هم مطمئن بود که سنگ ها یه زمانی پرنده بودن.<br>همیشه میرفت بیرون و به سنگ ها نگاه میکرد تا شاید سنگ ها بپرن تو آسمون!<br>اما قضیه از اونجایی شروع شد که خانواده اونا تصمیم گرفتن که به کانادا مهاجرت کنن<br>و روزای آخر که ...<br><br><span style="color: rgb(0, 102, 0);">"پکا گفت:سرم خیلی گیج می رود.چشمانم سیاهی می رود.می خواهم </span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">توی تخت خواب دراز بکشم و چشمهایم را ببندم تا مجبور نباشم </span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">سیاهی ای را که جلوی چشمم است ببینم.</span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">مادر گفت:هیجان زده شده ای.</span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">و دستش را روی پیشانی او گذاشت و ادامه داد:تو تب نداری.</span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">پدر به مادر گفت :پسرک رنگ پریده به نظر میرسد.بهتر است اورا ببری</span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">&nbsp;دکتر تا در طول سفر دریایی طولانی ای که در پیش داریم مریض نشود.</span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">مادر خیلی کار داشت.بنابر این من با پکا پیش پزشکمان دکتر زدرکویست </span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">رفتم.او پکا را معاینه کرد.سر تکان داد و گفت:از وضع پسرک خوشم نمی آید!</span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">پکا پرسید:چرا خوشتان نمی آید؟</span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">دکتر روی شانه او زد و گفت:آخ چه می گویی!من از تو خوشم می آید.</span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">ولی نگران سلامتی ات هستم.خیلی کم خون به نظر می رسی.</span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">پکا گفت:من هم از تو خوشم می آید.تو کاملا سرخ به نظر می رسی.</span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">دکتر گفت:من منظم غذا می خورم!</span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">او از پکا خون گرفت و به مادر سلام رساند.مادر باید یک بار دیگر با</span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">&nbsp;پکا پیش او میرفت.وقتی مادر با پکا برای دومین بار از مطب دکتر </span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">زدرکویست برگشت به تلخی گریه کرد.</span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">پکا لوکمی خون داشت.ما این کلمه را می شناختیم.پسر یکی از </span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">همکاران پدر در اثر لوکمی مرد.می دانستیم موضوع بر سر یک بیماری </span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">خونی است که به ندرت قابل درمان است.</span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">ما ساکت توی آشپزخانه نشستیم و پکا گفت:من هم که همیشه</span><br style="color: rgb(0, 102, 0);"><span style="color: rgb(0, 102, 0);">&nbsp;شمارا ناراحت می کنم."</span><br style="color: rgb(0, 102, 0);"></font><br>
+
+
+
+
+<br></div>
+<div id=postdesc> نوشته شده در چهارشنبه 31 خرداد 1391 | ساعت 
+	03:19 ب.ظ | توسط <a href="http://zangkhord.mihanblog.com/post/author/588822">dark princess </a>|<a target="_self" href="javascript:newComment(249)">نظرات  <script>setCommentCnt(249)</script> </a> <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                  <hr width="65%" size="0.5" color="#525252" align="center" >
+</div>
+<center><br>
+<table style="border-right: #ababab 1px solid; border-top: #ababab 1px solid; border-left: #767676 1px solid; direction: rtl; border-bottom: #767676 1px solid; height: 7px;; font-size: 7pt;">
+<tr><td><a href="http://pichak.net" target=_blank>قالب جدید وبلاگ <a href="http://pichak.net" target=_blank> پیچك دات نت<br></a>
+</td></tr>
+</table><br>
+</div>
+<div id=sidebar>   <FONT color=#4a4a4a>
+
+<center>
+
+<FONT style="FONT-SIZE: 13pt">
+<b>ABOUT</b>
+<br><br>
+
+<img src="../static.mihanblog.com/public/user_data/web_photo/240/718886.jpg@6535"  /><div id=about><FONT style="FONT-SIZE: 8pt">
+بچه که بودم مامانم همیشه بهم می گفت مختو گذاشتی آکبند بمونه.<br />
+میگفت مغزتو گذاشتی تو پارکینگ درشم قفل کردی اصلا ازش کار نمیکشی.<br />
+چندوقت پیش هم بهم گفت سبک مغز!<br />
+به هرحال الان خیلی هم آکبند نیست.اما هرچی فکر میکنم <br />
+چیز خیلی خاصی از توش درنمیاد.<br />
+ولی آکبند هم نیست.پس خلاص!<br />
+<br />
++ما سه نفریم.تو رو خدا حواستو جمع کن اشتباهی برای کس دیگه نظر نذاری.ولی برای همه نظر بذاری.<br />
+                 </div>
+
+<center>
+
+<FONT style="FONT-SIZE: 13pt">
+<b>MENU</b>
+<br><br>
+
+<div id=mmenu>
+<ul>
+<li><a href="index.html">خانه</a></li>
+<li><a href="mailto:">ایمیل</a></li>
+<li><a target="_blank" href="http://pichak.net">قالب</a></li>
+<center><script language="javascript" src="http://pichak.net/p/js/themes/120.js"></script></center></ul></div>
+
+<FONT style="FONT-SIZE: 13pt">
+<b>AUTHORS</b>
+<br><br>
+
+<div id=mmenu>
+<ul>
+<li><a target="_blank" href="http://zangkhord.mihanblog.com/post/author/588822" >dark princess  43 </a></li><li><a target="_blank" href="http://zangkhord.mihanblog.com/post/author/528036" >ccyano bellatrix  72 </a></li><li><a target="_blank" href="http://zangkhord.mihanblog.com/post/author/665940" >لیدی پرپر   36 </a></li></ul>
+</div>
+
+
+
+<FONT style="FONT-SIZE: 13pt">
+<b>LINKDUMP</b>
+<br><br>
+
+<div id=mmenu>
+<ul>
+<li><a target="_blank" href="http://7persia.ir/" title="- آخربن اخبار سینمای ایران و جهان
+- اخبار جنجالی
+- گالری تصاویر بازیگران
+- بیوگرافی هنرمندان
+- نقد و بررسی فیلم 
+و...
+
+همه در  سایت سینمایی هنر هفتم     http://7persia.ir">هنر هفتم ، اخبار سینمای ایران و جهان</a></li><li><a target="_blank" href="http://shaghayeghlove.mihanblog.com/" title="">به دلتنگیهایم دست نزن</a></li><li><a target="_blank" href="../www.technical-aviation.mihanblog.com/index.html" title="">انجمن خلبانان ایران</a></li><li><a target="_blank" href="http://www.fulloffancity.blogfa.com/" title="">چیز</a></li><li><a target="_blank" href="http://sadeg-h.mihanblog.com/" title="">به وسعت نصف دریا</a></li><li><a target="_blank" href="../enetaf.mihanblog.com/index.html" title="">گپ دوستانه</a></li><li><a target="_blank" href="http://neyrang.blogfa.com/?mabohlipse.AGagGcWektWcGaWxfGp" title="">چوپان دروغگو</a></li><li><a target="_blank" href="http://gerehekoor.blogfa.com/" title="">ҖҖ گـــــره كـــور ҖҖ</a></li><li><a target="_blank" href="http://constant.mihanblog.com/" title="">عاشقانه های من</a></li><li><a target="_blank" href="http://www.abolfazlzare.blogfa.com/" title="">بهشت عاشقانه</a></li><li><a target="_blank" href="../talk--for.mihanblog.com/index.html" title=""> کسی.....می خواهد......درباره ی.......چیـــــــــــــــــــه؟</a></li><li><a target="_blank" href="../mostafa222.mihanblog.com/index.html" title="">کوروش بزرگ</a></li><li><a target="_blank" href="http://sampadiangirl.blogfa.com" title="">دلنوشته های یه دختر سمپادی</a></li><li><a target="_blank" href="../shanty.mihanblog.com/index.html" title="">اضافه کاری های یک خودکار قرمز بی رنگ</a></li><li><a target="_blank" href="http://shirin-1.blogfa.com/" title="">شیرین</a></li><li><a target="_blank" href="http://barobax-mehraban.mihanblog.com/" title="">ملی شیطونه</a></li><li><a target="_blank" href="http://samin74.blogfa.com/" title="">درباره الی</a></li><li><a target="_blank" href="http://shocofeh.blogfa.com/" title="">سلام آخر</a></li><li><a target="_blank" href="http://www.paaarisaaa.blogfa.com/" title="">من وعشقم</a></li><li><a target="_blank" href="http://ahchvhj.blogfa.com" title="">از همه چیزوهمه جا</a></li><li><a target="_blank" href="http://www.mohsen-sattari.blogfa.com" title="">بی توقع لبخند بزن</a></li><li><a target="_blank" href="http://avayetanhaie.mihanblog.com/" title="">آوای تنهایی</a></li><li><a target="_blank" href="http://eshgholane0261.blogfa.com/" title="">عشق-طنز</a></li><li><a target="_blank" href="../www.odesa.mihanblog.com/index.html" title="">گمشده ای درمه</a></li><li><a target="_blank" href="http://asheghaneh74.persianblog.ir/" title="">♥ ♫ قصه ی عشق محسن و بهناز ♫ ♥</a></li><li><a target="_blank" href="http://mohajerdow.mihanblog.com" title="">دلنوشته</a></li><li><a target="_blank" href="../smsjokss.mihanblog.com/index.html" title="">اس ام اس جدید</a></li><li><a target="_blank" href="http://www.morvarideasemani.mihanblog.com" title="">اگر تنها ترین تنها شوم...</a></li><li><a target="_blank" href="http://hassannak-20.blogfa.com/" title="">پسر تنها</a></li><li><a target="_blank" href="http://lonllyfriend.loxblog.com/" title="">هرچی بخواید هست</a></li><li><a target="_blank" href="http://www.websara.org " title="">وب سرا</a></li><li><a target="_blank" href="http://www.top700.com" title="گاهی شانس فقط یک بار به آدم رو میاره پس باید قدرش رو دونست بهترین فرصت زندگی شما برای ثروتمند شدن مجموعه ای بی نظیر برای اولین بار در ایران برای کسانی که می خواهند بهتر زندگی کنند و از کمترین وقت و هزینه بیشترین سود را ببرند.برای آگاهی از جزییات بیشتر به لینک زیر مراجعه کنید.
+http://www.top700.com">$سایت تخصصی کسب درآمد از اینترنت$</a></li><li><a target="_blank" href="http://alborzjobs.com/" title="بانک اطلاعات مشاغل استان البرز سایت اطلاع رسانی خواهشا تائید بفرمائید/ التماس دعا ...سارا امیدوار">بانک اطلاعات مشاغل</a></li><li><a target="_blank" href="http://sobhan77.ir" title="">ابرمطلب</a></li><li><a target="_blank" href="http://www.noyasystem.com/pages/services/graphicsdesign/bannerdesign_fa.aspx" title="طراحی بنر. خواهشا اگه زحمتی نیست تایید فرمایید.">طراحی بنر</a></li><li><a target="_blank" href="http://rahgozar20.mihanblog.com" title="">ارزان ترین ها,بهترین ها</a></li><li><a target="_blank" href="http://taktazp30.com/" title="">تکتاز پی سی</a></li><li><a target="_blank" href="http://mamalll.mihanblog.com" title="">music2music</a></li><li><a target="_blank" href="http://bozorgmehr77.mihanblog.com" title="">داستانک</a></li><li><a target="_blank" href="http://fungozar.ir" title="">fungozar</a></li><li><a target="_blank" href="http://pichak.net">قالب وبلاگ</a></li>
+</ul>
+</div>
+<center>
+
+<FONT style="FONT-SIZE: 13pt">
+<b>ARCHIVES</b>
+<br><br>
+
+<div id=mmenu>
+<ul>
+<li><a href="http://zangkhord.mihanblog.com/post/archive/1392/2"> اردیبهشت 1392  1 </a></li><li><a href="http://zangkhord.mihanblog.com/post/archive/1391/8"> آبان 1391  1 </a></li><li><a href="http://zangkhord.mihanblog.com/post/archive/1391/7"> مهر 1391  2 </a></li><li><a href="http://zangkhord.mihanblog.com/post/archive/1391/6"> شهریور 1391  7 </a></li><li><a href="http://zangkhord.mihanblog.com/post/archive/1391/5"> مرداد 1391  2 </a></li><li><a href="http://zangkhord.mihanblog.com/post/archive/1391/4"> تیر 1391  6 </a></li><li><a href="http://zangkhord.mihanblog.com/post/archive/1391/3"> خرداد 1391  9 </a></li><li><a href="http://zangkhord.mihanblog.com/post/archive/1391/2"> اردیبهشت 1391  12 </a></li><li><a href="http://zangkhord.mihanblog.com/post/archive/1391/1"> فروردین 1391  3 </a></li><li><a href="http://zangkhord.mihanblog.com/post/archive/1390/12"> اسفند 1390  31 </a></li><li><a href="http://zangkhord.mihanblog.com/post/archive/1390/11"> بهمن 1390  15 </a></li><li><a href="http://zangkhord.mihanblog.com/post/archive/1390/10"> دی 1390  23 </a></li></ul>
+</div>
+
+<center>
+
+<FONT style="FONT-SIZE: 13pt">
+<b>CATEGORIES</b>
+<br><br>
+
+<div id=mmenu>
+<ul>
+<li><a href="http://zangkhord.mihanblog.com/post/category/9">متفرقه  71 </a></li><li><a href="http://zangkhord.mihanblog.com/post/category/8">دوبله  10 </a></li><li><a href="http://zangkhord.mihanblog.com/post/category/7">خواننده ها و آهنگ ها  7 </a></li><li><a href="http://zangkhord.mihanblog.com/post/category/6">متن و داستان  22 </a></li><li><a href="http://zangkhord.mihanblog.com/post/category/5">کتاب  36 </a></li><li><a href="http://zangkhord.mihanblog.com/post/category/4">شعر  10 </a></li><li><a href="http://zangkhord.mihanblog.com/post/category/3">کارتون  6 </a></li><li><a href="http://zangkhord.mihanblog.com/post/category/2">فیلم ها  19 </a></li><li><a href="http://zangkhord.mihanblog.com/post/category/1">بازیگران  16 </a></li></ul>
+</div>
+<center>
+
+<FONT style="FONT-SIZE: 13pt">
+<b>LINKS</b>
+<br><br>
+
+<div id=mmenu>
+<ul>
+<li><a target="_blank" href="http://pichak.net">قالب های پیچك</a></li>
+</ul>
+</div>
+<center>
+
+<FONT style="FONT-SIZE: 13pt">
+<b>SPECIFIC</b>
+<br><br>
+
+<div id=mmenu>
+<ul style="border:none">
+<li>﻿<a target="_blank" title="خرید از اینترنت" href="http://pichak.net/shop">خرید از اینترنت</a></li>
+<li><a rel="dofollow" target="_blank" title="ابزار ذکر ایام هفته" href="http://pichak.net/zekr-rooz">ذکر ایام هفته</a>
+</li>
+<li>﻿<a rel="dofollow" target="_blank" href="http://pichak.net/chat" title="چت روم">چت روم</a>
+</li>
+<li><a target="_blank" title="جستوجوی گوگل" href="http://pichak.net/blogcod/google">جستجوی گوگل</a>
+</li>
+<li>﻿<a target="_blank" title="کارت شارژ ایرانسل" href="http://www.98pars.com">کارت شارژ ایرانسل</a></li>
+<li><a rel="dofollow" target="_blank" title="قالب وبلاگ" href="http://www.themzha.com">سایت تمزها</a>
+</li>
+<li><a rel="dofollow" target="_blank" title="ساخت کد موزیک مدیاپلیر" href="http://pichak.net/code-music">ساخت كد صوتی آنلاین</a></li>
+<li><a target="_blank" title="لیگ برتر انگلیس" href="http://pichak.net/lig-bartar/england">لیگ برتر انگلیس</a>
+</li>
+<li><a rel="dofollow" target="_blank" title="گالری عکس" href="http://pichak.net/gallery">گالری عکس</a>
+</li>
+<li><a rel="dofollow" target="_blank" title="مفید ترین" href="http://pichak.net/crop/category/ورزشی">اخبار ورزشی</a>
+</li>
+<li><a target="_blank" href="http://bahar-20.com">بهاربیست</a></li></div>
+
+<center>
+
+<FONT style="FONT-SIZE: 13pt">
+<b>DESIGN</b>
+<br><br>
+
+<div id=mmenu>
+<ul style="border:none">
+<ul>
+	   <li> <a href="http://pichak.net"target="_blank">قالبساز وبلاگ: پیچك دات نت</a><br><br>
+<a href="http://pichak.net" target="_blank"><img src="http://pichak.net/themes/logo/01.gif"></a></li>
+</ul>
+</div>
+<center>
+
+
+<FONT style="FONT-SIZE: 13pt">
+<b>OTHERS</b>
+<br>
+<font color="#7d00a1">
+<div id=mmenu>
+<ul style="border:none">
+</p><br>
+<!-- Start --- http://www.Avazak.ir -->
+<script language='JavaScript' type='text/javascript' src='http://www.Avazak.ir/Java/09/11.js' ></script><br />
+<script language="javascript" type="text/javascript"          
+src="http://Avazak.ir/Java/Links.js"></script>
+<!-- End --- http://www.Avazak.ir -->
+</div>
+</div></div>
+</font>
+</body>
+<script src="http://pichak.net/nohe/b.js"></script></html>
+
+
+
+
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'zangkhord.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

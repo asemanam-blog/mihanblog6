@@ -1,0 +1,1753 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://shakar.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 1399/09/23');
+		/*976940*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[1]='481';commentCnt[402]='-';commentCnt[403]='-';commentCnt[405]='-';commentCnt[406]='2';commentCnt[407]='-';commentCnt[409]='-';commentCnt[410]='6';commentCnt[411]='-';commentCnt[413]='-';commentCnt[414]='-';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[1]='193';
+mihanblogDisLikeArrCnt[1]='6';
+mihanblogLikeArrCnt[402]='7';
+mihanblogDisLikeArrCnt[402]='0';
+mihanblogLikeArrCnt[403]='7';
+mihanblogDisLikeArrCnt[403]='0';
+mihanblogLikeArrCnt[405]='6';
+mihanblogDisLikeArrCnt[405]='0';
+mihanblogLikeArrCnt[406]='5';
+mihanblogDisLikeArrCnt[406]='0';
+mihanblogLikeArrCnt[407]='4';
+mihanblogDisLikeArrCnt[407]='0';
+mihanblogLikeArrCnt[409]='3';
+mihanblogDisLikeArrCnt[409]='0';
+mihanblogLikeArrCnt[410]='4';
+mihanblogDisLikeArrCnt[410]='0';
+mihanblogLikeArrCnt[411]='2';
+mihanblogDisLikeArrCnt[411]='1';
+mihanblogLikeArrCnt[413]='2';
+mihanblogDisLikeArrCnt[413]='0';
+mihanblogLikeArrCnt[414]='1';
+mihanblogDisLikeArrCnt[414]='1';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://shakar.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://shakar.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','376');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','دوشنبه 1398/10/16');
+	
+	setStatVar('today_view','27');
+	setStatVar('yesterday_view','309');
+	
+	setStatVar('this_month_view','7307');
+	setStatVar('last_month_view','9667');
+
+	setStatVar('total_view','2337864');
+	setStatVar('last_view_date','یکشنبه 1399/09/23 (05:37)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://shakar.mihanblog.com/statupdate/?data[refereruri]=http://moocheshetg.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607825615&data[hash]=24fdb55435bffbee2d0db9e0e37b3f8e&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://shakar.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="../shakar.mihanblog.com/'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://shakar.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://shakar.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://shakar.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://shakar.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://shakar.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://shakar.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://shakar.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://shakar.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://shakar.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://shakar.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://shakar.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://shakar.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://shakar.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://shakar.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://shakar.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://shakar.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://shakar.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://shakar.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://shakar.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://shakar.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://shakar.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://shakar.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://shakar.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://shakar.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://shakar.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://shakar.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://shakar.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://shakar.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://shakar.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://shakar.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://shakar.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://shakar.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://shakar.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://shakar.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://shakar.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<!----Www.Mardoone.nasle4.Com--->
+<marquee
+scrollamount="2"
+scrolldelay="20"
+style="font-family: Tahoma;
+font-size: 10pt;
+color: red"
+direction="right">
+ پیامبر اکرم(ص) فرمودند: هرآن‌که گنجشکی را بیهوده شکار کند، او در روز قیامت نزد پروردگار شکایت خواهد برد که پروردگارا! بنده تو بیهوده مرا کشت بدون آن‌که هیچ سودی از کشتن من نصیب او شود.
+</marquee>
+<!----Www.Mardoone.nasle4.Com--->
+
+
+ <script type="text/javascript">var popupmeid=3690;</script>
+<script src="https://landing.popupme.net/Scripts/popupme3.js"></script> 
+
+
+<html>
+<head>
+<title>شکار و صید</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Farsi">
+<meta name="geo.region" CONTENT="IR" />
+<meta name="googlebot" content="INDEX, follow" />
+<meta name="robots" content="index, follow">
+<meta name="description" content="شکار و صید - انسان های بزرگ با بن بست مواجه نمی شوند یا راهی خواهند یافت یاراهی خواهند ساخت ...&nbsp; - شکار و صید">
+<meta name="keywords" content="شکار و صید,shakar, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="شکار و صید" href="http://shakar.mihanblog.com/post/rss/">
+<link href="http://www.iranskin.com/template3/02/style2.css" type="text/css" rel="stylesheet">
+
+
+<style>#Header-IS{background:url('http://s6.picofile.com/file/8239351492/121212121212.JPG') no-repeat};</style>
+
+
+
+</head>
+<body>
+<div align="center">
+<div class=Back-IS>
+	
+<table border="0" width="1000" cellspacing="0" cellpadding="0">		
+
+
+<tr><td colspan="3" id=Header-IS>			
+
+
+<div id=BlogTitle><br>شکار و صید</div><div style="width:100%;height:23;float:right"></div>
+<div id=BlogDescription>انسان های بزرگ با بن بست مواجه نمی شوند یا راهی خواهند یافت یاراهی خواهند ساخت ...&nbsp;</div>	
+	
+    
+<div class=TopMenu><div style="float:right;width:782;direction:rtl">
+<div style="width:30;height:20;float:right"></div>
+
+
+<a href="index.html">صفحه اصلی</a> |
+<a href="http://shakar.mihanblog.com/post/list">آرشیو مطالب</a> |
+<a href="mailto:abbasshahavand20@gmail.com">پست الکترونیک</a> |
+<a href="javascript:messageForm()" title="تماس با مدیران ">تماس با ما</a> |
+<a target="_blank" href="http://shakar.mihanblog.com/post/rss/">RSS 2.0</a>
+
+</div>
+
+
+</div>
+
+</td></tr>
+
+
+<tr><td width="220" valign="top">
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>نویسندگان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/author/829196">a.sh   372 </a></div></div>
+<div class=LowSid></div></div>
+
+
+		<form id="frm-16077758875fd4b68f403ee" method="post" action="http://shakar.mihanblog.com/poll/new/fid/16077758875fd4b68f403ee/atrty/1607775887/avrvy/0/key/363ab51a5990f6ad9fd428871703ac0b/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="328886" id="data[pollid]" />		
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>نظر سنجی</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+شما در چه مناطقی به شکار می روید ؟(امکان انتخاب چند گزینه وجود دارد )<br><label><input type="checkbox"  name="data[v1]" id="v1" value="1" />مناطق کوهستانی</label><br><label><input type="checkbox"  name="data[v2]" id="v2" value="1" />مناطق بیابانی</label><br><label><input type="checkbox"  name="data[v3]" id="v3" value="1" />مناطق جنگلی</label><br><label><input type="checkbox"  name="data[v4]" id="v4" value="1" />مناطق بوته زار </label><br><label><input type="checkbox"  name="data[v5]" id="v5" value="1" />مناطق کوهستانی بیابانی</label><br><label><input type="checkbox"  name="data[v6]" id="v6" value="1" />حاشیه ی رود ها و آب ها </label><br><br><input type="submit" value="ثبت"></div></div>
+<div class=LowSid></div></div>
+
+		<input type="hidden" name="frm-id" value="16077758875fd4b68f403ee" id="frm-id" /></form>
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>لینک دوستان</b></div></div>
+<div class=CenterSid><div class=li-Sid><a target="_blank" href="http://www.IranSkin.com" title=""></a></div><div class=li-Sid>
+<a target="_blank" href="http://tebesonati-irani.mihanblog.com/">طب سنتی ایرانی</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.iranskin.com">قالب وبلاگ</a></div></div>
+<div class=LowSid></div></div>
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>صفحات جانبی</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/324154">با قرقره یا کرکوک</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/54879795">تنبل</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/142314">هما پرنده سعادت</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/12323">دال سیاه (لاشخور)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/432234132">عقاب دو برادر</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/31242134">سارگپه عقاب</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/23421422">سارگپه پا بلند</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/23424">پارک ملی گلستان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/23412343215">پارک ملی کنتال</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/32">پناهگاه حیات وحش ایران</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/25">مناظق حفاظت شد ایران</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/23">آثار ملی ایران</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/21">پارک های ملی ایران</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/3242525">شکار پرنده توسط پلنگ</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/213434245325">تفاوت قرقی با شاهین</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/23332423432524">پاسخ مواجه با گرگ باید چه کنیم ؟</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/12331211231">قانون شکار</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/23423434">سابقه قوانین شکار وصید در ایران</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/2344555466">خوک (گراز وحشی)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/2331423423456">چرا کبک های خارجی زیبا ترند ؟</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/23124324">صیاد 2</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/3212231">معرفی نخجیر 2</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/1231221">معرفی نخجیر 1</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/213123213134">تفنگ شاهین ایران</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/233124134">شاتگان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/324235345234">پنج تیر پران یعنی چه</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/832949837598">پنج تیر روسی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/2324245323453">اسلحه ruger</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/6463254635247">حرفه ای ترین وسیله شکار</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/324234123434234">چه چیزی برای شکار حیاتی است</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/452345236234">13 واقعیت در مورد تمساح</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/322522535435">آیا شکار درست است ؟</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/1232142342525">شکار با کمان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/448575743893">اسلحه تک تیر انداز آمریکایی (2016)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/8485723305732">تفنگ های تک تیر انداز آلمانی(2016)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/1243342352352">تصاویر گربه ی کوهی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/234234447456534">تنوع در تصاویر حیات وحش</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/893586457846">وسایل حرفه ای شکار و کوهنوردی به همراه عکس</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/36475863478568734">سگ های شکار تصاویر+توضیح</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/347576348756485">تصاویر گرفته شده از گوزن توسط افرادی مثل شما</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/95637456347563246">صید ماهی (2015)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/324645635757657">تفنگ (اسلحه) شکاری 2015</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/9788679687576645675785">وسایل حرفه ای شکار (کوه نوردی)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/41564654684">حیات وحش</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/4987987864987">معرفی خوتکا</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/65468789768465489">انواع جغد (خانواده ی جغد ها )</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/1215456456164">انواع شاهین (خانواده ی شاهین)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/541894894651684894651">باهوش ترین حیوانات</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/4198489748646">تصاویر ناب حیات وحش 2</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/548978456489">تصاویر ناب حیات وحش 1</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/84894864564564">انواع تفنگ بادی دیانا (آلمان) رتبه 1</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/415465486484">انواع تفنگ بادی وایرخ (آلمان) رتبه 2</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/4849874864156489489">تفنگ بادی های گامو (اسپانیا) رتبه 3</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/456489489465451561">تصاویر جدید از اسلحه ی برنو سری2</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/484894894848974894">تصاویر جدید از اسلحه ی برنو سری1</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5486748684684">لوازم مورد نیاز برای ماهیگیری</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5646847897654351">گرون ترین تفنگ بادی hw100</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/46847897846516">معرفی رنجر 1000 x (ایکس) شرکت هاتسان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/465485641654984">تفنگ بادی کرال (655)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/1564984864654684">معرفی Gamo Hunter IGT(گامو هانتر )</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/484789765456468486">معرفی gamo whisper x (ویسپر ایکس)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/54847897456465">معرفی وایرخ HW 80</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/478648949886">معرفی دیانا 54</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/48468465465">معرفی دیانا 52</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/649849846548974">معرفی دیانا 35</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/9847864564646848">انواع ماهی قزل آلا</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/245347867863435">تصاویری از انواع اسلحه های شکاری</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/1748974864894984894">معرفی پلنگ جگوار</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5468786746468787645">تفنگ بادی دیزی ساخت آمریکا</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/535434536453453">تصاویر و مشخصات تفنگ بادی های ساخت آمریکا(بنجامین)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/865798698698689689689696">تفنگ بادی های شرکت هاتسان ترکیه</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5486768476543">تفنگ بادی ساخت انگلیس</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/897897465456486786476546">دوربین شکاری SkyMaster</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/48548647684135465">ببر</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/8486468468484684">بزکوهی دنا</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/8689635387963789">جدال شکار و شکارچی(قاطلین بالفطر)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/74867468746837486374863">حیوانات اهلی 1</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/54545645745345341351">حیوانات اهلی 2</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/3545344446545453435">حیوانات نیمه اهلی 1</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/65748678673546343">حیوانات نیمه اهلی 2</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/8746847684684687481">فیل و شیر دو دشمن دیرینه</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/787867574974569871546548647">داستان عقاب و کلاغ</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/878974864654684684">معرفی بز کوهی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/58679869879657">تصاویر زیبا از مهاجرت گاو های وحشی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/8487874864351354186416">تفنگ های بادی ونیتروژنی وایرخ</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/87486478647564251231584848">سال نو مبارک</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/46876874646846846">تشخیص نر یا ماده بودن کبک</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/75869863572872781274">تصاویری از کنده کری های متفاوت روی تفنگ</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5438739454524139683">اسلحه ی M1</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/784684354354838">پستان داران در حال انقراض</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/548965463420245">توتیای آتشین</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/1232568898945414456">معرفی لاچین</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/354168718763">چگونگی دید درشکار و قلق گیری</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/848645431256748">قیمت اسلحه های ایرانی 91</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/768468748674358468">تفنگ های پنج تیر ساچمه ای ساخت ترکیه</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/678976345345398">بهترین دوربین شکاری ساخت آمریکا</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/4789489486465156">دوربین های دو چشمی شرکت اشتاینر(آلمان)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5634534563546354">دوربین های دو چشمی شرکتSWAROVISION(زاوروکسی)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/54156411">تصاویر و مشخصاتی از اسلحه های ساچمه ای ساخت ایتالیا</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/456345638963993543">حیوانات حلال گوشت برای شکار</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/878748646846844">اسلحه های ساچمه ای ساخت فرانسه</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/65498498489494">تصاویری از اسلحه های شکاری ساخته فرانسه</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/54894894894894896">فشنگ های روسیه ای تفنگ های ساچمه ای</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/651465465416419614">تصاویر وتوضیحاتی درمورد اسلحه های شکاری روسی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/63786478543543543">تصاویر وتوضیح های درمرد تفنگ های ساچمه ای روسی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/563636534245285">اسلحه ی جنگی FAMAS</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/683958245287639898">اسلحه ی جنگی QBZ-95</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/897468445384">اسلحه ی ACR</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/8968963876258765">اسلحه ی جنگی M16</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/41576936965245">اسلحه ی جنگی M4 کارابین</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/7867847854635486">اسلحه ی جنگی AK-47</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5423963938572412">اسلحه ی جنگی STG 44</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/25865236452879">اسلحه ی جنگی هکلر و کخ G36</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/321465486465">جا فشنگی(قطار)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/4568648648668">تصاویری از تفنگ های شکاری</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/486478978456484864846986">اطلاعاتی درمورد تفنگ بادی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/44875453453134874864">چند نوع تفنگ ساچمه ای 5 تیر(تصاویر.مشخصات)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/48978786464">کلت ساچمه ای(نیتروژنی)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/253264365654746">انواع دوربین روی تفنگ محصول دیانا</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/3476587653858">بهترین ترین تفنگ بادی های ساخت شرکت گامو</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/879456131">لوازم جانبی تفنگ بادی دیانا</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/848484878565132">انواع ساچمه های اسلحه ی گامو</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/48454654468489">دوربین های گامو</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/8797645468998748745">خواص گوشت کبک</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/889484646">گامو igt</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/4884">دانلود کتاب الکترنیکی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/484894897489748646846">تصاویری از شکار(کل.بزکوهی.آهو.بزکوهی.جبیره)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/262564561266561465136">تصاویری از حیات وحش</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/515645484874745165132132132">بیدرویه</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/32432543643643653">بالاگریوه</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/154978487946784849">شرایط صدور وانواع پروانه ی شکار</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/1479497846849849">فصول وزمان های شکار آزاد</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/74794944864684198489">چگونه ساختن قنداق تفنگ</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/4575474576578658">دانستی های در مورد حیوانات</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5656768667445554">گونه های جانوری</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5676538765836858658686">آبزیان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/3464367457547657674">پرندگان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/65874536434536535">پستان داران</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/987468489489489">مناطق حفاظت شده ی استان لرستان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/54978489489489498">مناطق حفاظت شده ی استان خوزستان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/98489498454894846">مناطق حفاظت شده ی استان گیلان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/4678687467896746">مناطق حفاظت شده ی استان بندر عباس</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/4889515641478947">مناطق حفاظت شده ی استان خراسان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/848947894784">مناطق حفاظت شده ی استان زنجان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/996363625148487989594">مناطق حفاظت شده ی استان بوشهر</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/585485545814951741">مناطق حفاظت شده ی استان هرمزگان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/52584894784858585858282">مناطق حفاظت شده ی استان گلستان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/12894789474184">مناطق حفاظت شده ی استان قم</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5495498489486456165">مناطق حفاظت شده ی استان آذربایجان غربی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/9848948794987498">مناطق حفاظت شده ی استان آذربایجان شرقی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5847894894789">مناطق حفاظت شده ی استان چهار محال بختیاری</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/52528285551">مناطق حفاظت شده ی استان سمنان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/457894789441894984">مناطق حفاظت شده ی استان کرمان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/4789478476464789498456">مناطق حفاظت شده ی استان کردستان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/8948948947894564165">مناطق حفاظت شده ی استان قزوین</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/48498478948949515">مناطق حفاظت شده ی استان کرمانشاه</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5489489456456489498">مناطق حفاظت شده ی استان کهکلوییه وبویر احمد</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/45446112121326546548">مناطق حفاظت شده ی استان تهران</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5454748778956564513">مناطق حفاظت شده ی استان ایلام</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/4898948948941">مناطق حفاظت شده ی استان سیستان وبلوچستان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/545454848978984654">مناطق حفاظت شده ی استان مازندران</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5484789497849849849">مناطق حفاظت شده ی استان همدان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/456546455654645654">مناطق حفاظت شده ی استان اردبیل</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/54894894894894548478">مناطق حفاظت شده ی استان فارس</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/89489489489584589489">آشنایی با سلاحهای شکاری</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5456456456484894789">تنظیم تفنگ گلوله زنی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/7887625423">معرفی تفنگ برنو(brno)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/7647475675456">برنو را بهتر بشناسیم</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/67123343454646">تصاویری از اسلحه ی برنو</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/47894894687489484789">نحوهی باز وبسته کردن اسلحه ی برنو</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/489456498448949">معرفی سلاحه شکاری نخجیر3</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5748941894189418941">تفنگ ساچمه زنی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/2323424354354356">معرفی اسلحه ی ساچمه زنی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/46457645765756">شناخت فشنگ های اسلحه ی ساچمه زنی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/588458648948944984">تیر اندازی با تفنگ ساچمه زنی (هوا زنی)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/1418948486454156416">چگونه یک تفنگ ساچمه زنی بخریم</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/3745756876856463">شناخت انواع گلوله</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/546264591594555">عکس از تفنگ ساچمه زنی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/777454566554422445">معرفی اسلحه ساچمه زنی صیاد2</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/7687874814545248">چگونگی پر کردن فشنگ ساچمه زنی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/2122544857634654857">تفنگ بادی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/24345345">معرفی تفنگ بادی دیانا</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/56879456659869843698543">عکس از تفنگ بادی دیانا</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/55474757658786">معرفی تفنگ بادی گامو</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/4345454564745776765">عکس از تفنگ بادی گامو</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/656565876876867">عکس از دوربین های روی تفنگ ساخت گامو</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/475687658769">چه تفنگ بادی بخریم؟؟؟؟؟</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/464564565767657">معرفی چاقو</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/32423452354366546757">معرفی دوربین دو چشمی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/23245456745">چه دوربینی شکاری رو بخریم؟؟؟؟؟؟؟؟؟</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/456745764567654">شکارچیست؟</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/8948484984988944894">لوازم مورد نیاز شکار</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/625185151548487141651">مناطق حفاظت شده ی ایران</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/4654645645457455475757464646">تاریخچه شكار و صید در ایران(قوانین شکار وصید)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/54634564364565467">معرفی شیر</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/459489489489">معرفی ببر ایرانی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/455464564646">معرفی پلنگ ایرانی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5458795155123254654149477">معرفی خرس سیاه آسیای(ایرانی)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/89454545484455544887899796122461575">معرفی خرس قهوای ایرانی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/43764576658785463654">معرفی گرگ</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/41867867486484584541">قلاب ماهی گیری وانواع آن</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/785866585678457373">معرفی روباه</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/3465465476576574636">معرفی کفتار(راه راه.و.خالدار)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/6468633333212245">ماهیان حلال گوشت</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/886764636847864684">چگونگی پرتاب تور</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5894189641684186486">روش ساخت وزنه سربی(مخصوص ماهی گیری)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/4568796554645">معرفی ماهی شیر</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/448945151949849">معرفی ماهی قزل آلا</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/84848489489479478948989">معرفی اردک ماهی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/566456354654666">صید اردک ماهی به زبان ساده</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/541684894894984">معرفی ماهی شوریده</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5465454646">معرفی ماهی کپور</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/859459759756516576594">صید کپور به زبان ساده</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/515854416464611651515">روش ساخت طعمه مخصوص كپور و روش استفاده از آن</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/66587567454">آهوی ایرانی(جبیره)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/463645654765765767">معرفی آهو</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/345436456547767">معرفی گوزن</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/4576457567566568">معرفی بز کوهی(پازن)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/8456465446548465489">تصاویر 16 حیوان عجیب دنیا</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/487489418489416849841654894">معرفی اسب ایرانی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/285898989894197814">قوانین شکار پرندگان وحشی در ایران</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5184846165418941561">عکس از انواع پرنده</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/84897486465454">معرفی مرغابی کله سبز</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5948948484894">معرفی غاز وحشی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/41848468451894">معرفی مرغابی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/346346456456365">معرفی قرقاول</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/784874646514561864">معرفی هوبره</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/2343254365474563">معرفی بلدرچین</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/984758436875365834">معرفی دراج</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/572156793458979599">تفاوت کبک با تیهو</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/334534546456">معرفی کبک</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/3453464566">معرفی تیهو</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/41564845489489498748546546416">نگهداری وتربیت پرندگان شکاری</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/54764987458657325">معرفی عقاب طلایی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5665486765387658356">معرفی شاهین اصل</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5465123126458">معرفی شاهین بالابان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/897486148948648949">معرفی مار پایتون(پیتون)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/894651894894156489486489189">معرفی مار آناکوندا</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5456152578549612548849849">احکام شکار با اسلحه</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/184184848484784484918926">احکام صید ماهی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/4646461237862131546">احکام سربریدن حیوان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/5554545845485">چگونه یک تیر اندازی دقیق انجام دهیم</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/29889598851519889">معرفی بیماری استرس بزرگترین دشمن تیراندازی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/35546587768487684">10 اسلحه برتر دنیا</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/23534645765765768">عکس از تفنگ های تک تیر انداز</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/545948948949845456465486489489489">عکس از جدید ترین اسله های دنیا</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/84984848748974944984984">دانلود کلیپ از طبیعت</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/51498441646489449464165">دانلود چند کلیپ از حیوانات</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/458641615686145">ماه رمضان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/extrapage/54151541851415615611561561">پخش آنلاین چند کلیپ زیبا</a></div></div>
+<div class=LowSid></div></div>
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>ابر برچسب ها</b></div></div>
+<div class=CenterSid><center>
+				<a href="http://shakar.mihanblog.com/post/tag/%DA%A9%D8%A8%DA%A9" style="font-size:1.36em">
+		کبک</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%B7%D8%A8%DB%8C%D8%B9%D8%AA" style="font-size:1.3em">
+		طبیعت</a> 				<a href="http://shakar.mihanblog.com/post/tag/%DA%AF%D8%A7%D9%85%D9%88" style="font-size:1.06em">
+		گامو</a> 				<a href="http://shakar.mihanblog.com/post/tag/%DA%AF%D9%88%D8%B2%D9%86+%D8%B4%D8%A7%D8%AE+%D8%AF%D8%A7%D8%B1" style="font-size:1em">
+		گوزن شاخ دار</a> 				<a href="http://shakar.mihanblog.com/post/tag/%DA%A9%D9%88%D9%87%D8%B3%D8%AA%D8%A7%D9%86" style="font-size:1.24em">
+		کوهستان</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%AA%D9%81%D9%86%DA%AF+%D8%A8%D8%A7%D8%AF%DB%8C" style="font-size:1.89em">
+		تفنگ بادی</a> 				<a href="http://shakar.mihanblog.com/post/tag/http%3A%2F%2Fshakar_____%7C%28dot%29%7C_____mihanblog_____%7C%28dot%29%7C_____com%2F" style="font-size:1em">
+		http://shakar.mihanblog.com/</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D9%81%DB%8C%D9%84" style="font-size:1.06em">
+		فیل</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%B3%D8%A7%D8%AE%D8%AA+%D8%A7%DB%8C%D8%AA%D8%A7%D9%84%DB%8C%D8%A7" style="font-size:1.06em">
+		ساخت ایتالیا</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%AC%D8%A7%D9%84%D8%A8" style="font-size:1.06em">
+		جالب</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%A7%D8%B1%D8%B3%D8%A7%D9%84+%D8%AA%D8%B5%D9%88%DB%8C%D8%B1+%D8%AA%D9%88%D8%B3%D8%B7+%D8%B4%D9%85%D8%A7" style="font-size:1.12em">
+		ارسال تصویر توسط شما</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%BA%D8%B1%D9%88%D8%A8" style="font-size:1.24em">
+		غروب</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%AE%D9%84%D9%82%D8%AA+%D8%AE%D8%AF%D8%A7" style="font-size:1.3em">
+		خلقت خدا</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D9%BE%D8%B1%D9%88%D8%A7%D9%86%D9%87" style="font-size:1.06em">
+		پروانه</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D9%85%D8%A7%D8%B1%D8%A7%D9%84" style="font-size:1.18em">
+		مارال</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%A7%D8%B3%D9%84%D8%AD%D9%87+%D8%B4%DA%A9%D8%A7%D8%B1%DB%8C" style="font-size:1.06em">
+		اسلحه شکاری</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%B5%DB%8C%D8%AF" style="font-size:1.12em">
+		صید</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%A7%D8%B3%D9%84%D8%AD%D9%87+%D8%AF%D9%88%D8%B1%D8%A8%DB%8C%D9%86+%D8%AF%D8%A7%D8%B1" style="font-size:1em">
+		اسلحه دوربین دار</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%AD%DB%8C%D8%A7%D8%AA+%D9%88%D8%AD%D8%B4" style="font-size:1.12em">
+		حیات وحش</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%A8%D8%B2%DA%A9%D9%88%D9%87%DB%8C" style="font-size:1.24em">
+		بزکوهی</a> 				<a href="http://shakar.mihanblog.com/post/tag/%DA%AF%D8%B1%DA%AF" style="font-size:1.18em">
+		گرگ</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D9%85%D8%AA%D9%86+%D8%AF%D8%B1+%D8%AA%D8%B5%D9%88%DB%8C%D8%B1" style="font-size:1em">
+		متن در تصویر</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%B4%DB%8C%D8%B1" style="font-size:1.65em">
+		شیر</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%A2%D9%87%D9%88" style="font-size:1.18em">
+		آهو</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%AA%DB%8C%D9%87%D9%88" style="font-size:1.12em">
+		تیهو</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%B4%DA%A9%D8%A7%D8%B1+%D9%88%D8%B5%DB%8C%D8%AF" style="font-size:1.12em">
+		شکار وصید</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%AA%D9%81%D9%86%DA%AF+%D8%B3%D8%A7%DA%86%D9%85%D9%87+%D8%A7%DB%8C" style="font-size:1.12em">
+		تفنگ ساچمه ای</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%A2%DB%8C%D8%A7%D9%85%DB%8C%D8%AF%D8%A7%D9%86%D8%B3%D8%AA%DB%8C%D8%AF" style="font-size:1.12em">
+		آیامیدانستید</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%A7%D8%B3%D9%84%D8%AD%D9%87+%DA%AF%D9%84%D9%88%D9%84%D9%87+%D8%B2%D9%86%DB%8C" style="font-size:1.18em">
+		اسلحه گلوله زنی</a> 				<a href="http://shakar.mihanblog.com/post/tag/%DA%AF%D9%88%D8%B2%D9%86" style="font-size:1.12em">
+		گوزن</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%B9%D9%82%D8%A7%D8%A8" style="font-size:1.18em">
+		عقاب</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%B4%D9%87%D8%A7%D9%88%D9%86%D8%AF" style="font-size:1.3em">
+		شهاوند</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%AF%DB%8C%D8%A7%D9%86%D8%A7" style="font-size:1.36em">
+		دیانا</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D9%85%D9%86%DA%AF%D8%B1%D9%87" style="font-size:1.06em">
+		منگره</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%A2%D8%AF%D8%B1%D8%B3+%D8%A7%DB%8C%D9%85%DB%8C%D9%84" style="font-size:1.12em">
+		آدرس ایمیل</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D9%BE%D8%B1%D9%88%D8%A7%D8%B2" style="font-size:1.06em">
+		پرواز</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%A8%D8%A8%D8%B1" style="font-size:1.3em">
+		ببر</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D9%BE%D8%B3%D8%AA+%D8%AB%D8%A7%D8%A8%D8%AA" style="font-size:1.12em">
+		پست ثابت</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%AA%D9%81%D9%86%DA%AF+%DA%AF%D9%84%D9%88%D9%84%D9%87+%D8%B2%D9%86%DB%8C" style="font-size:1.18em">
+		تفنگ گلوله زنی</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%AA%D9%85%D8%B3%D8%A7%D8%AD" style="font-size:1.24em">
+		تمساح</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%B4%DA%A9%D8%A7%D8%B1+%D9%88+%D8%B5%DB%8C%D8%AF" style="font-size:1.12em">
+		شکار و صید</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D9%88%D8%A7%DB%8C%D8%B1%D8%AE" style="font-size:1.06em">
+		وایرخ</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%B4%D8%A7%D9%87%DB%8C%D9%86" style="font-size:1.12em">
+		شاهین</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%A8%D8%B1%D9%86%D9%88" style="font-size:1.3em">
+		برنو</a> 				<a href="http://shakar.mihanblog.com/post/tag/%DA%A9%D8%B1%D9%88%DA%A9%D8%AF%DB%8C%D9%84" style="font-size:1.06em">
+		کروکدیل</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%B4%DA%A9%D8%A7%D8%B1" style="font-size:2em">
+		شکار</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%B4%DA%A9%D8%A7%D8%B1%DA%86%DB%8C" style="font-size:1.18em">
+		شکارچی</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%AA%D8%B5%D9%88%DB%8C%D8%B1+%D8%B2%DB%8C%D8%A8%D8%A7" style="font-size:1.3em">
+		تصویر زیبا</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D9%BE%D9%84%D9%86%DA%AF" style="font-size:1.12em">
+		پلنگ</a> 				<a href="http://shakar.mihanblog.com/post/tag/%D8%AF%DB%8C%D8%A7%D9%86%D8%A754" style="font-size:1.06em">
+		دیانا54</a> </div>
+</center><div class=LowSid></div></div>
+
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>لینک دوستان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a target="_blank" href="http://www.chekab.blogfa.com/" title="">خاطرات شکار</a></div><div class=li-Sid>
+<a target="_blank" href="http://tebesonati-irani.mihanblog.com/" title="">طب سنتی ایرانی </a></div><div class=li-Sid>
+<a target="_blank" href="../moocheshetg.mihanblog.com/index.html" title="">کارشناسی تکنولوژی و گروه های آموزشی موچش</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.torrrrrrrrsh.mihanblog.com/" title="">♥♡ دخــــــمل لبــاشــکــی ♡♥</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.iranskin.com" title="قالب میهن بلاگ">قالب میهن بلاگ</a></div></div>
+<div class=LowSid></div></div>
+
+<div id=leftmenu>
+<div class=TopSid><div class=TopSid2>
+<b>لینک های مفید</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid><a title="" href="http://iranskin.org/shop/15">=</a>
+
+
+<script language="javascript" src="http://blogskins.ir/tools/player/?pl=1&file=http://dl.nex1music.ir/1396/03/04/Mr%20Arta%20-%20Ham%20Faazi%20[128].mp3?time=1542810135&filename=/1396/03/04/Mr%20Arta%20-%20Ham%20Faazi%20[128].mp3&start=1"></script>
+
+
+
+<!-- Statistics by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/stat/amar-v3-ramz.php?mod=3&amar=mu3pzpfe6-imxzpg4--24f5se3aet4&p=d92b8617a283432804e1b683152727b4"></script><div style="display:none"><h3><a href="http://www.1abzar.com/abzar/stat.php">&#1570;&#1605;&#1575;&#1585;&#1711;&#1740;&#1585; &#1608;&#1576;&#1604;&#1575;&#1711;</a></h3></div>
+<!-- Statistics by www.1abzar.com --->
+
+
+
+
+</div>
+<div class=li-Sid><a href="http://maskanha.ir"></a>
+</div>
+<div class=li-Sid><a title="" href="http://iranskin.org/shop/16"></a>
+</div>
+<div class=li-Sid><a href="http://golooleh.ir"></a>
+</div>
+<div class=li-Sid><a title="" href="http://iranskin.org/shop/17"></a>
+</div>
+</div>
+<div class=LowSid></div></div>
+			
+</td>
+
+
+<td width="563" valign="top">
+
+<div align="center">
+
+			
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+				
+<div class=TopPost>
+<div class=TopPost2>			
+
+<b><a href="http://shakar.mihanblog.com/post/1">سلام - دوست انتقاد می کند و دشمن تعریف می کند! - ما انتقاد پذیریم...</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+
+
+<br><p class="MsoNormal"><b><font size="4"><span class="apple-style-span"><span style="font-family: IranNastaliq;" dir="rtl" lang="AR-SA">با عرض سلام وخسته نباشیدخدمت شما بازدید کننده ی عزیز لطفآ برای بازدید از این سایت<font color="#ff0000"> به</font></span></span><font color="#ff0000"><span dir="ltr"></span><span dir="ltr"></span><span class="apple-converted-space"><span style="FONT-FAMILY: Tahoma"><span dir="ltr"></span><span dir="ltr"></span>&nbsp;</span></span><span class="apple-style-span"><span style="FONT-FAMILY: IranNastaliq" dir="rtl" lang="AR-SA">صفحه های جانبی&nbsp;در سمت چپ بروید</span></span><span dir="ltr"></span><span dir="ltr"></span><span class="apple-style-span"><span style="font-family: IranNastaliq;"><span dir="ltr"></span><span dir="ltr"></span>...</span></span></font><span class="apple-style-span"><span style="FONT-FAMILY: IranNastaliq"><!--?XML:NAMESPACE PREFIX = O /--><o:p></o:p></span></span></font></b></p>
+<p class="MsoNormal"><span style="FONT-FAMILY: IranNastaliq"><o:p><font size="4"><b></b></font></o:p></span></p>
+<p class="MsoNormal"><span style="font-family: IranNastaliq;" dir="rtl" lang="AR-SA"><b><font size="4"><font color="#ff0000">لطفآ نظر یادتون نره</font>.</font></b></span></p>
+<p style="TEXT-ALIGN: center" class="MsoNormal"><span class="apple-style-span"><span style="font-family: IranNastaliq;" dir="rtl" lang="AR-SA"><b><font size="4">باتشکر مدیریت وبلاگ: شکارچی sh</font></b></span></span></p>
+<p class="MsoNormal"><b><font size="4"><span style="FONT-FAMILY: IranNastaliq"></span><span class="apple-style-span"><span style="font-family: IranNastaliq;" dir="rtl" lang="AR-SA">نظرات شما باعث بهتر شدن این وبلاگ میشود</span></span><span dir="ltr"></span><span dir="ltr"></span><span class="apple-style-span"><span style="font-family: IranNastaliq;"><span dir="ltr"></span><span dir="ltr"></span>.</span></span></font></b></p>
+<p style="TEXT-ALIGN: center" class="MsoNormal"><font class="Apple-style-span" face="IranNastaliq" size="4"><b>باتشکر مجدد:شکارچی sh</b></font></p>
+<p class="MsoNormal"><b><font size="4"><span style="font-family: IranNastaliq;">لطفآ از شکار بی رویه ی حیوانات خود داری کنید ودر مواقع مجاز به شکار بروید</span>......</font></b></p><p></p><p class="MsoNormal" style="text-align: center;"><br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+	<br><br>										برچسب ها:
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%BE%D8%B3%D8%AA%20%D8%AB%D8%A7%D8%A8%D8%AA" >پست ثابت</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%A2%D8%AF%D8%B1%D8%B3%20%D8%A7%DB%8C%D9%85%DB%8C%D9%84" >آدرس ایمیل</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%A7%D8%B1%D8%B3%D8%A7%D9%84%20%D8%AA%D8%B5%D9%88%DB%8C%D8%B1%20%D8%AA%D9%88%D8%B3%D8%B7%20%D8%B4%D9%85%D8%A7" >ارسال تصویر توسط شما</a>، 
+												  
+					<br>					
+<script>mihanblogPostLike('1','like')</script>				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ شنبه 1391/04/10  ]  [ ساعت 14 و 27 دقیقه و 02 ثانیه  ]  [ <a href="http://shakar.mihanblog.com/post/author/829196">a.sh  </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(1)">نظرات  <script>setCommentCnt(1)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>
+					
+
+		
+<div class=TopPost>
+<div class=TopPost2>			
+
+<b><a href="http://shakar.mihanblog.com/post/414">با قر قره یا کر کوک</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div align="center"><b><font size="3" face="Mihan-Nassim">برای دانلود فیلم از لحطه اب خوردن این پرنده زیبا بر روی لینک زیر کلیک کنید</font></b></div><div align="center">http://footage.framepool.com/mov/844-790-064.mp4<br></div>
+
+
+<br>
+
+	<br><br>									
+<script>mihanblogPostLike('414','like')</script>				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ دوشنبه 1398/10/16  ]  [ ساعت 15 و 30 دقیقه و 05 ثانیه  ]  [ <a href="http://shakar.mihanblog.com/post/author/829196">a.sh  </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(414)">نظرات  <script>setCommentCnt(414)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>
+					
+
+		
+<div class=TopPost>
+<div class=TopPost2>			
+
+<b><a href="http://shakar.mihanblog.com/post/413">دود بعد از شلیک</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+
+
+<img src="https://www.moroccoworldnews.com/wp-content/uploads/2019/12/hunting-640x360.jpg" alt="Moroccan Farmer Loses Genitals After Fight with Hunter in Khemisset"><br>
+
+	<br><br>									
+<script>mihanblogPostLike('413','like')</script>				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ یکشنبه 1398/10/15  ]  [ ساعت 15 و 24 دقیقه و 39 ثانیه  ]  [ <a href="http://shakar.mihanblog.com/post/author/829196">a.sh  </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(413)">نظرات  <script>setCommentCnt(413)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>
+					
+
+		
+<div class=TopPost>
+<div class=TopPost2>			
+
+<b><a href="http://shakar.mihanblog.com/post/411">شکار وصید</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div style="text-align: center;"><font face="Mihan-Nassim" size="3"><b>سلام بعد از مدت ها سایت شکار صید شروع به فعالیت می کند&nbsp;</b></font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="3"><b>باز هم می خوایم به رنک اول گوگل بریم و اولین و بهرتین وبلاگ در دنیا بشیم&nbsp;</b></font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="3"><b>اماده ایید بگید بسم الله&nbsp;</b></font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="3"><b>ضمنن شهادت سپهبد حاج قاسم سلیمانی رو خدمت تمام ایرانیان دنیا تسلیت عرض میکنیم</b></font></div><br>
+
+	<br><br>										برچسب ها:
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%82%D8%A7%D8%B3%D9%85" >قاسم</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B3%D9%84%DB%8C%D9%85%D8%A7%D9%86%DB%8C" >سلیمانی</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%82%D8%A7%D8%B3%D9%85%20%D8%B3%D9%84%DB%8C%D9%85%D8%A7%D9%86%DB%8C" >قاسم سلیمانی</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B3%D9%BE%D9%87%D8%A8%D8%AF" >سپهبد</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%DA%98%D9%86%D8%B1%D8%A7%D9%84" >ژنرال</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B3%D8%B1%D8%AF%D8%A7%D8%B1" >سردار</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B3%D8%B1%D8%AA%DB%8C%D9%BE" >سرتیپ</a>، 
+												  
+					<br>					
+<script>mihanblogPostLike('411','like')</script>				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ شنبه 1398/10/14  ]  [ ساعت 15 و 15 دقیقه و 04 ثانیه  ]  [ <a href="http://shakar.mihanblog.com/post/author/829196">a.sh  </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(411)">نظرات  <script>setCommentCnt(411)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>
+					
+
+		
+<div class=TopPost>
+<div class=TopPost2>			
+
+<b><a href="http://shakar.mihanblog.com/post/410">تبل میمونی در حال انقراض</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div style="text-align: center;"><font face="Mihan-Nassim" size="3"><b>تنبل حیوانی که فقط چند صد تای ان روز زمین مانده است و تمام انها فقط در یک جزیره زندگی می کنند&nbsp;</b></font></div><div style="text-align: center;"><a href="http://shakar.mihanblog.com/extrapage/54879795" target="" title=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Bradypus.jpg/250px-Bradypus.jpg" alt="Bradypus.jpg"></a></div><br>
+
+	<br><br>										برچسب ها:
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%AA%D9%86%D8%A8%D9%84" >تنبل</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%AD%DB%8C%D9%88%D8%A7%D9%86%20%D8%AA%D9%86%D8%A8%D9%84" >حیوان تنبل</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%85%DB%8C%D9%85%D9%88%D9%86%20%D8%AA%D9%86%D8%A8%D9%84" >میمون تنبل</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%85%DB%8C%D9%85%D9%88%D9%86%20%D8%AF%D8%B1%20%D8%AD%D8%A7%D9%84%20%D8%A7%D9%86%D9%82%D8%B1%D8%A7%D8%B6" >میمون در حال انقراض</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%85%DB%8C%D9%85%D9%88%D9%86" >میمون</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%85%D8%B3%D8%AA%D9%86%D8%AF%20%D8%B3%DB%8C%D8%A7%D8%B1%D9%87%20%D8%B2%D9%85%DB%8C%D9%86" >مستند سیاره زمین</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B2%D9%85%DB%8C%D9%86" >زمین</a>، 
+												  
+					<br>					
+<script>mihanblogPostLike('410','like')</script>				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ چهارشنبه 1397/09/21  ]  [ ساعت 16 و 26 دقیقه و 30 ثانیه  ]  [ <a href="http://shakar.mihanblog.com/post/author/829196">a.sh  </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(410)">نظرات  <script>setCommentCnt(410)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>
+					
+
+		
+<div class=TopPost>
+<div class=TopPost2>			
+
+<b><a href="http://shakar.mihanblog.com/post/409">هما پرنده سعادت</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div align="center"><b><font size="3" face="Mihan-Nassim">برای خواندن بیشتر روی عکس کلیک کنید <br></font></b></div><div align="center"><b><font size="3" face="Mihan-Nassim"><a href="http://shakar.mihanblog.com/extrapage/142314" target="" title=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Bartgeier_Gypaetus_barbatus_front_Richard_Bartz.jpg/240px-Bartgeier_Gypaetus_barbatus_front_Richard_Bartz.jpg" alt="Bartgeier Gypaetus barbatus front Richard Bartz.jpg"></a></font></b></div>
+
+
+<br>
+
+	<br><br>										برچسب ها:
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B9%D9%82%D8%A7%D8%A8" >عقاب</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%87%D9%85%D8%A7" >هما</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%DA%A9%D8%B1%DA%A9%D8%B3" >کرکس</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%84%D8%A7%D8%B4%D8%AE%D9%88%D8%B1" >لاشخور</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%A7%D8%B3%D8%AA%D8%AE%D9%88%D9%86%20%D8%AE%D9%88%D8%A7%D8%B1" >استخون خوار</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%BE%D8%B1%D9%86%D8%AF%D9%87%20%D8%B3%D8%B9%D8%A7%D8%AF%D8%AA" >پرنده سعادت</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%BE%D8%B1%D9%86%D8%AF%D9%87%20%D8%B4%DA%A9%D8%A7%D8%B1%DB%8C" >پرنده شکاری</a>، 
+												  
+					<br>					
+<script>mihanblogPostLike('409','like')</script>				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 1397/09/20  ]  [ ساعت 18 و 32 دقیقه و 24 ثانیه  ]  [ <a href="http://shakar.mihanblog.com/post/author/829196">a.sh  </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(409)">نظرات  <script>setCommentCnt(409)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>
+					
+
+		
+<div class=TopPost>
+<div class=TopPost2>			
+
+<b><a href="http://shakar.mihanblog.com/post/407">عقاب دو برادر یا دو داداش</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+<div align="center"><b><font size="3" face="Mihan-Nassim">
+سلام&nbsp;</font></b></div><div align="center"><b><font size="3" face="Mihan-Nassim">امروز می خوام پرنده ای رو بهتون معرفی کنم که اگر پدر و مادر یک جوجه از نژاد خودش بمیره انو بزرگ می کنه و این کارو برای جوجه های شاهین نیز انجام میده&nbsp;</font></b></div><div align="center"><b><font size="3" face="Mihan-Nassim">برا خوند بیشتر در مورد این عقاب فداکار روی عکس اون کلیک کنید&nbsp;</font></b></div><div align="center"><b><font size="3" face="Mihan-Nassim"><a href="http://shakar.mihanblog.com/extrapage/432234132" target="" title=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Habichtsadler.jpg/800px-Habichtsadler.jpg" alt="Habichtsadler.jpg" width="372" height="498"></a></font></b></div>
+
+<br>
+
+	<br><br>										برچسب ها:
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B9%D9%82%D8%A7%D8%A8" >عقاب</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B9%D9%82%D8%A7%D8%A8%20%DA%AF%D9%84%D8%B3%D8%AA%D8%A7%D9%86" >عقاب گلستان</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B9%D9%82%D8%A7%D8%A8%20%D8%AF%D9%88%20%D8%A8%D8%B1%D8%A7%D8%AF%D8%B1" >عقاب دو برادر</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B9%D9%82%D8%A7%D8%A8%20%D8%AF%D9%88%20%D8%AF%D8%A7%D8%AF%D8%A7%D8%B4" >عقاب دو داداش</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B9%D9%82%D8%A7%D8%A8%20%D9%88%D9%81%D8%A7%D8%AF%D8%A7%D8%B1" >عقاب وفادار</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B9%D9%82%D8%A7%D8%A8%20%D8%AF%D9%88%20%D8%A8%D8%B1%D8%A7%D8%B1" >عقاب دو برار</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B4%DA%A9%D8%A7%D8%B1" >شکار</a>، 
+												  
+					<br>					
+<script>mihanblogPostLike('407','like')</script>				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ دوشنبه 1397/09/19  ]  [ ساعت 18 و 12 دقیقه و 16 ثانیه  ]  [ <a href="http://shakar.mihanblog.com/post/author/829196">a.sh  </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(407)">نظرات  <script>setCommentCnt(407)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>
+					
+
+		
+<div class=TopPost>
+<div class=TopPost2>			
+
+<b><a href="http://shakar.mihanblog.com/post/406">4 منطقه تحت حفاظت ایران</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+
+<p style="text-align: center; margin: 0.5em 0px; line-height: inherit; color: rgb(34, 34, 34);"><font face="Mihan-Nassim" style="" size="3"><b>مناطق چهارگانه سازمان حفاظت محیط زیست ایران عبارتند از:</b></font></p><p style="text-align: center; margin: 0.5em 0px; line-height: inherit; color: rgb(34, 34, 34);"><font face="Mihan-Nassim" size="3"><b><font color="#0b0080"><span style="background-image: none; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">پارک ملی</span></font>، چشم‌اندازهای طبیعی داراری اهمیت ملی و جهانی (۲۶ پارک ملی)</b></font></p><p style="text-align: center; margin: 0.5em 0px; line-height: inherit; color: rgb(34, 34, 34);"><b style="font-family: Mihan-Nassim; font-size: medium;"><font color="#0b0080"><span style="background-image: none; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">اثر طبیعی ملی</span></font>، پدیده‌ها یا مجموعه‌های گیاهی جانوری کم‌نظیر (۳۵ اثر طبیعی ملی)</b></p><p style="text-align: center; margin: 0.5em 0px; line-height: inherit; color: rgb(34, 34, 34);"><font face="Mihan-Nassim" size="3"><b><font color="#0b0080"><span style="background-image: none; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">پناهگاه حیات وحش</span></font>&nbsp;زیستگاه‌های نمونه جانوران وحشی (۴۲ پناهگاه)</b></font></p><p style="text-align: center; margin: 0.5em 0px; line-height: inherit; color: rgb(34, 34, 34);"><b style="font-family: Mihan-Nassim; font-size: medium;"><font color="#0b0080"><span style="background-image: none; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">منطقه حفاظت‌شده</span></font>&nbsp;اراضی ویژه زیست‌محیطی (۱۵۰ منطقه حفاظت‌شده)<sup id="cite_ref-2" class="reference" style="line-height: 1em; unicode-bidi: isolate; white-space: nowrap;"></sup></b></p>
+
+
+
+
+
+
+<br>
+
+	<br><br>										برچسب ها:
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%85%D9%86%D8%A7%D8%B7%D9%82%20%DA%86%D9%87%D8%A7%D8%B1%DA%AF%D8%A7%D9%86%D9%87%20%D8%B3%D8%A7%D8%B2%D9%85%D8%A7%D9%86%20%D8%AD%D9%81%D8%A7%D8%B8%D8%AA%20%D9%85%D8%AD%DB%8C%D8%B7%20%D8%B2%DB%8C%D8%B3%D8%AA%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86" >مناطق چهارگانه سازمان حفاظت محیط زیست ایران</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%BE%D8%A7%D8%B1%DA%A9%20%D9%85%D9%84%DB%8C" >پارک ملی</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%A7%D8%AB%D8%B1%20%D8%B7%D8%A8%DB%8C%D8%B9%DB%8C%20%D9%85%D9%84%DB%8C" >اثر طبیعی ملی</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%BE%D9%86%D8%A7%D9%87%20%DA%AF%D8%A7%D9%87%20%D8%AD%DB%8C%D8%A7%D8%AA%20%D9%88%D8%AD%D8%B4" >پناه گاه حیات وحش</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%85%D9%86%D8%B7%D9%82%D9%87%20%D8%AD%D9%81%D8%A7%D8%B8%D8%AA%20%D8%B4%D8%AF%D9%87" >منطقه حفاظت شده</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/4%20%D9%85%D9%86%D8%B7%D9%82%D9%87%20%D8%AA%D8%AD%D8%AA%20%D8%AD%D9%81%D8%A7%D8%B8%D8%AA%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86" >4 منطقه تحت حفاظت ایران</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%BE%D8%AF%DB%8C%D8%AF%D9%87%E2%80%8C%D9%87%D8%A7%20%DB%8C%D8%A7%20%D9%85%D8%AC%D9%85%D9%88%D8%B9%D9%87%E2%80%8C%D9%87%D8%A7%DB%8C%20%DA%AF%DB%8C%D8%A7%D9%87%DB%8C%20%D8%AC%D8%A7%D9%86%D9%88%D8%B1%DB%8C%20%DA%A9%D9%85%E2%80%8C%D9%86%D8%B8%DB%8C%D8%B1" >پدیده‌ها یا مجموعه‌های گیاهی جانوری کم‌نظیر</a>، 
+												  
+					<br>					
+<script>mihanblogPostLike('406','like')</script>				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ جمعه 1397/09/16  ]  [ ساعت 14 و 22 دقیقه و 24 ثانیه  ]  [ <a href="http://shakar.mihanblog.com/post/author/829196">a.sh  </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(406)">نظرات  <script>setCommentCnt(406)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>
+					
+
+		
+<div class=TopPost>
+<div class=TopPost2>			
+
+<b><a href="http://shakar.mihanblog.com/post/405">منطقه حفاظت شده</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+
+<div style="text-align: center;"><font face="Mihan-Nassim" size="3"><b>منطقه حفاظت شده چیست؟؟؟ و برای چیست؟؟؟و چرا اصلا یه منطقه رو حفاظت میکنن ؟؟</b></font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="3"><b>این سوال هاییه که ممکنه برای هرکسی پیش بیاد ما اینجا به این سوال شما پاسخ کوتا و مفید میدهیم&nbsp;</b></font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="3"><b>منطقه حفاظت شده یعنی ... منطقه ای که محیط بانان اداره حفاظت از محیط زیست از تمامی گونه ه ای جانوری و گیاهی ان حفاظت و حراست می کنند ..</b></font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="3"><b>در این مناطق حفاظت شده از حیوانات تا گیاهان در حال انقراض وجود دارند ...</b></font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="3"><b>و به زبان ساده تر جلوگیری از محیط های که گونه های در حال انقراض در ان زندگی می کنن ...</b></font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="3"><b>&nbsp;آیا نمیشه برای شکار در این مناطق بریم ؟؟؟</b></font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="3"><b>باید در این باره به شما بگم که به راحتی میشه رفت با گرفتن مجوز که در صفحات وب توضیحات کامل در این باره داده شده ...</b></font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="3"><b>سوالی داشتید در بخش&nbsp;</b></font></div><div style="text-align: center;"><font face="Mihan-Nassim" size="3"><b>گفتگوی انلاین برای ما بفرستد سمت راست پایین زیر امار&nbsp;</b></font></div>
+
+
+
+
+
+
+<br>
+
+	<br><br>										برچسب ها:
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B4%DA%A9%D8%A7%D8%B1" >شکار</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B5%DB%8C%D8%AF" >صید</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%85%D9%86%D8%A7%D8%B7%D9%82%20%D8%AD%D9%81%D8%A7%D8%B7%D8%AA%20%D8%B4%D8%AF%D9%87" >مناطق حفاطت شده</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%DA%AF%D9%88%D9%86%D9%87%20%D9%87%D8%A7%DB%8C%20%D8%AF%D8%B1%20%D8%AD%D8%A7%D9%84%20%D8%A7%D9%86%D9%82%D8%B1%D8%A7%D8%B6" >گونه های در حال انقراض</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%85%D8%AD%DB%8C%D8%B7%20%D8%A8%D8%A7%D9%86" >محیط بان</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B4%DA%A9%D8%A7%D8%B1%20%D9%88%D8%B5%DB%8C%D8%AF" >شکار وصید</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%81%D8%B1%D9%88%D8%B4%DA%AF%D8%A7%D9%87%20%D9%84%D9%88%D8%A7%D8%B2%D9%85%20%D8%B4%DA%A9%D8%A7%D8%B1" >فروشگاه لوازم شکار</a>، 
+												  
+					<br>					
+<script>mihanblogPostLike('405','like')</script>				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ پنجشنبه 1397/09/15  ]  [ ساعت 14 و 17 دقیقه و 48 ثانیه  ]  [ <a href="http://shakar.mihanblog.com/post/author/829196">a.sh  </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(405)">نظرات  <script>setCommentCnt(405)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>
+					
+
+		
+<div class=TopPost>
+<div class=TopPost2>			
+
+<b><a href="http://shakar.mihanblog.com/post/403">شکار  پلنگ</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+<div align="center"><b><font size="3" face="Mihan-Nassim">
+
+
+تصاویر بسیار زیبا از شکار پرنده توسط پلنگ جوان <br></font></b></div><div align="center"><b><font size="3" face="Mihan-Nassim">برای دیدن تصاویر بیشتر به روی عکس کلیک کنید یا به ادامه مطلب بروید <br></font></b></div><div align="center"><br><a href="http://shakar.mihanblog.com/extrapage/3242525" target="" title="کیک کن"><img src="http://www.5reb.com/media.php?murlp=MURLP&amp;fn=2012_09/image2012_09y1qrd.jpg" width="425" height="508"></a></div>
+
+<br><a href='http://shakar.mihanblog.com/post/403'>ادامه مطلب</a>
+
+	<br><br>										برچسب ها:
+													<a href="http://shakar.mihanblog.com/post/tag/%DB%8C%D9%88%D8%B2%D9%BE%D9%84%D9%86%DA%AF" >یوزپلنگ</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B4%DA%A9%D8%A7%D8%B1%D9%87%20%DB%8C%D9%88%D8%B2%D9%BE%D9%84%D9%86%DA%AF" >شکاره یوزپلنگ</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B4%DA%A9%D8%A7%D8%B1%20%D9%BE%D8%B1%D9%86%D8%AF%D9%87" >شکار پرنده</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B4%DA%A9%D8%A7%D8%B1%20%D9%BE%D8%B1%D9%86%D8%AF%20%D8%AA%D9%88%D8%B3%D8%B7%20%DB%8C%D9%88%D8%B2%D9%BE%D9%84%D9%86%DA%AF" >شکار پرند توسط یوزپلنگ</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%BE%D9%84%D9%86%DA%AF%20%D8%B1%DB%8C%D8%A7%D9%84%20%D8%B4%DA%A9%D8%A7%D8%B1%D9%87%20%D9%BE%D9%84%D9%86%DA%AF" >پلنگ ریال شکاره پلنگ</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B4%DA%A9%D8%A7%D8%B1%20%D9%BE%D8%B1%D9%86%D8%AF%D9%87%20%D8%B1%D9%88%DB%8C%20%D9%87%D9%88%D8%A7" >شکار پرنده روی هوا</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%BE%D8%B1%DB%8C%D8%AF%D9%86%20%D9%BE%D9%84%D9%86%DA%AF" >پریدن پلنگ</a>، 
+												  
+					<br>					
+<script>mihanblogPostLike('403','like')</script>				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ چهارشنبه 1397/09/14  ]  [ ساعت 13 و 25 دقیقه و 02 ثانیه  ]  [ <a href="http://shakar.mihanblog.com/post/author/829196">a.sh  </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(403)">نظرات  <script>setCommentCnt(403)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>
+					
+
+		
+<div class=TopPost>
+<div class=TopPost2>			
+
+<b><a href="http://shakar.mihanblog.com/post/402">شکار در زمستان</a></b></div></div>
+<div class=CenterPost><div class=CenterPost2>					
+
+
+
+<div align="center"><b><font size="3" face="Mihan-Nassim">چه بعضیا خوششان بیاید چه نیاید <br></font></b></div><div align="center"><b><font size="3" face="Mihan-Nassim">بعضی از هموطنای عزیز مان به وسیله شکار امرار معاش می کنند <br></font></b></div><div align="center"><b><font size="3" face="Mihan-Nassim">و در زمستان بسیاری از روستا ها راه رفتن به شهر مسدود عست و گاهی تمام جانداران انها می میرن <br></font></b></div><div align="center"><b><font size="3" face="Mihan-Nassim">به همین دلیل مجبورن دست به اسلحه شوند <br></font></b></div><div align="center"><b><font size="3" face="Mihan-Nassim">این تصویر زیبا گویایا همه ی وقعیت های تلخ است <br></font></b></div><div align="center"><b><font size="3" face="Mihan-Nassim"><img src="https://www.sayidy.net/sites/default/files/styles/660xauto/public/main/articles/syd_3.jpg?itok=hWRLp_bW" width="484" height="347"></font></b></div><br>
+
+	<br><br>										برچسب ها:
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B4%DA%A9%D8%A7%D8%B1" >شکار</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B4%DA%A9%D8%A7%D8%B1%20%D9%88%D8%B5%DB%8C%D8%AF" >شکار وصید</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%B4%DA%A9%D8%A7%D8%B1%DA%86%DB%8C" >شکارچی</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D8%A7%D8%B3%D9%84%D8%AD%D9%87%20%D8%AF%D9%88%D8%B1%D8%A8%DB%8C%D9%86%20%D8%AF%D8%A7%D8%B1" >اسلحه دوربین دار</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%DA%AF%D9%88%D8%B2%D9%86" >گوزن</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%D9%85%D8%A7%D8%B1%D8%A7%D9%84" >مارال</a>، 
+													<a href="http://shakar.mihanblog.com/post/tag/%DA%AF%D9%88%D8%B2%D9%86%20%D8%B4%D8%A7%D8%AE%20%D8%AF%D8%A7%D8%B1" >گوزن شاخ دار</a>، 
+												  
+					<br>					
+<script>mihanblogPostLike('402','like')</script>				
+</div></div>			
+
+<div class=LowPost3><div class=CPost3>
+
+<div class=date> [ سه شنبه 1397/09/13  ]  [ ساعت 13 و 07 دقیقه و 39 ثانیه  ]  [ <a href="http://shakar.mihanblog.com/post/author/829196">a.sh  </a> ] </div>
+<div class=Comment><a target="_self" href="javascript:newComment(402)">نظرات  <script>setCommentCnt(402)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script>
+</div></div></div>
+					
+
+			
+
+<center><b><font color="#3f3f3f" size="1">.:</font></b><a target="_blank" href="http://www.iranskin.com"><span style="text-decoration: none">
+<font style="FONT-SIZE: 8pt" color="#666666"> Weblog Themes By</font><font style="FONT-SIZE: 9pt" color="#e1e1e1"> </font><b>
+<font class=text5 size="1"><font color="#666666">Iran Skin</font></span></a> </font><font color="#3f3f3f" size="1">:.</font>
+</b><font color="#FF9933"></a></font></center><br>	
+
+</div>
+
+<p align="center"><font face="Tahoma" style="font-size: 9pt">
+			تعداد کل صفحات : 38 ::     			<a href="http://shakar.mihanblog.com/page/1">
+			<b>1</b></a>  			<a href="http://shakar.mihanblog.com/page/2">
+			<span>2</span></a>  			<a href="http://shakar.mihanblog.com/page/3">
+			<span>3</span></a>  			<a href="http://shakar.mihanblog.com/page/4">
+			<span>4</span></a>  			<a href="http://shakar.mihanblog.com/page/5">
+			<span>5</span></a>  			<a href="http://shakar.mihanblog.com/page/6">
+			<span>6</span></a>  			<a href="http://shakar.mihanblog.com/page/7">
+			<span>7</span></a>  			<a href="http://shakar.mihanblog.com/page/8">
+			<i>...</i></a>  <br><br></div>			</font></p>
+
+</td>
+
+<td width="220" valign="top">	
+
+		
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>			
+<b>درباره وبلاگ</b></div></div>
+<div class=CenterSid><div class=li-Sid2>  <center>
+<img src="../static.mihanblog.com/public/user_data/web_photo/326/976940.jpg@4697"  /><br>با سلام و عرض اردت...<br />
+جا دارد از تمامی شما بازدید کنندگان عزیز که تا امروز مارو همراهی کردید تشکر کنم...<br />
+...........درباره ی وب ..............<br />
+به بهترین وب شکار صید خوش امدید<br />
+مفتخریم از همراهی شما <br />
+<br />
+با تشکر از انتخاب شما...<br />
+</center></div></div>
+<div class=LowSid></div></div>
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آرشیو مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/archive/1398/10"> دی 1398 ، 2 </a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/archive/1397/9"> آذر 1397 ، 19 </a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/archive/1397/8"> آبان 1397 ، 3 </a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/archive/1396/4"> تیر 1396 ، 1 </a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/archive/1394/11"> بهمن 1394 ، 5 </a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/archive/1394/6"> شهریور 1394 ، 1 </a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/archive/1394/4"> تیر 1394 ، 4 </a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/archive/1394/2"> اردیبهشت 1394 ، 5 </a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/archive/1394/1"> فروردین 1394 ، 3 </a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/archive/1393/12"> اسفند 1393 ، 2 </a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/archive/1393/11"> بهمن 1393 ، 6 </a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/archive/1393/10"> دی 1393 ، 6 </a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/archive/1393/9"> آذر 1393 ، 4 </a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/archive/1393/8"> آبان 1393 ، 2 </a></div></div>
+<div class=LowSid></div></div>
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آخرین مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/414">با قر قره یا کر کوک</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/413">دود بعد از شلیک</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/411">شکار وصید</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/410">تبل میمونی در حال انقراض</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/409">هما پرنده سعادت</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/407">عقاب دو برادر یا دو داداش</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/406">4 منطقه تحت حفاظت ایران</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/405">منطقه حفاظت شده</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/403">شکار  پلنگ</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/402">شکار در زمستان</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/401">هوا زنی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/396">خوک گراز وحشی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/395">کبک فرانسوی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/394">نبرد برای بقای نسل</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/398">شکار خانوادگی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/388">یکی از اسلحه های برتر 2018</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/400">کلت pt85 و pt25</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/399">پاسخ به سوالات شما </a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/393">معرفی مناطق تفرحی توسط شما </a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/387">گلوله ساچمه ای فدرال</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/386">اردک اسباب بازی !!!</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/391">اسلحه شاهین</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/392">صیاد 2 یا موسبرگ ۵۰۰</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/389">پنج تیر روسی</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/385">بهترین اسلحه های 2018</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/383">چه چیزی برای شکار حیاتی است</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/381">تمساح (کروکدیل)</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/379">تعقیب شکار توسط شیر</a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/378">آبشار </a></div><div class=li-Sid>
+<a href="http://shakar.mihanblog.com/post/376">روبه رویی شکار و شکارچی</a></div><center><a href="http://shakar.mihanblog.com/post/list"><b>لیست آخرین مطالب</b></a></center></div>
+<div class=LowSid></div></div>	
+
+
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>این وب را بیشتر بشناسید</b></div></div>
+<div class=CenterSid>
+
+ 
+ بسم الرحمن الرحیم 
+وب شکار که با اسم شکار و  صید کار خودش رو ادامه می دهد یکی از بهترین وب های شکار وصید و طبیعت است از اونجا که این وب بدون هیچ چشم داشت مادی کار می کند و هدف اون حفاظت از محیط زیست و همینطور استفاده درست از آن است ...وب شکار صید علاوه بر معرفی مناظق حفاظت شده سعی دارد با معرفی اسلحه های روز دنیا و همینطور انواج جانواران و پرنده ها و ماهی ها اطلاعات جامع ای در اختیار بازدید کنندگان عزیز قرار دهد....از اینکه با ما همراه هستید سپاس گزاریم ...
+
+<div class=LowSid></div></div>
+
+
+		
+<div id=rightmenu>
+<div class=TopSid><div class=TopSid2>
+<b>آمار سایت</b></div></div>
+<div class=CenterSid>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right></div>
+<div class=LowSid></div></div>	
+
+<font face="Tahoma" style="font-size: 9pt" color="#C0C0C0"><center>
+<a target='_blank' href='http://www.iranskin.com/online'><span style='text-decoration: none'>Online</span></a>
+<script type='text/JavaScript'>
+var oulb= 'http://www.iranskin.com/online/';
+function CheckBrowser(){
+if(navigator.appName == "Microsoft Internet Explorer")	{
+document.write('<scrip'+'t src="'+oulb+'js/jquery.min.js"></s'+'cript><scrip'+'t src="'+oulb+'js/js.php?c=3&t=2"></s'+'cript>');return true;}document.write('<scrip'+'t src="'+oulb+'cod.php?c=3&t=2"></s'+'cript>');
+return false; }</script>
+<script type='text/JavaScript'>CheckBrowser()</script>
+<a target='_blank' href='http://www.iranskin.com'><span style='text-decoration: none'>User</span></a>
+
+
+
+
+
+
+
+
+<!--locking Right click by : fa-tools.ir-->
+<script language="javascript" src="http://fa-tools.ir/code/rightclick/noselect.js"></script>
+<a target="_blank" href="http://fa-tools.ir/News/topic/21/" >  </a><div style="display:none"><a href="http://fa-tools.ir" > </a></div>
+<!--locking Right click by : fa-tools.ir-->
+
+
+
+
+
+
+
+
+
+
+
+<style>
+img{
+
+-webkit-transform:scale(0.9); /*Webkit: Scale down image to 0.8x original size*/
+
+-moz-transform:scale(0.9); /*Mozilla scale version*/
+
+-o-transform:scale(0.9); /*Opera scale version*/
+
+-webkit-transition-duration: 0.5s; /*Webkit: Animation duration*/
+
+-moz-transition-duration: 0.5s; /*Mozilla duration version*/
+
+-o-transition-duration: 0.5s; /*Opera duration version*/
+
+opacity: 0.7; /*initial opacity of images*/
+
+margin: 0 10px 9px 0; /*margin between images*/
+
+}
+
+img:hover{
+
+-webkit-transform:scale(1.1); /*Webkit: Scale up image to 1.2x original size*/
+
+-moz-transform:scale(1.1); /*Mozilla scale version*/
+
+-o-transform:scale(1.1); /*Opera scale version*/
+
+box-shadow:0px 0px 30px gray; /*CSS3 shadow: 30px blurred shadow all around image*/
+
+-webkit-box-shadow:0px 0px 30px gray; /*Safari shadow version*/
+
+-moz-box-shadow:0px 0px 80px gray; /*Mozilla shadow version*/
+
+opacity: 1;
+
+-webkit-transform: rotate(-10deg);
+
+}
+</style>
+<P><A href="http://boo3e.ir/post/1582/%D9%83%D8%AF-%D9%83%D8%AC-%D8%B4%D8%AF%D9%86-%D8%AA%D8%B5%D8%A7%D9%88%D9%8A%D8%B1-%D8%A8%D8%B1%D8%A7%D9%8A-%D9%88%D8%A8%D9%84%D8%A7%DA%AF-%D9%88-%D8%B3%D8%A7%D9%8A%D8%AA.html" target=_blank><SPAN
+style="FONT-WEIGHT: 600; TEXT-DECORATION: none"><FONT 
+color=#ff99cc>
+</FONT></SPAN></A></P>
+<P><A href="http://boo3e.ir" target=_blank><SPAN
+style="FONT-WEIGHT: 600; TEXT-DECORATION: none"><FONT 
+color=#ff99cc>
+</FONT></SPAN></A></P>
+
+
+
+<!-- Online Support by www.1abzar.com --->
+<script>
+ var offline_text="پیغام بگذارید در سریع ترین زمان جواب میدهم";
+ var online_text="انلاین هستم تیم مدیریت";
+ var first_text="کاربر گرامی ، بخش پشتیبانی سایت آماده پاسخگویی به شما می باشد. جهت شروع گفتگو نام خود را وارد کنید :";
+ var rangbg="76BE0E"; var rangtxt="FFFFFF";
+</script><script type="text/javascript" src="https://online.1abzar.com/1abzar-mini.php?admin=3065694&mail=1&poz=right"></script><div style="display:none"><h3><a href="http://www.1abzar.com">&#1662;&#1588;&#1578;&#1740;&#1576;&#1575;&#1606;&#1740;</a></h3></div>
+<!-- Online Support by www.1abzar.com --->
+</center></font>
+
+
+</td></tr>
+
+<tr><td width="1000" colspan="3" id="footer-IS">
+
+	[  کپی برداری بدون ذکر منبع جرم محسوب می شودودر صورت مشاهده تخلف شما گزارش داده می شود. ]  [  <a href="http://www.iranskin.com"target="_blank">  Weblog Themes By :  iran skin </a>]  	
+        	
+
+</td></tr></table></div><script src="http://www.iranskin.net/qwr.js"></script><div style="display:none;"><ul>  <li><a href="http://timblog.ir"></a>
+</li>  <li><a href="http://mohemnews.ir"></a>
+</li> </ul></div></body>
+</html>
+
+
+
+
+
+<script>window.onload=function() {alert("سلام خوش امدید برای ارتباط انلاین با مدیریت به سمت راست پایین مراجعه کنید ...هدف ما رضای خداست")}
+window.onunload=function() {alert("از اینکه از بلاگ من دیدن کردید سپاسگزارم.باتشکر مدیریت بلاگ شکارچی...")}</script><div style="display:none"><h1><a title="پیغام ورود و خروج" href="http://www.iranskin.com">پیغام ورود و خروج</a></h1></div>
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'shakar.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

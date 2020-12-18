@@ -1,0 +1,1296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc@rsd.html" />
+<script type="text/javascript" src="../../../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*2062554*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[1]='-';commentCnt[2]='-';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','5');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','چهارشنبه 15 شهریور 1396');
+	
+	setStatVar('today_view','1');
+	setStatVar('yesterday_view','2');
+	
+	setStatVar('this_month_view','105');
+	setStatVar('last_month_view','91');
+
+	setStatVar('total_view','11551');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (04:23)');
+
+
+
+    
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://zendegiyedikhtarbanamak.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<style>
+
+    /*
+    Theme Name: Gossip City
+    Theme URI: http://wp-themes.designdisease.com/
+    Description: Designed by <a href="http://www.designdisease.com">Elena G.</a> for  <a href="http://www.celebrific.com">Celebrific</a>
+    Version: 2
+    Author: Design Disease
+    Author URI: http://wp-themes.designdisease.com/
+    */
+
+
+body { background: #FFFFFF; font-family: tahoma,Verdana, Arial, Helvetica, sans-serif; font-size: 12px; padding: 0px; margin: 0px; color:#35383d;}
+
+html { padding: 0; margin: 0;}
+
+a:link { text-decoration: none; color : #ff3399; border: 0px; -moz-outline-style: none;}
+a:active { text-decoration: underline; color : #ff3399; border: 0px; -moz-outline-style: none;}
+a:visited { text-decoration: none; color : #ff3399; border: 0px; -moz-outline-style: none;}
+a:hover	{ text-decoration: underline; color : #0099cc; border: 0px; -moz-outline-style: none;}
+a:focus { outline: none;-moz-outline-style: none;}
+
+h1, h2, h3, h4 { font-family: Verdana,Arial, Helvetica, sans-serif;}
+
+img { padding: 0px; margin: 0px; border: none; text-align: center; max-width:455px;}
+hr { border-left:0px solid #abb0b5; border-right:0px solid #abb0b5; border-top:1px dotted #abb0b5; border-bottom:0px solid #abb0b5; height : 1px;  }
+
+form { padding: 0px; margin: 0px;}
+input { font-family: 'Verdana'; color: #282b31; font-size: 11px;}
+textarea { font-family: 'Verdana'; color: #282b31; font-size: 11px;}
+select { font-family: 'Verdana'; color: #282b31; font-size: 11px;}
+
+    /* Header +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.HBG { background: url(http://mihanblog.com/public/public/user_data/template/19/images/HeaderBkg.gif) repeat-x center top; width: 100%; float: left;}
+
+    /**/ * html .Header { height: 140px;} /* */
+.Header { background: url(http://mihanblog.com/public/public/user_data/template/19/images/Stars.gif) no-repeat top left; width: 900px; margin: 0 auto; position:relative; min-height: 140px;}
+
+
+.Header .LogoImg { position: absolute; top: 56px; right: 0px;}
+.Header .LogoImg h1 {direction:rtl;text-align:right; margin: 0; padding: 0;padding-top:20px;}
+.Header .LogoImg h1 a { display: block; }
+
+.Header .LogoText h1 { font-size: 42px; line-height: 42px; letter-spacing: -2px; padding: 0px 0px 0px 35px; margin: 0px; font-weight: bold; font-family: 'Arial'; background: url(http://mihanblog.com/public/public/user_data/template/19/images/LogoIcon.png) no-repeat left top; position: absolute; top: 70px;}
+.Header .LogoText a { color:#000066; text-decoration: none; }
+.Header .LogoText a:visited { color:#000066; text-decoration: none; }
+.Header .LogoText a:hover { color:#000066; text-decoration: none; }
+
+.Header .Desc { right:0px;position: absolute; top: 20px; color:#fff; font-size: 16px; line-height: 16px; font-weight: bold; letter-spacing: -1px; font-family: tahoma; padding: 0px; margin: 0px; }
+
+
+
+.SUBH {direction:ltr; background: #f3e4eb url(http://mihanblog.com/public/public/user_data/template/19/images/MRight.gif) no-repeat right top; margin: 0 auto; width: 900px; padding: 0px; position: relative; height: 41px}
+
+    /* Menu +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Menu { direction:rtl;background: #f3e4eb url(http://mihanblog.com/public/public/user_data/template/19/images/MLeft.gif) no-repeat left top; width: 880px; padding: 0px; height: 41px}
+.Menu em { display: none}
+.Menu ul { float:right;list-style: none; margin: 0px; padding: 12px 0px 0px 15px;}
+.Menu ul li { padding: 0px 5px 0px 5px; margin: 0px; display: inline; font-size: 11px; border-left: solid 1px #b092a2; }
+.Menu ul li a { color:#660033;}
+.Menu ul li ul { display: none;}
+
+
+    /* Syndicate +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Syn { position:absolute; left: 215px; top: 14px; }
+.Syn ul { margin: 0px; padding: 0px;}
+.Syn li { background: url(http://mihanblog.com/public/public/user_data/template/19/images/SynIco.png) no-repeat left center; margin: 0px 5px 0px 0px; padding: 3px 0px 3px 15px; list-style-type: none; font-size: 10px; color:#cc0066; display: inline; font-weight: bold;}
+.Syn li a {}
+
+    /* Search ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Search { background: url(http://mihanblog.com/public/public/user_data/template/19/images/Search.gif) no-repeat right top; position: absolute; top: 10px; left: 0px; width: 195px; padding: 0px 0px 0px 0px; height: 34px; }
+.Search form { padding: 2px 0px 0px 0px; margin: 0px;}
+.Search input { height:18px;border: none; color: #330033; font-size: 11px;}
+
+.Search  input.keyword {margin-left:32px;direction:rtl;background: none; border: none; padding: 3px 2px 2px 0px; width: 160px; border: none; color:#fff; }
+.Search  input.search { width: 19px; background: url(http://mihanblog.com/public/public/user_data/template/19/images/SearchButton.gif) no-repeat;}
+
+.Search .bt { padding: 0px; margin: 0px; top: 0px; background: none; position: absolute; left: 0px; }
+
+
+    /* Container +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.CONBG { width: 100%; float: left; }
+.CON { width: 900px; position: relative; margin: 0 auto; padding: 0px; margin-top: 25px;text-align:right;}
+
+    /* Side Central Single +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SCS { width: 455px; float: left; padding: 0px 0px 20px 0px;}
+.SCS h1 { font-size: 26px; font-weight: normal; letter-spacing: -1px; border-bottom: solid 1px #d0c1c1; padding-bottom: 15px; padding-top: 0px; margin-top: 0px; color:#000066;}
+.SCS h2 { font-size: 18px; font-weight: normal; }
+.SCS h3 { font-size: 14px; font-weight: bold; }
+
+.SCS { padding: 0px; font-size: 11px; line-height: 1.4em ; color:#63565f;}
+.SCS p { font-size: 11px; line-height: 1.4em; color:#63565f;}
+.SCS p strong {}
+.SCS img {}
+.SCS ul { padding: 10px 0px; margin: 0px; }
+.SCS li { padding: 3px 0px 3px 15px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/19/images/PostContentLiIco.png) no-repeat left top; font-size: 12px; line-height: 16px; color:#63565f; }
+.SCS blockquote { padding: 5px 25px; margin: 0px; color:#993366; font-family: 'Georgia'; font-style: italic; border-top: dashed 1px #cc99cc; border-bottom: dashed 1px #cc99cc; }
+.SCS blockquote p { font-size: 13px; padding: 5px 0px; margin: 5px 0px; line-height: 18px; color:#993366; }
+.SCS blockquote li { padding: 3px 0px 3px 15px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/19/images/PostContentBlockLiIco.png) no-repeat left top; font-size: 13px; line-height: 18px; color:#993366; }
+
+    /* Side Central +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SC { margin:0px;width: 455px; float: right; padding: 0px 0px 20px 0px;direction:rtl;}
+.SC h2 { font-weight: normal;}
+.pagetitle { font-size: 26px; font-weight: normal; letter-spacing: -1px; border-bottom: solid 1px #d0c1c1; padding-bottom: 15px; padding-top: 0px; margin-top: 0px; color:#000066;}
+
+    /* Post +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Post {border-bottom:0px dashed #ccc;width:455px;overflow:hidden;padding: 20px 0px; position: relative;border-bottom:1px dotted #CC3366;}
+
+.PostHead h1 { font-size: 24px; line-height: 24px; letter-spacing: -1px; font-weight: bold; padding: 0px 1px 1px 0px; margin: 0px; color:#000066;}
+.PostHead h1 a { color: #cc3366; text-decoration: none;}
+.PostHead h1 a:visited { color: #cc3366; text-decoration: none;}
+.PostHead h1 a:hover { color:#ff0066; text-decoration: none;}
+
+.PostTime { right:3px;padding: 1px 0px; margin: 0px; font-size: 11px; color:#999; font-weight: bold; font-family: tahoma,arial; position: absolute; letter-spacing:0px; top: 0px; text-transform: lowercase;}
+
+.PostDet { padding: 1px 0px; margin: 0px; font-size: 10px; color:#cc9966; font-weight: bold;}
+.PostDet a { color:#cc9966; text-decoration: underline;}
+.PostDet a:visited { color:#cc9966; text-decoration: underline;}
+.PostDet a:hover { color:#cc9966; text-decoration: none;}
+
+.PostContent {padding: 10px 0px 0px 0px; font-size: 11px; line-height: 1.4em ; color:#63565f;}
+.PostContent p { font-size: 11px; line-height: 1.4em; color:#63565f;}
+.PostContent p strong {}
+.PostContent img {}
+.PostContent ol { padding: 10px 0px 10px 25px; margin: 0px; }
+.PostContent ol li { padding: 2px 0px 2px 0px; font-size: 11px; line-height: 15px; color:#63565f; }
+.PostContent ul { padding: 10px 0px; margin: 0px; }
+.PostContent ul li { padding: 2px 0px;list-style-image: url(http://mihanblog.com/public/public/user_data/template/19/images/PostContentLiIco.png); font-size: 11px; line-height: 15px; color:#63565f;}
+.PostContent blockquote { padding: 5px 0px; margin: 0px; color:#993366; font-style: italic; border-top: dashed 1px #cc99cc; border-bottom: dashed 1px #cc99cc; }
+.PostContent blockquote p { font-size: 11px; padding: 3px 0px; margin: 3px 0px; line-height: 15px; color:#993366; }
+.PostContent blockquote li { padding: 2px 0px 2px 15px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/19/images/PostContentBlockLiIco.png) no-repeat left top; font-size: 11px; line-height: 15px; color:#993366; }
+.PostContent a { text-decoration: underline;}
+
+.PostCom { padding-top: 15px;}
+.PostCom ul { padding: 0px; margin: 0px;}
+.PostCom li { float:left;padding: 5px 24px 5px 0px; margin: 0px; list-style-type: none; color:#336699; font-size: 12px; background: url(http://mihanblog.com/public/public/user_data/template/19/images/PostCom.png) no-repeat right center; }
+.PostCom li.noBg { background: transparent; } 
+.PostCom li a { text-decoration: underline; }
+
+
+    /* Note ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.Note { padding: 0px; margin: 0px;}
+.Note li { padding: 3px 0px 3px 15px; margin: 0px; list-style-type: none; font-size: 12px;}
+.NoteRss { background: url(http://mihanblog.com/public/public/user_data/template/19/images/NoteRss.png) no-repeat left top;}
+.NoteTrackBack { background: url(http://mihanblog.com/public/public/user_data/template/19/images/NoteTrackBack.png) no-repeat left top;}
+
+    /* TrackbackList ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.TrackList { background: #f4ebef url(http://mihanblog.com/public/public/user_data/template/19/images/TrackListBottom.gif) no-repeat bottom; padding: 15px; margin-top: 20px; position:relative;}
+.TrackListTop { background: #f4ebef url(http://mihanblog.com/public/public/user_data/template/19/images/TrackListTop.gif) no-repeat top; position: absolute; top: 0px; left: 0px; width: 455px; height:10px; }
+.TrackList h3 { font-size: 14px; font-weight: bold; margin: 0px 0px 5px 0px; padding: 0px 0px 5px 0px; color:#333366; letter-spacing: -1px; border-bottom: dashed 1px #beb4c1;}
+.TrackList ul { padding: 0px; margin: 0px;}
+.TrackList li { padding: 0px 0px 0px 10px; margin: 0px; list-style-type: none; font-size: 11px; background:url(http://mihanblog.com/public/public/user_data/template/19/images/TrackListIco.gif) no-repeat left top;}
+.TrackList li a { color:#cc3366; }
+
+    /* Navigation - PlugIn +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.NavEnd {width:32px;height: 33px;float:right;background:#cde7f7 url(http://mihanblog.com/public/public/user_data/template/19/images/NavEnd.gif) no-repeat right 0%;   margin: 0px; margin-top:15px;}
+    /*.NavEnd { background: url(http://mihanblog.com/public/public/user_data/template/19/images/NavEnd.gif); width: 15px; height: 33px; position: absolute; top: 0px; margin: 0px; right: 0px;}*/
+
+
+.Nav {float:right;width:410px;height:33px;font-size: 11px; background: #cde7f7 url(http://mihanblog.com/public/public/user_data/template/19/images/NavLeft.gif) no-repeat left top; color:#003366;margin-top:15px;}
+.Nav div{width:390px; padding:10px 10px 0 0;}
+    /*.Nav {height:13px;font-size: 11px; background: #cde7f7 url(http://mihanblog.com/public/public/user_data/template/19/images/NavLeft.gif) no-repeat left top; padding: 10px; color:#003366; position: relative;}*/
+
+.Nav a { padding: 1px 6px 1px 4px; border-left: solid 1px #91bdd8; font-size: 11px;}
+.Nav a:visited { padding: 1px 6px 1px 4px; border-left: solid 1px #91bdd8;}
+.Nav a:hover { padding: 1px 6px 1px 4px; border-left: solid 1px #91bdd8; text-decoration: none;}
+.Nav span { color:#6666;}
+.Nav b {font-size: 11px; color:#003366;text-decoration:underline;}
+
+    /* Comments ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Comments { margin: 20px 0px 0px 0px;}
+.Comments h3 { font-size: 16px; font-weight: bold; margin: 0px 0px 5px 0px; padding: 5px 0px; color:#999; letter-spacing: -1px; border-bottom: dashed 1px #999;}
+
+    /* Comments List  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.List h3 { font-size: 16px; font-weight: bold; margin: 0px 0px 5px 0px; padding: 5px 0px; color:#999; letter-spacing: -1px; border-bottom: dashed 1px #999;}
+.List ol { padding: 0px; margin: 0px;}
+.List li { position: relative; padding: 65px 5px 10px 5px; margin: 0px 0px 10px 0px; list-style-type: none;}
+.List .ComListLi { background: #fff4c3 url(http://mihanblog.com/public/public/user_data/template/19/images/ComListLiBottom.gif) no-repeat left bottom; }
+    /**/ * html .List .ComListLiTop { left: -5px;} /**/
+.List .ComListLiTop { position: absolute; background: url(http://mihanblog.com/public/public/user_data/template/19/images/ComListLiTop.gif) no-repeat left top; height: 73px; width: 455px; left: 0px; top: 0px; padding: 35px 0px 0px 0px;}
+
+    /**/ * html .List .ListNr { right: 25px;} /**/
+.List .ListNr { color:#dfd08f; position: absolute; top: 35px; font-size: 28px; line-height: 28px; font-family: 'Arial'; font-weight: normal; letter-spacing: -1px; padding: 0px; right: 25px; }
+
+    /**/ * html .List .ListGrav { left: 10px;} /* */
+.List .ListGrav { position: absolute; top: 35px; left: 15px;}
+.List .ListGrav img { border: solid 1px #fff;}
+
+.List big { margin: 0px; padding: 2px 0px 2px 55px; font-size: 14px; line-height: 14px; letter-spacing: -1px; color:#996633; font-weight: bold; display: block; font-family: 'Arial';}
+.List small { color:#996633; padding: 2px 0px 2px 55px; margin: 0px; font-size: 11px; }
+.List small a { color:#996633; text-decoration: none;}
+.List small a:visited { text-decoration: none;}
+
+.List .ListContent { margin: 15px 0px 0px 0px; padding: 5px 10px; font-size: 11px; line-height: 15px; background: #fff url(http://mihanblog.com/public/public/user_data/template/19/images/ComListContent.gif) no-repeat left top; display: block;}
+.List .ListContent blockquote { padding: 0px 15px; margin: 0px; color:#cc6600; font-family: 'Georgia'; font-style: italic; border-top: dashed 1px #cc6600; border-bottom: dashed 1px #cc6600; }
+.List .ListContent blockquote p { font-size: 12px; padding: 5px 0px; margin: 5px 0px; line-height: 16px; color:#cc6600; }
+.List .ListContent ul { padding: 0px; margin: 0px; }
+.List .ListContent ul li { padding: 0px; list-style-type: none; background: none; font-size: 11px; line-height: 13px; color:#63565f; }
+
+    /* Comments Form ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Comments .Form { background: #f9c6c6 url(http://mihanblog.com/public/public/user_data/template/19/images/ComFormBottom.gif) no-repeat left bottom; padding: 10px 15px 15px 15px; position: relative;}
+    /**/ *html .Comments .FormTop  { left: -15px;} /**/
+.Comments .FormTop { background: url(http://mihanblog.com/public/public/user_data/template/19/images/ComFormTop.gif) no-repeat left top; position: absolute; top: 0px; left: 0px; width: 504px; height: 7px;}
+.Comments .Form form {margin: 0px; padding: 0px;}
+.Comments .Form a { text-decoration: underline;}
+.Comments .Form p { padding: 0px 0px 2px 0px; margin: 0px; color:#330000; }
+.Comments .Form p small strong { font-size: 10px; font-weight: bold; color:#FF3300;}
+.Comments .Form p small { font-size: 13px; display: block; padding: 5px 0px;}
+.Comments .Form .TextField { background: #fff; border: solid 2px #e2a3a3; padding: 6px; font-size: 12px; display: block;}
+.Comments .Form .TextArea { background: #fff; border: solid 2px #e2a3a3; padding: 6px; font-size: 12px;}
+
+.Comments .Form input.SubmitComment { width: 204px; height: 26px; background: url(http://mihanblog.com/public/public/user_data/template/19/images/SubmitComment.png) no-repeat; margin-top: 8px;}
+.Comments .Form input.SubmitComment:hover { background: url(http://mihanblog.com/public/public/user_data/template/19/images/SubmitComment.png) no-repeat 0 -26px; margin-top: 8px;}
+.Comments .Form input.SubmitCommentIE { width: 204px; height: 26px; background: url(http://mihanblog.com/public/public/user_data/template/19/images/SubmitComment.png) no-repeat 0 -26px; margin-top: 10px; margin-top: 8px;}
+
+
+    /* Side Right +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SR { width: 415px; float: left; position: relative; padding: 0px 0px 20px 0px; }
+.SR h2 { font-size: 14px; letter-spacing: -1px; font-weight: bold; background: url(http://mihanblog.com/public/public/user_data/template/19/images/SRH3.png) repeat-x left bottom; color:#666; padding: 5px 0px 5px 0px; margin: 0px; border-bottom: dashed 1px #efe4e4; }
+.SR h3 { font-size: 15px; letter-spacing: -1px; font-weight: bold; background: url(http://mihanblog.com/public/public/user_data/template/19/images/SRH3.png) no-repeat right center; color:#666; padding: 5px 20px 5px 0; margin: 0px; border-bottom: dashed 1px #efe4e4; }
+
+
+.SR ul { margin: 0px; padding: 0px;}
+.SR li { margin: 0px; padding: 2px 20px 3px 0px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/19/images/CategLi.png) no-repeat right top; border-bottom: dashed 1px #efe4e4; font-size: 11px;}
+.SR li a { color:#cc3366; }
+.SR li a:visited { color:#cc3366; }
+.SR li a:hover { color:#cc0066;}
+
+.SR .simple li {list-style:none;background:none;}
+
+
+
+    /* Side Right Left +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.SRL { direction:rtl;width: 230px; float: right; padding: 0px;}
+
+    /* Side Right Right +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.SRR { direction:rtl;width: 160px; float: left; padding: 0px;}
+.SRR .about_box {line-height:15px;}
+.SRR .about_box #user_logo img{width:150px;height:150px;margin-bottom:10px;margin-top:5px}
+
+    /* Categories +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Categ {}
+
+.Categ ul { margin: 0px; padding: 0px;}
+.Categ ul li { margin: 0px; padding: 1px 20px 2px 0px; list-style-type: none; font-size: 11px; background: url(http://mihanblog.com/public/public/user_data/template/19/images/CategLi.png) no-repeat right top; border-bottom: dashed 1px #efe4e4; color:#999;}
+.Categ ul li a { color:#cc0066;}
+.Categ ul li a:visited { color:#cc0066;}
+.Categ ul li a:hover { color:#663366;}
+
+.Categ ul ul { margin: 2px 0px 0px 0px; padding: 0px; list-style-type: none; background: none; border-bottom: none;}
+.Categ ul li li { margin: 0px; padding: 1px 0px; list-style-type: none; background: none; border-bottom: none; font-size: 10px; }
+.Categ ul li li a { color:#ff6699;}
+.Categ ul li li a:visited { color:#ff6699;}
+.Categ ul li li a:hover { color:#663366;}
+
+    /* Flickr RSS - PlugIn ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Flickr { margin-bottom: 10px;}
+.Flickr h3 { background: url(http://mihanblog.com/public/public/user_data/template/19/images/FlickrH3.gif) no-repeat left center; padding: 5px 0px 5px 20px; margin: 0px; color:#ff3366; letter-spacing: -1px; font-size: 14px; font-weight: bold;}
+.Flickr ul { padding: 10px 0px; margin: 0px;}
+.Flickr li { background: none; padding: 0px; margin: 0px 6px 0px 0px; list-style-type: none; display: inline; border-bottom: none;}
+.Flickr li a img { background: #fff; padding: 1px; border: solid 4px #d4e7f2; width: 53px; height: 53px; margin-bottom: 5px;}
+.Flickr li a:hover img { background: #fff; padding: 1px; border: solid 4px #ff3366; margin-bottom: 5px;}
+
+
+
+    /* Extra ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.EBG {direction:rtl;background: url(http://mihanblog.com/public/public/user_data/template/19/images/ExtraBkg.gif); width: 100%; float: left; border-top: solid 1px #ecdce3; border-bottom: solid 1px #ecdce3; padding: 20px 0px;}
+.Extra { width: 90%; margin: 0 auto;}
+
+    /* Latest Comments  - PlugIn ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Cols { width: 250px; float: left;margin:0 0 0 45px;}
+.Cols h3 { font-size: 16px; margin: 0px; color:#333366; letter-spacing: -1px; padding-bottom: 10px; border-bottom: dashed 1px #beb4c1; }
+.Cols ul { margin: 0px; padding: 10px 0px 0px 0px;}
+.Cols li { display: block; color:#333366; margin: 0px; padding: 2px 15px 3px 0px; list-style-type: none; font-size: 11px; background: url(http://mihanblog.com/public/public/user_data/template/19/images/LatestCom.png) no-repeat right top; font-size: 11px; }
+.Cols li a { font-size: 11px; font-weight: normal; color:#cc3366;}
+
+.Cols .stat span {color:#CC3366;}
+
+    /* Footer ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.FBG { background: #fff; width: 100%; float: left; padding: 10px 0px;}
+.Footer { width: 860px; margin: 0 auto; background: url(http://mihanblog.com/public/public/user_data/template/19/images/FooterIco.png) no-repeat left center; padding: 10px 0px 10px 40px;}
+.Footer p { font-size: 10px; color:#706c79; padding: 0px; margin: 0px; }
+.Footer strong { font-size: 9px;}
+.Footer strong a{text-decoration:none}
+.Footer a,.Footer a:visited { color:#706c79}
+
+
+.owner_photo{
+    color:#fff;
+    float:right;
+    margin:5px 5px 5px 17px;
+
+}
+
+.clearfix {display: inline-block;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+
+.cloud{
+    margin:0;
+    padding:0;
+    width:600px;
+}
+.cloud a:link {
+    color:#cc3366;
+}
+
+.search_btn{
+    margin:2px 11px;
+    background: url(http://mihanblog.com/public/public/user_data/template/19/images/SearchButton.gif) no-repeat 0px 0px;
+    width:19px;
+}
+.btn_general{
+    margin:2px 11px;
+    background-color:#f3e4eb;
+    -x-system-font:none;
+    color:#005773;
+    cursor:pointer;
+    float:none;
+    font-family:Tahoma;
+    font-size:12px;
+    font-size-adjust:none;
+    font-stretch:normal;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    height:24px;
+    line-height:normal;
+    text-align:center;
+    padding:0 3px;
+}
+
+.mihan_logo{
+    background: url(http://mihanblog.com/public/public/images/logo/poweredby.gif) no-repeat top center;
+    text-align:center;
+    height:131px;
+    margin-top:10px;
+}
+#parentheses p{
+    float:right;
+    /*color:#602600;*/
+    padding:0px;
+    margin:0px;
+    direction:rtl;
+    text-align:right;
+    text-decoration:none;
+}
+#parentheses p:hover,#parentheses a:visited,#parentheses a:hover{
+    text-decoration: underline;
+    color:#CC0066;
+}
+.cb_general{
+    line-height:20px;
+}
+
+.cb_share{
+    text-align:left;
+    padding-top:15px;
+}
+.cb_share a{
+    font-size:11px;
+    text-decoration:none
+}
+.cb_share a img{
+    padding:0 0 0 5px;
+}
+
+
+
+
+.cblike{
+    margin:4px 0px;
+}
+.cblike a {
+    float:left;
+    padding:3px;
+    text-align:center;
+    font-size:12px;
+    color:#FFF;
+    display:block;
+    line-height:15px;
+    text-decoration: none;
+}
+
+
+
+
+.cblike a.clike_plus {
+    background-color:#009900 ; /*green #039B03*/
+
+    border-radius: 5px ;
+
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    /*border:1px solid green;
+             border-right:0px;*/
+}
+.cblike a.clike_minus {
+    background-color:#CC0000;
+    border-radius: 5px ;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+    /*border:1px solid red;
+             border-left:0px;*/
+}
+.cblike a.clike_minus:hover {
+    background-color:red;
+    text-decoration: none;
+}
+.cblike a.clike_plus:hover {
+    background-color:green;
+    text-decoration: none;
+}
+.cblike a span{
+    font-weight:bold;
+    font-size:13px;
+
+    color:#fff;
+}
+
+</style>
+
+
+<title>زندگی دختر با نمک - مطالب  تیر 1396</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name='description' content='' />
+<meta name='keywords' content='' />
+
+<link rel="alternate" type="application/rss+xml" title="زندگی دختر با نمک" href="../../rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title="زندگی دختر با نمک" href="../../atom/index.html" />
+
+
+
+</head>
+
+<body>
+
+<div class="HBG">
+
+    <div class="Header"><div class="Stars"></div>
+
+        <!-- START Logo -->
+        <div class="LogoImg">
+            <h1><a href="../../../index.html">زندگی دختر با نمک</a></h1>
+
+        </div>
+        <!-- END Logo -->
+
+        <p class="Desc"></p>
+    </div>
+
+    <div class="SUBH">
+        <div class="Menu">
+            <ul>
+                <li><a href="mailto:" title="ارسال ایمیل به مدیر وب لاگ"><span>پست الکترونیک</span></a></li>
+                <li><a href="javascript:messageForm()" title="تماس با مدیر وب لاگ">تماس با ما</a></li>
+
+            </ul>
+        </div>
+
+
+        <form id="frm-16076469485fd2bee468493" method="get" action="http://zendegiyedikhtarbanamak.mihanblog.com/post/search/fid/16076469485fd2bee468493"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+            <div class="Search">
+                <input type="text" value="جستجو" name="search_text" class="keyword" onfocus="this.value='';"/>
+                <div class="bt">
+                    <input class="search_btn" type="submit" value=""/>
+                    <!--	<input name="submit" type="image" class="btn" title="Search" src="http://wp-themes.designdisease.com/testrun/wp-content/themes/wp_gossipcity2/gossipcity/images/ButtonTransparent.png" alt="Search" />-->
+                </div>
+            </div>
+        <input type="hidden" name="frm-id" value="16076469485fd2bee468493" id="frm-id" /></form>
+        <div class="Syn">
+            <ul>
+                <li><a href="../../atom/index.html">Atom</a></li>
+
+                <li><a href="../../rss/index.html">RSS</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+<!-- END Header --><!-- Container -->
+<div class="CONBG">
+<div class="CON">
+
+<!-- Start SC -->
+
+<div class="SC">
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		    <div class="Post clearfix" id="2">
+
+        <div class="PostHead"><div class="PHT"></div>
+            <h1><a title="" href="../../2.html" rel="bookmark">دانلود آهنگ دل دیوونه از یوسف زمانی</a></h1>
+            <small class="PostTime">شنبه 17 تیر 1396</small>
+            <small class="PostDet"> نویسنده: <a href="../../author/1697916.html">milad s</a> | </small>
+
+
+
+        </div>
+
+        <div class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://zendegiyedikhtarbanamak.mihanblog.com/post/2&amp;title=دانلود آهنگ دل دیوونه از یوسف زمانی">
+                ارسال به <img align="top" title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+        <div class="PostContent">
+
+            <p><span class="owner_photo clearfix"></span><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><DIV id=explanation>
+<H1>دانلود آهنگ دل دیوونه از یوسف زمانی به همراه متن آهنگ از سایت آواباران<SPAN class=small> </SPAN></H1>
+<P><ACRONYM title="Really Simple Syndication"></P>
+<P></P></DIV>
+<DIV id=content>
+<UL>
+<DIV class=article>
+<LI><A href="../../../index.html" rel=bookmark>دانلود آهنگ دل دیوونه از یوسف زمانی به همراه متن آهنگ از سایت آواباران</A> 
+<DIV>
+<P><STRONG>دانلود آهنگ دل دیوونه از یوسف زمانی</STRONG><BR>دانلود آهنگ جدید و شنیدنی دل دیوونه از خواننده یوسف زمانی با بهترین کیفیت ممکن از آوا باران<BR>دانلود آهنگ دل دیوونه با لینک پر سرعت و پخش آنلاین</P>
+<P>Downloade Musice Jadide Yousef Zamani – Dele Divone</P>
+<P>بزودی …</P>
+<P><IMG src="http://avabaran.ir/wp-content/uploads/2017/06/Yousef-Zamani-Man-Baladam.jpg"></P>
+<H3>متن آهنگ دل دیوونه از یوسف زمانی</H3>
+<P>نگی میری میگیره دلم حرف های دلمو به کی بگم به کی بگم دیوونتم واسه توعه بیتابه دلم<BR>من تو رو دوست دارم و میخوامت و میدونی چقدر عاشقتم و واسه من عزیزی<BR>دل دیوونه عاشقه با تو میدونه میدونه تو هم دوسش داری مثل من دیوونه</P>
+<H4>دانلود آهنگ دل دیوونه از یوسف زمانی با کیفیت عالی از آوا باران </H4>در صورت مشکل داشتن متن آهنگ و یا پست و یا غیر مجاز بودن مطلب از طریق تماس با ما در ارتباط باشید </DIV></LI></DIV></UL></DIV></ACRONYM></p>
+            <p>&nbsp;&nbsp;&nbsp;            </p><br>
+
+
+            <ul class="clearfix">
+                
+                            </ul>
+
+        </div>
+
+        <div class="PostCom">
+            <ul>
+                <li style="float:left;"><a target="_self" href="../../2.html#commentlist" class="comment-link">نظرات(<script>setCommentCnt(2)</script>)</a>&nbsp;</li>
+                <li class="noBg" style="float: left; margin-left: 10px; margin-top: -6px;"><script>mihanblogPostLike('2','like')</script></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="1">
+
+        <div class="PostHead"><div class="PHT"></div>
+            <h1><a title="" href="../../1.html" rel="bookmark">معرفی برترین خودروهای سوپرسدان جهان</a></h1>
+            <small class="PostTime">شنبه 17 تیر 1396</small>
+            <small class="PostDet"> نویسنده: <a href="../../author/1697916.html">milad s</a> | </small>
+
+
+
+        </div>
+
+        <div class="cb_share clearfix">
+            <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://zendegiyedikhtarbanamak.mihanblog.com/post/1&amp;title=معرفی برترین خودروهای سوپرسدان جهان">
+                ارسال به <img align="top" title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+            </a>
+        </div>
+
+        <div class="PostContent">
+
+            <p><span class="owner_photo clearfix"></span><DIV id=explanation>
+<H1>معرفی برترین خودروهای سوپرسدان جهان<SPAN class=small> </SPAN></H1>
+<P><ACRONYM title="Really Simple Syndication"></P>
+<P></P></DIV>
+<DIV id=content>
+<UL>
+<DIV class=article>
+<LI><A href="../../../index.html" rel=bookmark>معرفی برترین خودروهای سوپرسدان جهان</A> 
+<DIV>
+<P>امروز به شما برترین <STRONG>خودروهای</STRONG> سوپرسدان حال حاضر دنیا را معرفی می‌کنیم <EM>که</EM> واقعا گزینه کردن برترین <EM>از</EM> بین انها سخت هست.&nbsp;چند سالی هست <EM>که</EM> امکانات اسپورت در بازار سدان های میان رده خاص دیده میشود، اما با این وجود این سدان ها در مقابل SUV های رقیب خود در بازار به نسبت دو به یک فروخته می‌شوند</P>
+<P>اما این بخش <EM>از</EM> بازار <B>ماشین</B> هنوز هم علاقه مندان خاص خود را دارد. فروش سالیانه این <B>ماشین</B> ها در حال حاضر در بازار ایالات امریکا، حدود 190 هزار دستگاه هست <EM>و</EM> رقبای زیادی را در کنار خود میبینند. در ادامه به بررسی سوپرسدان هایی میپردازیم <EM>که</EM> یک سطح پایین تر <EM>از</EM> برترین های این کلاس در بازار میباشند. با سواری این 5 <B>ماشین</B>، حس خوشایندی به شما دست میدهد.<BR><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540381 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/1319542472-parsnaz-com.jpg" width=550 height=336></P>
+<P>قبل <EM>از</EM> این <EM>که</EM> در مورد سدان های 4 سرنشین صحبت کنیم،ترجیح دادیم <EM>که</EM> ابتدا در مورد سدان های شش سیلندر توربوشارژ <EM>و</EM> سوپرشارژ در کلاس سدان های میان رده بحث کنیم. این خودروها به طور کلی اسپورت تر <EM>از</EM> SUV ها به شمار میروند <EM>و</EM> آپشن های لوکس زیادی در آنها به کار رفته هست. هر خودرویی <EM>که</EM> در این رقابت برنده شود، نشاندهنده این هست <EM>که</EM> چطور یک <B>ماشین</B> قادر هست در اساس های گوناگون فوق العاده عمل کند.</P>
+<P>فهرست نخست ما شامل 8 <B>ماشین</B> بود <EM>که</EM> لینکلن کانتنیننتال <EM>و</EM> جنسیس G80 نیز در این فهرست قرار داشتند <EM>که</EM> <B>ماشین</B> اخیر لینکلن به علت لوکس بودن بیش <EM>از</EM> حد <EM>و</EM> جنسیس به دلیل <B>موتور</B> 365 اسب بخاری توربوشارژ 6 سیلندرش <EM>از</EM> فهرست کنار گذاشته شدند. <EM>از</EM> 6 ماشین کاندید نهایی فقط تجربه تست 5 مورد <EM>از</EM> آنها را داشتیم</P>
+<P><EM>و</EM> در آخرین دقایق <EM>از</EM> مازراتی قیبلی برای شرکت در این تست دعوت به عمل آوردیم <EM>که</EM> با دقت به قیمت بالای آن، <EM>از</EM> دعوت آن ماشین نیز منصرف شدیم.یکی <EM>از</EM> این 5 ماشین مورد آزمایش، مرسدس E43 4matic هست <EM>که</EM> یکی از جدید ترین ماشین های حاضر در این رقابت به شمار می‌رود <EM>که</EM> از موتوری 396 اسب بخاری بهره گیری میکند.</P>
+<P>با دقت به قدرت کلاس E اخیر مرسدس، مدل E43 قدرتی بین مدلهای 4 سیلندر توربوشارژ 241 اسب بخاری تا مدلهای E300 هشت سیلندر 603 اسب بخاری در مدل E63 S دارد. قیمت پایه مدل E43 حدود 73325 دلار هست اما مدلی که ما آن را مورد آزمایش قرار دادیم با آپشن هایی که داشت</P>
+<P>قیمتی معادل 91175 دلار داشت که با حذف بعضی آپشن های اضافی مثل رنگ قرمز کاردینال، حالت متالیک طراحی داخلی <EM>و</EM> سیستم تهویه صندلی ها <EM>و</EM> سیستم صوتی <EM>و</EM> … که 7830 دلار قیمت داشتند به این رقم رسیده هست. هیچ یکی از این آپشن ها تاثیری بر کیفیت رانندگی <EM>و</EM> آزمایش ما نداشت.</P>
+<P>یکی دیگر از ماشین های تقریبا گرانقیمت حاضر در این رقابت آئودی A6 3T کواترو هست. این ماشین در دو تست قبلی که با دیگر ماشین ها داشته هست شکست نخورده <EM>و</EM> رتبه اول را کسب کرده هست. تغییرات کوچکی در مدل 2016 این ماشین اعمال شده هست که می‌توان به بکارگیری اپل کارپلی، سیستم وای فای داخلی، تغییر در سپر جلو <EM>و</EM> عقب اشاره کرد.</P>
+<P><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540382 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/499858308-parsnaz-com.jpg" width=550 height=336></P>
+<P>مدل 2017 این ماشین، با پکیجی رقابتی پا به میدان گذاشته هست؛ چرا که از سیستم تعلیق اسپورت و گشتاوری که نیروی خود را از محور عقب می‌گیرد و هفت اسب بخار قدرت اکثر نسبت به مدل S6 در <B>موتور</B> شش سیلندر خود« مجموعاً 340 اسب بخار» بهره میبرد و به طور کلی از نظر داخلی و خارجی بسیار متفاوت تر از مدل S6 طراحی شده هست.</P>
+<P>گرچه مدل S6 را نیز می توانستیم در این تست ارزیابی کنیم چرا که قیمتی زیر 80 هزار دلار داشت اما با دقت به <B>موتور</B> 8 سیلندر و قدرت <B>موتور</B> 450 اسب بخاری آن تصمیم گرفتیم تا از مدل A6 که شش سیلندر دارد، در تست بهره گیری کنیم.قیمت A6 حدود 72175 دلار برآورد شده هست.</P>
+<P>در این کلاس، هیچ تستی بدون حضور BMW سری 5 جذابیتی ندارد. BMW بار دیگر برای سال 2017 نسل هفتم سری 5 ماشین های خود را با نام G30 و تحت نام عمومی 540i روانه بازار کرده هست؛این مدل در واقع آخرین مدل از ماشین های شش سیلندر BMW محسوب می‌شود که از توربوی تکی با قدرت 335 اسب بخار بهره می‌برند.</P>
+<P>قیمت پایه مدل 540i در میان دیگر رقبا در این گروه کمترین به حساب می‌آید چرا که رقم خرید این ماشین 57445 دلار اعلام شده هست. اما با افزودن بعضی پکیج ها به آن، قیمتش به 82610 دلار نیز می‌رسد.با بازطراحی که بر روی جگوار XF در سال قبل انجام شد، این ماشین خود را در نخستین رقابت با دیگر رقبای هم رده خود میبیند.</P>
+<P>نسل دوم XF ها، شباهت بسیاری به مدلهای پیشین این سری دارد اما بدنه آلومینیومی محکم آن، این مدل را در میان دیگر رقبا متمایزتر می‌کند.گرچه با کمال تعجب باید گفت که این پوشش آلومینیومی به دربهای این ماشین بسط داده نشده هست و درهای این مدل همچنان از فلز معمولی ساخته شده اند.</P>
+<P><B>موتور</B> این ماشین از پیشرانه 3 لیتری سوپرشارژ شش سیلندر بهره میبرد که اصولا همان هشت سیلندر هست اما با دو پیستون کمتر!برای مبارزه بهتر در این رقابت، جگوار مدل XF S خود را روانه میدان نبرد کرده هست که مدلی دو محوره محسوب می‌شود. در تریم S شاهد افزایش قدرت <B>موتور</B> از 340 اسب بخار به 380 اسب بخار هستیم. قیمت پایه XF ی که ما آن را تست کردیم 77535 دلار بود.</P>
+<P>در نهایت، شاهد آخرین ماشین حاضر در این رقابت یعنی کادیلاک CTS V اسپورت هستیم. این ماشین یکی از برندگان رقابت های ده خودروی برتر سال و قدرتمندترین ماشین حاضر در این رقابت به شمار می‌رود چرا که قدرت موتور این ماشین، 420 اسب بخار با پیشرانه 3.6 لیتری و شش سیلندر هست. رانندگی با این ماشین بسیار تیز و چابک هست و راننده قدرت مانور بسیاری دارد.</P>
+<P>برای این که آپشن های این ماشین با دیگر خودروهای حاضر در رقابت برابری کند، از تریم اختصاصی این ماشین که 71790 دلار قیمت داشت در این رقابت بهره گیری شده هست. که با تایرهای مشکی جذاب و صندلی های سیاه کربنی شیک، قیمت نهایی این ماشین به 75885 دلار رسید.</P>
+<P>با تجهیز این ماشین ها به آپشن های مورد نیاز، به جاده ای در کالیفرنیا رفتیم تا آنها را در پیچ و خم های جاده های کوهستانی آنحا نیز امتحان کنیم. پس از چند روز تست و طی حدود 1000 مایل با این ماشین ها، نتایجی به دست آمد که در ادامه به آنها میپردازیم.</P>
+<P><SPAN><STRONG>جگوار XF S AWD مدل 2017</STRONG></SPAN></P>
+<P>اگر این مدل از جگوار تداعی کننده دژاوو هست، به دلیل آن هست که ظاهر اخیر XF بسیار شبیه ظاهر قدیمی XF هست.</P>
+<P><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540400 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/1515759283-parsnaz-com.jpg" width=550 height=336></P>
+<P>به طور غیرقابل انکاری، این جگوار بسیار بلند و کم عرض هست که لوکسی خاصی را به طراحی خارجی این ماشین بخشیده هست.همین ویژگی ها، این مدل از جگوار را در رتبه های بالای رده بندی طراحی خارجی قرار میدهد.همین اتفاق در بخش طراحی خارجی این ماشین نیز میوفتد.</P>
+<P>یک گیج 12.3 اینچی مجازی اخیر با صفحه لمسی 10.2 اینچی که بسیار سریعتر از مدلهای قبلی عمل میکند، در این ماشین تعبیه شده هست.اما با این حال باید گفت که اصول پایه معماری و طراحی مدلهای قبلی XF بر این مدل برتری دارد و به نظر می‌رسد این ماشین قدیمی تر از مدلهای پیشین XF هست.</P>
+<P>گرچه باید گفت این ماشین همچنان شور جوانی را در خود دارد. XF در پوسته خارجی خود تغییراتی ایجاد کرده هست و نوعی نشاط و شخصیت اخیر را به ماشین خود بخشیده هست. فرمان این ماشین، علی رغم بهره گیری از تایرهای چندفصل، تحت فشار نیز مفید کار می‌کند اما در تست ترمز در توقف از سرعت 70 مایل بر <B>ساعت</B> بدترین نمایش را در این گروه داشت</P>
+<P>اما مشکلی در حرکت در مسیر مستقیم نداشت. این مدل از جگوار نمایش خوبی در سواری و نظارت ماشین از خود نشان داد که حتی میتوان گفت از BMW نیز بهتر عمل کرد.</P>
+<P><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540401 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/1484111336-parsnaz-com.jpg" width=550 height=336></P>
+<P>شاسی این ماشین در قسمت جلو در وهله اول به نظر کمی سفت می آمد اما پس از چند دقیقه سواری با آن، با ماشین سازگار می شد.حتی با بهره گیری از لایت اویستر و جت بلک در فضای داخلی این ماشین، لین طراحی عمده پرزرق و برق و مرغوب به نظر نمیرسد. مواد به کار رفته در طراحی داخلی این ماشین انقدر مرغوبیت ندارند</P>
+<P>که برای این مدل نزدیک 80 هزار دلار بپردازیم. یک فوم پنهان در بادگیرهای کناری ماشین تعبیه شده که اگر با آگاهی قبلی از مکانش، آن را نبینید هرگز پی به وجود آن نمیبرید. ما در سواری با این ماشین هرگز احساس نکردیم که سوار بر یک ماشین سوپرشارژ 6 سیلندر هستیم. وقتی این ماشین را خاموش میکنیم</P>
+<P>شاهد تکان کوچکی هستیم و صدای بیرونی متعادلی حدود 74 دسیبل در اتاق آن شنیده می‌شود.موتور 6 سیلندر این مدل از جگوار مثل دیگر 6 سیلندرهای موجود در بازار غران نیست اما در عین حال هیچ شکایتی از قدرت آن نداریم چرا که قادر هست ظرف 5 ثانیه به سرعت 60 مایل بر <B>ساعت</B> برسد که با این رکورد تنها قادر به شکست دادن آئودی در این گروه هست.</P>
+<P><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540402 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/356194947-parsnaz-com.jpg" width=550 height=336></P>
+<P>جگوار با 6 امتیاز کمتر پشت سر BMW قرار میگیرد اما این دو ماشین تفاوت های زیادی با هم ندارند. به طور کلی می‌توان گفت از ترکیب این دو ماشین شاید بتوان یک ماشین اسپورت سدان برنده تولید.</P>
+<P><SPAN><STRONG>BMW 540i مدل 2017</STRONG></SPAN></P>
+<P><SPAN><STRONG>رده چهارم</STRONG></SPAN></P>
+<P>با تمامی این اوصاف، BMW همچنان یک شرکت پیشتاز در این کلاس محسوب میشود. اگر فردی به ما بگوید که یک موتور 12 سیلندر در این ماشین به کار گرفته شده هست، حرف غیر قابل باوری محسوب نمی‌شود.در این گروه، موتور 6 سیلندر داخلی مدل 540i را میتوان برترین در این گروه دانست</P>
+<P>چرا که روانی و عملکرد خاصی دارد که آن را با بقیه 6 سیلندرهای حاضر در این گروه متمایز می‌کند. تقریبا هیچ تفاوت محسوسی در لرزش این ماشین در هنگام توقف و یا با حرکت در دور موتور 6000 شاهد نبودیم. تا جایی که میتوان آن را با ماشین های بدون لرزش برقی مقایسه کرد</P>
+<P>چرا که از نظر صدای درون اتاق نیز این ماشین با 68 دسی بل در حداکثر سرعت، همان عملکردی را از خود نشان میدهد که در ماشین برقی تسلا مدل S شاهد هستیم.<BR><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540388 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/1940505039-parsnaz-com.jpg" width=550 height=336></P>
+<P>از نظر تئوری شاید بتوان گفت که ضعیف ترین ماشین در این گروه محسوب می‌شود اما با 8 دنده اتوماتیک و رکورد 4.7 ثانیه توانست مقام سوم را در میان ماشین های حاضر در این گروه در رسیدن به سرعت 60 مایل بر <B>ساعت</B> از خود به جای بگذارد و از لحاظ مصرف سوخت بهینه نیز توانست رتبه اول را با طی 22 مایل در هر گالن از آن خود کند.</P>
+<P>طراحی داخلی BMW طوری هست که هر فردی را متقاعد می‌کند که سوار بر یک ماشین 12 سیلندر شده هست. بسیار نرم و با صندلی هایی پوشیده از چرم ناپا که بخشی از پکیج لوکس 1600 دلاری صندلی ها نیز محسوب میشود.</P>
+<P><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540387 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/1554800145-parsnaz-com.jpg" width=550 height=336></P>
+<P>فاصله دو چرخ عقب و جلوی این ماشین، 117.1 اینچ هست که بلند ترین فاصله دو تایر در این گروه به حساب می‌آید و همین امر باعث شده تا فضای بسیار زیادی در قسمت سرنشینان عقب این ماشین به وجود آید که باعث جذب مشتریان زیادی به سمت این مدل شده هست. دور فرمان اسپورت به کار رفته در این ماشین تنها نشانه از اسپورت بودن این ماشین در فضای داخلی آن بود.</P>
+<P>بدون تردید بالاترین امتیاز لوک و شیک بودن را در این رقابت، BMW 540i می‌گیرد و این در حالی هست که این مدل در اساس های تنظیم شاسی و واکنش فرمان، به دیگر رقبا می‌بازد.حتی با دو پکیج اضافی برای سواری بهتر با این ماشین از جمله تایرهای 19 اینچ تابستانی که 0.4 اینچ نیز ارتفاع این ماشین را کم کرده هست</P>
+<P>و پکیج سواری پویا با حالت الکترومکانیکی که سطح ماشین را در پیچ ها متعادل نگه می دارد، اما عملکردی که باید از شاسی این ماشین می‌دیدیم را شاهد نبودیم و عملکرد شاسی آن پایینتر از انتظار ارزیابی شد.</P>
+<P><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540389 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/187228674-parsnaz-com.jpg" width=550 height=336></P>
+<P>در ابتدای حرکت با این ماشین، فرمان آن عملکرد بدی نداشت اما پس از شروع حرکت واکنش های چرخ فرمان کمتر شد که به نظر میرسد BMW در این اساس می بایست یک بازنگری اساسی داشته باشد. <BR>به طور کلی، زمانی که این ماشین شتاب میگیرد، دیگر رقبای این ماشین در این گروه، عملکرد روان تری داشتند.<BR><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540390 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/1210327989-parsnaz-com.jpg" width=550 height=336></P>
+<P>قسمتی از مشکل به این مورد بر می‌گردد که این ماشین در هنگام شتاب گرفتن، چرخهایش به طور کامل با زمین درگیر نمیشوند و در مقایسه با دیگر ماشین های حاضر در این گروه، یک نقطه ضعف محسوب می‌شود. به طور مثال، لاستیک های مورد بهره گیری در این مدل از BMW از تایرهای چندفصل مورد بهره گیری</P>
+<P>در جگوار XF عملکرد ضعیف تری دارند. آرون رابینسون در این اساس در مورد 540i می‌گوید: این ماشین یک زامبی هست؛ بدون کوچکترین وقفه ای به حرکت خود ادامه می‌دهد. اما در رانندگی با این ماشین لحظات خطرناک بیشتری را در مقایسه با دیگر ماشین های حاضر در این گروه تجربه می‌کنید و بعداً متوجه شدم که این مورد به واسطه فشار بیش از اندازه به تایرهای این ماشین هست.</P>
+<P>به کسانی که دنبال رولزرویس گروه میباشند، پیشنهاد می‌کنیم که به دنبال ماشین دیگری در این گروه نگردند اما برای خریدارانی که سدان های اسپورت را می پسندند، باید بگوییم که سدان های اسپورت بهتری از 540i نیز در این گروه وجود دارد.<BR><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540391 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/2005181483-parsnaz-com.jpg" width=550 height=336></P>
+<P><SPAN><STRONG>آئودی A6 3.0T competition مدل 2017</STRONG></SPAN></P>
+<P><SPAN><STRONG>رتبه سوم</STRONG></SPAN></P>
+<P>همانگونه که می‌دانید مدلهای پیشین این ماشین، یکی از ماشین های برتر سه سال قبل به شمار می رفت. A6 مدل 2017 کمی خاکستری تر از A6 نقره ای بود که ما سوار بر آن بودیم. قدرت موتور این مدل در مقایسه با مدل قبلی A6 که آن را تست کردیم، بین 30 تا 340 اسب بخار افزایش پیدا کرده هست.</P>
+<P>اما با وجود این افزایش قدرت،A6 همچنان رتبه دوم قدرتمندترین ماشین این گروه را در اختیار دارد و ضعیف ترین عملکرد را در ثبت رکورد رسیدن به سرعت 60 مایل بر <B>ساعت</B> را از خود بر جای گذاشت که 5.2 ثانیه بود.<BR><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540383 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/991465152-parsnaz-com.jpg" width=550 height=336></P>
+<P>آن چه همه ی از آئودی انتظار داشتند و به دلیل آن مدلهای گوناگون آئودی را دوست دارند در این ماشین نیز دیده میشود: یک ماشین بی سرو صدا که به دلیل موتور بی صدا و دقیقش دقت هیچ کس را جلب نمی‌کند.</P>
+<P>ارگونومی به کار رفته در این ماشین و راحتی سرنشینان در حد مطلوبی ارزیابی شد و چرخ فرمان نیز تا حدی سفت و محکم ارزیابی گردید. با بهره گیری از کنترلر MMI آئودی، قادر به انجام سریع بعضی امور سخت مثل هماهنگ کردن تلفن همراه با ماشین، وارد کردن مقصد برای بهره گیری از سیستم ناوبری ماشین خواهید بود.<BR><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540384 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/672552316-parsnaz-com.jpg" width=550 height=336></P>
+<P>اما از نظر طراحی داخلی این ماشین، میتوان گفت که هیچ فرقی با مدل 6 سال قبل خود ندارد و جایگاه مناسبی در این رقابت نیز کسب نمیکند.نقاط برجسته ای که بر روی پروژکتور این ماشین طراحی شده بودند، جلب دقت می‌کرد ولی به طور کلی میتوان گفت که طراحی داخلی آن راحتی خاصی برای سرنشینان به ارمغان می آورد.<BR><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540385 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/390007853-parsnaz-com.jpg" width=550 height=336></P>
+<P>فرمان سبک این ماشین، تلاش برای تغییر مسیرهای ناگهانی را راحت کرده هست. در قسمت اکیدپد، آئودی از یک پنل 0.93 گرمی نمونه با کادیلاک بهره گیری کرده هست که برترین مورد در میان دیگر رقبا به شمار میرود. خوشبختانه با افزودن پکیج مسابقه ای به این ماشین، شاهد تاثیر منفی بر روی سواری با آن نبودیم. به طور کلی می‌توان گفت آئودی در این ماشین تعادل خوبی بین لوکسی و اسپورتی ماشین برقرار کرده هست.</P>
+<P>در نهایت باید گفت که آئودی آن ماشینی که تحسین همگان را برانگیزد نبود اما ایراد خاصی نیز از آن نمی‌توان گرفت و می‌توان آن را در زمره مدلهای میدپک قرار داد.<BR><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540386 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/519382516-parsnaz-com.jpg" width=550 height=336></P>
+<P><SPAN><STRONG>کادیلاک CTS V-Sport مدل 2017</STRONG></SPAN></P>
+<P><SPAN><STRONG>رتبه دوم</STRONG></SPAN></P>
+<P>در مورد این ماشین میتوان گفت که نه تنها با وزن 4025 پوندی، سبک ترین ماشین گروه محسوب میشود بلکه نمرات بالایی نیز در قسمت شاسی و قسمت های سرگرمی داخلی ماشین از کارشناسان دریافت کرده هست. جوزف کاپربلا در وصف این ماشین می‌گوید، این ماشین تنها ماشین این گروه هست که می‌توانید به خوبی آن را نظارت نمایید.<BR><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540392 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/2071752887-parsnaz-com.jpg" width=550 height=336></P>
+<P>کاپربلا درست می‌گوید چرا که در مقایسه با دیگر ماشین های حاضر در این رقابت، کادیلاک <B>عکس</B> بهتری از در اختیار بودن هر 4 چرخ به راننده می داد.</P>
+<P>در حداکثر دور موتور این کادیلاک شش سیلندر شاهد بلندترین صدای موتور در میان رقبا با 84 دسیبل هستیم؛ این در حالی هست که در سرعت 70 مایل بر <B>ساعت</B> شاهد 66 دسیبل صدا در اتاق ماشین هستیم که باز هم رکورد بدی محسوب میشود و بالاترین صدا در میان دیگر رقبای حاضر در این گروه هست.<BR><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540394 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/250453146-parsnaz-com.jpg" width=550 height=336></P>
+<P>روحی که در این مدل کادیلاک وجود دارد، یادآور مدل لوتوس هست و کیفیت ساختی که در این ماشین می‌بینیم طوری هست که انگار در منزل خود نشسته ایم.</P>
+<P>نکته ای که در روز اول تست این ماشین دقت ما را به خود جلب کرد این بود که گیره نگهدارنده ستون سوم این ماشین به شکل عجیبی کشیده شده و به طور آویزان قرار دارد. در روز دوم، نیز شاهد این بودیم که در قسمت منتها الیه بالای درب راننده و در جایی که <B>جوش</B> درب قرار دارد، تماس کوچکی با قسمت درب عقب وجود دارد</P>
+<P>و در فضای داخلی ماشین نیز شاهد صدای خرخر کمی از درب جلو سمت راست این ماشین بودیم که در جگوار و مرسدس شاهد صدای بیشتری در این مورد بودیم.<BR><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540393 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/1777000854-parsnaz-com.jpg" width=550 height=336></P>
+<P>در مقایسه با دیگر رقبا میتوان گفت فضای داخلی سرنشینان عقب کادیلاک کمتر از بقیه هست و مورد دیگری که شاهد آن بودیم، این هست که سیستم سرگرمی موسوم به CUE در این ماشین از جذابیت کمتری در مقایسه با دیگر رقبا برخوردار بود. در قسمت مصرف سوخت بهینه شاهد عملکرد نامناسبی</P>
+<P>در این ماشین بودیم چرا که با طی مسافت 18 مایل در هر گالن حتی 4 واحد از BMW نیز ضعیفتر عمل کرده هست. اما شتاب و دیگر موارد قابل قبول این ماشین، حس خوبی از رانندگی را به فرد میدهد و تعداد زیادی از این ضعف ها را پوشش می‌دهد.با این وجود باید اذعان کرد که این ماشین کاملترین ماشین این گروه نیست اما بر طبق نظر هیئت کارشناسی از سواری با این کادیلاک حس لذتبخشی به فرد دست می‌دهد.<BR><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540395 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/23871921-parsnaz-com.jpg" width=550 height=336></P>
+<P><SPAN>مرسدس AMG E43 4Matic مدل 2017</SPAN></P>
+<P><SPAN>رتبه اول</SPAN></P>
+<P>این ماشین پر از آپشن های گوناگون هست، این ماشین گران ترین ماشین حاضر در این گروه بود به طوری که قیمت ماشین تستی که در اختیار ما قرار داده شد حدود 91175 دلار برآورد شد که با این پول می‌توان یک کادیلاک CTS-V با قدرت 640 اسب بخار خرید. در امتیازگیری، مرسدس امتیازاتی را برای قیمت بالایش از دست می‌دهد</P>
+<P>اما در تعداد زیادی از موارد از دیگر رقبا بهتر عمل کرده هست. ماشین تستی که ما با آن در جاده ها سواری کردیم از پکیج 7830 دلاری بهره گیری کردیم که تاثیری در عملکرد ذاتی این ماشین نبود.<BR><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540396 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/1261011529-parsnaz-com.jpg" width=550 height=336></P>
+<P>یکی از آپشن های استثنایی این ماشین، پکیج آکوستیک 1100 دلاری صوتی این ماشین بود که صدای سیستم صوتی این ماشین را به شکل شگفت انگیزی افزایش می داد. حدس می‌زنیم که صدای اتاق 63 دسیبل در سرعت 70 مایل بر <B>ساعت</B> این ماشین، نیز از همین پکیج آکوستیک بهره گیری می‌کند.</P>
+<P>در طی مسیرهای بین ایالتی هیچ صدای باد یا جاده ای را در داخل اتاق ندیدیم. در سرعت 100 مایل بر ساعت نیز این ماشین تقریبا بی صدا حرکت می‌کرد چرا که صدای داخل اتاق 71 دسیبل بود. از نظر ساختار شاسی و محکمی آن، مرسدس بعضی تغییرات را در خود ایجاد کرده که این ماشین را در کلاس خود یک سر و گردن بالاتر از بقیه قرار میدهد.</P>
+<P>سکوت در این ماشین حرف اول را می‌زند؛ مرسدس برنده بی چون و چرای این رقابت محسوب میشود. با دقت به بهره گیری از دو محور در این ماشین، شاهد رکورد 4.2 ثانیه برای رسیدن به سرعت 60 مایل بر ساعت در این ماشین بودیم که برترین رکورد در این گروه محسوب میشود.<BR><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540397 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/810600183-parsnaz-com.jpg" width=550 height=336></P>
+<P>به نظر میرسد کمپانی AMG در تولید ماشین های اسپورت از فرمان های سنگین بهره گیری میکند؛ در مدل E43 نیز همین رویه دیدن شد و حتی به بهره گیری از فشار و قدرت بیشتری برای هدایت این ماشین نیاز هست گرچه واکنش فرمان نسبت به تایرها مناسب ارزیابی شد. در قسمت چرخها نیز از تایرهای 19 اینچ استاندارد</P>
+<P>در این ماشین بهره گیری شده هست و تایرهای 20 اینچی نیز به طور آپشن قرار داده شده هست. اسکیدپد 0.92 گرمی به کار رفته در این ماشین، در پشت سر ماشین های آئودی و کادیلاک قرار میگیرد.<BR><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540398 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/613645831-parsnaz-com.jpg" width=550 height=336></P>
+<P>&nbsp;به گزارش پارس ناز&nbsp;جایگاه صندلی E43 بسیار راحت بود به طوری که تمام رقبا را در این گروه شکست می‌دهد چرا که در پیچ ها نیز سرنشینان اذیت نمیشوند. این ماشین نیز مثل رقبای دیگرش در این گروه از گیج نظارت دیجیتالی در جلوی راننده بهره گیری میکنند. از نظر صفحه نمایش و گرافیک واضح ترین و برترین صفحه را در میان دیگر رقبا در این ماشین دیدیم.<BR><IMG title="معرفی برترین خودروهای سوپرسدان جهان" class="size-full wp-image-540399 aligncenter" alt="معرفی برترین خودروهای سوپرسدان جهان" src="http://www.parsnaz.com/images/2017/07/585780824-parsnaz-com.jpg" width=550 height=336></P>
+<P>این ماشین از نظر طراحی لوکس و اسپورت نیز فاتح مطلق این رقابت هست. به طور کلی سواری با این ماشین نرم و روان نیز بسیار لذتبخش هست و از ان بعنوان یک سدان لوکس قرن بیست و یکمی یاد می‌شود که گرچه در بعضی از موارد هنوز از آپشن های قدیمی بهره گیری میکند.</P></DIV></LI></DIV></UL></DIV></ACRONYM></p>
+            <p>&nbsp;&nbsp;&nbsp;            </p><br>
+
+
+            <ul class="clearfix">
+                
+                            </ul>
+
+        </div>
+
+        <div class="PostCom">
+            <ul>
+                <li style="float:left;"><a target="_self" href="../../1.html#commentlist" class="comment-link">نظرات(<script>setCommentCnt(1)</script>)</a>&nbsp;</li>
+                <li class="noBg" style="float: left; margin-left: 10px; margin-top: -6px;"><script>mihanblogPostLike('1','like')</script></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="clearer"></div>
+
+<!-- Comment -->
+
+
+<div>
+
+    <style>
+
+            /*** COMMENT BODY***/
+        .comment_body{
+            background: #F3E4EB;
+            margin:10px;
+            border-radius: 5px;
+            border-right:5px solid #e1c6d2;
+            overflow:hidden
+        }
+
+
+
+        .comment .comment_reply {
+            background: #e8d2dc;
+            border-right: 5px solid #d4b6c4;
+            border-radius: 5px;
+            font-size: 12px;
+            width: 350px;
+            margin-top:10px;
+            color:black;
+            overflow:hidden
+        }
+
+
+        .comment .name {
+            font-weight: 600;
+            color: #4E3E09;
+            padding-right: 5px;
+            text-align: right;
+            line-height: 26px;
+            float: right;
+        }
+
+
+        .comment .date {
+            font-size: 10px;
+            padding: 5px;
+            color: #7E7E7E;
+            float: left;
+        }
+
+
+        .comment .comemnt_web {
+            padding: 5px 0 5px 15px; color: #999; direction: ltr; text-align: left;
+
+        }
+
+
+        .comment .comemnt_web a {
+            color: #554c3d;
+            text-decoration: underline;
+        }
+
+
+
+        .comment_det{
+            border-bottom:1px solid #ebcad9;
+            padding:4px;
+
+        }
+
+
+        .comment .name,.date,.comemnt_text,.comment_reply{
+            margin-right:3px;
+            padding-right:3px;
+
+        }
+
+
+
+
+        .comment .name,.date,.comemnt_text,.comment_reply{
+            margin-right:3px;
+            padding-right:3px;
+
+        }
+
+            /**** COMMENT FORM ****/
+
+        .comment_form {
+            background: none repeat scroll 0 0 #d9a4bd;
+            border-radius: 5px 5px 5px 5px;
+            border-right: 5px solid #d482a8;
+            direction: rtl;
+            margin: 10px;
+            padding: 20px;
+        }
+
+
+
+        .comment_form label {
+            width: 100px;
+            display: block;
+            float: right;
+            text-align: left;
+            font-size: 11px;
+            color: #555;
+            padding-left: 10px;
+        }
+
+
+        .comment_form .comment_form_row {
+            margin: 3px 0;
+        }
+
+
+        #imageCodeWrapper .imageCode_input #imgstr {
+            font-size: 25px;
+            height: 34px;
+            width: 70px;
+        }
+
+
+        .comment_form input.btn{
+            margin:2px 11px;
+            background-color:#f3e4eb;
+            -x-system-font:none;
+            color:#005773;
+            cursor:pointer;
+            float:none;
+            font-family:Tahoma;
+            font-size:12px;
+            font-size-adjust:none;
+            font-stretch:normal;
+            font-style:normal;
+            font-variant:normal;
+            font-weight:normal;
+            height:24px;
+            line-height:normal;
+            text-align:center;
+            padding:0 3px;
+        }
+        .comment_form .comment_form_textarea, .comment_form .comment_form_textbox {
+            border: 1px solid #C5C5C5;
+        }
+
+
+        .comment_form_textbox {
+            width:240px;
+
+        }
+        .comment_form_textarea{
+            width:240px;
+        }
+
+    </style>
+
+    </div>
+<!-- End Comment-->
+
+
+
+<!-- Start Nav -->
+<!-- End Nav -->
+
+
+
+
+</div>
+<!-- End SC -->
+
+<div class="SR">
+
+
+
+    <div class="SRL">
+
+        
+
+
+
+                    <h3>آرشیو</h3>
+            <ul>
+                                    <li>
+                        <a href="6.html"> شهریور 1396</a>
+                    </li>
+                                    <li>
+                        <a href="5.html"> مرداد 1396</a>
+                    </li>
+                                    <li>
+                        <a href="4.html"> تیر 1396</a>
+                    </li>
+                                <li>
+                    <a href="../../archive.html"><b>همه آرشیوها</b></a>
+                </li>
+            </ul>
+            <br />
+        
+
+
+        
+        
+
+    </div>
+
+    <div class="SRR">
+
+        <h3>درباره وبلاگ</h3>
+        <div class="about_box clearfix">
+            <div id="user_logo"></div>
+            <div id="about_text"></div>
+            <a href="../../author/1697916.html"><b>milad s</b></a>
+        </div>
+        <br />
+
+                    <h3>آخرین پستها</h3>
+            <ul>
+                                    <li><a  href="../../5.html">دانلود آهنگ جدید رضا آبزین بنام ای یار</a>&nbsp;&nbsp;چهارشنبه 15 شهریور 1396</li>
+                                    <li><a  href="../../4.html">دانلود آهنگ مثل کوه از ماکان باند</a>&nbsp;&nbsp;پنجشنبه 2 شهریور 1396</li>
+                                    <li><a  href="../../3.html">متن آهنگ تو که حساسی از بابک جهانبخش</a>&nbsp;&nbsp;پنجشنبه 19 مرداد 1396</li>
+                                    <li><a  href="../../2.html">دانلود آهنگ دل دیوونه از یوسف زمانی</a>&nbsp;&nbsp;شنبه 17 تیر 1396</li>
+                                    <li><a  href="../../1.html">معرفی برترین خودروهای سوپرسدان جهان</a>&nbsp;&nbsp;شنبه 17 تیر 1396</li>
+                                <b><li><a  href="../../list.html">لیست آخرین پستها</a></li></b>
+            </ul>
+            <br />
+        
+
+                    <h3>نویسندگان</h3>
+            <ul>
+                                    <li>
+                        <a href="../../author/1697916.html"></a><a href="../../author/1697916.html">&nbsp;milad s (5)</a>
+                    </li>
+                            </ul>
+            <br/>
+        
+        
+        
+		
+        <div  align="center" class="clearfix"></div>
+
+        <div align="center" class="mihan_logo"></div>
+
+
+    </div>
+
+</div>
+
+
+<!-- Container -->
+</div></div>
+
+<div class="EBG"><div class="Extra">
+
+    <!-- Start Recent Comments -->
+            <div class="Cols clearfix cloud">
+            <h3>اَبر برچسبها</h3>
+                            <a href="../../tag/باند.html" style="font-size:1em">باند&nbsp;</a>
+                            <a href="../../tag/ماکان.html" style="font-size:1em">ماکان&nbsp;</a>
+                            <a href="../../tag/بنام.html" style="font-size:1em">بنام&nbsp;</a>
+                            <a href="../../tag/جدید.html" style="font-size:1em">جدید&nbsp;</a>
+                            <a href="../../tag/آهنگ.html" style="font-size:2em">آهنگ&nbsp;</a>
+                            <a href="../../tag/از.html" style="font-size:1em">از&nbsp;</a>
+                            <a href="../../tag/آبزین.html" style="font-size:1em">آبزین&nbsp;</a>
+                            <a href="../../tag/رضا.html" style="font-size:1em">رضا&nbsp;</a>
+                            <a href="../../tag/ای.html" style="font-size:1em">ای&nbsp;</a>
+                            <a href="../../tag/دانلود.html" style="font-size:2em">دانلود&nbsp;</a>
+                    </div>
+        <!-- End Recent Comments -->
+
+    <!-- Start Latest Entries -->
+    <div class="Cols">
+                    <h3>آمار وبلاگ</h3>	<!--#CC3366-->
+            <div class="stat clearfix">
+                کل بازدید : <span><script>getStatVar('total_view');</script></span><br>
+                بازدید امروز :<span><script>getStatVar('today_view');</script></span><br>
+                بازدید دیروز : <span><script>getStatVar('yesterday_view');</script></span><br>
+                بازدید این ماه : <span><script>getStatVar('this_month_view');</script></span><br>
+                بازدید ماه قبل : <span><script>getStatVar('last_month_view');</script></span><br>
+                تعداد نویسندگان : <span><script>getStatVar('total_author');</script></span><br>
+                تعداد کل پست ها : <span><script>getStatVar('total_post');</script></span><br>
+                آخرین بازدید : <span><script>getStatVar('last_view_date');</script></span><br>
+                آخرین بروز رسانی : <span><script>getStatVar('modify_date');</script></span><br>
+            </div><br/>
+            </div>
+    <!-- End Latest Entries -->
+
+</div></div>
+
+<div class="FBG">
+
+    <div class="Footer">
+        <p><strong>POWERED BY <a href="../../../../www.mihanblog.com/index.html"><font color="#FF0000" size="2px">M</font>IHAN<font color="#FF0000" size="2px">B</font>LOG.COM</a></strong> <br />
+            Theme is created by: www.DesignDisease.com</p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'zendegiyedikhtarbanamak.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

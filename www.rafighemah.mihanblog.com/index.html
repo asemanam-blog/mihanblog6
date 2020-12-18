@@ -1,0 +1,1494 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://rafighemah.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*995624*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[106]='1';commentCnt[109]='3';commentCnt[110]='2';commentCnt[111]='5';commentCnt[112]='6';commentCnt[113]='19';commentCnt[114]='18';commentCnt[115]='13';commentCnt[116]='6';commentCnt[117]='7';commentCnt[118]='3';commentCnt[119]='3';commentCnt[120]='4';commentCnt[121]='5';commentCnt[123]='15';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[109]='0';
+mihanblogDisLikeArrCnt[109]='0';
+mihanblogLikeArrCnt[110]='0';
+mihanblogDisLikeArrCnt[110]='0';
+mihanblogLikeArrCnt[111]='0';
+mihanblogDisLikeArrCnt[111]='0';
+mihanblogLikeArrCnt[113]='0';
+mihanblogDisLikeArrCnt[113]='0';
+mihanblogLikeArrCnt[115]='0';
+mihanblogDisLikeArrCnt[115]='0';
+mihanblogLikeArrCnt[116]='0';
+mihanblogDisLikeArrCnt[116]='0';
+mihanblogLikeArrCnt[117]='0';
+mihanblogDisLikeArrCnt[117]='0';
+mihanblogLikeArrCnt[119]='0';
+mihanblogDisLikeArrCnt[119]='0';
+mihanblogLikeArrCnt[120]='0';
+mihanblogDisLikeArrCnt[120]='0';
+mihanblogLikeArrCnt[121]='0';
+mihanblogDisLikeArrCnt[121]='0';
+mihanblogLikeArrCnt[123]='0';
+mihanblogDisLikeArrCnt[123]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://rafighemah.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://rafighemah.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','98');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','چهارشنبه 6 شهریور 1392');
+	
+	setStatVar('today_view','0');
+	setStatVar('yesterday_view','1');
+	
+	setStatVar('this_month_view','94');
+	setStatVar('last_month_view','65');
+
+	setStatVar('total_view','31095');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (05:41)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://rafighemah.mihanblog.com/statupdate/?data[refereruri]=http://facebag.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607830021&data[hash]=29927bbe88147820cbe0c362f9a39ae3&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://rafighemah.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="../rafighemah.mihanblog.com/'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://rafighemah.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://rafighemah.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://rafighemah.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://rafighemah.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://rafighemah.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://rafighemah.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://rafighemah.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://rafighemah.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://rafighemah.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://rafighemah.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://rafighemah.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://rafighemah.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://rafighemah.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://rafighemah.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://rafighemah.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<title>رفیق ماه</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="designer" content="Payamblog">
+<meta name="author" content="a. poorabdollah">
+<meta name="language" content="Farsi">
+<meta name="designerUrl" content="http://www.payamblog.com/">
+<meta http-equiv="expires" content="never">
+<meta name="generator" content="payamblog.com">
+<script src="http://payamblog.com/blog.js" language="javascript"></script>
+<meta name="description" content="رفیق ماه - دلیل آبی باران،رفیق روشن ماه!<br />
+اگر اشاره كنی من به یك نظر سبزم<br />
+ - رفیق ماه">
+<meta name="keywords" content="رفیق ماه,rafighemah, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs, payamblog">
+<link rel="alternate" type="application/rss+xml" title="رفیق ماه" href="http://rafighemah.mihanblog.com/post/rss/">
+<style>
+A { TEXT-DECORATION: none; }
+
+#hd {width:650px; height:100px; text-align:center;font-size:30pt;color:#d8ba8b;font-family:Times New Roman;font-weight: bold;padding-top:60px;padding-left:60px;} 
+#ds {width:650px; text-align:center;font-size:9pt;color:#ffffff;font-family:Tahoma;font-weight: bold;padding-left:60px;} 
+
+.top{background:url('http://payamblog.com/22/p4.jpg') no-repeat right;height:337px; width:1003px;}
+
+body{text-align:right;font-family:Tahoma;font-size:9pt;margin:0;}
+
+.menu{background:url('http://payamblog.com/22/m.jpg') no-repeat center top;height:80px;text-align:right;vertical-align:top;padding-right:35px;
+ width:210px; padding-top:15px;font-size:10pt;font-weight: bold;color:#c7a073;}
+ 
+.smenu{direction:rtl;font-size:9pt;text-align:center;color:#ffffff;padding-bottom: 6px;}
+.smenu a{color:#ffffff;text-decoration: none;}
+.smenu a:hover{text-decoration:underline;}
+
+.post {color:#f3d2ab;padding-left: 10px; padding-right: 10px; padding-top: 8px;text-align:right;font-size:10pt;direction:rtl;}
+.post a{color:#ffffff;text-decoration: none;}
+.date a{color:#ffffff;text-decoration: none;}
+</style>
+</head>
+
+<body bgcolor="#000000" >
+
+<div align="center">
+	<table border="0" width="1003" cellspacing="0" cellpadding="0">
+		<tr>
+			<td class="top" colspan="2" valign="top">
+			<div id="hd">رفیق ماه</div><br><div id="ds">دلیل آبی باران،رفیق روشن ماه!<br />
+اگر اشاره كنی من به یك نظر سبزم<br />
+</div>
+			</td>
+		</tr>
+		<tr>
+			<td width="783" valign="top" >
+			<div align="center">
+<br><br>
+<div align="center">		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+						<table border="0" width="90%" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td height="35" valign="top" style="padding-right: 10px">
+						<p align="right"><b>
+						<font color="#ffffff" face="Times New Roman" style="font-size: 16pt">
+						<a href="http://rafighemah.mihanblog.com/post/123"><font color="#ffffff">
+						کیست در من..</font></a></b></td>
+					</tr>
+					<tr>
+						<td bgcolor="#7e5f3b" valign="top" height="1"></td>
+					</tr>
+					<tr>
+						<td class="post" width="55%">
+						<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><P>چیزی در من می دود،.</P>
+<P>بالا می رود</P>
+<P>پایین می آید</P>
+<P>که نمی دانم چیست</P>
+<P>انگشتان سردش را در گوشهای بی هوشم فرو می کند</P>
+<P>بر گونه های نمناکم ناخن می کشد</P>
+<P>بر گلویم دندان می گذارد</P>
+<P>گاه که در خصمِ فریاد و مصلحت در می مانم</P>
+<P>بر من فاتح می شود</P>
+<P>و سکوت را چاشنی مزه ی خوراکِ عقلم می گردانَد</P>
+<P>.</P>
+<P>.</P>
+<P>می دانید:</P>
+<P>بر گیسوان عصیان زده و آشفته ی دلِ من</P>
+<P>ابری ولگرد</P>
+<P>هر شب می بارِد</P>
+<P>وروزها</P>
+<P>نسیمی سرخ</P>
+<P>ضربان ِچشمهای مفلوج مرا</P>
+<P>در هزار ضرب میکند</P>
+<P>جمله هایم همه خیس می شوند</P>
+<P>بوی این پا و آن پا کردن ِ زبانم</P>
+<P>همه جارا پر می کند</P>
+<P>دست انگور ذهنم</P>
+<P>رو می شود</P>
+<P>اشتیاق را یک باره سر می کشم</P>
+<P>وچه تلخ است و گس</P>
+<P>مست می شوم</P>
+<P>مست می شوم</P>
+<P>در درز جاده گم می شوم</P>
+<P>جاده ای رو به دوزخ ،</P>
+<P>که فرشتگانش همه شکل منند</P>
+<P>و وحشتی غریب در من می ماسد</P>
+<P>بهار کجاست ؟</P>
+<P>تا اوراق ترانه های تلخ مرا بسوزاند</P><br><br></td>
+					</tr>
+					<tr>
+						<td style="padding-left: 20px; padding-bottom: 2px" dir="rtl" height="45">
+						<div align="left">
+						<table border="0" cellspacing="0" cellpadding="0" bgcolor="#C7A073">
+								<tr>
+									<td class="date" style="padding-left: 5px; padding-right: 5px; padding-top: 1px; padding-bottom: 3px">
+						<p align="left">
+						<font  style="font-size: 8pt">چهارشنبه 6 شهریور 1392 | </font><font style="font-size: 9pt"> 
+						
+	      <a target="_self" href="javascript:newComment(123)" >نظرات (<script>setCommentCnt(123)</script>)</a>
+        
+</font></td>
+								</tr>
+							</table></div>
+						</td>
+					</tr>
+					<tr>
+						<td height="50" > </td>
+					</tr>
+				</table>				<table border="0" width="90%" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td height="35" valign="top" style="padding-right: 10px">
+						<p align="right"><b>
+						<font color="#ffffff" face="Times New Roman" style="font-size: 16pt">
+						<a href="http://rafighemah.mihanblog.com/post/121"><font color="#ffffff">
+						رو به پایان..</font></a></b></td>
+					</tr>
+					<tr>
+						<td bgcolor="#7e5f3b" valign="top" height="1"></td>
+					</tr>
+					<tr>
+						<td class="post" width="55%">
+						<P align=justify>من در میان چهار زندان سینه ام چهار مجنون رمیده گنجانده ام. مجنون اندوه، مجنون عشق، مجنون طغیان و آخرین مجنون؛ مجنون رمیده و محنت کشیده ی آزادی. هیچ یک نه توان رفتن دارند و نه درک ماندن. مجنون آزادی برای خودش ریسمانی می بافد تا دستانش را ببندد به تخته پاره های غوطه ور. مجنون اندوه،میوه ممنوعه عشق را بلعیده و مجنون عشق محنت زده ،بی نشانی از معبود، &nbsp;هر شب سر سودایی اش را بر زمین سرد می گذارد. آخ طغیان من...طغیان من. تنها زندانی درونم که با نوایم همساز است. همیشه گریخته ام با هزار دلیل سنجیده ...همیشه. و هر لحظه تمنا کرده ام که ای کاش می شد، می توانستم جایی آرام بگیرم. کلید را بردارم و مجانین ام را رها کنم. درون سینه ام آشوب است و لحظه&nbsp;رهایی را انتظار می کشد. هیچ لحظه ای را این چنین بی صبرانه انتظار نکشیده بودم. اندوه نیست درونم، درد است، دردی خالص از جنسی نامعلوم. هیچ وقت این چنین خالی از مقاومت نبودم که اکنون. هیچ وقت این چنین تسلیم نبوده ام. ای کاش شانزده ساله بودم. ای کاش می توانستم بترسم و باز امیدوار باشم...تلخی درون من صدای بی قراری است. خرسندی ام جایی میان پیاله شراب آرمیده است...ای کاش ناپیدا شوم...ناپیدا.</P>
+<P align=justify>ذهن عریانم ،برهنگی بی شرم مریم را ماند،در پیشگاه شرم امیز خدا..ذهن عریان من،رویش مقدس جنون، درد درکش از تنم بگذار خدایی کنم...</P>
+<P align=justify>از اینجا به<SPAN style="TEXT-ALIGN: justify">&nbsp;به آن طرف،همه ی توانم تحلیل می رود. نه امیدوارم و نه توان &nbsp;آن دارم که نا امید باشم. کتاب هایم را دور خودم می چینم و دوباره حس می کنم شده ام همان دختر 16 ساله ای که خودش را میان کتاب ها و خیالاتش پنهان می کند چون می ترسد که دیده شود. ترس از درد کشیدن از خود درد سهمگین تر است. اینکه هر لحظه انتظار بکشی کسی در جایی به کمین نشسته تا لحظه های گذرای آرامشت را برباید. دختر 16 ساله ای شده ام با قلبی شکسته و چهره ای تکیده که دیگر نمی خواهد آغازگر هیچ راهی باشد. می خواهد همین جا لابلای همین دفتر و همین کتاب ها خود را مدفون کند. نوای موسیقی در فضای خانه پخش می شود. لالایی برامس، &nbsp;اپوس شماره چهار. " بخواب دخترک ترسان، شب از خستگی اش درون دل رمیده ی تو آرام می گیرد...ببین که تو از شب تاریک تر شده ای...بخواب دخترک ترسان".بخواب..</SPAN></P>
+<P align=justify><SPAN style="TEXT-ALIGN: justify"></SPAN>&nbsp;</P><br><br></td>
+					</tr>
+					<tr>
+						<td style="padding-left: 20px; padding-bottom: 2px" dir="rtl" height="45">
+						<div align="left">
+						<table border="0" cellspacing="0" cellpadding="0" bgcolor="#C7A073">
+								<tr>
+									<td class="date" style="padding-left: 5px; padding-right: 5px; padding-top: 1px; padding-bottom: 3px">
+						<p align="left">
+						<font  style="font-size: 8pt">شنبه 15 تیر 1392 | </font><font style="font-size: 9pt"> 
+						
+	      <a target="_self" href="javascript:newComment(121)" >نظرات (<script>setCommentCnt(121)</script>)</a>
+        
+</font></td>
+								</tr>
+							</table></div>
+						</td>
+					</tr>
+					<tr>
+						<td height="50" > </td>
+					</tr>
+				</table>				<table border="0" width="90%" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td height="35" valign="top" style="padding-right: 10px">
+						<p align="right"><b>
+						<font color="#ffffff" face="Times New Roman" style="font-size: 16pt">
+						<a href="http://rafighemah.mihanblog.com/post/120"><font color="#ffffff">
+						صدا...</font></a></b></td>
+					</tr>
+					<tr>
+						<td bgcolor="#7e5f3b" valign="top" height="1"></td>
+					</tr>
+					<tr>
+						<td class="post" width="55%">
+						<p>
+
+صدا...</p><p>صدا...</p><p>از هر سو صدا...</p><p>من صدای سکوت میخواهم...لطفا یک فنجان ملودی سکوت بدهید ،میخواهم سر بکشم...</p><p>تو چه میدانی از من؟خرده ای از احساساتم؟..چند پاره از عقلانیتم؟..تکه ای از مهربانی ام؟..و نقابی که به صورت زده ام؟من..چند روزی است که از خودم رفته ام..</p><p>حرف هایمان از دهان افتاده..به سان چایی سرد در شامگاه زمستان..تمام لحظه های زندگی را هزاران هزار بار نشخوار میکنیم..و این جهان است ..این زندگی است..این ماتم است که همچون تردی گلبرگ خشک شده ی لای کتاب تازه مانده است و مارا میخورد..قسم به اب و ابر وقسم به خواب و برف..قسم به طعم گس خرمالوی سال پیش..ما زاده ی مادری به نام دردیم..در دنیایی از ریشه ی پستی..و در جهنمی که مال دنیای دیگری است..تمام حضورمان به اسارت بهت زدگی درد رفته..و قدم هایمان از سر ناچاری حرام میشوند..ما موجوداتی در مانده ایم که ادم برفی ها اغوششان را برایمان باز گذاشته اند..</p><p>کسی به فکر غم ها نیست..کسی به فکر درد ها نیست..کسی نمیخواهد باور کند که مهربانی دارد میمیرد..که ذهن همدلی دارد ارام ارام از خاطرات سبز تهی میگردد..و حس لبخند انگار چیزی مجردست که در انزوای چهره هایمان دارد میپوسد..قلب هایمان تهاست..قلب هایمان در انتظار یک نوازش یک دست ناشناس خمیازه میکشد..و حوض چشم هایمان خالی است و ستاره های کوچک دلتنگی از ارتفاع درختان به خاک می افتند..و از میان پنجره های پریده رنگ دوست داشتن شب ها صدای سرفه می اید..من از زمانی که انسانیت خودش را گم کند میترسم..من از تصور بیهودگی این همه دست و از تجسم بیگانگی این همه صورت میترسم..من مثل دانش اموزی که درس هندسه اش را دیوانه وار دوست دارد تنها هستم..وفکر میکنم که لبخند را میشود به بیمارستان برد..</p><p>من فکر میکنم..فکر میکنم..و مهربانی نفس نفس میزند..لبخند مات میشود ..من از خودم سر میروم..</p><br><br></td>
+					</tr>
+					<tr>
+						<td style="padding-left: 20px; padding-bottom: 2px" dir="rtl" height="45">
+						<div align="left">
+						<table border="0" cellspacing="0" cellpadding="0" bgcolor="#C7A073">
+								<tr>
+									<td class="date" style="padding-left: 5px; padding-right: 5px; padding-top: 1px; padding-bottom: 3px">
+						<p align="left">
+						<font  style="font-size: 8pt">پنجشنبه 30 خرداد 1392 | </font><font style="font-size: 9pt"> 
+						
+	      <a target="_self" href="javascript:newComment(120)" >نظرات (<script>setCommentCnt(120)</script>)</a>
+        
+</font></td>
+								</tr>
+							</table></div>
+						</td>
+					</tr>
+					<tr>
+						<td height="50" > </td>
+					</tr>
+				</table>				<table border="0" width="90%" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td height="35" valign="top" style="padding-right: 10px">
+						<p align="right"><b>
+						<font color="#ffffff" face="Times New Roman" style="font-size: 16pt">
+						<a href="http://rafighemah.mihanblog.com/post/119"><font color="#ffffff">
+						برای تمنایی که خسته شده است..</font></a></b></td>
+					</tr>
+					<tr>
+						<td bgcolor="#7e5f3b" valign="top" height="1"></td>
+					</tr>
+					<tr>
+						<td class="post" width="55%">
+						
+<p align="center">
+
+
+همه ی زندگی حکایت دیواری است که هر روز بلند تر میشود..تا چشم باز میکنی میبینی انقدر با خودت فاصله </p><p align="center">داری که مجبوری به چیزی که هستی عادت کنی به&nbsp;انزوای خودت..آی زندگی &nbsp;سطر های تو در من جاری است،</p><p align="center">میان کلماتت واژه ای درد را به دوش میکشد..لغتی غم را قدم میزند..ومن مثل هر روز پنجره را باز میکنم ،کلماتت</p><p align="center">را میپوشم و عریانی را فریاد میزنم..بعضی روزهایت به خمیازه میمانند..به بلند شدن از اغوش ملافه ای سپید و</p><p align="center">خالی اتاق را دید زدن و خمیازه ای کشیدن و دوباره در اغوش رختخواب خواب بازی کردن..بعضی روزهایت حتی اگر</p><p align="center">بیدار هم شوی باز خالی اتاق خوابند..کلمه ها خوابند..کتاب ها خوابند،حتی ان شاخه ی پیچک لجباز کنار پنجره هم </p><p align="center">خوابست..امروز که از خواب بلند شدم خالی اتاق سقف نداشت..آسمان شعری از&nbsp;<strong><font size="1">بودلر</font></strong> بود: «آن زمان که باران</p><p align="center">&nbsp;رشته‌های بلندش را سرازیر می‌کند و صورت میله‌های زندانی سترگ را به خود می‌گیرد». تنهایی عقربه‌هایش را در</p><p align="center">&nbsp;اتاق می‌گرداند و خمیازه‌های مرا تیک می‌زد...<span lang="FA">تو پنجره شده بودی و نگاهم را نگاه می‌کردی..</span><span lang="FA">&nbsp;لبخندت سی و دو </span></p><p align="center"><span lang="FA">حرف داشت. من از تعبیر چشم‌هایت گریختم. امروز کوچه‌ها‌ در خمیازه‌های من به بن‌بست می‌رسند </span><span lang="FA">و پنجره‌ها</span></p><p align="center"><span lang="FA">&nbsp;تنها در خواب‌های دور ورق می‌خورند..با بزنیم ..تا میتوانیم بزنیم خواب را بزنیم. راه را بزنیم. درد را بزنیم..این واژه های </span></p><p align="center"><span lang="FA">سرکش را بزنیم..زندگی را بزنیم ..ان دخترک سر به هوای دیروز را بزنیم..ان پسرک مغرور را بزنیم..بیا من را بزنیم </span></p><p align="center"><span lang="FA">تورا بزنیم..و بعد من،می‌نویسمت. کلمه‌ها مهم نیستند. همه را به جان هم خواهم انداخت. مرتکبت می‌شوم.</span><span lang="FA">&nbsp;دست</span></p><p align="center"><span lang="FA">&nbsp;م</span><span lang="FA">ی‌برم </span><span lang="FA">در تو. در هم می‌ریزمت. خودم را از تو خلق می‌کنم. تو خواهم شد. تو خواهم بود...آی زندگی :تو ادم نمیشوی..</span></p><p align="center"><span lang="FA">احساس میکنم اشتباه بوده ام اشتباه شده ام...پسم بدهید به خوابی که بیدارم کرده ..به بیداری که مرا خواب میکند..</span></p><p align="center"><span lang="FA"></span></p><p align="center"><span lang="FA"></span>&nbsp;</p>
+
+<br><br></td>
+					</tr>
+					<tr>
+						<td style="padding-left: 20px; padding-bottom: 2px" dir="rtl" height="45">
+						<div align="left">
+						<table border="0" cellspacing="0" cellpadding="0" bgcolor="#C7A073">
+								<tr>
+									<td class="date" style="padding-left: 5px; padding-right: 5px; padding-top: 1px; padding-bottom: 3px">
+						<p align="left">
+						<font  style="font-size: 8pt">جمعه 24 خرداد 1392 | </font><font style="font-size: 9pt"> 
+						
+	      <a target="_self" href="javascript:newComment(119)" >نظرات (<script>setCommentCnt(119)</script>)</a>
+        
+</font></td>
+								</tr>
+							</table></div>
+						</td>
+					</tr>
+					<tr>
+						<td height="50" > </td>
+					</tr>
+				</table>				<table border="0" width="90%" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td height="35" valign="top" style="padding-right: 10px">
+						<p align="right"><b>
+						<font color="#ffffff" face="Times New Roman" style="font-size: 16pt">
+						<a href="http://rafighemah.mihanblog.com/post/118"><font color="#ffffff">
+						مادر بزرگ...</font></a></b></td>
+					</tr>
+					<tr>
+						<td bgcolor="#7e5f3b" valign="top" height="1"></td>
+					</tr>
+					<tr>
+						<td class="post" width="55%">
+						<P align=justify>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;این روز ها مقابل چشمانم زنی همچو اوار&nbsp;فرو می ریزد..حس انزوا و بی پناهی در نگاه بی رمقش موج میزند..اعجاب من از این کوه است که فرومیریزد..نرم نرمک..مدام میگوید تمامش کن تمنا ..این اینه را از مقابلم بردار...این روز ها چشمانش را که کودکانه باز میکند..سر بلند میکند..پهلو به پهلو میشود..دنبالم که میگردد..من دود میشم میروم هوا..نمیدانم میدانی حال این احوالم را..مادر بزرگ..به ضیافت اغوش خسته ات که می ایم..بی هراس از پس ایندی که شومش میدانند..اندامت، برهنه،ایینه می شود برایم..لبان خشکت اتش و من لمس میکنم اوج لطافت را،عشق را ،پیچک را..مادر بزرگ؛ذهنم خوابیده،و گریزی حتی از گلوگاه ثانیه ام بالا نمیرود..میبینی چه بی چرا پی گرگ و میش فردا درمیان لجن زار حیات دست و پا میزنم..افوس؟نه،حسرت نیز مرا دوایی نیست..اری این جا شعر من ،نه،شاعر تویی..تو که بالای احساست نشسته ای و بی دغدغه بر گرده ی&nbsp;این زندگی میکوبی&nbsp;و بیت اخر شعر زندگانی ات را قلم میزنی،شاعری. وگرنه من که فقط واژه بازم..تو بگو. تو فقط شعر بگو که با واژگان جادو می کنی. تو که غروب و پاییز و باران هم برایت شعراند و لمسشان می کنی..شعر این زندگانی هفتاد ساله ات را دوباره و دوباره برایم بگو..علاج درد بی درمان این روزهایت چیست مادر بزرگ ؟بگو..برایم نقش،طرح ،با موسیقی حزن انگیز حیات به سخره نشسته اند..چشمانت خیره به کدام ابدیت است..ان چشمان شبرنگ خسته،نمیدانم..هیچ نمیدانم..من هیچ از بوم و رنگ چشمانت نمیدانم..تنها میدانم..حرف را باید زد ،درد را باید گفت..اما چقدر حرف،چقدر نقش ،چقدر واژه..این واژه ها که چسبیده اند تنگاتنگ بر گرده ی بوم هم همان حرف تکراری سفید پوشان بیمارستان را میزنند:توکل کنید همین..و من روزهاست ،ماه هاست،سالهاست که توکل کرده ام و دردت ریشه به جانم زده..ریشه به جانم زده..</P><br><br></td>
+					</tr>
+					<tr>
+						<td style="padding-left: 20px; padding-bottom: 2px" dir="rtl" height="45">
+						<div align="left">
+						<table border="0" cellspacing="0" cellpadding="0" bgcolor="#C7A073">
+								<tr>
+									<td class="date" style="padding-left: 5px; padding-right: 5px; padding-top: 1px; padding-bottom: 3px">
+						<p align="left">
+						<font  style="font-size: 8pt">پنجشنبه 9 خرداد 1392 | </font><font style="font-size: 9pt"> 
+						
+	      <a target="_self" href="javascript:newComment(118)" >نظرات (<script>setCommentCnt(118)</script>)</a>
+        
+</font></td>
+								</tr>
+							</table></div>
+						</td>
+					</tr>
+					<tr>
+						<td height="50" > </td>
+					</tr>
+				</table>				<table border="0" width="90%" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td height="35" valign="top" style="padding-right: 10px">
+						<p align="right"><b>
+						<font color="#ffffff" face="Times New Roman" style="font-size: 16pt">
+						<a href="http://rafighemah.mihanblog.com/post/117"><font color="#ffffff">
+						باز هم استین دلتنگی از میان خوابها و شعر هایم بیرون افتاد..</font></a></b></td>
+					</tr>
+					<tr>
+						<td bgcolor="#7e5f3b" valign="top" height="1"></td>
+					</tr>
+					<tr>
+						<td class="post" width="55%">
+						<P align=center>من...، روح خفته زیر سنگ &nbsp;سیاه و سپید رود خانه ام..که با سیلاب زمستان بیدار خواهم شد و&nbsp;از زیر پلک های خیس تو بیرون خواهم ریخت..این روز ها تنم مستعمره ی زلزله خیز دستان اوست..اوار میشم روی ملافه های سپید..تو ..قانون نانوشته ی کدام جاذبه ای ..که سیب که سهل است،اینجا حواصیل ها هم زمین گیرت شده اند..اصلا،تو هیچ...عطر تنت هیچ..شعر هیچ..من بی تو عطر بهار را چه میکنم؟..میدانی احوال این روزهایم را...گاهی کند ..گاهی تند..نبضم را با شتاب قدم هایت تنظیم میکنم..حالا که نیستی تنهایی ات را مینویسم..پس به سلامتی ات..حیف..خون دل مست نمیکند..این بهار را نیز قدم زنان زیر سیل خاطراتت شاد باد..شاد..</P><br><br></td>
+					</tr>
+					<tr>
+						<td style="padding-left: 20px; padding-bottom: 2px" dir="rtl" height="45">
+						<div align="left">
+						<table border="0" cellspacing="0" cellpadding="0" bgcolor="#C7A073">
+								<tr>
+									<td class="date" style="padding-left: 5px; padding-right: 5px; padding-top: 1px; padding-bottom: 3px">
+						<p align="left">
+						<font  style="font-size: 8pt">یکشنبه 11 فروردین 1392 | </font><font style="font-size: 9pt"> 
+						
+	      <a target="_self" href="javascript:newComment(117)" >نظرات (<script>setCommentCnt(117)</script>)</a>
+        
+</font></td>
+								</tr>
+							</table></div>
+						</td>
+					</tr>
+					<tr>
+						<td height="50" > </td>
+					</tr>
+				</table>				<table border="0" width="90%" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td height="35" valign="top" style="padding-right: 10px">
+						<p align="right"><b>
+						<font color="#ffffff" face="Times New Roman" style="font-size: 16pt">
+						<a href="http://rafighemah.mihanblog.com/post/116"><font color="#ffffff">
+						سکوت پرواز کدام پرنده، مرگ است؟</font></a></b></td>
+					</tr>
+					<tr>
+						<td bgcolor="#7e5f3b" valign="top" height="1"></td>
+					</tr>
+					<tr>
+						<td class="post" width="55%">
+						<P align=justify>ای کاش وقتی دلم از این دنیا فشرده می شود یک نفر از ان بالا صدایم بزند،تمنااااا بالا را نگاه من..بعد من سرم را بلند کنم و همه ی مشکلات رهایم کنند..بعد حس کنم که چقدر من و درد های قرمز و صورتی ام در برابر عظمت وسعت نگاهش کوچکیم..کودکیم..ای کاش زندگی مثل یکی از همین سریال ها بود..همین طور کش دار و معلق میان چشم های یک مخاطب..بعد،بازیگر وقت داشت که در یک فاصله ی طولانی میان هر اپیزود،به عدم نزدیک شود ..نباشد جند روز..وسط همان حساس ترین سکانس زندگی اش،همه چیز از حرکت می ایستاد.بعد اسم بازیگر روی سنگ قبر پایان فیلم نوشته میشد..میرفت که چند روز بمیرد،تا یادش برود بودن میان ماسک های گشاد بازیگری اش را..چند وقتی است یک جایی میان زمین و اسمان ،پر هایم را،ارام ارام ،روی خط ساکن سکوت پهن میکنم...&nbsp;&nbsp;همه ی اینها که میبینی تقصیر ناصافی لبخند&nbsp;هر نوع پروازی بدون رضایتم است..یادت هست قرار ما سکوت ،پشت مرد خمیده ی&nbsp;*م*بوده است..یادم هست،همین جا روی این چراغ برق میم گونه نشسته ام تا شاید قلاب *ل*گونه ی&nbsp;چشمهایت،دل ماهی خوارم را از خیالاتم بیرون بکشد..همه ی انها که میگویند مرا بدون تو ،حین رقص در اغوش&nbsp;حریر دریا دیده اند دروغ میگویند..من همه ی&nbsp;لحظه هایم را همین طور پشت سر هم،این جا روی&nbsp;*میم*نشسته ام..تردید داری از چشمان تسبیح سوغاتی ات بپرس..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</P><br><br></td>
+					</tr>
+					<tr>
+						<td style="padding-left: 20px; padding-bottom: 2px" dir="rtl" height="45">
+						<div align="left">
+						<table border="0" cellspacing="0" cellpadding="0" bgcolor="#C7A073">
+								<tr>
+									<td class="date" style="padding-left: 5px; padding-right: 5px; padding-top: 1px; padding-bottom: 3px">
+						<p align="left">
+						<font  style="font-size: 8pt">دوشنبه 18 دی 1391 | </font><font style="font-size: 9pt"> 
+						
+	      <a target="_self" href="javascript:newComment(116)" >نظرات (<script>setCommentCnt(116)</script>)</a>
+        
+</font></td>
+								</tr>
+							</table></div>
+						</td>
+					</tr>
+					<tr>
+						<td height="50" > </td>
+					</tr>
+				</table>				<table border="0" width="90%" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td height="35" valign="top" style="padding-right: 10px">
+						<p align="right"><b>
+						<font color="#ffffff" face="Times New Roman" style="font-size: 16pt">
+						<a href="http://rafighemah.mihanblog.com/post/115"><font color="#ffffff">
+						فرداهایی از جنس خط..</font></a></b></td>
+					</tr>
+					<tr>
+						<td bgcolor="#7e5f3b" valign="top" height="1"></td>
+					</tr>
+					<tr>
+						<td class="post" width="55%">
+						<P align=center><IMG border=5 hspace=0 alt="" align=baseline src="http://upload.tehran98.com/images/bq6onm6o7cq8i7ylnjn.jpg"></P>
+<P align=center>مینویسم،تا بمانم ..تا به زنجیرکشیده شوم در میان کلمات..تا زندانی شوم در سیاهی قلمم..تا نشان دهم چقدر زیباست </P>
+<P align=center>این سیاهی در مقابل سفیدی این دل..تا بتوانم بگویم که رسیده ام به همه ی من..و حقیقت بودنم را سر کشیده ام..مینویسم </P>
+<P align=center>که اگر نگاهتان افتاد به عریانی کلمات بدانید که چقدر..مینویسم تا بدانید دور از اینجا این شکل مضحک هر کلمه است که ارامم</P>
+<P align=center>میکند..مینویسم تا یادم بماند که اگر نباشم تمام نماد ها و نشانه ها نیست میشوند..مینویسم تا بگویم چقدر نا گفته ها دارم</P>
+<P align=center>&nbsp;برای گفتن..بیا تمنا ،بیا دوباره دنیایت را بساز با این کلمات..بیا باز هم بگو که وجود داری و ثبت میشوی در جایی..بیا..تخیلاتم </P>
+<P align=center>را با کلمات خوب شستم و روی بند بند وجودم پهن کردمشان،با خیال اسوده خواب هایم را رنگ زدم..فکر هایم را که چروک </P>
+<P align=center>شده بودند اتو کشیدم تا خوب جلوه کنند&nbsp;تا نگویند*چقدر فرق دارد...فکر هایمان*و باز هم این افکار را میپوشم ..چقدر خوب </P>
+<P align=center>اندام &nbsp;تنهاییم را میپوشانند..میدانی دارم به کلیشه ای بودن خودم فکر میکنم..و تو ..با توام مردک بی نشانی که مدام میگویی</P>
+<P align=center>&nbsp;*بانو بنویس..*راستش را بخواهی خیلی وقت ها مجسمه ی نوشتن هایم را میبوسم و میگذارم روی میزم..امروز با انگشتان </P>
+<P align=center>اغشته به دردم گرد و غبار بی کسی روی پیکره اش را پاک کردم و برای رفع این رنجش نوشتم..به قول همان استاد پیر من</P>
+<P align=center>&nbsp;مادر این کلماتم و افکارم پدرشان..با هم این کلمات را بزرگ میکنیم..</P>
+<P align=center>سخن بس..فقط همین که سخت اشفته ام ...خوابم می اید و نمی اید..تا نخوابم و برای مدتی فراموش نکنم بودنم را ارام </P>
+<P align=center>نمیگیرم..باید سرم را روی بالش بگذارم و به خدا فکر کنم&nbsp; که در تاریکی چشمانم لبخند میزند..</P>
+<P align=center>اری همین و بس..</P><br><br></td>
+					</tr>
+					<tr>
+						<td style="padding-left: 20px; padding-bottom: 2px" dir="rtl" height="45">
+						<div align="left">
+						<table border="0" cellspacing="0" cellpadding="0" bgcolor="#C7A073">
+								<tr>
+									<td class="date" style="padding-left: 5px; padding-right: 5px; padding-top: 1px; padding-bottom: 3px">
+						<p align="left">
+						<font  style="font-size: 8pt">سه شنبه 14 آذر 1391 | </font><font style="font-size: 9pt"> 
+						
+	      <a target="_self" href="javascript:newComment(115)" >نظرات (<script>setCommentCnt(115)</script>)</a>
+        
+</font></td>
+								</tr>
+							</table></div>
+						</td>
+					</tr>
+					<tr>
+						<td height="50" > </td>
+					</tr>
+				</table>				<table border="0" width="90%" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td height="35" valign="top" style="padding-right: 10px">
+						<p align="right"><b>
+						<font color="#ffffff" face="Times New Roman" style="font-size: 16pt">
+						<a href="http://rafighemah.mihanblog.com/post/114"><font color="#ffffff">
+						نگذارید تردید..تر کند دیدمان را..</font></a></b></td>
+					</tr>
+					<tr>
+						<td bgcolor="#7e5f3b" valign="top" height="1"></td>
+					</tr>
+					<tr>
+						<td class="post" width="55%">
+						<P align=center><IMG border=5 hspace=0 alt="" align=baseline src="http://upload.tehran98.com/images/ostm6f5ezz08c3gli83.gif"></P>
+<P align=center>میخواهم دستان همه ی شما را بگیرم..ببرمتان تا کنج پر هیاهوی خیال و با اشک هایم راه های کج و ماوج دستانتان را </P>
+<P align=center>بیشورم..پاک که شدیم ،انحنای لبخند هایمان را رسم میکنیم روی دست های یکدیگر ..دیگر خیالمان راحت است که وقتی مینویسیم</P>
+<P align=center>کلمه ها لباس حریر لبخند بر تن دارند..میدانم که فقر دو زانو نشسته و با ان توره پر از هیچش لبخند های ما را شکار میکند..</P>
+<P align=center>میبینید درد روی این صفحه پخش شده..ای کاش کسی از جایی روی کلمات سوخته ام پماد بمالد..بیا با توام...نگذار تردید *تر* کند</P>
+<P align=center>&nbsp;*دید*مان را ..بیا دیوانگی هایت را وصل کن به ابتدای اندوهم..بعد چشم بگذار تا انچه پیداست گم شود..گم که شدیم </P>
+<P align=center>در هم ،میگذاریم تشویش این روزها لای عقربه های ساعت گیر کند..تا یخ سایه هایمان میان استحکام لبخند هایمان ذوب شود..اما</P>
+<P align=center>حواست باشد که هیچ نخواهیم گذاشت که تلخی یک درد با ان سرنگ خالی اش بقایای شادیمان را از میان لبخند هایمان </P>
+<P align=center>بیرون بکشد..یادت باشد متنفرم از ادم هایی که صدایشان پر از گره های کور است..باید زودتر هجرت کنم.کاسه ی چشم هایم را پر از </P>
+<P align=center>کلمه&nbsp;میکنم و از زمستان سوت و کور کاغذ ها میگریزم..من سرزمینی را میشناسم که در ان الف هیچ گاه تاج پادشاهی </P>
+<P align=center>بر سر نمیگذارد..من دیاری را میشناسم که حروف،دست مرد مغموم *م*را میگیرند و نمیگذارند پشتش خمیده باشد..باید زودتر هجرت کنم </P>
+<P align=center>هنوز کلمه ها نفس میکشند..تمنا لباس های سیاه را از تن کلمات بیرون بکش نگذار سکوت لبهایش را باز کند..</P>
+<P align=center>نگذار تمنا..نگذار دخترک...</P><br><br></td>
+					</tr>
+					<tr>
+						<td style="padding-left: 20px; padding-bottom: 2px" dir="rtl" height="45">
+						<div align="left">
+						<table border="0" cellspacing="0" cellpadding="0" bgcolor="#C7A073">
+								<tr>
+									<td class="date" style="padding-left: 5px; padding-right: 5px; padding-top: 1px; padding-bottom: 3px">
+						<p align="left">
+						<font  style="font-size: 8pt">سه شنبه 7 آذر 1391 | </font><font style="font-size: 9pt"> 
+						
+	      <a target="_self" href="javascript:newComment(114)" >نظرات (<script>setCommentCnt(114)</script>)</a>
+        
+</font></td>
+								</tr>
+							</table></div>
+						</td>
+					</tr>
+					<tr>
+						<td height="50" > </td>
+					</tr>
+				</table>				<table border="0" width="90%" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td height="35" valign="top" style="padding-right: 10px">
+						<p align="right"><b>
+						<font color="#ffffff" face="Times New Roman" style="font-size: 16pt">
+						<a href="http://rafighemah.mihanblog.com/post/113"><font color="#ffffff">
+						برهنه میخوابم..</font></a></b></td>
+					</tr>
+					<tr>
+						<td bgcolor="#7e5f3b" valign="top" height="1"></td>
+					</tr>
+					<tr>
+						<td class="post" width="55%">
+						<P align=center><IMG border=5 hspace=0 alt="" align=baseline src="http://upload.tehran98.com/images/c6sfqck9b0fx0i7n8byr.jpg"></P>
+<P align=center>بیا طناب ،لبخند هایم را وصل کن به کاسه ی دستانت تا بعد،از پنجره ی پر نور بودن ،به قعر چاه شب اویزانشان کنیم..</P>
+<P align=center>اینجا زمان،تلو تلو خوران ،رگ های نحیف ساعت اتاقم را هول میدهد..میخواهم بخوابم..از ان خواب ها که وقتی کاسه ی </P>
+<P align=center>چشمانت را&nbsp;با خود میبرد،هیچ دلت برای نبودنش تنگ نمیشود..از ان خواب هایی که وقتی روحت در دهان تاریکی جویده </P>
+<P align=center>میشود،هیچ دردت نمی اید و حتی دلت میخواهد بیشتر بمانی و اب دهانش را که مزه ی قیر میدهد بیشتر مزه مزه کنی..</P>
+<P align=center>میخواهم بخوابم..از همان خواب هایی که در طولش هیچ یادتان نیاید که تمنایی بود که گاهی برای چشمانتان کلمه لقمه میگرفت..</P>
+<P align=center>اصلا هیچ کدامتان یادی ندارید که بخواهد بیاید..خواهم برد..به یاد یک یکتان کبریت خواهم برد..میدانی ادم ها خیلی شبیه کبریتند..</P>
+<P align=center>بعضی هاشان نم کشیده اند و روشنت نمیکنند، بعضیهاشان هم تا تو و دنیایت را خاکستر نکنند ارام نمیگیرند..عده ی معدودی&nbsp;هم </P>
+<P align=center>هستند که سرشان پر از تجربه های قرمز است و میسوزند تا راهت را ذره ای روشن کرده باشند..تمامی کبریت ها را با خودم خواهم </P>
+<P align=center>برد..خواهم رفت..به مادرم میسپارم هر روز صبح گل های روی پتویم را اب بدهد..و شما لباس بودنم را از چشم هایتان در بیاورید..</P>
+<P align=center>برهنه میخواببم..بیزار از همه ی طناب های محکم ارتباطی..برهنه میخوابم ..رها از همه ی درد های اجتماعی..میگذارم توی خواب </P>
+<P align=center>جوهر موهایم خشک شود..مسواک میزنم قبل از خواب ..چاله ی دهانم باید خالی از هر گونه کلمه باشد..درد میان دو دندان</P>
+<P align=center>&nbsp;جلویی ام گیر کرده است..جهل لای دندان عقلم..قلک گوشم را تکان تکان میدهم..علم،مایه ی زرد رنگی است که میپاشد</P>
+<P align=center>&nbsp;روی دستمال چروکیده ی افکارم..با این حال حس میکنم میم علم هنوز از لاله ی گوشم اویزان است..میکشمش ..نمیشنوم..</P>
+<P align=center>حالا فقط کافی است به اندازه ی تمام تصویر های که&nbsp;امروز دیده ام اشک بریزم..دانه دانه اشک هایم سکانس های فیلم </P>
+<P align=center>زندگی ام&nbsp;میشوند..باید بخوابم..روی رحم_تخت،میان پر و پتو..شکم تخت باد میکند..من پر میخورم..</P>
+<P align=center>9ساعت دیگر دنیا با ان لبخند کجش نشسته روی کرسی خورشید..انتظارم را میکشد..</P><br><br></td>
+					</tr>
+					<tr>
+						<td style="padding-left: 20px; padding-bottom: 2px" dir="rtl" height="45">
+						<div align="left">
+						<table border="0" cellspacing="0" cellpadding="0" bgcolor="#C7A073">
+								<tr>
+									<td class="date" style="padding-left: 5px; padding-right: 5px; padding-top: 1px; padding-bottom: 3px">
+						<p align="left">
+						<font  style="font-size: 8pt">جمعه 3 آذر 1391 | </font><font style="font-size: 9pt"> 
+						
+	      <a target="_self" href="javascript:newComment(113)" >نظرات (<script>setCommentCnt(113)</script>)</a>
+        
+</font></td>
+								</tr>
+							</table></div>
+						</td>
+					</tr>
+					<tr>
+						<td height="50" > </td>
+					</tr>
+				</table>				<table border="0" width="90%" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td height="35" valign="top" style="padding-right: 10px">
+						<p align="right"><b>
+						<font color="#ffffff" face="Times New Roman" style="font-size: 16pt">
+						<a href="http://rafighemah.mihanblog.com/post/112"><font color="#ffffff">
+						نیاز کن..</font></a></b></td>
+					</tr>
+					<tr>
+						<td bgcolor="#7e5f3b" valign="top" height="1"></td>
+					</tr>
+					<tr>
+						<td class="post" width="55%">
+						<P align=center><IMG border=5 hspace=0 alt="" align=baseline src="http://upload.tehran98.com/images/fxvh35l8dfmf4kwicdll.jpg"></P>
+<P align=center>زندگی را میشود خندید،اری میشود با یک لیوان قهوه با تمام لذت همراه تلخی اش شیرینی را سر کشید..</P>
+<P align=center>زندگی را میشود گذاشت لب پتجره ی مادر بزرگ تا نفس بکشد..تا خسته نباشد از جریان ،از عشق ،از اندوه..</P>
+<P align=center>میتوان در جایی ما بین دست های تو چشمان خداوند را دید..چشم هایی که جای تمام نبودن ها و ندیدن هایت باشند..</P>
+<P align=center>راه روی و اهسته بگذری..بگذری از کنار بلواری که با تو نبود و از کنار همهمه ی پرستو ها..و به کسی که از تو سراغ ارامش را گرفت</P>
+<P align=center>دست هایت را دراز کنی و چشمان خداوند را نشانشان دهی..چابک قدم از قدم برداری و شالگردنت را سپر کنی به سوز..</P>
+<P align=center>بلند بخندی به روزگارمان تا سایه ها فرار کنند..تنها صدای قهقهه ی تو بماند و دیگر هیچ..و تو همچنان پیش روی..</P>
+<P align=center>پیش روی در دل مه..و گم شوی در دست های فرفره باز سرنوشت..من فنجان قهوه ام را گذاشته ام کنار </P>
+<P align=center>پنجره ی خانه ی مادر بزرگ تا نفس بکشد..و تمام تصویر ها را در لای به لای بخار قهوه ام میبینم..</P>
+<P align=center>باران میبارد ..به حرمت کداممان نمیدانم..</P>
+<P align=center>من همین قدر میدانم که باران صدای پای اجابت است..</P>
+<P align=center>خدا با همه ی جبروتش دارد ناز میکند ..</P>
+<P align=center>نیاز کن...</P>
+<P align=center>نیاز کن..</P>
+<P align=center>نیاز کن..</P>
+<P align=center>&nbsp;</P><br><br></td>
+					</tr>
+					<tr>
+						<td style="padding-left: 20px; padding-bottom: 2px" dir="rtl" height="45">
+						<div align="left">
+						<table border="0" cellspacing="0" cellpadding="0" bgcolor="#C7A073">
+								<tr>
+									<td class="date" style="padding-left: 5px; padding-right: 5px; padding-top: 1px; padding-bottom: 3px">
+						<p align="left">
+						<font  style="font-size: 8pt">یکشنبه 28 آبان 1391 | </font><font style="font-size: 9pt"> 
+						
+	      <a target="_self" href="javascript:newComment(112)" >نظرات (<script>setCommentCnt(112)</script>)</a>
+        
+</font></td>
+								</tr>
+							</table></div>
+						</td>
+					</tr>
+					<tr>
+						<td height="50" > </td>
+					</tr>
+				</table>				<table border="0" width="90%" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td height="35" valign="top" style="padding-right: 10px">
+						<p align="right"><b>
+						<font color="#ffffff" face="Times New Roman" style="font-size: 16pt">
+						<a href="http://rafighemah.mihanblog.com/post/111"><font color="#ffffff">
+						بوی پیراهن خونین کسی می اید..</font></a></b></td>
+					</tr>
+					<tr>
+						<td bgcolor="#7e5f3b" valign="top" height="1"></td>
+					</tr>
+					<tr>
+						<td class="post" width="55%">
+						<P align=center><IMG border=5 hspace=0 alt="" align=baseline src="http://8pic.ir/images/dmhzqd9oeckkv9x2lyyn.jpg"></P>
+<P align=center>خوب که گوش میکنم..صدای قدم هایش را میشنوم..گوش میکنی..صدای قدمش می اید..هنگامه ی اوج ماتمش می اید..</P>
+<P align=center>دیروز را که قدم میزدم زیر دل پر درد اسمان مدام این جمله را زمزمه میکردم...این خبر را برسانید به کنعانی ها بوی پیراهن خونین کسی می اید..</P>
+<P align=center>امشب بهار دلم خزان شده است..به رنگ گل ارغوان شده است..شکسته شده قداست او..بمیرد جهان از خجالت او..بمیرد جهان..بمیرد..</P>
+<P align=center>،بریده عدو..لباس عجل به قامت او ..و من چه کنم..بگو؟چه کنم؟..یگانه گل شقایق من..من عاشق او ..او حقایق غم..</P>
+<P align=center>میبارم و میبارد و میبارد..میبارد و میبارد و میبارد...چو لاله به خون تپیده شده..به روی زمین ها کشیده شده..او پی حق به زیر لگد خمیده شده .</P>
+<P align=center>وای خمیده شده..بنفشه به رخ ..بنفشه به تن..کشیده&nbsp; بخورده به خاطر حق...</P>
+<P align=center>.</P>
+<P align=center>.</P>
+<P align=center>.</P>
+<P align=center>این خبر را برسانید به&nbsp;اهل عرفان&nbsp;..بوی پیراهن خونین کسی می اید..</P><br><br></td>
+					</tr>
+					<tr>
+						<td style="padding-left: 20px; padding-bottom: 2px" dir="rtl" height="45">
+						<div align="left">
+						<table border="0" cellspacing="0" cellpadding="0" bgcolor="#C7A073">
+								<tr>
+									<td class="date" style="padding-left: 5px; padding-right: 5px; padding-top: 1px; padding-bottom: 3px">
+						<p align="left">
+						<font  style="font-size: 8pt">چهارشنبه 24 آبان 1391 | </font><font style="font-size: 9pt"> 
+						
+	      <a target="_self" href="javascript:newComment(111)" >نظرات (<script>setCommentCnt(111)</script>)</a>
+        
+</font></td>
+								</tr>
+							</table></div>
+						</td>
+					</tr>
+					<tr>
+						<td height="50" > </td>
+					</tr>
+				</table>				<table border="0" width="90%" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td height="35" valign="top" style="padding-right: 10px">
+						<p align="right"><b>
+						<font color="#ffffff" face="Times New Roman" style="font-size: 16pt">
+						<a href="http://rafighemah.mihanblog.com/post/110"><font color="#ffffff">
+						سراشیبی این روزها..</font></a></b></td>
+					</tr>
+					<tr>
+						<td bgcolor="#7e5f3b" valign="top" height="1"></td>
+					</tr>
+					<tr>
+						<td class="post" width="55%">
+						<P align=center><IMG border=5 hspace=0 alt="" align=baseline src="http://4ax.ir/images/6i3bx.jpg"></P>
+<P align=center>شب ،گل های یاس را بر بسترم میریزم ،صبح برشان میدارم و باز سر شاخه هایشان میچسبانم ،</P>
+<P align=center>تا هر روز حیاط این زندگی معطر باشد به عطر حضورم..بار ها به خودم میگویم ،دخترک شما همیشه لبخند بزن..حتی وقتی که </P>
+<P align=center>دوربینی نیست..تنها من میدانم لبخند شما ،از گران ترین دوربین دنیا هم گران تر است..بیا زندگی بیا شریک بشویم..</P>
+<P align=center>دست از من ،چتر از تو ،باران از اسمان ،تا یک روز خیس را قدم بزنیم..بیا اول بار با تو سفر کنم..برویم شمال ،کنار دریای خزر..</P>
+<P align=center>سرم را بگذارم بر شانه ات و در جنجال هایت غرق شوم..میدانی،جهان را بی کوله پشتی ،پای برهنه و نگران گشتم،</P>
+<P align=center>هیچ دلیلی برای خوش بودن،برای ادامه دادن ،برای ماندن ندیدم..جز همین لبخند های گاه به گاه در عصر های این پاییز ،تا شب های پر تاب..</P>
+<P align=center>میدانی، گاهی ادم چنان روحش روانش خسته میشود که دوست دارد بدنش زیپ داشته باشد ،ان را باز کند،به روحش ، روانش </P>
+<P align=center>بگوید بیا بیرون ..بر تخت دراز بکش تا مشت و مالت بدهم..و روح ادم روان ادم..بر تخت دراز بکشد ..ادم ان را حسابی مشت و مال بدهد..</P>
+<P align=center>ان قدر که خودش بگوید بس است..دستت درد نکند...و باز زیپ تنت را باز کنی ..و روحت و روانت برود سر کارش ان تو..</P>
+<P align=center>سر حال باشد و پر انرژی به کارش برسد..</P>
+<P align=center>آی زندگی هر کجای زمین می ایستم سراشیب است سوی تو..</P><br><br></td>
+					</tr>
+					<tr>
+						<td style="padding-left: 20px; padding-bottom: 2px" dir="rtl" height="45">
+						<div align="left">
+						<table border="0" cellspacing="0" cellpadding="0" bgcolor="#C7A073">
+								<tr>
+									<td class="date" style="padding-left: 5px; padding-right: 5px; padding-top: 1px; padding-bottom: 3px">
+						<p align="left">
+						<font  style="font-size: 8pt">سه شنبه 23 آبان 1391 | </font><font style="font-size: 9pt"> 
+						
+	      <a target="_self" href="javascript:newComment(110)" >نظرات (<script>setCommentCnt(110)</script>)</a>
+        
+</font></td>
+								</tr>
+							</table></div>
+						</td>
+					</tr>
+					<tr>
+						<td height="50" > </td>
+					</tr>
+				</table>				<table border="0" width="90%" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td height="35" valign="top" style="padding-right: 10px">
+						<p align="right"><b>
+						<font color="#ffffff" face="Times New Roman" style="font-size: 16pt">
+						<a href="http://rafighemah.mihanblog.com/post/109"><font color="#ffffff">
+						بارانی خدا پاره است..</font></a></b></td>
+					</tr>
+					<tr>
+						<td bgcolor="#7e5f3b" valign="top" height="1"></td>
+					</tr>
+					<tr>
+						<td class="post" width="55%">
+						<P align=center><IMG border=5 hspace=0 alt="" align=baseline src="http://upload.tehran98.com/images/e3d349anj7nd9l5p5ml.jpg"></P>
+<P align=center>این چند وقت پیش هوا الوده بود ..خیاط قیچی را برداشت و برای خدا یک بارانی سفید دوخت ...</P>
+<P align=center>امشب ان بارانی شیکی که خدا تنش میکرد لبه ی استینش پوسیده ..میبارد و میبارد و میبارد..</P>
+<P align=center>روی پنجه هایم ایستادم و دستانم را گشوده ام..خودم را پیشکش اسمان میکنم...بیا سیاه پوش طوفانی ...</P>
+<P align=center>بیا و ببار و ببر ..گردنم منتظر حلقه ی دستان تو است ..بر سر چشمه ی خواب..لیک دیدم به دو چشم نگران..</P>
+<P align=center>دست های تو گذشت ..همچو ابی که روان است به سوی تن من ..</P>
+<P align=center>رمز شیرینی این قصه کجاست..؟که نه تنها تن من بی نهایت زیباست..ان که اموخت به ما درس محبت میخواست..</P>
+<P align=center>جان چراغان کنی از عشق کسی..به امیدش ببری رنج بسی..تب و تابی بودت هر نفسی..</P>
+<P align=center>به وصالی برسی یا نرسی..</P>
+<P align=center>&nbsp;</P><br><br></td>
+					</tr>
+					<tr>
+						<td style="padding-left: 20px; padding-bottom: 2px" dir="rtl" height="45">
+						<div align="left">
+						<table border="0" cellspacing="0" cellpadding="0" bgcolor="#C7A073">
+								<tr>
+									<td class="date" style="padding-left: 5px; padding-right: 5px; padding-top: 1px; padding-bottom: 3px">
+						<p align="left">
+						<font  style="font-size: 8pt">سه شنبه 16 آبان 1391 | </font><font style="font-size: 9pt"> 
+						
+	      <a target="_self" href="javascript:newComment(109)" >نظرات (<script>setCommentCnt(109)</script>)</a>
+        
+</font></td>
+								</tr>
+							</table></div>
+						</td>
+					</tr>
+					<tr>
+						<td height="50" > </td>
+					</tr>
+				</table>				<table border="0" width="90%" cellspacing="0" cellpadding="0" >
+					<tr>
+						<td height="35" valign="top" style="padding-right: 10px">
+						<p align="right"><b>
+						<font color="#ffffff" face="Times New Roman" style="font-size: 16pt">
+						<a href="http://rafighemah.mihanblog.com/post/106"><font color="#ffffff">
+						تن...هایی</font></a></b></td>
+					</tr>
+					<tr>
+						<td bgcolor="#7e5f3b" valign="top" height="1"></td>
+					</tr>
+					<tr>
+						<td class="post" width="55%">
+						<P align=center><IMG border=5 hspace=0 alt="" align=baseline src="http://upload.tehran98.com/images/4kjut9yyfgsdbv1kuul4.jpg"></P>
+<P align=center>بیا زندگی را از سر بگیریم..ما یک عمر است این ته مانده ایم..</P>
+<P align=center>خورشید هر روز خودش را برای من ارایش میکند و من چه مظلومانه چشم دیدنش را ندارم..خورشید که میرود رسالت من اغاز میشود..</P>
+<P align=center>هر شب در من پیامبری فانوس به دست به جستجوی امیدی میرود که هرگز کشف نشد..و من مانند مادری که کودکش را در اغوش کشیده..</P>
+<P align=center>تنهایی را گرفته ام ..خوابش که میبرد..دلم نمی اید رهایش کنم..این کودک بی پناه را..دست تنهایی بی پناهم را میگیرم..</P>
+<P align=center>تا از دنیا عبور کنیم..یک دلتنگی جا میماند..بر که میگردیم..درد با سرعت زیرمان میکند..گاهی دلم میخواهد سر لز این زندگی بیرون بکشم ..</P>
+<P align=center>یک نفس بگیرم ودوباره از سر شروع کنم..سرش را هر کجا زیر اب میکنم باز دوباره این جا پیدایش میشود تنهایی..</P>
+<P align=center>هرکس از کنار شعر هایم رد میشود..دلش میسوزد و چند واژه میدهد..این مردم نمیدانند..این شعر ها برای بودن لنگ مانده اند..</P>
+<P align=center>یک روز شعر هایم را جمع میکنم و از این جا میروم..چیزی شبیه همان عشق های کودکی..پسرک همسایه در گیر و دار اسباب کشی ..</P>
+<P align=center>و نگاه غمگین ما از دو طرف شیشه ی اتومبییل..این عاشقانه ی کوتاه ..یک تراژدی تکراریست..او میرود ..من میمانم و کاکتوس های کنار پنجره..</P>
+<P align=center>سخن بس ..دلم با این واژه ها یکی نیست..این شعر ها در نبود تو..حرام؛ زاده میشوند..</P>
+<P align=center><FONT size=3></FONT>&nbsp;</P>
+<P align=center>&nbsp;</P><br><br></td>
+					</tr>
+					<tr>
+						<td style="padding-left: 20px; padding-bottom: 2px" dir="rtl" height="45">
+						<div align="left">
+						<table border="0" cellspacing="0" cellpadding="0" bgcolor="#C7A073">
+								<tr>
+									<td class="date" style="padding-left: 5px; padding-right: 5px; padding-top: 1px; padding-bottom: 3px">
+						<p align="left">
+						<font  style="font-size: 8pt">چهارشنبه 10 آبان 1391 | </font><font style="font-size: 9pt"> 
+						
+	      <a target="_self" href="javascript:newComment(106)" >نظرات (<script>setCommentCnt(106)</script>)</a>
+        
+</font></td>
+								</tr>
+							</table></div>
+						</td>
+					</tr>
+					<tr>
+						<td height="50" > </td>
+					</tr>
+				</table>			</div>
+			</div>
+			</td>
+			<td width="220" style="padding-top: 30px" valign="top">
+				<div align="left">
+				<table border="0" width="210px" cellspacing="0" cellpadding="0">
+					<tr>
+						<td class="menu">
+						درباره وبلاگ</td>
+					</tr>
+					<tr>
+						<td class="smenu">
+												  
+<br><br>
+<font style="text-align:center">دلیل آبی باران،رفیق روشن ماه!<br />
+اگر اشاره كنی من به یك نظر سبزم<br />
+</font>
+<br><br>
+</td>
+					</tr>
+					</table>
+				<p> </p>				<p> </p>
+								<table border="0" width="210px" cellspacing="0" cellpadding="0">
+					<tr>
+						<td class="menu">
+						نویسندگان</td>
+					</tr>
+					<tr>
+						<td class="smenu">
+						<a href="http://rafighemah.mihanblog.com/post/author/846226">a. poorabdollah</a></td>
+					</tr>					</table>				<p> </p>
+				<table border="0" width="210px" cellspacing="0" cellpadding="0">
+					<tr>
+						<td class="menu">
+						آرشیو مطالب</td>
+					</tr>
+					<tr>
+						<td class="smenu">
+						<a href="http://rafighemah.mihanblog.com/post/archive/1392/6"> شهریور 1392</a></td>
+					</tr><tr>
+						<td class="smenu">
+						<a href="http://rafighemah.mihanblog.com/post/archive/1392/3"> خرداد 1392</a></td>
+					</tr><tr>
+						<td class="smenu">
+						<a href="http://rafighemah.mihanblog.com/post/archive/1392/1"> فروردین 1392</a></td>
+					</tr><tr>
+						<td class="smenu">
+						<a href="http://rafighemah.mihanblog.com/post/archive/1391/10"> دی 1391</a></td>
+					</tr><tr>
+						<td class="smenu">
+						<a href="http://rafighemah.mihanblog.com/post/archive/1391/9"> آذر 1391</a></td>
+					</tr><tr>
+						<td class="smenu">
+						<a href="http://rafighemah.mihanblog.com/post/archive/1391/8"> آبان 1391</a></td>
+					</tr><tr>
+						<td class="smenu">
+						<a href="http://rafighemah.mihanblog.com/post/archive/1391/7"> مهر 1391</a></td>
+					</tr><tr>
+						<td class="smenu">
+						<a href="http://rafighemah.mihanblog.com/post/archive/1391/6"> شهریور 1391</a></td>
+					</tr><tr>
+						<td class="smenu">
+						<a href="http://rafighemah.mihanblog.com/post/archive/1391/5"> مرداد 1391</a></td>
+					</tr><tr>
+						<td class="smenu">
+						<a href="http://rafighemah.mihanblog.com/post/archive/1391/4"> تیر 1391</a></td>
+					</tr>					</table>
+				<p> </p>
+								<table border="0" width="210px" cellspacing="0" cellpadding="0">
+					<tr>
+						<td class="menu">
+						مطالب اخیر</td>
+					</tr>
+					<tr>
+						<td class="smenu">
+<a href="http://rafighemah.mihanblog.com/post/123" title="چهارشنبه 6 شهریور 1392">کیست در من..</a></td>
+					</tr><tr>
+						<td class="smenu">
+<a href="http://rafighemah.mihanblog.com/post/121" title="شنبه 15 تیر 1392">رو به پایان..</a></td>
+					</tr><tr>
+						<td class="smenu">
+<a href="http://rafighemah.mihanblog.com/post/120" title="پنجشنبه 30 خرداد 1392">صدا...</a></td>
+					</tr><tr>
+						<td class="smenu">
+<a href="http://rafighemah.mihanblog.com/post/119" title="جمعه 24 خرداد 1392">برای تمنایی که خسته شده است..</a></td>
+					</tr><tr>
+						<td class="smenu">
+<a href="http://rafighemah.mihanblog.com/post/118" title="پنجشنبه 9 خرداد 1392">مادر بزرگ...</a></td>
+					</tr><tr>
+						<td class="smenu">
+<a href="http://rafighemah.mihanblog.com/post/117" title="یکشنبه 11 فروردین 1392">باز هم استین دلتنگی از میان خوابها و شعر هایم بیرون افتاد..</a></td>
+					</tr><tr>
+						<td class="smenu">
+<a href="http://rafighemah.mihanblog.com/post/116" title="دوشنبه 18 دی 1391">سکوت پرواز کدام پرنده، مرگ است؟</a></td>
+					</tr><tr>
+						<td class="smenu">
+<a href="http://rafighemah.mihanblog.com/post/115" title="سه شنبه 14 آذر 1391">فرداهایی از جنس خط..</a></td>
+					</tr><tr>
+						<td class="smenu">
+<a href="http://rafighemah.mihanblog.com/post/114" title="سه شنبه 7 آذر 1391">نگذارید تردید..تر کند دیدمان را..</a></td>
+					</tr><tr>
+						<td class="smenu">
+<a href="http://rafighemah.mihanblog.com/post/113" title="جمعه 3 آذر 1391">برهنه میخوابم..</a></td>
+					</tr><tr>
+						<td class="smenu">
+<a href="http://rafighemah.mihanblog.com/post/112" title="یکشنبه 28 آبان 1391">نیاز کن..</a></td>
+					</tr><tr>
+						<td class="smenu">
+<a href="http://rafighemah.mihanblog.com/post/111" title="چهارشنبه 24 آبان 1391">بوی پیراهن خونین کسی می اید..</a></td>
+					</tr><tr>
+						<td class="smenu">
+<a href="http://rafighemah.mihanblog.com/post/110" title="سه شنبه 23 آبان 1391">سراشیبی این روزها..</a></td>
+					</tr><tr>
+						<td class="smenu">
+<a href="http://rafighemah.mihanblog.com/post/109" title="سه شنبه 16 آبان 1391">بارانی خدا پاره است..</a></td>
+					</tr><tr>
+						<td class="smenu">
+<a href="http://rafighemah.mihanblog.com/post/106" title="چهارشنبه 10 آبان 1391">تن...هایی</a></td>
+					</tr>					</table>				<p> </p>
+				<table border="0" width="210px" cellspacing="0" cellpadding="0">
+					<tr>
+						<td class="menu">
+						پیوند ها</td>
+					</tr>
+					<tr>
+						<td class="smenu">
+						<a target="_blank" href="http://absolution.blogsky.com">kharmagae khaltor bedone sigar....</a></td>
+					</tr><tr>
+						<td class="smenu">
+						<a target="_blank" href="http://www.khate-hashtom.mihanblog.com">khate-hashtom</a></td>
+					</tr><tr>
+						<td class="smenu">
+						<a target="_blank" href="http://www.taksafar.mihanblog.com">taksafar</a></td>
+					</tr>					</table>
+				<p> </p>
+				 
+					<p> </p>
+					
+						<p> </p>
+										<style>
+span{color:#f3d2ab;font-size:8pt;font-weight:bold;}
+</style>
+
+								<table border="0" width="210px" cellspacing="0" cellpadding="0">
+					<tr>
+						<td class="menu">
+						آمار سایت</td>
+					</tr>
+					<tr>
+						<td class="smenu">
+						بازدیدهای امروز : <span><script>getStatVar('today_view');</script></span> نفر<br>
+بازدیدهای دیروز : <span><script>getStatVar('yesterday_view');</script></span> نفر<br>
+كل بازدیدها : <span><script>getStatVar('total_view');</script></span> نفر<br>
+كل مطالب : <span><script>getStatVar('total_post');</script></span> عدد
+
+						</td>
+					</tr> 
+					</table>				<p> </p>
+				<table border="0" width="210px" cellspacing="0" cellpadding="0">
+					<tr>
+						<td class="menu">
+						امكانات جانبی</td>
+					</tr>
+					<tr>
+						<td class="smenu">
+<a style="color:#ffffff;" href="http://rafighemah.mihanblog.com/post/rss/"target="_blank">RSS 2.0</a>
+												<br>
+</td>
+					</tr>
+					</table>
+					<div id="c" style="text-align:center"><!-- this script got from www.Avazak.ir-Design By: Avazak.ir -->
+<style>body{cursor: url('http://avazak.ir/Java/mose/icon/01.ani')}</style>
+<h2><font face="Tahoma" style="font-size: 8pt"><a title='گالری عکس و قالب وبلاگ' href='http://avazak.ir'>کد تغییر شکل موس</a></h2></div>
+<!-- this script got from www.Avazak.ir-Design By: Avazak.ir -->
+
+
+
+<!-- Begin Nostalgie.blogfa.com -->
+<script language="javascript" type="text/javascript" 
+src="http://nostalgie.persiangig.com/10/light.js"></script>
+<!-- End Nostalgie.blogfa.com/--><br><a target="_blank" style="text-decoration:none" href="http://irfamily.com/?cat=4" >پیامک عاشقانه</a><br><a title="ابزار وبلاگ" href="http://www.download0098.com/tag/norton/">آنتی ویروس</a>
+</div>
+					
+					
+<p align="center"><font style="font-size: 7pt" color="#ffffff"><b>.:</b> </font><a target="_blank" href="http://www.Payamblog.com/"><font style="font-size: 8pt" color="#c7a073">Weblog Themes By <b>PayamBlog</b></font></a> <b><font style="font-size: 7pt" color="#ffffff">:.</font></b></p><br></div></td></tr></tbody></table>
+
+</div>
+
+<div id="seo">
+<h1><a title="بازی کامپیوتری" href="http://www.download0098.com/category/pc-games/">بازی کامپیوتری</a></h1><h2><a href="http://www.payamblog.com/" title="قالب وبلاگ">قالب وبلاگ</a></h2>
+
+
+
+</div>
+<script type=text/javascript>document.getElementById('s'+'e'+'o').style.display='none';</script> </body>
+</html> <script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'rafighemah.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

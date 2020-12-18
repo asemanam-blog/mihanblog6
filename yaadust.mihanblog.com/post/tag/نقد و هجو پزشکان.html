@@ -1,0 +1,1202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc%3Frsd.html" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*242877*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','3795');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','چهارشنبه 22 آبان 1398');
+	
+	setStatVar('today_view','279');
+	setStatVar('yesterday_view','36');
+	
+	setStatVar('this_month_view','8073');
+	setStatVar('last_month_view','8674');
+
+	setStatVar('total_view','1316056');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (08:44)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://yaadust.mihanblog.com/statupdate/?data[refereruri]=http://yaadust.mihanblog.com/post/archive/1396/5&data[postid]=&data[requesturi]=/post/tag/%D9%86%D9%82%D8%AF%20%D9%88%20%D9%87%D8%AC%D9%88%20%D9%BE%D8%B2%D8%B4%DA%A9%D8%A7%D9%86&data[sdate]=1608182101&data[hash]=d6d03820bf9d1d0eecc78692ad3c73b3&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[3684]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[3684]='0';
+mihanblogDisLikeArrCnt[3684]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://yaadust.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://yaadust.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://yaadust.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://yaadust.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Theme Designer" content="www.MyTheme.ir">
+
+    <meta name="description" content="ادبیات به مفهوم "ادبی" آن ، شامل هر نوع نوشتار یا حتی گفتاری میشود ...
+در انتخاب وَ انعکاس آن هر چه مطلب بیشتر "از مردم " وَ "یا مردم" باشد ، ماندگارتر وَ اصیل-ترست ...
+"/>
+    <meta name="keywords" content="مردم ، اجتماع ، فرهنگ ، مذهب ، سیاست ، وَ ..."/>
+    <link rel="alternate" type="application/rss+xml" title="وقتی خـــدا غـریـبـــه-ست، آدم شـدن مـحـالـه ..." href="../rss/index.html" />
+    <link rel="alternate" type="application/atom+xml" title="وقتی خـــدا غـریـبـــه-ست، آدم شـدن مـحـالـه ..." href="../atom/index.html" />
+    <link href="http://mihanblog.com/public/public/user_data/template/2099932/style.css" type="text/css" rel="stylesheet">
+
+    <title>وقتی خـــدا غـریـبـــه-ست، آدم شـدن مـحـالـه ... - مطالب ابر نقد و هجو پزشکان</title>
+</head>
+
+<body>
+
+<div align="center">
+<table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;</td>
+<td class=div2>
+<div class=div00>
+
+<div class=div60>
+    <div class=div101>
+        <div class=div10><font class=title>وقتی خـــدا غـریـبـــه-ست، آدم شـدن مـحـالـه ...</font></div></div>
+    <div class=div11>
+        <div class=div12><font class=des>با مردم بودن قریحه-ی ادبی وَ هنری را بیشتر رشد مـیـدهـد ...</font></div></div>
+</div>
+
+<div class=ss>
+    <div class=s1><form id="frm-16081821015fdae95538ec1" method="get" action="http://yaadust.mihanblog.com/post/search/fid/16081821015fdae95538ec1"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+        <div class=s2>
+            <input type="text" name="search_text" size="20" style="border: 0px none; background: none; font-family:Tahoma; font-size:9pt; direction:ltr"></div>
+        <div class=s3><input type="image" src="http://mihanblog.com/public/public/user_data/template/2099932/blank.gif" width=22 height=21 value="جستجو"></div>
+    <input type="hidden" name="frm-id" value="16081821015fdae95538ec1" id="frm-id" /></form></div>
+
+    <div class=s4>
+        <div class=s5><font class=text10>
+            <a href="../../index.html">صفحه نخست</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:messageForm()">تماس با مدیر</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="mailto:farsiblog@yahoo.com">پست الکترونیک</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="../rss/index.html">RSS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="../atom/index.html">ATOM</a></font></div></div>
+</div>
+
+<div class=mdiv17></div>
+
+<div class=mdiv170>
+
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>درباره وبلاگ</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341>
+            <div class=mdiv31><font class=text1><center><img src="http://static.mihanblog.com//public/user_data/web_photo/81/242877.jpg?9307"  /><br><br>
+                گر در طلب لقمه نانی،<br />
+نانی /<br />
+گر در طلب گوهر كانی،<br />
+كانی /<br />
+این نكته رمز اگر بدانی،<br />
+دانی /<br />
+هر چیز كه اندر پی آنی،<br />
+آنی ...<br />
+<br />
+مـــولانـــا<br />
+<br />
+<br />
+امام خمینی:<br />
+<br />
+همه باید نظر خودشان را بدهند /<br />
+<br />
+و هیچ کدام هم برایشان حتی جایز نیست که یک چیزی را بفهمند و نگویند. /<br />
+<br />
+باید وقتی می فهمند، اظهار کنند. /<br />
+<br />
+این موافق هر که باشد ، باشد ، مخالف هرکه هم باشد ، باشد. /<br />
+<br />
+( صحیفه امام،ج13،ص102) <br />
+</center><br>
+                <b>مدیر وبلاگ :</b> <a href="../author/144112.html">عـبـــد عـا صـی </a></font></div>
+        </div><div class=mdiv30></div>
+    </div>
+
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>مطالب اخیر</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341><font class=text1><ul>
+            <li><a href="../4092.html">    دومین عامل مرگ وُ میر ...  </a></li><li><a href="../4091.html">   چـــرا بـرای بـسـیـاری از مـسؤلین کلاسـهـای اخـــلاق اسـلامی اجـبـاری نـشـده؟؟؟!!! ...  </a></li><li><a href="../4090.html">    عروسک‌هایی با شخصیت‌های دینی ... </a></li><li><a href="../4089.html">       طلبه ای که به لوستر های حرم امیر المومنین اعتراض داشت </a></li><li><a href="../4087.html">     سریال سایه بان     </a></li><li><a href="../4086.html">    چه عواملی باعث دورشدن همسر می‌شود؟   </a></li><li><a href="../4084.html">        برگزیده-ی سخنان امام علی (ع) امیرالمومنین     </a></li><li><a href="../4082.html">   به تو می اندیشم    </a></li><li><a href="../4081.html"> «نسیه و وجه دستی داده می شود!» </a></li><li><a href="../4080.html">کریمان جان فدای دوست کردند</a></li><li><a href="../4079.html">کشت وُ کار «خسروی» هر چی بکاری میدروَی (درومیکنی) ... </a></li><li><a href="../4077.html">    «هرجایی»‌ها و هیچ‌انگاری!</a></li><li><a href="../4076.html">     فـقـط یـــاد گـــرفتی ایـــراد بـگـیـــری وُ بـــری بالا مـنـبـــر! ...  </a></li><li><a href="../4075.html">علی آشکاترین حقیقت و ...</a></li><li><a href="../4074.html"> این فتح الفتوح در تاریخ ماندنی شد ...  </a></li><li><a href="../4073.html">محمد مهاجری: بزرگترین آفت صدا و سیما ...   </a></li><li><a href="../4072.html">  درک فیتزجرالد از رباعیات خیام ...   </a></li><li><a href="../4071.html"> محمد رضا زائری: باید فریاد بزنیم که این دین نیست! ...</a></li><li><a href="../4070.html">  فرض كنید كسی هم هشدار داده بود!  </a></li><li><a href="../4069.html">صد رحمت به شرم وُ حیای گربه ...</a></li><li><a href="../4068.html">    مـــدیـــریـت وَ انـســـانـیـت ...   </a></li><li><a href="../4067.html">بـــاج گـیـــری ...  </a></li><li><a href="../4066.html">  اینا هَمَش بخاطر انتخاباته ...  </a></li><li><a href="../4065.html"> فامیل خدا</a></li><li><a href="../4064.html">علت چاقی ناگهانی چیست؟</a></li><li><a href="../4063.html"> ناکامی علت اصلی بروز خشونت در جامعه </a></li><li><a href="../4061.html">مسعود پزشکیان: اگر بنا بر استیضاح باشد باید همه ما استیضاح شویم</a></li><li><a href="../4060.html">این دو  شکایت بجایی نرسیده!؟</a></li><li><a href="../4059.html"> اصلاح‌طلبان و اصولگراها دست‌شان در دست هم است؟</a></li><li><a href="../4058.html"> زیباکلام: اتفاقا باید استیضاح رئیس جمهور مطرح شود</a></li>        </ul></font></div><div class=mdiv30></div>
+    </div>
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>آرشیو وبلاگ</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341><font class=text1><ul>
+            <li><a href="../archive/1398/8.html"> آبان 1398</a></li><li><a href="../archive/1398/7.html"> مهر 1398</a></li><li><a href="../archive/1398/6.html"> شهریور 1398</a></li><li><a href="../archive/1398/4.html"> تیر 1398</a></li><li><a href="../archive/1398/3.html"> خرداد 1398</a></li><li><a href="../archive/1398/2.html"> اردیبهشت 1398</a></li><li><a href="../archive/1398/1.html"> فروردین 1398</a></li><li><a href="../archive/1397/12.html"> اسفند 1397</a></li><li><a href="../archive/1397/11.html"> بهمن 1397</a></li><li><a href="../archive/1397/10.html"> دی 1397</a></li><li><a href="../archive/1397/9.html"> آذر 1397</a></li><li><a href="../archive/1397/8.html"> آبان 1397</a></li><li><a href="../archive/1397/7.html"> مهر 1397</a></li><li><a href="../archive/1397/6.html"> شهریور 1397</a></li><li><a href="../archive/1397/5.html"> مرداد 1397</a></li><li><a href="../archive/1397/4.html"> تیر 1397</a></li><li><a href="../archive/1397/3.html"> خرداد 1397</a></li><li><a href="../archive/1397/2.html"> اردیبهشت 1397</a></li><li><a href="../archive/1397/1.html"> فروردین 1397</a></li><li><a href="../archive/1396/12.html"> اسفند 1396</a></li><li><a href="../archive/1396/11.html"> بهمن 1396</a></li><li><a href="../archive/1396/10.html"> دی 1396</a></li><li><a href="../archive/1396/9.html"> آذر 1396</a></li><li><a href="../archive/1396/8.html"> آبان 1396</a></li><li><a href="../archive/1396/7.html"> مهر 1396</a></li><li><a href="../archive/1396/6.html"> شهریور 1396</a></li><li><a href="../archive/1396/5.html"> مرداد 1396</a></li><li><a href="../archive/1396/4.html"> تیر 1396</a></li><li><a href="../archive/1396/3.html"> خرداد 1396</a></li>            <li><b><a href="../archive.html">آرشیو كل مطالب</a></b></li>
+        </ul></font></div><div class=mdiv30></div>
+    </div>
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>نویسندگان</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341><font class=text1><ul>
+            <li><a href="../author/144112.html">عـبـــد عـا صـی  (3795)</a></li>        </ul></font></div><div class=mdiv30></div>
+    </div>
+    
+		
+    <div class=mdiv24>
+        <div class=mdiv35>
+            <div class=mdiv25><font class=text5>برچسبها</font></div></div>
+        <div class=sm></div>
+        <div class=mdiv341><font class=text1><ul>
+            <li><a href="http://yaadust.mihanblog.com/post/tag/%D8%AE%D8%B4%D9%88%D9%86%D8%AA">خشونت</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%B2%DB%8C%D9%86%D8%A8">زینب</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%B9%D8%B4%D9%82">عشق</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A7%D8%B5%D9%84%D8%A7%D8%AD+%D8%B7%D9%84%D8%A8%D8%A7%D9%86">اصلاح طلبان</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A7%D8%B5%D9%88%D9%84%DA%AF%D8%B1%D8%A7%DB%8C%D8%A7%D9%86">اصولگرایان</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%B3%D9%87%D8%B1%D8%A7%D8%A8+%D8%B3%D9%BE%D9%87%D8%B1%DB%8C">سهراب سپهری</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D9%83%D8%B1%D8%A8%D9%84%D8%A7">كربلا</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A7%D9%86%D8%B5%D8%A7%D9%81">انصاف</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A8%D9%86%D8%AF%DA%AF%DB%8C">بندگی</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%B2%DB%8C%D8%A8%D8%A7+%DA%A9%D9%84%D8%A7%D9%85">زیبا کلام</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A8%D8%B1%D8%AC%D8%A7%D9%85">برجام</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A7%D9%88%D8%A8%D8%A7%D9%85%D8%A7">اوباما</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D8%A7%D8%AA+%D9%85%D8%AC%D9%84%D8%B3">انتخابات مجلس</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%B3%D8%B9%DB%8C%D8%AF+%D8%AC%D9%84%DB%8C%D9%84%DB%8C">سعید جلیلی</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D9%81%D8%A7%D8%B5%D9%84%D9%87+%D8%B7%D8%A8%D9%82%D8%A7%D8%AA%DB%8C">فاصله طبقاتی</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%B8%D8%B1%DB%8C%D9%81">ظریف</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%AD%D8%B3%D9%86+%D8%B1%D9%88%D8%AD%D8%A7%D9%86%DB%8C">حسن روحانی</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%B4%D9%88%D8%B1%D8%A7%DB%8C+%D8%B4%D9%87%D8%B1+%D8%AA%D9%87%D8%B1%D8%A7%D9%86">شورای شهر تهران</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%AE%D8%A8%D8%B1%DA%AF%D8%A7%D9%86+%D8%B1%D9%87%D8%A8%D8%B1%DB%8C">خبرگان رهبری</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D9%85%D8%AD%DB%8C%D8%B7+%D8%B2%DB%8C%D8%B3%D8%AA">محیط زیست</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85+%D8%AE%D9%85%DB%8C%D9%86%DB%8C">امام خمینی</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A7%D8%AD%D9%85%D8%AF%DB%8C+%D9%86%DA%98%D8%A7%D8%AF">احمدی نژاد</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%B0%D9%84%D8%AA">ذلت</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%AF%DA%A9%D8%AA%D8%B1+%D8%B9%D9%84%DB%8C+%D8%B4%D8%B1%DB%8C%D8%B9%D8%AA%DB%8C">دکتر علی شریعتی</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%B3%DB%8C%D8%AF%D8%AD%D8%B3%D9%86+%D8%AE%D9%85%DB%8C%D9%86%DB%8C">سیدحسن خمینی</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%A7%D8%B9%D8%AA%DB%8C%D8%A7%D8%AF">اعتیاد</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D9%81%D8%B3%D8%A7%D8%AF">فساد</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D9%81%D9%82%DB%8C%D8%B1">فقیر</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%AA%D9%88%D8%A7%D9%81%D9%82+%D9%87%D8%B3%D8%AA%D9%87%E2%80%8C%D8%A7%DB%8C">توافق هسته‌ای</a></li><li><a href="http://yaadust.mihanblog.com/post/tag/%D8%AD%D8%B3%DB%8C%D9%86">حسین</a></li>        </ul></font></div><div class=mdiv30></div>
+    </div>
+</div>
+
+<div class=div20>
+
+    		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="../3684.html">  تمسخر بیماران روانی ، روانپزشكان، روانشناسان و مشاوران در ... </a></font></div>
+            <div class=div58><font class=text7>یکشنبه 15 مرداد 1396 :: نویسنده : <a href="../author/144112.html">عـبـــد عـا صـی </a></font></div>
+
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+  <div dir="RTL" style="line-height: 200%; margin: 0" align="right">
+    <b>
+    
+    
+  <strong>
+
+    <b>
+      
+            &nbsp;<p dir="rtl" style="line-height: 36px; margin-top: 0px; margin-bottom: 0px" align="justify"><b style="color: rgb(68, 68, 68); font-family: Tahoma; font-size: 12px; font-style: normal; font-variant: normal; letter-spacing: 3px; line-height: normal; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(183, 152, 105)">
+                  <span style="color: #FFFFFF; font-family: Microsoft Sans Serif; font-size: large; font-weight: 700; background-color: #00B700">
+                  &nbsp; بسم الله الرحمن الرحیم &nbsp;</span></b></p><div dir="rtl" align="justify">
+              <div style="DIRECTION: rtl">
+                  <div id="docDiv3TitrRou">
+                    <br>
+&nbsp;<div align="justify">
+                      <span style="text-decoration: overline blink; background-color: #F2F2F2">
+                      <font size="6" face="Arial"><font color="#6600CC"><u>&nbsp;
+                      </u></font><font color="#CC0000">
+                      <a href="http://migna.ir/vdciq5a5.t1az52bcct.html" title="[1396-05-02 18:29] 
+در آخرین شب تابستانی تیرماه مردم و خانواده‌های ایرانی پای برنامه دورهمی مهران مدیری نشستند تا احتمالا ...">
+                      <font color="#6600CC">تمسخر بیماران روانی ، روانپزشكان، 
+                      روانشناسان و مشاوران در ...&nbsp; </font></a></font>
+                      </font></span><br>
+                      <br>
+                      <br>
+                      <b style="color: rgb(68, 68, 68); font-family: Tahoma; font-size: 12px; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(183, 152, 105)">
+                      <b style="color: rgb(42, 32, 17); font-size: 12px; line-height: normal; background-color: rgb(183, 152, 105)">
+                      <span style="background-color: rgb(255, 255, 0)">
+                      <font size="5" face="Arial" color="#0000ff">&nbsp;
+                      <span lang="fa">جهت مراجعه به&nbsp;</span></font></span></b><span lang="fa"><b style="color: rgb(42, 32, 17); font-size: 12px; line-height: normal; background-color: #E3FFFF"><font size="5" face="Arial" color="#0033cc">مرجع 
+                      متن</font></b><b style="color: rgb(42, 32, 17); font-size: 12px; line-height: normal; background-color: rgb(183, 152, 105)"><span style="background-color: rgb(255, 255, 0)"><font size="5" face="Arial" color="#0000ff">، 
+                      یا&nbsp;</font></span></b><b style="color: rgb(42, 32, 17); font-size: 12px; line-height: normal; background-color: #E3FFFF"><font size="5" face="Arial" color="#0033cc">عنوان 
+                      اصلی</font></b><span style="background-color: rgb(255, 255, 0)"><font size="5" face="Arial" color="#0000ff"><b style="line-height: normal">، 
+                      به پیوند فوق اشاره</b></font></span></span><span style="background-color: rgb(255, 255, 0)"><font size="5" face="Arial" color="#0000ff"><b style="line-height: normal"> 
+                      کنید&nbsp; </b></font></span></b><br>
+&nbsp;</div>
+                  </div>
+                  <div id="leadtxt" align="justify">
+                    <div class="back_lead">
+                      <div id="docDiv4Lead">
+                        <font color="#000099">
+                        <span style="background-color: rgb(204, 255, 255)">
+                        <font size="4" face="Mihan-IransansBold">
+                        <img src="http://migna.ir/images/docs/000041/n00041446-b.jpg" alt="تمسخر بیماران روانی و تخریب روانپزشكان، روانشناسان و مشاوران در برنامه «دورهمی»!" title="تمسخر بیماران روانی و تخریب روانپزشكان، روانشناسان و مشاوران در برنامه «دورهمی»!" id="docBigImg" vspace="0" hspace="0" height="333" border="0" width="524"></font></span></font><p>
+                        <font color="#000099">
+                        <span style="background-color: rgb(204, 255, 255)">
+                        <font size="4" face="Mihan-IransansBold">در آخرین شب 
+                        تابستانی تیرماه مردم و خانواده‌های ایرانی پای برنامه 
+                        دورهمی مهران مدیری نشستند تا احتمالا لختی بیاسایند و پای 
+                        نمایش‌های طنز برنامه لبخندی به لبانشان بنشیند.</font></span></font></p></div>
+                    </div>
+                  </div>
+                  <div id="docDiv1" align="justify">
+                    <div id="doc_div6">
+                      <div align="justify">
+                        <font color="#000099">
+                        <span style="background-color: rgb(204, 255, 255)">
+                        <font size="4" face="Mihan-IransansBold">شب گذشته (31 
+                        تیر 1396) برنامه طنز دورهمی موضوع خود را به مشورت و 
+                        مراكز مشاوره اختصاص داد.</font></span></font></div>
+                    </div>
+                  </div>
+                  <div class="body body_media_content_show" style="text-align: justify; padding: 10px" align="justify">
+                    <div>
+                      <font size="4" face="Mihan-IransansBold">
+                      <font color="#000099">
+                      <span style="background-color: #FFFF00">به گزارش میگنا 
+                      دکتر مجتبی ارحام‌صدر - روانپزشك،</span><span style="background-color: rgb(204, 255, 255)"> 
+                      طی یادداشتی اعتراضی نسبت به این برنامه در روزنامه شرق نوشت: 
+                      در آخرین شب تابستانی تیرماه مردم و خانواده‌های ایرانی پای 
+                      برنامه دورهمی مهران مدیری نشستند تا احتمالا لختی بیاسایند 
+                      و پای نمایش‌های طنز برنامه لبخندی به لبانشان بنشیند.&nbsp; اما 
+                      این «دورهمی» از جنس دیگری بود و بابی را در رسانه ملی فتح 
+                      کرد که تاکنون سابقه نداشته است. <br>
+                      &nbsp; در حضور تماشاگران برنامه و در مقابل چشم مردم، سازندگان و 
+                      بازیگرانی که احتمالا قصد نقد عملکرد روان‌پزشکان و روان‌شناسان 
+                      را داشتند،</span></font><span style="background-color: rgb(204, 255, 255)"><font color="#FF0000"> 
+                      شروع به تمسخر و استهزای علائم بیماری‌های جدی و سخت روان‌پزشکی 
+                      کردند و با ذکر نام علمی و لاتین بیماری‌ها به صورت نمادین 
+                      به بیماران روان‌پزشکی خندیدند!&nbsp; </font>
+                      <font color="#000099"><br>
+                      مهران مدیری، مجری و سازنده برنامه، هم از کنار گود برنامه 
+                      سریال نه‌چندان زیبای تمسخر بیماری یک عده انسان بی‌گناه را 
+                      تکمیل می‌کرد و دم‌به‌دم آتشی می‌داد که معلوم نیست چه چیزی 
+                      را نخواهد سوزاند!<br>
+                      گذشته نه‌چندان‌دور: در سال‌های اخیر افکار عمومی ما با 
+                      طنزپردازی‌های آقای مدیری که گهگاه جنجالی هم می‌شود غریبه 
+                      نیست.&nbsp; </font><font color="#FF0000">ایشان که نبض زمانه را 
+                      خوب می‌شناسد و سمت وزیدن باد را خوب می‌فهمد، گاهی به تحصن 
+                      نمایندگان مملکت و گاهی به عملکرد سیاست‌مردان خوشنام کشور‌ 
+                      گیر می‌دهد و به‌این‌ترتیب مایه و ماده طنز برای خودش فراهم 
+                      می‌آورد.&nbsp; مدیری یک سریال کامل و درسته هم در نقد و هجو 
+                      پزشکان و پزشکی مملکت ساخت و تا مراحل آخر آن را پیش برد و 
+                      تقریبا هرچه بود و نبود گفت. </font><font color="#000099">
+                      <br>
+                      اما این برنامه از جنس دیگری بود؛ هنوز هم معتقدم سریال‌سازی 
+                      در نقد پزشکان اشکالی ندارد، اگرچه تخریب جای نقد را در آن 
+                      گرفته باشد، اما تمسخر بیماری و علائم بیماران مظلوم روان‌پزشکی 
+                      هیچ توجیهی ندارد، مگر اینکه احتمال بدهیم عده‌ای دارند با 
+                      مستمسک قراردادن نشانه‌ها و اسم بیماری‌های روان آدمی، 
+                      برنامه طنز می‌سازند و با درد بیماران کاسبی می‌کنند.</font></span><font color="#000099"><span style="background-color: #FFFF00"> 
+                      نکته نگران‌کننده همین‌جاست که جای نقد پزشک و روان‌پزشک و 
+                      روان‌شناس با لودگی در مورد نشانگان و رنج و درد بیمار روان‌پزشکی 
+                      عوض شود.</span></font></font></div>
+                    <div>
+                      <font color="#000099">
+                      <span style="background-color: rgb(204, 255, 255)">
+                      <font size="4" face="Mihan-IransansBold">نمونه‌های مشابه: 
+                      خوشبختانه در جهانی زندگی می‌کنیم که نمونه و مشابه برای 
+                      هرچیزی زیاد است. کارگردانان زیادی به سراغ پرداخت طنز از 
+                      آموزه‌های روان‌شناختی رفته‌اند. حتی بسیار نویسنده و هنرمند 
+                      و فیلم‌ساز داریم که مستقیما سروقت بیماری روان‌پزشکی و 
+                      نشانه‌های آن رفته‌اند، اما هوشیار بوده‌اند تا در دام مسخره‌کردن 
+                      بیماران روان‌پزشکی نیفتند. نویسندگانی مثل ساعدی، مرتضاییان 
+                      آبکنار و آیدا مرادی‌آهنی در ایران و خارجیانی چون سالینجر، 
+                      وونه‌گات، بکت، کامو و کارور همگی از گرفتاری‌های روان انسان 
+                      محترمانه گفته‌اند و نوشته‌اند بدون اینکه برچسب بیماری 
+                      روانی به پیشانی کسی بزنند.&nbsp;</font></span></font></div>
+                    <div>
+                      <font color="#00B700">
+                      <span style="background-color: #F2F2F2">
+                      <font size="4" face="Mihan-IransansBold">چه کسی است که 
+                      نوشته‌ها و ساخته‌های وودی آلن را فارغ از دغدغه‌های روان‌شناختی 
+                      بداند، درحالی‌که او هم طنزپرداز است، اما همواره مرز مشخصی 
+                      دارد بین نقد درمانگر و استهزای بیمار و بیماری. برادران 
+                      کوئن در اکثر فیلم‌هایشان شخصیت‌های گرفتار بیماری روان‌پزشکی 
+                      را نمایش می‌دهند، ولی آیا چون طنزپرداز ما به دام ریشخند 
+                      بیماری و رنج دیگری می‌رفتند؟</font></span></font></div>
+                    <div>
+                      <font size="4" face="Mihan-IransansBold">
+                      <span style="background-color: rgb(204, 255, 255)">
+                      <font color="#CE0000">بازی خطرناک با اخلاق و سلامت عمومی: 
+                      در زمانه‌ای که بیش از هر زمان دیگری احتیاج به ارتقای شاخصه‌های 
+                      اخلاق عمومی و سلامت روان داریم، برنامه‌ای زنده روی آنتن می‌رود 
+                      که در آن علنا بیماران روان‌پزشکی دست انداخته می‌شوند و 
+                      دورهمی به آنها و رنج و دردشان می‌خندد!</font><font color="#000099"><br>
+                      این‌چنین نشان بیماری را بر پیشانی تعدادی انسان بی‌گناه‌زدن 
+                      چه پیامی به جامعه می‌دهد؟<br>
+                      در کارزاری که متخصصان سلامت روان، اعم از روان‌پزشک و روان‌شناس 
+                      و مشاور در مبارزه با بیماری‌ها و مشکلات روان‌شناختی جامعه 
+                      دارند،</font></span><font color="#000099"><span style="background-color: #FFFF00"> 
+                      یکی از موانع همیشگی برای مراجعه و طرح مشکل، ترس و نفرت 
+                      بیماران از انگ و استیگمای بیماری روان‌پزشکی است. نام و 
+                      شهرتی که به اسم بیماری روانی مطرح می‌شود همیشه مانعی است 
+                      که انسان گرفتار را از آغوش درمانگران دور می‌کند و به کنج 
+                      تنهایی دردآورش سوق می‌دهد. </span>
+                      <span style="background-color: rgb(204, 255, 255)">
+                      بنابراین مبارزه با انگ بیماری همواره در دستور کار دست‌اندرکاران 
+                      سلامت روان جوامع قرار دارد.<br>
+                      </span></font>
+                      <span style="background-color: rgb(204, 255, 255)">
+                      <font color="#CE0000">در چنین شرایطی شاهدیم که مدیری و 
+                      تیمش چنین ناشیانه و توهین‌آمیز به سراغ علائم و نشانه‌ها و 
+                      نام چند بیماری نادر روانی می‌روند و با آنها دستمایه طنز می‌سازند! 
+                      آیا این برنامه و این نگرش درست در مسیر خلاف سیاست‌های 
+                      سلامت عمومی نیست؟!</font><font color="#000099"><br>
+                      </font></span></font>
+                      <span style="text-decoration: overline blink; background-color: rgb(255, 255, 0)">
+                      <font size="5" face="Arial" color="#000099">
+                      <a href="http://www.aparat.com/v/YIT7R" target="_blank">
+                      مشاهده فیلم : اینجا</a></font></span></div>
+                  </div>
+                  <div align="justify">
+                    <font color="#000099">
+                    <span style="background-color: rgb(204, 255, 255)">
+                    <font size="4" face="Mihan-IransansBold">
+                    <span style="text-decoration: overline blink; background-color: rgb(255, 255, 51)">
+                    <font size="5" face="Arial">
+                    <a href="http://www.aparat.com/v/BfHsc" target="_blank">لینك 
+                    كامل برنامه</a></font></span><br>
+                    <br>
+                    </font></span></font><br>
+                    <font color="#000099">
+                    <span style="background-color: rgb(204, 255, 255)">
+                    <font size="4" face="Mihan-IransansBold">
+                    <span style="background-color: rgb(204, 255, 255)">
+                    <font size="5" face="Latha">
+                    <span style="text-decoration: overline; background-color: #FFFFCC">
+                    <b style="color: rgb(68, 68, 68); font-family: Tahoma; font-style: normal; font-variant: normal; line-height: 56px; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(183, 152, 105)">
+                    <span style="font-weight: 700; background-color: #F2F2F2">
+                    <font face="Arial" color="#0000FF">تهیه وَ تدوین: عـبـــد 
+                    عـا صـی&nbsp; </font></span></b></span></font></span></font>
+                    </span></font>
+                  </div>
+                  </div>
+              </div>
+                  <span style="background-color: #FFFF00">
+            </span></b></strong></b></div><b><strong><b>
+          
+        
+      
+
+   
+
+
+
+
+
+
+
+
+        
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+        
+  
+
+
+
+
+
+
+
+
+        </b>
+  
+
+
+
+
+
+
+
+
+  </strong>
+  
+
+
+
+
+
+
+
+
+        
+  
+
+
+
+
+
+
+
+
+                  <span style="background-color: #FFFF00">
+  
+
+
+
+
+
+
+
+
+        
+  
+
+
+
+
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+
+
+
+
+        
+  
+
+
+
+
+
+
+
+
+</span>
+  
+  
+
+
+
+
+
+
+
+
+        
+  
+
+
+
+
+
+
+
+
+</b>
+  
+  
+
+
+
+
+
+
+
+
+        
+  
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+        
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                                <br><font color="#c70900">برچسب ها :</font>
+                <a href="مشکلات&#32;روان‌شناختی.html" class=text4>مشکلات روان‌شناختی</a>، <a href="دورهمی.html" class=text4>دورهمی</a>، <a href="نقد&#32;و&#32;هجو&#32;پزشکان.html" class=text4>نقد و هجو پزشکان</a>، <a href="مهران&#32;مدیری.html" class=text4>مهران مدیری</a>، <a href="تمسخر&#32;بیماران&#32;روانی.html" class=text4>تمسخر بیماران روانی</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                            </font>
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="../3684.html#commentlist">نظرات (<script>setCommentCnt(3684)</script>)</a></font>
+
+
+            </div>
+            <div style="float:left;margin-left: 111px; margin-top: 14px;"><script>mihanblogPostLike('3684','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 13px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:520px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 25px; padding:0 0 10px 0;}
+            .com1{ width:502px; float:left; background:#0166aa; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:275px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:482px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:482px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:492px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div>
+    <div class=div29></div>
+    <div class=div28><font class=text9>
+                <br><br>
+            </font>
+    </div>
+</div>
+
+<div class=div17>
+
+    <div class=div170>
+
+        
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=mtext5>پیوندهای روزانه</font></div></div>
+            <div class=sm2></div>
+            <div class=div341><font class=mtext1><ul>
+                <li><a href="http://farsiblog.mihanblog.com" title="اگـر از آفـتـــاب بـیـم نـداشـتـنـــد ، هـر شـمـعی را گـردن نـمـیـــزدند! ..." target="_blank">آفـتـــاب در زنـجـیـــر! ...</a></li><li><a href="http://1001shayadobayad.mihanblog.com/" title="فرهنگی ، هنری ، اجتماعی ، سیاسی ، وَ ..." target="_blank">هزار و یک شاید و باید</a></li><li><a href="http://jamaran.ir/fa/" title="سـیـاسـی، مـذهـبـی، فـرهـنـگـی، اجـتـمـــاعـی، وَ ..." target="_blank">پـایـگاه اطـلاع رسانـی و خـبـــری جـمـــاران</a></li><li><a href="http://mohakeme.com/" title="سیاسی-مذهبی" target="_blank">مـحـاکـمـه</a></li><li><a href="http://enteghad10.blogfa.com/" title="سیاسی ، اجتماعی ، مذهبی ، وَ ..." target="_blank">انتقادات دهم</a></li>                <li><b><a href="../../linkdaily/index.html">همه پیوندهای روزانه</a></b></li>
+                <li><b><a href="javascript:linkdailyForm()">ارسال پیوند روزانه</a></b></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+        
+        
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=mtext5>آمار وبلاگ</font></div></div>
+            <div class=sm2></div>
+            <div class=div341><font class=mtext1><ul>
+                <li>کل بازدید : <script>getStatVar('total_view');</script></li>
+                <li>بازدید امروز :<script>getStatVar('today_view');</script></li>
+                <li>بازدید دیروز : <script>getStatVar('yesterday_view');</script></li>
+                <li>بازدید این ماه : <script>getStatVar('this_month_view');</script></li>
+                <li>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></li>
+                <li>تعداد نویسندگان : <script>getStatVar('total_author');</script></li>
+                <li>تعداد کل پست ها : <script>getStatVar('total_post');</script></li>
+                <li>آخرین بازدید : <script>getStatVar('last_view_date');</script></li>
+                <li>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div024><center></center>
+            <style>
+                .mihan_logo {
+                    background: url("http://mihanblog.com/public/public/images/logo/poweredby.gif") no-repeat scroll center top transparent;
+                    height: 131px;
+                    margin-top: 10px;
+                    text-align: center;
+                }
+            </style>
+            <div class="mihan_logo"></div>
+
+        </div>
+    </div>
+
+</div>
+
+</div>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+    <td class=b1>&nbsp;</td>
+    <td class=b2>
+        <div class=div6></div>
+        <div class=div7>
+            <a href="http://www.mytheme.ir" target="_blank">
+                <img src="http://mihanblog.com/public/public/user_data/template/2099932/blank.gif" border=0 width=182 height=35></a></div>
+    </td>
+    <td class=b1>&nbsp;</td>
+</tr>
+</table>
+</div>
+<style>
+    img{
+        max-width : 500px;
+    }
+</style>
+</body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'yaadust.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

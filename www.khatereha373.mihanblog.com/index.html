@@ -1,0 +1,1194 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://khatereha373.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('1399/09/23');
+		/*1873098*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[58]='4';commentCnt[63]='1';commentCnt[64]='1';commentCnt[65]='1';commentCnt[67]='1';commentCnt[69]='1';commentCnt[71]='2';commentCnt[73]='0';commentCnt[82]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[58]='0';
+mihanblogDisLikeArrCnt[58]='0';
+mihanblogLikeArrCnt[63]='0';
+mihanblogDisLikeArrCnt[63]='0';
+mihanblogLikeArrCnt[64]='0';
+mihanblogDisLikeArrCnt[64]='0';
+mihanblogLikeArrCnt[65]='0';
+mihanblogDisLikeArrCnt[65]='0';
+mihanblogLikeArrCnt[67]='0';
+mihanblogDisLikeArrCnt[67]='0';
+mihanblogLikeArrCnt[69]='1';
+mihanblogDisLikeArrCnt[69]='0';
+mihanblogLikeArrCnt[71]='0';
+mihanblogDisLikeArrCnt[71]='0';
+mihanblogLikeArrCnt[73]='0';
+mihanblogDisLikeArrCnt[73]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://khatereha373.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://khatereha373.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','9');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','1399/09/11');
+	
+	setStatVar('today_view','4');
+	setStatVar('yesterday_view','31');
+	
+	setStatVar('this_month_view','584');
+	setStatVar('last_month_view','2621');
+
+	setStatVar('total_view','45693');
+	setStatVar('last_view_date','1399/09/23 (06:41)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://khatereha373.mihanblog.com/statupdate/?data[refereruri]=http://asemanman94.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607831607&data[hash]=fc357d907c74965ba1836607661b02f0&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://khatereha373.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="../khatereha373.mihanblog.com/'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://khatereha373.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://khatereha373.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://khatereha373.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://khatereha373.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://khatereha373.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://khatereha373.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://khatereha373.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://khatereha373.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://khatereha373.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://khatereha373.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://khatereha373.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://khatereha373.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://khatereha373.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://khatereha373.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://khatereha373.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<title>badansaz 3</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="<-BlogAuthor->">
+<meta name="language" content="Farsi">
+<meta name="description" content="badansaz 3 -  - badansaz 3">
+<meta name="keywords" content="badansaz 3,KHATEREHA373, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="badansaz 3" href="http://khatereha373.mihanblog.com/post/rss/" />
+<link href="http://vatanskin.com/theme/104/style.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div align=center><div style="width:775">
+
+<div class=Pichak>
+
+<div id=header>
+<div class=top-BlogTitle></div>
+<div class=top-menu><div class=BlogTitle>badansaz 3</div><div class=Description></div></div>
+
+
+<div class=top-menu2>
+
+<div style="float:right;width:0px;direction:rtl; height:20px"></div>
+<div style="float:right;width:450">
+﻿<a href="index.html">صفحه اصلی</a> |
+<a href="javascript:messageForm()">تماس با من</a> |
+<a href="mailto:SAMIRKHOSRAVI95@GMAIL.COM">ایمیل مدیر</a> |
+<a title="قالب وبلاگ جغد" href="https://ex.agah.com/ref/AE5118/login">ثبت نام بورس و سجام رایگان</a> |
+<a href="http://khatereha373.mihanblog.com/post/rss/" target="_blank" >Feed</a>
+</div>
+</div></div>
+
+<div id=main-back>
+
+<div class=main>
+
+<div class=post>
+
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://khatereha373.mihanblog.com/post/82">کلیک کن</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+
+<div style="text-align: center;"><font size="7" face="Mihan-Iransans"><a href="http://telegram.me/khatereha373" target="_blank" title="">سلام چطوری اگه تلگرام داری کلیک کن بریم&nbsp;پشیمون نمیشی</a></font></div><div style="text-align: center;"><font size="3" face="Mihan-Nassim">عضو شو مطالباش مفیده</font></div><div style="text-align: center;"><font size="3" face="Mihan-Nassim">در ضمن از صفحات جداگانه سایت نیز استفاده کنید</font></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : 1399/09/11  | 21:49  | نویسنده : <a href="http://khatereha373.mihanblog.com/post/author/1549095">حمید خسروی </a> | <a target="_self" href="javascript:newComment(82)">نظرات  <script>setCommentCnt(82)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://khatereha373.mihanblog.com/post/73">فرم کل بدن با صفحه وزنه</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+<div class="feature-img" style="text-align: center; box-sizing: border-box; margin-bottom: 20px; color: rgb(142, 142, 142);"><img hspace="0" border="0" align="baseline" vspace="0" src="../file.mihanblog.com/public/user_data/user_files/625/1873098/download.jpg" alt=""></div><h1 class="post-tile entry-title" itemprop="name" style="box-sizing: border-box; margin: 0px 0px 10px; line-height: 1.3em; color: rgb(64, 69, 77);"><font face="Mihan-Iransans" size="2">تمرین فرم دهنده کل بدن با صفحه وزنه</font></h1><div class="entry-content" style="box-sizing: border-box;"><p style="color: rgb(142, 142, 142); box-sizing: border-box; margin: 0px 0px 20px;"><font face="Mihan-Iransans" size="2">شاید همیشه تصور می کردید که صفحه وزنه یک کاربرد بیشتر ندارد آن هم اینکه با اضافه یا کم کردن صفحه وزنه می توانید هالترها را سنگین تر یا سبک تر کنید. اما وقت آن رسیده که ذهنتان را فراتر از اینها ببرید، خود صفحه وزنه می تواند برایتان یک وسیله ورزشی مجزا باشد. حرکاتی که حتی فکرش را هم نمی کنید، می توانید با استفاده از همین صفحه وزنه انجام دهید. مطمئناً فکرش را هم نمی کردید که با همین وزنه های ساده ورزشی می توانید تمرین کل بدن داشته باشید و عضلات کل بدنتان را درگیر کند.</font></p><h4 style="color: rgb(64, 69, 77); box-sizing: border-box; line-height: 1.3em; margin-top: 0px; margin-bottom: 10px;"><font face="Mihan-Iransans" size="2"><strong style="box-sizing: border-box;">راهنمای</strong><strong style="box-sizing: border-box;">&nbsp;کل</strong><strong style="box-sizing: border-box;">&nbsp;تمرینات:</strong></font></h4><ol style="color: rgb(142, 142, 142); box-sizing: border-box; margin-top: 0px; margin-bottom: 20px;"><li style="box-sizing: border-box; margin-bottom: 2px;"><font face="Mihan-Iransans" size="2">برای هرکدام از تمرینات ورزشی ای که در ادامه یادتان خواهیم داد، بیشترین تکرار را درنظر بگیرید و تا جایی که می توانید و توان دارید هر حرکت را ادامه دهید.</font></li><li style="box-sizing: border-box; margin-bottom: 2px;"><font face="Mihan-Iransans" size="2">بهتر است برای هر حرکت ۵ ست درنظر بگیرید و بعد از اتمام هرست و زمانی که حسابی خسته شدید، دو دقیقه استراحت داشته باشید و مجدداً حرکت را از ابتدا شروع کنید.</font></li><li style="box-sizing: border-box; margin-bottom: 2px;"><font face="Mihan-Iransans" size="2">مجموع تکرارهایتان را ثبت کنید، اینکار در ارزیابی های بعدی حسابی به کمکتان خواهد آمد.</font></li></ol><h3 style="box-sizing: border-box; line-height: 1.3em; margin-top: 0px; margin-bottom: 10px;"><font face="Mihan-Iransans" size="2">در ادامه حرکات بدنسازی رو با هم می بینیم</font></h3></div>
+
+
+
+
+
+
+<br><a href='http://khatereha373.mihanblog.com/post/73'>ادامه مطلب</a>
+											برچسب ها:
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C" >بدنسازی</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2" >بدنساز</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D9%88%D8%B2%D9%86%D9%87" >وزنه</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%B5%D9%81%D8%AD%D9%87%20%D9%88%D8%B2%D9%86%D9%87" >صفحه وزنه</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%B5%D9%81%D8%AD%D9%87%20%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C" >صفحه بدنسازی</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/373" >373</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%B9%D8%B6%D9%84%D9%87%20%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C" >عضله بدنسازی</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : 1397/09/15  | 16:03  | نویسنده : <a href="http://khatereha373.mihanblog.com/post/author/1549095">حمید خسروی </a> | <a target="_self" href="javascript:newComment(73)">نظرات  <script>setCommentCnt(73)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://khatereha373.mihanblog.com/post/71">کدام غذا برای عضله سازی بهتر است؟</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+
+
+<h2 style="box-sizing: border-box; border: 0px; margin: 0px 0px 20px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 50px; font-weight: 400; direction: rtl; unicode-bidi: embed; text-align: right;"><font face="Mihan-Iransans" style="" size="2">کدام غذا برای عضله سازی بهتر است؟</font></h2><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">غذاهای حاوی&nbsp;<span style="box-sizing: border-box; border-bottom: 1px dashed rgb(154, 123, 0); border-top-style: initial; border-right-style: initial; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-left-color: initial; border-image: initial; outline-color: initial; outline-style: initial; unicode-bidi: embed;">پروتئین برای تقویت عضلات</span>&nbsp;بسیار مهم هستند اما کربوهیدرات‌ها و چربی‌ها نیز به‌عنوان منابع انرژی برای بدن ضروری هستند. برای رسیدن به ماهیچه‌های عضلانی باید ورزش منظم و دریافت بیشتر کالری از غذاهای مناسب عضله سازی را در اولویت خود قرار دهید.</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">البته توصیه می‌کنیم اگر درمورد پروتئین اطلاعات زیادی ندارید و نمی‌دانید چه تاثیری روی عضله سازی و کاهش وزن دارد، حتما مقاله “<span style="box-sizing: border-box; border-bottom: 1px dashed rgb(154, 123, 0); border-top-style: initial; border-right-style: initial; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-left-color: initial; border-image: initial; outline-color: initial; outline-style: initial; unicode-bidi: embed;">سه نکته مهم و اساسی درمورد پروتئین</span>” را بخوانید. در این مطلب پروتئین را کامل معرفی کرده‌ایم و تاثیر آن بر کاهش چربی و افزایش عضله را بررسی کرده‌ایم.</font></p><h3 style="box-sizing: border-box; border: 0px; margin: 0px 0px 17px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 45px; -webkit-font-smoothing: antialiased; font-weight: 400; direction: rtl; unicode-bidi: embed; text-align: right;"><font face="Mihan-Iransans" size="2">1. تخم ‌مرغ</font></h3><div style="text-align: center;"><img hspace="0" border="0" align="middle" vspace="0" src="http://club.golhaco.ir/Images/images/Cooking/Food%20Tips/Facts%20about%20Eggs/Facts%20about%20Eggs%201.jpg" alt=""></div><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">تخم ‌مرغ حاوی پروتئین باکیفیت، چربی‌های سالم و سایر مواد مغذی مهم مانند ویتامین B و کولین است.</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">پروتئین‌ها از اسیدهای آمینه ساخته می‌شوند. تخم‌مرغ حاوی مقادیر زیادی از آمینو اسید&nbsp;<strong style="box-sizing: border-box; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">لوسین</strong>&nbsp;است که برای افزایش عضله بسیار مهم است.</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">همچنین، ویتامین‌های B برای فرآیندهای مختلف در بدن، ازجمله تولید انرژی بسیار مهم هستند. برای دریافت اطلاعات بیشتر درباره ویتامین B و عملکرد آن در لاغری می‌توانید مطلب&nbsp;&nbsp;<span style="box-sizing: border-box; border-bottom: 1px dashed rgb(154, 123, 0); border-top-style: initial; border-right-style: initial; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-left-color: initial; border-image: initial; outline-color: initial; outline-style: initial; unicode-bidi: embed;">۵ ویتامین برای لاغری و افزایش متابولیسم + منابع ویتامین ها</span>&nbsp;را در مجله فیت شیپ مطالعه کنید.</font></p><h3 style="box-sizing: border-box; border: 0px; margin: 0px 0px 17px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 45px; -webkit-font-smoothing: antialiased; font-weight: 400; direction: rtl; unicode-bidi: embed; text-align: right;"><font face="Mihan-Iransans" size="2">2.&nbsp;<span style="box-sizing: border-box; border-bottom: 1px dashed rgb(154, 123, 0); border-top-style: initial; border-right-style: initial; border-left-style: initial; border-top-color: initial; border-right-color: initial; border-left-color: initial; border-image: initial; outline-color: initial; outline-style: initial; unicode-bidi: embed;">ماهی سالمون</span></font></h3><div><img hspace="1" border="0" align="right" vspace="1" src="../file.mihanblog.com/public/user_data/user_files/625/1873098/oven.jpg" alt=""></div><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">ماهی سالمون یک انتخاب عالی برای ساخت عضله و سلامت کلی است که در لیست غذا برای عضله سازی قرار دارد اما از نوع غذای دریایی است.</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">هر 85 گرم ماهی سالمون حاوی حدود 17 گرم پروتئین، تقریباً 2 گرم اسید چرب امگا 3 و چندین ویتامین مهم از گروه ویتامین‌های B است.</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">اسیدهای چرب امگا 3 نقش مهمی در سلامت عضلات ایفا می‌کنند و حتی ممکن است عضله سازی را در طول برنامه‌های ورزشی افزایش دهند. سالمون یک غذا برای عضله سازی اما از نوع جذاب و خوشمزه است.</font></p><h3 style="box-sizing: border-box; border: 0px; margin: 0px 0px 17px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 45px; -webkit-font-smoothing: antialiased; font-weight: 400; direction: rtl; unicode-bidi: embed; text-align: right;"><font face="Mihan-Iransans" size="2">3. سینه مرغ</font></h3><div style="text-align: center;"><img hspace="0" border="0" align="middle" vspace="0" src="https://www.bistsotoon.com/upl/14457600892.jpg" alt=""></div><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">دلایل خوبی وجود دارد که سینه مرغ به‌عنوان عضو مهمی از لیست غذا برای عضله سازی شناخته شود. سینه مرغ غنی از پروتئین است، هر 85 گرم سینه مرغ حاوی حدود 26 گرم پروتئین باکیفیت است.</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">همچنین حاوی مقادیر زیادی از ویتامین‌های گروه B ازجمله نیاسین و B6&nbsp; می‌باشند و برای فردی که فعال است بسیار اهمیت دارند.</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">این ویتامین‌ها به عملکرد بدنی شما در طول فعالیت بدنی و ورزش کمک می‌کنند و برای عضله سازی ضروری است.</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">علاوه بر این، برخی تحقیقات نشان داده‌اند که رژیم‌های غنی از پروتئین حاوی مرغ می‌تواند باعث کاهش چربی بدنی شود.</font></p><h3 style="box-sizing: border-box; border: 0px; margin: 0px 0px 17px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 45px; -webkit-font-smoothing: antialiased; font-weight: 400; direction: rtl; unicode-bidi: embed; text-align: right;"><font face="Mihan-Iransans" size="2">ادامه در ادامه مطلب</font></h3>
+
+
+
+
+
+
+
+
+
+
+<br><a href='http://khatereha373.mihanblog.com/post/71'>ادامه مطلب</a>
+	<br><br>
+			طبقه بندی: <a href="http://khatereha373.mihanblog.com/post/category/2">
+			ورزش</a>، <br>										برچسب ها:
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C" >بدنسازی</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2" >بدنساز</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/badansaz3" >badansaz3</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/badansaz" >badansaz</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/khatereha373" >khatereha373</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D9%86%DA%A9%D8%A7%D8%AA%20%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C" >نکات بدنسازی</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/373" >373</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : 1397/09/15  | 15:53  | نویسنده : <a href="http://khatereha373.mihanblog.com/post/author/1549095">حمید خسروی </a> | <a target="_self" href="javascript:newComment(71)">نظرات  <script>setCommentCnt(71)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://khatereha373.mihanblog.com/post/69">بدنسازی چیست؟</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+<h3 style="text-align: right;"><span style="color: rgb(255, 0, 0);"><font face="Mihan-Iransans" style="" size="2">ورزش بدنسازی چیست؟</font></span></h3><p style="text-align: right;"><font face="Mihan-Iransans" size="2">هیچ راه میانبر یا رازی برای موفقیت وجود ندارد؛ مگر اینکه برخی متدهای تمرین هوشمندانه تر و بهتر از سایر روش های تمرین بدنسازی باشد. همه آنچه نیاز دارید نوشتن تمام اهداف برای شروع ورزش بدنسازی است. باید انتظارات واقع بینانه تری نسبت به آنچه که در کوتاه مدت یا بلند مدت می خواهید داشته باشید و با یک برنامه روشن و تعریف شده تمرینات بدنسازی خود را آغاز کنید.</font></p><p style="text-align: right;"><font face="Mihan-Iransans" size="2">بدنسازی که البته در انواع مختلفی وجود دارد، لزوماً منجر به افزایش حجم و سایز عضله نمی شود. این برنامه و هدف شماست که تعیین کننده خواهد بود، جالب است بدانید تمامی ورزشکاران در رشته های ورزشی، از جمله فوتبال، بکس، ژیمناستیک و دومیدانی که عضلات خیلی حجیمی ندارند، از تمرینات بدنسازی بهره می گیرند. این تمرینات با&nbsp;<strong><span style="display: inline-block; font-weight: inherit !important;">افزایش قد</span></strong>رت، استقامت و کارایی بدن به ورزشکاران کمک خواهد کرد.</font></p><p style="text-align: right;"><font face="Mihan-Iransans" size="2">علاوه بر این موارد، نمی توان از نقش بدنسازی برای عموم مردم صرف نظر کرد. شما با رشد ماهیچه ها و افزایش استقامت و استحکام آن ها، لطف بزرگی به دوران میان سالی خود خواهید کرد. بدنسازی اگر به شکل درست انجام شود می تواند در حفظ&nbsp;<strong><span style="display: inline-block; font-weight: inherit !important;">سلامت استخوان</span></strong>ها به شما کمک کند.</font></p><p style="text-align: right;"><font face="Mihan-Iransans" size="2">تناسب اندام نیز یکی از مهم ترین مزایای ورزش بدنسازی است که امروزه بیش از هر جنبهٔ آن اهمیت پیدا کرده است. شما برای افزایش حجم عضله و&nbsp;<strong><span style="display: inline-block; font-weight: inherit !important;">چربی سوز</span></strong>ی به کمک بدنسازی نیاز خواهید داشت!</font></p><p class="tcr" style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="../file.mihanblog.com/public/user_data/user_files/625/1873098/75478.jpg" alt=""></p>
+
+
+
+
+
+
+<br>
+											برچسب ها:
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2" >بدنساز</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C" >بدنسازی</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%20%DA%86%DB%8C%D8%B3%D8%AA" >بدنساز چیست</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/badansaz3" >badansaz3</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/badansaz" >badansaz</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%A7%D8%B1%D9%86%D9%88%D9%84%D8%AF" >ارنولد</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%20373" >بدنساز 373</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : 1397/09/15  | 10:19  | نویسنده : <a href="http://khatereha373.mihanblog.com/post/author/1549095">حمید خسروی </a> | <a target="_self" href="javascript:newComment(69)">نظرات  <script>setCommentCnt(69)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://khatereha373.mihanblog.com/post/67">نکاتی برای آغاز برای بدنسازی</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+<p style="text-align: right; box-sizing: border-box; margin: 0px 0px 10px;"><span style="box-sizing: border-box;"><b><font face="Mihan-Iransans" size="3">نکاتی برای آغاز برای بدنسازی</font></b></span></p><p style="text-align: right; box-sizing: border-box; margin: 0px 0px 10px;"><span style="box-sizing: border-box; font-weight: bold;"><img hspace="0" border="0" align="middle" vspace="0" src="http://salamat.life/wp-content/uploads/2017/04/%D8%B3%D9%86-%D8%B4%D8%B1%D9%88%D8%B9-%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C.jpg" alt=""></span></p><p style="text-align: right; box-sizing: border-box; margin: 0px 0px 10px;"><span style="box-sizing: border-box; font-weight: bold;"><font face="Mihan-Iransans" style="" size="2">1- با وزنه‌های عادی شروع کنید</font></span></p><p style="text-align: right; box-sizing: border-box; margin: 0px 0px 10px;"><font face="Mihan-Iransans" size="2">باشگاه‌ها پر از دستگاه‌های مختلف برای وزنه زدن است اما در ابتدا این دستگاه‌ها به شما برای ساختن یک ساختار بدنی منسجم کمک نخواهد کرد. ابتدا از دمبل و وزنه‌های عادی شروع کنید.</font></p><p style="box-sizing: border-box; margin: 0px 0px 10px; text-align: justify;"></p><p style="text-align: right; box-sizing: border-box; margin: 0px 0px 10px;"><span style="box-sizing: border-box; font-weight: bold;"><font face="Mihan-Iransans" size="2">2- حرکات ترکیبی انجام دهید</font></span></p><p style="text-align: right; box-sizing: border-box; margin: 0px 0px 10px;"><font face="Mihan-Iransans" size="2">ممکن است در مجله‌ها و سایت‌های ورزشی حرکات ورزشی مختلفی را ببینید اما باید در شروع کار حرکات پایه‌ای را انجام دهید. حرکاتی همچون اسکات، وزنه و پرس سینه نباید از برنامه شما حذف شود.</font></p><p style="box-sizing: border-box; margin: 0px 0px 10px; text-align: justify;"></p><p style="text-align: right; box-sizing: border-box; margin: 0px 0px 10px;"><span style="box-sizing: border-box; font-weight: bold;"><font face="Mihan-Iransans" size="2">3- برنامه داشته باشید</font></span></p><p style="text-align: right; box-sizing: border-box; margin: 0px 0px 10px;"><font face="Mihan-Iransans" size="2">نمی‌توانید تنها به باشگاه بروید و هر حرکتی دوست دارید انجام دهید. باید یک برنامه خاص داشته باشید و آن را دنبال کنید. از یک مربی بدنسازی یا یک ورزشکار حرفه‌ای بخواهید تا به شما برنامه‌ای بدهد که شخص شما نیاز دارید. تعداد حرکات در این برنامه باید مشخص باشد. هنگامی که به باشگاه می‌روید باید دقیقا بدانید که می‌خواهید چه کار کنید.</font></p><p style="box-sizing: border-box; margin: 0px 0px 10px; text-align: justify;"></p><p style="text-align: right; box-sizing: border-box; margin: 0px 0px 10px;"><span style="box-sizing: border-box; font-weight: bold;"><font face="Mihan-Iransans" size="2">4- هر روز تمرین نکنید</font></span></p><p style="text-align: right; box-sizing: border-box; margin: 0px 0px 10px;"><font face="Mihan-Iransans" size="2">اگر شخصی که برای شما برنامه می‌ریزد حرفه‌ای باشد بیش از 4 روز در هفته به شما تمرین نمی‌دهد. به عنوان یک مبتدی بیشتر از این به تمرین احتیاج ندارید. بقیه روزهای هفته باید استراحت کنید تا ریکاوری صورت گیرد.</font></p><p style="box-sizing: border-box; margin: 0px 0px 10px; text-align: justify;"></p><p style="text-align: right; box-sizing: border-box; margin: 0px 0px 10px;"><span style="box-sizing: border-box; font-weight: bold;"><font face="Mihan-Iransans" size="2">5- هر هفته بر روی همه عضلات کار کنید:</font></span></p><p style="text-align: right; box-sizing: border-box; margin: 0px 0px 10px;"><font face="Mihan-Iransans" size="2">درطول هفته باید حداقل یک بار بر روی هر کدام از گروه‌ عضلات بدن کار کنید. همان طور که تمرین زیاد خوب نیست، تمرین کم هم مناسب نیست.</font></p><p style="box-sizing: border-box; margin: 0px 0px 10px; text-align: justify;"></p><p style="text-align: right; box-sizing: border-box; margin: 0px 0px 10px;"><br></p>
+
+
+
+
+
+
+<br><a href='http://khatereha373.mihanblog.com/post/67'>ادامه مطلب</a>
+	<br><br>
+			طبقه بندی: <a href="http://khatereha373.mihanblog.com/post/category/2">
+			ورزش</a>، <br>										برچسب ها:
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C" >بدنسازی</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D9%86%DA%A9%D8%A7%D8%AA%DB%8C%20%D8%A8%D8%B1%D8%A7%DB%8C%20%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%D8%A7" >نکاتی برای بدنسازا</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : 1397/09/14  | 19:32  | نویسنده : <a href="http://khatereha373.mihanblog.com/post/author/1549095">حمید خسروی </a> | <a target="_self" href="javascript:newComment(67)">نظرات  <script>setCommentCnt(67)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://khatereha373.mihanblog.com/post/65">نکات مهم در مورد بدنسازی</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+
+<div class="single-post-header" style="box-sizing: border-box; border: 0px; margin: 0px; outline: 0px; padding: 30px; vertical-align: baseline; position: relative; color: rgb(40, 40, 40);"><div class="single-title post-title entry-title is-size-1" style="box-sizing: border-box; border: 0px; font-weight: 700; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 0; letter-spacing: -0.04em;"><h1 style="box-sizing: border-box; border: 0px; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: inherit; line-height: 1.15; text-transform: inherit; letter-spacing: inherit; transition: color 0.3s ease-in-out 0s;"><font face="Mihan-Iransans" style="" size="2">نکات مهم در مورد بدنسازی</font></h1></div><div class="post-meta-info is-show-icon" style="box-sizing: border-box; border: 0px; margin: 10px 0px 0px; outline: 0px; padding: 0px; vertical-align: baseline; position: relative; color: rgb(153, 153, 153); line-height: 20px;"><strong style="font-family: Mihan-Iransans; font-size: small; text-align: right; font-style: inherit; color: rgb(40, 40, 40); box-sizing: border-box; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><br></strong></div><div class="post-meta-info is-show-icon" style="box-sizing: border-box; border: 0px; margin: 10px 0px 0px; outline: 0px; padding: 0px; vertical-align: baseline; position: relative; color: rgb(153, 153, 153); line-height: 20px;"><strong style="font-family: Mihan-Iransans; font-size: small; text-align: right; font-style: inherit; color: rgb(40, 40, 40); box-sizing: border-box; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">تک اندام</strong><span style="font-family: Mihan-Iransans; font-size: small; text-align: right; font-style: inherit; font-weight: inherit; color: rgb(40, 40, 40);">&nbsp;</span><span style="font-family: Mihan-Iransans; font-size: small; text-align: right; font-style: inherit; font-weight: inherit; color: rgb(40, 40, 40);">: در این قسمت به دوستان مبتدی حتی پیشرفته چند نکات مهم در مورد رشته بدنسازی و پرورش اندام ذکر میشود که امیدوارم به رعایت از آنها بپردازید و پیشرفت خودتون رو توی این رشته محبوب و پرطرفدار بهتر و اصولی تر پیش بگیرید چیزی که خیلی از بدنسازان مبتدی با اون آشنا نیستند و گاها میخوان یک شبه راه چند ساله رو پیش ببرند با شما هستیم با چند نکات مهم و اصولی ورزش بدنسازی</span></div><div class="post-meta-info is-show-icon" style="box-sizing: border-box; border: 0px; margin: 10px 0px 0px; outline: 0px; padding: 0px; vertical-align: baseline; position: relative; color: rgb(153, 153, 153); line-height: 20px;"><br></div></div><div class="single-post-body" style="box-sizing: border-box; border: 0px; margin: 0px; outline: 0px; padding: 40px 30px; vertical-align: baseline; position: relative; color: rgb(40, 40, 40);"><div class="single-content-wrap" style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px 4px 0px 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><div class="single-entry-wrap" style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><div class="entry single-entry clearfix iframe-loaded" style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; zoom: 1; clear: both; position: relative;"><p style="font-weight: inherit; box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px;"><font face="Mihan-Iransans" size="2"><span id="more-3501" style="box-sizing: border-box; border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"></span></font></p><p style="font-weight: inherit; box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">– تغذیه</font></strong></p><p style="font-weight: inherit; box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">– استراحت</font></strong></p><p style="font-weight: inherit; box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">– نرمش و حرکات کششی</font></strong></p><p style="font-weight: inherit; box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">– تمرین وحرکات اجرائی</font></strong></p><p style="font-weight: inherit; box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">– حرکات اخر تمرین</font></strong></p><p style="font-weight: inherit; box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">–&nbsp; استراحت و ریکاوری</font></strong></p><p style="font-weight: inherit; box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">– مکمل ها و داروها</font></strong></p><p style="font-weight: inherit; box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">– صبر و بردباری</font></strong></p><p style="font-weight: inherit; box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; text-align: right;"><font face="Mihan-Iransans" size="2">قبل از هر چیز باید بگم 3 اصل مهم&nbsp;<strong style="box-sizing: border-box; border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(67, 135, 210); text-decoration: inherit; line-height: inherit; transition: all 0.2s ease 0s;">بدنسازی</strong><font color="#4387d2"><span style="box-sizing: border-box; border-style: initial; border-color: initial; border-image: initial; font-style: inherit; font-weight: inherit; outline-color: initial; outline-width: initial; text-decoration-style: inherit; text-decoration-color: inherit; line-height: inherit; transition-duration: 0.2s; transition-property: all;">&nbsp;</span></font>تغذیه و تمرین و استراحت هستش و هر کدام از آنها کلی شاخه های مربوط به خودش رو داره که ما اینجا مختصر و کوتاه و مفید در موردش توضیح میدیم</font></p><p style="font-weight: inherit; box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; text-align: right;"><font face="Mihan-Iransans" size="2">– اول در بدنسازی تغذیه مناسب است . یک برنامه ی تغذیه ی مناسب و اطاعت کردن از آن می تواند در ساختن عضلات دلخواه به شما بسیار کمک نماید . در اصول بدنسازی 50% آن مرتبط می شود به تغذیه . افراد چاق برای کاهش وزن و افراد لاغر برای افزایش وزن تغذیه های مناسب به خودشون رو باید رعایت کنند و این امر باید با دانش افراد متخصص و یا کاردان صورت گیرد.</font></p><p style="font-weight: inherit; box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">ارامش روحی و روانی است :</font></strong></p><p style="font-weight: inherit; box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; text-align: right;"><font face="Mihan-Iransans" size="2">با توجه به گزارشات تجربی و عملی در این ورزش این را می رساند که یک بدنساز باید از آرامش درونی و جسمانی برخوردار باشد . طبق نمونه تجربی این را مطرح می کند آرامش درونی بسیار امر مهمی است عصبانیت و غمگین بودن باعث کاهش وزن ( حجم عضلات ) و افزایش چربی در بدن می گردد . والبته اینکه کسانی که در این ورزش تمرینات سخت رو با اشتیاق انجام میدهند تمام افسردگی ها و ناراحتی های دنیای بیرون رو به فراموشی میسپارند که این امر باعث خوشحالی هستش.</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; text-align: right;"><font face="Mihan-Iransans" size="2"><b>ادامه در ادامه مطلب</b></font></p></div></div></div></div>
+
+
+
+
+
+
+
+
+<br><a href='http://khatereha373.mihanblog.com/post/65'>ادامه مطلب</a>
+	<br><br>
+			طبقه بندی: <a href="http://khatereha373.mihanblog.com/post/category/2">
+			ورزش</a>، <br>										برچسب ها:
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D9%86%DA%A9%D8%A7%D8%AA%20%D9%85%D9%87%D9%85%20%D8%AF%D8%B1%20%D9%85%D9%88%D8%B1%D8%AF%20%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C" >نکات مهم در مورد بدنسازی</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C" >بدنسازی</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : 1397/09/14  | 17:54  | نویسنده : <a href="http://khatereha373.mihanblog.com/post/author/1549095">حمید خسروی </a> | <a target="_self" href="javascript:newComment(65)">نظرات  <script>setCommentCnt(65)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://khatereha373.mihanblog.com/post/64">10 نکته برای افزایش بازده در تمرینات</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><h3 style="box-sizing: border-box; border: 0px; margin: 0px 0px 17px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 45px; -webkit-font-smoothing: antialiased; font-weight: 400; color: rgb(51, 51, 51); direction: rtl; unicode-bidi: embed; text-align: right;"><span style="box-sizing: border-box; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(0, 128, 0);"><font face="Mihan-Iransans" style="" size="2">1. با کسی که قوی تر از شماست تمرین کنید.</font></span></h3><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed; color: rgb(51, 51, 51);"><font face="Mihan-Iransans" size="2">با فردی تمرین کنید که باعث پیشرفت شما شود؛ همان کسی که به عنوان حریف تمرینی می شناسیم. حتما با شخصی تمرین کنید که روحیه مثبتی داشته باشد، تنبل و پرحرف نباشد، چرا که در این صورت می تواند در میان ست های تمرینی شما وقفه ایجاد کند.</font></p><ul style="box-sizing: border-box; border: 0px; margin: 0px 60px 25px 0px; outline: 0px; padding: 0px; vertical-align: baseline; list-style-position: initial; list-style-image: initial; line-height: 30px; text-align: right; direction: rtl; unicode-bidi: embed; color: rgb(51, 51, 51);"><li style="text-align: right; box-sizing: border-box; border: 0px; margin: 0px 0px 8px; outline: 0px; padding: 0px; vertical-align: baseline; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">حریف تمرینی می تواند سبب ایجاد انگیزه و رقابت در شما شود.</font></li><li style="text-align: right; box-sizing: border-box; border: 0px; margin: 0px 0px 8px; outline: 0px; padding: 0px; vertical-align: baseline; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">می تواند در هنگام ناتوانی به کمک شما آمده و حرکات ناقص شما را کامل کند.</font></li><li style="text-align: right; box-sizing: border-box; border: 0px; margin: 0px 0px 8px; outline: 0px; padding: 0px; vertical-align: baseline; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">می تواند با روحیه مثبتی که به شما می دهد سبب رشد و پیشرفت شما شود.</font></li><li style="text-align: right; box-sizing: border-box; border: 0px; margin: 0px 0px 8px; outline: 0px; padding: 0px; vertical-align: baseline; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">اگر با اصول تمرین آشنا باشد با دیدی که از بیرون نسبت به تمرین شما دارد، می تواند اشتباهات را به شما گوشزد کند.</font></li></ul><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed; color: rgb(51, 51, 51);"><font face="Mihan-Iransans" size="2">حتی اگر می توانید افرادی حرفه ای را دعوت کنید و با آن ها تمرین کنید این کار را انجام دهید. تمرین با افراد بزرگ انگیزه و تجربه را در شما بالا می برد.</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed; color: rgb(51, 51, 51);"><font face="Mihan-Iransans" size="2">&nbsp;</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed; color: rgb(51, 51, 51);"><img class="aligncenter wp-image-3640" src="https://news.fitshape.ir/wp-content/uploads/2017/02/Exercise_Fitshape.jpg" alt="تمرین بدنسازی با حریف تمرینی و دوست خود" width="443" height="295" srcset="https://news.fitshape.ir/wp-content/uploads/2017/02/Exercise_Fitshape.jpg 650w, https://news.fitshape.ir/wp-content/uploads/2017/02/Exercise_Fitshape-300x200.jpg 300w" sizes="(max-width: 443px) 100vw, 443px" style="box-sizing: border-box; max-width: 100%; height: auto; vertical-align: middle; border: 0px; clear: both; display: block; margin: 0px auto 30px;"></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed; color: rgb(51, 51, 51);"><font face="Mihan-Iransans" size="2">&nbsp;</font></p><h3 style="box-sizing: border-box; border: 0px; margin: 0px 0px 17px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 45px; -webkit-font-smoothing: antialiased; font-weight: 400; color: rgb(51, 51, 51); direction: rtl; unicode-bidi: embed; text-align: right;"><span style="box-sizing: border-box; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(0, 128, 0);"><font face="Mihan-Iransans" size="2">2. حرکت را پیش از اجرا تجسم و مرور کنید.</font></span></h3><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed; color: rgb(51, 51, 51);"><font face="Mihan-Iransans" size="2">تصور کنید که اجرای این ست چه شکلی خواهد بود، در اجرای آن فشار بر کدام عضله متمرکز خواهد بود، و چگونه باید به شکل صحیح نفس بکشید. انجام این کار:</font></p><ul style="box-sizing: border-box; border: 0px; margin: 0px 60px 25px 0px; outline: 0px; padding: 0px; vertical-align: baseline; list-style-position: initial; list-style-image: initial; line-height: 30px; text-align: right; direction: rtl; unicode-bidi: embed; color: rgb(51, 51, 51);"><li style="text-align: right; box-sizing: border-box; border: 0px; margin: 0px 0px 8px; outline: 0px; padding: 0px; vertical-align: baseline; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">تمرکز شما در حین تمرین را بالا می برد</font></li><li style="text-align: right; box-sizing: border-box; border: 0px; margin: 0px 0px 8px; outline: 0px; padding: 0px; vertical-align: baseline; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">فشار را بروی عضلات اصلی متمرکز خواهد کرد</font></li><li style="text-align: right; box-sizing: border-box; border: 0px; margin: 0px 0px 8px; outline: 0px; padding: 0px; vertical-align: baseline; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">از آسیب دیدگی تا حد زیادی جلوگیری می کند</font></li><li style="text-align: right; box-sizing: border-box; border: 0px; margin: 0px 0px 8px; outline: 0px; padding: 0px; vertical-align: baseline; direction: rtl; unicode-bidi: embed;"><font face="Mihan-Iransans" size="2">در نتیجه سبب رشد بیشتر عضله هدف خواهد شد</font></li></ul><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed; color: rgb(51, 51, 51);"><font face="Mihan-Iransans" size="2">&nbsp;</font></p><h3 style="box-sizing: border-box; border: 0px; margin: 0px 0px 17px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 45px; -webkit-font-smoothing: antialiased; font-weight: 400; color: rgb(51, 51, 51); direction: rtl; unicode-bidi: embed; text-align: right;"><span style="box-sizing: border-box; border: 0px; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(0, 128, 0);"><font face="Mihan-Iransans" size="2">3. هالتر خود را با وزنه های کوچک سنگین کنید.</font></span></h3><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed; color: rgb(51, 51, 51);"><font face="Mihan-Iransans" size="2">این کار باعث می شود هالتر سبک تر به نظر برسد. مغز شما این شکل هالتر را سنگین تشخیص نمی دهد. این مزیت روانی می تواند کمک کند تا سنگین تر وزنه بزنید و یا تکرار بیشتری داشته باشید.</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed; color: rgb(51, 51, 51);"><font face="Mihan-Iransans" size="2">&nbsp;</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed; color: rgb(51, 51, 51);"><img class="aligncenter wp-image-3643" src="https://news.fitshape.ir/wp-content/uploads/2017/02/Low_Weight_Barbell_Fitshape.jpg" alt="وزنه تمرینی سبک" width="483" height="322" srcset="https://news.fitshape.ir/wp-content/uploads/2017/02/Low_Weight_Barbell_Fitshape.jpg 650w, https://news.fitshape.ir/wp-content/uploads/2017/02/Low_Weight_Barbell_Fitshape-300x200.jpg 300w" sizes="(max-width: 483px) 100vw, 483px" style="box-sizing: border-box; max-width: 100%; height: auto; vertical-align: middle; border: 0px; clear: both; display: block; margin: 0px auto 30px;"></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 10px; outline: 0px; padding: 0px; vertical-align: baseline; overflow-wrap: break-word; line-height: 33px; text-align: right; direction: rtl; unicode-bidi: embed; color: rgb(51, 51, 51);"><font face="Mihan-Iransans" size="2">&nbsp;</font></p>
+
+
+<br><a href='http://khatereha373.mihanblog.com/post/64'>ادامه مطلب</a>
+	<br><br>
+			طبقه بندی: <a href="http://khatereha373.mihanblog.com/post/category/2">
+			ورزش</a>، <br>										برچسب ها:
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C" >بدنسازی</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D9%86%DA%A9%D8%A7%D8%AA%DB%8C%20%D8%AF%D8%B1%20%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C" >نکاتی در بدنسازی</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : 1397/09/13  | 16:53  | نویسنده : <a href="http://khatereha373.mihanblog.com/post/author/1549095">حمید خسروی </a> | <a target="_self" href="javascript:newComment(64)">نظرات  <script>setCommentCnt(64)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://khatereha373.mihanblog.com/post/63">نکات مهم در مورد بدنسازی</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+<p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><font face="Mihan-Iransans" style="" size="2"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">تک اندام</strong>&nbsp;: در این قسمت به دوستان مبتدی حتی پیشرفته چند نکات مهم در مورد رشته بدنسازی و پرورش اندام ذکر میشود که امیدوارم به رعایت از آنها بپردازید و پیشرفت خودتون رو توی این رشته محبوب و پرطرفدار بهتر و اصولی تر پیش بگیرید چیزی که خیلی از بدنسازان مبتدی با اون آشنا نیستند و گاها میخوان یک شبه راه چند ساله رو پیش ببرند با شما هستیم با چند نکات مهم و اصولی ورزش بدنسازی</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40);"><font face="Mihan-Iransans" size="2"><span id="more-3501" style="box-sizing: border-box; border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"></span></font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">– تغذیه</font></strong></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">– استراحت</font></strong></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">– نرمش و حرکات کششی</font></strong></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">– تمرین وحرکات اجرائی</font></strong></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">– حرکات اخر تمرین</font></strong></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">–&nbsp; استراحت و ریکاوری</font></strong></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">– مکمل ها و داروها</font></strong></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">– صبر و بردباری</font></strong></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><font face="Mihan-Iransans" size="2">قبل از هر چیز باید بگم 3 اصل مهم&nbsp;<strong style="box-sizing: border-box; border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(67, 135, 210); text-decoration: inherit; line-height: inherit; transition: all 0.2s ease 0s;">بدنسازی</strong><font color="#4387d2"><span style="box-sizing: border-box; border-style: initial; border-color: initial; border-image: initial; font-style: inherit; font-weight: inherit; outline-color: initial; outline-width: initial; text-decoration-style: inherit; text-decoration-color: inherit; line-height: inherit; transition-duration: 0.2s; transition-property: all;">&nbsp;</span></font>تغذیه و تمرین و استراحت هستش و هر کدام از آنها کلی شاخه های مربوط به خودش رو داره که ما اینجا مختصر و کوتاه و مفید در موردش توضیح میدیم</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><font face="Mihan-Iransans" size="2">– اول در بدنسازی تغذیه مناسب است . یک برنامه ی تغذیه ی مناسب و اطاعت کردن از آن می تواند در ساختن عضلات دلخواه به شما بسیار کمک نماید . در اصول بدنسازی 50% آن مرتبط می شود به تغذیه . افراد چاق برای کاهش وزن و افراد لاغر برای افزایش وزن تغذیه های مناسب به خودشون رو باید رعایت کنند و این امر باید با دانش افراد متخصص و یا کاردان صورت گیرد.</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">ارامش روحی و روانی است :</font></strong></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><font face="Mihan-Iransans" size="2">با توجه به گزارشات تجربی و عملی در این ورزش این را می رساند که یک بدنساز باید از آرامش درونی و جسمانی برخوردار باشد . طبق نمونه تجربی این را مطرح می کند آرامش درونی بسیار امر مهمی است عصبانیت و غمگین بودن باعث کاهش وزن ( حجم عضلات ) و افزایش چربی در بدن می گردد . والبته اینکه کسانی که در این ورزش تمرینات سخت رو با اشتیاق انجام میدهند تمام افسردگی ها و ناراحتی های دنیای بیرون رو به فراموشی میسپارند که این امر باعث خوشحالی هستش.</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">ارامش و آمادگی جسمانی :</font></strong></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><font face="Mihan-Iransans" size="2">مثلا : شما از ساعت 7 صبح به سر کار رفتید و در ساعت 7شب از سر کار برگشتید و همین موقع به باشگاه یا سر تمرین بروید به علت خستگی بدن – بدن به هیچ عنوان حاضر به جواب دهی نمی باشد و به قول بدنسازان فقط حمالی میله رو خواهید کرد . از لحاظ جسمانی شما موقعی آمادگی کامل را دارید که حداقل بعد از کار حدود 30-60 دقیقه اصتراحت مفید داشته باشید و در همین زمان هم را می توان برای تغذیه گذاشت مثلا 30 دقیقه استراحت مفید و 30 دقیقه برای تغذیه . در این موقع است که بدن شما امادگی نصبی را برای تمرین و رشد عضلات پیدا میکند .</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">– نرمش کردن</font></strong></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><font face="Mihan-Iransans" size="2">اما بعد از اجرا موارد فوق حالا شما اماده تمرین کردن هستید اولین قدم برای شروع تمرین نرمش کردن است که شما در قسمت نرمش و حرکات کششی میباشد که باعث آمادگی عضلات قبل از تمرین میباشد و همینطور از آسیب دیدگی ها جلوگیری میکند .</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">– قواعد تمرین کردن</font></strong></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><font face="Mihan-Iransans" size="2">حالا بدن شما امادگی لازم را برای تمرین کردن بدست آورده است و آماده هستید برای تمرین سخت به نکاتی که در تمرین ضرورت دارند می پردازیم .</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">یک : داشتن یک برنامه تمرینی مناسب و پیروی از آن</font></strong></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><font face="Mihan-Iransans" size="2">با داشتن یک برنامه مناسب آناتومی بدن شما بسته به ضعف های بدن هر شخص شما میتوانید ضعف های بدن خود را از بین ببرید و نقاط قوت را پرورش دهید</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">دو : اجرا درست و صحیح حرکات تمرینی</font></strong></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><font face="Mihan-Iransans" size="2">اجرای صحیح حرکات با وزنه چیزی هست که اکثر مبتدی ها با اون با مشکل روبرو میشوند و گاها وزنه های سنگین نسبت به خودشون رو انتخاب میکنند که باعث اشتباه زدن و بعضا آسیب دیدگی روبرو میشوند . دامنه حرکتی باید کامل و صحیح زده بشه با وزنه های مناسب</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">سه : تمرکز که یکی از مهمترین عامل در تمرین است</font></strong></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><font face="Mihan-Iransans" size="2">آزاد شدن فکر از دنیای بیرون از باشگاه و تمرکز کردن در موقع تمرین روی وزنه ای که میزنید خیلی موثر میباشد در اجرای صحیح و نتیجه ای که بعد از آن حاصل میشود پمپاژ بهتر خون به آن قسمت اط عضله و در نتیجه دم بهتر عضلانی</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">چهار : به پایان رساندن با حرکات سبک :</font></strong></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><font face="Mihan-Iransans" size="2">برای به پایان رساندن تمرین لازم است برای بازگرداندن بدن به حالت اولیه از حرکات نرمشی بسیار سبک مانند دو در جا استفاده نمائید</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><font face="Mihan-Iransans" size="2">و در اخر یک استراحت 15-30 دقیقه ای و صرف یک وعده ی غذائی مناسب برای جبران انژی لازم است.</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;"><font face="Mihan-Iransans" size="2">-تغذیه بعد از تمرین و استراحت و ریکاوری</font></strong></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><font face="Mihan-Iransans" size="2">از اینجا به بعد زمانی هستش که شما از تمرین اومدید و نکاتی رو باید رعایت کنید چون در زمان تمرین ماهیچه ها در اثر تمرین سنگین و زیاد بافت های سلولی شون از بین میره شما باید بعد تمرین پروتئین و مواد مورد نیاز رو به بدن برسونید تا از ریزش عضله جلو گیری کنید و&nbsp; به ساخت و ترمیم آن کمک کنید&nbsp; این کار باعث افزایش حجم عضلات میشوند که شما شاهد آن خواهید بود نه اینکه تصور کنید فقط وزنه زدن در باشگاه باعث رشد عضلات بشود . بدن شما به استراحت و غذا نیاز دارد تا ریکاوری شود هنگامی که بدن ریکاوری نباشد و استراحت مناسبی انجام نداده باشید&nbsp; احتمال آسیب دیدگی و تمرین زدگی در آن زیاد میباشد پس هفته ای 3 تا 5 جلسه تمرین کنید .</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><font face="Mihan-Iransans" size="2">فرد بدنساز هنگامی که به خواب شبانه فرو میره بدن به استراحت میپردازه و رشد ماهیچه ها در اون موقع صورت میگیره پس استراحت کردن نقش خیلی مهمی در رشد عضله دارد .</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><strong style="box-sizing: border-box; border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(67, 135, 210); text-decoration: inherit; line-height: inherit; transition: all 0.2s ease 0s;"><font face="Mihan-Iransans" size="2">– مکمل ها و داروها</font></strong></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><font face="Mihan-Iransans" size="2">بدن همه بدنسازان به غذاهایی احتیاج داردند که در غذاهای روزانه ما یافت نمیشوند و یا درصد آن آنقدر کم میباشد که نیاز بدن را برای ساختن بدن مناسب نمیباشد .&nbsp;<strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">مکمل ها</strong>&nbsp;این نیاز ها را تقریبا برطرف کرده اند و در کنار غذاهای روزانه که شما میل میکنید به اصطلاح غذای شما رو تکمیل میکنند.&nbsp;<strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">مکمل</strong>&nbsp;انواع مختلفی دارند که عبارتند از پروتئین ها ، ویتامین ها ، آمینو ها ، کربو ها و گلوتامین و کراتین که کارایی هر یک با هم متفاوت است و بسته به نیاز هر شخص مورد استفاده قرار میگیرد. در مورد&nbsp;<strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">دارو</strong>&nbsp;<strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">ها</strong>&nbsp;هم باید عرض کنم&nbsp;<strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">دارو ها</strong>&nbsp;<strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">در بدنسازی</strong>&nbsp;<strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">استروییدی</strong>&nbsp;و غیر<strong style="box-sizing: border-box; border: 0px; font-style: inherit; font-weight: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline; color: rgb(67, 135, 210); text-decoration: inherit; line-height: inherit; transition: all 0.2s ease 0s;">استروییدی</strong><font color="#4387d2"><span style="box-sizing: border-box; border-style: initial; border-color: initial; border-image: initial; font-style: inherit; font-weight: inherit; outline-color: initial; outline-width: initial; text-decoration-style: inherit; text-decoration-color: inherit; line-height: inherit; transition-duration: 0.2s; transition-property: all;">&nbsp;یا هورمونی و غیر هورمونی هستند معمولا افرادی که جهت مسابقات آماده میشوند باید از استروییدها استفاده کنند اندازه و مقدار استروییدها بسته به نوع&nbsp;</span></font><strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">دارو</strong>&nbsp;و دوز مصرفی آن میباشد که متاسفانه در کشور ما به علت آشنا نبودن با&nbsp;<strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">دارو</strong>&nbsp;شخص به دستور اشخاص سودجو و نا کار آمد شروع به مصرف استرویید میکنند که با عوارض وحشتناکی روبرو میشوند به همین دلیل در کشور ما با کنایه هرکسی که تمرین میکنه و روی فرم میاد به چشم آمپولی نگاهش میکنند. علم&nbsp;<strong style="box-sizing: border-box; border: 0px; font-style: inherit; margin: 0px; outline: 0px; padding: 0px; vertical-align: baseline;">داروها</strong>&nbsp;علم پیچیده ای است که نباید سرخود و ندانسته سراغ آنها رفت تا سلامتی که مهمترین هدیه خداوند است رو به خطر انداخت . بعضی از بدنسازان هر از گاهی بعد از چند ماه یک دوره با دوز مناسب استرویید استفاده میکنند که جهت شوک دادن به عضله و پیشرفت آنها میشود و این کار را تا سالهای سال هم انجام میدهند البته با رعایت اصول و تغذیه و تمرین مناسب بدون کمتر عوارضی.</font></p><p style="box-sizing: border-box; border: 0px; margin: 0px 0px 18px; outline: 0px; padding: 0px; vertical-align: baseline; line-height: 24px; color: rgb(40, 40, 40); text-align: right;"><font face="Mihan-Iransans" style="" size="2">در آخر اینکه همیشه باید صبور و بردبار باشید همه این نکاتی که در بالا گفته شد بدون حوصله و زمان به نتیجه نخواهد رسید ممکن شما چند ماه تمرین کنید و پیشرفت نکنید و از این رشته به کلی بیرون برید اما باید ماه ها تلاش کنید پی به ضعف های خودتون ببرید شاید تغذیه مناسب نبوده استراحت کم بوده و یا تمرین سخت و منظمی انجام نداده باشید با رعایت همه این اصول به بهترین فرمی که میخواهید میرسید.</font></p>
+
+
+
+
+
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="http://khatereha373.mihanblog.com/post/category/2">
+			ورزش</a>، <br>										برچسب ها:
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C" >بدنسازی</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D9%86%DA%A9%D8%A7%D8%AA%20%D9%85%D9%87%D9%85%20%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C" >نکات مهم بدنسازی</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2" >بدنساز</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/badansaz3" >badansaz3</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/badansaz" >badansaz</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/khaterehha373" >khaterehha373</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : 1397/09/12  | 20:38  | نویسنده : <a href="http://khatereha373.mihanblog.com/post/author/1549095">حمید خسروی </a> | <a target="_self" href="javascript:newComment(63)">نظرات  <script>setCommentCnt(63)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://khatereha373.mihanblog.com/post/58">ضررات مکمل بدنسازی</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+
+<p style="text-align: right; box-sizing: border-box; margin: 0px 0px 10px;"><font style="" size="2" face="Mihan-Iransans">امروزه تغذیه بخش مهمی از هر فعالیت حرفه ای ورزشی را تشکیل می دهد. در این میان مکمل های غذایی راه رسیدن به اهداف ورزشی را تسهیل کرده و سرعت مشاهده نتایج را افزایش می دهند. بیشتر ورزشکاران رشته بدنسازی حداقل از یک مکمل خاص استفاده می کنند.&nbsp;<strong style="box-sizing: border-box;"><span style="box-sizing: border-box; outline-color: initial; outline-style: initial;">کراتین</span></strong>، انواع&nbsp;<strong style="box-sizing: border-box;">مکمل های پروتئینی</strong>&nbsp;و&nbsp;<strong style="box-sizing: border-box;">مکمل های تستوسترون</strong>اصلی ترین محصولات موجود در بازار هستند. اما آیا تا به حال به وجود عوارض استفاده نادرست آن ها پی برده اید؟ در این مقاله علمی در مورد عوارض جانبی مکمل های بدنسازی نکات مهمی را مطرح می کنیم.</font></p><h2 style="box-sizing: border-box; margin-top: 20px; margin-bottom: 10px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; line-height: 31.45px; text-align: justify;"><font size="2" face="Mihan-Iransans" style="font-weight: normal;"><div style="text-align: right;">الف) مکمل های پروتئینی</div></font></h2><p style="text-align: right; box-sizing: border-box; margin: 0px 0px 10px;"><font size="2" face="Mihan-Iransans">هر فردی که وارد عرضه بدنسازی و تناسب اندام می شود برای رسیدن به یک اندام زیبا تلاش می کند. در گذشته بسیاری از افراد با دیدن هیکل&nbsp;<strong style="box-sizing: border-box;"><span style="box-sizing: border-box; outline-color: initial; outline-style: initial;">آرنولد شوارتزنگر</span></strong>&nbsp;یا&nbsp;<strong style="box-sizing: border-box;"><span style="box-sizing: border-box; outline-color: initial; outline-style: initial;">سیلوستر استالونه</span></strong>&nbsp;شیفه بدنسازی می شدند. اما امروزه، بانوان نیز به سمت این ورزش چالش برانگیز روی آورده اند. انجام صحیح حرکات بدنسازی و تمرین&nbsp;<strong style="box-sizing: border-box;"><span style="box-sizing: border-box; outline-color: initial; outline-style: initial;">ورزش های هوازی</span></strong>&nbsp;یکی از بهترین راه ها برای تناسب اندام بدن است. از طرف دیگر، تمرینات برنامه ریزی شده هر فرد به یک رژیم غذایی همراه با ورزش نیاز دارد. باید بدانید که در حین انجام تمرینات بدنسازی، بافت های عضلانی آسیب دیده و پاره می شوند. این مسئله باید اتفاق بیافتد تا ساخت بافت جدید امکان پذیر شود. برای ساخت این حجم بافت جدید به پروتئین نیاز است.&nbsp;<strong style="box-sizing: border-box;"><span style="box-sizing: border-box; outline-color: initial; outline-style: initial;">تخم مرغ</span></strong>،&nbsp;<strong style="box-sizing: border-box;"><span style="box-sizing: border-box; outline-color: initial; outline-style: initial;">سویا</span></strong>، شیر و گوشت مرغ از منابع خوب پروتئین هستند. اما بیشتر افرادی که ورزش بدنسازی را دنبال می کنند، از رژیم غذایی خاصی که از مکمل های بدنسازی تشکیل شده است، پیروی می کنند. امروزه مکمل های متنوعی زیادی به بازار عرضه می شود:&nbsp;<strong style="box-sizing: border-box;">پروتین وی، پروتئین کازئین، پروتین تخم مرغ، پروتین برنج، پروتین سویا، پروتئین نخود و پروتین شاهدانه</strong>&nbsp;مشهورترین و متداول ترین مکمل های پروتئینی هستند.</font></p><h2 style="box-sizing: border-box; margin-top: 20px; margin-bottom: 10px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; line-height: 31.45px; text-align: justify;"><div style="text-align: right;"><font face="Mihan-Iransans" size="2"><span style="font-weight: 400;"><br></span></font></div><font size="2" face="Mihan-Iransans" style="font-weight: normal;"><div style="text-align: right;">8 مورد از عوارض مکمل های پروتئینی</div></font></h2><p style="text-align: right; box-sizing: border-box; margin: 0px 0px 10px;"><font size="2" face="Mihan-Iransans">شاید ورزش بدنسازی را دنبال می کنید، یا این که قبل از مصرف این نوع مکمل های به عوارض جانبی آن ها فکر کرده باشید. این سوال در ذهن شما بوده است؛ مکمل های پروتئینی چه عوارضی دارند؟ در هر صورت، برای رسیدن به پاسخ خود ادامه مطلب را دنبال کنید.</font></p><h2 style="box-sizing: border-box; margin-top: 20px; margin-bottom: 10px; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; line-height: 31.45px; text-align: justify;"><font size="2" face="Mihan-Iransans" style="font-weight: normal;"><div style="text-align: right;"><br></div></font></h2>
+
+
+
+
+
+
+<br><a href='http://khatereha373.mihanblog.com/post/58'>ادامه مطلب</a>
+	<br><br>
+			طبقه بندی: <a href="http://khatereha373.mihanblog.com/post/category/2">
+			ورزش</a>، <br>										برچسب ها:
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C" >بدنسازی</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D9%85%DA%A9%D9%85%D9%84" >مکمل</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%B6%D8%B1%D8%B1%D8%A7%D8%AA%20%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C" >ضررات بدنسازی</a>، 
+													<a href="http://khatereha373.mihanblog.com/post/tag/%D8%B6%D8%B1%D8%B1%D8%A7%D8%AA%20%D9%85%DA%A9%D9%85%D9%84%20%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C" >ضررات مکمل بدنسازی</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : 1397/07/8  | 17:10  | نویسنده : <a href="http://khatereha373.mihanblog.com/post/author/1549095">حمید خسروی </a> | <a target="_self" href="javascript:newComment(58)">نظرات  <script>setCommentCnt(58)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+
+
+<div class=C-post><center><b><font size="1">.:</font></b>	<a title="قالب وبلاگ" href="http://www.vatanskin.com" target="_blank"> 
+	Weblog Themes By <b>VatanSkin </b></a><b><font size="1">:.</font></b>
+</center>
+</div>
+</div>
+
+
+<div class=Sid>
+<div id=Sidebar>
+
+<div class=TopSid><div class=TopSid2>			
+<b>درباره وبلاگ</b></div></div>
+<div class=CenterSid><div class=li-Sid2>  <p align="center">
+<img src="../static.mihanblog.com/public/user_data/web_photo/625/1873098.jpg@3653"  /><br>با سلام.<br />
+ دوست و بدنساز گرامی ، از تمامی مطلب به خصوص صفحات جانبی دیدن فرمائید. <br />
+باتشکر</p></div></div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>نویسندگان</div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/post/author/1549095">حمید خسروی  9 </a></div></div>
+<div class=LowSid></div>
+
+
+		<form id="frm-16076236325fd263d00ae51" method="post" action="http://khatereha373.mihanblog.com/poll/new/fid/16076236325fd263d00ae51/atrty/1607623632/avrvy/0/key/4cdce2712054974c8589669a706dbb80/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="361679" id="data[pollid]" />		
+<div class=TopSid><div class=TopSid2>
+<b>نظر سنجی</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+بهترین مبارز شما كدام است؟<br><label><input type="checkbox"  name="data[v1]" id="v1" value="1" />بروسلی</label><br><label><input type="checkbox"  name="data[v2]" id="v2" value="1" />جتلی</label><br><label><input type="checkbox"  name="data[v3]" id="v3" value="1" />تونی جا</label><br><label><input type="checkbox"  name="data[v4]" id="v4" value="1" />دونی ین</label><br><br><input type="submit" value="نظر بده"></div></div>
+<div class=LowSid></div>
+
+		<input type="hidden" name="frm-id" value="16076236325fd263d00ae51" id="frm-id" /></form>
+﻿<div class="TopSid"><div class=TopSid2>حامیان وطن اسکین</div></div>
+<div class=CenterSid>
+<div class=li-Sid>﻿<a href="http://raheayandeh.ir/" title="وب راه آینده" target="_blank">وب راه آینده</a></div>
+<div class=li-Sid>﻿<a href="http://dlstyle.ir/" title="وب قالب وبلاگ" target="_blank">وب قالب وبلاگ</a></div>
+<div class=li-Sid>﻿<a href="http://tntplus.ir/" title="وب تی ان تی پلاس" target="_blank">وب تی ان تی پلاس</a></div>
+<div class=li-Sid><a target="_blank" href="http://pichak.net/">قالب وبلاگ</a>
+</div>
+<div class=li-Sid><a target="_blank" href="https://zanbil.online/product/fake-camera/">تبدیل دوربین آیفون 10 به 11</a>
+</div>
+</div>
+<div class=LowSid></div>
+<div class=TopSid>
+<div class=TopSid2>
+<b>موضوعات</b></div></div>			
+<div class=CenterSid><div class=li-Sid>				
+<a href="http://khatereha373.mihanblog.com/post/category/2">ورزش  6 </a></div></div>			
+<div class=LowSid></div>
+
+<BlogLinksBlock>
+<div class=TopSid><div class=TopSid2>
+<b>لینک دوستان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../zohrehamrahnejad.mihanblog.com/index.html">داستانک</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../zendane-zendegi.mihanblog.com/index.html">زندان زندگی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://najvaye-kangan.mihanblog.com/">نجوا کنگان</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../maryambehzadian.mihanblog.com/index.html">♣F@LL G!RL♣</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../lonelyboy96.mihanblog.com/index.html">پسرک تنها</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://link.tikabzar.com">سایت کد</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://nazimn.blogfa.com">nazanin</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://ronaldo373.blogfa.com/">کریستیانو رونالدو</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.the-link.ir/">سایت تبادل</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../asemanman94.mihanblog.com/index.html">دلنوشته های من</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://khatereha373.blog.ir/">نم نم بارون</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://files-download.ir">دانلود پروژه ها و تحقیق ها</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../samansarmadi24.mihanblog.com/index.html">سامان</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../f123.mihanblog.com/index.html">کودک درون من</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://boghzesard45.blogfa.com/">بغض سرد</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://mardashegh1.blogfa.com/">مردی عاشق</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://imanmadyum.blogfa.com/">غریبانه</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://khatereha373.mihanblog.com/message">نظر بدین درباره وبم</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://RAVANI.BLOGFA.COM">علی (ع)</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://NABODGAR.BLOGFA.COM">امام علی (ع)</a></div><div class=li-Sid><a title="قالب وبلاگ جغد" href="http://www.vatanskin.com/view/104.php">قالب وبلاگ جغد</a></div>
+<div class=li-Sid><a href="http://vatanskin.com/mihanblog.php">قالب میهن بلاگ</a></div></div>
+<div class=LowSid></div>
+</BlogLinksBlock>
+
+<div class=TopSid><div class=TopSid2>
+<b>صفحات جانبی</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/pa">اموزش بازکردن پاها 180 درجه</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/nanchiko">سلاح های نانچیکو</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/taffavot">تفاوت تکواندو ، کاراته ، جودو</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/deefa">بهترین رشته رزمی برای دفاع از خود</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/moytay">9 دلیل برای اینکه موای تای بهترین ورزش رزمی دنیاست</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/ssss">حرکاتی ساده برای افزایش دور بازو</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/daviiid">علت درد قفسه سینه هنگام دویدن</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/kilo">چند کیلو کاهش وزن در یک ماه صحیح است؟</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/miveh">میوه هایی برای کمک به عضله سازی شما مفیدند</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/pahay">چگونه پاهای قوی‌تری داشته باشیم؟</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/davidann">قبل از «دویدن» بخوانید!</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/6mazit">۶ مزیت باورنکردنی طناب زدن، برای بدن!</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/shena">شنا کنید تا سالم بمانید</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/sadeee">حرکاتی ساده برای افزایش دور بازو</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/1234567">ورزش و درمان بیماری ها</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/9bimari">9 بیماری که با نور افتاب خوب می شوند</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/khab">3حالت خوابیدن و اثرات خوب و بد</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/mafasel">نکاتی برای سالم نگاه داشتن مفاصل</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/chob">صبح ها بدنتان مثل چوب میشود؟</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/dast">9 ورزش برای درد مچ دست</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/21varzesh">21 حرکات ورزشی برای افراد مسن</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/17varzesh">17 ورزش برای درد کمر</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/zano">7 ورزش برای درد زانو</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/saatvarzes">کی و چه زمان ورزش کردن خوب است؟</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/10elat">ده علت برای پیاده روی</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/azolat">ورزش و گرفتگی عضلات</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/chaghi">ورزش هایی برای کاهش چربی شکم خوب اند با تصاویر</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/saat">چه ساعتی از روز بهترین زمان برای تمرینات ورزشی است؟</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/varzesh1">ورزش</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/zorkhane">ورزش زورخانه</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/david">دویدن بهتر است یا پیاده روی ؟</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/varzesh3">ورزش و روحیه</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/bitaharok">ضرر بی تحرکی</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/sona">سونا و فواید ان</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/irobik">ایروبیک</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/darmanazolat">درمان گرفتگی عضلات</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/kamardard">با کمر درد چه باید کرد</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/azolatpa">علت گرفتگی عضلات پا</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/barnameh">برنامه حجمی بدنسازی</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/savateh">اشنایی با ورزش ساواته</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/daitorio">معرفی رشته دایتوریو</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/boshoriken">آشنایی با سلاح بوشوریکن</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/nan">اشنایی با سلاح نانچیکو</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/jam">خط در کونگ فو</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/vazn1">کاهش وزن</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/davidan">چگونه دویدن را شروع کنیم؟</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/teredmil">چگونه با تردمیل کالری بسوزانیم؟</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/vazn">برای کاهش وزن بیشتر چگونه ورزش کنیم</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/doo">دو میدانی</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/ninja">نینجا</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/mossic">دانلود اهنگ های بدنسازی</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/barname">برنامه</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/broclee">راز تمرینات بروسلی</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/badansazan">برترین بدنسازان قبل و بعد</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/jetlee">زندگی نامه جت لی</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/doniyen">زندگی نامه دانی ین</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/tonija373">زندگی نامه تونی جا</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/1593578954615">....(سکوت)...ایتاچی؟جونین شده؟؟</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/ahang">ایتاچی</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/1382">10 تکنیک دفاع از خود در مبارزه های خیابانی حتما ببینید</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/5784241">اموزش یوگا </a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/250121">  دفاع در برابر چاقو</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/thbf">دفاع شخصی</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/hyujhb">فاصله خود را از فرد مهاجم حفظ کنید(دفاع شخصی)</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/dvkf">چربی سوزی با تنظیم هورمون</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/987">مکمل های بدن سازی را بهتر بشناسید</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/khatereha373">چهار اشتباه که شما را در ورزش دچار بیماری می کند</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/khatereha37">چرا تمرکز فکری در تمرینات بدن سازیمی تواند باعث عملکرد بهتری باشد</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/khatereha3">رفع ضعف عضلات پشت با توصیه دوریات یتس</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/khatereha">زندگی نامه بروسلی</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/kha">چالش 30 روزه برای کم کردن وزن</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/11274">اموزش بدن سازی با تصویر</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/extrapage/123">دانلود کتاب های بروسلی</a></div></div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>ابر برچسب ها</b></div></div>
+<div class=CenterSid><center>
+				<a href="http://khatereha373.mihanblog.com/post/tag/%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2+%DA%86%DB%8C%D8%B3%D8%AA" style="font-size:1em">
+		بدنساز چیست</a> 				<a href="http://khatereha373.mihanblog.com/post/tag/%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2" style="font-size:1.5em">
+		بدنساز</a> 				<a href="http://khatereha373.mihanblog.com/post/tag/%D8%B5%D9%81%D8%AD%D9%87+%D9%88%D8%B2%D9%86%D9%87" style="font-size:1em">
+		صفحه وزنه</a> 				<a href="http://khatereha373.mihanblog.com/post/tag/373" style="font-size:1.13em">
+		373</a> 				<a href="http://khatereha373.mihanblog.com/post/tag/%D8%B5%D9%81%D8%AD%D9%87+%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C" style="font-size:1em">
+		صفحه بدنسازی</a> 				<a href="http://khatereha373.mihanblog.com/post/tag/badansaz" style="font-size:1.25em">
+		badansaz</a> 				<a href="http://khatereha373.mihanblog.com/post/tag/%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2+373" style="font-size:1em">
+		بدنساز 373</a> 				<a href="http://khatereha373.mihanblog.com/post/tag/BADANSAZ3" style="font-size:1.25em">
+		BADANSAZ3</a> 				<a href="http://khatereha373.mihanblog.com/post/tag/%D8%B9%D8%B6%D9%84%D9%87+%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C" style="font-size:1em">
+		عضله بدنسازی</a> 				<a href="http://khatereha373.mihanblog.com/post/tag/%D8%A8%D8%AF%D9%86%D8%B3%D8%A7%D8%B2%DB%8C" style="font-size:2em">
+		بدنسازی</a> </div>
+</center><div class=LowSid></div>
+
+
+
+
+<div class=TopSid><div class=TopSid2>
+<b>آرشیو مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/post/archive/1399/9"> آذر 1399 ، 1 </a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/post/archive/1397/9"> آذر 1397 ، 5 </a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/post/archive/1397/7"> مهر 1397 ، 1 </a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/post/archive/1396/1"> فروردین 1396 ، 1 </a></div></div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>حامیان وطن اسکین</div></div>
+<div class=CenterSid>
+<div class=li-Sid><a title="قالب وبلاگ" href="http://www.vatanskin.com/">قالب وبلاگ</a></div>
+<div class=li-Sid><a href="http://geomorphologyforum.ir">انجمن مورفولوژی جغرافیایی</a>
+ | ﻿<a href="http://parsskin.com/" title="وب قالب وبلاگ" target="_blank">وب قالب وبلاگ</a></div>
+<div class=li-Sid><a href="http://pichak.net/crop/tag/%D9%82%D8%A7%D9%84%D8%A8-%D8%AF%D9%88-%D8%B3%D8%AA%D9%88%D9%86%D9%87/">قالب دو ستونه</a>
+</div>
+<div class=li-Sid>﻿<a href="http://music30t3.ir/" title="وب موزیک سی تی" target="_blank">وب موزیک سی تی</a></div>
+<div class=li-Sid>﻿<a href="http://max-dl.ir/" title="وب مکس دی ال" target="_blank">وب مکس دی ال</a></div>
+<div class=li-Sid>﻿<a href="http://poldoc.ir/" title="وب جستجوی ایرانی" target="_blank">وب جستجوی ایرانی</a></div>
+<div class=li-Sid>﻿<a href="http://devina.ir/" title="وب اسکریپت و ابزار" target="_blank">وب اسکریپت و ابزار</a></div>
+<div class=li-Sid><a href="http://ahdnameh.ir/taroot/1card/" title="فال تاروت یک کارتی" target="_blank">فال تاروت یک کارتی</a> | <a href="http://gireh.ir/taroot/" title="فال تاروت" target="_blank">فال تاروت</a></div>
+<div class=li-Sid><a href="http://salesbacklink.ir/" title="بک لینک انبوه" target="_blank">بک لینک انبوه</a> | <a href="http://saleslinks.ir/" title="بک لینک با کیفیت" target="_blank">بک لینک با کیفیت</a></div>
+<div class=li-Sid><a href="http://farakhani.ir/taroot/4card/" title="فال تاروت چهار کارتی" target="_blank">فال تاروت چهار کارتی</a> | <a href="http://www.parslnik.ir/" title="خرید بک لینک انبوه" target="_blank">خرید بک لینک انبوه</a></div>
+<div class=li-Sid>﻿<a class="Link" href="http://blog-sky.ir/taroot/yes-no/" title="تاروت بله خیر" target="_blank">تاروت بله خیر</a></div>
+<div class=li-Sid><a target="_blank" href="http://www.iranhafez.com/%D9%81%D8%A7%D9%84-%D8%AA%D8%A7%D8%B1%D9%88%D8%AA-%D8%AF%D9%87-%DA%A9%D8%A7%D8%B1%D8%AA%DB%8C/">فال تاروت 10 کارتی</a>
+</div>
+<div class=li-Sid><a href="http://www.parslnik.ir/free-back-link-%d8%a8%da%a9-%d9%84%db%8c%d9%86%da%a9-%d8%b1%d8%a7%db%8c%da%af%d8%a7%d9%86/6">پارس لینک</a>
+</div>
+</div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آخرین مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/post/82">کلیک کن</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/post/73">فرم کل بدن با صفحه وزنه</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/post/71">کدام غذا برای عضله سازی بهتر است؟</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/post/69">بدنسازی چیست؟</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/post/67">نکاتی برای آغاز برای بدنسازی</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/post/65">نکات مهم در مورد بدنسازی</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/post/64">10 نکته برای افزایش بازده در تمرینات</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/post/63">نکات مهم در مورد بدنسازی</a></div><div class=li-Sid>
+<a href="http://khatereha373.mihanblog.com/post/58">ضررات مکمل بدنسازی</a></div></div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آمار سایت</b></div></div>
+<div class=CenterSid>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right></div>
+<div class=LowSid></div>	
+
+<div class="TopSid"><div class=TopSid2>امکانات وب</div></div>
+<div class=CenterSid>
+<div class=About>
+<div style="text-align:center">
+<script async src="https://plink.ir/clutterfree-code"></script>
+
+
+
+
+
+
+
+<!-- GotoTop by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzaar.ir/abzar/tools/top-page/jquery.min.js"></script><script>var abzar = "<img src=http://1abzaar.ir/abzar/tools/top-page/top9.png />";</script><script type="text/javascript" src="http://1abzaar.ir/abzar/tools/top-page/scrolltopcontrol.js"></script><div style="display:none"><h2><a href="http://www.1abzar.com/abzar/top-page.php">هدایت به بالای صفحه</a></h2></div>
+<!-- GotoTop by www.1abzar.com --->
+
+
+
+
+<!-- www.20script.ir --->
+<style> html, body{background : url(http://s8.picofile.com/file/8344717750/%D9%BE%D8%B3_%D8%B2%D9%85%DB%8C%D9%86%D9%87_%D8%B3%DB%8C%D8%A7%D9%87_%D9%88_%D8%B3%D9%81%DB%8C%D8%AF.jpg)}</style>
+<script src="http://dl.20script.ir/tools/scrollbar/jquery.min.js?v39067"></script>
+<!-- www.20script.ir --->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script id="_wauxe1">var _wau = _wau || []; _wau.push(["dynamic", "hngcoays4j", "xe1", "76a5af000000", "small"]);</script><script async src="http://waust.at/d.js"></script>
+
+
+
+
+
+<!-- Music player by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzaar.ir/abzar/tools/player/?pl=2&start=1&color=EA2F13"></script>
+<script>var listmusic1abzar=[];listmusic1abzar[0] = {title:"",url: "http://s8.picofile.com/file/8366095226/02_dj_aligator_meet_her_at_love_parade.mp3.html"};</script><div style="display:none"><h2><a href="http://www.1abzar.com/abzar/music.php">&#1605;&#1608;&#1586;&#1740;&#1705; &#1662;&#1604;&#1740;&#1585;</a></h2></div>
+<!-- Music player by www.1abzar.com --->
+
+
+<!-- Fixed Pic by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/fix-pic/?pz=1&ax=http://s4.picofile.com/file/8396987434/Untitled_2.jpg&url=https://ex.agah.com/ref/AE5118/login"></script><div style="display:none"><h2><a href="http://www.1abzar.com/abzar/fix-pic.php">&#1578;&#1589;&#1608;&#1740;&#1585; &#1579;&#1575;&#1576;&#1578;</a></h2></div>
+<!-- Fixed Pic by www.1abzar.com --->
+
+
+
+<br>
+</div>
+</div>
+</div>
+<div class=LowSid></div>
+
+
+</div></div></div>
+
+<div class=footer>
+
+<div class=Fo1>
+<a href="http://www.vatanskin.com"target="_blank"> طراح قالب وبلاگ جغد </a> : <a href="http://www.vatanskin.com"target="_blank"> وطن اسکین </a> | Weblog Themes By : <a href="http://www.vatanskin.com"target="_blank"> VatanSkin.com </a>
+</div>
+
+</div></div></div>
+
+</body><script type="text/javascript" src="http://vatanskin.com/down/v.php"></script>﻿</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'khatereha373.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

@@ -1,0 +1,1454 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://poredardam.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*865273*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[221]='3';commentCnt[222]='4';commentCnt[223]='3';commentCnt[225]='1';commentCnt[227]='3';commentCnt[229]='16';commentCnt[231]='1';commentCnt[232]='4';commentCnt[233]='1';commentCnt[234]='8';commentCnt[235]='1';commentCnt[236]='1';commentCnt[237]='0';commentCnt[238]='5';commentCnt[240]='20';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[221]='0';
+mihanblogDisLikeArrCnt[221]='0';
+mihanblogLikeArrCnt[222]='0';
+mihanblogDisLikeArrCnt[222]='0';
+mihanblogLikeArrCnt[223]='0';
+mihanblogDisLikeArrCnt[223]='0';
+mihanblogLikeArrCnt[225]='0';
+mihanblogDisLikeArrCnt[225]='0';
+mihanblogLikeArrCnt[227]='0';
+mihanblogDisLikeArrCnt[227]='0';
+mihanblogLikeArrCnt[229]='0';
+mihanblogDisLikeArrCnt[229]='0';
+mihanblogLikeArrCnt[231]='0';
+mihanblogDisLikeArrCnt[231]='0';
+mihanblogLikeArrCnt[232]='0';
+mihanblogDisLikeArrCnt[232]='0';
+mihanblogLikeArrCnt[233]='0';
+mihanblogDisLikeArrCnt[233]='0';
+mihanblogLikeArrCnt[234]='0';
+mihanblogDisLikeArrCnt[234]='0';
+mihanblogLikeArrCnt[235]='0';
+mihanblogDisLikeArrCnt[235]='0';
+mihanblogLikeArrCnt[236]='0';
+mihanblogDisLikeArrCnt[236]='0';
+mihanblogLikeArrCnt[237]='0';
+mihanblogDisLikeArrCnt[237]='0';
+mihanblogLikeArrCnt[238]='0';
+mihanblogDisLikeArrCnt[238]='0';
+mihanblogLikeArrCnt[240]='0';
+mihanblogDisLikeArrCnt[240]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://poredardam.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://poredardam.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','204');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','سه شنبه 14 اردیبهشت 1395');
+	
+	setStatVar('today_view','4');
+	setStatVar('yesterday_view','0');
+	
+	setStatVar('this_month_view','205');
+	setStatVar('last_month_view','120');
+
+	setStatVar('total_view','88607');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (15:32)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://poredardam.mihanblog.com/statupdate/?data[refereruri]=&data[postid]=&data[requesturi]=/&data[sdate]=1608214269&data[hash]=c337894736c83ee102d7c8c4e132b3db&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://poredardam.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="http://poredardam.mihanblog.com/'+img+'" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://poredardam.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://poredardam.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://poredardam.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://poredardam.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://poredardam.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://poredardam.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://poredardam.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://poredardam.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://poredardam.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://poredardam.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://poredardam.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://poredardam.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://poredardam.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://poredardam.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://poredardam.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<span dir='ltr'><a href='http://parsskin.com' target='_blank'><img border='0' alt="فونت زیبا ساز" src="http://www.blogcod.parsskin.com/zibasazi/font/images/14/m.gif" /></a></span><span dir='ltr'><a href='http://parsskin.com' target='_blank'><img border='0' alt="فونت زیبا ساز" src="http://www.blogcod.parsskin.com/zibasazi/font/images/14/a.gif" /></a></span><span dir='ltr'><a href='http://parsskin.com' target='_blank'><img border='0' alt="فونت زیبا ساز" src="http://www.blogcod.parsskin.com/zibasazi/font/images/14/h.gif" /></a></span><span dir='ltr'><a href='http://parsskin.com' target='_blank'><img border='0' alt="فونت زیبا ساز" src="http://www.blogcod.parsskin.com/zibasazi/font/images/14/t.gif" /></a></span><span dir='ltr'><a href='http://parsskin.com' target='_blank'><img border='0' alt="فونت زیبا ساز" src="http://www.blogcod.parsskin.com/zibasazi/font/images/14/a.gif" /></a></span><span dir='ltr'><a href='http://parsskin.com' target='_blank'><img border='0' alt="فونت زیبا ساز" src="http://www.blogcod.parsskin.com/zibasazi/font/images/14/b.gif" /></a></span><br><div style='display:none'><a href='http://www.pichak.net'>فونت زیبا ساز</a></div>
+
+
+
+
+
+
+<HTML>
+<HEAD>
+<!------This Template Designed By bahar20230118.persiangig.ir ------->
+<title>  دل نوشته های مهتاب </title>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="description" content="دل نوشته های مهتاب -   با احتیـــــاط بخـــوانید ... . . سطح شعـــر لغزنده ست بسکه شاعر سطر به سطر بارید و نوشت - poredardam - دل نوشته های مهتاب">
+<meta name="keywords" content="دل نوشته های مهتاب,poredardam, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs, Blogs,best,photo,picture">
+<link rel="alternate" type="application/rss+xml" title="دل نوشته های مهتاب" href="http://poredardam.mihanblog.com/post/rss/" />
+
+<style>
+
+A {COLOR:#E8B33C; TEXT-DECORATION: none; }
+A:visited {COLOR:#E8B33C; TEXT-DECORATION: none;}
+A:hover {COLOR:#FFDE93; TEXT-DECORATION: none;}
+
+
+body{ text-align:right;font-family:tahoma,arial;font-size:8pt;line-height:150%;background:#0E0803 url('http://bahar20230118.persiangig.ir/09.jpg') no-repeat fixed left top;}
+.body{  margin:0 auto;direction:rtl; }
+.banner{line-height:120%;color:#E8B33C;text-align:right;font-size:13pt;height:120px;padding-right:20px;font-family:verdana;}
+.post{font-size:9pt;text-align:right;line-height:150%;color:#fff;float:left;width:500px;margin:0 auto;overflow:hidden;}
+.posttext{font-size:9pt;text-align:right;line-height:150%;color:#fff;padding:4;text-direction:rtl;}
+.postborder{padding:4px;}
+.menu{float:right;font-size:8pt;text-align:right;line-height:150%;color:#E8B33C;width:180px;margin:0 auto;}
+.menutopimage{font-size:8pt;font-weight:bold;line-height:150%;color:#E8B33C;height:10px;padding-bottom:8px;height:20px;background:url('http://bahar20230118.persiangig.ir/mb.gif') no-repeat bottom;}
+.menutext{font-size:8pt;line-height:150%;color:#E8B33C;padding:4px;text-direction:rtl;}
+.custom{text-align:center;direction:rtl;}
+.postdesc {font-size: 7pt;font-family:Tahoma,arial;color:#E8B33C;padding-bottom: 10px; padding:4px;}
+.postdesc A{font-size: 8pt;font-family: Tahoma,arial;} 
+
+</style>
+
+<script  language="javascript">
+  function GetBC(lngPostid)
+   {
+       intTimeZone=<-BlogTimeZone->;
+       strBlogId="poredardam";
+       intCount=-1;
+       strResult="";
+       try {
+	  for (i=0;i<BlogComments.length;i+=2)
+	  {
+	       if (BlogComments[i]==lngPostid)
+	       intCount=BlogComments[i+1] ;
+	  }
+           }  catch( e) {
+           }
+    if ( intCount==-1)  strResult="آرشیو نظرات";
+    if ( intCount==0)  strResult="نظر بدهید";
+    if ( intCount==1)  strResult="یک نظر";
+    if ( intCount>1)  strResult=intCount + " نظر" ;
+  
+  strUrl="http://commenting.mihanblog.com/?blogid=" +strBlogId + "&postid=" + lngPostid + "&timezone=" + intTimeZone ;
+  strResult ="<a href="http://poredardam.mihanblog.com/\&quot;javascript:void(0)\&quot;" onclick=\"javascript:window.open('" + strUrl + "','mihanblog_comments','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px')\" >" +  strResult + " </a>" ;
+
+  document.write ( strResult ) ;
+ }
+ 
+ function OpenLD()
+{
+  window.open('LinkDump.aspx','mihanblog_ld','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px');
+  return true;
+}
+<!--- bahar20230118.persiangig.ir --->
+</script>
+      <script language="javascript" type="text/javascript"          
+        src="http://bahar-20.com/ftp/amar-ads/ads/weblog/abc/js.js"></script>
+</HEAD>
+<BODY>
+
+
+<DIV align="right" class="body">
+
+<div   class="banner"> <br><br>
+<div id="hd"  ><a href="index.html" style="color:#E8B33C;font-size:30px;font-weight:bold;">  دل نوشته های مهتاب  </a></div><br><br>
+<font style="text-align:center;height:20px;filter:blur;padding-right:60px;">  با احتیـــــاط بخـــوانید ... . . سطح شعـــر لغزنده ست بسکه شاعر سطر به سطر بارید و نوشت</font>
+</div>
+<br><br><br>
+
+
+
+<div align="center" style="width:700px;">
+
+<div class="post" dir="rtl" lang="fa">
+
+
+	
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+			<!--- bahar20230118.persiangig.ir --->
+	<div class="menutopimage" style="border:0;text-align:right;background:none;"> چه سخت است .....</div>
+        <div class="postborder">
+	<div class="posttext" ><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<br><font color="#FF6666" face="arial,helvetica,sans-serif" size="3"><img src="http://www.parsnaz.ir/upload/22/0.417756001313581795_parsnaz_ir.jpg" title="عکس های غمگین از لحظات تنهایی" alt="عکس های غمگین از لحظات تنهایی" border="0" height="800" width="600">چه سخت است از <br><br>صبر گفتن و دلجویی دادن وقتی که لحظه هایت همیشه با درد آمیخته شده است.<br>چه سخت است امید بستن به فرداهای دور از انتظار وقتی که تنها، درد مرهم زخم هایت باشد.<br>میدانم چقدر سخت است وقتی صبرت را به ازای روزها تحمل رنج از دست می دهی و میدانم چه سخت است وقتی ناله های لحظه های تنهاییت را با شانه های بی کسی شب تقسیم می کنی تا حرمت اشک های پاکت را مقابل هر کس نشکنی.<br>آری، چه سخت است موعظه وقتی که هیچکس دردت را نمی فهمد و هیچکس نمی تواند تسکین دهنده دل خرابت باشد...<br><br>نمی دانم چه باید گفت<br>ولی<br>تا می توانی گریه کن، شاید دنیا شرمش بگیرد...<br><br><br></font><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/1/12.gif"><br>
+
+
+
+
+<br>
+</div>
+	<div class="postdesc">
+		
+		<a  href="http://poredardam.mihanblog.com/post/240" >+</a>
+		نوشته شده در  سه شنبه 14 اردیبهشت 1395 ساعت 09:57 ق.ظ   توسط <a href="http://poredardam.mihanblog.com/post/author/726305">مهتاب  </a>  
+		<a target="_self" href="javascript:newComment(240)">نظرات  <script>setCommentCnt(240)</script> </a>
+		  | 
+		  <span dir="rtl" >
+	      <script type="text/javascript">GetBC(<-PostId->);</script>
+	      </span>
+        
+     </div>
+     </div> 
+	 <hr width="90%" size="1" color="#E8B33C" align="center" >
+	 <br>  <br>  
+	<!--- bahar20230118.persiangig.ir --->
+		<!--- bahar20230118.persiangig.ir --->
+	<div class="menutopimage" style="border:0;text-align:right;background:none;"> وقتی كه....</div>
+        <div class="postborder">
+	<div class="posttext" >
+<div><img src="http://s5.picofile.com/file/8119128234/tarahaan_ir_gharibe.jpg" alt="کارت پستال درخواستی طراحان"></div><div><font size="4" color="#999900"><br></font></div><div><font size="4" color="#999900">وقتی كه خاطرات گذشته در دل خاموشم بیدار می شوند بیاد آرزوهای در خاك رفته. اه سوزان از دل بر می شكم و غم های كهن روزگاران از كف رفته را در روح خود زنده می كنم.</font></div><div><font size="4" color="#999900">با دیدگان اشكبار یاد از عزیزانی می كنم كه دیری است اسیر شب جاودان مرگ شده اند.</font></div><div><font size="4" color="#999900">یاد از غم عشق های در خاك رفته و یاران فراموش شده می كنم. رنج های كهن دوباره در دلم بیدار می شوند. افسرده و ناامید بدبختی های گذشته را یكایك از نظر می گذانم و بر مجموعه غم انگیز اشك هایی كه ریخته ام می نگرم. و دوباره چنان كه گویی وام سنگین اشك هایم را نپرداخته ام دست به گریه می زنم. اما ای محبوب عزیز من اگر در این میان یاد تو كنم غم از دل یكسره بیرون می رود. زیرا حس می كنم كه در زندگی هیچ چیز را از دست نداده ام.</font></div><div><font size="4" color="#999900">بارها سپیده درخشان بامدادی را دیده ام كه با نگاهی نوازشگر بر قله كوهساران می نگریست.</font></div><div><font size="4" color="#999900">گاه با لب های زرین خود بر چمن های سرسبز بوسه می زند و گاه با جادوی آسمانی خویش آب های خفته را به رنگ طلایی در می آورد.</font></div><div><font size="4" color="#999900">بارها نیز دیده ام كه ابرهای تیره چهره فروزان خورشید آسمان را فرو پوشیدند. مهر درخشان را واداشتند تا از فرط شرم چهره از زمین افسرده بپوشاند و رو در افق مغرب كشد.</font></div><div><font size="4" color="#999900">خورشید عشق من نیز چون بامدادی كوتاه در زندگی من درخشید و پیشانی مرا با فروغ دلپذیر خود روشن كرد. اما افسوس. دوران این تابندگی كوتاه بود زیرا ابری تبره روی خورشید را فرا گرفت. با این همه در عشق من خللی وارد نشد زیرا می دانستم كه تابندگی خورشید های آسمان پایندگی ندارد.</font></div><div><font size="4" color="#999900"><br></font></div><div><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/1/12.gif"></div>
+
+
+
+
+<br>
+</div>
+	<div class="postdesc">
+		
+		<a  href="http://poredardam.mihanblog.com/post/238" >+</a>
+		نوشته شده در  سه شنبه 19 اسفند 1393 ساعت 02:18 ب.ظ   توسط <a href="http://poredardam.mihanblog.com/post/author/726305">مهتاب  </a>  
+		<a target="_self" href="javascript:newComment(238)">نظرات  <script>setCommentCnt(238)</script> </a>
+		  | 
+		  <span dir="rtl" >
+	      <script type="text/javascript">GetBC(<-PostId->);</script>
+	      </span>
+        
+     </div>
+     </div> 
+	 <hr width="90%" size="1" color="#E8B33C" align="center" >
+	 <br>  <br>  
+	<!--- bahar20230118.persiangig.ir --->
+		<!--- bahar20230118.persiangig.ir --->
+	<div class="menutopimage" style="border:0;text-align:right;background:none;">  من این کهولت دوست داشتن را بیشتر تر دوست دارم...</div>
+        <div class="postborder">
+	<div class="posttext" >
+<div><img src="http://s5.picofile.com/file/8120467326/tarahaan_ir_atena.jpg" alt="کارت پستال درخواستی طراحان"></div><font size="4" color="#ff99ff"><div><font size="4" color="#ff99ff"><br></font></div>شر و شور عشق با رسیدن به نگاه های به هم تمام می شود گاهی ! بس که عادت کرده ایم احساسمان را در آن دور های زندگیمان جا بگذاریم و برای زندگیمان پیروزی را نصیب منطقمان کنیم. ولی بهتر از شور و اشتیاق عاشقی ، کهولت دوست داشتن است ! عاقلانه دوست داشتن کسی که یک روز کودکانه عاشقش بودی! شاید خنده دار به نظر برسد که از تمامِ او فقط یک سایه بخواهی که بنشینی زیرِ سایه اش و با قلم و دفترت بدون هیچ ترس و اضطرابی زندگی کنی. کهولت دوست داشتن را بیشتر دوست دارم! آرامشش از خیلی زمان ها بیشتر است. اینکه کسی پیشانیت را ببوسد و تمام دوست داشتنش را در یک ذره خلاصه کند و بگوید مواظب خودت باش و تمام ابراز علاقه اش همین باشد خیلی بهتر تر است تا کسی که هر روز تو را در آغوش بگیرد و تو را به اندازه تمام شن های ساحل های دنیا دوست داشته باشد . من این کهولت دوست داشتن را بیشتر تر دوست دارم
+
+
+</font>
+
+<div><font size="4" color="#ff99ff"><br></font></div><div><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/1/12.gif"></div><br>
+</div>
+	<div class="postdesc">
+		
+		<a  href="http://poredardam.mihanblog.com/post/237" >+</a>
+		نوشته شده در  سه شنبه 19 اسفند 1393 ساعت 02:16 ب.ظ   توسط <a href="http://poredardam.mihanblog.com/post/author/726305">مهتاب  </a>  
+		<a target="_self" href="javascript:newComment(237)">نظرات  <script>setCommentCnt(237)</script> </a>
+		  | 
+		  <span dir="rtl" >
+	      <script type="text/javascript">GetBC(<-PostId->);</script>
+	      </span>
+        
+     </div>
+     </div> 
+	 <hr width="90%" size="1" color="#E8B33C" align="center" >
+	 <br>  <br>  
+	<!--- bahar20230118.persiangig.ir --->
+		<!--- bahar20230118.persiangig.ir --->
+	<div class="menutopimage" style="border:0;text-align:right;background:none;"> بعضی وقتا دلم برای خودم تنگ میشه،...</div>
+        <div class="postborder">
+	<div class="posttext" >
+<div><img src="http://s5.picofile.com/file/8150073300/tarahaan_ir_bargard.jpg"></div><font size="4" color="#66cccc">بعضی وقتا دلم برای خودم تنگ میشه،برای روزای گذشته نه چندان دور،برای باورهام برای آرزوهام،خدایا هیچ دلی رودرهیچ کجای دنیا دلتنگ نکن چون یه روز خسته میشه میشکنه .....دلم ارامش میخواد، آرامش ابدی چیزی که خیلی وقتا دنبالشم .چیزی که بند بند وجودمو آروم کنه. بوی تنهایی میاد،شبا مینویسم توتنهاییام ولی نوشته هام همه تلخن تلخ.....همش دنبال یه جمله میگردم احساسمو بیان کنه،خیلیا میان میخونن وچشمشون دنبال چیزایی میگرده که حرف دلشون باشه،دنبال چیزی هستنن که دردشون رو بگه،میگردن تونوشته هام دنبال چیزایی که شاید براشون گفتنش به دیگری سخته ، میخونن و یه آه میکشن .منم یاد گرفتم بنویسم.قبلنا حرفامونمینوشتم ولی ازوقتی یه دوست گفت بنویس شروع کردم نوشتن ،باورم نمیشد روزی بشه نوشت ازاحساسات ازحرفای دل،ولی نوشتم وازاون دوست ممنونم ....الان تواین لحظه برای من بوی تنهایی میاد ،بوی غم،بوی حسرت،بوی گریه های پنهونی،بوی درد.....
+
+
+</font>
+
+<div><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/1/12.gif"></div><div><font size="4" color="#66cccc"><br></font></div><br>
+</div>
+	<div class="postdesc">
+		
+		<a  href="http://poredardam.mihanblog.com/post/236" >+</a>
+		نوشته شده در  سه شنبه 19 اسفند 1393 ساعت 02:13 ب.ظ   توسط <a href="http://poredardam.mihanblog.com/post/author/726305">مهتاب  </a>  
+		<a target="_self" href="javascript:newComment(236)">نظرات  <script>setCommentCnt(236)</script> </a>
+		  | 
+		  <span dir="rtl" >
+	      <script type="text/javascript">GetBC(<-PostId->);</script>
+	      </span>
+        
+     </div>
+     </div> 
+	 <hr width="90%" size="1" color="#E8B33C" align="center" >
+	 <br>  <br>  
+	<!--- bahar20230118.persiangig.ir --->
+		<!--- bahar20230118.persiangig.ir --->
+	<div class="menutopimage" style="border:0;text-align:right;background:none;"> یک جایی از زندگی</div>
+        <div class="postborder">
+	<div class="posttext" >
+<div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXHuUVhNzimL_vGZt0kxnJwF-_uF9oKZ1M0U6oROUYm88WXMcB"></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc"><br></font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">تو را به خدا !&nbsp;</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">اگر یک گوشه ای از دنیایت کسی را دیدی که دارد با خودش حرف میزند</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">کسی را دیدی که با خودش می خندد</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">کسی را دیدی که چشمهای آشفته ی منتظری دارد&nbsp;</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">کسی را دیدی که عجیب راه میرود</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">کسی را دیدی که تنهایی را دارد تنهایی ، درد می کشد</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">هراس به دلت راه نده</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">و مطمئن باش</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">یک روزی</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">یک جایی از زندگی</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">یک آدم معمولی بوده</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">یک آدم معمولی مثل تو&nbsp;</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">که یک روزی</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">یک جایی</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">یک جوری</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">" دل و دین وعقل وهوشش همه را به آب داده "&nbsp;</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">و شده است دیوانه ای که تو</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">حالا</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">از زندگی اش</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">از خنده اش</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">از راه رفتنش</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">از نگاه کردنش</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc">از آشفتگی اش می ترسی</font></div><div><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/1/12.gif"></div><div><font face="arial, helvetica, sans-serif" size="4" color="#cc66cc"><br></font></div>
+
+
+
+
+<br>
+</div>
+	<div class="postdesc">
+		
+		<a  href="http://poredardam.mihanblog.com/post/235" >+</a>
+		نوشته شده در  سه شنبه 19 اسفند 1393 ساعت 02:10 ب.ظ   توسط <a href="http://poredardam.mihanblog.com/post/author/726305">مهتاب  </a>  
+		<a target="_self" href="javascript:newComment(235)">نظرات  <script>setCommentCnt(235)</script> </a>
+		  | 
+		  <span dir="rtl" >
+	      <script type="text/javascript">GetBC(<-PostId->);</script>
+	      </span>
+        
+     </div>
+     </div> 
+	 <hr width="90%" size="1" color="#E8B33C" align="center" >
+	 <br>  <br>  
+	<!--- bahar20230118.persiangig.ir --->
+		<!--- bahar20230118.persiangig.ir --->
+	<div class="menutopimage" style="border:0;text-align:right;background:none;"> خدایا صدایم را می شنوی !</div>
+        <div class="postborder">
+	<div class="posttext" ><div><img src="http://axgig.com/images/97602337158687484577.jpg"></div><strong style="font-family: Tahoma; text-align: right;"><font size="3" color="#cc66cc" style="background-color: rgb(0, 0, 0);"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><div><strong style="font-family: Tahoma; text-align: right;"><font size="3" color="#cc66cc" style="background-color: rgb(0, 0, 0);"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><br></span></font></strong></div>آرزو دارم</span><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">در آسمانها</span><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">زمینی داشته باشم</span></font></strong><p style="font-family: Tahoma; text-align: right;"></p><p style="font-family: Tahoma; text-align: right;"></p><p style="font-family: Tahoma; text-align: right;"><strong><font size="3" color="#cc66cc" style="background-color: rgb(0, 0, 0);"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">تا بر سنگ فرش ِ ابرها</span><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">به دور از زیبایی های ِ زشت این حوالی</span></font></strong></p><strong style="font-family: Tahoma; text-align: right;"><font size="3" color="#cc66cc" style="background-color: rgb(0, 0, 0);"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">قدم بزنم</span><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">خدایا</span><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">صدایم را می شنوی !؟</span><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">یا نکند</span><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">که آسمانت را هم</span><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">در این زمین</span><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">چال کرده ای ... !</span><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">مرا ببر</span><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">باشم یا نباشم</span><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">آب از آب تکان نمی خورد</span><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">.</span><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">.</span><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">.</span><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">باور کن</span><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">دریا از نبود ماهی</span><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;">هرگز نمیمیرد</span></font></strong>
+
+
+<div><strong style="font-family: Tahoma; text-align: right;"><font size="3" color="#cc66cc" style="background-color: rgb(0, 0, 0);"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;"><br></span></font></strong></div><div><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/1/12.gif"></div><br>
+</div>
+	<div class="postdesc">
+		
+		<a  href="http://poredardam.mihanblog.com/post/234" >+</a>
+		نوشته شده در  چهارشنبه 30 مهر 1393 ساعت 04:24 ب.ظ   توسط <a href="http://poredardam.mihanblog.com/post/author/726305">مهتاب  </a>  
+		<a target="_self" href="javascript:newComment(234)">نظرات  <script>setCommentCnt(234)</script> </a>
+		  | 
+		  <span dir="rtl" >
+	      <script type="text/javascript">GetBC(<-PostId->);</script>
+	      </span>
+        
+     </div>
+     </div> 
+	 <hr width="90%" size="1" color="#E8B33C" align="center" >
+	 <br>  <br>  
+	<!--- bahar20230118.persiangig.ir --->
+		<!--- bahar20230118.persiangig.ir --->
+	<div class="menutopimage" style="border:0;text-align:right;background:none;"> به قول فروغ</div>
+        <div class="postborder">
+	<div class="posttext" ><div><img src="http://upload.tehran98.com/img1/uwxhiiuzqivcwlgswm36.jpg"></div><strong style="font-family: Tahoma; text-align: right;"><font color="#6666cc" size="4" style="background-color: rgb(0, 0, 0);"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 15.4545450210571px;"><div><strong style="font-family: Tahoma; text-align: right;"><font color="#6666cc" size="4" style="background-color: rgb(0, 0, 0);"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 15.4545450210571px;"><br></span></font></strong></div><div><strong style="font-family: Tahoma; text-align: right;"><font color="#6666cc" size="4" style="background-color: rgb(0, 0, 0);"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 15.4545450210571px;"><br></span></font></strong></div>پر از اشکم ولی می خندم به سختی . . .</span><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 15.4545450210571px;"><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 15.4545450210571px;"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 15.4545450210571px;">به قول فروغ که می گفت :</span><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 15.4545450210571px;"><br style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 15.4545450210571px;"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; line-height: 15.4545450210571px;">شهامت می خواهد سرد باشی و گرم بخندی !</span></font></strong><br style="color: rgb(51, 51, 51); font-family: Tahoma; text-align: right; background-color: rgb(49, 126, 144);"><p style="color: rgb(51, 51, 51); font-family: Tahoma; text-align: right; background-color: rgb(49, 126, 144);"></p>
+
+
+<div><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/1/12.gif"></div><div><strong style="color: rgb(51, 51, 51); font-family: Tahoma; text-align: right; background-color: rgb(49, 126, 144);"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 12.7272720336914px; line-height: 15.4545450210571px; background-color: rgb(255, 255, 255);"><br></span></strong></div><div><strong style="color: rgb(51, 51, 51); font-family: Tahoma; text-align: right; background-color: rgb(49, 126, 144);"><span style="font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 12.7272720336914px; line-height: 15.4545450210571px; background-color: rgb(255, 255, 255);"><br></span></strong></div><br>
+</div>
+	<div class="postdesc">
+		
+		<a  href="http://poredardam.mihanblog.com/post/233" >+</a>
+		نوشته شده در  چهارشنبه 30 مهر 1393 ساعت 04:21 ب.ظ   توسط <a href="http://poredardam.mihanblog.com/post/author/726305">مهتاب  </a>  
+		<a target="_self" href="javascript:newComment(233)">نظرات  <script>setCommentCnt(233)</script> </a>
+		  | 
+		  <span dir="rtl" >
+	      <script type="text/javascript">GetBC(<-PostId->);</script>
+	      </span>
+        
+     </div>
+     </div> 
+	 <hr width="90%" size="1" color="#E8B33C" align="center" >
+	 <br>  <br>  
+	<!--- bahar20230118.persiangig.ir --->
+		<!--- bahar20230118.persiangig.ir --->
+	<div class="menutopimage" style="border:0;text-align:right;background:none;"> تولدم مبارک</div>
+        <div class="postborder">
+	<div class="posttext" >
+
+<p style="margin-top: 10px; margin-bottom: 0px; font-family: Tahoma; line-height: 16px; text-align: justify;"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCRvUQOImuNd5ixQ3VWZOJbE5O6NPza6PGXD3b62HrEUoXETSP"></p><p style="margin-top: 10px; margin-bottom: 0px; font-family: Tahoma; line-height: 16px; text-align: justify;"><strong><font size="4" color="#ff9966" style="background-color: rgb(0, 0, 0);">امروز چند شنبه است؟</font></strong></p><strong style="font-family: Tahoma; line-height: 16px; text-align: justify;"><font size="4" color="#ff9966" style="background-color: rgb(0, 0, 0);"><br>چندم کدام ماه و چندم کدام سال است؟<br><br>امروز چند سال از من می گذرد؟<br><br>و من چند ساله ام ؟<br><br>چیزی به یاد نمی آورم جز اینکه<br><br>امروز اکنون است و اینجا زمین است<br>&nbsp;<br>و من به دنیا آمده ام...<br></font></strong><p style="margin-top: 10px; margin-bottom: 0px; font-family: Tahoma; line-height: 16px; text-align: justify;"><strong><font size="4" color="#ff9966" style="background-color: rgb(0, 0, 0);">به رسم عادت: تولدم مبارک</font></strong></p><div><img src="http://www.upload.kutini.com/2012/04/2803.gif" alt="شکلک های متحرک تولدت مبارک زیبا"></div><div><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/1/12.gif"></div><div><br></div>
+
+
+
+
+
+
+<br>
+</div>
+	<div class="postdesc">
+		
+		<a  href="http://poredardam.mihanblog.com/post/232" >+</a>
+		نوشته شده در  سه شنبه 11 شهریور 1393 ساعت 07:26 ب.ظ   توسط <a href="http://poredardam.mihanblog.com/post/author/726305">مهتاب  </a>  
+		<a target="_self" href="javascript:newComment(232)">نظرات  <script>setCommentCnt(232)</script> </a>
+		  | 
+		  <span dir="rtl" >
+	      <script type="text/javascript">GetBC(<-PostId->);</script>
+	      </span>
+        
+     </div>
+     </div> 
+	 <hr width="90%" size="1" color="#E8B33C" align="center" >
+	 <br>  <br>  
+	<!--- bahar20230118.persiangig.ir --->
+		<!--- bahar20230118.persiangig.ir --->
+	<div class="menutopimage" style="border:0;text-align:right;background:none;">  کهولت دوست داشتن را دوست دارم.....</div>
+        <div class="postborder">
+	<div class="posttext" >
+
+
+
+
+<div><img src="http://cdn1.bipfa.net/i/attachments/1/1374001451639511_large.jpg"></div><div><span lang="FA" dir="RTL" style="font-size: 24pt; line-height: 115%; font-family: IranNastaliq, serif; background-image: initial; background-attachment: initial; background-color: rgb(0, 0, 0); background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><p class="MsoNormal" dir="RTL"><span lang="FA" style="font-size: 18pt; line-height: 115%; font-family: 'B Zar'; color: rgb(255, 102, 102); background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">شر و شور عشق با رسیدن به نگاه های
+به هم تمام می شود گاهی ! بس که عادت کرده ایم احساسمان را در آن دور های زندگیمان
+جا بگذاریم و برای زندگیمان پیروزی را نصیب منطقمان کنیم. ولی بهتر از شور و
+اشتیاق عاشقی ، کهولت دوست داشتن است ! عاقلانه دوست داشتن کسی که یک روز کودکانه
+عاشقش بودی! شاید خنده دار به نظر برسد که از تمامِ او فقط یک سایه بخواهی که
+بنشینی زیرِ سایه اش و با قلم و دفترت بدون هیچ ترس و اضطرابی زندگی کنی. کهولت
+دوست داشتن را بیشتر دوست دارم! آرامشش از خیلی زمان ها بیشتر است. اینکه کسی
+پیشانیت را ببوسد و تمام دوست داشتنش را در یک ذره خلاصه کند و بگوید مواظب خودت
+باش و تمام ابراز علاقه اش همین باشد خیلی بهتر تر است تا کسی که هر روز تو را در
+آغوش بگیرد و تو را به اندازه تمام شن های ساحل های دنیا دوست داشته باشد . من این
+کهولت دوست داشتن را بیشتر تر دوست دارم</span><span dir="LTR" style="font-size:18.0pt;line-height:115%;font-family:&quot;Tw Cen MT&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-family:&quot;B Zar&quot;"></span><o:p></o:p></p><p class="MsoNormal" dir="RTL"><span lang="FA" style="font-size: 18pt; line-height: 115%; font-family: 'B Zar'; color: rgb(255, 102, 102); background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;"><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/1/12.gif"></span></p>
+
+</span></div><div></div>
+
+
+
+
+
+
+
+
+
+<br>
+</div>
+	<div class="postdesc">
+		
+		<a  href="http://poredardam.mihanblog.com/post/231" >+</a>
+		نوشته شده در  سه شنبه 21 مرداد 1393 ساعت 01:35 ب.ظ   توسط <a href="http://poredardam.mihanblog.com/post/author/726305">مهتاب  </a>  
+		<a target="_self" href="javascript:newComment(231)">نظرات  <script>setCommentCnt(231)</script> </a>
+		  | 
+		  <span dir="rtl" >
+	      <script type="text/javascript">GetBC(<-PostId->);</script>
+	      </span>
+        
+     </div>
+     </div> 
+	 <hr width="90%" size="1" color="#E8B33C" align="center" >
+	 <br>  <br>  
+	<!--- bahar20230118.persiangig.ir --->
+		<!--- bahar20230118.persiangig.ir --->
+	<div class="menutopimage" style="border:0;text-align:right;background:none;"> من به این كلمه ها مدیونم........</div>
+        <div class="postborder">
+	<div class="posttext" ><div><img src="http://www.bultannews.com/files/fa/news/1389/5/16/21328_829.jpg"></div><span style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(0, 0, 0);"><font color="#ff6666" size="4"><div><span style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(0, 0, 0);"><font color="#ff6666" size="4"><br></font></span></div>صفحه ی سفید روبرویم منتظر مانده تا بنویسم. تا سکوت سفیدش را بشکنم. توی دلم خیلی چیزها،هست... خیلی چیزها که دوست شان دارم... داشتن شان را... دوست داشتن شان را.... نوشتن شان را... من به این کلمه های همیشه حی وحاضر مدیونم... من به این کلمه هایی که نه خاموش می شوند و نه سایلنت مدیونم... من به این کلمه هایی که عین خودم ماندن را بلدترند مدیونم... من به این کلمه هایی که عین خودم، وفادارند مدیونم... من به این کلمه هایی که از دسترس خارج نمی شوند مدیونم... من به این کلمه هایی که عین خودم لبریز از خواستن اند مدیونم...من به این کلمه هایی که به موقع ،بغلم می کنند مدیونم...من به این کلمه هایی که از تنهایی دَرم می آورند مدیونم...من به این کلمه هایی که به جای تک تک آدمها ، با من حرف می زنند مدیونم...من به این کلمه هایی که خسته نمی شونداز چشمهای خیسم..که کلافه نمی شوند از بودن ِمدامم ...که اخم نمی کنند... که عبوس نیستند مدیونم... من به این کلمه هایی که عین خودم ، از دوستت دارم لبریزند مدیونم...من به این کلمه هایی که هراس هایم را می فهمند مدیونم...من به این کلمه هایی که وقت وبی وقت، دست ِ دلم را می گیرند مدیونم... من به این کلمه هایی که زحمت نامه هایم را می کشند مدیونم...من به این کلمه هایی که غصه ام را ،قصه میکنند مدیونم...من به این کلمه ها که از التهابهایم ،دلتنگیهایم ،دردهایم،داغ هایم،عاشقانه می سازند مدیونم...من به این کلمه های آشنای ِدلم بیشتر از حضور " تو " مدیونم ...!!</font></span>
+
+
+<div><span style="font-family: Arial; font-weight: bold; text-align: right; background-color: rgb(0, 0, 0);"><font color="#ff6666" size="4"><br></font></span></div><div><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/1/12.gif"></div><br>
+</div>
+	<div class="postdesc">
+		
+		<a  href="http://poredardam.mihanblog.com/post/229" >+</a>
+		نوشته شده در  یکشنبه 21 اردیبهشت 1393 ساعت 02:26 ب.ظ   توسط <a href="http://poredardam.mihanblog.com/post/author/726305">مهتاب  </a>  
+		<a target="_self" href="javascript:newComment(229)">نظرات  <script>setCommentCnt(229)</script> </a>
+		  | 
+		  <span dir="rtl" >
+	      <script type="text/javascript">GetBC(<-PostId->);</script>
+	      </span>
+        
+     </div>
+     </div> 
+	 <hr width="90%" size="1" color="#E8B33C" align="center" >
+	 <br>  <br>  
+	<!--- bahar20230118.persiangig.ir --->
+		<!--- bahar20230118.persiangig.ir --->
+	<div class="menutopimage" style="border:0;text-align:right;background:none;"> فراموشی!!!!!!!!</div>
+        <div class="postborder">
+	<div class="posttext" >
+
+
+<div><img src="http://upload.iranvij.ir/image_tir91/13406707069.jpg" alt="گالری عکس ماهـ فـآ"></div><div><font color="#999900"><br></font></div><font color="#66cccc"><font style="background-color: rgb(0, 0, 0);" face="arial, helvetica, sans-serif" size="4"><span style="text-align: right; font-weight: bold;">جایی هست به اسم فراموشی. جایی یک گوشه ی مغزمان هست به اسم فراموشی...</span><span style="text-align: right; font-weight: bold;">جای خوبی ست اگر که بشود به دستش، ترسهای جانت را بدهی تا برایت گم وگورش کند.</span><span style="text-align: right;">&nbsp;</span><span style="text-align: right; font-weight: bold;">جایی خوبی ست اگر که بشود زخمهایی که از گوشه کناره های زندگی ات نصیبت شده را بسپاری به دستهایش.</span><span style="text-align: right;">&nbsp;</span><span style="text-align: right; font-weight: bold;">جای مهربانی ست اگر لطف کند ودچارت کند به خودش فقط ، به وقت های فرار از غصه ها.بغض ها.خسته شدن ها.</span><span style="text-align: right;"></span><span style="text-align: right; font-weight: bold;">اما ...اما...</span><span style="text-align: right; font-weight: bold;">&nbsp;مرگش باد اگر بیاید سر وقت خاطره های خوش عطر و بوی زندگی ات...</span><span style="text-align: right; font-weight: bold;">&nbsp;مرگش باد اگر بخواهد تن بدهی به از خاطر بردن و پشت گوش انداختن گذشته ای که حقش است در روزهای باقی مانده ی عمرت جولان بدهد واحوالت را به ارتفاع خوشبختی برساند...</span><span style="text-align: right; font-weight: bold;">&nbsp;مرگش باد اگر بخواهد دست ببرد به انبار عشق وِ دوستت دارمهایت...</span><span style="text-align: right; font-weight: bold;">مرگش باد اگر پایش را از گلیمش دراز تر کند و باعث وبانی خنده هایت را از دلت دور کند.مرگش باد اگر سرایت کند به حریم ِامن خزانه ی مقدس دلت...</span><span style="text-align: right; font-weight: bold;">مرگش باد اگر پا کج بگذارد و بیراهه برود و بریزد به جان ِبهترین خاطره های جانت...!!</span><span style="text-align: right;">&nbsp;</span><span style="text-align: right; font-weight: bold;">جایی هست به اسم فراموشی که باید بلد باشی چه چیزهایی را به دستش بسپاری وچه چیزهایی را از معرض دستهایش دور کنی...</span><span style="text-align: right;"></span><span style="text-align: right; font-weight: bold;">ناشی باشینابلد باشی</span><span style="text-align: right; font-weight: bold;">&nbsp;دچار ِش می شوی جوری که مغزت را با سنگ دلی اش ، آرام آرام زایل می کند و تا به خودت بیایی می بینی تمام خاطره های خوش ات،تمام یادهای لبریز از عطرت، مرده اند.جان داده اند !&nbsp;</span><span style="text-align: right;"></span><span style="text-align: right; font-weight: bold;">اگر بدانمفراموشی دور دست ترین نقطه ی جهان است</span><span style="text-align: right; font-weight: bold;">تمام فاصله ها را یک جا ،می چینم توی چمدانی و به دستش می دهم ...!!فاصله که نباشد</span><span style="text-align: right; font-weight: bold;">فاصله که لای خوشی هایم جولان ندهد ،حالم روبه راه می شود...!!</span></font>
+
+
+</font><div><font color="#cc6600"><span style="font-family: BKoodakBold, Tahoma, Arial, sans-serif; font-size: 15px; text-align: right; background-color: rgb(250, 250, 250); font-weight: bold;"><br></span></font></div><div><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/1/12.gif"></div>
+
+
+
+
+
+<br>
+</div>
+	<div class="postdesc">
+		
+		<a  href="http://poredardam.mihanblog.com/post/227" >+</a>
+		نوشته شده در  جمعه 19 اردیبهشت 1393 ساعت 10:22 ق.ظ   توسط <a href="http://poredardam.mihanblog.com/post/author/726305">مهتاب  </a>  
+		<a target="_self" href="javascript:newComment(227)">نظرات  <script>setCommentCnt(227)</script> </a>
+		  | 
+		  <span dir="rtl" >
+	      <script type="text/javascript">GetBC(<-PostId->);</script>
+	      </span>
+        
+     </div>
+     </div> 
+	 <hr width="90%" size="1" color="#E8B33C" align="center" >
+	 <br>  <br>  
+	<!--- bahar20230118.persiangig.ir --->
+		<!--- bahar20230118.persiangig.ir --->
+	<div class="menutopimage" style="border:0;text-align:right;background:none;"> وقت تمام است.......</div>
+        <div class="postborder">
+	<div class="posttext" ><img src="http://omid16.persiangig.com/image/2100v9v.jpg" alt="www.omid3.blogfa.com">
+
+
+<br>
+</div>
+	<div class="postdesc">
+		
+		<a  href="http://poredardam.mihanblog.com/post/225" >+</a>
+		نوشته شده در  یکشنبه 7 اردیبهشت 1393 ساعت 03:53 ب.ظ   توسط <a href="http://poredardam.mihanblog.com/post/author/726305">مهتاب  </a>  
+		<a target="_self" href="javascript:newComment(225)">نظرات  <script>setCommentCnt(225)</script> </a>
+		  | 
+		  <span dir="rtl" >
+	      <script type="text/javascript">GetBC(<-PostId->);</script>
+	      </span>
+        
+     </div>
+     </div> 
+	 <hr width="90%" size="1" color="#E8B33C" align="center" >
+	 <br>  <br>  
+	<!--- bahar20230118.persiangig.ir --->
+		<!--- bahar20230118.persiangig.ir --->
+	<div class="menutopimage" style="border:0;text-align:right;background:none;"> ﺍﯾـﻦ ﺭﻭﺯﻫـــﺎ ﭘــُﺮ ﺍﺯ ﺳﮑـــــــــﻮﺗـﻢ...</div>
+        <div class="postborder">
+	<div class="posttext" >
+
+
+
+<div><img src="http://upload.iranvij.ir/image_tir91/134067065716.jpg" alt="گالری ماهـ فـآ/بهترین گالری عکس"></div><font size="4" color="#3366ff" face="tahoma, arial, helvetica, sans-serif"><span style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><div><br></div><div><font size="4" color="#3366ff" face="tahoma, arial, helvetica, sans-serif"><span style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><br></span></font></div>ﻧﻪ ﺣﻮﺻﻠـــﻪ ﯼ ﺩﻭﺳـــﺖ ﺩﺍﺷﺘــﻦ ﺩﺍﺭﻡ</span><br style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><br style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><span style="text-align: -webkit-center; background-color: rgb(1, 1, 1);">ﻧﻪ ﻣﯽ ﺧﻮﺍﻫـــــــﻢ ﮐﺴـﯽ ﺩﻭﺳﺘـــــــــﻢ ﺩﺍﺷﺘـﻪ ﺑﺎﺷﺪ</span><br style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><br style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><span style="text-align: -webkit-center; background-color: rgb(1, 1, 1);">ﺍﯾـﻦ ﺭﻭﺯﻫـــﺎ ﺳـــــَــــﺮﺩﻡ ...</span><br style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><br style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><span style="text-align: -webkit-center; background-color: rgb(1, 1, 1);">ﻣﺜـﻞ ﺩﯼ , ﻣﺜـﻞ ﺑﻬﻤـــﻦ , ﻣﺜـﻞ ﺍﺳﻔﻨــــــﺪ</span><br style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><br style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><span style="text-align: -webkit-center; background-color: rgb(1, 1, 1);">ﻣﺜـﻞ ﺯﻣﺴﺘــــ ـــــﺎﻥ</span><br style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><br style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><span style="text-align: -webkit-center; background-color: rgb(1, 1, 1);">ﺍﺣﺴــــــﺎﺳـﻢ ﯾـﺦ ﺯﺩﻩ</span><br style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><br style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><span style="text-align: -webkit-center; background-color: rgb(1, 1, 1);">ﺁﺭﺯﻭﻫـــــــــﺎﯾـﻢ ﻗﻨﺪﯾــــﻞ ﺑﺴﺘــﻪ</span><br style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><br style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><span style="text-align: -webkit-center; background-color: rgb(1, 1, 1);">ﺍﻣﯿــــــﺪﻡ ﺯﯾــﺮ ﺑﻬﻤــﻦ ِ ﺳــﺮﺩ ِ ﺍﺣﺴــﺎﺳﺎﺗﻢ ﺩﻓــــــــﻦ ﺷـﺪﻩ ....</span><br style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><br style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><span style="text-align: -webkit-center; background-color: rgb(1, 1, 1);">ﻧﻪ ﺑﻪ ﺁﻣـــــدنی ﺩﻝ ﺧﻮﺷــﻢ ﻭ ﻧﻪ ﺍﺯ ﺭﻓﺘـــــنی ﻏﻤﮕﯿــﻦ</span><br style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><br style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><span style="text-align: -webkit-center; background-color: rgb(1, 1, 1);">ﺍﯾـﻦ ﺭﻭﺯﻫـــﺎ ﭘــُﺮ ﺍﺯ ﺳﮑـــــــــﻮﺗـﻢ .</span></font>
+
+
+<div><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/1/12.gif"></div><div><font size="4" face="arial, helvetica, sans-serif" color="#3366ff"><span style="text-align: -webkit-center; background-color: rgb(1, 1, 1);"><br></span></font></div>
+
+
+
+
+
+
+
+<br>
+</div>
+	<div class="postdesc">
+		
+		<a  href="http://poredardam.mihanblog.com/post/223" >+</a>
+		نوشته شده در  جمعه 18 بهمن 1392 ساعت 03:15 ب.ظ   توسط <a href="http://poredardam.mihanblog.com/post/author/726305">مهتاب  </a>  
+		<a target="_self" href="javascript:newComment(223)">نظرات  <script>setCommentCnt(223)</script> </a>
+		  | 
+		  <span dir="rtl" >
+	      <script type="text/javascript">GetBC(<-PostId->);</script>
+	      </span>
+        
+     </div>
+     </div> 
+	 <hr width="90%" size="1" color="#E8B33C" align="center" >
+	 <br>  <br>  
+	<!--- bahar20230118.persiangig.ir --->
+		<!--- bahar20230118.persiangig.ir --->
+	<div class="menutopimage" style="border:0;text-align:right;background:none;"> دلتنگم....</div>
+        <div class="postborder">
+	<div class="posttext" ><p class="MsoNormal" style="margin-bottom: 0.0001pt; direction: ltr; unicode-bidi: embed;"><div style="text-align: right;"><img src="http://www.smsjo.ir/wp-content/uploads/Most-new-words-along-with-pictures-romantic-Persian-date-Mehr-92_www.smsjo_.ir_3.jpg"></div><div style="text-align: right;"><span style="color: lime; font-family: Tahoma, sans-serif; background-color: rgb(0, 0, 0);"><font size="3">دلتنگم</font></span></div><font size="3" style="background-color: rgb(0, 0, 0);"><span style="font-family: Tahoma, sans-serif; color: lime; background-position: initial initial; background-repeat: initial initial;"><div style="text-align: right;"><span lang="FA" dir="RTL" style="font-family: Tahoma, sans-serif;">نه برای روزهایی که رفتی</span><span dir="LTR" style="font-family: Tahoma, sans-serif;"></span><span dir="LTR" style="font-family: Tahoma, sans-serif;"></span><span style="font-family: Tahoma, sans-serif;"> ..</span></div>
+
+<span lang="FA" dir="RTL"><div style="text-align: right;"><span style="font-family: Tahoma, sans-serif;">نه برای آرزوهایی که ورق ورق شعر کردم</span></div></span><div style="text-align: right;"><span style="font-family: Tahoma, sans-serif;">.</span></div>
+<span lang="FA" dir="RTL"><div style="text-align: right;"><span style="font-family: Tahoma, sans-serif;"><span lang="FA" dir="RTL">دلتنگم</span></span><span dir="LTR" style="font-family: tahoma;"></span><span style="font-family: Tahoma, sans-serif;"><span dir="LTR"></span>&nbsp;</span></div></span></span><span lang="FA" dir="RTL" style="mso-ansi-font-size:10.0pt;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:lime"><div style="text-align: right;"><span lang="FA" dir="RTL" style="font-family: Tahoma, sans-serif;">نه برای " بودن هایش</span><span dir="LTR" style="font-family: tahoma;"></span><span style="font-family: Tahoma, sans-serif;"><span dir="LTR"></span> "</span></div></span><span lang="FA" dir="RTL" style="mso-ansi-font-size:10.0pt;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:lime"><div style="text-align: right;"><span lang="FA" dir="RTL" style="font-family: Tahoma, sans-serif;">که با او باشد یا نباشد ،
+عاشقش هستم</span><span dir="LTR" style="font-family: tahoma;"></span><span style="font-family: Tahoma, sans-serif;"><span dir="LTR"></span> !</span></div></span><span style="font-family: Tahoma, sans-serif; color: lime;"><div style="text-align: right;"><span style="font-family: Tahoma, sans-serif;">.</span></div></span><span style="font-family: Tahoma, sans-serif; color: lime;"><div style="text-align: right;"><span style="font-family: Tahoma, sans-serif;">.</span></div></span><span style="font-family: Tahoma, sans-serif; color: lime;"><div style="text-align: right;"><span style="font-family: Tahoma, sans-serif;">.</span></div></span><span lang="FA" dir="RTL" style="mso-ansi-font-size:10.0pt;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:lime"><div style="text-align: right;"><span style="font-family: Tahoma, sans-serif;">فقط دلتنگم</span></div></span><span lang="FA" dir="RTL" style="mso-ansi-font-size:10.0pt;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:lime"><div style="text-align: right;"><span lang="FA" dir="RTL" style="font-family: Tahoma, sans-serif;">برای دوستت دارم هایی که
+به او گفتم</span><span dir="LTR" style="font-family: tahoma;"></span><span style="font-family: Tahoma, sans-serif;"><span dir="LTR"></span>&nbsp;</span></div></span><span lang="FA" dir="RTL" style="mso-ansi-font-size:10.0pt;font-family:&quot;Tahoma&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:lime"><div style="text-align: right;"><span style="font-family: Tahoma, sans-serif;">و</span></div></span></font></p>
+
+<p class="MsoNormal" align="right" style="text-align: right; line-height: 12pt; direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 12pt; font-size: medium; font-family: Tahoma, sans-serif; color: lime;">او سکوت کرد</span><span dir="LTR" style="line-height: 12pt; font-size: medium;"></span><span style="line-height: 12pt; font-size: medium; font-family: Tahoma, sans-serif; color: lime;"><span dir="LTR"></span> !!!</span></p><p class="MsoNormal" align="right" style="text-align: right; line-height: 12pt; direction: ltr; unicode-bidi: embed;"><span style="line-height: 12pt; font-size: medium; font-family: Tahoma, sans-serif; color: lime;"><br></span></p><p class="MsoNormal" align="right" style="text-align: right; line-height: 12pt; direction: ltr; unicode-bidi: embed;"><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/1/12.gif"></p>
+
+
+<br>
+</div>
+	<div class="postdesc">
+		
+		<a  href="http://poredardam.mihanblog.com/post/222" >+</a>
+		نوشته شده در  چهارشنبه 9 بهمن 1392 ساعت 12:39 ب.ظ   توسط <a href="http://poredardam.mihanblog.com/post/author/726305">مهتاب  </a>  
+		<a target="_self" href="javascript:newComment(222)">نظرات  <script>setCommentCnt(222)</script> </a>
+		  | 
+		  <span dir="rtl" >
+	      <script type="text/javascript">GetBC(<-PostId->);</script>
+	      </span>
+        
+     </div>
+     </div> 
+	 <hr width="90%" size="1" color="#E8B33C" align="center" >
+	 <br>  <br>  
+	<!--- bahar20230118.persiangig.ir --->
+		<!--- bahar20230118.persiangig.ir --->
+	<div class="menutopimage" style="border:0;text-align:right;background:none;"> زنـבگے زیباسـتـــ ....</div>
+        <div class="postborder">
+	<div class="posttext" ><div><img src="http://s5.picofile.com/file/8102710376/NARASIDAN_WWW_TAKCARD_BLOGFA_COM_.jpg" alt="http://s5.picofile.com/file/8102710376/NARASIDAN_WWW_TAKCARD_BLOGFA_COM_.jpg"></div><div><br></div><span class="Apple-style-span" style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; background-color: rgb(0, 0, 0); line-height: 24px; font-size: large;">زنـבگے زیباسـتـــ ..../</span><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0);"><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0); font-size: 9pt;"><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0); font-size: 9pt;"><span class="Apple-style-span" style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; text-align: center; background-color: rgb(0, 0, 0); line-height: 24px; font-size: large;">بــﮧ زیبایے&nbsp;<span style="margin: 0px; padding: 0px; color: rgb(255, 0, 0);">چشمهاے</span>&nbsp;پـُـفـ ڪرבه از</span><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0);"><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0); font-size: 9pt;"><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0); font-size: 9pt;"><span class="Apple-style-span" style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; text-align: center; background-color: rgb(0, 0, 0); line-height: 24px; font-size: large;">هِق هِق هــآے شَبــآنـﮧ(!)</span><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0);"><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0); font-size: 9pt;"><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0); font-size: 9pt;"><span class="Apple-style-span" style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; text-align: center; background-color: rgb(0, 0, 0); line-height: 24px; font-size: large;">بــﮧ زیبایے&nbsp;<span style="margin: 0px; padding: 0px; color: rgb(255, 0, 0);">بغــض</span>&nbsp;نَفَس گیـر روزانــﮧ...</span><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0);"><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0); font-size: 9pt;"><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0); font-size: 9pt;"><span class="Apple-style-span" style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; text-align: center; background-color: rgb(0, 0, 0); line-height: 24px; font-size: large;">بــﮧ زیبایے&nbsp;<span style="margin: 0px; padding: 0px; color: rgb(255, 0, 0);">قلبــِ</span>&nbsp;تڪـﮧ تڪـﮧ شُده اَز</span><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0);"><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0); font-size: 9pt;"><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0); font-size: 9pt;"><span class="Apple-style-span" style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; text-align: center; background-color: rgb(0, 0, 0); line-height: 24px; font-size: large;">شڪستنهاے بیشمـآر...</span><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0);"><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0); font-size: 9pt;"><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0); font-size: 9pt;"><span class="Apple-style-span" style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; text-align: center; background-color: rgb(0, 0, 0); line-height: 24px; font-size: large;">بــﮧ زیبایے&nbsp;<span style="margin: 0px; padding: 0px; color: rgb(255, 0, 0);">نفسے&nbsp;</span>ڪــﮧ از تَنگے بالـا نمیایــَב!!</span><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0);"><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0); font-size: 9pt;"><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0); font-size: 9pt;"><span class="Apple-style-span" style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; text-align: center; background-color: rgb(0, 0, 0); line-height: 24px; font-size: large;">بــﮧ زیبایے تمام شُـבטּ تـבریجے&nbsp;<span style="margin: 0px; padding: 0px; color: rgb(255, 0, 0);">مـטּ</span>&nbsp;...</span><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0);"><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0); font-size: 9pt;"><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0); font-size: 9pt;"><span class="Apple-style-span" style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; text-align: center; background-color: rgb(0, 0, 0); line-height: 24px; font-size: large;">آرے</span><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0);"><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0); font-size: 9pt;"><br style="margin: 0px; padding: 0px; color: rgb(255, 255, 255); font-family: Tahoma; line-height: 16px; text-align: center; background-color: rgb(0, 0, 0); font-size: 9pt;"><span class="Apple-style-span" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: center; background-color: rgb(0, 0, 0); line-height: 24px; font-size: large; color: rgb(255, 0, 0);">زنـבگے زیباستــ ـــ...!</span>
+
+
+<div><span class="Apple-style-span" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: center; background-color: rgb(0, 0, 0); line-height: 24px; font-size: large; color: rgb(255, 0, 0);"><br></span></div><div><span class="Apple-style-span" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: center; background-color: rgb(0, 0, 0); line-height: 24px; font-size: large; color: rgb(255, 0, 0);"><img src="http://blogcod.parsskin.com/zibasazi/joda-konandeh/1/12.gif"></span></div><br>
+</div>
+	<div class="postdesc">
+		
+		<a  href="http://poredardam.mihanblog.com/post/221" >+</a>
+		نوشته شده در  پنجشنبه 5 دی 1392 ساعت 12:13 ب.ظ   توسط <a href="http://poredardam.mihanblog.com/post/author/726305">مهتاب  </a>  
+		<a target="_self" href="javascript:newComment(221)">نظرات  <script>setCommentCnt(221)</script> </a>
+		  | 
+		  <span dir="rtl" >
+	      <script type="text/javascript">GetBC(<-PostId->);</script>
+	      </span>
+        
+     </div>
+     </div> 
+	 <hr width="90%" size="1" color="#E8B33C" align="center" >
+	 <br>  <br>  
+	<!--- bahar20230118.persiangig.ir --->
+	
+</div>
+
+
+<div class="menu" id="menu">
+<!--- bahar20230118.persiangig.ir --->
+<p align="center"><script language="javascript" src="http://bahar-20.com/ftp/amar-ads/ads/weblog/abc/kochik.js"></script></p>
+  
+<div class="menutopimage"><div class="menutoptext">درباره وبلاگ </div></div>
+<div class="menutext">
+<img src="http://static.mihanblog.com//public/user_data/web_photo/289/865273.jpg?3618"  /><br>
+<font style="text-align:center;font-size:8pt;">تمام دلنوشته هایم را در خاک خواهم کاشت .می دانم گل خواهند داد.ابر چشمانم را به باریدن می نشانم تا سبز شوداین دفتر احساس.....<br />
+<br />
+بگذار تنها یک گل از این دفتر بشکفد و آن هم با تمام صداقت تقدیم به تو <br />
+<br />
+این نوشته هایم:<br />
+تنها میراث من است.<br />
+واین میراث من تنها یادآور خاطرات دیروز وامروز وفردای من است. وچون من به تنهایی عادت نخواهم کرد، فریاد دل را در سینه جمع آوری میکنم ویکجا در وبلاگم مینگارم.<br />
+آری! این نوشته هایم فریادهای بی صدای قلبم است که تاکنون رنگ شادی راپیدانکرده.<br />
+چون میگذرد غمی نیست.<br />
+<br />
+</font>
+</div><br>
+
+
+<div class="menutopimage"><div class="menutoptext">منوی اصلی</div> </div>
+<div class="menutext"><!--- bahar20230118.persiangig.ir --->
+<a href="index.html" target="_parent">صفحه نخست</a><br>
+<a href="mailto:" target="_parent">پست الکترونیک</a><br>
+<a href="http://bahar20230118.persiangig.ir" target="_parent">Bahar 20</a><br>
+<a href="http://poredardam.mihanblog.com/[cb:blog_archive_full_list_href]" target="_parent">آرشیو مطالب</a><br>
+
+</div><br>
+
+<div class="menutopimage"><div class="menutoptext">نویسندگان </div></div>
+<div class="menutext">
+<a href="http://poredardam.mihanblog.com/post/author/726305">مهتاب   204 </a><br></div><br>
+<!--- bahar20230118.persiangig.ir --->
+<div class="menutopimage"><div class="menutoptext">پیوندها </div></div>
+<div class="menutext"  >
+<a target="_blank" href="http://tanhayetanhadelam.mihanblog.com/">جایی برای دلتنگی(soheiil)</a><br><a target="_blank" href="http://tanhayetanhadelam.blogfa.com/">جایی برای دلتنگی</a><br><a target="_blank" href="http://daneshju-club.com/index.php">دانشجو کلوب</a><br><a target="_blank" href="http://eyzadyekta.mihanblog.com">به یاد آنکه......(ایزد)</a><br><a target="_blank" href="http://my-god-my-baby.mihanblog.com">عشق خدایی (حسین)</a><br><a target="_blank" href="http://www.heartbeat69.blogfa.com">تپش دل (بهزاد)</a><br><a target="_blank" href="http://mafreshoo.mihanblog.com/">مفرشو - حسین</a><br><a target="_blank" href="http://www.a73.blogfa.com">دلنوشته و مطالب طنز</a><br><a target="_blank" href="http://neyrang.blogfa.com">چوپان دروغگو</a><br><a target="_blank" href="http://www.iraninaz.blogfa.com">کلبه عاشقانه حسین</a><br><a target="_blank" href="http://www.helalemah82.blogfa.com">دل من دل تو (هانیه جون)</a><br><a target="_blank" href="http://heart-73.blogfa.com">دل نوشته</a><br><a target="_blank" href="http://shoordelan.mihanblog.com">دلنوشته های انتظار(ایمان)</a><br><a target="_blank" href="http://yourmahan.mihanblog.com">قسمت(بهنام)</a><br><a target="_blank" href="http://hamedbesharatnia.mihanblog.com">سروده های من(حامد)</a><br><a target="_blank" href="http://hmaria.loxblog.com">زندگی مثل...(مریم جون)</a><br><a target="_blank" href="http://www.crazy1love.mihanblog.com">غمکده عاشق دلشکسته(حسین)</a><br><a target="_blank" href="http://www.psdha.ir">تبادل لینک,رایگان,اتوماتیک</a><br><a target="_blank" href="http://sherinsou.blogfa.com">نگاه های منتظر(داتیس)</a><br><a target="_blank" href="http://http://www.love-to.blogfa.com">دوست داشتنی ترین دوست</a><br><a href="http://Bahar-20.Com">بهار بیست </a><br />
+	<a href="http://bahar20230118.persiangig.ir" target="_blank">قالب های فوق جدید میهن بلاگ</a>
+
+		  
+<br>
+</div><br>
+
+
+<div class="menutopimage"><div class="menutoptext">پیوندهای روزانه </div></div>
+<div class="menutext">
+<a target="_blank" href="http://dataworld.vcp.ir" title="با سلام....
+ 
+خواهان تبادل لینک با وبلاگ زیبای شما هستیم.در صورت تمایل لینک رو تایید و اطلاع بدید.
+دنیای اطلاعات">همکاری</a><br><a target="_blank" href="http://donyalar.com/hana-model.html" title="با سلام وب خوبی دارین بازم سر می زنم   در صورت امکان وب لینک من رو تائید کنید  ممنون
+
+یکتا">مدل حنا</a><br><a target="_blank" href="http://directfilm.blogfa.com/" title="">دانلود فیلم</a><br><a target="_blank" href="http://zhakav.ir/post/537" title="با سلام....
+ 
+خواهان تبادل لینک با وبلاگ زیبای شما هستیم.در صورت تمایل لینک رو تایید و اطلاع بدید.
+
+گروه آموزشی ژاکاو">فیس بوک را بدون فیلتر بازکنید</a><br><a target="_blank" href="http://serialnod32.ir" title="یوزرنیم و پسورد دائمی آنتی ویروس نود32
+==&gt; سلامم
+از وبلاگتــون بازدید کردم.
+و خواهان ثبت لینک سایت سریال قانونی و اصلی نود 32 در وبلاگ شما هستم.در صورت تمایل لینک رو تایید کنید./
+
+با تشکررر . سید رضـا
+http://serialnod32.ir">یوزرنیم و پسورد دائمی آنتی ویروس نود32</a><br><a target="_blank" href="http://WWW.ONLY-FUN.mihanblog.com" title="با سلام....
+ 
+از وبلاگت خوشم اومد خیلی مطلب هات خوب بودند.
+اگه دوست داشتی به وبلاگم سر بزن و خواسنی درخواست تبادل لینک بده و من را با اسم Only-Fun لینک کن.
+باتشکر">مهدی</a><br><a target="_blank" href="http://www.sekoya.ir" title="با سلام خدمت شما وبلاگ نویس محترم
+
+انصافا وبلاگ زیبایی دارین.این رو جدی میگم...
+
+امیدوارم موفق باشین.">محسن</a><br><a target="_blank" href="http://idehhost.com" title="تبدیل وبلاگ به سایت فقط با 20 تومان برای 1سال 
+هزینه سال های بعد 14.000تومان :هاست دامنه ملی(ir)
+آموزشه کار رایگان 
+راه اندازی رایگان
+راهنمایی و کمک رایگان
+09193198330
+تمامی مراحله نصب و کانفیگ رایگان
+ایده هاست ارزان ترین در ایران!
+ارزان و با کیفیت
+09193198330
+درصورت بروز هرگونه مشکل با پشتیبان در ارتباط باشید">امیرعلی</a><br><a target="_blank" href="http://www.ChicChat.ir" title="با سلام....
+ 
+ویلاگ خیلی جالبی داری خیلی خوشم اومد ما هم یک چت روم داریم اگر دوست داشته باشی میتونی چت روم ما رو تو وبلاگت به عنوان چت روم وبلاگ یا چیک چت لینک کنی حتما سر بزن در ضمن بعد لینک کردن اگر دوست داشته باشی می تونی از قسمت تماس با ما چیک چت به ما خبر بدی که شما رو در وبلاگ چت روم که بازدیدش روزانه زیاد هم هست لینک کنیم
+
+بعد از خبر دادن به ما میتونی از این قسمت لینک وبلاگت رو مشاهده کنی :
+http://chicchat.mihanblog.com/link
+
+چیک چت بهترین چت روم ایرانی با محیط زیبا و جذاب
+
+http://www.ChicChat.ir">چت روم چیک چت</a><br><a target="_blank" href="http://www.persian7.com" title="">دانلود آهنگ</a><br><p><a href="http://bahar20230118.persiangig.ir" target="_blank">طـــراح قـــالــب</a></p>
+<a href="javascript:void(0)" onclick ="OpenLD();" style="font-size:8pt;">آرشیو پیوندهای روزانه</a>
+</div><br>
+
+<div class="menutopimage"><div class="menutoptext">آرشیو مطالب </div></div>
+<div class="menutext">
+<a href="http://poredardam.mihanblog.com/post/archive/1395/2/2"> هفته دوم اردیبهشت 1395  1 </a><br><a href="http://poredardam.mihanblog.com/post/archive/1393/12/3"> هفته سوم اسفند 1393  4 </a><br><a href="http://poredardam.mihanblog.com/post/archive/1393/7/4"> هفته چهارم مهر 1393  2 </a><br><a href="http://poredardam.mihanblog.com/post/archive/1393/6/2"> هفته دوم شهریور 1393  1 </a><br><a href="http://poredardam.mihanblog.com/post/archive/1393/5/3"> هفته سوم مرداد 1393  1 </a><br><a href="http://poredardam.mihanblog.com/post/archive/1393/2/3"> هفته سوم اردیبهشت 1393  2 </a><br><a href="http://poredardam.mihanblog.com/post/archive/1393/2/1"> هفته اول اردیبهشت 1393  1 </a><br><a href="http://poredardam.mihanblog.com/post/archive/1392/11/3"> هفته سوم بهمن 1392  1 </a><br><a href="http://poredardam.mihanblog.com/post/archive/1392/11/2"> هفته دوم بهمن 1392  1 </a><br><a href="http://poredardam.mihanblog.com/post/archive/1392/10/1"> هفته اول دی 1392  1 </a><br></div><br>
+
+
+<div class="menutopimage"><div class="menutoptext">آمار شما </div></div>
+<div class="menutext">
+<br><font color="#FF0000">
+
+								<div class="stat_box"><center>
+					<p dir="rtl"><font color="#FF9900">کل بازدید : <span>
+					<script>getStatVar('total_view');</script></span></font></p>
+					<p dir="rtl"><font color="#FF9900">بازدید امروز :<span><script>getStatVar('today_view');</script></span></font></p>
+					<p dir="rtl"><font color="#FF9900">بازدید دیروز : <span>
+					<script>getStatVar('yesterday_view');</script></span></font></p>
+					<p dir="rtl"><font color="#FF9900">بازدید این ماه : <span>
+					<script>getStatVar('this_month_view');</script></span></font></p>
+					<p dir="rtl"><font color="#FF9900">بازدید ماه قبل : <span>
+					<script>getStatVar('last_month_view');</script></span></font></p>
+					<p dir="rtl"><font color="#FF9900">تعداد نویسندگان : <span>
+					<script>getStatVar('total_author');</script></span></font></p>
+					<p dir="rtl"><font color="#FF9900">تعداد کل پست ها : <span>
+					<script>getStatVar('total_post');</script></span></font></p>
+					<p dir="rtl"><font color="#FF9900">آخرین بازدید : <span>
+					<script>getStatVar('last_view_date');</script></span></font></p>
+					<p dir="rtl"><font color="#FF9900">آخرین بروز رسانی : <span>
+					<script>getStatVar('modify_date');</script></span></font></div>
+					
+				
+</font><br>
+</div><br>
+
+<div class="menutopimage"><div class="menutoptext">آرشیو موضوعی </div></div>
+<div class="menutext">
+
+<div class="menutopimage"><div class="menutoptext">::....:....::</div></div>
+<div class="menutext">
+
+<p align="center"><script language="javascript" src="http://bahar-20.com/ftp/amar-ads/ads/weblog/abc/tabligh2.js"></script></p>
+
+</div><br><!--- bahar20230118.persiangig.ir --->
+
+
+
+<div class="menutopimage"><div class="menutoptext">طراح قالب </div></div>
+<div class="menutext">
+<center>
+<a href="http://bahar20230118.persiangig.ir"target="_blank" style="font-size:8pt;font-weight: bold;" onmouseover="window.status='.:: طراح  قالب : مجله الکترونیک بهار20 ::.';return(true);"onmouseout="window.status='';"><span lang="en-us"><a href="http://bahar20230118.persiangig.ir">طراح و قالب ساز</a></span></a>
+<br>
+		<a href="http://bahar20230118.persiangig.ir" target="_blank"> 
+<IMG src="http://bahar20230118.persiangig.ir/01.gif" border="0" alt="" ></a>
+<br>
+<font style="font-size:8pt;text-align:center;">powered by</font><br>
+<a href="http://www.mihanblog.com " style="font-size:8pt;font-weight: bold;" target="_blank">Mihanblog.Com</a><br><br>
+<div style="border:1px solid #C79939;width:30px;height:0px;text-align:center;padding-bottom:2px;font-size:8pt;"><a href="http://poredardam.mihanblog.com/post/rss/" target="_blank" style="color:#C79939">RSS</a></div>
+<br>
+<div class="custom"><!--Start Cod ZibaSazi By RoozGozar.com-->
+<p align="center"><font face="Tahoma"><a target="_blank" href="http://roozgozar.com" style="text-decoration: none"><span style="font-size: 8pt"><font color="#0099ff">ابزار متحرك زیباسازی وبلاگ</font></span></a></font></p><br><center><script type="text/javascript" src="http://roozgozar.com/zibasazi/19/19.js"></script></center>
+<!---End Cod ZibaSazi By RoozGozar.com--->
+
+
+
+
+<a target="_blank" href="http://my-god-my-baby.mihanblog.com/"><img border=0 src="http://s1.picofile.com/file/7664125478/Untitled_1.gif" border=0 width=150 height=210 alt="عشق خدایی" ></a>
+
+
+<center>
+<a href="http://www.webiha.blogfa.com"target="_blank">
+<img src="http://pagehtml.persiangig.com/2music%20web%20logo.gif">
+</a><br>
+</center>
+</div><br><br>
+</center>
+ 
+
+</div><br>
+
+
+
+</div>
+</div><br>
+
+</div>
+
+
+
+
+
+
+
+<!-- Begin varoone.ir ‍Yahoo Status --><center><a title="yahoo Status Varoone.ir" href="ymsgr:sendim?آیدی شما"><img border="0" src="http://opi.yahoo.com/online?u=آیدی شما&m=g&t=14"></a></center><!-- End Varoone.ir Yahoo Status -->
+
+
+
+
+
+
+<p align="center"><a target="_blank" href="http://parsskin.com">
+<font face="Tahoma" style="font-size: 9pt"><span style="text-decoration: none">
+.</span></font><span style="text-decoration: none"> </span></a></p>
+<p align="center"><script src="http://blogcod.parsskin.com/fall/eshgh/1.js" language="javascript" ></script></p>
+
+
+
+
+
+
+
+
+
+
+
+<center><script language="javascript" type="text/javascript" src="http://www.mania-dv.ir/icon/code/lovejs.js"></script></center>
+
+
+
+<!-- Started code by varoone.ir ---- YahooID: davod_v2008  -->
+<script type="text/JavaScript" language="javascript">
+msg = "دلنوشته "; msg = "..." + msg;pos = 0;
+function scrollMSG() {
+document.title = msg.substring(pos, msg.length) + msg.substring(0, pos);
+pos++;
+if (pos > msg.length) pos = 0
+window.setTimeout("scrollMSG()",200);
+}
+scrollMSG();
+</script>
+<p>
+<a target="_blank" href="http://varoone.ir/post/17">کد متحرک کردن عنوان وب</a></p>
+<!-- Ended code by varoone.ir ---- YahooID: davod_v2008  -->
+
+
+
+
+
+
+
+
+<!-- Begin
+if (document.all) {
+//Things you can alter
+yourLogo = "mahtab"; //Not less than 2 letters!
+logoFont = "Arial";
+logoColor = "red";
+
+//Nothing needs altering below!
+yourLogo = yourLogo.split('');
+L = yourLogo.length; 
+TrigSplit = 360 / L;
+Sz = new Array()
+logoWidth = 100;
+logoHeight = -30;
+ypos = 0;
+xpos = 0;
+step = 0.03;
+currStep = 0;
+document.write('<div id="outer" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i = 0; i < L; i++) {
+document.write('<div id="ie" style="position:absolute;top:0px;left:0px;'
++'width:10px;height:10px;font-family:'+logoFont+';font-size:12px;'
++'color:'+logoColor+';text-align:center">'+yourLogo[i]+'</div>');
+}
+document.write('</div></div>');
+function Mouse() {
+ypos = event.y;
+xpos = event.x - 5;
+}
+document.onmousemove=Mouse;
+function animateLogo() {
+outer.style.pixelTop = document.body.scrollTop; 
+for (i = 0; i < L; i++) {
+ie[i].style.top = ypos + logoHeight * Math.sin(currStep + i * TrigSplit * Math.PI / 180);
+ie[i].style.left = xpos + logoWidth * Math.cos(currStep + i * TrigSplit * Math.PI / 180);
+Sz[i] = ie[i].style.pixelTop - ypos;
+if (Sz[i] < 5) Sz[i] = 5;
+ie[i].style.fontSize = Sz[i] / 1.7;
+}
+currStep -= step;
+setTimeout('animateLogo()', 20);
+}
+window.onload = animateLogo;
+}
+//  End -->
+</script>
+</body>
+</html>
+
+
+
+
+<a target='_blank' href='http://www.iranskin.com/online'><span style='text-decoration: none'>Online</span></a>
+<script type='text/JavaScript'>
+var oulb= 'http://www.iranskin.com/online/';
+function CheckBrowser(){
+if(navigator.appName == "Microsoft Internet Explorer")	{
+document.write('<scrip'+'t src="'+oulb+'js/jquery.min.js"></s'+'cript><scrip'+'t src="'+oulb+'js/js.php?c=5&t=7"></s'+'cript>');return true;}document.write('<scrip'+'t src="'+oulb+'cod.php?c=5&t=7"></s'+'cript>');
+return false; }</script>
+<script type='text/JavaScript'>CheckBrowser()</script>
+<a target='_blank' href='http://www.iranskin.com'><span style='text-decoration: none'>User</span></a>
+
+
+
+
+
+      
+
+
+<script>window.onload=function() {alert("به دلنوشته های بارونی مهتاب خوش آمدید")}
+window.onunload=function() {alert("از اینکه از دلنوشته های من دیدن کردید سپاسگزارم")}</script><div style="display:none"><h1><a title="پیغام ورود و خروج" href="http://www.iranskin.com">پیغام ورود و خروج</a></h1></div>
+
+
+
+<!--Start Cod ZibaSazi By RoozGozar.com-->
+<p align="center"><font face="Tahoma"><a target="_blank" href="http://roozgozar.com" style="text-decoration: none"><span style="font-size: 8pt"><font color="#0099ff">ابزار متحرك زیباسازی وبلاگ</font></span></a></font></p><br><center><script type="text/javascript" src="http://roozgozar.com/zibasazi/19/19.js"></script></center>
+<!---End Cod ZibaSazi By RoozGozar.com--->
+
+
+<!-- Begin SedaYab Code --><div align="center"><object type="application/x-shockwave-flash" data="http://www.sedayab.com/play.swf" width="160" height="20" id="dewplayer" name="dewplayer"> <param name="wmode" value="transparent" /><param name="movie" value="http://www.sedayab.com/play.swf" /> <param name="flashvars" value= "mp3=http://file.sedayab.com/35553.mp3&autostart=1&autoreplay=1&showtime=1&randomplay=1" > </object><br><a title="بی تفاوت با صدای رامین بیباک" target="_blank" href="http://www.sedayab.com/?id=35553&code">دریافت کد</a> :: <a target="_blank" title="sedayab" href="http://www.sedayab.com/">صدایاب</a></div><!-- End SedaYab Code -->
+
+
+<a href="http://daneshju-club.com/index.php">دانشجو کلوب</a>
+
+
+<STYle>
+img{
+-webkit-transform:scale(0.9); /*Webkit: Scale down image to 0.8x original size*/
+-moz-transform:scale(0.9); /*Mozilla scale version*/
+-o-transform:scale(0.9); /*Opera scale version*/
+-webkit-transition-duration: 0.5s; /*Webkit: Animation duration*/
+-moz-transition-duration: 0.5s; /*Mozilla duration version*/
+-o-transition-duration: 0.5s; /*Opera duration version*/
+opacity: 1; /*initial opacity of images*/
+margin: 0 10px 9px 0; /*margin between images*/} 
+img:hover{
+-webkit-transform:scale(1); /*Webkit: Scale up image to 1.2x original size*/ 
+-moz-transform:scale(1); /*Mozilla scale version*/ 
+-o-transform:scale(1); /*Opera scale version*/ 
+box-shadow:0px 0px 30px gray; /*CSS3 shadow: 30px blurred shadow all around image*/ 
+-webkit-box-shadow:0px 0px 30px gray; /*Safari shadow version*/ 
+-moz-box-shadow:0px 0px 80px gray; /*Mozilla shadow version*/ 
+opacity: 0.9;
+ -webkit-transform: rotate(-10deg);}
+</STYle><center><a href=http://webniaz.blogfa.com target=_blank>کدهای عکس و تصویر</a></center><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'poredardam.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.targetedwebtraffic.com" target="_blank">Buy Website Traffic</a> | <a href="https://www.seo25.com" target="_blank">Buy Targeted Website Traffic</a>
+    </div>
+</center>

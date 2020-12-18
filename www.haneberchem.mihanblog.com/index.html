@@ -1,0 +1,2155 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../haneberchem.mihanblog.com/xmlrpc@rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*553073*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[3007]='0';commentCnt[3008]='0';commentCnt[3009]='0';commentCnt[3010]='0';commentCnt[3011]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[3008]='0';
+mihanblogDisLikeArrCnt[3008]='0';
+mihanblogLikeArrCnt[3010]='0';
+mihanblogDisLikeArrCnt[3010]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://haneberchem.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://haneberchem.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','2705');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','شنبه 22 آذر 1399');
+	
+	setStatVar('today_view','480');
+	setStatVar('yesterday_view','336');
+	
+	setStatVar('this_month_view','23125');
+	setStatVar('last_month_view','15180');
+
+	setStatVar('total_view','2879378');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (13:53)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://haneberchem.mihanblog.com/statupdate/?data[refereruri]=http://hawramandal.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607768679&data[hash]=60d70136784c94cdfe853eb36d36161c&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://haneberchem.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="http://haneberchem.mihanblog.com/'+img+'" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://haneberchem.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://haneberchem.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://haneberchem.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://haneberchem.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://haneberchem.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://haneberchem.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://haneberchem.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://haneberchem.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://haneberchem.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://haneberchem.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://haneberchem.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://haneberchem.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://haneberchem.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://haneberchem.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://haneberchem.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<title>هه‌ورامان هانه‌به‌رچه‌م</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Farsi">
+<meta name="description" content="هه‌ورامان هانه‌به‌رچه‌م - روزنه‌ای به زیبایی‌های هورامان - هه‌ورامان هانه‌به‌رچه‌م">
+<meta name="keywords" content="هه‌ورامان هانه‌به‌رچه‌م,haneberchem, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="هه‌ورامان هانه‌به‌رچه‌م" href="../haneberchem.mihanblog.com/post/rss/index.html">
+
+
+
+
+
+<style>
+
+body{margin:0;font-family: Tahoma;background:#dbaa39 }
+.Top-Header{width:1000;background:#f4c75e}
+A {TEXT-DECORATION: none; }
+
+#Header{width:1000;background:url("http://hatav3.persiangig.com/qaleb/hane/top.jpg") no-repeat top;height:291;vertical-align:top;direction:rtl;}
+#Header a{color:#1c4063;margin:0 19}
+#Header a:hover{color:#fcf5f9;}
+
+#BlogTitle{color:#F0C14F;text-align:center;font-size:1pt;font-weight: bold;padding:5 380 0 0;font-family:Times New Roman;}
+#BlogDescription{padding:0 380 0 0;direction:rtl;font-size:1pt;color:#F0C14F;text-align:center;} 
+
+.Habibi1{color:#daebf2;font-size:10pt;padding:230 12 0 0;text-align:center;}
+
+.TPost{width:540;height:68;background:url("http://hatav3.persiangig.com/qaleb/hane/p1.jpg") no-repeat top right;direction:rtl;text-align:right;
+font-size:8pt;}
+.TPost a{color:#2d1f03}
+.TPost2{padding:30 73 0 20;}
+.Post{width:540;background:url("http://hatav3.persiangig.com/qaleb/hane/p2.jpg") repeat-y right;direction:rtl;text-align:right;color:#333333;font-size:8pt;;overflow:hidden}
+.Post2{padding:10 15 10 15}
+.Post3{width:540;background:url("http://hatav3.persiangig.com/qaleb/hane/p3.jpg") no-repeat top right;height:68;text-align:right}
+.Post4{padding:33 34 0 0}
+.Post a{color:#7e5903}
+
+.date{width:360px;float:right;direction:rtl;font-size:8pt;color:#243d3c;}
+.date a{color:#2b3d20;}
+.date a:hover{color:#006488;}
+.Comment{width:120px;float:left;direction:rtl;font-size:8pt;color:#2b3d20;text-align:center;}
+.Comment a{color:#2b3d20;}
+.Comment a:hover{color:#7e5903;}
+.Comment{padding:0 0 0 0}
+
+#Menur{width:210;float:left;}
+#Menul{width:210;float:right;}
+
+.Menu{width:210;background:url("http://hatav3.persiangig.com/qaleb/hane/m1.jpg") no-repeat top right;height:50;direction:rtl;color:#2d1f03;font-size:8pt;}
+.Menu2{padding:23 60 0 60;text-align:right}
+.XMenu{width:210;float:left;direction:rtl;color:#444444;font-size:8pt;background:url("http://hatav3.persiangig.com/qaleb/hane/m2.jpg") repeat-y right;}
+.XMenu a{color:#444444;}
+.XMenu a:hover{color:#FF00CC} 
+.XXMenu{padding:3 25 0 5;background:url("http://hatav3.persiangig.com/qaleb/hane/dot.jpg") 190px 4px  no-repeat}
+.XXMenu2 span{color:#1192b0;font-size:8pt;font-weight:bold}
+.XXMenu2{padding:0 10 5 10;}
+.ZMenu{padding:3 25 0 5;background:url("http://hatav3.persiangig.com/qaleb/hane/dot.jpg") 170px 4px  no-repeat}
+.ZMenu2 span{color:#1192b0;font-size:8pt;font-weight:bold}
+.ZMenu2{padding:0 10 5 10;}
+
+.habibi{width:206px; height:200px; overflow:auto;direction:rtl;scrollbar-face-color: F2C707;scrollbar-track-color: EAD79F;scrollbar-arrow-color: 0D0101;scrollbar-face-color: F4C75E;scrollbar-track-color: EAD79F;scrollbar-arrow-color: 0D0101;scrollbar-highlight-color: BC7C7C;scrollbar-3dlight-color: 9FEE9F;scrollbar-shadow-color: EE49D8;scrollbar-darkshadow-color: 1773C4;}
+
+.BMenu{width:210;background:url("http://hatav3.persiangig.com/qaleb/hane/m3.jpg") no-repeat top right;height:29;float:right}
+
+#Footer{text-align:center;background:url("http://hatav3.persiangig.com/qaleb/hane/footer.jpg") repeat-x top;font-size:8pt;color:#000000;direction:rtl;height:150}
+#Footer a{color:#000000}
+#Footer a:hover{color:#FF00CC}
+#Footer{padding:115 20 5 10;}
+</style>
+
+
+
+
+
+</head>
+<body>
+<div align="center">
+<div class=Top-Header>
+	
+<table border="0" width="1000" cellspacing="0" cellpadding="0">		
+
+
+<tr><td colspan="3" id=Header>			
+
+
+<div id=BlogTitle><br>هه‌ورامان هانه‌به‌رچه‌م</div><div style="width:100%;height:23;float:right"></div>
+<div id=BlogDescription>روزنه‌ای به زیبایی‌های هورامان&nbsp;</div>	
+
+	
+
+<div class=Habibi1><div style="float:right;width:978;direction:rtl">
+
+
+<marquee scrollamount="1" scrolldelay="20" style="font-family: Tahoma;font-size: 10pt;color:#0C1ECE;" direction="right">
+به نامێ خودٚای به‌رز و بێ وێنه‌-خێر به‌یدێ په‌ی په‌لیانه‌و هه‌ورامان هانه‌به‌رچه‌می/
+وه‌شه‌ویسی هه‌ورامی زوان به‌یدێ با زوانه‌که‌یما پارێزنمێ/هومایون موحەممەدنژاد </marquee>
+
+
+
+
+</div>
+
+
+</div>    
+
+
+</td></tr>
+
+<tr><td width="220" valign="top">
+
+
+<div id=Menul>
+<div class=Menu><div class=Menu2>
+<b>منوی اصلی</b></div></div>
+<div class=XMenu>
+<div class=XXMenu>
+<a title="  صفحه نخست وبلاگ"  href="index.html">صفحه نخست وبلاگ</a>
+</div>
+<div class=XXMenu>﻿
+<a title="عناوین مطالب وبلاگ" target="_blank" href="../haneberchem.mihanblog.com/post/list.html">عناوین مطالب وبلاگ</a>
+</div>
+<div class=XXMenu>﻿
+<a href="javascript:messageForm()">ارسال پیام به مدیر وبلاگ</a>
+</div>
+<div class=XXMenu>﻿
+<a href="mailto:sina.mohamad@ymail.com"> پست الكترونیك مدیر وبلاگ</a>
+</div>
+<div class=XXMenu>﻿
+<a href="../haneberchem.mihanblog.com/post/rss/index.html">RSS</a>
+</div>
+<div class=XXMenu>﻿
+<a title="طراح قالب وبلاگ" target="_blank" href="http://www.hatav2.blogfa.com">طراح قالب وبلاگ</a>
+</div>
+</div><div class=BMenu></div></div>
+
+
+
+<div id=Menul>
+<div class=Menu><div class=Menu2>
+<b>نویسندگان</b></div></div>
+<div class=XMenu><div class=XXMenu> 
+<a href="../haneberchem.mihanblog.com/post/author/430381.html">همایون  محمدنژاد  2705 </a></div></div>
+<div class=BMenu></div></div>
+
+
+
+
+</div>
+
+
+
+
+		<form id="frm-16077676485fd49660db03f" method="post" action="http://haneberchem.mihanblog.com/poll/new/fid/16077676485fd49660db03f/atrty/1607767648/avrvy/0/key/eb3c7933e53b0cdd88fb9775551a75dd/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="195315" id="data[pollid]" />		
+<div id=Menul>
+<div class=Menu><div class=Menu2>
+<b>نظر سنجی</b></div></div>
+<div class=XMenu>
+<div class=XXMenu>
+سڵام وەشەویس!خەڵکوو کام شارو و دەگایێندێ؟ سلام عزیز! اهل کدام شهر و روستاهستید؟<br><label><input type="radio" name="data[answer]" value="v1">هەوڕامان تخت/هەورامانی تەخت</label><br><label><input type="radio" name="data[answer]" value="v2">هورامان لهون ایران/هەورامانی لهۆنوو ئێرانی</label><br><label><input type="radio" name="data[answer]" value="v3">هورامان ژاورود/هەورامانی ژاوەرۆ</label><br><label><input type="radio" name="data[answer]" value="v4">هورامان پراکندە/هەورامانی پژگیا</label><br><label><input type="radio" name="data[answer]" value="v5">هورامان لهون کردستان عراق/هەورامانی لهۆنوو کوردەسانوو عێراقی</label><br><label><input type="radio" name="data[answer]" value="v6">مەریوان و سەڵواوا</label><br><label><input type="radio" name="data[answer]" value="v7">سنندج/سنە</label><br><label><input type="radio" name="data[answer]" value="v8">کرمانشاە/کرماشان</label><br><label><input type="radio" name="data[answer]" value="v9">سلیمانیە و حلبچە/سلێمانی و هەڵەبجە</label><br><label><input type="radio" name="data[answer]" value="v10">کشورهای دیگر جهان/وەڵاتەکاتەروو دنیای</label><br><br><input type="submit" value="ثبت"></div></div>
+<div class=BMenu></div></div>
+
+		<input type="hidden" name="frm-id" value="16077676485fd49660db03f" id="frm-id" /></form></div>
+
+
+<div id=Menul> <div class=Menu><div class=Menu2><b>لینک دوستان</b></div></div>
+<div class=XMenu>
+<div class=habibi>
+<div class=ZMenu>
+<a target="_blank" href="../haneberchem.mihanblog.com/link/index.html" title="">لینکستان  هه‌ورامان هانه‌به‌رچه‌م</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../www.hawramanktab.mihanblog.com/index.html" title="">کتابخانه‌هورامان/کتێبخانەو هه‌ورامانی</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://qalamohoramani.blogfa.com/" title="">هه‌ورامان/هورامان</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.sherenab.com/News-View-3080.html" title="">اشعاری به زبان هورامی/ شعر ناب</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../haneberchem.mihanblog.com/post/category/49.html" title="">ده‌گاو زاوه‌ری(روستای زاور ـ دزآور)</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://kurdsl.medu.ir/Content.aspx?ID=10" title="">سامانه کتابخانه مدارس</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../haneberchem.mihanblog.com/post/410.html" title="">نویسه‌را و شاعێرا هه‌ورامانی</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="https://hawramannews.com" title="">هەورامان نیوز</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://hewraman.net/" title="">هەورامان نت</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://mirzaee.blogfa.com/" title="">میرزای هه‌ورامی</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://kordira.blogfa.com/" title="">کامیاران نیوز</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.dalurdal.blogfa.com/" title="">هه‌ورامان /هه‌یشوور</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../hawramandal.mihanblog.com/index.html" title="">هورامان(ده‌ل)</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../qalamhawraman.mihanblog.com/index.html" title="">وبلاگ غزل هورامی</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../payamhawrami.mihanblog.com/index.html" title="">کوڵه‌ په‌یامێ به‌ زوانی هه‌ورامی</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://gomgashtehdel.blogfa.com/" title="">گمگشته دل(وب عرفانی هورامان)</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../rojyarhawrami.mihanblog.com/index.html" title="">ڕۆجیاروو هه‌ورامانی</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://hawramantakht.blogfa.com/" title="">هـــورامــــــان شنـــاسـی</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://zwanehoramy.persianblog.ir/" title="">زوانی هورامی</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../darban.mihanblog.com/index.html" title="">ده‌ربه‌ن</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://paveh.persianblog.ir/" title="">پاوه هورامان paveh hawraman</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://varan01.blogfa.com/" title="">واران</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../mashaherkurd.mihanblog.com/index.html" title="">مشاهیركُرد</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.kurditgroup.org/downloads" title="">کۆردی گروپ(فونت-نویسته‌ی)</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://palngan.persianblog.ir/" title="">پالنگان،پاڵنان تاریخی‌سه هزارساله</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../diarmadari.mihanblog.com/index.html" title="">آویهنگ؛عکس؛؛ژاورود؛هورامان</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.razaw.loxblog.com/" title="">هورامان و ره‌زاوی(روستای رزاب)</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://selen.loxblog.ir/" title="">سلین دیاری تاریخی و کهن</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://bisaran.persianblog.ir/" title="">روستای بیساران</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://takana.blogfa.com/" title="">روستای خانقاه</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://dalamarz.blogfa.com/" title="">روستای دلمـــــــــــــــرز</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://havasava.persianblog.ir/" title="">هه‌ورامان-هه‌ورانشین(عباس آباد)</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://naw.blogfa.com/" title="">روستای ناو</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.gelall.blogfa.com/" title="">وبلاگ روستای گلال</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://jivarkohsalan.blogfa.com/" title="">روستای ژیوار2</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.daraky.blogfa.com/" title="">روستای دره‌کی1</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://darakivillage.blogfa.com/" title="">روستای دره‌کی2</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../shapora1351.mihanblog.com/index.html" title="">اورامان تخت -رودبر</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.paigalan.blogfa.com/" title="">روستای پایگلان</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://zhenin.blogfa.com/" title="">روستای ژنین</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://abas1349.blogfa.com/" title="">ده‌نگ‌وهه‌جیجی</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://nawsud.persianblog.ir/" title="">نوسودیانه</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://pawashar.blogfa.com/" title="">پاوه شار</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://nahran.blogfa.com/post-62.aspx" title="">وبلاگهای روستاهای کردستان</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.kakesana.blogfa.com/" title="">بورهان ئەختەر( بورهان هەورامی)</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://yanah.blogfa.com/" title="">یانه</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../www.photopaveh.mihanblog.com/index.html" title="">فوتوپاوه</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://shonama.blogfa.com/" title="">شونه ما</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://paigalan-agriculture.blogfa.com/" title="">مێرگه‌وار</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../avay83.mihanblog.com/index.html" title="">دەلاقەوهەستی</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../hawli.mihanblog.com/index.html" title="">شه ‌مامه خاڵ خاڵ</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://firsanah.persianblog.ir/" title="">فیرســـــــــــــانه</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://sharakanwashan89.blogfa.com/" title="">خوشم ئه‌وی ولاته‌که‌م</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../hanasah.mihanblog.com/index.html" title="">هه‌ناسه(نودشه)</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../photos01380.mihanblog.com/index.html" title="">عکس و خنده</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.salampaveh.ir/" title="">خبرگزاری سلام پاوه</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.zariwarkhabar.ir/" title="">وبسایت زریوارخبر</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.pavehpress.ir/" title="">خبرگزاری پاوه پرس</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.noryaw.ir/" title="">پایگاه خبری نوریاو</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://hawramanat.com/" title="">سایت خبری تحلیلی هورامانات</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://awesar.blogsky.com/" title="">ئاوێسه‌ر</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://evinebook.blogfa.com/" title="">كتێبخانه‌ی كوردی ئه‌وین</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://bisaran.blogfa.com/" title="">بـێـــســـاران و هـــۆرامــــــان</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://mamostabisarani.persianblog.ir/" title="">موسسه ماموستا بیسارانی</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://qabat.blogfa.com/" title="">اوج قصه ام</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://kiangian.parsiblog.com/" title="">کیان</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://dezawar.blogfa.com/" title="">دزآور  بهشت اورامان</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://peyliway.blogfa.com/" title="">peyliway(په‌یلوای)</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.zoowan.blogspot.com" title="">یادو</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://mahan100.rozblog.com/" title="">فتوهورامان</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://asemanehoraman.persianblog.ir/" title="">آسمان هورامان</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://dafaabi.blogfa.com/page/google-google.aspx" title="">کوی دلبر</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://fcbworld.rozblog.com/" title="">بارسلونا</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://sabeq1354.blogfa.com/" title="">آب وآفتاب وآینه</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../peshvadroodgar2.mihanblog.com/index.html" title="">سه رده</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://joanshir.persianblog.ir/post/55" title="">کرماشان(دبیرستان زرافشانی)</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://hajimamosta.blogfa.com/" title="">حاج ماموستا،آشنایی بادانشمندان کرد</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://WWW.CHOOKOW.BLOGFA.COM" title="">شێره ل کوردی</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.communicationage.blogfa.com/" title="">رسانه و ارتباطات</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://kohandiara1.blogfa.com/" title="">کهن دیارا</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../nowjwanan-nowdishaeh.mihanblog.com/index.html" title="">نوجوانان نودشه-جدید</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://saral.blogfa.com/" title="">ســـــــــــاراڵ</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../kahroba-2011.mihanblog.com/post/32.html" title="">کافـه شبـهای پرسـتاری</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http:///pawepics.blogfa.com/" title="">تاریخ مصورپاوه</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.photopaveh.blogfa.com" title="">فوتوپاوه</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.nodigeh.blogfa.com/" title="http://www.nodijeh.ir/
+http://mc-kordkuy.blogfa.com/
+http://www.kardmaleh.blogfa.com/post-160.aspx
+http://nodigeh.blogfa.com/post/386/تاریخچه-مهاجرت-کردهای-اورامانات-به-مازندران-و-استر-آباد">نودیجه</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../www.xoshawisty.mihanblog.com/index.html" title="">استادخوشه ویست</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.sarkav.blogfa.com/" title="">دایرة المعارف هورامان/دانشنامه‌و هه‌ورامانی</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.picofile.com/" title="">آپلود تصاویر</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.blogskin.ir/" title="">انواع قالب میهن بلاگ</a>
+
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.webgozar.com" title="">فهرست نرم افزاررایگان</a>
+
+</div>
+
+<div class=ZMenu>
+<a target="_blank" href="http://firsanah.persianblog.ir/">فیرسانه</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://saral.blogfa.com/">ســـــــــــاراڵ</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://pav.persianblog.ir/">پاوه</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://kalhorneshinan.blogfa.com/"ایل قلعه‌شاهین(کلهر)</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://ileabdolmaleki.blogfa.com/">پژوهشنامه ایل‌عبدالملكی </a>
+</div>
+
+<div class=ZMenu>
+<a target="_blank" href="http://pawepics.blogfa.com/">تاریخ مصورپاوه</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.photopaveh.blogfa.com/">فوتوپاوه</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../pe2010.mihanblog.com/index.html">سرزمین نوشته‌ها</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://marivan33.persianblog.ir/">بهشت گمشده‌ام مریوان</a>
+
+</cb:loop_link>
+<a href="../haneberchem.mihanblog.com/link/index.html">لیست همه لینکها</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class=BMenu></div>
+</div></div>
+
+</div>
+
+</div>
+
+
+<div id=Menul>
+<div class=Menu><div class=Menu2>
+<b>پیوندهای روزانه</b></div></div>
+<div class=XMenu>
+<div class=habibi>
+<div class=ZMenu>
+<a target="_blank" href="../haneberchem.mihanblog.com/linkdaily/index.html" title="">پیوندهای هه‌ورامان هانه‌به‌رچه‌م</a></div><div class=ZMenu>
+<a target="_blank" href="http://ltms.medu.ir/" title="">سامانه جامع مدیریت یادگیری وآموزش(ضمن خدمت)</a></div><div class=ZMenu>
+<a target="_blank" href="http://fish.medu.ir" title="">فیش حقوقی فرهنگیان</a></div><div class=ZMenu>
+<a target="_blank" href="http://valiyanmogtaderfili.blogfa.com/" title="">شجره و تاریخ والیان مقتدر فیلی</a></div><div class=ZMenu>
+<a target="_blank" href="http://hanasah.avablog.ir/" title="">هه‌ناسه</a></div><div class=ZMenu>
+<a target="_blank" href="http://omid-e-kermanshah.blogfa.com/" title="">پایگاه خبری/امید</a></div><div class=ZMenu>
+<a target="_blank" href="../herman1995.mihanblog.com/index.html" title="">هه‌رمان</a></div><div class=ZMenu>
+<a target="_blank" href="http://chia5.blogsky.com/" title="">کورد</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.kurdresearch.medu.ir/" title="">سامانه مدیریت امور پژوهشی</a></div><div class=ZMenu>
+<a target="_blank" href="../nalusbas.mihanblog.com/index.html" title="">وبسایت نالوس باس</a></div><div class=ZMenu>
+<a target="_blank" href="http://kohyarsarv56.persianblog.ir/" title="">روژکوهیار</a></div><div class=ZMenu>
+<a target="_blank" href="http://jiva70.avablog.ir/" title="">یادبگیریم خودمان باشیم</a></div><div class=ZMenu>
+<a target="_blank" href="../mame.mihanblog.com/index.html" title="">چالاکی ئەدەبی</a></div><div class=ZMenu>
+<a target="_blank" href="../tabrizlinks.mihanblog.com/index.html" title="">تبریز ویکی لینکلر(آذربایجان)</a></div><div class=ZMenu>
+<a target="_blank" href="../vaniyar.mihanblog.com/index.html" title="">علمی آموزشی وانیار</a></div><div class=ZMenu>
+<a target="_blank" href="../hadirostami.mihanblog.com/index.html" title="">وبلاگ شخصی هادی رستمی</a></div><div class=ZMenu>
+<a target="_blank" href="../honar2034.mihanblog.com/index.html" title="">دستهای رنگی</a></div><div class=ZMenu>
+<a target="_blank" href="http://sarchali.blogfa.com/" title="">زمانی دائیکیkurd</a></div><div class=ZMenu>
+<a target="_blank" href="../fardinmahmoudi.mihanblog.com/index.html" title="">سایت استادفردین محمودی</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.varanivahari.blogfa.com/" title="">موفقیت و رشدفردی</a></div><div class=ZMenu>
+<a target="_blank" href="../amanj1391.mihanblog.com/index.html" title="">ئامانج</a></div><div class=ZMenu>
+<a target="_blank" href="http://mashaherkurd.persianblog.ir/" title="">مشاهیرکرد,امراء وخاندانها</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.nevis.blogfa.com/" title="">خوشنویسی باخودکار</a></div><div class=ZMenu>
+<a target="_blank" href="http://khabarfarsi.com/n/6990302" title="">سایت خبرفارسی</a></div><div class=ZMenu>
+<a target="_blank" href="http://topteach.persiangig.com/linkbox.html" title="">لینک باکس معلمان ایران</a></div><div class=ZMenu>
+<a target="_blank" href="http://katoul-afraz.persianblog.ir/" title="">جاذبه‌های طبیعی‌وگردشگری کتول</a></div><div class=ZMenu>
+<a target="_blank" href="../ara1375.mihanblog.com/index.html" title="">ئارۆ</a></div><div class=ZMenu>
+<a target="_blank" href="http://banzardeh.ir/" title="">وبسایت روستای زرده</a></div><div class=ZMenu>
+<a target="_blank" href="http://shoeybfaryadi.blogfa.com/" title="">صـــــــــــــــــــدای سـازگـــار</a></div><div class=ZMenu>
+<a target="_blank" href="http://takabtorist.blogfa.com/" title="">تکاب توریست</a></div><div class=ZMenu>
+<a target="_blank" href="http://mangasho1351.persianblog.ir/" title="">سوسن گل(لاله های واژگون)</a></div><div class=ZMenu>
+<a target="_blank" href="http://mozhganv42.blogfa.com/" title="">&quot;کردستان&quot; سرزمین من</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.wajaw.blogfa.com/" title="">واژاو</a></div><div class=ZMenu>
+<a target="_blank" href="http://ilamkurdish.blogfa.com/" title="">کاک ئاکو/ ئیلام</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.dehkadeh2012.blogfa.com/" title="">دهــکـــــده آرامـــــــش</a></div><div class=ZMenu>
+<a target="_blank" href="http://kermanshah29.blogfa.com/" title="">کرمانشـــــاه گهواره تاریخ وتمدن</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.hana3.blogfa.com/" title="">هه‌ناسه</a></div><div class=ZMenu>
+<a target="_blank" href="http://sokotesabz90.blogfa.com/" title="">سکوت سبز</a></div><div class=ZMenu>
+<a target="_blank" href="http://huseynvahedi.ir/" title="">خاطیره‌لر دوراغی</a></div><div class=ZMenu>
+<a target="_blank" href="http://roonakkord.blogfa.com/" title="">  	روناکی کورد</a></div><div class=ZMenu>
+<a target="_blank" href="../www.7asheaneh.mihanblog.com/index.html" title=""> شاعرانه هایم برای تو</a></div><div class=ZMenu>
+<a target="_blank" href="http://sananblog.blogfa.com/" title="">sanan سانان</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.lakzaban.blogfa.com/" title="">زبان و ادبیات لکی(پهلوی باستان)</a></div><div class=ZMenu>
+<a target="_blank" href="http://sisakht-tourism.blogfa.com/" title="">دئنا(شهر توریستی سی سخت)</a></div><div class=ZMenu>
+<a target="_blank" href="http://mardaftab.blogfa.com/" title="">کیارش(مردآفتاب)</a></div><div class=ZMenu>
+<a target="_blank" href="http://taknavazekormanj.blogfa.com/" title="">موسیقی نبض زندگی</a></div><div class=ZMenu>
+<a target="_blank" href="http://sabaaa.com/09127195011/" title="">رایان صبای مریوان</a></div><div class=ZMenu>
+<a target="_blank" href="http://dehyariboridar.blogfa.com/" title="">دهیاری بوریدر</a></div><div class=ZMenu>
+<a target="_blank" href="http://hawram92.blogfa.com/" title="">زنده باد...</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.sarvabad20.blogfa.com/" title="">سایت برتر سروآباد</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.avat.r98.ir/" title="">ئـــــــــــــــــــــــاواتی کوردستان</a></div><div class=ZMenu>
+<a target="_blank" href="../marivanict.mihanblog.com/index.html" title="">روشهای نوین تدریس</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.deilan.blogfa.com/" title="">سێوان؛ماڵپه‌ڕی تایبه‌تی كوردی</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.rebvar91.blogfa.com/" title="">گروه کوهنوردی ریبوار پاوه</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.tryfe.blogfa.com/" title="">تریفه</a></div><div class=ZMenu>
+<a target="_blank" href="http://bonevar.blogfa.com/" title="ا">بُنِه وار</a></div><div class=ZMenu>
+<a target="_blank" href="http://jiname.blogfa.com/" title="">ژینامه JINAME</a></div><div class=ZMenu>
+<a target="_blank" href="http://naseri-n.blogfa.com/" title="">تاریخ ایران وجهان</a></div><div class=ZMenu>
+<a target="_blank" href="http://kord4.blogfa.com/" title="">کردستانکم(کوردستانه‌که‌م)</a></div><div class=ZMenu>
+<a target="_blank" href="http://ferdosi-toosi.blogsky.com/" title="">داستانهای شاهنامه</a></div><div class=ZMenu>
+<a target="_blank" href="http://helgorid.blogfa.com/" title="">گروه کوهنوردی هلگوردپیرانشهر</a></div><div class=ZMenu>
+<a target="_blank" href="../h--h.mihanblog.com/index.html" title="">مطالب جالب,خواندنی وطنز</a></div><div class=ZMenu>
+<a target="_blank" href="http://evindar.blogfa.com/" title="">ئه وین داری</a></div><div class=ZMenu>
+<a target="_blank" href="http://argha-69.blogfa.com/" title="">روناهـــــــــی یادل</a></div><div class=ZMenu>
+<a target="_blank" href="http://faili.blogfa.com/" title="">فیلی هاونقش آنهادر غرب ایران</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.fereshte-hossani.blogfa.com/" title="">شێره یل كوردی</a></div><div class=ZMenu>
+<a target="_blank" href="http://kaeumars.blogfa.com/" title="">اندیشه مثبت</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.raanahani.blogfa.com/" title="">خــــــــــــاكـــــــــــــــــستان</a></div><div class=ZMenu>
+<a target="_blank" href="http://davasaz.blogfa.com/" title="">نادرالحکما دواساز</a></div><div class=ZMenu>
+<a target="_blank" href="http://ravansarit.lxb.ir/" title="">امدادرایانه روانسر</a></div><div class=ZMenu>
+<a target="_blank" href="http://khomokhot.rzb.ir/" title="">(من وتو/خۆمووخۆت/me and you)</a></div><div class=ZMenu>
+<a target="_blank" href="http://forestry2013.blogfa.com/" title="">انجمن جنگلداری دانشگاه گیلان</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.zanarostami.blogfa.com/" title="">دل نوشته های من</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.grwhezagros.blogfa.com/" title="">گروه کوهنوردی زاگرس پاوه</a></div><div class=ZMenu>
+<a target="_blank" href="http://kamyaraniha.blogfa.com" title="">کامیاران وکامیارانی ها</a></div><div class=ZMenu>
+<a target="_blank" href="http://56ro32.blogfa.com/" title="">چیــــــــا</a></div><div class=ZMenu>
+<a target="_blank" href="http://bakhtawary.blogfa.com/" title="">خوشبختی (به‌خته‌وه‌ری)</a></div><div class=ZMenu>
+<a target="_blank" href="http://havaal.blogfa.com/" title=""> هه‌وال</a></div><div class=ZMenu>
+<a target="_blank" href="http://pawa-city.rozblog.com" title="">پاوه سیتی</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.shahrvandi92.blogfa.com/" title="">فرهنگ شهروندی</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.kchi-kourd.blogfa.com/" title="">بیـــــهوده‌متازکه‌مقصـــدخاک‌است</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.cheshtimjewr.blogfa.com/" title="">چیشتی مجیور </a></div><div class=ZMenu>
+<a target="_blank" href="http://negin-paveh.blogfa.com/" title="">شهروندخوب شهرخوب</a></div><div class=ZMenu>
+<a target="_blank" href="http://pavehweb.cum.ir/main/" title="">پایگاه پاوه وب</a></div><div class=ZMenu>
+<a target="_blank" href="http://mokhtar1361.blogfa.com/" title="">ریبواری ریگا</a></div><div class=ZMenu>
+<a target="_blank" href="http://mawlawikurd.blogfa.com/" title="">رێکخراوه‌ی مه‌وله‌وی کورد-سنه‌</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.awayemad.ir/" title="">آوای ماد</a></div><div class=ZMenu>
+<a target="_blank" href="http://kiani6.blogfa.com/" title="">ششم دبستان شهیدکاظمی</a></div><div class=ZMenu>
+<a target="_blank" href="http://payiz2012.blogfa.com/" title="">پاییز</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.sere-eshgh.blogfa.com/" title="">سرعشق</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.yyy300.blogfa.com/" title="">تاریخ ترکان ایران</a></div><div class=ZMenu>
+<a target="_blank" href="http://rahianenor2010.blogfa.com/" title="">راهیان نور</a></div><div class=ZMenu>
+<a target="_blank" href="../hawarjavanrood.mihanblog.com/index.html" title="">هاوارجوانرود</a></div><div class=ZMenu>
+<a target="_blank" href="http://ghazali-paveh.blogfa.com/" title="">دبیرستان امام محمّدغزالی پاوه</a></div><div class=ZMenu>
+<a target="_blank" href="http://linkstankermanshah.blogfa.com/" title="">لینکستان کـرمـانـشـاه</a></div><div class=ZMenu>
+<a target="_blank" href="http://babahayran.blogfa.com/" title="">اهل سنت وجماعت کردستان</a></div><div class=ZMenu>
+<a target="_blank" href="http://www.turkiye-iran.blogsky.com/" title="">ترکیه</a></div><div class=ZMenu>
+<a target="_blank" href="http://soroshrawansar.blogfa.com/" title="">ســـــــــــروش روانســــــر  </a></div><div class=ZMenu>
+<a target="_blank" href="http://nishtman4.blogfa.com/" title="">نیــــــــشتــمان</a></div>
+<div class=ZMenu>
+<a target="_blank" href="http://somaycaw.blogfa.com/">شعر-روانشناسی</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://paveh2012.blogfa.com/">کیمیای سعادت</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../shirvaan.mihanblog.com/index.html">وبگاه‌اختصاصی شیروان‌وچرداول</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://http://gelavij.blogfa.com/">گلاویژ</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://soolaf.blogfa.com/">سولاف</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://ilamaftab.blogfa.com/">ایلام ساتراپ مهر</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://sarchy236.persianblog.ir/">سرچی در اوج</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.razan21.blogfa.com/">رازان</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.ako-1331.blogfa.com/">ادبیات </a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://azmoon.xzn.ir/">آزمون آنلاین کامپیوتر</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.sherko.blogfa.com/">وبلاگ لینک‌کردستان</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.kordawari.blogfa.com/">کورده‌واری</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="../www.snayardalan.mihanblog.com/index.html">سنه‌ی ئه‌رده‌لان</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://arefha.blogfa.com/">کـــــلـــــــــــــــــک خــیــــــــال</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.ilam-98.blogfa.com/">ئیلام ,ئه‌رووس زاگروس</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.rijabknowledge.blogfa.com/">مطالب علمی/ریجاب</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.darban1.blogfa.com/">هانه‌دشت</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://analyte.ir/">شیمیست ایرانی</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.zahedanmuseum.blogfa.com/"موزه‌منطقه‌ای جنوب‌شرق ایران </a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.pirunesy.blogfa.com/">مریوان شناسی</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://www.kurdshiraz.blogfa.com/">کردان شیراز</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://kurdestan-ako.mihanblog.com/">هویت کورد</a>
+</div>
+<div class=ZMenu>
+<a target="_blank" href="http://khowalin.blogfa.com/">وه‌هار</a>
+</div>
+<div class=ZMenu>
+
+<a href="../haneberchem.mihanblog.com/linkdaily/index.html">لیست همه لینکها</a>
+</div>
+</div>
+</div>
+<div class=BMenu></div></div>
+
+</div>
+			
+</td>
+
+
+<td width="563" valign="top">
+
+<div align="center">
+			
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+					
+<div class=TPost>
+<div class=TPost2>		
+
+<b><a href="../haneberchem.mihanblog.com/post/3011.html">معرفی کتاب های نویسندگان در حوزه های مختلف(۳۹)</a></b></div></div>
+<div class=Post><div class=Post2>					
+<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+<div><font face="Mihan-Iransans" size="3" style="" color="#000099"><b>معرفی کتاب های نویسندگان در حوزه های مختلف(۳۹)</b></font></div><div><font face="Mihan-Iransans" size="3" style="" color="#000099"><b><br></b></font></div><div><font face="Mihan-Iransans" size="3" style="" color="#000099"><b><br></b></font></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="https://s16.picofile.com/file/8417239018/IMG_20201212_095757_193.jpg" alt=""></div><div><br></div><div><br></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="https://s16.picofile.com/file/8417238834/IMG_20201212_133139_480.jpg" alt=""></div>
+
+<br>
+برچسب ها:<a href="../haneberchem.mihanblog.com/post/tag/هه‌ورامان‌هانه‌به‌رچه‌م-کتابخانه‌هورامان.html" >هه‌ورامان‌هانه‌به‌رچه‌م-کتابخانه‌هورامان</a>،<a href="http://haneberchem.mihanblog.com/post/tag/%DB%8C%D8%A7%D9%86%D9%87%E2%80%8C%D9%88%DA%A9%D8%AA%DB%8E%D8%A8%D9%88%D9%88%D9%87%D9%87%E2%80%8C%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86%DB%8C-%D9%87%D9%87%E2%80%8C%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86-%D9%87%DB%86%D8%B1%D8%A7%D9%85%D8%A7%D9%86-%D8%A7%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86-%D8%A7%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86%D8%A7%D8%AA-%D8%AF%D8%B2%D8%A2%D9%88%D8%B1(%D8%B2%D8%A7%D9%88%D9%87%E2%80%8C%D8%B1)-%D9%84%D9%87%D9%88%D9%86-%D8%AA%D8%AE%D8%AA-%DA%98%D8%A7%D9%88%D8%B1%D9%88%D8%AF-%D9%BE%D8%A7%D9%88%D9%87-%D9%86%D9%88%D8%B3%D9%88%D8%AF%D9%80%20%D9%86%D9%88%D8%AF%D8%B4%D9%87%20(%D9%86%DB%86%D8%AA%D8%B4%D9%87)%D8%B2%D8%B1%D8%AF%D9%87-%D9%BE%D8%B1%DB%8C%D8%A7%D9%86-%D8%B1%DB%8E%DA%98%D8%A7%D9%88(%D8%B1%DB%8C%D8%AC%D8%A7%D8%A8)-%D8%B4%D8%B1%DB%8C%D9%81%E2%80%8C%D8%A2%D8%A8%D8%A7%D8%AF-%D8%B2%D8%A7%D8%BA%D9%87-%DA%A9%D9%86%D8%AF%D9%88%D9%84%D9%87-%DA%AF%DB%95%D9%88%D8%B1%DB%95%D8%AC%D9%88%D9%80%20%D8%AA%D9%87%E2%80%8C%D9%88%DB%8E%DA%B5%DB%8E-%D8%A8%DB%8C%D8%A7%D8%B1%D9%87-%D8%B3%D8%A7%D9%88%D8%B1-%D9%86%D9%88%D8%AF%DB%8C%D8%AC%D9%87-%D9%87%D9%87%E2%80%8C%DA%B5%D9%87%E2%80%8C%D8%A8%D8%AC%D9%87-%D8%AE%DB%86%D8%B1%D9%85%D8%A7%DA%B5-%D9%85%D8%B1%DB%8C%D9%88%D8%A7%D9%86-%D8%B3%D8%B1%D9%88%D8%A2%D8%A8%D8%A7%D8%AF-%DA%A9%D8%B1%D9%85%D8%A7%D9%86%D8%B4%D8%A7%D9%87-%DA%A9%D8%B1%D8%AF%D8%B3%D8%AA%D8%A7%D9%86-%D8%AF%D8%A7%D9%84%D8%A7%D9%86%DB%8C%20%D8%B2%D8%A7%D9%88%DB%95%D8%B1%D9%80%20%D8%B3%D9%86%D9%86%D8%AF%D8%AC-%DA%86%D9%87%D8%A7%D8%B1%D9%82%D9%84%D8%B9%D9%87%E2%80%8C%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%85%D9%84%DA%A9%DB%8C(%D8%B2%D8%A7%D8%BA%D9%85%D8%B1%D8%B2-%D8%B2%DB%8C%D9%86%D9%88%D9%86%D8%AF-%D8%AD%D8%B3%DB%8C%D9%86%E2%80%8C%D8%A2%D8%A8%D8%A7%D8%AF-%D8%A7%D9%85%DB%8C%D8%B1%D8%A2%D8%A8%D8%A7%D8%AF)%D9%87%D9%88%D8%B1%D8%A7%D9%85%DB%8C%20%D9%87%D8%A7%DB%8C%20%D8%B4%D9%85%D8%A7%D9%84%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86)%D8%B9%DA%A9%D8%B3-%D8%B4%D8%A8%DA%A9-%D8%B3%D9%86%D8%AC%D8%A7%D8%B1%D9%80%20%D8%A8%D8%A7%D8%AC%D9%84%D8%A7%D9%86-%DA%A9%D8%A7%DA%A9%D9%87%E2%80%8C%DB%8C%DB%8C-%DB%8C%D8%A7%D8%B1%D8%B3%D8%A7%D9%86-%D8%B3%D8%A7%D9%88%D8%B1-%D9%86%D9%88%D8%AF%DB%8C%D8%AC%D9%87-%D8%B2%D8%A7%D8%B2%D8%A7-%D8%B2%D8%A7%D8%B2%D8%A7%DA%A9%DB%8C-%D9%82%D9%84%D8%B9%D9%87%20%D9%82%D8%B1%D9%88%D9%87-%DA%86%D9%88%D8%B1%DA%98%DB%8C-%D9%87%D9%88%D9%85%D8%A7%DB%8C%D9%88%D9%86%20%D9%85%D9%88%D8%AD%D9%87%E2%80%8C%D9%85%D9%85%D9%87%E2%80%8C%D8%AF%D9%86%DA%98%D8%A7%D8%AF%D9%80%20%D8%B3%D9%87%E2%80%8C%D9%81%D9%87%E2%80%8C%D8%B1%D9%87%E2%80%8C%DA%A9%DB%8E%20%DA%AF%D8%A7%D9%84%DB%8C%D9%88%DB%8E%D8%B1%DB%8C%20%D9%80%20%D9%88%D9%87%E2%80%8C%D8%B3%DB%8C%D9%87%E2%80%8C%D8%AA%20%D9%BE%D9%87%E2%80%8C%DB%8C%20%D9%85%D9%87%E2%80%8C%D8%B2%D9%87%D9%87%E2%80%8C%D8%B1%DB%8C%20%D9%80%20%DB%8C%D8%A7%D9%86%DB%95%D9%88%D8%AE%DB%95%D9%85%D8%A7" >یانه‌وکتێبووهه‌ورامانی-هه‌ورامان-هۆرامان-اورامان-اورامانات-دزآور(زاوه‌ر)-لهون-تخت-ژاورود-پاوه-نوسودـ نودشه (نۆتشه)زرده-پریان-رێژاو(ریجاب)-شریف‌آباد-زاغه-کندوله-گەورەجوـ ته‌وێڵێ-بیاره-ساور-نودیجه-هه‌ڵه‌بجه-خۆرماڵ-مریوان-سروآباد-کرمانشاه-کردستان-دالانی زاوەرـ سنندج-چهارقلعه‌عبدالملکی(زاغمرز-زینوند-حسین‌آباد-امیرآباد)هورامی های شمال ایران)عکس-شبک-سنجارـ باجلان-کاکه‌یی-یارسان-ساور-نودیجه-زازا-زازاکی-قلعه قروه-چورژی-هومایون موحه‌ممه‌دنژادـ سه‌فه‌ره‌کێ گالیوێری ـ وه‌سیه‌ت په‌ی مه‌زهه‌ری ـ یانەوخەما</a>،<a href="../haneberchem.mihanblog.com/post/tag/معرفی&#32;کتاب&#32;های&#32;نویسندگان&#32;در&#32;حوزه&#32;های&#32;مختلف(۳۹).html" >معرفی کتاب های نویسندگان در حوزه های مختلف(۳۹)</a>،<br>				
+</div></div>			
+
+<div class=Post3><div class=Post4>
+
+<div class=date>  نوشته شده در تاریخ  شنبه 22 آذر 1399 
+ 
+ <a href="../haneberchem.mihanblog.com/post/author/430381.html">توسط همایون  محمدنژاد </a>  
+</div>
+<div class=Comment>
+<div class=Comment>
+<a target="_self" href="javascript:newComment(3011)">نظرات  <script>setCommentCnt(3011)</script> </a>
+
+</div></div></div></div>						
+
+
+			
+<div class=TPost>
+<div class=TPost2>		
+
+<b><a href="../haneberchem.mihanblog.com/post/3010.html">کەلەبەروو شێعرا(۲۱۰)</a></b></div></div>
+<div class=Post><div class=Post2>					
+
+<div><font face="Mihan-Iransans" size="3" color="#000099"><b>کەلەبەروو شێعرا(۲۱۰)</b></font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">دیم  تا سەر نیەن  دنیا تاو تاوەن</font></div><div><font face="Mihan-Iransans" size="3">هەر تاوە ڕەسمێ جه دنیا  باوەن</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">نه خەم  مەمانۆ  تا سەر جه لامان</font></div><div><font face="Mihan-Iransans" size="3">نه شادٚی  دایێم  مێوه سەر ڕامان</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">دڵم وەش نەکەرد  شادٚی ئاما لام</font></div><div><font face="Mihan-Iransans" size="3">چوون زانام تاوێ  شیرین کەرۆ کام</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">زانام خەم  تەنیا مازیەکەم چەمناش</font></div><div><font face="Mihan-Iransans" size="3">حەسرەتم نەوارد  نەواتم  ئەی کاش</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">دیم وەفاش پەی کەس نیەن ئی دنیا</font></div><div><font face="Mihan-Iransans" size="3">ئێنسان  مۆرێوەن  ئەمانەت  چنیا</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">دیم گیانمان بەسته به تاڵێ  موویەن</font></div><div><font face="Mihan-Iransans" size="3">وەشبەخت  ئا کەسەن که سەنا گوویەن</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">وەشبەخت ئانەنه  دڵان کەرۆ  شادٚ</font></div><div><font face="Mihan-Iransans" size="3">حەر خاسه کەرۆ  و  مدٚۆنەش وه بادٚ</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">نابەخەت  ئانەنه  کینه  بەرۆ  دڵ</font></div><div><font face="Mihan-Iransans" size="3">دڵش نەسرەوتەن جه ئێش و جه چڵ</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">تا ڕاس  ڕا بلمێ  خاس مێ وە ڕامان</font></div><div><font face="Mihan-Iransans" size="3">پای کەجما نیا  بەدٚ مێوه  دامان</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">کەس  عادز  نەبۆ  به دەسمان ئامان</font></div><div><font face="Mihan-Iransans" size="3">خودٚای چی بارەو  پاسەش فەرماوان</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">حەقوو  وێم یاوا  بوو به  کەڕ و کاس</font></div><div><font face="Mihan-Iransans" size="3">مەویەروو  هەرگیز من جه حەقونناس</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">ئەر  بەندٚە وینۆ  به دەسما  عەزاب</font></div><div><font face="Mihan-Iransans" size="3">سەوای  قیامەت  مەنمه بێ جواب</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">چوار ڕۆی  دنیا  شادٚی بەش کەرمێ</font></div><div><font face="Mihan-Iransans" size="3">گردٚش  فانیا  دڵان  وەش  کەرمێ</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">#حەمەزەمان_مورادی</font></div><div><br></div><font face="Mihan-Iransans" size="3"><div><font face="Mihan-Iransans" size="3"><br></font></div>بازێ بەزمش بەست نەئاسمان لەیل
+
+
+</font><div><font face="Mihan-Iransans" size="3">دەور دۆ جەهەوار هەسارەی سوەیل</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">ڕەسەد ڪارش بۆ ، خاڵ بۆ نیشانە</font></div><div><font face="Mihan-Iransans" size="3">تەشریفش بزیۆ جەوەر هەیوانە</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">بەۆچەم وینای بێ مانەن بد٘یۆ</font></div><div><font face="Mihan-Iransans" size="3">بزانۆ چەنی چەم  ئازیزم گلیۆ</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">ڕەسمێ ڪیانۆ پەرێ چەمانم</font></div><div><font face="Mihan-Iransans" size="3">تا بەربێ جە بێخ تاڵی خەمانم</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">من بەدوودید٘ەی ڕەمەد٘ بارەوە</font></div><div><font face="Mihan-Iransans" size="3">نیام هێز وهۆش جەی دیارەوە</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">مەگەر بەسیرەت یاونۆم ئاتاقە</font></div><div><font face="Mihan-Iransans" size="3">نزم بۆ جەلام دەرڪ و دەلاقە</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">سادەی قیبلەکەم ، بزیە ئا بانە</font></div><div><font face="Mihan-Iransans" size="3">باوەس بڪێشوو تەشەر وتانە</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">دەوای دڵ وچەم لاتەو هەرزانەن</font></div><div><font face="Mihan-Iransans" size="3">ئەرنا دەوای دڵ بەرئامای گیانەن</font></div><div><font face="Mihan-Iransans" size="3"><br></font></div><div><font face="Mihan-Iransans" size="3">#حامی-غەریبی</font></div>
+
+<br>
+برچسب ها:<a href="../haneberchem.mihanblog.com/post/tag/هه‌ورامان‌هانه‌به‌رچه‌م-کتابخانه‌هورامان.html" >هه‌ورامان‌هانه‌به‌رچه‌م-کتابخانه‌هورامان</a>،<a href="http://haneberchem.mihanblog.com/post/tag/%DB%8C%D8%A7%D9%86%D9%87%E2%80%8C%D9%88%DA%A9%D8%AA%DB%8E%D8%A8%D9%88%D9%88%D9%87%D9%87%E2%80%8C%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86%DB%8C-%D9%87%D9%87%E2%80%8C%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86-%D9%87%DB%86%D8%B1%D8%A7%D9%85%D8%A7%D9%86-%D8%A7%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86-%D8%A7%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86%D8%A7%D8%AA-%D8%AF%D8%B2%D8%A2%D9%88%D8%B1(%D8%B2%D8%A7%D9%88%D9%87%E2%80%8C%D8%B1)-%D9%84%D9%87%D9%88%D9%86-%D8%AA%D8%AE%D8%AA-%DA%98%D8%A7%D9%88%D8%B1%D9%88%D8%AF-%D9%BE%D8%A7%D9%88%D9%87-%D9%86%D9%88%D8%B3%D9%88%D8%AF%D9%80%20%D9%86%D9%88%D8%AF%D8%B4%D9%87%20(%D9%86%DB%86%D8%AA%D8%B4%D9%87)%D8%B2%D8%B1%D8%AF%D9%87-%D9%BE%D8%B1%DB%8C%D8%A7%D9%86-%D8%B1%DB%8E%DA%98%D8%A7%D9%88(%D8%B1%DB%8C%D8%AC%D8%A7%D8%A8)-%D8%B4%D8%B1%DB%8C%D9%81%E2%80%8C%D8%A2%D8%A8%D8%A7%D8%AF-%D8%B2%D8%A7%D8%BA%D9%87-%DA%A9%D9%86%D8%AF%D9%88%D9%84%D9%87-%DA%AF%DB%95%D9%88%D8%B1%DB%95%D8%AC%D9%88%D9%80%20%D8%AA%D9%87%E2%80%8C%D9%88%DB%8E%DA%B5%DB%8E-%D8%A8%DB%8C%D8%A7%D8%B1%D9%87-%D8%B3%D8%A7%D9%88%D8%B1-%D9%86%D9%88%D8%AF%DB%8C%D8%AC%D9%87-%D9%87%D9%87%E2%80%8C%DA%B5%D9%87%E2%80%8C%D8%A8%D8%AC%D9%87-%D8%AE%DB%86%D8%B1%D9%85%D8%A7%DA%B5-%D9%85%D8%B1%DB%8C%D9%88%D8%A7%D9%86-%D8%B3%D8%B1%D9%88%D8%A2%D8%A8%D8%A7%D8%AF-%DA%A9%D8%B1%D9%85%D8%A7%D9%86%D8%B4%D8%A7%D9%87-%DA%A9%D8%B1%D8%AF%D8%B3%D8%AA%D8%A7%D9%86-%D8%AF%D8%A7%D9%84%D8%A7%D9%86%DB%8C%20%D8%B2%D8%A7%D9%88%DB%95%D8%B1%D9%80%20%D8%B3%D9%86%D9%86%D8%AF%D8%AC-%DA%86%D9%87%D8%A7%D8%B1%D9%82%D9%84%D8%B9%D9%87%E2%80%8C%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%85%D9%84%DA%A9%DB%8C(%D8%B2%D8%A7%D8%BA%D9%85%D8%B1%D8%B2-%D8%B2%DB%8C%D9%86%D9%88%D9%86%D8%AF-%D8%AD%D8%B3%DB%8C%D9%86%E2%80%8C%D8%A2%D8%A8%D8%A7%D8%AF-%D8%A7%D9%85%DB%8C%D8%B1%D8%A2%D8%A8%D8%A7%D8%AF)%D9%87%D9%88%D8%B1%D8%A7%D9%85%DB%8C%20%D9%87%D8%A7%DB%8C%20%D8%B4%D9%85%D8%A7%D9%84%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86)%D8%B9%DA%A9%D8%B3-%D8%B4%D8%A8%DA%A9-%D8%B3%D9%86%D8%AC%D8%A7%D8%B1%D9%80%20%D8%A8%D8%A7%D8%AC%D9%84%D8%A7%D9%86-%DA%A9%D8%A7%DA%A9%D9%87%E2%80%8C%DB%8C%DB%8C-%DB%8C%D8%A7%D8%B1%D8%B3%D8%A7%D9%86-%D8%B3%D8%A7%D9%88%D8%B1-%D9%86%D9%88%D8%AF%DB%8C%D8%AC%D9%87-%D8%B2%D8%A7%D8%B2%D8%A7-%D8%B2%D8%A7%D8%B2%D8%A7%DA%A9%DB%8C-%D9%82%D9%84%D8%B9%D9%87%20%D9%82%D8%B1%D9%88%D9%87-%DA%86%D9%88%D8%B1%DA%98%DB%8C-%D9%87%D9%88%D9%85%D8%A7%DB%8C%D9%88%D9%86%20%D9%85%D9%88%D8%AD%D9%87%E2%80%8C%D9%85%D9%85%D9%87%E2%80%8C%D8%AF%D9%86%DA%98%D8%A7%D8%AF%D9%80%20%D8%B3%D9%87%E2%80%8C%D9%81%D9%87%E2%80%8C%D8%B1%D9%87%E2%80%8C%DA%A9%DB%8E%20%DA%AF%D8%A7%D9%84%DB%8C%D9%88%DB%8E%D8%B1%DB%8C%20%D9%80%20%D9%88%D9%87%E2%80%8C%D8%B3%DB%8C%D9%87%E2%80%8C%D8%AA%20%D9%BE%D9%87%E2%80%8C%DB%8C%20%D9%85%D9%87%E2%80%8C%D8%B2%D9%87%D9%87%E2%80%8C%D8%B1%DB%8C%20%D9%80%20%DB%8C%D8%A7%D9%86%DB%95%D9%88%D8%AE%DB%95%D9%85%D8%A7" >یانه‌وکتێبووهه‌ورامانی-هه‌ورامان-هۆرامان-اورامان-اورامانات-دزآور(زاوه‌ر)-لهون-تخت-ژاورود-پاوه-نوسودـ نودشه (نۆتشه)زرده-پریان-رێژاو(ریجاب)-شریف‌آباد-زاغه-کندوله-گەورەجوـ ته‌وێڵێ-بیاره-ساور-نودیجه-هه‌ڵه‌بجه-خۆرماڵ-مریوان-سروآباد-کرمانشاه-کردستان-دالانی زاوەرـ سنندج-چهارقلعه‌عبدالملکی(زاغمرز-زینوند-حسین‌آباد-امیرآباد)هورامی های شمال ایران)عکس-شبک-سنجارـ باجلان-کاکه‌یی-یارسان-ساور-نودیجه-زازا-زازاکی-قلعه قروه-چورژی-هومایون موحه‌ممه‌دنژادـ سه‌فه‌ره‌کێ گالیوێری ـ وه‌سیه‌ت په‌ی مه‌زهه‌ری ـ یانەوخەما</a>،<a href="../haneberchem.mihanblog.com/post/tag/کەلەبەروو&#32;شێعرا(۲۱۰).html" >کەلەبەروو شێعرا(۲۱۰)</a>،<br>				
+</div></div>			
+
+<div class=Post3><div class=Post4>
+
+<div class=date>  نوشته شده در تاریخ  شنبه 22 آذر 1399 
+ 
+ <a href="../haneberchem.mihanblog.com/post/author/430381.html">توسط همایون  محمدنژاد </a>  
+</div>
+<div class=Comment>
+<div class=Comment>
+<a target="_self" href="javascript:newComment(3010)">نظرات  <script>setCommentCnt(3010)</script> </a>
+
+</div></div></div></div>						
+
+
+			
+<div class=TPost>
+<div class=TPost2>		
+
+<b><a href="../haneberchem.mihanblog.com/post/3009.html">بارۆڵ وژەنەو پادشای/حامی غەریبی</a></b></div></div>
+<div class=Post><div class=Post2>					
+
+
+
+
+<div><font size="3" color="#000099"><b>بارۆڵ وژەنەو پادشای/حامی غەریبی</b></font></div><div><font size="3"><br></font></div><div><font size="3">ڕوێ جە ڕوا باڕۆڵ چەنی زارۆڵا خەریڪوو یانەقۆڵابۆ ڪۆڵانەنە</font></div><div><font size="3">ژەنەو پادشای ملۆ و ماچۆ بارۆڵ، خەریڪوو چێشینی؟</font></div><div><font size="3">ماچۆ یانێ کەرووە</font></div><div><font size="3">ژەنێ ماچۆ ئەگەر ورەشیشا من سانووشا</font></div><div><font size="3">واتش دەی خاسا سانەشا</font></div><div><font size="3">ژەنێ زەڕەی مد٘ۆ و یانەکا   تەحوێڵ گێرۆ</font></div><div><font size="3">بارۆڵ زەڕەی بخشنۆوە فەقیرانە</font></div><div><font size="3">شەوی پادشا وەرم وینۆ ڪە ئینا بەهەشتنە قەسرێوە عاله وینۆ گەرەڪش بۆ بلۆنە یانە نمازا، ماچا ئاقەسرێ هنەو ژەنەڪێتنە، ڕۆبۆوە، جەرەیانەی جەژەنێ پەرسۆ و ژەنڪێش مامەڵەڪەیش چەنی بارۆڵی گێڵنۆوە پەیش</font></div><div><font size="3">پادشا هۆر مێزۆ ملۆ پەی لاو بارۆڵی</font></div><div><font size="3">بارۆڵی دلێو زارڕۆلانە وینۆ ڪەخەرڪوو یانە قۆڵان چەنیشا</font></div><div><font size="3">ماچۆ بارۆڵ ئایانا دە بەمن هەرچێوێ واچی مد٘ەوت پەنە</font></div><div><font size="3">بارۆڵیچ قیمەتێوە ماچۆ ڪەپادشا نەتاوۆ بد٘ۆش</font></div><div><font size="3">پادشا ماچۆ بارۆڵ گیان چەنی بەڪەمتەر مامەڵەت ڪەرد٘ چەنی شابانوێ ؟!</font></div><div><font size="3">بارۆڵیچ ماچۆ، ئاد٘ە نەد٘یە مامەڵەش ڪەرد٘</font></div><div><font size="3">وەلێ تۆ یانەڪێت دیێنێ ، تۆپەی ڕەزاو خۆد٘ای نامانی</font></div><div><font size="3">پەوڪای ئامانی چەنی خۆد٘ای مامەڵەڪەری</font></div><div><font size="3">فەرقتا ئاسمان وزەمینا&nbsp;</font></div><div><font size="3"><br></font></div><div><font size="3">#هۆرگێڵنایوە؛ حامی-غەریبی</font></div>
+
+<br>
+برچسب ها:<a href="../haneberchem.mihanblog.com/post/tag/هه‌ورامان‌هانه‌به‌رچه‌م-کتابخانه‌هورامان.html" >هه‌ورامان‌هانه‌به‌رچه‌م-کتابخانه‌هورامان</a>،<a href="http://haneberchem.mihanblog.com/post/tag/%DB%8C%D8%A7%D9%86%D9%87%E2%80%8C%D9%88%DA%A9%D8%AA%DB%8E%D8%A8%D9%88%D9%88%D9%87%D9%87%E2%80%8C%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86%DB%8C-%D9%87%D9%87%E2%80%8C%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86-%D9%87%DB%86%D8%B1%D8%A7%D9%85%D8%A7%D9%86-%D8%A7%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86-%D8%A7%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86%D8%A7%D8%AA-%D8%AF%D8%B2%D8%A2%D9%88%D8%B1(%D8%B2%D8%A7%D9%88%D9%87%E2%80%8C%D8%B1)-%D9%84%D9%87%D9%88%D9%86-%D8%AA%D8%AE%D8%AA-%DA%98%D8%A7%D9%88%D8%B1%D9%88%D8%AF-%D9%BE%D8%A7%D9%88%D9%87-%D9%86%D9%88%D8%B3%D9%88%D8%AF%D9%80%20%D9%86%D9%88%D8%AF%D8%B4%D9%87%20(%D9%86%DB%86%D8%AA%D8%B4%D9%87)%D8%B2%D8%B1%D8%AF%D9%87-%D9%BE%D8%B1%DB%8C%D8%A7%D9%86-%D8%B1%DB%8E%DA%98%D8%A7%D9%88(%D8%B1%DB%8C%D8%AC%D8%A7%D8%A8)-%D8%B4%D8%B1%DB%8C%D9%81%E2%80%8C%D8%A2%D8%A8%D8%A7%D8%AF-%D8%B2%D8%A7%D8%BA%D9%87-%DA%A9%D9%86%D8%AF%D9%88%D9%84%D9%87-%DA%AF%DB%95%D9%88%D8%B1%DB%95%D8%AC%D9%88%D9%80%20%D8%AA%D9%87%E2%80%8C%D9%88%DB%8E%DA%B5%DB%8E-%D8%A8%DB%8C%D8%A7%D8%B1%D9%87-%D8%B3%D8%A7%D9%88%D8%B1-%D9%86%D9%88%D8%AF%DB%8C%D8%AC%D9%87-%D9%87%D9%87%E2%80%8C%DA%B5%D9%87%E2%80%8C%D8%A8%D8%AC%D9%87-%D8%AE%DB%86%D8%B1%D9%85%D8%A7%DA%B5-%D9%85%D8%B1%DB%8C%D9%88%D8%A7%D9%86-%D8%B3%D8%B1%D9%88%D8%A2%D8%A8%D8%A7%D8%AF-%DA%A9%D8%B1%D9%85%D8%A7%D9%86%D8%B4%D8%A7%D9%87-%DA%A9%D8%B1%D8%AF%D8%B3%D8%AA%D8%A7%D9%86-%D8%AF%D8%A7%D9%84%D8%A7%D9%86%DB%8C%20%D8%B2%D8%A7%D9%88%DB%95%D8%B1%D9%80%20%D8%B3%D9%86%D9%86%D8%AF%D8%AC-%DA%86%D9%87%D8%A7%D8%B1%D9%82%D9%84%D8%B9%D9%87%E2%80%8C%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%85%D9%84%DA%A9%DB%8C(%D8%B2%D8%A7%D8%BA%D9%85%D8%B1%D8%B2-%D8%B2%DB%8C%D9%86%D9%88%D9%86%D8%AF-%D8%AD%D8%B3%DB%8C%D9%86%E2%80%8C%D8%A2%D8%A8%D8%A7%D8%AF-%D8%A7%D9%85%DB%8C%D8%B1%D8%A2%D8%A8%D8%A7%D8%AF)%D9%87%D9%88%D8%B1%D8%A7%D9%85%DB%8C%20%D9%87%D8%A7%DB%8C%20%D8%B4%D9%85%D8%A7%D9%84%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86)%D8%B9%DA%A9%D8%B3-%D8%B4%D8%A8%DA%A9-%D8%B3%D9%86%D8%AC%D8%A7%D8%B1%D9%80%20%D8%A8%D8%A7%D8%AC%D9%84%D8%A7%D9%86-%DA%A9%D8%A7%DA%A9%D9%87%E2%80%8C%DB%8C%DB%8C-%DB%8C%D8%A7%D8%B1%D8%B3%D8%A7%D9%86-%D8%B3%D8%A7%D9%88%D8%B1-%D9%86%D9%88%D8%AF%DB%8C%D8%AC%D9%87-%D8%B2%D8%A7%D8%B2%D8%A7-%D8%B2%D8%A7%D8%B2%D8%A7%DA%A9%DB%8C-%D9%82%D9%84%D8%B9%D9%87%20%D9%82%D8%B1%D9%88%D9%87-%DA%86%D9%88%D8%B1%DA%98%DB%8C-%D9%87%D9%88%D9%85%D8%A7%DB%8C%D9%88%D9%86%20%D9%85%D9%88%D8%AD%D9%87%E2%80%8C%D9%85%D9%85%D9%87%E2%80%8C%D8%AF%D9%86%DA%98%D8%A7%D8%AF%D9%80%20%D8%B3%D9%87%E2%80%8C%D9%81%D9%87%E2%80%8C%D8%B1%D9%87%E2%80%8C%DA%A9%DB%8E%20%DA%AF%D8%A7%D9%84%DB%8C%D9%88%DB%8E%D8%B1%DB%8C%20%D9%80%20%D9%88%D9%87%E2%80%8C%D8%B3%DB%8C%D9%87%E2%80%8C%D8%AA%20%D9%BE%D9%87%E2%80%8C%DB%8C%20%D9%85%D9%87%E2%80%8C%D8%B2%D9%87%D9%87%E2%80%8C%D8%B1%DB%8C%20%D9%80%20%DB%8C%D8%A7%D9%86%DB%95%D9%88%D8%AE%DB%95%D9%85%D8%A7" >یانه‌وکتێبووهه‌ورامانی-هه‌ورامان-هۆرامان-اورامان-اورامانات-دزآور(زاوه‌ر)-لهون-تخت-ژاورود-پاوه-نوسودـ نودشه (نۆتشه)زرده-پریان-رێژاو(ریجاب)-شریف‌آباد-زاغه-کندوله-گەورەجوـ ته‌وێڵێ-بیاره-ساور-نودیجه-هه‌ڵه‌بجه-خۆرماڵ-مریوان-سروآباد-کرمانشاه-کردستان-دالانی زاوەرـ سنندج-چهارقلعه‌عبدالملکی(زاغمرز-زینوند-حسین‌آباد-امیرآباد)هورامی های شمال ایران)عکس-شبک-سنجارـ باجلان-کاکه‌یی-یارسان-ساور-نودیجه-زازا-زازاکی-قلعه قروه-چورژی-هومایون موحه‌ممه‌دنژادـ سه‌فه‌ره‌کێ گالیوێری ـ وه‌سیه‌ت په‌ی مه‌زهه‌ری ـ یانەوخەما</a>،<a href="../haneberchem.mihanblog.com/post/tag/بارۆڵ&#32;وژەنەو&#32;پادشای/حامی&#32;غەریبی.html" >بارۆڵ وژەنەو پادشای/حامی غەریبی</a>،<br>				
+</div></div>			
+
+<div class=Post3><div class=Post4>
+
+<div class=date>  نوشته شده در تاریخ  جمعه 21 آذر 1399 
+ 
+ <a href="../haneberchem.mihanblog.com/post/author/430381.html">توسط همایون  محمدنژاد </a>  
+</div>
+<div class=Comment>
+<div class=Comment>
+<a target="_self" href="javascript:newComment(3009)">نظرات  <script>setCommentCnt(3009)</script> </a>
+
+</div></div></div></div>						
+
+
+			
+<div class=TPost>
+<div class=TPost2>		
+
+<b><a href="../haneberchem.mihanblog.com/post/3008.html">ویرەوەریێو جە ویەردەی جە چەموو دووربینی/هومایون موحەممەدنژاد</a></b></div></div>
+<div class=Post><div class=Post2>					
+
+
+
+
+
+
+<div><br></div><div><b><font size="3" color="#000099">ویرەوەریێو جە ویەردەی جە چەموو دووربینی/هومایون موحەممەدنژاد</font></b></div><div><b><font size="3" color="#000099"><br></font></b></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="https://s17.picofile.com/file/8417101984/IMG_20200331_222724_322.jpg" alt=""></div><div><b><font size="3" color="#000099"><br></font></b></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="https://s16.picofile.com/file/8417101800/IMG_20200331_011028_473.jpg" alt=""></div><div><b><font size="3" color="#000099"><br></font></b></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="https://s17.picofile.com/file/8417101476/IMG_20191220_215914_190.jpg" alt=""></div><div><b><font size="3" color="#000099"><br></font></b></div><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="https://s17.picofile.com/file/8417101284/photo_2015_12_16_06_56_58.jpg" alt=""></div>
+
+
+
+
+
+<br>
+برچسب ها:<a href="../haneberchem.mihanblog.com/post/tag/هه‌ورامان‌هانه‌به‌رچه‌م-کتابخانه‌هورامان.html" >هه‌ورامان‌هانه‌به‌رچه‌م-کتابخانه‌هورامان</a>،<a href="http://haneberchem.mihanblog.com/post/tag/%DB%8C%D8%A7%D9%86%D9%87%E2%80%8C%D9%88%DA%A9%D8%AA%DB%8E%D8%A8%D9%88%D9%88%D9%87%D9%87%E2%80%8C%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86%DB%8C-%D9%87%D9%87%E2%80%8C%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86-%D9%87%DB%86%D8%B1%D8%A7%D9%85%D8%A7%D9%86-%D8%A7%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86-%D8%A7%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86%D8%A7%D8%AA-%D8%AF%D8%B2%D8%A2%D9%88%D8%B1(%D8%B2%D8%A7%D9%88%D9%87%E2%80%8C%D8%B1)-%D9%84%D9%87%D9%88%D9%86-%D8%AA%D8%AE%D8%AA-%DA%98%D8%A7%D9%88%D8%B1%D9%88%D8%AF-%D9%BE%D8%A7%D9%88%D9%87-%D9%86%D9%88%D8%B3%D9%88%D8%AF%D9%80%20%D9%86%D9%88%D8%AF%D8%B4%D9%87%20(%D9%86%DB%86%D8%AA%D8%B4%D9%87)%D8%B2%D8%B1%D8%AF%D9%87-%D9%BE%D8%B1%DB%8C%D8%A7%D9%86-%D8%B1%DB%8E%DA%98%D8%A7%D9%88(%D8%B1%DB%8C%D8%AC%D8%A7%D8%A8)-%D8%B4%D8%B1%DB%8C%D9%81%E2%80%8C%D8%A2%D8%A8%D8%A7%D8%AF-%D8%B2%D8%A7%D8%BA%D9%87-%DA%A9%D9%86%D8%AF%D9%88%D9%84%D9%87-%DA%AF%DB%95%D9%88%D8%B1%DB%95%D8%AC%D9%88%D9%80%20%D8%AA%D9%87%E2%80%8C%D9%88%DB%8E%DA%B5%DB%8E-%D8%A8%DB%8C%D8%A7%D8%B1%D9%87-%D8%B3%D8%A7%D9%88%D8%B1-%D9%86%D9%88%D8%AF%DB%8C%D8%AC%D9%87-%D9%87%D9%87%E2%80%8C%DA%B5%D9%87%E2%80%8C%D8%A8%D8%AC%D9%87-%D8%AE%DB%86%D8%B1%D9%85%D8%A7%DA%B5-%D9%85%D8%B1%DB%8C%D9%88%D8%A7%D9%86-%D8%B3%D8%B1%D9%88%D8%A2%D8%A8%D8%A7%D8%AF-%DA%A9%D8%B1%D9%85%D8%A7%D9%86%D8%B4%D8%A7%D9%87-%DA%A9%D8%B1%D8%AF%D8%B3%D8%AA%D8%A7%D9%86-%D8%AF%D8%A7%D9%84%D8%A7%D9%86%DB%8C%20%D8%B2%D8%A7%D9%88%DB%95%D8%B1%D9%80%20%D8%B3%D9%86%D9%86%D8%AF%D8%AC-%DA%86%D9%87%D8%A7%D8%B1%D9%82%D9%84%D8%B9%D9%87%E2%80%8C%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%85%D9%84%DA%A9%DB%8C(%D8%B2%D8%A7%D8%BA%D9%85%D8%B1%D8%B2-%D8%B2%DB%8C%D9%86%D9%88%D9%86%D8%AF-%D8%AD%D8%B3%DB%8C%D9%86%E2%80%8C%D8%A2%D8%A8%D8%A7%D8%AF-%D8%A7%D9%85%DB%8C%D8%B1%D8%A2%D8%A8%D8%A7%D8%AF)%D9%87%D9%88%D8%B1%D8%A7%D9%85%DB%8C%20%D9%87%D8%A7%DB%8C%20%D8%B4%D9%85%D8%A7%D9%84%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86)%D8%B9%DA%A9%D8%B3-%D8%B4%D8%A8%DA%A9-%D8%B3%D9%86%D8%AC%D8%A7%D8%B1%D9%80%20%D8%A8%D8%A7%D8%AC%D9%84%D8%A7%D9%86-%DA%A9%D8%A7%DA%A9%D9%87%E2%80%8C%DB%8C%DB%8C-%DB%8C%D8%A7%D8%B1%D8%B3%D8%A7%D9%86-%D8%B3%D8%A7%D9%88%D8%B1-%D9%86%D9%88%D8%AF%DB%8C%D8%AC%D9%87-%D8%B2%D8%A7%D8%B2%D8%A7-%D8%B2%D8%A7%D8%B2%D8%A7%DA%A9%DB%8C-%D9%82%D9%84%D8%B9%D9%87%20%D9%82%D8%B1%D9%88%D9%87-%DA%86%D9%88%D8%B1%DA%98%DB%8C-%D9%87%D9%88%D9%85%D8%A7%DB%8C%D9%88%D9%86%20%D9%85%D9%88%D8%AD%D9%87%E2%80%8C%D9%85%D9%85%D9%87%E2%80%8C%D8%AF%D9%86%DA%98%D8%A7%D8%AF%D9%80%20%D8%B3%D9%87%E2%80%8C%D9%81%D9%87%E2%80%8C%D8%B1%D9%87%E2%80%8C%DA%A9%DB%8E%20%DA%AF%D8%A7%D9%84%DB%8C%D9%88%DB%8E%D8%B1%DB%8C%20%D9%80%20%D9%88%D9%87%E2%80%8C%D8%B3%DB%8C%D9%87%E2%80%8C%D8%AA%20%D9%BE%D9%87%E2%80%8C%DB%8C%20%D9%85%D9%87%E2%80%8C%D8%B2%D9%87%D9%87%E2%80%8C%D8%B1%DB%8C%20%D9%80%20%DB%8C%D8%A7%D9%86%DB%95%D9%88%D8%AE%DB%95%D9%85%D8%A7" >یانه‌وکتێبووهه‌ورامانی-هه‌ورامان-هۆرامان-اورامان-اورامانات-دزآور(زاوه‌ر)-لهون-تخت-ژاورود-پاوه-نوسودـ نودشه (نۆتشه)زرده-پریان-رێژاو(ریجاب)-شریف‌آباد-زاغه-کندوله-گەورەجوـ ته‌وێڵێ-بیاره-ساور-نودیجه-هه‌ڵه‌بجه-خۆرماڵ-مریوان-سروآباد-کرمانشاه-کردستان-دالانی زاوەرـ سنندج-چهارقلعه‌عبدالملکی(زاغمرز-زینوند-حسین‌آباد-امیرآباد)هورامی های شمال ایران)عکس-شبک-سنجارـ باجلان-کاکه‌یی-یارسان-ساور-نودیجه-زازا-زازاکی-قلعه قروه-چورژی-هومایون موحه‌ممه‌دنژادـ سه‌فه‌ره‌کێ گالیوێری ـ وه‌سیه‌ت په‌ی مه‌زهه‌ری ـ یانەوخەما</a>،<a href="../haneberchem.mihanblog.com/post/tag/ویرەوەریێو&#32;جە&#32;ویەردەی&#32;جە&#32;چەموو&#32;دووربینی/هومایون&#32;موحەممەدنژاد.html" >ویرەوەریێو جە ویەردەی جە چەموو دووربینی/هومایون موحەممەدنژاد</a>،<br>				
+</div></div>			
+
+<div class=Post3><div class=Post4>
+
+<div class=date>  نوشته شده در تاریخ  پنجشنبه 20 آذر 1399 
+ 
+ <a href="../haneberchem.mihanblog.com/post/author/430381.html">توسط همایون  محمدنژاد </a>  
+</div>
+<div class=Comment>
+<div class=Comment>
+<a target="_self" href="javascript:newComment(3008)">نظرات  <script>setCommentCnt(3008)</script> </a>
+
+</div></div></div></div>						
+
+
+			
+<div class=TPost>
+<div class=TPost2>		
+
+<b><a href="../haneberchem.mihanblog.com/post/3007.html">کەلەبەروو شێعرا(۲۰۹)</a></b></div></div>
+<div class=Post><div class=Post2>					
+
+
+
+
+<div style="text-align: justify;"><font face="Mihan-Iransans" size="3" color="#000099"><b>کەلەبەروو شێعرا(۲۰۹)</b></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">مەگەر...</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">&nbsp;فچنوو&nbsp;</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">&nbsp; &nbsp; &nbsp; &nbsp;گۆشوو وایەو&nbsp;</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">&nbsp; &nbsp;هەروەخت...</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ڕاش کەوتە</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">&nbsp; &nbsp; &nbsp; سەرکەشەکاو هەورامانی</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">گڤنۆ</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">&nbsp; گۆشوو نەچیراوە&nbsp;</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">بێ خەم&nbsp;</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">&nbsp; بووسا سەرکەشاوە&nbsp;</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">سەیادٚ نەمەن</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">&nbsp; و</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">&nbsp; ڕاوچی وتەن</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">واچۆ کەڵی</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ورکەش</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;نەبۆ</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">&nbsp; دەساوەندەسوو&nbsp;</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; کۆنەهەواری</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; پێقەو نەچیری</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;دەنگ مدٚۆوە.....</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">#هومایون_موحەممەدنژاد</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">https://www.instagram.com/p/CIoXrBhMpoJ/?igshid=14bv580b57cr9</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">ڕۆحێ پەرێ تۆ پەرۆش بۆ، با بۆ!!</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">چوون کوورەی ئاهیر بە جۆش بۆ، با بۆ!!</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">بازە با سۆچۆ بە شەرای دووریت</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">ئەر بۆ بە قەقنەس، پەی تۆ بۆ ، با بۆ</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">‎‌</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="3">#سوهراب_مورادنیا</font></div>
+
+<br><a href='../haneberchem.mihanblog.com/post/3007.html'>ادامه مطلب</a>
+برچسب ها:<a href="../haneberchem.mihanblog.com/post/tag/هه‌ورامان‌هانه‌به‌رچه‌م-کتابخانه‌هورامان.html" >هه‌ورامان‌هانه‌به‌رچه‌م-کتابخانه‌هورامان</a>،<a href="http://haneberchem.mihanblog.com/post/tag/%DB%8C%D8%A7%D9%86%D9%87%E2%80%8C%D9%88%DA%A9%D8%AA%DB%8E%D8%A8%D9%88%D9%88%D9%87%D9%87%E2%80%8C%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86%DB%8C-%D9%87%D9%87%E2%80%8C%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86-%D9%87%DB%86%D8%B1%D8%A7%D9%85%D8%A7%D9%86-%D8%A7%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86-%D8%A7%D9%88%D8%B1%D8%A7%D9%85%D8%A7%D9%86%D8%A7%D8%AA-%D8%AF%D8%B2%D8%A2%D9%88%D8%B1(%D8%B2%D8%A7%D9%88%D9%87%E2%80%8C%D8%B1)-%D9%84%D9%87%D9%88%D9%86-%D8%AA%D8%AE%D8%AA-%DA%98%D8%A7%D9%88%D8%B1%D9%88%D8%AF-%D9%BE%D8%A7%D9%88%D9%87-%D9%86%D9%88%D8%B3%D9%88%D8%AF%D9%80%20%D9%86%D9%88%D8%AF%D8%B4%D9%87%20(%D9%86%DB%86%D8%AA%D8%B4%D9%87)%D8%B2%D8%B1%D8%AF%D9%87-%D9%BE%D8%B1%DB%8C%D8%A7%D9%86-%D8%B1%DB%8E%DA%98%D8%A7%D9%88(%D8%B1%DB%8C%D8%AC%D8%A7%D8%A8)-%D8%B4%D8%B1%DB%8C%D9%81%E2%80%8C%D8%A2%D8%A8%D8%A7%D8%AF-%D8%B2%D8%A7%D8%BA%D9%87-%DA%A9%D9%86%D8%AF%D9%88%D9%84%D9%87-%DA%AF%DB%95%D9%88%D8%B1%DB%95%D8%AC%D9%88%D9%80%20%D8%AA%D9%87%E2%80%8C%D9%88%DB%8E%DA%B5%DB%8E-%D8%A8%DB%8C%D8%A7%D8%B1%D9%87-%D8%B3%D8%A7%D9%88%D8%B1-%D9%86%D9%88%D8%AF%DB%8C%D8%AC%D9%87-%D9%87%D9%87%E2%80%8C%DA%B5%D9%87%E2%80%8C%D8%A8%D8%AC%D9%87-%D8%AE%DB%86%D8%B1%D9%85%D8%A7%DA%B5-%D9%85%D8%B1%DB%8C%D9%88%D8%A7%D9%86-%D8%B3%D8%B1%D9%88%D8%A2%D8%A8%D8%A7%D8%AF-%DA%A9%D8%B1%D9%85%D8%A7%D9%86%D8%B4%D8%A7%D9%87-%DA%A9%D8%B1%D8%AF%D8%B3%D8%AA%D8%A7%D9%86-%D8%AF%D8%A7%D9%84%D8%A7%D9%86%DB%8C%20%D8%B2%D8%A7%D9%88%DB%95%D8%B1%D9%80%20%D8%B3%D9%86%D9%86%D8%AF%D8%AC-%DA%86%D9%87%D8%A7%D8%B1%D9%82%D9%84%D8%B9%D9%87%E2%80%8C%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%85%D9%84%DA%A9%DB%8C(%D8%B2%D8%A7%D8%BA%D9%85%D8%B1%D8%B2-%D8%B2%DB%8C%D9%86%D9%88%D9%86%D8%AF-%D8%AD%D8%B3%DB%8C%D9%86%E2%80%8C%D8%A2%D8%A8%D8%A7%D8%AF-%D8%A7%D9%85%DB%8C%D8%B1%D8%A2%D8%A8%D8%A7%D8%AF)%D9%87%D9%88%D8%B1%D8%A7%D9%85%DB%8C%20%D9%87%D8%A7%DB%8C%20%D8%B4%D9%85%D8%A7%D9%84%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86)%D8%B9%DA%A9%D8%B3-%D8%B4%D8%A8%DA%A9-%D8%B3%D9%86%D8%AC%D8%A7%D8%B1%D9%80%20%D8%A8%D8%A7%D8%AC%D9%84%D8%A7%D9%86-%DA%A9%D8%A7%DA%A9%D9%87%E2%80%8C%DB%8C%DB%8C-%DB%8C%D8%A7%D8%B1%D8%B3%D8%A7%D9%86-%D8%B3%D8%A7%D9%88%D8%B1-%D9%86%D9%88%D8%AF%DB%8C%D8%AC%D9%87-%D8%B2%D8%A7%D8%B2%D8%A7-%D8%B2%D8%A7%D8%B2%D8%A7%DA%A9%DB%8C-%D9%82%D9%84%D8%B9%D9%87%20%D9%82%D8%B1%D9%88%D9%87-%DA%86%D9%88%D8%B1%DA%98%DB%8C-%D9%87%D9%88%D9%85%D8%A7%DB%8C%D9%88%D9%86%20%D9%85%D9%88%D8%AD%D9%87%E2%80%8C%D9%85%D9%85%D9%87%E2%80%8C%D8%AF%D9%86%DA%98%D8%A7%D8%AF%D9%80%20%D8%B3%D9%87%E2%80%8C%D9%81%D9%87%E2%80%8C%D8%B1%D9%87%E2%80%8C%DA%A9%DB%8E%20%DA%AF%D8%A7%D9%84%DB%8C%D9%88%DB%8E%D8%B1%DB%8C%20%D9%80%20%D9%88%D9%87%E2%80%8C%D8%B3%DB%8C%D9%87%E2%80%8C%D8%AA%20%D9%BE%D9%87%E2%80%8C%DB%8C%20%D9%85%D9%87%E2%80%8C%D8%B2%D9%87%D9%87%E2%80%8C%D8%B1%DB%8C%20%D9%80%20%DB%8C%D8%A7%D9%86%DB%95%D9%88%D8%AE%DB%95%D9%85%D8%A7" >یانه‌وکتێبووهه‌ورامانی-هه‌ورامان-هۆرامان-اورامان-اورامانات-دزآور(زاوه‌ر)-لهون-تخت-ژاورود-پاوه-نوسودـ نودشه (نۆتشه)زرده-پریان-رێژاو(ریجاب)-شریف‌آباد-زاغه-کندوله-گەورەجوـ ته‌وێڵێ-بیاره-ساور-نودیجه-هه‌ڵه‌بجه-خۆرماڵ-مریوان-سروآباد-کرمانشاه-کردستان-دالانی زاوەرـ سنندج-چهارقلعه‌عبدالملکی(زاغمرز-زینوند-حسین‌آباد-امیرآباد)هورامی های شمال ایران)عکس-شبک-سنجارـ باجلان-کاکه‌یی-یارسان-ساور-نودیجه-زازا-زازاکی-قلعه قروه-چورژی-هومایون موحه‌ممه‌دنژادـ سه‌فه‌ره‌کێ گالیوێری ـ وه‌سیه‌ت په‌ی مه‌زهه‌ری ـ یانەوخەما</a>،<a href="../haneberchem.mihanblog.com/post/tag/کەلەبەروو&#32;شێعرا(۲۰۹).html" >کەلەبەروو شێعرا(۲۰۹)</a>،<br>				
+</div></div>			
+
+<div class=Post3><div class=Post4>
+
+<div class=date>  نوشته شده در تاریخ  پنجشنبه 20 آذر 1399 
+ 
+ <a href="../haneberchem.mihanblog.com/post/author/430381.html">توسط همایون  محمدنژاد </a>  
+</div>
+<div class=Comment>
+<div class=Comment>
+<a target="_self" href="javascript:newComment(3007)">نظرات  <script>setCommentCnt(3007)</script> </a>
+
+</div></div></div></div>						
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><b><font color="#000001" size="1">.:</font></b><a target="_blank" href="http://hatav2.blogfa.com"><span style="text-decoration: none">
+<font style="FONT-SIZE: 8pt" color="#000001"> Weblog Themes By</font><b>
+<font class=text5 size="1"><font color="#000001">Abdollah Habibi</font></span></a> </font><font color="#000001" size="1">
+:.</font>
+</b></a></center><br>
+
+</div>
+<style>.pging {    direction:rtl;    font-size:1.2em;    height:30px;    margin:2px 0 0;    color:#000000;    padding-bottom: 20px;    text-align: center;}
+.pging a:link, .pging a:visited {border:1px solid #000001;    display:inline-block;    margin:0 3px;    padding:1px 5px;    text-decoration:none;}
+.pging a:hover, .pging a:active {    color:#000000;}.pging a.current:link, .pging a.current:visited {    background-color:#000000;    border:1px solid #000001;    color:red;    cursor:text;}</style> <div class=pging>
+<p align="center"><font face="Tahoma" style="font-size: 9pt">
+			تعداد کل صفحات : 541 ::     			<a href="../haneberchem.mihanblog.com/page/1.html">
+			<font color="#000001"><b>1</b></font></a>  			<a href="../haneberchem.mihanblog.com/page/2.html">
+			<font color="#000001"><span>2</span></font></a>  			<a href="../haneberchem.mihanblog.com/page/3.html">
+			<font color="#000001"><span>3</span></font></a>  			<a href="../haneberchem.mihanblog.com/page/4.html">
+			<font color="#000001"><span>4</span></font></a>  			<a href="../haneberchem.mihanblog.com/page/5.html">
+			<font color="#000001"><span>5</span></font></a>  			<a href="../haneberchem.mihanblog.com/page/6.html">
+			<font color="#000001"><span>6</span></font></a>  			<a href="../haneberchem.mihanblog.com/page/7.html">
+			<font color="#000001"><span>7</span></font></a>  			<a href="../haneberchem.mihanblog.com/page/8.html">
+			<font color="#000001"><i>...</i></font></a>  <br><br></div>
+</font></p></div></td>
+
+<td width="220" valign="top">	
+
+
+<div id=Menur>
+<div class=Menu><div class=Menu2>			
+<b>درباره وبلاگ</b></div></div>
+<div class=XMenu><div class=XXMenu2>  <p align="center">
+<br><img src="http://static.mihanblog.com//public/user_data/web_photo/185/553073.jpg?8991"  /></p></div></div>
+  
+<div class=XMenu><div class=XXMenu2>  <p align="center">
+<br><a href="../haneberchem.mihanblog.com/post/author/430381.html"><img src="../static.mihanblog.com/public/user_data/user_photo/144/430381.jpg"  /></a></p></div></div>
+ 
+<div class=XMenu><div class=XXMenu2>  <p align="center">
+<br>هه‌ورامان هانه‌به‌رچه‌م <br />
+<br />
+نویسه‌ر:هومایون موحەممەدنژاد<br />
+<br />
+ئیمه‌یل:<br />
+<br />
+sina.mohamad@ymail.com<br />
+<br />
+ئه‌ژناسای هه‌ورامانی<br />
+<br />
+پارێزنای زوانی هه‌ورامی<br />
+<br />
+گلێرگاو زوان و فه‌رهه‌نگوو هه‌ورامانی<br />
+<br />
+په‌ی پارێزنای زوانه‌که‌یش<br />
+<br />
+چه‌مه‌راو سه‌ردا‌نه‌کێتانمێ<br />
+<br />
+په‌ی دووه‌مین په‌لیانه‌و ئێمه به ئادره‌سوو:<br />
+<br />
+کتابخانه‌هورامان،کتێبخانه‌وهه‌ورامانی<br />
+<br />
+http://hawramanktab.mihanblog.com/<br />
+<br />
+هه‌ورامان-هۆرامان-هورامان-اورامان<br />
+<br />
+هورامان شناسی/هەورامان شناسی<br />
+<br />
+روزنه‌ای به زیبایی‌های هورامان<br />
+<br />
+مدیروبلاگ:همایون محمدنژاد<br />
+<br />
+تاریخ راه اندازی وبلاگ:1388/11/7<br />
+</p></div></div>
+ 
+<div class=BMenu></div></div>
+
+<div id=Menur>
+<div class=Menu><div class=Menu2>
+<b>آرشیو مطالب</b></div></div>
+<div class=XMenu>
+<div class=habibi>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1399/9.html"> آذر 1399 ، 24 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1399/8.html"> آبان 1399 ، 17 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1399/7.html"> مهر 1399 ، 16 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1399/6.html"> شهریور 1399 ، 23 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1399/5.html"> مرداد 1399 ، 15 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1399/4.html"> تیر 1399 ، 25 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1399/3.html"> خرداد 1399 ، 18 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1399/2.html"> اردیبهشت 1399 ، 25 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1399/1.html"> فروردین 1399 ، 42 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1398/12.html"> اسفند 1398 ، 36 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1398/11.html"> بهمن 1398 ، 27 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1398/10.html"> دی 1398 ، 39 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1398/9.html"> آذر 1398 ، 43 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1398/8.html"> آبان 1398 ، 32 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1398/7.html"> مهر 1398 ، 28 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1398/6.html"> شهریور 1398 ، 25 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1398/5.html"> مرداد 1398 ، 35 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1398/4.html"> تیر 1398 ، 48 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1398/3.html"> خرداد 1398 ، 41 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1398/2.html"> اردیبهشت 1398 ، 45 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1398/1.html"> فروردین 1398 ، 80 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1397/12.html"> اسفند 1397 ، 74 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1397/11.html"> بهمن 1397 ، 27 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1397/10.html"> دی 1397 ، 35 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1397/9.html"> آذر 1397 ، 19 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1397/8.html"> آبان 1397 ، 27 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1397/7.html"> مهر 1397 ، 17 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1397/6.html"> شهریور 1397 ، 26 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1397/5.html"> مرداد 1397 ، 17 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1397/4.html"> تیر 1397 ، 16 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1397/3.html"> خرداد 1397 ، 31 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1397/2.html"> اردیبهشت 1397 ، 36 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1397/1.html"> فروردین 1397 ، 33 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1396/12.html"> اسفند 1396 ، 44 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1396/11.html"> بهمن 1396 ، 42 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1396/10.html"> دی 1396 ، 33 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1396/9.html"> آذر 1396 ، 40 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1396/8.html"> آبان 1396 ، 42 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1396/7.html"> مهر 1396 ، 49 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1396/6.html"> شهریور 1396 ، 40 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1396/5.html"> مرداد 1396 ، 30 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1396/4.html"> تیر 1396 ، 26 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1396/3.html"> خرداد 1396 ، 25 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1396/2.html"> اردیبهشت 1396 ، 24 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1396/1.html"> فروردین 1396 ، 16 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1395/12.html"> اسفند 1395 ، 17 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1395/11.html"> بهمن 1395 ، 20 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1395/10.html"> دی 1395 ، 21 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1395/9.html"> آذر 1395 ، 20 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1395/8.html"> آبان 1395 ، 21 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1395/7.html"> مهر 1395 ، 32 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1395/6.html"> شهریور 1395 ، 15 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1395/5.html"> مرداد 1395 ، 14 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1395/4.html"> تیر 1395 ، 14 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1395/3.html"> خرداد 1395 ، 20 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1395/2.html"> اردیبهشت 1395 ، 16 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1395/1.html"> فروردین 1395 ، 20 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1394/12.html"> اسفند 1394 ، 18 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1394/11.html"> بهمن 1394 ، 15 </a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/archive/1394/10.html"> دی 1394 ، 18 </a>
+</div>
+</div>
+</div>
+<div class=BMenu></div></div></div>
+
+
+
+
+
+<div id=Menur>
+<div class=Menu><div class=Menu2>
+<b>آخرین مطالب</b>
+</div></div>
+<div class=XMenu>
+<div class=habibi>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/3011.html">معرفی کتاب های نویسندگان در حوزه های مختلف(۳۹)</a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/3010.html">کەلەبەروو شێعرا(۲۱۰)</a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/3009.html">بارۆڵ وژەنەو پادشای/حامی غەریبی</a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/3008.html">ویرەوەریێو جە ویەردەی جە چەموو دووربینی/هومایون موحەممەدنژاد</a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/3007.html">کەلەبەروو شێعرا(۲۰۹)</a>
+</div>
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/3006.html">ئەیزەن بوەو ڕەگەز پرسی/وەلی فەتاحی</a>
+</div>
+
+<div class=ZMenu>
+<a href="../haneberchem.mihanblog.com/post/list.html"><b>لیست آخرین مطالب</b></a>
+</div>
+</div>
+</div>
+<div class=BMenu></div></div>	
+
+
+
+<div id=Menur>
+<div class=Menu>
+<div class=Menu2>
+<b>موضوعات</b></div></div>			
+<div class=XMenu>
+<div class=habibi>
+<div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/6.html">فرهنگی و هنری  2206 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/5.html">اجتماعی  1829 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/8.html">ادبیات/شعر  1804 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/4.html">اخبار  1425 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/1.html">تاریخ  1408 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/145.html">زوانی هه‌ورامی  1342 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/2.html">جفرافیا  1068 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/97.html">شهرها و روستاهای هورامان  1009 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/49.html">ده‌گاو زاوه‌ری/روستای دز‌آور  729 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/9.html">تصاویرومناظرطبیعی وتاریخی  661 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/3.html">آموزشی  373 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/160.html">نوشتارهای همایون محمدنژاد  285 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/14.html">دینی ومذهبی  257 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/134.html">کۆڵه‌داستانه‌و هه‌‌ورامی  119 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/84.html">انتشارات زایەڵە  72 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/12.html">تسلیت ها  72 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/128.html">نویسندگان نثرنویس هورامان  65 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/7.html">ورزشی  54 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/85.html">ئەنجومەنوو  ڕۆجیاری  47 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/207.html">ئەنجومەنووبێسارانى(یاهۆر)   45 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/166.html">نه‌سیمووفه‌رهه‌نگوووهه‌ورامانی  42 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/245.html">انتشارات ئه‌وین مریوان  30 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/13.html">پزشکی  29 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/242.html">هفته نامه‌ی مردمی لووتکه  25 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/102.html">سه‌فه‌ره‌کێ گالیوێری  24 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/93.html">مۆئه‌سێسه‌وقه‌ڵه‌مووهه‌ورامانی   21 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/292.html">مەجەلەو&quot;بەیان&quot;ی ـمەهاباد  19 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/168.html">مه‌جه‌له‌و وانیاری  17 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/162.html">وه‌سیه‌ت په‌ی مه‌زهه‌ری  15 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/74.html">آموزش نوشتن زبان هورامی  9 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/144.html">چه‌مه‌و بڵی  7 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/148.html">دانلود کتاب سه‌فه‌ره‌کێ گالیوێری  3 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/163.html">فرهنگ نامهای هورامی  2 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/99.html">ئەنجومەنوو تریفه‌وهه‌ورامانی  2 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/94.html">هانه‌به‌رچه‌م :فه‌رید عه‌باسی  1 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/155.html">نویستدگان؛شاعران؛هورامان  3 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/16.html">هومایون موحەممەدنژاد  527 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/19.html">ڕه‌ئوف مه‌حموودپوور  139 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/17.html">ئێبراهیم شه‌مس  128 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/268.html">جەواد حەمزه (فێراق)  114 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/18.html">کوورش ئه‌مینی  94 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/199.html">بێهرووز  موحەممەدپوور(شارۆ)  88 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/33.html">فەرید عەباسی  82 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/31.html">عادڵ موحەممەدپوور  80 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/30.html">مه‌هدی ئه‌بری(هه‌ورام)  75 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/25.html">عه‌بدوڵڵا حه‌بیبی  74 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/271.html">سوهراب مورادنیا(سیاوکام)  72 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/34.html">موحەممەدشه‌ریف عه‌لی ره‌مایی  66 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/91.html">شۆرش عه‌زیزی/&quot;ئاوات&quot;دیارکهن  66 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/157.html">دوکترسه‌یێدمه‌هدی سه‌جادی  65 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/43.html">موحەممەدره‌شید ئه‌مینی  63 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/265.html">عوسمان ڕەحیمی(مورید)  63 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/23.html">سابیر عه‌زیزی  62 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/22.html">موحەممەد موسته‌فازاده  59 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/295.html">حامی غەریبی  58 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/24.html">کوورش یوسفی(ئاریا)  57 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/35.html">دوکترمه‌زهه‌ر  ئه‌دوای  56 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/126.html">سه‌رکه‌وت عه‌زیزی(نه‌به‌ز)  55 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/150.html">سه‌باح حه‌سه‌نی شیانی  54 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/55.html">سوبحان ئه‌مینی  54 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/39.html"> مامۆساهه‌یاس غه‌ریبی  51 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/58.html">موحەممەدباقی موحەممەدنژاد  50 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/263.html">سەیوان ئێبراهیمی(گوازی)  49 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/273.html">وەلی فەتاحی  47 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/27.html">داریوش ڕه‌حمانی  47 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/257.html">دوکترناجێح گوڵپی  46 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/135.html">عه‌دنان مورادی  45 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/189.html">حێکمه‌ت  موحەممەدی(خه‌میار)  44 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/121.html">فه‌تحوڵڵا ڕه‌زایی  44 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/258.html">جەماڵ قادرپوور  43 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/224.html">په‌رویز  بابایی  43 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/40.html">موحەممەد فه‌هیم  42 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/32.html">ئۆمید حه‌بیبی  42 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/21.html">ژیارسڵامه‌تیان  42 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/113.html"> مامۆساعوسمان هه‌ورامی  38 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/37.html">ئێحسان ئه‌تابه‌ک  37 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/215.html"> حافێز ئه‌حمه‌دی(سەروەش)  34 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/190.html">موحەممەدمۆمن یه‌زدانبه‌خش  34 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/112.html">په‌رویز ڕوسته‌می  33 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/105.html">هادی سپه‌نجی(خاڵه‌)  31 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/28.html">فاتێح ڕه‌حیمی  31 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/158.html">یاوه‌ر هه‌ورامی  31 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/110.html">باقی شه‌فێعی  30 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/139.html">پیرشالیارهه‌ورامی  29 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/254.html">پویا تالب نیا  28 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/272.html">فەرید زاوەری  28 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/152.html">میرزامەجید عەدەمی و فەیسەڵ هێدایەتی  28 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/38.html">مامۆسامیرزای هه‌ورامی  28 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/227.html">مێهران ئه‌حمه‌دی  28 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/180.html">فه‌رزاد مه‌هدی‌نیا(فه‌رزاد ژیواری)  27 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/256.html">سه‌عدی غەریبی  26 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/216.html">ڕەحیم ڕەحمانی  25 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/194.html">یووسف ڕه‌سووڵ ئابادی(هاوار)  24 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/185.html">مامۆسامۆمن نووری  24 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/270.html">موحەممەد خدری(ئەدیب)  24 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/226.html">ڕه‌نگین دێهقان  24 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/213.html">میرزاسه‌عدوڵڵا خه‌دیری  23 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/260.html">مەهوەش درۆستکار  23 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/261.html">عەباس غەریبی  23 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/92.html">عه‌لی  ئه‌دوای(هاوار هه‌ورامی)   22 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/118.html">موحەممەدحسەین کەیمنەیی  22 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/89.html">فه‌رشید شه‌ریفی  22 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/172.html">سه‌باح جه‌باری  22 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/138.html">دوکترهێدایه‌ت مه‌حموودی  21 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/60.html">سەعدوڵڵا خون خام(شەهریار)  21 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/20.html">موحەممەد سالاری  21 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/132.html">مه‌ڵڵائه‌حمه‌د نه‌زیری  20 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/36.html">سابیر سه‌عیدی  20 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/44.html">بورهان ئه‌خته‌ر(هورامی)  20 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/196.html">فه‌ریدوون به‌هرامی&quot;شرام&quot;  19 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/275.html">عەتا  عەلی پوور  19 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/117.html">شێخ شه‌هابه‌دین زاوه‌ری  18 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/281.html">ئێحسان کەرەمی  18 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/48.html">کامل سه‌فه‌ریان  18 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/222.html"> کاوه شکری(سەراو هەورامی)  18 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/264.html">موزەفەر بزورگ ئۆمید  18 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/130.html"> دوکترئافراسیاب جه‌ماڵی  18 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/141.html">میرزائه‌ڵماس خان که‌ندوله‌یی  17 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/26.html">فاتێح سه‌عیدی  17 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/56.html">سوبحان خالدی  17 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/41.html">میلاد یووسفی  17 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/210.html">فەهمی مورادی‌مه‌ولوودی  17 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/248.html">حه‌سه‌ن عومرانی  16 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/106.html"> مەحموود ئەزەغ(ویلان بڵبه‌ری)  16 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/203.html">مامۆسامەڵڵاموستەفا بێسارانی  16 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/80.html">حسه‌ین خورا(خه‌یاڵ)   16 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/129.html">فیرووز عارفی  15 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/76.html">شه‌یدا باسامی  15 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/217.html">دوکترموحه‌ممه‌د مه‌حموودی  15 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/262.html">فەرشید ڕوستەمی  15 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/51.html">فه‌ریبا ئێسماعیلی  15 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/88.html">دوکترمەڵڵائه‌حمه‌د نێعمه‌تی  14 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/250.html">ئه‌رده‌شیر موحی  14 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/192.html">فایق لوتفی  14 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/98.html">نه‌عمان فائق تۆفێق(هاوار)  13 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/143.html">حەمەسه‌لیم سەلیم پوور(خه‌مبارهەجیجی)  13 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/255.html">مێقداد ئه‌مینی  13 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/193.html">یه‌زدان لۆتفی  13 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/86.html">تالێب  ئه‌داک  13 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/63.html">جه‌مال حه‌بیبه‌ڵڵا(بێدار)  13 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/191.html">حه‌بیبه‌ڵڵا موسته‌وفی  13 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/59.html">که‌لسووم عوسمان‌پوور  13 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/147.html">ئه‌مین حاجی زەڵمی  13 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/151.html">فه‌ریبورز موسازاده‌  13 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/233.html">هاشم حێسامی  12 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/211.html">حامی نیکبه‌خت عه‌بدولمه‌لکی  12 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/243.html">هۆشیار تەمجید  12 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/286.html">کەرەمەڵڵا  ئەمیری(ک الف یاس)  12 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/293.html">قەیۆم دانشوەر  12 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/298.html">موحەممەد وەلی کاکایی  12 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/266.html">هاشم موحەممەدی (بێدڵ)  11 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/136.html">موحه‌ممه‌دغه‌ریب مه‌عازی‌نژاد  11 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/29.html">بێهرووز حاجی  11 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/240.html">سەفووەت ئەمیری(کۆچەر)  11 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/214.html">ئه‌یوب کوێخا رۆسته‌م  11 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/221.html">مامۆساسەیدی هەورامی  11 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/87.html">بێهزاد کەریمی  11 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/183.html">جه‌زا کامران(ئه‌دوای)  11 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/66.html">مۆدرێک که‌ریمی  10 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/177.html">فه‌رزین  ئه‌داک  10 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/70.html">سلێمان ره‌حمانی(حه‌سره‌ت)  10 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/104.html">دوکتورحێسام مه‌لکی  10 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/50.html">مورته‌زا فه‌یزی(هاوارپایگه‌لانی)  10 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/164.html">سوهەیب فاروق  10 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/200.html">میرزامه‌جید سوبحانی(بچووک)  10 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/195.html">غازی خه‌لیلی  10 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/65.html">باقی سه‌فاری  10 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/90.html">کوورش(عه‌لی) ساڵحی  9 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/161.html">مه‌هدی سه‌نه‌نده‌جی(هه‌وار)  9 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/274.html">جه‌ماڵ شەهسواری  9 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/283.html">فەرشید  مورادی  9 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/209.html">مه‌حموود قادری(وانیار)  9 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/205.html">میرزا عەبدولقاد٘ری پاوەیی  8 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/175.html">مه‌سعوود ڕۆسته‌می  8 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/176.html">جه‌لیل  خوون دڵ  8 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/137.html">حێکمه‌ت ئه‌مینی  8 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/276.html">خەندە هەورامی  8 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/237.html">فه‌رخۆنده شه‌یخی(کاڵێ)  8 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/169.html">ئۆمید ڕه‌حیمی‌نیا  8 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/125.html">مەڵڵایۆنس وه‌یسی  8 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/79.html">زه‌هرا سادقی  8 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/279.html">جه‌هاد هه‌ورامی  8 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/285.html">ئاکۆ  مارانی  8 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/299.html">ئێران مورادی  8 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/278.html">ساسان مۆنفەرێد(بێ وەر)  8 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/201.html">سه‌رکه‌وت نیکدڵ  8 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/218.html">که‌یوان مه‌جیدی  7 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/202.html">موعته‌سه‌م ئه‌داک  7 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/119.html">دوکتورئێسماعیل شه‌مس  7 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/109.html">یه‌حیا سه‌مه‌دی  7 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/289.html">یاسر ڕەشیدی  7 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/108.html">نامق هه‌ورامی  7 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/290.html">مامۆسامەڵڵابەهادین ئێمام زاوەری  6 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/72.html">موحه‌ممه‌دئاشنا عه‌باس مه‌نش  6 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/47.html">ئه‌حمه‌د که‌ریمی  6 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/251.html">شایسته فه‌تحی  6 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/133.html">حافێز ئه‌دوای  6 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/95.html">مه‌نسوور ره‌حمانی  6 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/187.html">موختار هێدایه‌تی  6 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/287.html">ئیرەج مورادی  6 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/280.html">جوانمیر  خووند(کۆساڵان)  6 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/301.html">سەیێدٚرەحمان مەحموودی  6 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/231.html">ئەحمەدبەگ خاڵۆی کۆماسی  5 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/253.html">جه‌لیل عه‌باسی(قه‌قنه‌س)  5 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/277.html">ڕه‌ئوف سه‌عیدیان  5 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/174.html">حه‌مزه حسه‌ینی  5 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/115.html">سه‌باح  هه‌ورامی  5 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/46.html">عه‌تا مه‌حموودی  5 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/127.html">حامێد مورادی  5 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/249.html">مه‌ڵڵاعه‌بدولوه‌هاب ئاریانی(مامۆسابه‌دبه‌خت)  4 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/120.html">نه‌شمیل مه‌حموودی  4 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/181.html">قه‌دریه‌  عوسمان‌زاده  4 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/54.html">هیوا عه‌لی ڕه‌مایی  4 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/184.html">موحه‌ممه‌د فەتحی  4 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/294.html">نەرمین گیوەچی  4 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/244.html">مەهین کەریمی  4 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/156.html">جه‌لال حسه‌ینی  4 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/291.html">سەیێدعەبدوڵڵا بڵبەری  4 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/229.html">نووره‌دین موعینی  4 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/52.html">عه‌باس ره‌شیدی(ساکار)  4 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/208.html">مه‌حفووز ئه‌دوایی  4 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/302.html">کەیومەرس نیک ڕەفتار  4 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/219.html">موختار  شوکری پوور  3 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/179.html">عه‌تا ئه‌مینی  3 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/235.html">په‌یمان که‌ریمی  3 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/178.html">قه‌ندیل شه‌مسی  3 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/167.html">ئه‌فشین لهۆنی  3 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/123.html">حافێز ڕه‌نجبه‌ر  3 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/42.html">شوعه‌یب خالدی  3 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/300.html">دوکترموحەممەدعەلی سڵتانی  3 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/159.html">ئێبراھیم حاجی زەڵمی  3 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/246.html">فەرشاد ئەداک(په‌‌شێوژیواری)  3 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/288.html">مامۆساسەیێدجەلال  ئەکبەری( ئاڵۆز)  3 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/247.html">سەلام ئەحمەدی  3 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/220.html">ڕه‌ئووف  حسه‌ینی  2 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/284.html">عەزیز موستەفایی  2 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/212.html">ئه‌میر ئه‌مینی  2 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/116.html">که‌ریم ڕۆژ(سەعیدی لهۆنی)  2 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/238.html">سارا(سروه) مه‌حموودی  2 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/297.html">یادگار  خەیام(بەرقی)  2 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/259.html">سه‌یێدسه‌لام سه‌جادی  2 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/234.html">بێهرووز مووسازاده  2 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/122.html">موحه‌ممه‌دعه‌لی موحه‌ممه‌دیان  2 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/103.html">ئه‌سکه‌نده‌ر مورادی  2 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/61.html">ئارام شه‌کیبایی  2 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/296.html">عەلیرەزا عەباسی گەورەجۆ  1 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/197.html">سیامه‌ند هه‌ورامی  1 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/142.html">موجته‌با کولیوه‌ند  1 </a></div><div class=ZMenu>				
+<a href="../haneberchem.mihanblog.com/post/category/83.html">استاد رهدار  1 </a></div></div>
+</div>			
+<div class=BMenu></div></div>
+
+
+
+<div id=Menur>
+<div class=Menu>
+<div class=Menu2>
+<b>آهنگ زمینه</b></div></div>			
+<div class=XMenu>
+<SCRIPT
+ language=JavaScript type=text/javascript 
+src="http://www.jonbeshnet.ir/sites/default/files/logo/payambar/payambar5.js"></SCRIPT>
+
+</body>			
+<div class=XMenu>
+
+<br>
+<center>
+</body>
+</center>
+<div style='display:none;'><li><a href='http://PicHaK.NeT/online-user'>کد نمایش افراد آنلاین</a></li></li></div>
+<script type='text/JavaScript'>
+var oulb= 'http://PicHaK.NeT/online-user/';
+function CheckBrowser(){
+if(navigator.appName == "Microsoft Internet Explorer")	{
+document.write('<scrip'+'t src="'+oulb+'js/jquery.min.js"></s'+'cript><scrip'+'t src="'+oulb+'js/js.php?c=4&t=1"></s'+'cript>');return true;}document.write('<scrip'+'t src="'+oulb+'cod.php?c=4&t=1"></s'+'cript>');
+return false; }</script>
+<script type='text/JavaScript'>CheckBrowser()</script>
+
+<script type='text/JavaScript'>CheckBrowser()</script>
+
+<div class=BMenu></div></div></div>
+
+		
+<div id=Menur>
+<div class=Menu><div class=Menu2>
+<b>آمار سایت</b></div></div>
+<div class=XMenu>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=XXMenu>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=XXMenu>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=XXMenu>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=XXMenu>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=XXMenu>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=XXMenu>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=XXMenu>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right></div>
+<div class=BMenu></div></div></div>	
+
+<div id=Menur>
+<div class=Menu><div class=Menu2>
+<b>امکانات وب</b></div></div>
+<div class=XMenu>
+<center>
+<font face="Tahoma" style="font-size: 8pt" color="#666666"><center>p align="center"><a href="index.html" target="_blank"><img border="0" src="http://s9.picofile.com/file/8310147342/yanau.PNG"  width="200" alt="هه‌ورامان هانه‌به‌رچه‌م"  height="120"></a><br><input onclick="this.select()" type="text" width="356" name="T1" size="15" value='<!-- start logo cod off http://haneberchem.mihanblog.com/ --><p align="center"><p align="center"><a href="http://haneberchem.mihanblog.com/" target="_blank"><img border="0" src="http://s9.picofile.com/file/8310147342/yanau.PNG"  width="200" height="120" alt="هه‌ورامان هانه‌به‌رچه‌م"></a></p><!--finish logo cod off http://haneberchem.mihanblog.com/ -->' dir="ltr" ></p><div style="display:none"><a href="http://blogers.ir">وبلاگ</a>-<a 
+
+style="display:none"><a href="http://blogers.ir">وبلاگ</a>-<a href="http://blogers.ir/cod/make-logo-banner-cod/">کد لوگو و بنر</a></div>
+<p align="center"><a href="../www.hawramanktab.mihanblog.com/index.html" target="_blank"><img border="0" src="http://s5.picofile.com/file/8170721242/jeld_e_sefereke_small.jpg"  width="200" alt="کتابخانه‌هورامان؛یانه‌وکتێبووهه‌ورامانی "  height="120"></a><br><input onclick="this.select()" type="text" width="356" name="T1" size="15" value='<!-- start logo cod off http://hawramanktab.mihanblog.com/ --><p align="center"><p align="center"><a href="http://hawramanktab.mihanblog.com/" target="_blank"><img border="0" src="http://s5.picofile.com/file/8170721242/jeld_e_sefereke_small.jpg"  width="200" height="120" alt="کتابخانه‌هورامان؛یانه‌وکتێبووهه‌ورامانی "></a></p><!--finish logo cod off http://hawramanktab.mihanblog.com/ -->' dir="ltr" ></p><div style="display:none"><a href="http://blogers.ir">وبلاگ</a>-<a href="http://blogers.ir/cod/make-logo-banner-cod/">کد لوگو و بنر</a></div>
+<p align="center"><a href="http://qalamohoramani.blogfa.com/" target="_blank"><img border="0" src="http://s4.picofile.com/file/8170719934/%D9%88%D9%87%E2%80%8C%D8%B3%DB%8C%D9%87%E2%80%8C%D8%AA_%D9%BE%D9%87%E2%80%8C%DB%8C_%D9%85%D9%87%E2%80%8C%D8%B2%D9%87%D9%87%E2%80%8C%D8%B1%DB%8C.jpg"  width="200" alt="قه‌ڵه‌موو هه‌ورامانی"  height="120"></a><br><input onclick="this.select()" type="text" width="356" name="T1" size="15" value='<!-- start logo cod off http://qalamohoramani.blogfa.com/ --><p align="center"><p align="center"><a href="http://qalamohoramani.blogfa.com/" target="_blank"><img border="0" src="http://s4.picofile.com/file/8170719934/%D9%88%D9%87%E2%80%8C%D8%B3%DB%8C%D9%87%E2%80%8C%D8%AA_%D9%BE%D9%87%E2%80%8C%DB%8C_%D9%85%D9%87%E2%80%8C%D8%B2%D9%87%D9%87%E2%80%8C%D8%B1%DB%8C.jpg"  width="200" height="120" alt="قه‌ڵه‌موو هه‌ورامانی"></a></p><!--finish logo cod off http://qalamohoramani.blogfa.com/ -->' dir="ltr" ></p><div style="display:none"><a href="http://blogers.ir">وبلاگ</a>-<a href="http://blogers.ir/cod/make-logo-banner-cod/">کد لوگو و بنر</a></div>
+
+<!-- start logo cod off http://haneberchem.mihanblog.com/ --><p align="center"><p align="center"><a href="index.html" target="_blank"><img border="0" src="
+<SCRIPT
+ language=JavaScript type=text/javascript 
+https://telegram.me/joinchat/B2WvJj5CjBVROFBKR29_MA
+
+<!--start date code 20Tools.com-->
+<script type="text/javascript" src="http://www.20tools.com/rooznama/date3.php">
+</script><div style="display:none"><a href="http://www.mehrskin.com">ابزار و قالب وبلاگ</a><a href="http://www.20tools.com">بیست تولز</a><a href="http://www.20tools.com/rooznama">كد تاریخ قمری ، شمسی و میلادی به همراه مناسبت</a></divhref="http://www.iranskin.com/email/mail/?email=name@yahoo.com" target="_blank">
+<img border="0" src="http://www.iranskin.com/email/h.gif" alt="تماس با ما"></a><div style="display:none"><a href="http://www.iranskin.com">کد تماس با ما</a></div>><!--finish date code 20Tools.com-->
+<script type="text/javascript" src="http://www.iranskin.com/pagerank/icon/?n=43&url=http://hawramanktab.mihanblog.com/"></script><div style="display:none"><h1><a href="http://www.iranskin.com/pagerank">رتبه سنج گوگل</a></h1><h1><a 
+href="http://www.iranskin.com">رتبه سنج گوگل</a></h1></div>
+<script src=" http://www.mydamin.ir/javascript/code.js"></script>
+<SCRIPT src='http://up.multijob.ir/kod/nod32key.js' type='text/javascript'>
+
+<a href="https://uupload.ir/" target="_blank"><img src="https://uupload.ir/files/xezf_۲۰۲۰۰۴۰۶_۰۴۲۷۰۱.jpg" border="0" alt="آپلود عکس" /></a></center></font></div>
+<div class=BMenu></div></div>
+
+</td></tr>
+
+<tr><td width="1000" colspan="3" id="Footer">
+<a href="http://www.hatav2.blogfa.com"target="_blank"> طراح قالب </a> : <a href="http://www.hatav2.blogfa.com"target="_blank"> عبدالله حبیبی </a> 
+Weblog Themes By : <a href="http://www.hatav2.blogfa.com"target="_blank"> Abdollah Habibi</a>    	        	
+</td></tr></table></div>
+ <div id="chehre_blog_confirm" style="display:none">$2a$08$BAlsElhjyzwEGYsU/oj38epQtiIYoexUPJeDl6IE9zPEs1Si81ne.</div> <div id="chehre_blog_confirm" style="display:none">$2a$08$BAlsElhjyzwEGYsU/oj38epQtiIYoexUPJeDl6IE9zPEs1Si81ne.</div></body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'haneberchem.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

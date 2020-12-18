@@ -1,0 +1,1203 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://shamim-e-entezar.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*981556*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[451]='0';commentCnt[452]='3';commentCnt[453]='0';commentCnt[455]='0';commentCnt[458]='0';commentCnt[459]='1';commentCnt[461]='2';commentCnt[462]='2';commentCnt[463]='0';commentCnt[464]='5';commentCnt[465]='2';commentCnt[466]='4';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[451]='0';
+mihanblogDisLikeArrCnt[451]='0';
+mihanblogLikeArrCnt[452]='0';
+mihanblogDisLikeArrCnt[452]='0';
+mihanblogLikeArrCnt[459]='0';
+mihanblogDisLikeArrCnt[459]='0';
+mihanblogLikeArrCnt[466]='0';
+mihanblogDisLikeArrCnt[466]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://shamim-e-entezar.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://shamim-e-entezar.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','430');
+	setStatVar('total_author','2');
+	setStatVar('modify_date','شنبه 6 تیر 1394');
+	
+	setStatVar('today_view','5');
+	setStatVar('yesterday_view','20');
+	
+	setStatVar('this_month_view','1374');
+	setStatVar('last_month_view','2430');
+
+	setStatVar('total_view','336676');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (06:12)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://shamim-e-entezar.mihanblog.com/statupdate/?data[refereruri]=http://bckh90.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607829978&data[hash]=daee078af01aab1039711bd8acbe608a&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://shamim-e-entezar.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="../shamim-e-entezar.mihanblog.com/'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://shamim-e-entezar.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<title>شمیم انتظار</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Farsi">
+<meta name="description" content="شمیم انتظار - کی شود دل ما رسته از عسر و حرج    اللهم عجل لولیک المهدی فرج - شمیم انتظار">
+<meta name="keywords" content="شمیم انتظار,shamim-e-entezar, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="شمیم انتظار" href="http://shamim-e-entezar.mihanblog.com/post/rss/" />
+<link href="http://template.pichak.net/pichak/173/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+<div align=center><div style="width:1000">
+
+<div class=Pichak>
+
+<div id=header>
+<div class=top-BlogTitle></div>
+<div class=top-menu><div class=BlogTitle>شمیم انتظار</div><div class=Description>کی شود دل ما رسته از عسر و حرج    اللهم عجل لولیک المهدی فرج</div></div>
+
+<div class=top-menu2>
+<div style="float:right;width:0px;direction:rtl; height:20px"></div>
+<div style="float:right;width:450">
+<a href="index.html">صفحه اصلی</a> |
+<a rel="nofollow" href="mailto:m.aminsabzi@ymail.com">ایمیل مدیر</a> |
+<a rel="nofollow" href="javascript:messageForm()">تماس با من</a> |
+<a title="پیچک" href="http://pichak.net/" target="_blank" >قالب وبلاگ</a> |
+<a rel="nofollow" href="http://shamim-e-entezar.mihanblog.com/post/rss/" target="_blank" >Feed</a>
+</div></div></div>
+
+<div id=main-back>
+
+<div class=Sid>
+<div id=Sidebar> 
+
+<div class="TopSid"><div class=TopSid2>جستوجو</div></div>
+<div class=CenterSid>
+<p align="center"><form target=_new method=get action=http://www.google.com/search>
+<center><table style='width:128px;font-size:9pt;font-family:Tahoma'>
+<tbody><tr><td><center><a target=_new href=http://pichak.net/blogcod/google>
+<img border=0 src=http://pichak.net/blogcod/google/pichak.net.gif alt=Google>
+</a><input name=q size=15 maxlength="255"><br>
+<input type="submit" name="btnG" value="Search"><br>
+<input value=http://shamim-e-entezar.mihanblog.com type=radio name=sitesearch checked=''>در این وبلاگ
+<br><input type=radio name=sitesearch value="">در كل اینترنت
+<input type=hidden name=ie value=UTF-8><input type=hidden name=oe value=UTF-8><br>
+</center></td></tr></tbody></table></center></form></p>
+</div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>ویژه مدیریت وب</div></div>
+<div class=CenterSid>
+<div class=li-Sid><a rel="nofollow" target="_blank"href="http://www.pichak.net/blogcod/up/js/">آپلود عکس</a></div>
+<div class=li-Sid><b><a rel="nofollow" target="_blank"href="http://pichak.net/verification/index.php?n=12&url=http://shamim-e-entezar.mihanblog.com">پیج رنک وب</a></b></div>
+<div class=li-Sid><a rel="nofollow" target="_blank"href="http://pichak.net/blogcod/zibasazi/">تصاویر زیباسازی</a></div>
+<div class=li-Sid><a rel="nofollow" target="_blank"href="http://pichak.net/blogcod/web/">آموزش وبلاگ نویسی</a></div>
+</div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>نویسندگان</div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/author/671505">محمدامین سبزی  279 </a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/author/1053476">یه بنده گناهکار  150 </a></div></div>
+<div class=LowSid></div>
+
+		<form id="frm-16077763245fd4b8449bccb" method="post" action="http://shamim-e-entezar.mihanblog.com/poll/new/fid/16077763245fd4b8449bccb/atrty/1607776324/avrvy/0/key/f6358f40f89533f88ce45717c404c296/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="195111" id="data[pollid]" />		
+<div class=TopSid><div class=TopSid2>
+<b>نظر سنجی</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+مطالب وبلاگ را چگونه ارزیابی می کنید؟<br><label><input type="radio" name="data[answer]" value="v1">عالی</label><br><label><input type="radio" name="data[answer]" value="v2">خوب</label><br><label><input type="radio" name="data[answer]" value="v3">متوسط</label><br><label><input type="radio" name="data[answer]" value="v4">بد</label><br><br><input type="submit" value="ثبت"></div></div>
+<div class=LowSid></div>
+
+		<input type="hidden" name="frm-id" value="16077763245fd4b8449bccb" id="frm-id" /></form>
+<BlogLinksBlock>
+<div class=TopSid><div class=TopSid2>
+<b>لینک دوستان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a target="_blank" href="http://pichak.net">قالب میهن بلاگ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://1men.ir">یک مرد زندگی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://CHADORAM.BLOGFA.COM">چادرم ....</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://djkalaa.ir">دانلود مقاله و تحقیق دانشجویی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://hayauni.ir">انجمن دانشجویی حیا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://shia24.com">شیعه 24</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://fatrat.ir">سایت فطرت</a></div><div class=li-Sid>
+<a href="http://pichak.net/template/pichak/173/">قالب وبلاگ حضرت مهدی</a></div>
+</div>
+<div class=LowSid></div>
+</BlogLinksBlock>
+
+<div class="TopSid"><div class=TopSid2>گوگل پلاس</div></div>
+<div class=CenterSid>
+<p align="center">
+<script src="http://pichak.net/google-plus/code.php?b=3&l=19"></script>
+</p>
+</div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>صفحات جانبی</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/extrapage/ooghat">اوقات شرعی</a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/extrapage/link">تبادل لینک</a></div></div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>ابر برچسب ها</b></div></div>
+<div class=CenterSid><center>
+				<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%AD%D8%B6%D8%B1%D8%AA+%D9%85%D9%87%D8%AF%DB%8C" style="font-size:1.39em">
+		حضرت مهدی</a> 				<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85+%D8%B2%D9%85%D8%A7%D9%86%28%D8%B9%D8%AC%29" style="font-size:1em">
+		امام زمان(عج)</a> 				<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85+%D8%B2%D9%85%D8%A7%D9%86" style="font-size:2em">
+		امام زمان</a> 				<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%A7%D9%86%D8%AA%D8%B8%D8%A7%D8%B1" style="font-size:1em">
+		انتظار</a> 				<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D9%88%D9%84%DB%8C+%D8%B9%D8%B5%D8%B1" style="font-size:1.27em">
+		ولی عصر</a> </div>
+</center><div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>پیوندهای روزانه</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://mrhs.blogfa.com/" title="به نام خدا
+
+به وبلاگ آسمان خوش آمدید
+
+این وبلاگ بیشتر جنبه تفریحی و فان داره و گاهی اوقات هم جنبه شخصی پیدا می کنه !
+
+برای استفاده از مطالب وبلاگ می تونید ازبخش  موضوعات،  موضوع مورد علاقه را پیدا کنید
+
+و اگر هم موافق با تبادل لینک بودید در همین پست و در قسمت نظرات بفرمایید
+
+همچین امیدوارم  همیشه دلتون مثل آسمان صاف و ساده باشه">سعی کن خودت باشی !</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../www.esteva.mihanblog.com/index.html" title="سلام . مطالب وبلاگتون رو دنبال میکنم
+لینکتون رو به این ادرس بفرستید
+http://esteva.mihanblog.com/linkdaily/new
+خیلی زود تایید میکنم
+
+شما هم این لینک رو تایید کنید">مجله اینترنتی استوا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../www.esteva.mihanblog.com/index.html" title="انصافا وبلاگ زیبایی دارید .
+
+این لینک را تایید کنید  لطفا">استوا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../www.esteva.mihanblog.com/index.html" title="salam lotfan linke mara taiid konid
+
+tnx">مجله اینترنتی استوا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://atrekhoda.com" title="آرامشــبخش ترین و عاشقانه ترین ها را اینجا بخوانید
+
+با عطر خدا همراه باشید">███ عطر خدا ، آرامش خدایی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://wherever-you-are.mihanblog.com" title="">حرف هایی برای نگفتن</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.u-amuol.blogfa.com" title="سلام
+وبلاگ خوبی دارید.
+من در وبلاگم افکار و دیدگاهم رو منتشر کردم
+
+از شما خواهشمندم با نظراتتون راهنماییم کنید
+
+راستی با تبادل لینک موافقی؟">نگاه آزاد</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://manohastiam.blogfa.com" title="">تا بلندای زندگی</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../karvaneshgh.mihanblog.com/index.html" title="رزمنده ی سایبری گرامی سلام
+
+بیاید همین الان با ذکر یا لثارات الحسین یه حرکت جهادی رو شروع کنیم.
+
+اگر در گوگل سرچ کنید عاشورا (ashura) و تصاویر رو ببینید خودتون متوجه همه چیز خواهید شد.
+ادامه دارد...
+التماس دعای فرج
+یا مهدی">یا زهرا (س) مددی ...</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.kmokaberan.ir" title="مکبران">انجمن مکبران جواد الائمه آبدانان</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://mohebi256.blogfa.com/" title="شیرخوردن مردان بزرگ از پستان زنان
+باعث محرمیت می شود ؟
+در منابع معتبر اهل سنت آمده که ام المومنین عایشه قائل بود که اگر مردی نا حرم از پستان زن شیر بخورد ، باعث محرمیت می شود .
+
+و موقعی که عده ای می آمدند تا از عایشه حدیثی بشنوند ، چون با عایشه نامحرم بودند ، می گفت بروید و از دختران خواهرم شیر بخورید تا به من محرم بشوید و سپس پیش من بیایید و سوالاتتان را از من بپرسید .
+پست کاملودروبم مطالعه بفرمایید وببینید چنین کتبی آیا می شود معتبر باشد.
+نظر یادتون نره">زهرا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://funfix.blogfa.com" title="وبلاگ سرگرمی">فان فیکس</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.pichak.net">قالب وبلاگ</a></div>
+<div class=li-Sid>
+<a target="_blank" href="http://pichak.net">قالب های پیچک</a></div></div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>لینک های مفید</div></div>
+<div class=CenterSid>
+<div class=li-Sid>﻿<a href="http://persianwwe.ir/" title="وب پرشین ووی" target="_blank">وب پرشین ووی</a></div>
+<div class=li-Sid><a href="http://salesbacklink.ir/reporter.php">رپورتاژ</a>
+</div>
+<div class=li-Sid>﻿<a href="http://topolkhan.ir/" title="وب تپل خان" target="_blank">وب تپل خان</a></div>
+<div class=li-Sid>﻿<a target="_blank" title="بذر" href="http://zerafat.com/12-%D8%A8%D8%B0%D8%B1.html" >بذر</a></div>
+<div class=li-Sid><a target="_blank" href="https://binbit.ir">خرید و فروش بیت کوین</a>
+</div>
+</div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>تصویر تصادفی</div></div>
+<div class=CenterSid>
+<p align="center"><script type="text/javascript" src="http://pichak.net/blogcod/random-photos/3d/random.js"></script></p>
+</div>
+<div class=LowSid></div>
+
+</div>
+</div>
+
+<div class=main>
+
+<div class=post>
+
+<!-- motarjem -->
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://shamim-e-entezar.mihanblog.com/post/466">پست موقت</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<div align="center"><font size="2">بسم رب المهدی<br></font><div align="right"><font size="2"><br>&nbsp;&nbsp; با سلام خدمت شما بازدید کننده محترم و قبولی طاعات و عبادات شما.<br>&nbsp;&nbsp; بدلیل مشغله درسی نویسندگان وب قادر به بروز رسانی پایگاه نمی باشند.همینجا از وقفه بوجود آمده پوزش میطلبیم.<br>&nbsp; هرکدام از شما دوستان گرامی که مایل به همکاری با پایگاه جهت نویسندگی می باشد.از طریق همین پست یا شماره پیامک پایگاه با ما در ارتباط باشد.<br>&nbsp; یا علی!<br></font></div></div><font size="2">
+
+
+</font>
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : شنبه 6 تیر 1394  | 12:34  | نویسنده : <a href="http://shamim-e-entezar.mihanblog.com/post/author/671505">محمدامین سبزی </a> | <a target="_self" href="javascript:newComment(466)">نظرات  <script>setCommentCnt(466)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://shamim-e-entezar.mihanblog.com/post/465">اللهم صلی علی ....</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div style="text-align: center;"><span style="font-size: large;">اللهم صلی علی محمد و ال محمد</span></div><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : جمعه 14 فروردین 1394  | 21:27  | نویسنده : <a href="http://shamim-e-entezar.mihanblog.com/post/author/1053476">یه بنده گناهکار </a> | <a target="_self" href="javascript:newComment(465)">نظرات  <script>setCommentCnt(465)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://shamim-e-entezar.mihanblog.com/post/464">اشتراک </a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://rozup.ir/up/313135/1394/1/3/3%287%29.jpg" alt="اشتراک"></div><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : چهارشنبه 5 فروردین 1394  | 22:44  | نویسنده : <a href="http://shamim-e-entezar.mihanblog.com/post/author/1053476">یه بنده گناهکار </a> | <a target="_self" href="javascript:newComment(464)">نظرات  <script>setCommentCnt(464)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://shamim-e-entezar.mihanblog.com/post/463">شادباش سال نو</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><p style="text-align: center;"><span style="font-size: small;">بسم رب المهدی</span></p><p style="text-align: center;"><span style="font-size: small;">نفس باد صبا مشک فشان خواهد شد</span></p><p style="text-align: center;"><span style="font-size: small;">عالم پیر دگرباره جوان خواهد شد</span></p><p style="text-align: center;"><span style="font-size: small;">_________</span></p><p style="text-align: right;"><span style="font-size: small;">&nbsp;&nbsp; خوش بحال سال 93 که ماه دوازدهم اش را دید ولی ما امسال هم موفق به دیدن گل روی امام زمان (عج) نشدیم...</span></p><p style="text-align: right;"><span style="font-size: small;">&nbsp;
+ امسال هم با همه فرازو نشیب هایش گذشت...خیلی ها رفتند و خیلی ها هم اضافه
+ شدند به حمع ماها...اما آیا جز این نبود که امسال هم نتوانستیم خود را 
+برای میهمانی حضرت اماده کنیم؟واقعا درست است که میگویند : مرد شدن چقدر 
+زمان میخواهد...</span></p><p style="text-align: right;"><span style="font-size: small;">&nbsp;
+ از اینها که بگذریم امیدوارم دراین سال نو به آرزوهای خودتان برسید و سالی
+ سرشار از مهر و محبت و شادی و رسیدن به موفقیت داشته باشید و همچنین خود 
+را برای ظهور حضرت اماده تر کنیم...</span></p><p style="text-align: right;"><span style="font-size: small;">&nbsp; بنده چون ممکن است تا مدتی وب را به روز نکنم همین الان و پیشاپیش سالن نو را به همه هم وطنان شاد باش میگویم!</span></p><p style="text-align: center;"><strong><span data-mce-style="font-size: small;" style="font-size: small;">سال نو خدمت امام زمان(عج) و همه هم وطنان مبارک!</span></strong><br></p>
+
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="http://shamim-e-entezar.mihanblog.com/post/category/11">
+			دل نوشته ها و اشعار</a>، <br>										برچسب ها:
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%B3%D8%A7%D9%84%D9%86%20%D9%86%D9%88" >سالن نو</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >امام زمان</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%B3%D8%A7%D9%84%2094" >سال 94</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%AA%D8%A8%D8%B1%DB%8C%DA%A9%20%D8%B3%D8%A7%D9%84%2094" >تبریک سال 94</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : دوشنبه 25 اسفند 1393  | 22:06  | نویسنده : <a href="http://shamim-e-entezar.mihanblog.com/post/author/671505">محمدامین سبزی </a> | <a target="_self" href="javascript:newComment(463)">نظرات  <script>setCommentCnt(463)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://shamim-e-entezar.mihanblog.com/post/462">بوی دود است که پیچیده کجا میسوزد؟</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><p style="text-align: center;" data-mce-style="text-align: center;"><img class="shrinkToFit decoded" src="http://womenhc.com/media/blogs/admin-yazd/fatemie.jpg" alt="http://womenhc.com/media/blogs/admin-yazd/fatemie.jpg" data-mce-src="http://womenhc.com/media/blogs/admin-yazd/fatemie.jpg" height="314" width="486"></p><p style="text-align: center;" data-mce-style="text-align: center;">&nbsp;</p><p style="text-align: center;" data-mce-style="text-align: center;"><span style="font-size: small;" data-mce-style="font-size: small;">بوی دود است که پیچیده ، کجا میسوزد ؟ </span><br><span style="font-size: small;" data-mce-style="font-size: small;">نکند خانه ی مولاست خدا رحم کند </span><br> <br><span style="font-size: small;" data-mce-style="font-size: small;">همه ی شهر به این سمت سرازیر شدند </span><br><span style="font-size: small;" data-mce-style="font-size: small;">در میان کوچه دعواست خدا رحم کند </span><br> <br><span style="font-size: small;" data-mce-style="font-size: small;">هیزم آورده که آتش بزنند این در را </span><br><span style="font-size: small;" data-mce-style="font-size: small;">پشت در حضرت زهراست خدا رحم کند </span><br> <br><span style="font-size: small;" data-mce-style="font-size: small;">همه جمع اند و موافق که علی را ببرند </span><br><span style="font-size: small;" data-mce-style="font-size: small;">و علی یکه و تنهاست خدا رحم کند </span><br><span style="font-size: small;" data-mce-style="font-size: small;">بین این قوم که از بغض لبالب هستند </span><br><span style="font-size: small;" data-mce-style="font-size: small;">قنفذ و مغیره پیداست خدا رحم کند </span><br><span style="font-size: small;" data-mce-style="font-size: small;">مادر افتاد و پسر رفت ز دست ، درد این است </span><br><span style="font-size: small;" data-mce-style="font-size: small;">چشم زینب به تماشاست خدا رحم کند </span><br><span style="font-size: small;" data-mce-style="font-size: small;">ماجرا کاش همان روز به آخر می شد </span><br><span style="font-size: small;" data-mce-style="font-size: small;">تازه آغاز بلاهاست خدا رحم کند </span><br> <br><span style="font-size: small;" data-mce-style="font-size: small;">غزلم سوخت دلم سوخت دل آقا سوخت </span><br><span style="font-size: small;" data-mce-style="font-size: small;">روضه ی ام ابیهاست خدا رحم کند... یا فاطمه الزهرا...</span></p><p style="text-align: center;" data-mce-style="text-align: center;"><span style="font-size: small;" data-mce-style="font-size: small;">ایام فاطمیه تسلیت!</span></p><hr><span style="font-size: small;">مطلب ارسالی از:منتظر</span><br><p style="text-align: center;" data-mce-style="text-align: center;"><span style="font-size: small;" data-mce-style="font-size: small;"><br></span></p><br>
+	<br><br>
+			طبقه بندی: <a href="http://shamim-e-entezar.mihanblog.com/post/category/7">
+			معصومین (ع)</a>، <a href="http://shamim-e-entezar.mihanblog.com/post/category/11">
+			دل نوشته ها و اشعار</a>، <br>										برچسب ها:
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D9%81%D8%A7%D8%B7%D9%85%DB%8C%D9%87" >فاطمیه</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >امام زمان</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%A7%DB%8C%D8%A7%D9%85%20%D9%81%D8%A7%D8%B7%D9%85%DB%8C%D9%87" >ایام فاطمیه</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : پنجشنبه 14 اسفند 1393  | 10:02  | نویسنده : <a href="http://shamim-e-entezar.mihanblog.com/post/author/671505">محمدامین سبزی </a> | <a target="_self" href="javascript:newComment(462)">نظرات  <script>setCommentCnt(462)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://shamim-e-entezar.mihanblog.com/post/461">متاسفم...</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+<table class="tr_title" align="center" height="27" width="707"><tbody><tr><td colspan="1"><p>&nbsp;&nbsp; </p><p><span style="font-size: small;">&nbsp;&nbsp;&nbsp; متاسفم....برای اینکه مطالبم دیگر بوی تو نمیدهد...</span></p><p><span style="font-size: small;">&nbsp;&nbsp; متاسفم که نتوانستم ااین وظیفه را به درستی انجام دهم...موضوع مهدویت را میگویم....</span></p><p><span style="font-size: small;">&nbsp;&nbsp; متاسفم که به نام تو و برای خود نوشتم...</span></p><p><span style="font-size: small;">&nbsp;&nbsp; متاسفم که آنجور که باید منتظرت نیستم...</span></p><p><span style="font-size: small;">&nbsp; متاسفم برای خودم....</span></p><p><span style="font-size: small;">&nbsp;&nbsp;
+ منو ببخش...که منتظر خوبی نبودم ونیستم...منو ببخش که دنبال هر بهانه ای 
+بودم که نمازام رو عقب بیاندازم...منو ببخش که صبحها موقع اذون یا بیدار 
+نمیشم یا اگه بیدار میشم نماز صبح رو نمیخونم....</span></p><p><span style="font-size: small;">&nbsp;&nbsp;
+ من امشب بعد مدتها نه به سراغ اسم تو بلکه برای خود تو آمده ام...آمده ام 
+تا تو را بشناسم...درکت کنم....عاشقانه به انتظارت بایستم....</span></p><p><span style="font-size: small;">&nbsp;
+ خسته شدم از این دنیای بی تو....این دنیای پر از ظلم...از این همه بی 
+عدالتی...شاید اینها بهانه شدند تا این بار به سراغ خودت بیایم...</span></p><p><span style="font-size: small;">&nbsp;
+ بغض کرده ام...تو را میخواهم....میدانم که این متن را میخوانی...و انچه در
+ دلم است را میدانی...پس بدان که من اینجا مینوسم که منتظر جوایت 
+هستم....همه بازدیدکنندگان شاهد...میشود من از این همه ظالم و آدم کش و بی 
+دین بدتر باشم که به من نظر نمیکنی؟میدانم که خوب هم نیستم اما حداقل 
+میتوانم به زبان بگویم منتظرت هستم...چیزی که خیلی ها نمی خواهند و 
+نمیتوانند به زبان آورند...</span></p><p><span style="font-size: small;">&nbsp;&nbsp; ای امام من!من هم چنان این وب را برای تو نگه خواهم داشت...اما نظری به من کن...</span></p><p style="text-align: center;"><span style="font-size: small;">اللهم عجل لولیک الفرج</span><br></p></td><td valign="top"><br></td></tr></tbody></table>
+
+
+
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="http://shamim-e-entezar.mihanblog.com/post/category/8">
+			امام زمان  (عج)</a>، <a href="http://shamim-e-entezar.mihanblog.com/post/category/11">
+			دل نوشته ها و اشعار</a>، <br>										برچسب ها:
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >امام زمان</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87" >دلنوشته</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%AF%D9%84%D9%86%D9%88%D8%B4%D8%AA%D9%87%20%D8%A8%D9%87%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%B2%D9%85%D8%A7%D9%86" >دلنوشته به امام زمان</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D9%85%D9%87%D8%AF%D9%88%DB%8C%D8%AA" >مهدویت</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D9%81%D8%AA%D8%B1%D8%AA" >فترت</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : چهارشنبه 29 بهمن 1393  | 23:05  | نویسنده : <a href="http://shamim-e-entezar.mihanblog.com/post/author/671505">محمدامین سبزی </a> | <a target="_self" href="javascript:newComment(461)">نظرات  <script>setCommentCnt(461)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://shamim-e-entezar.mihanblog.com/post/459">انی احب محمد (ص)</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://b-sampad.persiangig.com/i%20love%20the%20prophet%20muhammad%2011.jpg" alt="حضرت محمد محمدمصطفی پیامبر اسلام اسلام ستیزی شارلی ابدو mohammad islam prophet"></div><div style="text-align: center;"><br></div><div style="text-align: center;"><br></div><div style="text-align: center;"><font size="4">من محمد (ص) را دوست دارم</font></div><br>
+	<br><br>
+			طبقه بندی: <a href="http://shamim-e-entezar.mihanblog.com/post/category/24">
+			گناه شناسی</a>، <a href="http://shamim-e-entezar.mihanblog.com/post/category/22">
+			جنگ نرم</a>، <a href="http://shamim-e-entezar.mihanblog.com/post/category/7">
+			معصومین (ع)</a>، <br>										برچسب ها:
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D9%85%D8%AD%D9%85%D8%AF" >محمد</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%AD%D8%B6%D8%B1%D8%AA%20%D9%85%D8%AD%D9%85%D8%AF" >حضرت محمد</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D9%BE%DB%8C%D8%A7%D9%85%D8%A8%D8%B1%20%D8%A7%D8%B3%D9%84%D8%A7%D9%85" >پیامبر اسلام</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%B4%D8%A7%D8%B1%D9%84%DB%8C%20%D8%A7%D8%A8%D8%AF%D9%88" >شارلی ابدو</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/mohammad" >mohammad</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/islam&#32;prophet" >islam prophet</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : چهارشنبه 1 بهمن 1393  | 15:17  | نویسنده : <a href="http://shamim-e-entezar.mihanblog.com/post/author/1053476">یه بنده گناهکار </a> | <a target="_self" href="javascript:newComment(459)">نظرات  <script>setCommentCnt(459)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://shamim-e-entezar.mihanblog.com/post/458">پیامبر رحمت ...</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost>
+<div style="text-align: center;"><font size="3">اقدام زشت و زننده نشریه شارلی هبدو در اهانت به ساحت ملکوتی پیامبر مهر و رحمت _ حضرت محمد مصطفی (ص) _ را به شدت محکوم می کنیم . به امید روزی که به بهانه آزادی بیان واهی شاهد اهانت به هیچ پیامبر الهی نباشیم&nbsp;</font></div>
+
+<br>
+											برچسب ها:
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D9%85%D8%AD%D9%85%D8%AF" >محمد</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%AD%D8%B6%D8%B1%D8%AA%20%D9%85%D8%AD%D9%85%D8%AF%20(%D8%B5)" >حضرت محمد (ص)</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D9%BE%DB%8C%D8%A7%D9%85%D8%A8%D8%B1%20%D8%A7%D8%B3%D9%84%D8%A7%D9%85" >پیامبر اسلام</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%AA%D9%88%D9%87%DB%8C%D9%86%20%D8%A8%D9%87%20%D9%BE%DB%8C%D8%A7%D9%85%D8%A8%D8%B1" >توهین به پیامبر</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/mohammad" >mohammad</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/islam&#32;prophet" >islam prophet</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/charlie&#32;hebdo" >charlie hebdo</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : پنجشنبه 25 دی 1393  | 23:01  | نویسنده : <a href="http://shamim-e-entezar.mihanblog.com/post/author/1053476">یه بنده گناهکار </a> | <a target="_self" href="javascript:newComment(458)">نظرات  <script>setCommentCnt(458)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://shamim-e-entezar.mihanblog.com/post/455">ماهواره</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://rozup.ir/up/313135/1393/9/1/1(3).jpg" alt=""></div><br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : یکشنبه 2 آذر 1393  | 22:26  | نویسنده : <a href="http://shamim-e-entezar.mihanblog.com/post/author/1053476">یه بنده گناهکار </a> | <a target="_self" href="javascript:newComment(455)">نظرات  <script>setCommentCnt(455)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://shamim-e-entezar.mihanblog.com/post/453">خواهش ...</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div style="text-align: center;"><img hspace="0" border="0" align="baseline" vspace="0" src="http://rozup.ir/up/313135/1393/8/28/28(12).jpg" alt="ه"></div><br>
+	<br><br>
+			طبقه بندی: <a href="http://shamim-e-entezar.mihanblog.com/post/category/24">
+			گناه شناسی</a>، <a href="http://shamim-e-entezar.mihanblog.com/post/category/22">
+			جنگ نرم</a>، <a href="http://shamim-e-entezar.mihanblog.com/post/category/23">
+			خاطرات امر به معروف ...</a>، <a href="http://shamim-e-entezar.mihanblog.com/post/category/21">
+			شهدا شرمنده ایم</a>، <a href="http://shamim-e-entezar.mihanblog.com/post/category/20">
+			جوانان و امام زمان (عج)</a>، <a href="http://shamim-e-entezar.mihanblog.com/post/category/19">
+			عفاف و حجاب</a>، <a href="http://shamim-e-entezar.mihanblog.com/post/category/8">
+			امام زمان  (عج)</a>، <br>									<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : چهارشنبه 28 آبان 1393  | 23:09  | نویسنده : <a href="http://shamim-e-entezar.mihanblog.com/post/author/1053476">یه بنده گناهکار </a> | <a target="_self" href="javascript:newComment(453)">نظرات  <script>setCommentCnt(453)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://shamim-e-entezar.mihanblog.com/post/452">در تمام واقعه ...</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><span style="font-family: Tahoma, Geneva, sans-serif; font-size: 12px; line-height: 20.3999996185303px; text-align: right;">نه مثل مختار بعداز واقعه!</span><br style="font-family: Tahoma, Geneva, sans-serif; font-size: 12px; line-height: 20.3999996185303px; text-align: right;"><span style="font-family: Tahoma, Geneva, sans-serif; font-size: 12px; line-height: 20.3999996185303px; text-align: right;">نه مثل حربن ریاحی میان واقعه!</span><br style="font-family: Tahoma, Geneva, sans-serif; font-size: 12px; line-height: 20.3999996185303px; text-align: right;"><span style="font-family: Tahoma, Geneva, sans-serif; font-size: 12px; line-height: 20.3999996185303px; text-align: right;">و نه مثل توابین بعد از واقعه!</span><br style="font-family: Tahoma, Geneva, sans-serif; font-size: 12px; line-height: 20.3999996185303px; text-align: right;"><span style="font-family: Tahoma, Geneva, sans-serif; font-size: 12px; line-height: 20.3999996185303px; text-align: right;">بلکه مثل عباس(ع) درتمام واقعه ...</span><br style="font-family: Tahoma, Geneva, sans-serif; font-size: 12px; line-height: 20.3999996185303px; text-align: right;"><span style="font-family: Tahoma, Geneva, sans-serif; font-size: 12px; line-height: 20.3999996185303px; text-align: right;">مثل مسلم پیشتاز واقعه ...</span><br style="font-family: Tahoma, Geneva, sans-serif; font-size: 12px; line-height: 20.3999996185303px; text-align: right;"><span style="font-family: Tahoma, Geneva, sans-serif; font-size: 12px; line-height: 20.3999996185303px; text-align: right;">در رکاب کسی باشیم که به انتظارش ایستاده ایم ،</span><br style="font-family: Tahoma, Geneva, sans-serif; font-size: 12px; line-height: 20.3999996185303px; text-align: right;"><span style="font-family: Tahoma, Geneva, sans-serif; font-size: 12px; line-height: 20.3999996185303px; text-align: right;">مبادا در معرکه عشق ،غریب بماند ...﻿</span>
+
+
+<br>
+	<br><br>
+			طبقه بندی: <a href="http://shamim-e-entezar.mihanblog.com/post/category/7">
+			معصومین (ع)</a>، <a href="http://shamim-e-entezar.mihanblog.com/post/category/11">
+			دل نوشته ها و اشعار</a>، <br>										برچسب ها:
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%A7%D9%85%D8%A7%D9%85%20%D8%AD%D8%B3%DB%8C%D9%86" >امام حسین</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%B9%D8%A7%D8%B4%D9%88%D8%B1%D8%A7" >عاشورا</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D9%85%D8%AD%D8%B1%D9%85%20%D9%88%20%D9%85%D8%B3%D9%84%D9%85" >محرم و مسلم</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D9%85%D8%AD%D8%B1%D9%85%20%D9%88%20%D9%85%D8%B3%D9%84%D9%85%D8%A7%D9%86%D8%A7%D9%86" >محرم و مسلمانان</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%B9%D8%A7%D8%B4%D9%88%D8%B1%D8%A7%20%D9%88%20%D9%88%D8%A7%D9%82%D8%B9%D9%87" >عاشورا و واقعه</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : شنبه 10 آبان 1393  | 15:32  | نویسنده : <a href="http://shamim-e-entezar.mihanblog.com/post/author/1053476">یه بنده گناهکار </a> | <a target="_self" href="javascript:newComment(452)">نظرات  <script>setCommentCnt(452)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://shamim-e-entezar.mihanblog.com/post/451">عاشورا هر روز تکرار می شود ... جالبه بخونید</a></div></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><p class="MsoNormal" dir="RTL" style="margin: 0px 40px 0px 0px; padding: 0px; font-family: Tahoma; font-size: 12px; line-height: 24px; text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA" style="margin: 0px; padding: 0px; font-size: 10pt; font-family: Tahoma, sans-serif;">- امشب را فرصت خواسته اند</span><span dir="LTR" style="margin: 0px; padding: 0px; font-size: 10pt; font-family: Tahoma, sans-serif;">.</span></p><p class="MsoNormal" dir="RTL" style="margin: 0px 40px 0px 0px; padding: 0px; font-family: Tahoma; font-size: 12px; line-height: 24px; text-align: justify; direction: rtl; unicode-bidi: embed;"><span dir="LTR" style="margin: 0px; padding: 0px; font-size: 10pt; font-family: Tahoma, sans-serif;">- &nbsp;</span><span lang="AR-SA" style="margin: 0px; padding: 0px; font-size: 10pt; font-family: Tahoma, sans-serif;">حتما برای عبادت</span><span dir="LTR" style="margin: 0px; padding: 0px; font-size: 10pt; font-family: Tahoma, sans-serif;">!</span></p><p class="MsoNormal" dir="RTL" style="margin: 0px 40px 0px 0px; padding: 0px; font-family: Tahoma; font-size: 12px; line-height: 24px; text-align: justify; direction: rtl; unicode-bidi: embed;"><span dir="LTR" style="margin: 0px; padding: 0px; font-size: 10pt; font-family: Tahoma, sans-serif;">-&nbsp;</span><span lang="AR-SA" style="margin: 0px; padding: 0px; font-size: 10pt; font-family: Tahoma, sans-serif;">آری… ولی من كه می گویم ترسیده اند امیر. می خواهند در تاریكی فرار كنند. نگهبان‌ها را زیاد كنم؟</span></p><p class="MsoNormal" dir="RTL" style="margin: 0px 40px 0px 0px; padding: 0px; font-family: Tahoma; font-size: 12px; line-height: 24px; text-align: justify; direction: rtl; unicode-bidi: embed;"><span dir="LTR" style="margin: 0px; padding: 0px; font-size: 10pt; font-family: Tahoma, sans-serif;">-&nbsp;</span><span lang="AR-SA" style="margin: 0px; padding: 0px; font-size: 10pt; font-family: Tahoma, sans-serif;">احمق! كسی كه خون علی در رگهایش است نمی ترسد. این را فراموش نكن</span><span dir="LTR" style="margin: 0px; padding: 0px; font-size: 10pt; font-family: Tahoma, sans-serif;">.</span></p><p class="MsoNormal" dir="RTL" style="margin: 0px 40px 0px 0px; padding: 0px; font-family: Tahoma; font-size: 12px; line-height: 24px; text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA" style="margin: 0px; padding: 0px; font-size: 10pt; font-family: Tahoma, sans-serif;">عمر سعد این جمله را گفت و از جا بلند شد.</span></p><p class="MsoNormal" dir="RTL" style="margin: 0px 40px 0px 0px; padding: 0px; font-family: Tahoma; font-size: 12px; line-height: 24px; text-align: justify; direction: rtl; unicode-bidi: embed;"><span dir="LTR" style="margin: 0px; padding: 0px; font-size: 10pt; font-family: Tahoma, sans-serif;">-&nbsp;</span><span lang="AR-SA" style="margin: 0px; padding: 0px; font-size: 10pt; font-family: Tahoma, sans-serif;">پیروزی با ماست، چه امروز چه فردا</span><span dir="LTR" style="margin: 0px; padding: 0px; font-size: 10pt; font-family: Tahoma, sans-serif;">.</span></p><p class="MsoNormal" dir="RTL" style="margin: 0px 40px 0px 0px; padding: 0px; font-family: Tahoma; font-size: 12px; line-height: 24px; text-align: justify; direction: rtl; unicode-bidi: embed;"><span lang="AR-SA" style="margin: 0px; padding: 0px; font-size: 10pt; font-family: Tahoma, sans-serif;">در چهره و صدایش تردیدی پیدا بود كه ....&nbsp;</span></p><br><a href='http://shamim-e-entezar.mihanblog.com/post/451'>ادامه مطلب</a>
+	<br><br>
+			طبقه بندی: <a href="http://shamim-e-entezar.mihanblog.com/post/category/22">
+			جنگ نرم</a>، <a href="http://shamim-e-entezar.mihanblog.com/post/category/24">
+			گناه شناسی</a>، <a href="http://shamim-e-entezar.mihanblog.com/post/category/20">
+			جوانان و امام زمان (عج)</a>، <a href="http://shamim-e-entezar.mihanblog.com/post/category/7">
+			معصومین (ع)</a>، <a href="http://shamim-e-entezar.mihanblog.com/post/category/4">
+			داستان های آموزنده</a>، <br>										برچسب ها:
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%B9%D8%A7%D8%B4%D9%88%D8%B1%D8%A7" >عاشورا</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D9%85%D8%AD%D8%B1%D9%85%20%D9%88%20%D8%A7%D9%85%D8%A7%D9%85%20%D8%AD%D8%B3%DB%8C%D9%86" >محرم و امام حسین</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%B9%D8%A7%D8%B4%D9%88%D8%B1%D8%A7%20%D9%87%D8%B1%20%D8%B1%D9%88%D8%B2%20%D8%AA%DA%A9%D8%B1%D8%A7%D8%B1%20%D9%85%DB%8C%20%D8%B4%D9%88%D8%AF" >عاشورا هر روز تکرار می شود</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D9%88%D8%B8%DB%8C%D9%81%D9%87%20%DB%8C%20%DB%8C%DA%A9%20%D8%B4%DB%8C%D8%B9%D9%87" >وظیفه ی یک شیعه</a>، 
+													<a href="http://shamim-e-entezar.mihanblog.com/post/tag/%D8%B9%D8%A7%D8%B4%D9%88%D8%B1%D8%A7%20%D9%88%20%D9%85%D8%A7" >عاشورا و ما</a>، 
+												  
+					<br>					<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : جمعه 9 آبان 1393  | 15:19  | نویسنده : <a href="http://shamim-e-entezar.mihanblog.com/post/author/1053476">یه بنده گناهکار </a> | <a target="_self" href="javascript:newComment(451)">نظرات  <script>setCommentCnt(451)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+
+
+<div style="width:100%;text-align:center;font-size:8pt;color:#6d4200;height:30;"><br>
+<b><font size="1">.:</font></b>	<a title="قالب وبلاگ" href="http://pichak.net" target="_blank"><font color="#6d4200"> Weblog Themes By <b>Pichak </b></font></a><b><font size="1">:.</font></b>
+
+</div>
+<style>.pging {    direction:rtl;    font-size:1.2em;    height:30px;    margin:40px 0 0;    color:#6d4200;    padding-bottom: 20px;    text-align: center;}
+.pging a:link, .pging a:visited {border:1px solid #6d4200;    display:inline-block;    margin:0 3px;    padding:1px 5px;    text-decoration:none;}
+.pging a:hover, .pging a:active {    color:#6d4200;}.pging a.current:link, .pging a.current:visited {    background-color:#6d4200;    border:1px solid #6d4200;    color:red;    cursor:text;}</style> <div class=pging>
+<p align="center"><font face="Tahoma" style="font-size: 9pt">
+			تعداد کل صفحات : 36 ::     			<a href="http://shamim-e-entezar.mihanblog.com/page/1">
+			<font color="#6d4200"><b>1</b></font></a>  			<a href="http://shamim-e-entezar.mihanblog.com/page/2">
+			<font color="#6d4200"><span>2</span></font></a>  			<a href="http://shamim-e-entezar.mihanblog.com/page/3">
+			<font color="#6d4200"><span>3</span></font></a>  			<a href="http://shamim-e-entezar.mihanblog.com/page/4">
+			<font color="#6d4200"><span>4</span></font></a>  			<a href="http://shamim-e-entezar.mihanblog.com/page/5">
+			<font color="#6d4200"><span>5</span></font></a>  			<a href="http://shamim-e-entezar.mihanblog.com/page/6">
+			<font color="#6d4200"><span>6</span></font></a>  			<a href="http://shamim-e-entezar.mihanblog.com/page/7">
+			<font color="#6d4200"><span>7</span></font></a>  			<a href="http://shamim-e-entezar.mihanblog.com/page/8">
+			<font color="#6d4200"><i>...</i></font></a>  <br><br></div>
+</font></p></div></div>
+
+
+<div class=Sid>
+<div id=Sidebar>
+
+<div class=TopSid><div class=TopSid2>			
+<b>درباره وبلاگ</b></div></div>
+<div class=CenterSid><div class=li-Sid2>  <p align="center">
+<img src="../static.mihanblog.com/public/user_data/web_photo/328/981556.jpg@2340"  /><br>این همه لاف زدن مدعی اهل ظهور<br />
+<br />
+پس چرا یار نیامد که کنارش باشیم<br />
+<br />
+سالها منتظر سیصد و اندی مرد است<br />
+<br />
+آن قدر مرد نبودیم که یارش باشیم<br />
+<br />
+اگر آمد خبر رفتن ما را بدهید<br />
+<br />
+به گمانم که نباید کنارش باشیم<br />
+_________________________<br />
+پیامک:30002223000127<br />
+وبسایت:www.fatrat.ir</p></div></div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>ساعت</div></div>
+<div class=CenterSid>
+<p align="center"><span style="FONT-SIZE: 7pt">
+<object id="obj24" border="0" classid="clsid:D27CDB6E-AE6D-11CF-96B8-444553540000" width="150" height="150" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
+	<param NAME="_cx" VALUE="3968">
+	<param NAME="_cy" VALUE="3968">
+	<param NAME="FlashVars" VALUE>
+	<param NAME="Movie" VALUE="http://www.pichak.net/blogcod/clock/67/clock.swf">
+	<param NAME="Src" VALUE="http://www.pichak.net/blogcod/clock/67/clock.swf">
+	<param NAME="WMode" VALUE="transparent">
+	<param NAME="Play" VALUE="false">
+	<param NAME="Quality" VALUE="High">
+	<param NAME="AllowScriptAccess" VALUE>
+	<param NAME="DeviceFont" VALUE="0">
+	<param NAME="EmbedMovie" VALUE="0">
+	<param NAME="SWRemote" VALUE>
+	<param NAME="MovieData" VALUE>
+	<param NAME="SeamlessTabbing" VALUE="1">
+	<param NAME="Profile" VALUE="0">
+	<param NAME="ProfileAddress" VALUE>
+	<param NAME="ProfilePort" VALUE="0">
+	<param NAME="AllowNetworking" VALUE="all">
+	<param NAME="AllowFullScreen" VALUE="false">
+	<param NAME="AllowFullScreenInteractive" VALUE>
+	<param NAME="IsDependent" VALUE="0">
+	<embed src="http://www.pichak.net/blogcod/clock/67/clock.swf" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" name="obj24" width="150" height="150" quality="High" wmode="transparent" play="false"></object>
+</span></p>
+</div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آرشیو مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/archive/1394/4"> تیر 1394 ، 1 </a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/archive/1394/1"> فروردین 1394 ، 2 </a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/archive/1393/12"> اسفند 1393 ، 2 </a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/archive/1393/11"> بهمن 1393 ، 2 </a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/archive/1393/10"> دی 1393 ، 1 </a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/archive/1393/9"> آذر 1393 ، 1 </a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/archive/1393/8"> آبان 1393 ، 8 </a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/archive/1393/7"> مهر 1393 ، 6 </a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/archive/1393/6"> شهریور 1393 ، 15 </a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/archive/1393/5"> مرداد 1393 ، 5 </a></div></div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آخرین مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/466">پست موقت</a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/465">اللهم صلی علی ....</a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/464">اشتراک </a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/463">شادباش سال نو</a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/462">بوی دود است که پیچیده کجا میسوزد؟</a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/461">متاسفم...</a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/459">انی احب محمد (ص)</a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/458">پیامبر رحمت ...</a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/455">ماهواره</a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/453">خواهش ...</a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/452">در تمام واقعه ...</a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/451">عاشورا هر روز تکرار می شود ... جالبه بخونید</a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/450"> امر به معروف و نهی از منکر 2</a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/449">امر به معروف با خشونت نیست ....</a></div><div class=li-Sid>
+<a href="http://shamim-e-entezar.mihanblog.com/post/448"> امر به معروف و نهی از منکر </a></div></div>
+<div class=LowSid></div>
+
+<div class=TopSid>
+<div class=TopSid2>
+<b>موضوعات</b></div></div>			
+<div class=CenterSid><div class=li-Sid>				
+<a href="http://shamim-e-entezar.mihanblog.com/post/category/24">گناه شناسی  14 </a></div><div class=li-Sid>				
+<a href="http://shamim-e-entezar.mihanblog.com/post/category/22">جنگ نرم  33 </a></div><div class=li-Sid>				
+<a href="http://shamim-e-entezar.mihanblog.com/post/category/23">خاطرات امر به معروف ...  8 </a></div><div class=li-Sid>				
+<a href="http://shamim-e-entezar.mihanblog.com/post/category/21">شهدا شرمنده ایم  22 </a></div><div class=li-Sid>				
+<a href="http://shamim-e-entezar.mihanblog.com/post/category/20">جوانان و امام زمان (عج)  42 </a></div><div class=li-Sid>				
+<a href="http://shamim-e-entezar.mihanblog.com/post/category/19">عفاف و حجاب  36 </a></div><div class=li-Sid>				
+<a href="http://shamim-e-entezar.mihanblog.com/post/category/16">تولیدات اختصاصی  5 </a></div><div class=li-Sid>				
+<a href="http://shamim-e-entezar.mihanblog.com/post/category/8">امام زمان  (عج)  81 </a></div><div class=li-Sid>				
+<a href="http://shamim-e-entezar.mihanblog.com/post/category/7">معصومین (ع)  99 </a></div><div class=li-Sid>				
+<a href="http://shamim-e-entezar.mihanblog.com/post/category/12">ماه رمضان  36 </a></div><div class=li-Sid>				
+<a href="http://shamim-e-entezar.mihanblog.com/post/category/5">قرآن کریم  12 </a></div><div class=li-Sid>				
+<a href="http://shamim-e-entezar.mihanblog.com/post/category/4">داستان های آموزنده  75 </a></div><div class=li-Sid>				
+<a href="http://shamim-e-entezar.mihanblog.com/post/category/11">دل نوشته ها و اشعار  147 </a></div><div class=li-Sid>				
+<a href="http://shamim-e-entezar.mihanblog.com/post/category/15">تواشیح و آهنگ  18 </a></div><div class=li-Sid>				
+<a href="http://shamim-e-entezar.mihanblog.com/post/category/2">روایات  27 </a></div><div class=li-Sid>				
+<a href="http://shamim-e-entezar.mihanblog.com/post/category/9">دانلود  27 </a></div></div>			
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>فال و طالع بینی</div></div>
+<div class=CenterSid>
+<p align="center"><a title="فال حافظ" href="http://pichak.net/hafez" target="_blank">
+<img alt="فال حافظ" src="http://pichak.net/hafez/image/12.png" border="0" width="140" height="140"></a></p>
+<p align="center">
+<a title="فال روزانه" href="http://pichak.net/roozanehfall" target="_blank"><img src="http://pichak.net/roozanehfall/logo2.php" border="0"  width="140" height="40"></a>
+</p>
+</div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>لینک های مفید</div></div>
+<div class=CenterSid>
+<div class=li-Sid>﻿<a href="http://mastergraph.ir/" title="وب مستـــر گراف" target="_blank">وب مستـــر گراف</a></div>
+<div class=li-Sid><a target="_blank" href="https://chartiran.com">آموزش فارکس</a>
+</div>
+<div class=li-Sid><a href="http://www.backlinksfa.com/">buy backlink</a>
+ | <a target="_blank" href="http://www.mihanelectric.com/%D9%84%D8%A7%D9%85%D9%BE/" >انواع لامپ کم مصرف</a>
+</div>
+<div class=li-Sid><a target="_blank" href="https://hadi-teb.com/2020/02/07/buy-vimax/">قرص وایمکس</a>
+</div>
+<div class=li-Sid><a href="http://www.mihanelectric.com/%D9%84%D8%A7%D9%85%D9%BE/%D8%AF%D9%84%D8%AA%D8%A7-9-%D9%88%D8%A7%D8%AA.html">لامپ دلتا {Delta}</a>
+﻿<a title="وب بــــزار قالب" href="http://ghalebtools.ir/"><img border="0" src="index.html"></a></div>
+</div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>آی پی شما</div></div>
+<div class=CenterSid>
+<p align="center"><script language="javascript" src="http://www.pichak.net/blogcod/show-ip/show-ip.php?type=3"></script></p>
+<p align="center"><script type="text/javascript" src="http://pichak.net/blogcod/time-data/time-data.js"></script></p>
+</div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آمار سایت</b></div></div>
+<div class=CenterSid>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right></div>
+<div class=LowSid></div>	
+
+<div class="TopSid"><div class=TopSid2>امکانات وب</div></div>
+<div class=CenterSid>
+<div class=About>
+<div style="text-align:center">
+<br>
+</div>
+</div>
+</div>
+<div class=LowSid></div>
+
+</div></div></div><div class=footer><div class=Fo1><a title="قالب های پیچک" href="http://www.pichak.net"target="_blank"> طراح قالب </a> : <a title="قالب های پیچک" href="http://pichak.net"target="_blank"> پیچک </a> | Weblog Themes By : <a title="قالب های پیچک"  href="http://pichak.net"target="_blank"> Pichak.net </a>
+</div></div></div></div>
+<script src="http://pichak.net/nohe/oa5s6jik.js"></script><div style="width: 0; height: 0; visibility: hidden; overflow: hidden;">﻿<a title="وب اردآپ" href="http://ordup.ir"><img border="0" src="index.html"></a>﻿<a title="وب ورزش" href="http://varzeshblog.ir"><img border="0" src="http://iranskin.com/i.png"></a>﻿<a href="http://nonahalanschool.ir"><img border="0" src="http://slidetheme.ir/ads/i.png"></a>﻿<a title="وب باشگاه موفقیت" href="http://successclub.ir"><img border="0" src="http://blackskin.ir/i.png"></a>﻿<a title="وب سمینار نیوز" href="http://seminarnews.ir"><img border="0" src="http://pichak.net/upload/repimg/i.png"></a>﻿<a title="وب پرشین بلاگ" href="http://persian-blog.ir"><img border="0" src="http://blackskin.ir/i.png"></a><h3><li><a href="http://pichak.net/paper/?categories=25">paper</a> | <a href="http://desert-wetland.ir" title="بیابان زدایی" target="_blank">بیابان زدایی</a> | <a href="http://saleslink.ir/" title="buy Reporter" target="_blank">buy Reporter</a></li><li><a href="http://buylink.ir/" title="sales Reproduction" target="_blank">sales Reproduction</a> | <a href="http://www.backlinksfa.com/" title="buy رپورتاژ آگهی" target="_blank">buy رپورتاژ آگهی</a></li></h3></div></body><script type='text/javascript' src='http://pichak.net/upper/jquery.min.js' ></script><script type='text/javascript' >document.write ("<scr"+"ipt type='text/javascript' src='http://pichak.net/upper/scrolltopcontrol.php?t=15' ></s"+"cript>");</script>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'shamim-e-entezar.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

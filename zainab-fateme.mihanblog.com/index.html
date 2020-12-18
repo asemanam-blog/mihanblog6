@@ -1,0 +1,757 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://zainab-fateme.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1585577*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[2]='1';commentCnt[4]='0';commentCnt[5]='0';commentCnt[7]='0';commentCnt[8]='0';commentCnt[10]='0';commentCnt[13]='4';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','7');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','شنبه 1 فروردین 1394');
+	
+	setStatVar('today_view','3');
+	setStatVar('yesterday_view','2');
+	
+	setStatVar('this_month_view','47');
+	setStatVar('last_month_view','21');
+
+	setStatVar('total_view','4938');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (02:32)');
+
+
+
+    
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://zainab-fateme.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://zainab-fateme.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://zainab-fateme.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://zainab-fateme.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://zainab-fateme.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://zainab-fateme.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://zainab-fateme.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://zainab-fateme.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://zainab-fateme.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://zainab-fateme.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://zainab-fateme.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://zainab-fateme.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://zainab-fateme.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://zainab-fateme.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://zainab-fateme.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://zainab-fateme.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<title>حجاب و شهدا</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="author" content="zainab z2g">
+<meta name="language" content="Farsi">
+<meta name="description" content="حجاب و شهدا -      <br />
+ - حجاب و شهدا">
+<meta name="keywords" content="حجاب و شهدا,zainab-fateme,, Blog, Weblog, Persian,Iran, Farsi, Weblogs, sayberi174">
+<link href='http://sayberi174.ir/theme/reyhane/icon.png' rel='icon'/>
+<link rel="alternate" type="application/rss+xml" title="حجاب و شهدا" href="http://zainab-fateme.mihanblog.com/post/rss/">
+<link rel="alternate" type="application/atom+xml" title="حجاب و شهدا" href="http://zainab-fateme.mihanblog.com/post/atom/">
+<link href="http://sayberi174.ir/theme/shahideh/c.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+<div align="center">
+<table border="0" width="1003" class=top cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<div class=titr><br>حجاب و شهدا</div><div style="width:100%;height:20;float:right">&nbsp;</div>
+<div class=des></div>
+</td></tr></table></div>
+
+<div align="center">
+<table border="0" width="1003" class=mnu cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<div class=mnu-sayberi>
+<div style="float:right;width:770;direction:rtl">
+<div style="width:40;height:20;float:right"></div>
+<a href="index.html">صفحه اول</a>
+<a href="http://zainab-fateme.mihanblog.com/post/list">آرشیو مطالب</a>
+<a href="mailto:">پست الكترونیك</a>
+<a href="javascript:messageForm()" title="تماس با مدیران ">
+		  تماس با ما</a>
+<a target="_blank" href="http://sayberi174.persianblog.ir/">قالب ارزشی وبلاگ</a>
+<a target="_blank" href="http://salehon.ir/?cat=1058">قالب مذهبی وبلاگ</a>
+<a href="http://zainab-fateme.mihanblog.com/post/rss/" title="RSS">RSS 2.0</a>
+</div>
+
+<form method="Get" action="http://google.com/search" class=sch><input name="sitesearch" value="zainab-fateme.mihanblog.com" type="hidden">
+<input type="text" name="q" size="22" class=txt>&nbsp;<input type="submit" value=" " class=but>
+</form>
+</td>
+</tr></table>
+
+<table border="0" width="1003" cellspacing="0" cellpadding="0">
+<tr>
+<td width="220" valign="top">
+
+
+
+<!---------- لوگوی ما --------------->
+
+<div class=menul>
+<div class=tmenu>
+<div class=tmenu2>
+<b>لوگوی ما</b></div></div>
+<div class=xmenu>
+
+<center><a href="http://zainab-fateme.mihanblog.com/%D8%A2%D8%AF%D8%B1%D8%B3%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%D8%B4%D9%85%D8%A7"   target="_blank"><img src="http://sayberi174.ir/theme/hejab2/logo.jpg" alt="لوگوی ما"  /></a></center><br>
+
+<center>
+<textarea name="logo" dir="ltr" cols="15" rows="3" tabindex="1">
+<center><a href="http://zainab-fateme.mihanblog.com/%D8%A2%D8%AF%D8%B1%D8%B3%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%D8%B4%D9%85%D8%A7" target="_blank"><img src="http://sayberi174.ir/theme/hejab2/logo.jpg" alt="لوگوی ما" /></a></center>
+</textarea>
+</center>
+
+</div>
+<div class=s></div></div>
+<!---------- لوگوی ما --------------->
+
+
+		
+<!---------- آخرین مطالب --------------->
+<div class=menul>
+<div class=tmenu>
+<div class=tmenu2>
+<b>آخرین مطالب</b></div></div>
+<div class=xmenu>
+<div class=menu-txt>
+<a href="http://zainab-fateme.mihanblog.com/post/13">حاج شیخ حسین انصاریان.طرح دشمنان برای نابودی اسلام</a></div><div class=menu-txt>
+<a href="http://zainab-fateme.mihanblog.com/post/10">....</a></div><div class=menu-txt>
+<a href="http://zainab-fateme.mihanblog.com/post/8">داستان</a></div><div class=menu-txt>
+<a href="http://zainab-fateme.mihanblog.com/post/7">جالبه حتما ببینید و بخونید</a></div><div class=menu-txt>
+<a href="http://zainab-fateme.mihanblog.com/post/5">حجاب</a></div><div class=menu-txt>
+<a href="http://zainab-fateme.mihanblog.com/post/4">شهدا</a></div><div class=menu-txt>
+<a href="http://zainab-fateme.mihanblog.com/post/2">کلیپ</a></div><div class=menu-txt>
+<a href="http://zainab-fateme.mihanblog.com/post/list"><b>لیست آخرین 
+مطالب</b></a></div>
+</div>
+<div class=s></div></div><!---------- آخرین مطالب --------------->
+
+	
+			
+<!---------- نویسندگان --------------->
+<div class=menul>
+<div class=tmenu>
+<div class=tmenu2>
+<b>نویسندگان</b></div></div>
+<div class=xmenu><div class=menu-txt>
+<a href="http://zainab-fateme.mihanblog.com/post/author/1322625"></a>  <a href="http://zainab-fateme.mihanblog.com/post/author/1322625">zainab z2g</a></div></div>
+</div><div class=s></div><!---------- نویسندگان --------------->
+
+
+
+<!---------- نظر سنجی--------------->
+
+		<form id="frm-16077213735fd3e19dd23e5" method="post" action="http://zainab-fateme.mihanblog.com/poll/new/fid/16077213735fd3e19dd23e5/atrty/1607721373/avrvy/0/key/d02307257935e896e023f1fa2dfae8c1/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="331520" id="data[pollid]" />		<div class=menul>
+<div class=tmenu>
+<div class=tmenu2>
+<b>نظر سنجی</b></div></div>
+<div class=xmenu><div class=menu-txt>
+این سایت تا چه اندازه مفید بوده است؟<br><label><input type="radio" name="data[answer]" value="v1">بسیار زیاد</label><br><label><input type="radio" name="data[answer]" value="v2">زیاد</label><br><label><input type="radio" name="data[answer]" value="v3">متوسط</label><br><label><input type="radio" name="data[answer]" value="v4">کم</label><br><label><input type="radio" name="data[answer]" value="v5">اصلا</label><br><br><input type="submit" value="ثبت"></div></div>
+</div><div class=s></div>
+		<input type="hidden" name="frm-id" value="16077213735fd3e19dd23e5" id="frm-id" /></form><!---------- نظر سنجی--------------->
+
+
+<!---------- پیوندها --------------->
+<!---------- پیوندها --------------->
+
+
+<!---------- صفحات جانبی --------------->
+<!---------- صفحات جانبی --------------->
+
+
+<!---------- ابر برچسب ها --------------->
+<!---------- صفحات جانبی --------------->
+			
+			
+			
+			
+<!---------- پیوند های روزانه --------------->
+ 
+<!---------- پیوند های روزانه --------------->
+
+
+
+<!---------- لوگوی همسنگران --------------->
+<div class=menul>
+<div class=tmenu>
+<div class=tmenu2>
+<b>لوگوی همسنگران</b></div></div>
+<div class=xmenu>
+<center>
+<marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();"style="width:200px;height:100px;background-color:#FFFFFF" scrollamount="2" >
+
+
+<p align="center">
+<a href="http://www.leader-khamenei.com" target="_blank" title="شناخت رهبری"><img src="http://leader-khamenei.com/images/banners/logo3.jpg" border="0"></a>
+</p>
+
+<p align="center">
+<center><a href="http://sayberi174.persianblog.ir/" target="_blank"><img src="http://sayberi174.persiangig.com/Logo/Logo-mabarsayberi.jpg" alt="معببر سایبری فندرسک" width="170" height="81" /></a></center></p>
+
+
+<p align="center"><a href="http://www.salehon.ir/" target="_blank">
+<img border="0" src="http://dlsalehon.persiangig.com/logo/salehon.gif" width="117" height="100"></p>
+
+
+
+<p align="center"><a target="_blank" href="  http://hayauni.ir/" title="جنبش دانشجویی حیا"><img border="0" width="150" src=" http://hayauni.ir/wp/wp-content/uploads/2012/07/logo.jpg " height="69" /></a></p>
+
+
+
+</marquee>
+</center>
+</div></div>
+<div class=s></div>
+<!---------- لوگوی همسنگران --------------->
+
+
+
+
+
+
+
+
+</td>
+<td width="563" valign="top">
+
+
+
+
+
+<!-- بلوک ثابت--->
+<center>
+<div class="sayberi5"></div>
+<div class="sayberi6"><div align="center"><div class="sayberi8">
+<center><embed src="http://iqna.ir/banner_flashes/Flash_Fa.swf" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" name="obj3" width="460" height="58" quality="High" wmode="Transparent"></embed></object></center>
+</div></div><div class=ad3></div>
+</div>
+<div class="sayberi7"></div>
+<center>
+<!-- بلوک ثابت--->
+
+
+
+
+<!---------- بلوک ارسال مطلب --------------->
+<div align="center">
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=tpost>
+<div class=tpost2>		
+<b><a href="http://zainab-fateme.mihanblog.com/post/13">حاج شیخ حسین انصاریان.طرح دشمنان برای نابودی اسلام</a></b></div></div>
+<div class=post>
+<div class=post2>		
+<div style="float:right"></div> <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+[[<iframe src="http://www.aparat.com/video/video/embed/videohash/NgvEW/vt/frame" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" height="270" width="480"></iframe>]]
+
+
+
+
+<br>
+<br><b></b>
+<br><br></div>
+</div>
+<div class=post3><div class=post33>
+<div class=date>نوشته شده در تاریخ شنبه 1 فروردین 1394 توسط zainab z2g</div>
+<div class=nazar>
+<a target="_self" href="javascript:newComment(13)" >نظرات (<script>setCommentCnt(13)</script>)</a>
+</div></div></div>
+<div class=tpost>
+<div class=tpost2>		
+<b><a href="http://zainab-fateme.mihanblog.com/post/10">....</a></b></div></div>
+<div class=post>
+<div class=post2>		
+<div style="float:right"></div> <img src="http://axgig.com/images/75524131566904565543.jpg" alt="" data-mce-src="http://axgig.com/images/75524131566904565543.jpg" data-mce-selected="1" style="font-family: Tahoma; font-size: 12px; border: 0px; cursor: default; outline: black solid 1px; line-height: 18px;">
+
+
+<br>
+<br><b></b>
+<br><br></div>
+</div>
+<div class=post3><div class=post33>
+<div class=date>نوشته شده در تاریخ شنبه 1 فروردین 1394 توسط zainab z2g</div>
+<div class=nazar>
+<a target="_self" href="javascript:newComment(10)" >نظرات (<script>setCommentCnt(10)</script>)</a>
+</div></div></div>
+<div class=tpost>
+<div class=tpost2>		
+<b><a href="http://zainab-fateme.mihanblog.com/post/8">داستان</a></b></div></div>
+<div class=post>
+<div class=post2>		
+<div style="float:right"></div> <p dir="RTL" style="text-align: center; line-height: 18px;"><font size="3" face="times new roman, times, serif" color="#660000"><b>&nbsp;</b></font></p><p dir="RTL" style="text-align: center; line-height: 18px;"><font size="3" face="times new roman, times, serif" color="#660000"><b>روزی در هوای گرم مدینه، زنی جوان و زیبا در حالی که طبق&nbsp;<a href="http://www.doostiha.ir/1392/03/22/%d8%ad%da%a9%d8%a7%db%8c%d8%aa-%d8%ac%d8%a7%d9%84%d8%a8-%d9%88-%d8%ae%d9%88%d8%a7%d9%86%d8%af%d9%86%db%8c-%d8%af%d8%b1%d8%a8%d8%a7%d8%b1%d9%87-%d8%ad%d8%ac%d8%a7%d8%a8.html" rel="nofollow" data-mce-href="http://www.doostiha.ir/1392/03/22/%d8%ad%da%a9%d8%a7%db%8c%d8%aa-%d8%ac%d8%a7%d9%84%d8%a8-%d9%88-%d8%ae%d9%88%d8%a7%d9%86%d8%af%d9%86%db%8c-%d8%af%d8%b1%d8%a8%d8%a7%d8%b1%d9%87-%d8%ad%d8%ac%d8%a7%d8%a8.html">معمول</a>&nbsp;روسری خود را به پشت گردن انداخته و دور گردن و بنا گوشش پیدا بود، از کوچه عبور می کرد.</b></font></p><p dir="RTL" style="text-align: center; line-height: 18px;"><font size="3" face="times new roman, times, serif" color="#660000"><b>مردی از اصحاب رسول خدا (ص) از طرف مقابل می آمد. آن منظره زیبا سخت نظر او را جلب کرد و چنان غرق تماشای آن زیبا شد که از خودش و اطرافیانش غافل گشت و جلو خودش را نگاه نمی کرد.</b></font></p><p dir="RTL" style="text-align: center; line-height: 18px;"><font size="3" face="times new roman, times, serif" color="#660000"><b>&nbsp;</b></font></p><p dir="RTL" style="text-align: center; line-height: 18px;"><font size="3" face="times new roman, times, serif" color="#660000"><b>.</b></font></p><p dir="RTL" style="text-align: center; line-height: 18px;"><font size="3" face="times new roman, times, serif" color="#660000"><b>آن زن وارد کوچه ای شد و جوان با چشم خود او را دنبال می کرد. همانطور که می رفت، ناگهان&nbsp;<a href="http://www.doostiha.ir/1392/03/22/%d8%ad%da%a9%d8%a7%db%8c%d8%aa-%d8%ac%d8%a7%d9%84%d8%a8-%d9%88-%d8%ae%d9%88%d8%a7%d9%86%d8%af%d9%86%db%8c-%d8%af%d8%b1%d8%a8%d8%a7%d8%b1%d9%87-%d8%ad%d8%ac%d8%a7%d8%a8.html" rel="nofollow" data-mce-href="http://www.doostiha.ir/1392/03/22/%d8%ad%da%a9%d8%a7%db%8c%d8%aa-%d8%ac%d8%a7%d9%84%d8%a8-%d9%88-%d8%ae%d9%88%d8%a7%d9%86%d8%af%d9%86%db%8c-%d8%af%d8%b1%d8%a8%d8%a7%d8%b1%d9%87-%d8%ad%d8%ac%d8%a7%d8%a8.html">استخوان</a>یا شیشه ای که از دیوار بیرون آمده بود به صورتش اصابت کرد و صورتش را مجروح ساخت، وقتی به خود آمد که خون از سر و صورتش جاری شده بود. با همین حال به حضور رسول اکرم (ص) رفت و ماجرا را به عرض او رساند. اینجا بود که آیه مبارکه نازل شد:</b></font></p><p dir="RTL" style="text-align: center; line-height: 18px;"><font size="3" face="times new roman, times, serif" color="#660000"><b>.</b></font></p><p dir="RTL" style="text-align: center; line-height: 18px;"><font size="3" face="times new roman, times, serif" color="#660000"><b>«ای پیامبر! به مومنان بگو که دیده هاشان را فرو گیرند و عورتهاشان را نگاه دارند زیرا که آن برای ایشان پاکیزه تر است. به درستی که خدا به آنچه می کنند آگاه است و به زنان با ایمان نیز بگو که دیده هاشان را فرو گیرند و عورتهاشان را نگاه دارند و زیور و زینت خود را مگر آنچه از آن آشکار آمد، ظاهر نسازند و باید که روسریها و مقنعه هاشان را بر گریبانهاشان فرو گذارند و پیرایه های خود را ظاهر نسازند،&nbsp;مگر برایشوهرانشان، یا پدرانشان، یا پدران شوهرانشان، یا پسران خواهرانشان، یا زنانشان، یا&nbsp;<a href="http://www.doostiha.ir/1392/03/22/%d8%ad%da%a9%d8%a7%db%8c%d8%aa-%d8%ac%d8%a7%d9%84%d8%a8-%d9%88-%d8%ae%d9%88%d8%a7%d9%86%d8%af%d9%86%db%8c-%d8%af%d8%b1%d8%a8%d8%a7%d8%b1%d9%87-%d8%ad%d8%ac%d8%a7%d8%a8.html" rel="nofollow" data-mce-href="http://www.doostiha.ir/1392/03/22/%d8%ad%da%a9%d8%a7%db%8c%d8%aa-%d8%ac%d8%a7%d9%84%d8%a8-%d9%88-%d8%ae%d9%88%d8%a7%d9%86%d8%af%d9%86%db%8c-%d8%af%d8%b1%d8%a8%d8%a7%d8%b1%d9%87-%d8%ad%d8%ac%d8%a7%d8%a8.html">مملوکان</a>، یا دیوانگان و افراد ابله، یا کودکان غیر ممیّز»</b></font></p><p dir="RTL" style="text-align: center; line-height: 18px;"><font size="3" face="times new roman, times, serif" color="#660000"><b>.</b></font></p><p dir="RTL" style="text-align: center; line-height: 18px;"><font size="3" face="times new roman, times, serif" color="#660000"><b>پیامبر رحمت که درود خدا بر تو باد، کجایی که بیای ببینی چه خبر شده و داره میشه…!</b></font></p><p style="text-align: center; line-height: 18px;"><font size="3" face="times new roman, times, serif" color="#660000"><b>&nbsp;</b></font></p><div id="wp_rp_first" class="wp_rp_wrap  wp_rp_plain" style="text-align: center; line-height: 18px;"><font size="3" face="times new roman, times, serif" color="#660000"><b>&nbsp;</b></font></div>
+
+
+<br>
+<br><b></b>
+<br><br></div>
+</div>
+<div class=post3><div class=post33>
+<div class=date>نوشته شده در تاریخ شنبه 1 فروردین 1394 توسط zainab z2g</div>
+<div class=nazar>
+<a target="_self" href="javascript:newComment(8)" >نظرات (<script>setCommentCnt(8)</script>)</a>
+</div></div></div>
+<div class=tpost>
+<div class=tpost2>		
+<b><a href="http://zainab-fateme.mihanblog.com/post/7">جالبه حتما ببینید و بخونید</a></b></div></div>
+<div class=post>
+<div class=post2>		
+<div style="float:right"></div> <div class="thumb tleft" style="font-family: Tahoma; font-size: 12px; line-height: 18px;"><div class="thumbinner" style="font-size: 9pt;"><div style="text-align: center;"><a class="image" href="http://commons.wikimedia.org/wiki/File:Joueuse_De_Tambourin_(F%C3%A9lix_Auguste_Cl%C3%A9ment).jpg?uselang=fa" rel="nofollow" data-mce-href="http://commons.wikimedia.org/wiki/File:Joueuse_De_Tambourin_(F%C3%A9lix_Auguste_Cl%C3%A9ment).jpg?uselang=fa" style="font-size: 9pt;"><img class="thumbimage" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Joueuse_De_Tambourin_%28F%C3%A9lix_Auguste_Cl%C3%A9ment%29.jpg/220px-Joueuse_De_Tambourin_%28F%C3%A9lix_Auguste_Cl%C3%A9ment%29.jpg" alt="" width="220" height="285" data-file-width="750" data-file-height="970" data-mce-src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Joueuse_De_Tambourin_%28F%C3%A9lix_Auguste_Cl%C3%A9ment%29.jpg/220px-Joueuse_De_Tambourin_%28F%C3%A9lix_Auguste_Cl%C3%A9ment%29.jpg" style="font-size: 9pt; border: 0px; cursor: default;"></a></div><div class="thumbcaption" style="font-size: 9pt;"><div class="magnify" style="text-align: center; font-size: 9pt;">&nbsp;</div><div style="text-align: center;"><span style="font-size: 9pt;">نقّاشی از یک زن مصری در سدهٔ نوزدهم میلادی که پوشش زنان آن عصر را نشان می‌دهد.</span></div></div></div></div><p style="text-align: center; font-family: Tahoma; font-size: 12px; line-height: 18px;">&nbsp;</p><div class="thumb tleft" style="font-family: Tahoma; font-size: 12px; line-height: 18px;"><div class="thumbinner" style="font-size: 9pt;"><div style="text-align: center;"><a class="image" href="http://commons.wikimedia.org/wiki/File:Remas_Mansour.jpg?uselang=fa" rel="nofollow" data-mce-href="http://commons.wikimedia.org/wiki/File:Remas_Mansour.jpg?uselang=fa" style="font-size: 9pt;"><img class="thumbimage" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Remas_Mansour.jpg/220px-Remas_Mansour.jpg" alt="" width="220" height="275" data-file-width="819" data-file-height="1024" data-mce-src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Remas_Mansour.jpg/220px-Remas_Mansour.jpg" style="font-size: 9pt; border: 0px; cursor: default;"></a></div><div class="thumbcaption" style="font-size: 9pt;"><div class="magnify" style="text-align: center; font-size: 9pt;">&nbsp;</div><div style="text-align: center;"><span style="font-size: 9pt;">بازیگر زن عربستانی که دارای حجاب است</span></div></div></div></div><div class="thumb tleft" style="font-family: Tahoma; font-size: 12px; line-height: 18px;"><div class="thumbinner" style="font-size: 9pt;"><div style="text-align: center;"><a class="image" href="http://commons.wikimedia.org/wiki/File:Flickr_-_DavidDennisPhotos.com_-_Woman_in_Cairo_Bazaar.jpg?uselang=fa" rel="nofollow" data-mce-href="http://commons.wikimedia.org/wiki/File:Flickr_-_DavidDennisPhotos.com_-_Woman_in_Cairo_Bazaar.jpg?uselang=fa" style="font-size: 9pt;"><img class="thumbimage" src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Flickr_-_DavidDennisPhotos.com_-_Woman_in_Cairo_Bazaar.jpg/220px-Flickr_-_DavidDennisPhotos.com_-_Woman_in_Cairo_Bazaar.jpg" alt="" width="220" height="147" data-file-width="3504" data-file-height="2336" data-mce-src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Flickr_-_DavidDennisPhotos.com_-_Woman_in_Cairo_Bazaar.jpg/220px-Flickr_-_DavidDennisPhotos.com_-_Woman_in_Cairo_Bazaar.jpg" style="font-size: 9pt; border: 0px; cursor: default;"></a></div><div class="thumbcaption" style="font-size: 9pt;"><div class="magnify" style="text-align: center; font-size: 9pt;">&nbsp;</div><div style="text-align: center;"><span style="font-size: 9pt;">یک زن کارگر مصری در شهر قاهره، با پوشش سر ویژه خود.</span></div></div></div></div><div class="thumb tleft" style="font-family: Tahoma; font-size: 12px; line-height: 18px;"><div class="thumbinner" style="font-size: 9pt;"><div style="text-align: center;"><a class="image" href="http://commons.wikimedia.org/wiki/File:Persian_Beauty_-_Baba_Taher_Mausoleum_-_Hamadan_-_Western_Iran_-_01.jpg?uselang=fa" rel="nofollow" data-mce-href="http://commons.wikimedia.org/wiki/File:Persian_Beauty_-_Baba_Taher_Mausoleum_-_Hamadan_-_Western_Iran_-_01.jpg?uselang=fa" style="font-size: 9pt;"><img class="thumbimage" src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Persian_Beauty_-_Baba_Taher_Mausoleum_-_Hamadan_-_Western_Iran_-_01.jpg/220px-Persian_Beauty_-_Baba_Taher_Mausoleum_-_Hamadan_-_Western_Iran_-_01.jpg" alt="" width="220" height="293" data-file-width="2736" data-file-height="3648" data-mce-src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Persian_Beauty_-_Baba_Taher_Mausoleum_-_Hamadan_-_Western_Iran_-_01.jpg/220px-Persian_Beauty_-_Baba_Taher_Mausoleum_-_Hamadan_-_Western_Iran_-_01.jpg" style="font-size: 9pt; border: 0px; cursor: default;"></a></div><div class="thumbcaption" style="font-size: 9pt;"><div class="magnify" style="text-align: center; font-size: 9pt;">&nbsp;</div><div style="text-align: center;"><span style="font-size: 9pt;">یک دختر ایرانی در شهر همدان، با پوشش شال و شیوهٔ بستن وِیژه آن.</span></div></div></div></div><div class="thumb tleft" style="font-family: Tahoma; font-size: 12px; line-height: 18px;"><div class="thumbinner" style="font-size: 9pt;"><div style="text-align: center;"><a class="image" href="http://commons.wikimedia.org/wiki/File:Bukhara,_Silk_%26_Spice_festival_(6231190823).jpg?uselang=fa" rel="nofollow" data-mce-href="http://commons.wikimedia.org/wiki/File:Bukhara,_Silk_%26_Spice_festival_(6231190823).jpg?uselang=fa" style="font-size: 9pt;"><img class="thumbimage" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Bukhara%2C_Silk_%26_Spice_festival_%286231190823%29.jpg/220px-Bukhara%2C_Silk_%26_Spice_festival_%286231190823%29.jpg" alt="" width="220" height="147" data-file-width="4272" data-file-height="2848" data-mce-src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Bukhara%2C_Silk_%26_Spice_festival_%286231190823%29.jpg/220px-Bukhara%2C_Silk_%26_Spice_festival_%286231190823%29.jpg" style="font-size: 9pt; border: 0px; cursor: default;"></a></div><div class="thumbcaption" style="font-size: 9pt;"><div class="magnify" style="text-align: center; font-size: 9pt;">&nbsp;</div><div style="text-align: center;"><span style="font-size: 9pt;">یک دختر اهل&nbsp;</span><a title="بخارا" href="http://fa.wikipedia.org/wiki/%D8%A8%D8%AE%D8%A7%D8%B1%D8%A7" rel="nofollow" data-mce-href="http://fa.wikipedia.org/wiki/%D8%A8%D8%AE%D8%A7%D8%B1%D8%A7" style="font-size: 9pt;">بخارا</a><span style="font-size: 9pt;">&nbsp;در لباس سنّتی کشورش.</span></div></div></div></div><div class="thumb tleft" style="font-family: Tahoma; font-size: 12px; line-height: 18px;"><div class="thumbinner" style="font-size: 9pt;"><div style="text-align: center;"><a class="image" href="http://commons.wikimedia.org/wiki/File:MegawatiSukarnoputriinhijab0.png?uselang=fa" rel="nofollow" data-mce-href="http://commons.wikimedia.org/wiki/File:MegawatiSukarnoputriinhijab0.png?uselang=fa" style="font-size: 9pt;"><img class="thumbimage" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/MegawatiSukarnoputriinhijab0.png/220px-MegawatiSukarnoputriinhijab0.png" alt="" width="220" height="392" data-file-width="592" data-file-height="1056" data-mce-src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/MegawatiSukarnoputriinhijab0.png/220px-MegawatiSukarnoputriinhijab0.png" style="font-size: 9pt; border: 0px; cursor: default;"></a></div><div class="thumbcaption" style="font-size: 9pt;"><div class="magnify" style="text-align: center; font-size: 9pt;">&nbsp;</div><div style="text-align: center;"><span style="font-size: 9pt;">حجاب&nbsp;</span><a title="مگاواتی سوکارنوپوتری" href="http://fa.wikipedia.org/wiki/%D9%85%DA%AF%D8%A7%D9%88%D8%A7%D8%AA%DB%8C_%D8%B3%D9%88%DA%A9%D8%A7%D8%B1%D9%86%D9%88%D9%BE%D9%88%D8%AA%D8%B1%DB%8C" rel="nofollow" data-mce-href="http://fa.wikipedia.org/wiki/%D9%85%DA%AF%D8%A7%D9%88%D8%A7%D8%AA%DB%8C_%D8%B3%D9%88%DA%A9%D8%A7%D8%B1%D9%86%D9%88%D9%BE%D9%88%D8%AA%D8%B1%DB%8C" style="font-size: 9pt;">مگاواتی سوکارنوپوتری</a><span style="font-size: 9pt;">، رئیس‌جمهور سابق&nbsp;</span><a title="اندونزی" href="http://fa.wikipedia.org/wiki/%D8%A7%D9%86%D8%AF%D9%88%D9%86%D8%B2%DB%8C" rel="nofollow" data-mce-href="http://fa.wikipedia.org/wiki/%D8%A7%D9%86%D8%AF%D9%88%D9%86%D8%B2%DB%8C" style="font-size: 9pt;">اندونزی</a></div></div></div></div><div class="thumb tleft" style="font-family: Tahoma; font-size: 12px; line-height: 18px;"><div class="thumbinner" style="font-size: 9pt;"><div style="text-align: center;"><a class="image" href="http://commons.wikimedia.org/wiki/File:University_student,_Damascus,_Syria.jpg?uselang=fa" rel="nofollow" data-mce-href="http://commons.wikimedia.org/wiki/File:University_student,_Damascus,_Syria.jpg?uselang=fa" style="font-size: 9pt;"><img class="thumbimage" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/42/University_student%2C_Damascus%2C_Syria.jpg/220px-University_student%2C_Damascus%2C_Syria.jpg" alt="" width="220" height="147" data-file-width="3888" data-file-height="2592" data-mce-src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/42/University_student%2C_Damascus%2C_Syria.jpg/220px-University_student%2C_Damascus%2C_Syria.jpg" style="font-size: 9pt; border: 0px; cursor: default;"></a></div><div class="thumbcaption" style="font-size: 9pt;"><div class="magnify" style="text-align: center; font-size: 9pt;">&nbsp;</div><div style="text-align: center;"><span style="font-size: 9pt;">یک دختر&nbsp;</span><a class="mw-redirect" title="دانشجو" href="http://fa.wikipedia.org/wiki/%D8%AF%D8%A7%D9%86%D8%B4%D8%AC%D9%88" rel="nofollow" data-mce-href="http://fa.wikipedia.org/wiki/%D8%AF%D8%A7%D9%86%D8%B4%D8%AC%D9%88" style="font-size: 9pt;">دانشجوی</a><span style="font-size: 9pt;">&nbsp;</span><a title="دمشق" href="http://fa.wikipedia.org/wiki/%D8%AF%D9%85%D8%B4%D9%82" rel="nofollow" data-mce-href="http://fa.wikipedia.org/wiki/%D8%AF%D9%85%D8%B4%D9%82" style="font-size: 9pt;">دمشقی</a><span style="font-size: 9pt;">.</span></div></div></div></div><div class="thumb tleft" style="font-family: Tahoma; font-size: 12px; line-height: 18px;"><div class="thumbinner" style="font-size: 9pt;"><div style="text-align: center;"><a class="image" href="http://commons.wikimedia.org/wiki/File:Persian_Girl.jpg?uselang=fa" rel="nofollow" data-mce-href="http://commons.wikimedia.org/wiki/File:Persian_Girl.jpg?uselang=fa" style="font-size: 9pt;"><img class="thumbimage" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Persian_Girl.jpg/220px-Persian_Girl.jpg" alt="" width="220" height="315" data-file-width="1728" data-file-height="2473" data-mce-src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Persian_Girl.jpg/220px-Persian_Girl.jpg" style="font-size: 9pt; border: 0px; cursor: default;"></a></div><div class="thumbcaption" style="font-size: 9pt;"><div class="magnify" style="text-align: center; font-size: 9pt;">&nbsp;</div><div style="text-align: center;"><span style="font-size: 9pt;">روسری به عنوان حجاب سر (مو) یک زن ایرانی در عصر حاضر.</span></div></div></div></div><div class="thumb tleft" style="font-family: Tahoma; font-size: 12px; line-height: 18px;"><div class="thumbinner" style="font-size: 9pt;"><div style="text-align: center;"><a class="image" href="http://commons.wikimedia.org/wiki/File:Hijabi_in_front_of_mosue_in_Cairo.jpg?uselang=fa" rel="nofollow" data-mce-href="http://commons.wikimedia.org/wiki/File:Hijabi_in_front_of_mosue_in_Cairo.jpg?uselang=fa" style="font-size: 9pt;"><img class="thumbimage" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Hijabi_in_front_of_mosue_in_Cairo.jpg/220px-Hijabi_in_front_of_mosue_in_Cairo.jpg" alt="" width="220" height="143" data-file-width="769" data-file-height="499" data-mce-src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Hijabi_in_front_of_mosue_in_Cairo.jpg/220px-Hijabi_in_front_of_mosue_in_Cairo.jpg" style="font-size: 9pt; border: 0px; cursor: default;"></a></div><div class="thumbcaption" style="font-size: 9pt;"><div class="magnify" style="text-align: center; font-size: 9pt;">&nbsp;</div><div style="text-align: center;"><span style="font-size: 9pt;">یک عکس مشهور که در دفاع از حجاب به عنوان «</span><a class="mw-redirect" title="پاکدامنی" href="http://fa.wikipedia.org/wiki/%D9%BE%D8%A7%DA%A9%D8%AF%D8%A7%D9%85%D9%86%DB%8C" rel="nofollow" data-mce-href="http://fa.wikipedia.org/wiki/%D9%BE%D8%A7%DA%A9%D8%AF%D8%A7%D9%85%D9%86%DB%8C" style="font-size: 9pt;">عفّت</a><span style="font-size: 9pt;">» در ایران و مصر بسیار چاپ شده است.</span></div></div></div></div><div class="thumb tleft" style="font-family: Tahoma; font-size: 12px; line-height: 18px;"><div class="thumbinner" style="font-size: 9pt;"><div style="text-align: center;"><a class="image" href="http://commons.wikimedia.org/wiki/File:US_Navy_060428-N-2911P-008_Iraqi_women_line_up_to_receive_humanitarian_assistance_boxes_from_U.S._Army_soldiers_in_Kamaliya,_Iraq.jpg?uselang=fa" rel="nofollow" data-mce-href="http://commons.wikimedia.org/wiki/File:US_Navy_060428-N-2911P-008_Iraqi_women_line_up_to_receive_humanitarian_assistance_boxes_from_U.S._Army_soldiers_in_Kamaliya,_Iraq.jpg?uselang=fa" style="font-size: 9pt;"><img class="thumbimage" src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/US_Navy_060428-N-2911P-008_Iraqi_women_line_up_to_receive_humanitarian_assistance_boxes_from_U.S._Army_soldiers_in_Kamaliya%2C_Iraq.jpg/220px-US_Navy_060428-N-2911P-008_Iraqi_women_line_up_to_receive_humanitarian_assistance_boxes_from_U.S._Army_soldiers_in_Kamaliya%2C_Iraq.jpg" alt="" width="220" height="146" data-file-width="1024" data-file-height="678" data-mce-src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/US_Navy_060428-N-2911P-008_Iraqi_women_line_up_to_receive_humanitarian_assistance_boxes_from_U.S._Army_soldiers_in_Kamaliya%2C_Iraq.jpg/220px-US_Navy_060428-N-2911P-008_Iraqi_women_line_up_to_receive_humanitarian_assistance_boxes_from_U.S._Army_soldiers_in_Kamaliya%2C_Iraq.jpg" style="font-size: 9pt; border: 0px; cursor: default;"></a></div><div class="thumbcaption" style="font-size: 9pt;"><div class="magnify" style="text-align: center; font-size: 9pt;">&nbsp;</div><div style="text-align: center;"><span style="font-size: 9pt;">در میان زنان اهل جنوب عراق،&nbsp;</span><a class="mw-redirect" title="عبا" href="http://fa.wikipedia.org/wiki/%D8%B9%D8%A8%D8%A7" rel="nofollow" data-mce-href="http://fa.wikipedia.org/wiki/%D8%B9%D8%A8%D8%A7" style="font-size: 9pt;">عبا</a><span style="font-size: 9pt;">&nbsp;و</span><a title="شال" href="http://fa.wikipedia.org/wiki/%D8%B4%D8%A7%D9%84" rel="nofollow" data-mce-href="http://fa.wikipedia.org/wiki/%D8%B4%D8%A7%D9%84" style="font-size: 9pt;">شال</a><span style="font-size: 9pt;">&nbsp;تیره رنگ مهم ترین حجاب است.</span></div></div></div></div><p style="text-align: center; font-family: Tahoma; font-size: 12px; line-height: 18px;">&nbsp;</p>
+
+
+<br>
+<br><b></b>
+<br><br></div>
+</div>
+<div class=post3><div class=post33>
+<div class=date>نوشته شده در تاریخ شنبه 1 فروردین 1394 توسط zainab z2g</div>
+<div class=nazar>
+<a target="_self" href="javascript:newComment(7)" >نظرات (<script>setCommentCnt(7)</script>)</a>
+</div></div></div>
+<div class=tpost>
+<div class=tpost2>		
+<b><a href="http://zainab-fateme.mihanblog.com/post/5">حجاب</a></b></div></div>
+<div class=post>
+<div class=post2>		
+<div style="float:right"></div> <p style="text-align: center; line-height: 18px;"><font color="#660000" size="3" face="times new roman, times, serif"><b>حجاب از دیدگاه فقها یکی از&nbsp;<a class="mw-redirect" title="احکام" href="http://fa.wikipedia.org/wiki/%D8%A7%D8%AD%DA%A9%D8%A7%D9%85" rel="nofollow" data-mce-href="http://fa.wikipedia.org/wiki/%D8%A7%D8%AD%DA%A9%D8%A7%D9%85">احکام</a>&nbsp;<a class="mw-redirect" title="اسلامی" href="http://fa.wikipedia.org/wiki/%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C" rel="nofollow" data-mce-href="http://fa.wikipedia.org/wiki/%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C">اسلامی</a>&nbsp;است که برای پوشش زنان و مردان وضع شده‌است و اصطلاحاً عبارت است از پوشاندن ضروری مو و سایر اعضای بدن به جز صورت و دو دست (و گاهی دو پا) توسط زنان مسلمان (تنها در صورتی که کنیز نباشند<sup id="cite_ref-1" class="reference"><a href="http://fa.wikipedia.org/wiki/%D8%AD%D8%AC%D8%A7%D8%A8_%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C#cite_note-1" rel="nofollow" data-mce-href="http://fa.wikipedia.org/wiki/%D8%AD%D8%AC%D8%A7%D8%A8_%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C#cite_note-1">[۱]</a></sup>)، در برابر مردانی که طبق&nbsp;<a class="mw-redirect" title="شریعت" href="http://fa.wikipedia.org/wiki/%D8%B4%D8%B1%DB%8C%D8%B9%D8%AA" rel="nofollow" data-mce-href="http://fa.wikipedia.org/wiki/%D8%B4%D8%B1%DB%8C%D8%B9%D8%AA">شریعت</a>&nbsp;اسلامی نامحرم شمرده می‌شوند. درباره پوشش مردان نیز حداقل مقدار پوشش واجب حفظ عورتین است.<sup id="cite_ref-2" class="reference"><a href="http://fa.wikipedia.org/wiki/%D8%AD%D8%AC%D8%A7%D8%A8_%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C#cite_note-2" rel="nofollow" data-mce-href="http://fa.wikipedia.org/wiki/%D8%AD%D8%AC%D8%A7%D8%A8_%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C#cite_note-2">[۲]</a></sup></b></font></p><p style="text-align: center; line-height: 18px;"><font color="#660000" size="3" face="times new roman, times, serif"><b>امروزه حجاب در کاربرد عام به پوشش ضروری زنان اطلاق می‌شود و به یکی از نمادهای بسیاری از جوامع اسلامی تبدیل شده و در برخی کشورها از جمله ایران رعایت آن در مکان‌های عمومی برای همهٔ زنان (با هر اعتقاد دینی) اجباری است. با وجود این، گروهی از نواندیشان دینی شیعه و سنی وجوب حجاب در اسلام را زیر سوال برده‌اند.</b></font></p>
+
+
+<br>
+<br><b></b>
+<br><br></div>
+</div>
+<div class=post3><div class=post33>
+<div class=date>نوشته شده در تاریخ شنبه 1 فروردین 1394 توسط zainab z2g</div>
+<div class=nazar>
+<a target="_self" href="javascript:newComment(5)" >نظرات (<script>setCommentCnt(5)</script>)</a>
+</div></div></div>
+<div class=tpost>
+<div class=tpost2>		
+<b><a href="http://zainab-fateme.mihanblog.com/post/4">شهدا</a></b></div></div>
+<div class=post>
+<div class=post2>		
+<div style="float:right"></div> 
+<div><br></div><div style="text-align: center;"><img src="http://axgig.com/images/77820279874200893740.gif" alt="" data-mce-src="http://axgig.com/images/77820279874200893740.gif" data-mce-selected="1" style="font-family: Tahoma; font-size: 12px; border: 0px; cursor: default; outline: black solid 1px; line-height: 18px;"><img src="http://www.jamejamonline.ir/Media/images/1389/07/02/L00886614740.jpg" alt="" data-mce-src="http://www.jamejamonline.ir/Media/images/1389/07/02/L00886614740.jpg" data-mce-selected="1" style="font-family: Tahoma; font-size: 12px; border: 0px; cursor: default; outline: black solid 1px; line-height: 18px;"><img src="http://s1.picofile.com/file/7465640856/llk9bfs1uoxepltti7.png" alt="" width="465" height="350" data-mce-src="http://s1.picofile.com/file/7465640856/llk9bfs1uoxepltti7.png" data-mce-selected="1" style="font-family: Tahoma; font-size: 12px; border: 0px; cursor: default; outline: black solid 1px; line-height: 18px;"><img src="http://s5.picofile.com/file/8117345834/hejabpix_blogfa_com_741.jpg" alt="" data-mce-src="http://s5.picofile.com/file/8117345834/hejabpix_blogfa_com_741.jpg" data-mce-selected="1" style="font-family: Tahoma; font-size: 12px; border: 0px; cursor: default; outline: black solid 1px; line-height: 18px;"></div>
+
+<br>
+<br><b></b>
+<br><br></div>
+</div>
+<div class=post3><div class=post33>
+<div class=date>نوشته شده در تاریخ شنبه 1 فروردین 1394 توسط zainab z2g</div>
+<div class=nazar>
+<a target="_self" href="javascript:newComment(4)" >نظرات (<script>setCommentCnt(4)</script>)</a>
+</div></div></div>
+<div class=tpost>
+<div class=tpost2>		
+<b><a href="http://zainab-fateme.mihanblog.com/post/2">کلیپ</a></b></div></div>
+<div class=post>
+<div class=post2>		
+<div style="float:right"></div> 
+
+		<!--AparatShow-->
+				<div style="display:none">[http://www.aparat.com/v/HFOgZ]</div>
+                <div class="aparatFrame">
+                    <iframe frameborder=0  allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" width="435" height="290" src="http://www.aparat.com/video/video/embed/videohash/HFOgZ/vt/frame"> </iframe>
+                </div>
+
+		<!--eoAparatShow-->
+				
+
+
+
+
+<br>
+<br><b></b>
+<br><br></div>
+</div>
+<div class=post3><div class=post33>
+<div class=date>نوشته شده در تاریخ شنبه 1 فروردین 1394 توسط zainab z2g</div>
+<div class=nazar>
+<a target="_self" href="javascript:newComment(2)" >نظرات (<script>setCommentCnt(2)</script>)</a>
+</div></div></div>
+<!---------- بلوک ارسال مطلب --------------->			
+
+
+
+
+<!---------- لیست --------------->
+<!---------- لیست --------------->
+
+
+
+
+<!---------- صفحه بندی --------------->
+</div>
+<!---------- صفحه بندی --------------->
+
+
+			
+</td>
+<td width="220" valign="top">
+
+
+
+
+<!---------- پروفایل --------------->
+<div class=menur>
+<div class=tmenu>
+<div class=tmenu2>
+<b>درباره وبلاگ</b></div></div>
+<div class=xmenu>  <div class=menu-txt2>
+<div style="text-align:center;"></div>
+<br>
+     <br />
+</div></div>
+<div class=s></div></div>
+<!---------- پروفایل --------------->
+
+
+
+
+
+<!---------- آرشیو مطالب --------------->
+<div class=menur>
+<div class=tmenu>
+<div class=tmenu2>
+<b>آرشیو مطالب</b></div></div>
+<div class=xmenu>
+<div class=menu-txt>
+<a href="http://zainab-fateme.mihanblog.com/post/archive/1394/1"> فروردین 1394</a></div></div>
+<div class=s></div></div>
+<!---------- آرشیو مطالب --------------->
+
+			
+
+
+
+
+
+<!---------- موضوعات --------------->
+<!---------- موضوعات --------------->
+
+
+
+			
+<!---------- آمار سایت --------------->
+<div class=menur>
+<div class=tmenu>
+<div class=tmenu2>
+<b>آمار سایت</b></div></div>
+<div class=xmenu><div class=menu-txt2>
+بازدیدهای امروز : <span><script>getStatVar('today_view');</script></span> نفر<br>
+بازدیدهای دیروز : <span><script>getStatVar('yesterday_view');</script></span> نفر<br>
+كل بازدیدها : <span><script>getStatVar('total_view');</script></span> نفر<br>
+بازدید این ماه :<span> <script>getStatVar('this_month_view');</script></span> نفر<br>
+بازدید ماه قبل : <span><script>getStatVar('last_month_view');</script></span> نفر<br>
+تعداد نویسندگان : <span><script>getStatVar('total_author');</script></span> عدد<br>
+كل مطالب : <span><script>getStatVar('total_post');</script></span> عدد<br>
+آخرین بازدید : <span><script>getStatVar('last_view_date');</script></span><br>
+آخرین بروز رسانی : <span><script>getStatVar('modify_date');</script></span>
+				</div></div>			<div class=s></div></div>
+<!---------- آمار سایت --------------->
+
+
+
+<!---------- امکانات جانبی --------------->
+<div class=menur>
+<div class=tmenu>
+<div class=tmenu2>
+<b>امکانات جانبی</b></div></div>
+<div class=xmenu>
+<div id="c" style="text-align:center;width:210;float:right;"><font face="Tahoma"><span style="font-size: 8pt">
+<br> <center> <object type="application/x-shockwave-flash" data="http://dl2.baroonava.com/92/www.baroonava.com.swf" width="121" height="20" id="www.baroonava.com" name="www.baroonava.com"> <param name="wmode" value="transparent" /><param name="movie" value="http://dl2.baroonava.com/92/www.baroonava.com.swf" /> <param name="flashvars" value="mp3=http://dl2.baroonava.com/93/01/Merajiha%28BaroonAva.CoM%29.mp3?view&autostart=1&autoreplay=1&showtime=1&nopointer=1" /> </object><br><a href="http://www.baroonava.com" _fcksavedurl="http://www.baroonava.com" target="_blank" rel="nofollow" ><font size="3" face="b traffic">کد آهنگ برای وبلاگ</font></a> </object><br><a href="http://www.baroonava.com" _fcksavedurl="http://www.baroonava.com" target="_blank" rel="nofollow" ><font size="3" face="b traffic">دانلود آهنگ جدید</font></a>
+</span></font></div>			
+</div>
+<div class=s></div></div>
+<!---------- امکانات جانبی --------------->
+
+
+<!---------- طراح قالب --------------->
+<cb:block_blog_category>
+<div class=menur>
+<div class=tmenu>
+<div class=tmenu2>
+<b>طراح قالب</b></div></div>
+<div class=xmenu>
+<center><a href="http://sayberi174.persianblog.ir/" target="_blank"><img src="http://sayberi174.persiangig.com/Logo/Logo-mabarsayberi.jpg" alt="معببر سایبری فندرسک" width="170" height="81" /></a></center>
+</div><div class=s></div></div>
+
+<!---------- طراح قالب --------------->
+
+
+
+
+</td>
+</tr>
+<tr>
+<td width="1003" colspan="3" class="ft">
+<div class="bala"><a href="index.html#"><img src="http://sayberi174.ir/theme/shahideh/b.gif" /></a></div>
+تمامی حقوق مطالب برای <a href="index.html">حجاب و شهدا</a> محفوظ می باشد </td>
+</tr>
+</table>
+</div></div></body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'zainab-fateme.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

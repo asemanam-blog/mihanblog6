@@ -1,0 +1,1429 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*641954*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','504');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','چهارشنبه 5 آذر 1399');
+	
+	setStatVar('today_view','277');
+	setStatVar('yesterday_view','81');
+	
+	setStatVar('this_month_view','5506');
+	setStatVar('last_month_view','3943');
+
+	setStatVar('total_view','251721');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (06:28)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://zendegimoon.mihanblog.com/statupdate/?data[refereruri]=http://zendegimoon.mihanblog.com/post/archive/page/2&data[postid]=&data[requesturi]=/post/archive/1394/11&data[sdate]=1608173897&data[hash]=89cd11e36d5353a8cca0c9bbe8daa6ad&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[73]='1';commentCnt[75]='13';commentCnt[76]='0';commentCnt[77]='2';commentCnt[78]='5';commentCnt[79]='2';commentCnt[81]='9';commentCnt[82]='8';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[73]='0';
+mihanblogDisLikeArrCnt[73]='0';
+mihanblogLikeArrCnt[75]='0';
+mihanblogDisLikeArrCnt[75]='0';
+mihanblogLikeArrCnt[76]='0';
+mihanblogDisLikeArrCnt[76]='0';
+mihanblogLikeArrCnt[77]='0';
+mihanblogDisLikeArrCnt[77]='0';
+mihanblogLikeArrCnt[78]='0';
+mihanblogDisLikeArrCnt[78]='0';
+mihanblogLikeArrCnt[79]='0';
+mihanblogDisLikeArrCnt[79]='0';
+mihanblogLikeArrCnt[81]='2';
+mihanblogDisLikeArrCnt[81]='0';
+mihanblogLikeArrCnt[82]='0';
+mihanblogDisLikeArrCnt[82]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://zendegimoon.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://zendegimoon.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<title>زندگی یک زوج ایرانی آلمانی - مطالب  بهمن 1394</title>
+<base href="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Language" content="fa">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="alternate" type="application/rss+xml" title="زندگی یک زوج ایرانی آلمانی" href="../../rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title="زندگی یک زوج ایرانی آلمانی"  href="../../atom/index.html" />
+<style type="text/css">
+
+body { font-family: Tahoma; font-size: 8pt; text-align: center; direction: ltr; line-height: 18px; margin: 0px; background-color: #F3B08E; }
+.page { width: 990px; margin-right: auto; margin-left: auto; direction: rtl; background-color: #FADED0; margin-top: 0px; margin-bottom: 0px; padding: 0px; }
+/******************* header ******************/
+.header { height: 400px; width: 990px; text-align: center; background-repeat: no-repeat; margin-bottom: 0px; background-image: url(http://s7.picofile.com/file/8252907026/theme_01.jpg); }
+.header-mid { width: 90%; margin-left: auto; padding-top: 50px; text-align: right; margin-right: auto; }
+.header h1 { font-family: Arial; font-size: 28px; font-weight: bold; margin: 0px; }
+.header h3 { font-family: Tahoma; font-size: 12px; margin: 0px; padding-top: 20px; color: #F6D0C0; }
+.header A { color: #F6D0C0; text-decoration: none; }
+/****************** navbar ******************/
+.navbar { height: 60px; width: 990px; text-align: center; margin-top: 0px; margin-bottom: 10px; background-repeat: no-repeat; background-position: center top; background-image: url(http://s6.picofile.com/file/8252907042/theme_02.jpg); }
+.navbar-mid { width: 90%; margin-right: auto; margin-left: auto; padding-top: 18px; }
+.navbar ul { padding: 0px; margin: 0px 30px 0px 0px; }
+.navbar li { float: right; list-style-type: none; font-size: 9pt; font-weight: bold; margin-left: 40px; }
+.navbar li a:link { color: #000000; text-decoration: none; }
+.navbar li a:visited { color: #000000; text-decoration: none; }
+.navbar li a:hover { color: #626262; text-decoration: none; }
+/***************** content *******************/
+.main { width: 990px; }
+.content { float: right; width: 550px; }
+.bodypost { width: 550px; margin-bottom: 15px; background-image: url(http://s7.picofile.com/file/8252907192/theme_10.jpg); background-repeat: repeat-y; }
+.bodypost a:link { color: #808080; text-decoration: none; }
+.bodypost a:visited { color: #808080; text-decoration: none; }
+.bodypost a:hover { color: #000000; text-decoration: none; }
+.ptitle { height: 60px; text-align: center; background-repeat: no-repeat; background-position: center; background-image: url(http://s6.picofile.com/file/8252907092/theme_07.jpg); }
+.ptitle-mid { text-align: right; width: 450px; margin-right: 80px; margin-left: 20px; padding-top: 20px; }
+.ptitle a:link { color: #000; text-decoration: none; }
+.ptitle a:visited { color: #000; text-decoration: none; }
+.ptitle a:hover { color: #000; text-decoration: none; }
+.ptitle h2 { margin: 0px; font-family: Arial; font-size: 12pt; font-weight: bold; }
+.ptext { text-align: center; font-family: Tahoma; font-size: 9pt; }
+.ptext-mid { width: 95%; margin-right: auto; margin-left: auto; padding-top: 3px; padding-bottom: 3px; text-align: right; }
+.ptext img { max-width: 95%; height: auto; }
+.ptext img:hover { }
+.pinfo { }
+.pinfo-mid { width: 95%; margin-right: auto; margin-left: auto; text-align: right; padding-bottom: 10px; }
+.author { float: right; width: 45%; }
+.date { float: left; width: 45%; }
+.pcat { }
+.pcat-mid { width: 95%; margin-right: auto; margin-left: auto; text-align: right; padding-top: 3px; padding-bottom: 5px; }
+.pcomore { font-size: 9pt; }
+.pcomore-mid { text-align: right; width: 95%; margin-right: auto; margin-left: auto; padding-top: 12px; }
+.pcomore a:link { color: #000000; }
+.pcomore a:visited { color: #000000; }
+.pcomore a:hover { color: #000000; }
+.pmore { float: right; width: 40%; }
+.pcomment { float: left; width: 40%; }
+.p-bbg { height: 20px; background-repeat: no-repeat; background-position: center; background-image: url(http://s7.picofile.com/file/8252907284/theme_12.jpg); }
+.paper { width: 550px; background-color: #FCF1EB; border-radius: 10px; border: 1px solid #F09F76; }
+.paper-tbg { height: 10px; }
+.paper-text { text-align: center; font-family: Tahoma; font-size: 9pt; font-weight: bold; background-repeat: repeat-y; background-position: center; }
+.paper-text-mid { width: 90%; margin-top: auto; margin-bottom: auto; padding-top: 5px; padding-bottom: 5px; }
+.paper-text a:link { color: #000; text-decoration: none; }
+.paper-text a:visited { color: #000; text-decoration: none; }
+.paper-text a:hover { color: #535353; text-decoration: none; }
+.paper-text ul { margin: 0px; padding: 0px; }
+.paper-text li { float: right; margin-left: 20px; list-style-type: none; }
+.paper-text li a:link { color: #000; text-decoration: none; }
+.paper-text li a:visited { color: #000; text-decoration: none; }
+.paper-text li a:hover { color: #535353; text-decoration: none; }
+.paper-bbg { height: 10px; }
+.rpapers { float: right; width: 49%; }
+.lpapers { float: left; width: 49%; }
+/***************** rbar **********************/
+.right { float: right; width: 200px; margin-left: 10px; margin-right: 10px; }
+.rm { margin-bottom: 10px; }
+.rmtitle { height: 60px; text-align: center; font-family: Arial; font-size: 11pt; font-weight: bold; color: #000; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907068/theme_05.jpg); }
+.rmtitle-mid { width: 160px; margin-right: auto; margin-left: auto; padding-top: 20px; text-align: right; }
+.rmtext { text-align: center; background-repeat: repeat-y; background-image: url(http://s7.picofile.com/file/8252907126/theme_09.jpg); }
+.rmtext-mid { width: 90%; margin-right: auto; margin-left: auto; text-align: right; padding-top: 5px; padding-bottom: 5px; }
+.rmtext a:link { color: #000; text-decoration: none; }
+.rmtext a:visited { color: #000; text-decoration: none; }
+.rmtext a:hover { color: #666; text-decoration: none; }
+.rmtext ul { padding: 0px; margin: 0px; }
+.rmtext li { list-style-type: none; }
+.rmtext li a:link { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.rmtext li a:visited { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.rmtext li a:hover { color: #666; text-decoration: none; display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; }
+.rmtext img { max-width: 98%; height: auto; }
+.rmtext img:hover { }
+.rm-bbg { height: 20px; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907268/theme_11.jpg); }
+/***************** lbar ***********************/
+.left { float: left; width: 200px; margin-left: 10px; }
+.lm { margin-bottom: 10px; }
+.lmtitle { height: 60px; text-align: center; font-family: Arial; font-size: 11pt; font-weight: bold; color: #000; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907068/theme_05.jpg); }
+.lmtitle-mid { width: 160px; margin-right: auto; margin-left: auto; padding-top: 20px; text-align: right; }
+.lmtext { text-align: center; background-repeat: repeat-y; background-image: url(http://s7.picofile.com/file/8252907126/theme_09.jpg); }
+.lmtext-mid { width: 90%; margin-right: auto; margin-left: auto; text-align: right; padding-top: 5px; padding-bottom: 5px; }
+.lmtext a:link { color: #000; text-decoration: none; }
+.lmtext a:visited { color: #000; text-decoration: none; }
+.lmtext a:hover { color: #666; text-decoration: none; }
+.lmtext ul { padding: 0px; margin: 0px; }
+.lmtext li { list-style-type: none; }
+.lmtext li a:link { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.lmtext li a:visited { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.lmtext li a:hover { color: #666; text-decoration: none; display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; }
+.lmtext img { max-width: 98%; height: auto; }
+.lmtext img:hover { }
+.lm-bbg { height: 20px; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907268/theme_11.jpg); }
+/*************** footer **************************/
+.footer { height: 240px; width: 990px; margin-top: 10px; margin-bottom: 0px; font-family: Tahoma; font-size: 10pt; color: #000; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907334/theme_14.jpg); }
+.footer-mid { width: 80%; margin-right: auto; margin-left: auto; padding-top: 100px; text-align: center; }
+.footer a:link { color: #000; text-decoration: none; font-weight: normal; }
+.footer a:visited { color: #000; text-decoration: none; font-weight: normal; }
+.footer a:hover { color: #000; text-decoration: none; font-weight: normal; }
+/************** etc class **************************/
+.profile-img { text-align: center; margin-top: 5px; margin-bottom: 5px; }
+.profile-text { text-align: justify; }
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="header-mid">
+      <h1><a href="../../../index.html">زندگی یک زوج ایرانی آلمانی</a></h1>
+      <h3>خاطرات زندگی من در آلمان</h3>
+    </div>
+  </div>
+  <!--- e header --->
+  
+  <div class="navbar">
+    <div class="navbar-mid">
+      <ul>
+        <li><a href="../../../index.html">خانه</a></li>
+        <li><a href="../../archive.html">آرشیو</a></li>
+        <li><a href="mailto:">ایمیل</a></li>
+        <li><a href="../../rss/index.html">RSS</a></li>
+        <li><a href="http://cafeskin.blogfa.com/">قالب وبلاگ</a></li>
+        <li><a href="../../list.html">عناوین </a></li>
+      </ul>
+    </div>
+  </div>
+  <!--- e navbar ---->
+  
+  <div class="main">
+    <div class="right">
+      <div class="rm">
+        <div class="rmtitle">
+          <div class="rmtitle-mid">درباره من</div>
+        </div>
+        <div class="rmtext">
+          <div class="rmtext-mid">
+            <div class="profile-img"> <img src="http://static.mihanblog.com//public/user_data/web_photo/214/641954.jpg?2651"  /></div>
+            <div class="profile-text">می روم راه دور...خیلی دور..آسمان وطن خدا حافظ<br />
+شهر سرد قدیمی ام بدرود،ایران زیبای من خدا حافظ<br />
+<br />
+می روم راه دور خیلی دور،دورم از چشمهای روشن تو<br />
+منتظر می شوم تو هم برسی،تا دلم بشکفد به دیدن تو<br />
+<br />
+کوله بارم چه قدر سنگین است&quot;از وطن نان و نور آوردم<br />
+عطردلچسب چادر مادر،عشق را با غرور آوردم<br />
+<br />
+شانه های برادرم اینجاست،موی خوشبوی مادرم اینجاست<br />
+گرمی مهربان دست پدر،کیف قرآن و دفترم اینجاست<br />
+<br />
+می روم راه دور خیلی دور،تو همیشه کنار من هستی<br />
+دوستت دارم و دلم با توست،دور و نزدیک،یار من هستی</div>
+          </div>
+        </div>
+        <div class="rm-bbg"></div>
+      </div>
+              <div class="rm">
+          <div class="rmtitle">
+            <div class="rmtitle-mid">موضوعات</div>
+          </div>
+          <div class="rmtext">
+            <div class="rmtext-mid">
+              <ul>
+                                  <li> <a href="../../category/6.html">ادبی&nbsp;(14) </a> </li>
+                                  <li> <a href="../../category/4.html">مقاله&nbsp;(17) </a> </li>
+                                  <li> <a href="../../category/16.html">همسرم&nbsp;(3) </a> </li>
+                                  <li> <a href="../../category/5.html">نومزدنگ&nbsp;(5) </a> </li>
+                                  <li> <a href="../../category/2.html">بعد ازدواجمون&nbsp;(42) </a> </li>
+                                  <li> <a href="../../category/9.html">آشپزی های من&nbsp;(13) </a> </li>
+                                  <li> <a href="../../category/15.html">آموزش زبان آلمانی&nbsp;(15) </a> </li>
+                                  <li> <a href="../../category/1.html">پیش از ازدواجمون&nbsp;(20) </a> </li>
+                                  <li> <a href="../../category/8.html">ایده واسه زندگیمون&nbsp;(5) </a> </li>
+                                  <li> <a href="../../category/14.html">آموزش و پرورش آلمان&nbsp;(51) </a> </li>
+                                  <li> <a href="../../category/7.html">منو بیشتر بشناسین&nbsp;(2) </a> </li>
+                                  <li> <a href="../../category/11.html">مراحل اداری ازدواج ما&nbsp;(3) </a> </li>
+                                  <li> <a href="../../category/13.html">تجربه های مسافرت ما&nbsp;(36) </a> </li>
+                                  <li> <a href="../../category/17.html">فستیوال ها و جشن های آلمان&nbsp;(5) </a> </li>
+                                  <li> <a href="../../category/10.html">فرهنگ آلمانی و زندگی در آلمان&nbsp;(170) </a> </li>
+                                  <li> <a href="../../category/12.html">عقاید خودم و همسر راجع به زندگی&nbsp;(26) </a> </li>
+                              </ul>
+            </div>
+          </div>
+          <div class="rm-bbg"></div>
+        </div>
+                    <div class="rm">
+          <div class="rmtitle">
+            <div class="rmtitle-mid">نویسندگان</div>
+          </div>
+          <div class="rmtext">
+            <div class="rmtext-mid">
+              <ul>
+                                  <li><a href="../../author/123269.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/42/123269.jpg" style="width:16px;" /></a> <a href="../../author/123269.html" style="display:inline;"> باران &nbsp;(504) 	            خیلی فعال و پر جنب و جوشم...اراده قوی دارم و اعتماد به نفس بالایی هم دارم.کمی زود رنجم،خصوصیت بارزم شجاعتمه.عاشق ورزشم هر جا ورز</a></li>
+                              </ul>
+            </div>
+          </div>
+          <div class="rm-bbg"></div>
+        </div>
+                                <div class="rm">
+          <div class="rmtitle">
+            <div class="rmtitle-mid">آرشیو</div>
+          </div>
+          <div class="rmtext">
+            <div class="rmtext-mid">
+              <ul>
+                                  <li><a href='../1399/9.html'> آذر 1399</a></li>
+                                  <li><a href='../1399/8.html'> آبان 1399</a></li>
+                                  <li><a href='../1399/7.html'> مهر 1399</a></li>
+                                <li><a href="../../archive.html"><b>کل آرشیوها</b></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="rm-bbg"></div>
+        </div>
+          </div>
+    <!--- e right --->
+    
+    <div class="content">
+              
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		          <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="http://zendegimoon.mihanblog.com/post/protected/82">
+                <h2>  مطلب رمز دار : کمی از احساساتم...</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : سه شنبه 20 بهمن 1394 08:26 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>این مطلب رمزدار است، جهت مشاهده باید کلمه رمز این مطلب را وارد کنید.<form id="frm-16081738975fdac94935fe3" method="post" action="http://zendegimoon.mihanblog.com/post/protected/82/fid/16081738975fdac94935fe3/atrty/1608173897/avrvy/0/key/c91dbfa9e7f2686a8313f67a023f3ebd/" ><input type="password" name="data[post_pass]" id="post_pass" value="" class="english" /><input type="hidden" name="secfrdcodedvar" id="secfrdcodedvar" value="293afb9aaa83260c1856947a4b55b025"><input type="submit" value="ارسال" class="btn" /><input type="hidden" name="frm-id" value="16081738975fdac94935fe3" id="frm-id" /></form> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                                <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore"> <a href='../../82.html'></a> </div>
+                <div class="pcomment"> <a href="../../82.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(82)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../81.html">
+                <h2>ویزای پیوست به خانواده</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : یکشنبه 18 بهمن 1394 12:20 ق.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+
+<font color="#CC6600" size="3">
+سلام دوستان 
+این روزا دویاره درگیر ویزاییم یلید به زودی ویزا رو بگیریم این ویزا اسمش ویزای پیوست به خانوادست و واسه این ویزا چند مرحله سخت هست<br>خب بذارین راجب ویزای شینگن بگم <br>راستش ما واسه این ویزا دوبار اقدام کردیم بار اول موفق نشدیم به دو دلیل <br>1.من شغلی نداشتم<br>2.حساب بانکیمون کم بود(حداقل 40 ملیون باید توی حساب باشه)<br><br>این مدارک ویزای شینگن:<br></font><table style="border: 1px solid rgb(51, 0, 153); border-collapse: collapse; font-family: tahoma,arial,helvetica,sans-serif; font-size: 11px;" align="" height="1446" cellpadding="2" cellspacing="2" width="501"><tbody><tr><td style="border:1px solid #330099; border-collapse: collapse;width: 100%;"><font color="#CC6600" size="3">&nbsp;</font><ul><li>
+<h2><font color="#333333" size="2"><span id="application-form" style="font-size: 12pt;"><b>فرم تکمیل‌شده درخواست ویزا</b></span></font></h2>
+<p><font color="#333333" size="2"><span style="font-size: 12pt;">اولین مرحله برای درخواست ویزای هر 
+کشوری تکمیل فرم درخواست روادید آن کشور است که باید از سفارت مربوطه به 
+صورت حضوری یا اینترنتی دریافت شود. این فرم را باید به همراه مدارک مورد 
+نیاز دیگر در زمان مصاحبه ارائه دهید.</span><br></font>
+<font color="#333333" size="2"><span style="font-size: 12pt;"> توجه: هرچند که این کشورها عضو شینگن 
+هستند و ویزای همه‎شان ویزای شینگن محسوب می‌شود، اما فرم درخواست برای هر 
+کشوری متفاوت است، بنابراین مثلا برای درخواست ویزای آلمان نباید به سفارت 
+فرانسه مراجعه کرد.</span></font></p></li><li>
+<h2><font color="#333333" size="2"><span style="font-size: 12pt;"><b>شناسنامه و کارت ملی</b></span></font></h2>
+<p><font color="#333333" size="2"><span style="font-size: 12pt;">ترجمه‌ی رسمی شناسنامه و کارت ملی با فتوکپی از تمام صفحات باید حتماً موجود باشد.</span></font></p></li><li>
+<h2><font color="#333333" size="2"><span style="font-size: 12pt;"><b>گذرنامه</b></span></font></h2>
+<p><font color="#333333" size="2"><span id="passport" style="font-size: 12pt;"><br>
+اعتبار گذرنامه باید حداقل شش ماه بعد از تاریخ درخواست روادید باشد.</span><br></font>
+<font color="#333333" size="2"><span style="font-size: 12pt;"> کپی گذرنامه را تنها از صفحات یک و صفحاتی که در آن‌ها &nbsp;ویزای شینگن خورده تهیه کنید.</span></font></p></li><li>
+<h2><font color="#333333" size="2"><span style="font-size: 12pt;"><b>سه قطعه عکس رنگی</b></span></font></h2>
+<p><font color="#333333" size="2"><span id="picture" style="font-size: 12pt;"></span></font></p>
+<p><font color="#333333" size="2">ویژگی‌های ضروری عکس مورد نظر: عکس رنگی، زمینه سفید، تمام رخ، جدید که 
+کاملا با ظاهر فعلی صاحب عکس هم‌خوانی داشته باشد، دو قطعه عکس در ابعاد ۶ 
+در ۴ باشد.<br>
+طبق مقررات شنگن، عکس شما بر روی برچسب ویزا چاپ خواهد شد.<br></font>
+</p>
+<h2><font color="#333333" size="2"><span style="font-size: 12pt;"><b>اسناد ملکی و مدارک&nbsp;شغلی و منابع مالی</b></span></font></h2>
+</li><li><font color="#333333" size="2"><span id="work-evidence" style="font-size: 12pt;">مدارک شغلی مانند 
+روزنامه رسمی یا جواز کسب و &nbsp;گواهی اشتغال به تخصیل یا گواهی اشتغال به کار
+ که روی سربرگ رسمی محل کار، با امضای مدیر عامل و ذکر سمت شغلی، حقوق 
+ماهانه و مدت زمان اشتغال به کار باشد.<br>
+لازم است که این مدارک به همراه ترجمه‌شان به سفارت ارائه داده شوند. </span></font></li><li><font color="#333333" size="2"><span id="bank-account" style="font-size: 12pt;">پرینت حساب بانکی؛ گردش سه ماه آخر و مانده حساب به زبان &nbsp;انگلیسی بانک و مهر شده باشد.</span></font></li><li><font color="#333333" size="2"><span id="insurance" style="font-size: 12pt;">&nbsp; &nbsp; همراه داشتن اصل و ترجمه سابقه بیمه تامین اجتماعی در صورت داشتن &nbsp; .</span></font></li><li><font color="#333333" size="2"><span id="property-document" style="font-size: 12pt;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;سند ملکی به نام شخص درخواست کننده؛ اصل و ترجمه‌ سند که اصل سند هنگام تحویل بقیه مدارک به مسافر بازگردانده خواهد شد. </span></font></li><li>
+<h2><font color="#333333" size="2"><span id="ticket" style="font-size: 12pt;"><b>بلیط پرواز رفت و برگشت به کشور مقصد</b></span></font></h2>
+<p><font color="#333333" size="2"><span style="font-size: 12pt;">توجه: برای رزرو بلیط هواپیما لازم نیست هزینه‌ای پرداخت ‎شود.</span></font></p></li></ul><font color="#333333" size="2">
+</font><p><font color="#333333" size="2">&nbsp;</font></p><font color="#333333" size="2">
+</font><ul><li>
+<h2><font color="#333333" size="2"><span id="travel-insurance" style="font-size: 12pt;"><b>بیمه مسافرتی</b></span></font></h2>
+<p><font color="#333333" size="2"><span style="font-size: 12pt;"><span id="travel-insurance"></span><span style="line-height: 1.5;">برای
+ کل مدت زمان سفر که باید حداقل هزینه ۳۰ هزار یورو را برای هر مسافر پوشش 
+دهد.متقاضیان روادید باید بیمه‌ مسافرت فردی یا جمعی داشته باشند. این بیمه
+ باید هزینه‌های احتمالی بازگشت به میهن تحت مراقبت‌های پزشکی، هزینه‌های 
+احتمالی نیاز به درمان و یا هزینه‌های بیمارستانی اضطراری را پوشش دهد و تا
+ پایان طول اقامت در تمام کشورهای منطقه شینگن معتبر باشد. شرکت بیمه‌گذار 
+باید نماینده‌ای معتبر در کشور مقصد داشته باشد؛ در ضمن شخص دعوت‌کننده در 
+کشور مقصد هم می‌تواند بیمه‌ی مسافرتی را از یک شرکت بیمه در آن کشور 
+بگیرد.</span></span></font></p></li><li><font color="#333333" size="2"><span id="hotel-reservation" style="font-size: 12pt;"></span><br></font>
+<h2><font color="#333333" size="2"><span style="font-size: 12pt;"><b>برگه تائیدیه رزرواسیون هتل(واچر)</b></span></font></h2>
+<p><font color="#333333" size="2"><span style="font-size: 12pt;">برای کل مدت اقامت و مطابق با تاریخ بلیط رفت و برگشت.</span><br></font>
+<font color="#333333" size="2"><span style="font-size: 12pt;"> این رزروها صرفا برای ارائه به سفارت است و تنها هزینه‌ای جزئی برای انجام رزرواسیون دارند.</span></font></p></li></ul><font color="#333333" size="2">
+</font><p><font color="#333333" size="2">&nbsp;</font></p><font color="#333333" size="2">
+</font><ul><li>
+<h2><font color="#333333" size="2"><span id="invitation" style="font-size: 12pt;"><b>دعوت‌نامه:</b></span></font></h2>
+<p><font color="#333333" size="2"><span style="font-size: 12pt;"><span id="invitation">اصل دعوت‌نامه که شخص دعوت‎کننده از کشور مقصد برای مسافر فرستاده.<br>
+اگر دعوت‎نامه داشته باشید نیازی به برگه رزرواسیون هتل نخواهید داشت.</span>مدارک
+ مورد نیاز ممکن است گاهی با توجه به شرایط فرد و کشور صادرکننده ویزا 
+متفاوت باشد که در این صورت بهتر است به بخش ویزای توریستی مربوط به همان 
+کشور مراجعه کنید.</span></font></p></li><li><font color="#333333" size="2"><span style="font-size: 12pt;"><strong>توجه:</strong> مدارک ترجمه 
+شده، نیاز به مهر دادگستری دارند که معمولاً دارالترجمه‌ها خودشان پس از 
+ترجمه مدارک، برای گرفتن این مهر اقدام می‌کنند.</span></font></li><li><br><font size="3"><cite class="_Rm">ok<b>visa</b>.ir</cite></font></li></ul></td></tr></tbody></table><font color="#CC6600" size="3">دوستان دقت کنید همیشه واسه این ویزا خوب تحقیق کنید چون گرفتن نوبت ملاقات توی سفارت آلمان واقعا سخته پس باید مدارکتون کامل باشه اگر کامل نباشه خیلی راحت ردتون میکنن و ضمنا باید بگم ما دو نوع دعوت نامه داریم یکیش این هست:(verpflichtungserklärung)<br><img src="http://mkenyaujerumani.de/wp-content/uploads/2014/07/Verpflichtungserkl%C3%A4rung.jpg" alt="" align="bottom" hspace="0" border="0" vspace="0"><br>که من با این نوع دعوت نامه اومدم این دعوت نامه یعنی کسی که دعوت نامه رو میفرسته داراییش و یا یه مقدار پولو داخل بانک میذاره و یا بلوکه میکنن این خیلی بهتره اگر بتونین این دعوت نامه رو داشته باشین خیلی این برگه موثقیه و امکان گرفتن ویزا خیلی زیاد میشه<br>خب دوستان ضمنا باید بگم توی حساب بانکی باید 30 تا 40 ملیون باشه ولی ما اینو نداشتیم و به خاطر این برگه ای که گفتم ویزا رو بهم دادن ولی در غیر این صورت با حساب بانکی کم بدون این برگه ویزا نمیدن.<br>خب بگذریم<br>الان ویزایی که ما میخوایم بگیریم ویزای پیوست به خانواده هست.این ویزا برای کسانی هست که ازدواج کردن و یا خانوادشون آلمانه و میخوان به اونا ملحق بشن.واسه این ویزا من نیاز به مدرک A1 موسسه گوته در زبان آلمانی رو دارم واسه همین هفته آینده من واسه این آزمون ثبت نام کردم و باید برم انشالا آزمون بدم...و چند روز بعدش نوبت ملاقات توی سفارت داریم...<br>این روزا درگیر این آزمون هستم .با همسری تمرین میکنم و امیدوارم قبول بشم چون هزینه ثبت نامش 350 هست و بعد از این خیلی بده اگر قبول نشم...باید باز 350 پرداخت کنیم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/2.gif"><br>دوستان دعا کنین بتونم از پس این آزمونبر بیام....<br></font>
+
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                                <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../81.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(81)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../79.html">
+                <h2>غذاهای ترکی</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : سه شنبه 13 بهمن 1394 10:19 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+<font size="2">
+
+
+<font color="#000099">سلام<br>از زمانی که از استانبول اومدیم شیفته غذاهای ترکی شدم و یه پیج توی اینستاگرام پیدا کردم و هر شب یه غذاشو میپزم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/1.gif"><br>میخوام از تجربه های آشپزیم بذارم شمام استفاده کنین حتما و بهتون پیشنهاد میکنم غذاهای ترکی رو بپزید و از مزش لذت ببرید<img src="http://mihanblog.com/public/public/rte/images_new/smiles/1.gif"><br>تا الان یه دونه کیک پختم و دو تا غذا که میذارم اینجا شمام یاد بگیرین:</font><br><br><img src="http://appasan.com/uploadapi/uploaded_images/20160202221702e92c8a23d172242f1c96bd98292503a997.jpg" alt="" align="bottom" hspace="0" border="0" vspace="0"><br><br>&nbsp; <img src="http://appasan.com/uploadapi/uploaded_images/201602022218176c27c2097947b4de46705ac343e93ef573.jpg" alt="" align="bottom" hspace="0" border="0" vspace="0"><br><br></font><h1 data-reactid=".2.1.0.0.2.1.0.0"><font size="2"><img src="http://appasan.com/uploadapi/uploaded_images/20160203111619243c3d4f96bc9723eac0d4470c0e387e46.jpg" alt="" align="bottom" height="398" hspace="0" border="0" vspace="0" width="531"><br><span data-reactid=".2.1.0.0.2.1.0.0.1"><span data-reactid=".2.1.0.0.2.1.0.0.1.3"></span></span></font></h1><h1 data-reactid=".2.1.0.0.2.1.0.0"><font color="#993300" size="2"><span data-reactid=".2.1.0.0.2.1.0.0.1"><span data-reactid=".2.1.0.0.2.1.0.0.1.3">پیده گوشت</span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline5/=10"><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline7/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.6">یک نوع غذای بسیار خوشمزه ترکیه، که در رستوران‌های ترکیه ای ایران هم سرو میشود.</span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline9/=10"><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline11/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.9">مواد لازم برای داخل خمیر</span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline13/=10"><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline15/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.c">آرد گندم  3 لیوان</span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline17/=10"><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline19/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.f">مایه خمیر  1 قاشق غذاخوری</span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline21/=10"><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline23/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.i">شکر  1 قاشق مرباخوری</span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline25/=10"><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline27/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.l">آب ولرم  1 لیوان </span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline29/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.n">نمک  1 قاشق چایخوری</span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline31/=10"><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline33/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.q">مواد لازم برای روی خمیر برای 6 نفر</span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline35/=10"><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline37/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.t">پیاز متوسط 1 عدد </span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline39/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.v">سیر  2 تا 3 حبه</span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline41/=10"><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline43/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.y">گوجه فرنگی متوسط 2 عدد </span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline45/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.10">جعفری خرد شده  2 تا 3 قاشق غذاخوری</span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline47/=10"><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline49/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.13">فلفل دلمه ای  1 عدد</span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline51/=10"><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline53/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.16">گوشت چرخ کرده  250 گرم</span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline55/=10"><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline57/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.19">نمک و فلفل  به میزان دلخواه</span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline59/=10"><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline61/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.1c">رب فلفل یا رب گوجه فرنگی  1 قاشق غذاخوری</span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline63/=10"><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline65/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.1f">آویشن  1 قاشق چایخوری</span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline67/=10"><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline69/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.1i">کره  25 گرم</span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline71/=10"><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline73/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.1l">طرز تهیه</span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline75/=10"><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline77/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.1o">1.
+ ابتدا آرد را الک کنید. نصف لیوان از آرد را برای پهن کردن خمیر کنار 
+بگذارید. بقیه آرد را در ظرفی ریخته و وسط آن را گود کنید. مایه خمیر، شکر و
+ نمک را با کمی آب حل کرده به آرد اضافه کنید. کم کم بقیه آب را اضافه 
+کنید. خوب ورز دهید. خمیر نرمی به دست می آید. سپس 15 تا 20 دقیقه بگذارید 
+در حرارت اطاق بماند. روی آن را با پارچه مرطوب بپوشانید. </span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline79/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.1q">2.
+ پیاز و سیر را رنده یا ریز خرد کنید. گوجه فرنگی، جعفری و فلفل دلمه ای را
+ ریز خرد کنید و همة مواد را با گوشت چرخ کرده خوب مخلوط کنید و به آن نمک و
+ فلفل بزنید. </span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline81/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.1s">3.خمیر
+ را به شش قسمت تقسیم کنید. زیر خمیر را کمی آرد بپاشید . ابتدا با وردنه 
+پهن کنید و سپس با دست به شکل بیضی درآورید. ضخامت خمیر باید تقریباً نیم 
+سانتیمتر باشد. روی هر تکه از خمیر باز شده مقداری از مایة گوشتی بریزید. 
+بعد دور خمیر را نیم سانت به طرف بالا تا کنید و به هم بچسبانید. </span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline83/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.1u">4.
+ کف سینی فر را آرد بپاشید و پیده ها را روی آن بیندازید. سینی را در فری 
+که از قبل با دمای 200 درجة سانتیگراد گرم کرده اید، بگذارید تا پیده ها 
+بین نیم ساعت یا 45 دقیقه بپزند. سپس از فر درآورید و کره را روی نان 
+بمالید تا نرم شود. پیده را می توانید به 3 تا 4 تکه تقسیم کنید. بعد آنها 
+را با سالاد فصل سرو کنید. </span><br data-reactid=".2.1.0.0.2.1.0.0.1.$newline85/=10"><span data-reactid=".2.1.0.0.2.1.0.0.1.1w">5. برای تهیه پیده از خمیر نان باگت یا بربری به میزان 450 گرم یا یک چانه نیز می توان استفاده کرد</span></span></font></h1><font color="#993300" size="2"><br><img src="http://appasan.com/uploadapi/uploaded_images/20160203111526cb8f6b2176fa2d9f3073dafd94e3987e80.jpg" alt="" align="bottom" height="434" hspace="0" border="0" vspace="0" width="579"><br></font><h1 data-reactid=".1.1.0.0.2.1.0.0"><font color="#993300" size="2"><span data-reactid=".1.1.0.0.2.1.0.0.1"><span data-reactid=".1.1.0.0.2.1.0.0.1.3">قرابیه سیب *مواد لازم برای خمیر</span><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline5/=10"><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline7/=10"><span data-reactid=".1.1.0.0.2.1.0.0.1.6">روغن 250 گرم</span><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline9/=10"><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline11/=10"><span data-reactid=".1.1.0.0.2.1.0.0.1.9">پكینیگ پودر 1 بسته</span><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline13/=10"><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline15/=10"><span data-reactid=".1.1.0.0.2.1.0.0.1.c">ماست یك استكان</span><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline17/=10"><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline19/=10"><span data-reactid=".1.1.0.0.2.1.0.0.1.f">تخم مرغ 1 عدد</span><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline21/=10"><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline23/=10"><span data-reactid=".1.1.0.0.2.1.0.0.1.i">شكر 1 لیوان</span><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline25/=10"><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline27/=10"><span data-reactid=".1.1.0.0.2.1.0.0.1.l">آرد به مقدار لازم *مواد لازم داخل قرابیه</span><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline29/=10"><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline31/=10"><span data-reactid=".1.1.0.0.2.1.0.0.1.o">سیب 5 عدد</span><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline33/=10"><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline35/=10"><span data-reactid=".1.1.0.0.2.1.0.0.1.r">مغز گردو 1 لیوان</span><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline37/=10"><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline39/=10"><span data-reactid=".1.1.0.0.2.1.0.0.1.u">شكر 3 ق غ</span><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline41/=10"><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline43/=10"><span data-reactid=".1.1.0.0.2.1.0.0.1.x">دارچین 1 ق چ</span><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline45/=10"><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline47/=10"><span data-reactid=".1.1.0.0.2.1.0.0.1.10">خاك قند برای تزیین</span><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline49/=10"><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline51/=10"><span data-reactid=".1.1.0.0.2.1.0.0.1.13">طرز تهیه</span><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline53/=10"><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline55/=10"><span data-reactid=".1.1.0.0.2.1.0.0.1.16">برای
+ خمیر ابتدا روغن را به دمای اتاق رسانده و داخل كاسه ای بزرگ قرار 
+دهید.داخل آن تخم مرغ را شكسته و ماست را اضافه كنید.پكینگ پودر و شكر و 
+آرد را اضافه كرده و خمیری به نرمی لاله گوش درست كنید. ( آرد را کم کم 
+اضافه کنید.)</span><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline57/=10"><span data-reactid=".1.1.0.0.2.1.0.0.1.18">برای
+ مواد داخل قرابیه سیب ها را پوست كنده و رنده كنید و روی اجاق قرار دهید. 
+شكر و دارچین و مغز گردو خورد شده را اضافه كرده و تا آب سیب ها كشیده شود 
+آنها را روی اجاق حرارت دهید. از روی اجاق برداشته تا خنك شود.</span><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline59/=10"><span data-reactid=".1.1.0.0.2.1.0.0.1.1a">از
+ خمیر اندازه كمی بزرگتر از گردو جدا كرده و اندازه بشقاب شیرینی خوری آن 
+را باز كنید. از نصف پایین تر از خمیر با چاقو  چند برش روی خمیر انداخته و
+ از مواد داخل قرابیه یك الی یك و نیم ق غ داخل نصفه بالایی خمیر قرار داه و
+ آن را رول كنید و در انتها خمیر رول شده خود را كمی تاب داده تا شكل هلال 
+به خود بگیرد.</span><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline61/=10"><span data-reactid=".1.1.0.0.2.1.0.0.1.1c">در
+ سینی فر كاغذ روغنی قرار داده و قرابیه ها را روی آن بچینید. در فر 180 
+درجه از قبل گرم شده بگذارید تا زمانی که روی آنها كمی سرخ شود آنها را 
+بپزید.</span><br data-reactid=".1.1.0.0.2.1.0.0.1.$newline63/=10"><span data-reactid=".1.1.0.0.2.1.0.0.1.1e">از فر و سینی فر خارج كرده و روی آنها را با خاك قند تزیین كنید</span></span></font></h1><font color="#993300" size="2"><br><img src="http://appasan.com/uploadapi/uploaded_images/201602031116584c8d333defc1dde4d56110824128a32360.jpg" alt="" align="bottom" height="418" hspace="0" border="0" vspace="0" width="559"><br></font><h1 data-reactid=".3.1.0.0.2.1.0.0"><font color="#993300" size="2"><span data-reactid=".3.1.0.0.2.1.0.0.1"><span data-reactid=".3.1.0.0.2.1.0.0.1.0">Mücver </span><br data-reactid=".3.1.0.0.2.1.0.0.1.$newline1/=10"><span data-reactid=".3.1.0.0.2.1.0.0.1.2">موجور یکی از غذاهای سنتی ترکیه است که کدو خورشتی و تخم‌مرغ از مواد اصلی آن است. </span><br data-reactid=".3.1.0.0.2.1.0.0.1.$newline3/=10"><span data-reactid=".3.1.0.0.2.1.0.0.1.4">مواد لازم برای سه نفر </span><br data-reactid=".3.1.0.0.2.1.0.0.1.$newline5/=10"><span data-reactid=".3.1.0.0.2.1.0.0.1.6">تخم‌مرغ: دو عدد </span><br data-reactid=".3.1.0.0.2.1.0.0.1.$newline7/=10"><span data-reactid=".3.1.0.0.2.1.0.0.1.8">شوید خردشده: چهار قاشق غذاخوری </span><br data-reactid=".3.1.0.0.2.1.0.0.1.$newline9/=10"><span data-reactid=".3.1.0.0.2.1.0.0.1.a">کدو خورشی متوسط: دو عدد </span><br data-reactid=".3.1.0.0.2.1.0.0.1.$newline11/=10"><span data-reactid=".3.1.0.0.2.1.0.0.1.c">پنیر سفید (صبحانه): 150 گرم </span><br data-reactid=".3.1.0.0.2.1.0.0.1.$newline13/=10"><span data-reactid=".3.1.0.0.2.1.0.0.1.e">روغن مایع برای سرخ کردن: به میزان لازم </span><br data-reactid=".3.1.0.0.2.1.0.0.1.$newline15/=10"><span data-reactid=".3.1.0.0.2.1.0.0.1.g">نمک: نصف قاشق چای خوری </span><br data-reactid=".3.1.0.0.2.1.0.0.1.$newline17/=10"><span data-reactid=".3.1.0.0.2.1.0.0.1.i">فلفل سیاه: یک قاشق چای خوری </span><br data-reactid=".3.1.0.0.2.1.0.0.1.$newline19/=10"><span data-reactid=".3.1.0.0.2.1.0.0.1.k">زردچوبه: نصف قاشق چای خوری </span><br data-reactid=".3.1.0.0.2.1.0.0.1.$newline21/=10"><span data-reactid=".3.1.0.0.2.1.0.0.1.m">آرد سفید: دو قاشق غذاخوری </span><br data-reactid=".3.1.0.0.2.1.0.0.1.$newline23/=10"><span data-reactid=".3.1.0.0.2.1.0.0.1.o">طرز
+ تهیه * کدوها را شسته، رنده می‌کنیم و آب آن را می‌گیریم، سپس به همراه 
+شوید، تخم‌مرغ‌ها، نمک، فلفل، زردچوبه، آرد و پنیر رنده شده با هم کاملا 
+مخلوط می‌کنیم. * در ماهیتابه مناسبی مقداری روغن ریخته، روی حرارت قرار 
+می‌دهیم تا داغ شود، سپس از مواد با قاشق در ماهیتابه می‌ریزیم و آن را سرخ
+ می‌کنیم. می‌توان از قالب‌های دلخواه نیز استفاده کرد. به طوری که قالب را
+ در ماهیتابه روی روغن قرار داده، مواد را در وسط آن می‌ریزیم و وقتی مواد 
+خودش را گرفت، قالب را درمی‌آوریم و اجازه می‌دهیم تا یک طرف آن سرخ و بعد 
+طرف دیگر آن را سرخ می‌کنیم. * می‌توان موجور را در قالب پاند که کف آن را 
+چرب و آرد سوخاری پاشیده‌ایم، ریخته و در فر با حرارت 200 درجه سانتی‌گراد 
+به مدت 35-30 در طبقه وسط قرار داده تا کاملا بپزد. * برای تست پخت آن یک 
+خلال دندان داخل موجور می‌زنیم اگر از مواد به خلال نچسبید آماده است. </span><br data-reactid=".3.1.0.0.2.1.0.0.1.$newline25/=10"><span data-reactid=".3.1.0.0.2.1.0.0.1.q">نکته:
+ * اگر در فر موجور را می‌پزید باید دو قاشق غذاخــوری روغن مایع به مواد 
+آن اضــافه کنید تا لطیف شود. * می‌توان یک قاشق چای خوری بیکینگ‌پودر به 
+این مواد اضافه کرد</span></span></font></h1><font size="2"><font color="#993300"><br>
+</font><img src="http://appasan.com/uploadapi/uploaded_images/20160203111411b8a0f574ec24fa3b6996f72755232a9738.jpg   " alt="" align="bottom" height="399" hspace="0" border="0" vspace="0" width="533">
+
+
+
+
+
+</font>
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/9.html">آشپزی های من</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../79.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(79)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../78.html">
+                <h2>قانون در ایران و آلمان</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : دوشنبه 12 بهمن 1394 11:51 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <font size="3"><font color="#006600">سلام<br>چند روز پیش توی اتوبوس یکی از این مامورای چک بلیط اومد که کارتا رو چک کنه که یه خانمی با یه خیلی برخورد بدی گفت:من خسته ام و ضمنا نمیخوام کارتمو به شما نشون بدم.مگه ما دزدیم که میخواین کارتامونو چک کنین؟!اون مامورم خیلی مودب گفت این شغل ماست و وظیفه ماست که کارتا رو چک کنیم اونم گفت اگه میخواین کارت چک کنین بایستین دم در هرکی کارت نزد ازش پول بگیرید نه اینکه کارت همه رو چک کنین!</font><br><font color="#996633">خیلی بدم اومد از این برخورد من مدت کمی آلمان بودم ولی اونجا هیچ برخورد بدی از مردمش ندیدم&nbsp; هیچ بی احترامی و دعوایی ندیدم البته اینم بگم یه بار من داشتم از یه خونه که قشنگ بود عکس میگرفتم که صاحبش اومد بیرون به آلمانی یه چیزایی میگفت و شکایت میکرد که چرا عکس گرفتم از خونش که به همسرم گفتم اومد جوابش داد!و یه بار دیگه یه گروه عکاسی یه جا بود که از سگ عکس میگرفتن سگاشون خیلی خوشکل بودن منم عکس گرفتم چند تایی، که باز طرف اومد و شکایت کرد و این بار مادر همسری اومد خیلی مودبانه گفت عروس من از سگای شما خوشش اومده چند تا عکس گرفته!طرفم قبول کرد...<br>دیروز داشتیم راجب رعایت قانون توی آلمان و ایران حرف میزدیم همسرم میگفت:توی آلمان اگر کسی بخواد قانون رو رعایت نکنه سرو کارش با پلیسه و پلیش خیلی توی این امر جدیه و مثلا اگر کسی کارت نزنه جریمه میشه و باید دوبرابر پرداخت کنه...</font><font color="#993300">عقاید همسری رو خیلی باهاش موافقم.میگفت:زمانی که اون خانم گفت من کارت نمیزنم و اون مامور بی تفاوت گذشت، نشون میده که اون میخواد قدرتشو نشون بده که همه این کارو کردن و کارتشونو نشون دادن ولی اون نزد که نشون بده قدرتش از بقیه بیشتره و در آینده عده بیشتری از مردم این کارو میکنن که نشون بدن قدرت مقابله با قانون و پلیس رو دارن!<br>فکر میکنم این کاملا درسته. مثلا ما&nbsp; پشت چراغ قرمز،خیلی مواقع پیش اومده که بغل دستیمون بگه: ماشین نمیاد چراغو رد کن کسی که نیست!و ما هم گوش میدیم ببینیم طرف چی میگه و خیلی راحت چراغو رد میکنیم.اینجور میخوایم بگیم قانون برای ما اهمیتی نداره و ما خودمون این آزادی رو داریم که تصمیم بگیریم میخوایم چکار کنیم!<br>همسری میگفت شکستن قانون دو تا اثر بد میتونه توی جامعه داشته باشه:یکی اینکه مردم عادت میکنن به شکستن قانون و این براشون راحت میشه دوم اینکه این کارو تو بقیه تشویق میکنن و بقیه ترغیب میشن این کارو تکرار کنن!<br>همسری معتقده توی ایران، خانواده و جامعه بیشتر روی مردم تسلط دارن تا قانون و این دقیقا درسته<br>مثلا خیلی مواقع ما یه کاری رو انجام نمیدیم که خانواده یا جامعه توبیخمون نکنه و نه قانون!خیلی کم از قانون و پلیس میترسیم!در صورتیکه همسری میگه توی آلمان خیلی دزدی توی خونه ها اتفاق نمی افته چون مردم از پلیس وحشت دارن!<br>خیلی نگرانم برای کشورمون...ما خیلی راحت قوانین رو زیر پا میذاریم....امیدوارم زودتر و زودتر عادت کنیم قبل از اینکه توسط یه فرهنگ دیگه قضاوت بشیم خودمون رو (و صرفا خودمون رو)تغییر بدیم....<br>امیدوارم..</font><br>
+
+
+</font> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                                <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../78.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(78)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../77.html">
+                <h2>&quot;تقدیم به فرزند آیندمون&quot;</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : دوشنبه 12 بهمن 1394 03:58 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+"
+
+زود بزرگ نشو مادر...
+کودکیت را بی حساب می خواهم و در پناهش جوانیم را !
+زود بزرگ نشو مادر... 
+
+قهقهه بزن ، جیغ بکش ، گریه کن ، لوس شو ، بچگی کن ، 
+ولی زود بزرگ نشو تمام هستی ام .
+
+آرام آرام پیش برو ،
+ آن سوی سن وسال هیچ خبری نیست گلم. هرچه جلوتر می روی همه چیز تـندتر از تو قدم بر می دارد. 
+حالا هنوز دنیا به پای تو نمی رسد از پاکی . الهی هرگز هم قدمش نشوی هرگز! 
+همیشه از دنیای ما آدم بزرگ ها جلوتر باش ، یک قدم ، دو قدم ، 
+ولی زود بزرگ نشو مادر... 
+
+آرام آرام پیش برو گلم. آنجا که عمر وزن می گیرد دنیا به قدری سبک می شود که هیچ هیجانی برای پیمودنش نخواهی داشت.
+
+آن سوی سن و سال خبری نیست . کودکی کن ، از ته دل بخند به اداهای ما که برای خنداندنت دلقک میشویم ، بزرگ که شدی از نگاه دلقک ها گریه ات می گیرد, 
+می دانم .
+عزیزترینم، فرزندم، من مادرت هستم...
+هیچ کس مرا مجبور به مادری نکرد،
+من به اختیار مادر شدم تا بدانم معنی بیخوابیهای شبانه را،
+تا بیاموزم پنهان کردن درد را پشت حجمی از سکوت؛
+تا بدانم حجم یک لبخند کودکانه ات میتواند معجزه زندگی دوباره ام باشد؛
+من نه بهشت می خواهم نه آسمان و نه زمین،
+بهشت من,  زمین من و زندگیم نفس های آرام کودکی توست؛
+من هیچ نمیخواهم هیچ،
+هیچ روزی به من تعلق ندارد،
+همه ساعتها و ثانیه های من تویی
+ ومن دست کودکیت را میگیرم تابه فردای انسانیت برسانم که این رسالت من است
+ بر تو. 
+وهیچ منتی ازمن بر تو وارد نیست که من با اختیار به عشق تو را به این دنیا آورده ام.
+میترسم فرزندم با بزرگ شدنت ادمها احساس پاک تو رو به بازیچه بگیرن.
+میترسم  ثمره ی جوانیم؛ فرزندم با بزرگ شدنت انسانهای انسان نما ازارت دهند کودک بمان فرزندم که با شکسته شدن قلبت ذره ذره ی وجودم اب میشود.....
+
+
+
+عزیز مادر؛
+تاهمیشه 
+              بی نهایت 
+                                   "دوستت دارم"....
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                                <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../77.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(77)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../76.html">
+                <h2>داستانهای جالب نحوه آشنایی با همسر</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : جمعه 9 بهمن 1394 06:35 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+
+شوهر من میشه پسرداییه دخترداییه جاریه خواهرم! <img src="http://www.khanoomgol.com/images/smilies02/297.gif" style="vertical-align: middle;" alt="haaa" title="haaa" border="0"><img src="http://www.khanoomgol.com/images/smile03/weirdsmiley1.gif" style="vertical-align: middle;" alt="Weirdsmiley1" title="Weirdsmiley1" border="0">که جاریه خواهرم منو معرفی کرد<br>
+من ترم آخر دانشگاه بودم تو تبریز، مامانم زنگ زد گفت بیا میخواد برات 
+خواستگار بیاد منم گفتم ول کن بابا حوصله ندارم این همه راهو بیام واسه 
+خواستگار! <img src="http://www.khanoomgol.com/images/smilies02/swear1.gif" style="vertical-align: middle;" alt="Swear" title="Swear" border="0">اصن
+ میخوام درس بخونم!! عاقا زد و شبش تو تبریز زلزله اومد. منم که سال آخر 
+تنها خونه گرفته بودم چون تو خونه تنها بودم از زلزله خیلی ترسیدم و شبانه 
+سوار اتوبوس شدم برگشتم.<img src="http://www.khanoomgol.com/images/smilies02/hiker.gif" style="vertical-align: middle;" alt="Hiker" title="Hiker" border="0"><img src="http://www.khanoomgol.com/images/smilies02/th_running1.gif" style="vertical-align: middle;" alt="running" title="running" border="0">صبح رسیدم خونمون.مامانم که منو دید با تعجب گفت تو که گفتی نمیخوای شوهر کنی چطور اینطور هول هولکی اومدی! <img src="http://www.khanoomgol.com/images/smilies02/5.gif" style="vertical-align: middle;" alt="bio jolo" title="bio jolo" border="0"><img src="http://www.khanoomgol.com/images/smilies02/vahidrk1.gif" style="vertical-align: middle;" alt="Vahidrk" title="Vahidrk" border="0">گفتم نخیر از زلزله فرار کردم.گفت خوب حالا که اومدی بذار بیان.گفتم از همین الان بهت بگم جوابم منفیه<img src="http://www.khanoomgol.com/images/smilies02/swear1.gif" style="vertical-align: middle;" alt="Swear" title="Swear" border="0">.گفت باشه بذار بیان.خلاصه اومدن و سه روز صحبت کردیم و این پنجشنبه که همدیگرو دیدیم پنجشنبه بعد عقدمون بود!!!!!!!!!!!!!!!!!!! <img src="http://www.khanoomgol.com/images/smilies02/229.gif" style="vertical-align: middle;" alt="fak" title="fak" border="0"><img src="http://www.khanoomgol.com/images/smilies02/229.gif" style="vertical-align: middle;" alt="fak" title="fak" border="0"><img src="http://www.khanoomgol.com/images/smilies02/229.gif" style="vertical-align: middle;" alt="fak" title="fak" border="0">به سرعت برق و باااااااااااد<img src="http://www.khanoomgol.com/images/smilies02/229.gif" style="vertical-align: middle;" alt="fak" title="fak" border="0">.یعنی
+ خودم تا چندماه تو شوک بودم که چطور با 3 روز صحبت همه چی تموم شد! من که 
+با خواستگارای قبلی حداقل سه ماه صحبت میکردم اینو نفهمیدم چی شد؟<img src="http://www.khanoomgol.com/images/smile03/dunnof.gif" style="vertical-align: middle;" alt="Dunnof" title="Dunnof" border="0"><img src="http://www.khanoomgol.com/images/smilies02/25r30wi.gif" style="vertical-align: middle;" alt="laf" title="laf" border="0">الان بعد از 5 سال هنوز در عجبم!!!!!!!!!!!Big Grin<img src="http://www.khanoomgol.com/images/smilies02/229.gif" style="vertical-align: middle;" alt="fak" title="fak" border="0"><img src="http://www.khanoomgol.com/images/smilies02/4chsmu1.gif" style="vertical-align: middle;" alt="hih" title="hih" border="0"><br>
+.<br>
+.<br>
+.<br>
+و اما داستان اونا: جاری خواهرم پدرش فوت شده بود و بعد از چند ماه برای 
+اینکه از عزا در بیان خونه دختر داییش که میشه دختر عمه شوهر من دعوت شده 
+بود.<br>
+شوهرم اینا هفته قبلش رفته بودن کیش و یه تلفن بیسیم خریده بودن.عصر همون 
+روز خواهر شوهرم زنگ میزنه که با دختر عمش صحبت کنه و تلفن جدیدو امتحان 
+کنن.از قضا تلفنه گوشیش خراب بوده و مجبور شدن با آیفونش صحبت کنن.در همین 
+حین شوهرم که از کنار خواهرش رد میشده و صدای دختر عمشو میشنوه به شوخی 
+میگه برام یه دخمل انتخاب کن.دختر عمهه هم میگه من از کجا دخمل برای تو 
+پیدا کنم؟مهمونش که همون جاریه خواهرم باشه میگه من میشناسم <img src="http://www.khanoomgol.com/images/smile03/veiledsmile2.gif" style="vertical-align: middle;" alt="Veiledsmile2" title="Veiledsmile2" border="0">و منو معرفی میکنه.خلاصه شوخی شوخی جدی میشه!!!!<br>
+.<br>
+.<br>
+و اینچنین بود که زلزله شبانه تبریز و خرابی گوشی تلفن مادر شوهر اینا و 
+فوت مرحوم پدر جاریه خواهرم دست به دست هم دادن تا ما به هم برسیم<br><hr>منم با نوه ی عمه م ازدواج کردم /وقتی فقط 13 سالش بود تو اون حال و هوای بچگی ازم خواستگاری کرد -البته واسطه فرستاد <img src="http://www.khanoomgol.com/images/smile03/veiledsmile2.gif" style="vertical-align: middle;" alt="Veiledsmile2" title="Veiledsmile2" border="0">انقدم دیگه روش باز  نبود<img src="http://www.khanoomgol.com/images/smilies02/25r30wi.gif" style="vertical-align: middle;" alt="laf" title="laf" border="0">--من با اون سن کمم  قیافم اینجوری شده بود<img src="http://www.khanoomgol.com/images/smilies02/229.gif" style="vertical-align: middle;" alt="fak" title="fak" border="0">-پیش خودم گفتم چه پررو!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>
+اما اون با همون اعتماد بنفسش<img src="http://www.khanoomgol.com/images/smile03/1%20%2849%29.gif" style="vertical-align: middle;" alt="1 (49)" title="1 (49)" border="0">پیغام فرستاد  یه روز مال خودم میشی<img src="http://www.khanoomgol.com/images/smile03/dreamyeyesf.gif" style="vertical-align: middle;" alt="Dreamyeyesf" title="Dreamyeyesf" border="0">منتظرم وایسا<img src="http://www.khanoomgol.com/images/smilies02/smiley-angelic006.gif" style="vertical-align: middle;" alt="angelic" title="angelic" border="0"><br>
+سال ها گذشت ومنم با کمال ناباوری که واسه خودمم تعجب آور بود موقع خواستگاری رسمی بهش جواب بله رو دادم<hr>
+
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/4.html">مقاله</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../76.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(76)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../75.html">
+                <h2>تفاوت فرهنگ آلمانی و ایرانی</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : پنجشنبه 8 بهمن 1394 04:21 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 زندگی توی آلمان متفاوته خیلی متفاوته با ایران.خیلیا تفاوتشو ازم پرسیدن.تفاوت روز در ایران و آلمان:روز ایران پره از سر و‌صدا!صدای ماشینا.صدای مردم.صدای بچه ها.اما روز توی آلمان خیلی آرپمه‌هیچ صدایی نمیشنوید.تنها صدایی که گاهی میشه شنید صدای سگاست و خیلی به ندرت صدای ماشین یا مردمو میشنوین.البته اینو باید بگم که من دارم یه شهر بزرگ ایرانو با یه روستای کوچیک آلمان مقایسه میکنم.تفاوت شب در ایران و آلمان:شب ایران خیلی روشنه اولا ما همه جا چراغ داریم و دوما ما تا آخرای شب بیداریم صدای مردمو میشه تا آخرای شب شنید اما آلمان از ساعت شش به بعد هیچ صدایی نمیشنوی.اگه برین بیرون میبینین چراغای کمی توی خونه ها روشنه و چون خونه ها پرده ندارن میشه راحت داخلشو دید‌.
+آب و هوای آلمان و ایران:اصفهان واقعا شهر خشک و سردیه و دلینگزدرف خیلی مرطوب بود.هر روز وقتی از خواب بیدار میشدیم اولین کار اینه که شبنم که روی پنجره نشسته رو پاک کنیم چون رطوبت خونه رو خراب میکنه باید هر از گاهی حتی تو سردترین دما هم پنجره ها رو باز کرد.خورشید رو به ندرت میشه دید.برعکس اصفهان که ما توی همه فصلا خورشید رو داریم.
+مردم آلمان:خیلی منضبط؛کاری و‌مودبن.واقعا آدمای محکمی اند.رفت و‌امدا مث ایران نیست سالی یکی دوبار فامیلشونو میبینن چون تمام وقتشونو کار پر کرده.خانواده همسرم تعجب میکردن که ما همیشه وقت داریم!میگفتن آلمانیا همیشه مشغول کارن و حتی فرصت یه ملاقات کوچیکو هم ندارن.
+اگر سوالی راجب فرهنگ آلمانی دارین بپرسین </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                                <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../75.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(75)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../73.html">
+                <h2>دارم امید عاطفتی از جناب دوست</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : دوشنبه 5 بهمن 1394 11:21 ق.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 دارم امید عاطفتی از جناب دوست<br><br>کردم جنایتی و امیدم به عفو اوست<br><br>دانم که بگذرد ز سر جرم من که او<br><br>گر چه پریوش است ولیکن فرشته خوست<br><br>چندان گریستم که هر کس که برگذشت<br><br>در اشک ما چو دید روان گفت کاین چه جوست<br><br>هیچ است آن دهان و نبینم از او نشان<br><br>موی است آن میان و ندانم که آن چه موست<br><br>دارم عجب ز نقش خیالش که چون نرفت<br><br>از دیده‌ام که دم به دمش کار شست و شوست<br><br>بی گفت و گوی زلف تو دل را همی‌کشد<br><br>با زلف دلکش تو که را روی گفت و گوست<br><br>عمریست تا ز زلف تو بویی شنیده‌ام<br><br>زان بوی در مشام دل من هنوز بوست<br><br>حافظ بد است حال پریشان تو ولی<br><br>بر بوی زلف یار پریشانیت نکوست<br><br>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/6.html">ادبی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../73.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(73)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                    
+      <!--- e bodypost --->
+      
+            <!--- e barge ---->
+      
+            
+      <!--- e paper --->
+      
+      <style>
+
+.text100 , .text100 a{color: #000000;font-size: 8pt;text-transform: none;}
+.text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+.text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+.com{width: 100%;float: left;background-color: #ECECEC;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;margin: 10px auto;padding: 0 0 10px 0;}
+.com a { text-decoration: none;}
+.com1{width: 98%;float: left;background-color: #D9D9D9;	-webkit-border-radius: 5px;	-moz-border-radius: 5px;border-radius: 5px;margin: 10px 20px 0 10px;padding: 0 0 3px 0;}
+.com3{ width:50%; float:left; text-align:right; direction:rtl; line-height:27px;}
+.com2{ width:30%px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+.com4{ width:96%; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:12px;}
+.com5{width: 96%;float: left;background-color: #E9E9E9; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;margin: 3px 3px 0 3px;
+	padding: 7px;direction: rtl;	text-align: right;-moz-box-shadow: inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;	box-shadow: inset #444 0px 0px 5px;
+	font-size: 12px;}
+.com6{ width:97%; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+.com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+.comment_form .comment_form_msg {background: none repeat scroll 0 0 #F6F6F6;border: 1px solid #E6E6E6; margin: 5px;    padding: 5px;}
+</style>
+          </div>
+    <!--- e content --->
+    
+    <div class="left">
+      <div class="lm">
+        <div class="lmtitle">
+          <div class="lmtitle-mid">جستجو در وبلاگ</div>
+        </div>
+        <div class="lmtext">
+          <div class="lmtext-mid">
+            <form id="frm-16081738975fdac94936f82" method="get" action="http://zendegimoon.mihanblog.com/post/search/fid/16081738975fdac94936f82"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+              <input type="text" name="search_text"/>
+              <input type="submit" value="جستجو"/>
+            <input type="hidden" name="frm-id" value="16081738975fdac94936f82" id="frm-id" /></form>          </div>
+        </div>
+        <div class="lm-bbg"></div>
+      </div>
+              <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">تازه ترین مطالب</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                                  <li><a href="../../544.html" title="چهارشنبه 5 آذر 1399"> پیش بینی آینده... </a></li>
+                                  <li><a href="../../543.html" title="دوشنبه 3 آذر 1399"> از شیر گرفتن آقا پسر </a></li>
+                                  <li><a href="../../542.html" title="شنبه 24 آبان 1399"> قبل از آشنایی با همسر </a></li>
+                                <li><a href="../../list.html">لیست تمام مطالب</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+                    <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid"> لینک های روزانه </div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                                  <li><a href="http://behzadwin.blogsky.com/" title="" target="_blank">مخمور جام عشق</a> </li>
+                                  <li><a href="http://mamooli.persianblog.ir/" title="" target="_blank">یه دختر معمولی با یه زندگی معمولی</a> </li>
+                                  <li><a href="http://elmiradad.blogfa.com/" title="" target="_blank">روزگار تلخ و شیرین من در غربت</a> </li>
+                                  <li><a href="http://tanhaian.persianblog.ir/" title="" target="_blank">دل نوشته های من در غربت</a> </li>
+                                  <li><a href="http://khateratemanca.blogfa.com/" title="" target="_blank">زندگی من در غربت</a> </li>
+                                  <li><a href="http://www.cafealone.com" title="شعر,مینیمال,جملات فلسفی,داستان کوتاه" target="_blank">کافه تنهایی</a> </li>
+                                  <li><a href="http://dinon.ir/" title="" target="_blank">آمــوزش و پاسخگــویی به سوالات علــوم کامپیوتــر</a> </li>
+                                  <li><a href="http://66darjostojoo.blogfa.com/" title="" target="_blank">در جست و جو</a> </li>
+                                  <li><a href="http://pzi.parsiblog.com/" title="" target="_blank">..••●●ساعت به وقت غربت●●••..</a> </li>
+                                  <li><a href="http://moalem-ko0cho0lo0.blogfa.com/" title="" target="_blank">خاطرات معلم کــوچــولــو 1</a> </li>
+                                <li><a href="../../../linkdaily/index.html"><b>همه لینکها</b></a></li>
+                <li><a href="javascript:linkdailyForm()"><b>ارسال لینک</b></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+            
+		<form id="frm-16081738975fdac94937b3a" method="post" action="http://zendegimoon.mihanblog.com/poll/new/fid/16081738975fdac94937b3a/atrty/1608173897/avrvy/0/key/d6c29dd962c1319cebfdbb722b85fceb/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="356955" id="data[pollid]" />		
+        <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">نظرسنجی</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid"> دوست دارین بیشتر راجع به چی بنویسم؟<br>
+               <label><input type="radio" name="data[answer]" value="v1">فرهنگ آلمانی</label><br>
+               <label><input type="radio" name="data[answer]" value="v2">زندگی در آلمان</label><br>
+               <label><input type="radio" name="data[answer]" value="v3">ویزا و مراحل اداری ازدواج</label><br>
+               <label><input type="radio" name="data[answer]" value="v4">زندگی با همسرم در آلمان</label><br>
+                            <input type="submit" value="ثبت"/>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+      
+		<input type="hidden" name="frm-id" value="16081738975fdac94937b3a" id="frm-id" /></form>              <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">دوستان</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                <li><a href="http://cafeskin.blogfa.com/">قالب وبلاگ</a></li>
+                                  <li> <a href="http://deutschlernen1.blogsky.com/" title=""  target="_blank"> بزرگترین سایت کتب و پادکست های زبان آلمانی</a></li>
+                                  <li> <a href="http://mamoolii.blogsky.com" title=""  target="_blank"> یه دختر معمولی با یه زندگی معمولی</a></li>
+                                  <li> <a href="http://mamoolii.blogsky.com" title=""  target="_blank"> یه دختر معمولی با یه زندگی معمولی 2</a></li>
+                                  <li> <a href="http://travle.blogsky.com/" title=""  target="_blank"> سفر - کوچ سرفینگ - تجربه متفاوت</a></li>
+                                  <li> <a href="http://aalmaan.blogfa.com/" title=""  target="_blank"> یادداشت‌های پراکنده در مورد آلمان</a></li>
+                                  <li> <a href="http://studieindeutsch.blogspot.com" title=""  target="_blank"> مهاجرت،تحصیل و زندگی در آلمان</a></li>
+                                  <li> <a href="http://moalem-ko0cho0lo0.blogsky.com/" title=""  target="_blank"> خاطرات معلم کــوچــولــو 2</a></li>
+                                  <li> <a href="http://www.mehditravel87.blogfa.com/" title=""  target="_blank"> سفر به کل دنیا با دوچرخه</a></li>
+                                  <li> <a href="http://wonderland.blog.ir/" title=""  target="_blank"> آزاده در سرزمین عجایب</a></li>
+                                  <li> <a href="http://bluecardgermany.blogsky.com/" title=""  target="_blank"> اقامت کاری کشور آلمان</a></li>
+                                  <li> <a href="http://leiligermany.blogsky.com/" title=""  target="_blank"> زندگی پر از خاطره است</a></li>
+                                  <li> <a href="http://habibashtari.blogfa.com/" title=""  target="_blank"> سفر به دنیا با دوچرخه</a></li>
+                                  <li> <a href="http://booyehbehesht.niniweblog.com/" title=""  target="_blank"> ♡ ♡ بوی بهشت ♡ ♡</a></li>
+                                  <li> <a href="http://weineurope.blogsky.com/" title=""  target="_blank"> من و همسرم در اروپا</a></li>
+                                  <li> <a href="http://ebrahimnejad.persianblog.ir/" title=""  target="_blank"> یک ایرانی در بوستون</a></li>
+                                  <li> <a href="http://aroshayeasemani.persianblog.ir/" title=""  target="_blank"> عروس های آسمانی</a></li>
+                                  <li> <a href="http://bhb.blogfa.com/" title=""  target="_blank"> بلندی های بادگیر</a></li>
+                                  <li> <a href="http://mennomen.mihanblog.com" title=""  target="_blank"> my white house</a></li>
+                                  <li> <a href="http://www.mybabydream.blogfa.com/" title=""  target="_blank"> رویای کودکی من</a></li>
+                                  <li> <a href="http://delavarenoor.persianblog.ir/" title=""  target="_blank"> از رویا تا واقعیت</a></li>
+                                <li><a href="../../../link/index.html"><b>همه لینکها</b></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+            <div class="lm">
+        <div class="lmtitle">
+          <div class="lmtitle-mid">لینک های مفید</div>
+        </div>
+        <div class="lmtext">
+          <div class="lmtext-mid"> 
+            <!--- Start links  ----><ul>
+<li><a href="http://wallz.ir/" target="_blank" title="گرافیک">والز</a></li>
+<li><a href="http://kiosk724.ir/" target="_blank" title="کتاب و مجله الکترونیکی">کیوسک 724</a></li>
+<li><a href="http://sitesetup.ir/" target="_blank" title="طراحی سایت و قالب وبلاگ">سایت ستاپ</a></li>
+<li><a href="http://theme.sitesetup.ir/" target="_blank" title="قالب حرفه ای وبلاگ">قالب وبلاگ حرفه ای</a></li>
+</ul> <!--- End links  ---->  
+          </div>
+        </div>
+        <div class="lm-bbg"></div>
+      </div>
+      <div class="lm">
+        <div class="lmtitle">
+          <div class="lmtitle-mid">ابزارک های وبلاگ</div>
+        </div>
+        <div class="lmtext">
+          <div class="lmtext-mid"> <br>
+            <a href="http://cafeskin.blogfa.com/">قالب وبلاگ</a><br>
+            <br>
+                          <ul>
+                <li>کل بازدید:<script>getStatVar('total_view');</script></li>
+                <li>بازدید امروز :<script>getStatVar('today_view');</script></li>
+                <li>یازدید دیروز : <script>getStatVar('yesterday_view');</script></li>
+                <li>بازدید این ماه : <script>getStatVar('this_month_view');</script></li>
+                <li>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></li>
+                <li>تعداد نویسندگان : <script>getStatVar('total_author');</script></li>
+                <li>تعداد کل مطالب : <script>getStatVar('total_post');</script></li>
+                <li>آخرین بازدید : <script>getStatVar('last_view_date');</script></li>
+                <li>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></li>
+              </ul>
+                        <br>
+            <div style="text-align:center;"> <!-- Begin https://dornamusic.com -->
+<center><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><audio style="width:100%" controls autoplay loop><source src="http://s.dornamusic.com/mp3/17/4/26/Reza-Sadeghi-Man-Ba-Toam-128-DornaMusic.Com.mp3" type="audio/mpeg" /></audio></br>
+<a title="دانلود آهنگ جدید من با توام – رضا صادقی" target="_blank" href="https://dornamusic.com/songs/reza-sadeghi-man-ba-toam/">دانلود آهنگ جدید من با توام – رضا صادقی</a></center>
+<!-- End https://dornamusic.com -->
+
+
+
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=3660612&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=3660612" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code --> </div>
+          </div>
+        </div>
+        <div class="lm-bbg"></div>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+    <!--- e left --->
+    
+    <div style="clear:both"></div>
+  </div>
+  <!--- e main --->
+  
+  <div class="footer">
+    <div class="footer-mid">تمام حقوق وبلاگ متعلق به نویسنده‌ی آن می باشد :: <a href="http://cafeskin.blogfa.com/"> قالب وبلاگ: کافه اسکین</a> 
+      <!--- برای حفظ حقوق طراح قالب لطفا نام و آدرس طراح را تغییر نداده و پاک نفرمایید. سپاس ---> 
+    </div>
+  </div>
+  <!--- e footer ---> 
+  
+</div>
+<!--- e page --->
+
+</body>
+</html>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'zendegimoon.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

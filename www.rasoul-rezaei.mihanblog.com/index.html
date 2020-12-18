@@ -1,0 +1,1512 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../rasoul-rezaei.mihanblog.com/xmlrpc@rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1176632*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[21]='68';commentCnt[22]='65';commentCnt[23]='45';commentCnt[24]='30';commentCnt[25]='66';commentCnt[27]='47';commentCnt[31]='46';commentCnt[33]='25';commentCnt[36]='34';commentCnt[37]='15';commentCnt[38]='6';commentCnt[39]='3';commentCnt[40]='4';commentCnt[42]='0';commentCnt[44]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[21]='0';
+mihanblogDisLikeArrCnt[21]='0';
+mihanblogLikeArrCnt[22]='0';
+mihanblogDisLikeArrCnt[22]='0';
+mihanblogLikeArrCnt[23]='0';
+mihanblogDisLikeArrCnt[23]='0';
+mihanblogLikeArrCnt[24]='0';
+mihanblogDisLikeArrCnt[24]='0';
+mihanblogLikeArrCnt[25]='0';
+mihanblogDisLikeArrCnt[25]='0';
+mihanblogLikeArrCnt[27]='0';
+mihanblogDisLikeArrCnt[27]='0';
+mihanblogLikeArrCnt[31]='0';
+mihanblogDisLikeArrCnt[31]='0';
+mihanblogLikeArrCnt[33]='0';
+mihanblogDisLikeArrCnt[33]='0';
+mihanblogLikeArrCnt[36]='0';
+mihanblogDisLikeArrCnt[36]='0';
+mihanblogLikeArrCnt[37]='0';
+mihanblogDisLikeArrCnt[37]='0';
+mihanblogLikeArrCnt[38]='0';
+mihanblogDisLikeArrCnt[38]='0';
+mihanblogLikeArrCnt[39]='0';
+mihanblogDisLikeArrCnt[39]='0';
+mihanblogLikeArrCnt[40]='0';
+mihanblogDisLikeArrCnt[40]='0';
+mihanblogLikeArrCnt[42]='0';
+mihanblogDisLikeArrCnt[42]='0';
+mihanblogLikeArrCnt[44]='0';
+mihanblogDisLikeArrCnt[44]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://rasoul-rezaei.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://rasoul-rezaei.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','21');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','پنجشنبه 24 تیر 1395');
+	
+	setStatVar('today_view','53');
+	setStatVar('yesterday_view','18');
+	
+	setStatVar('this_month_view','404');
+	setStatVar('last_month_view','733');
+
+	setStatVar('total_view','129473');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (14:04)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://rasoul-rezaei.mihanblog.com/statupdate/?data[refereruri]=http://aaaivan.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607775114&data[hash]=73eb670f9166d6ac12a1ae5807f7b40b&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="../rasoul-rezaei.mihanblog.com/'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="../rasoul-rezaei.mihanblog.com/'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://rasoul-rezaei.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<title>رسول رضایی</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="designer" content="payamblog">
+<meta name="author" content="رسول رضایی:">
+<meta name="designerUrl" content="http://www.payamblog.com/">
+<meta http-equiv="expires" content="never">
+<script src="http://payamblog.com/blog.js" language="javascript"></script>
+<meta name="description" content="رسول رضایی - محمد رسول رضایی ام<br />
+<br />
+ 17/12/1372 به دنیا آمدم<br />
+<br />
+ساکن ایوانم از استان ایلام<br />
+<br />
+ایمیلم:rasoulrezaei727@yahoo.com<br />
+<br />
+فیس بوک:rasoul rezaei<br />
+<br />
+تمامی اشعار متعلق به بنده ست و کپی یا استفاده از آن ها به هر نحو منوط به آوردن اسم حقیر مجاز است.<br />
+<br />
+<br />
+من تمامیت کلمه ی خونم!<br />
+ - رسول رضایی">
+<meta name="keywords" content="رسول رضایی,rasoul-rezaei, Blog, Weblog, Iran, Farsi, Weblogs, payamblog">
+<link rel="alternate" type="application/rss+xml" title="رسول رضایی" href="../rasoul-rezaei.mihanblog.com/post/rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title="رسول رضایی" href="../rasoul-rezaei.mihanblog.com/post/atom/index.html" />
+<link href="http://payamblog.com/37/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+<div align=center>
+<table border="0" width="1003" cellspacing="0" cellpadding="0">
+	<tr>
+			<td class=left><div class=top1>
+			<div class=titr><div class=titr2><a href="index.html">رسول رضایی</a></div></div>
+<div class=des><div class=des2>مثلا من-نشر مایا</div></div></div>
+
+			<div class=post>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=tpost><div class=tpost2><a href="../rasoul-rezaei.mihanblog.com/post/44.html">خانم پرستار!</a></div></div>
+<div class=xpost><div class=xxpost><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><font color="#FFCC66"><span style="background-color: rgb(153, 102, 51);">
+</span></font><p style="margin: 0px 0px 6px; display: block; font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 20.7px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px;"><font color="#FFCC66"><span style="background-color: rgb(153, 102, 51);">خانم پرستار!<br>کمی الکل در سِرٌم بریز</span></font></p><p style="margin: 0px 0px 6px; display: block; font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 20.7px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px;"><font color="#FFCC66"><span style="background-color: rgb(153, 102, 51);">بر پوستم بِکِش<br>ناخن هایت را<br>رگ هایم را بشکاف<span class="text_exposed_show" style="display: inline;"><br>و کمی الکل بپاشان به متن<br>که<br>استعاره ها<br>تلو<br>تلو<br>تلو<br>لو بروند</span></span></font></p><div class="text_exposed_show" style="display: inline; font-family: &quot;lucida grande&quot;,tahoma,verdana,arial,sans-serif; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 20.7px; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px;"><p style="margin: 0px 0px 6px;"><font color="#FFCC66"><span style="background-color: rgb(153, 102, 51);">رگ هایم را بشکاف<br>و آن رود خانه ی تنها را بیرون بیاور</span></font></p><p style="margin: 6px 0px;"><font color="#FFCC66"><span style="background-color: rgb(153, 102, 51);">خانم پرستار!<br>بر پوستم بِکِش<br>ناخن هایت را<br>رگ هایم را بشکاف<br>و<span class="Apple-converted-space">&nbsp;</span><br>کوزه<br>کوزه<br>شراب را لای پوست لاغرت پنهان کن</span></font></p><p style="margin: 6px 0px;"><font color="#FFCC66"><span style="background-color: rgb(153, 102, 51);">هزار "براهنی" در سینه ام آه می کشد<br>در "خویشتن"تنها بودم<br>در "خویشتن"تنها بودیم<br>تا<br>صدای نازک یک زن<br>تنهایی مان را هزار برابر کرد</span></font></p><p style="margin: 6px 0px;"><font color="#FFCC66"><span style="background-color: rgb(153, 102, 51);">خانم پرستار!<br>این بار ناخن هایت را آرام روی پوستم بکش<br>و حرارت این کوره را بیشتر کن</span></font></p><p style="margin: 6px 0px;"><font color="#FFCC66"><span style="background-color: rgb(153, 102, 51);">از لرزش شانه هایم<br>از سرخی صورتم<br>از سنگینی دست هایم<br>مستی را بتکان!</span></font></p><p style="margin: 6px 0px;"><font color="#FFCC66"><span style="background-color: rgb(153, 102, 51);">تاویل دوست داشتن درد است و درد<br>و همیشه باید به چیزی از جنس زخم<br>به چیزی از جنس الکل<br>فکر کنم</span></font></p><p style="margin: 6px 0px;"><font color="#FFCC66"><span style="background-color: rgb(153, 102, 51);"><a class="_58cn" href="https://www.facebook.com/hashtag/%D8%B1%D8%B3%D9%88%D9%84_%D8%B1%D8%B6%D8%A7%DB%8C%DB%8C?source=feed_text&amp;story_id=1779763198924700" data-ft="{&quot;tn&quot;:&quot;*N&quot;,&quot;type&quot;:104}" style="cursor: pointer; text-decoration: none;"><span class="_58cl">‫#‏</span><span class="_58cm">رسول_رضایی‬</span></a></span></font></p></div><font color="#FFCC66"><span style="background-color: rgb(153, 102, 51);">
+
+
+
+
+</span></font><br><br><b>
+	</b><br>
+<font style="font-size:8pt">
+									</font>
+</div></div>
+<div class=bpost><div class=date><div class=date2>نوشته شده در تاریخ پنجشنبه 24 تیر 1395 توسط 
+	رسول رضایی:</div></div>
+<div class=nz><div class=nz2><a target="_self" href="javascript:newComment(44)" >نظرات 
+	(<script>setCommentCnt(44)</script>)</a></div></div></div>
+<div class=tpost><div class=tpost2><a href="../rasoul-rezaei.mihanblog.com/post/42.html">وبلاگ دوستت دارم-کاری تازه</a></div></div>
+<div class=xpost><div class=xxpost>
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">سرم<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">رم می کند<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">فحش میخورد از مادر<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">در خانه<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">به خیابان می برم<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">رم میکند<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">در تظاهرات ضد خودم<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">&nbsp;</span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">-اگر پیامبر بودم<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">تنها زن ها را هدایت،می کردم<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">-زن علیه السلام<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">&nbsp;</span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">چگونه پوستم را کنار بزنم<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">دست ببرم<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">قلبم را بیرون بیاورم؟<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">&nbsp;</span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">چگونه پوستم را کنار بزنم<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">دست ببرم<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">رودخانه های پرخون را بیرون بکشم؟<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">&nbsp;</span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">چگونه پوستم را کنار بزنم<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">دست ببرم<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">این آتش را شعله ور تر کنم؟<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">&nbsp;</span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">(مادرم که اینها را نمی داند)<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">&nbsp;</span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">دیگر چگونه بگویم<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">تنهایی<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">سوهان کشیده بر پوستم<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">که تازه با صابون شسته ام<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">-پوست علیه السلام<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">&nbsp;</span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">جنون مرگی در من شیهه می کشد<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">گوری بی نام<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">که برف یک قرن روی آن نشسته<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">&nbsp;</span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">کنار میزنم<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">خاک هارا<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">سنگ ها را برمیدارم<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">هرروز یک گالون نفت میریزم<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">بر نعش ام<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">کبریت میکشم<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">هرروز...هرروز<o:p></o:p></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">&nbsp; &nbsp;</span></p><p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA"><br></span></p><p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><span lang="FA" style="font-size:14.0pt;line-height:115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-ascii-font-family:Calibri;mso-ascii-theme-font:minor-latin;mso-hansi-font-family:
+Calibri;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:Arial;mso-bidi-theme-font:
+minor-bidi;mso-bidi-language:FA">رسول رضایی</span></p><p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed">-----------------------------------------------------------------------------</p><p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><font size="3">برای دسترسی راحتر به شعر ها به کانال تلگرام من بپیوندید در صورت تمایل:</font></p><p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><font size="3"><br></font></p><p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><font size="3">@rasoulrezaeii</font></p><p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><font size="3"><br></font></p><p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><font size="3">tlgrm.me/rasoulrezaeii</font></p><p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><font size="3"><br></font></p><p class="MsoNormal" dir="RTL" style="text-align:right;direction:rtl;unicode-bidi:
+embed"><font size="3">telegram.me/rasoulrezaeii</font></p>
+
+
+
+
+<br><br><b>
+	</b><br>
+<font style="font-size:8pt">
+									</font>
+</div></div>
+<div class=bpost><div class=date><div class=date2>نوشته شده در تاریخ شنبه 12 تیر 1395 توسط 
+	رسول رضایی:</div></div>
+<div class=nz><div class=nz2><a target="_self" href="javascript:newComment(42)" >نظرات 
+	(<script>setCommentCnt(42)</script>)</a></div></div></div>
+<div class=tpost><div class=tpost2><a href="../rasoul-rezaei.mihanblog.com/post/40.html">اولین مجموعه ام-مثلا من</a></div></div>
+<div class=xpost><div class=xxpost><font size="4"><span style="color: rgb(20, 24, 35); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 20.7px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">همچنان که مادر نه ماه به انتظار دیدن فرزندش شب را به روز می رساند و روز زا به شب،با تمام احساس مادرانه ام به <br><br>شعر از رنج پدرانه ای که در این مدت کشیدم به دوستان و عزیزانم تولد یک مجموعه شعر از خودم را خبر می دهم<br><br style="color: rgb(20, 24, 35); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 20.7px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"></span><span style="color: rgb(20, 24, 35); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 20.7px; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(255, 255, 255);">قرارداد اولین مجموعه شعر سپیدم رو با نام "مثلا من"که توسط نشر "مایا" چاپ خواهد شد رو امضا کردم،و انشااله به <br><br>زودی راهی بازار نشر خواهد شد خوشحالم از اینکه خبر کار را برای دوستانم بگذارم ,و چشم به راه مهربانیشان باشم.</span>
+
+
+</font><br><br><b>
+	</b><br>
+<font style="font-size:8pt">
+									</font>
+</div></div>
+<div class=bpost><div class=date><div class=date2>نوشته شده در تاریخ شنبه 24 بهمن 1394 توسط 
+	رسول رضایی:</div></div>
+<div class=nz><div class=nz2><a target="_self" href="javascript:newComment(40)" >نظرات 
+	(<script>setCommentCnt(40)</script>)</a></div></div></div>
+<div class=tpost><div class=tpost2><a href="../rasoul-rezaei.mihanblog.com/post/39.html">روز نوشت</a></div></div>
+<div class=xpost><div class=xxpost><i><font size="2">دلتنگم،دلتنگ روزهایی که اینجا شلوغ بود،<br><br>دلتنگ دوستانی که هرروز پست های تازه میزاشتن-به اون اندازه که حجم فضاهای مجازی روز به روز بیشتر میشه <br><br>عشق من به "تنهایی پرهیاهو"هم روز به روز بیشتر میشه-<br><br>سوختگی گوشی بدترین نوع سوختگیه-دوستانم لطفا شماره هاتونو با نام برام بزارین-مرسی<br></font></i><br><br><b>
+	</b><br>
+<font style="font-size:8pt">
+									</font>
+</div></div>
+<div class=bpost><div class=date><div class=date2>نوشته شده در تاریخ پنجشنبه 7 آبان 1394 توسط 
+	رسول رضایی:</div></div>
+<div class=nz><div class=nz2><a target="_self" href="javascript:newComment(39)" >نظرات 
+	(<script>setCommentCnt(39)</script>)</a></div></div></div>
+<div class=tpost><div class=tpost2><a href="../rasoul-rezaei.mihanblog.com/post/38.html">بی نام</a></div></div>
+<div class=xpost><div class=xxpost>
+
+
+<p style="margin: 0px 0px 6px; display: block; color: rgb(20, 24, 35); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19.3199996948242px; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><span class="text_exposed_show" style="display: inline;">یکی تنها از جنگ می گوید</span></p><p style="margin: 0px 0px 6px; display: block; color: rgb(20, 24, 35); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19.3199996948242px; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><span class="text_exposed_show" style="display: inline;">دیگری تنها از خودکشی برادرش</span></p><p style="margin: 0px 0px 6px; display: block; color: rgb(20, 24, 35); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19.3199996948242px; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><span class="text_exposed_show" style="display: inline;">دیگری تنها از گرانی بنزین</span></p><p style="margin: 0px 0px 6px; display: block; color: rgb(20, 24, 35); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19.3199996948242px; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><span class="text_exposed_show" style="display: inline;">دیگری تنها از "بیگانه"</span></p><p style="margin: 0px 0px 6px; display: block; color: rgb(20, 24, 35); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19.3199996948242px; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><span class="text_exposed_show" style="display: inline;">دیگری تنها فیلم میبیند</span></p><p style="margin: 0px 0px 6px; display: block; color: rgb(20, 24, 35); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19.3199996948242px; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><span class="text_exposed_show" style="display: inline;">دیگری تنها ورزش می کند</span></p><p style="margin: 0px 0px 6px; display: block; color: rgb(20, 24, 35); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19.3199996948242px; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><span class="text_exposed_show" style="display: inline;">دیگری تنها گوش راستش را می خاراند</span></p><p style="margin: 0px 0px 6px; display: block; color: rgb(20, 24, 35); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19.3199996948242px; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><span class="text_exposed_show" style="display: inline;">دیگری ...</span></p><p style="margin: 0px 0px 6px; display: block; color: rgb(20, 24, 35); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19.3199996948242px; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><span class="text_exposed_show" style="display: inline;">دیگری ...</span></p><p style="margin: 0px 0px 6px; display: block; color: rgb(20, 24, 35); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19.3199996948242px; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><span class="text_exposed_show" style="display: inline;">دیگری ...</span></p><p style="margin: 0px 0px 6px; display: block; color: rgb(20, 24, 35); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19.3199996948242px; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><span class="text_exposed_show" style="display: inline;">تو به تیمارستانی دل بستی</span></p><p style="margin: 0px 0px 6px; display: block; color: rgb(20, 24, 35); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19.3199996948242px; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><span class="text_exposed_show" style="display: inline;">که منم</span></p><p style="margin: 0px 0px 6px; display: block; color: rgb(20, 24, 35); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19.3199996948242px; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><br><span class="text_exposed_show" style="display: inline;"></span></p><p style="margin: 0px 0px 6px; display: block; color: rgb(20, 24, 35); font-family: 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 19.3199996948242px; orphans: auto; text-align: right; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);"><span class="text_exposed_show" style="display: inline;">"رسول رضایی"<br></span></p>
+
+
+
+
+
+<br><br><b>
+	</b><br>
+<font style="font-size:8pt">
+									</font>
+</div></div>
+<div class=bpost><div class=date><div class=date2>نوشته شده در تاریخ شنبه 17 مرداد 1394 توسط 
+	رسول رضایی:</div></div>
+<div class=nz><div class=nz2><a target="_self" href="javascript:newComment(38)" >نظرات 
+	(<script>setCommentCnt(38)</script>)</a></div></div></div>
+<div class=tpost><div class=tpost2><a href="../rasoul-rezaei.mihanblog.com/post/37.html">همه ی ما نوبت اندوه داشتیم</a></div></div>
+<div class=xpost><div class=xxpost>
+<p><font size="2">&nbsp; از دور کسی می آید</font></p>
+<p><font size="2">اندوه ترانه ای کوردی در زنانگی صدایش موج می زند</font></p>
+<p><font size="2">چشم هایش مصرانه زیباست</font></p>
+<p><font size="2">باید از خواب بیرون بزنم</font></p>
+<p><font size="2">و از دور لبهایش را ...</font></p>
+<p><font size="2">و از دور دست هایش را ...</font></p>
+<p><font size="2">و از دور&nbsp; ...</font></p>
+<p><font size="2">دور ...</font></p>
+<p><font size="2">صبح،حبس شده در سرزمینی دیگر</font></p>
+<p><font size="2">سوم شخص مفرد من رفته است</font></p>
+<p><font size="2">و این عزا </font></p>
+<p><font size="2">از پیراهن من شروع می شود.</font></p>
+<p><font size="2"></font>&nbsp;</p>
+<p><font size="2"></font>&nbsp;</p>
+<p><font size="2"></font>&nbsp;</p>
+<p><font size="2">پ-ن: همه ی ما نوبت اندوه داشتیم ...</font></p>
+
+<br><br><b>
+	</b><br>
+<font style="font-size:8pt">
+									</font>
+</div></div>
+<div class=bpost><div class=date><div class=date2>نوشته شده در تاریخ پنجشنبه 3 اردیبهشت 1394 توسط 
+	رسول رضایی:</div></div>
+<div class=nz><div class=nz2><a target="_self" href="javascript:newComment(37)" >نظرات 
+	(<script>setCommentCnt(37)</script>)</a></div></div></div>
+<div class=tpost><div class=tpost2><a href="../rasoul-rezaei.mihanblog.com/post/36.html">چهار ماه دلتنگی!</a></div></div>
+<div class=xpost><div class=xxpost><font size="2">سلام<br><br>تا حالا نشده من این مدت از فضای وبلاگ دور باشم،چهار ماه!<br><br>اما این دور بودن من مساوی این نیست که در جریان شعر نبودم--<br><br>این لاین و واتس آپ به وبلاگ اومدنمون آسیب زده!!!<img src="http://mihanblog.com/public/public/rte/images_new/smiles/3.gif"> و البته گرفتاری های عزیز!<br><br>از کسایی که احوال منو پرسیدن خیلی تشکر میکنم-از شروین شیروانی خیرخواه ویژه ممنونم-<br><br>و اما شعر:<br><br>قبرستانی هستم<br><br>با مرده ها و قبرهای زیاد<br><br>مرده ها در شب نشینی هایشان<br><br>شعر هایی از زندگی برای هم میخوانند<br><br>در این قبرستان<br><br>پسری عاشق دختری شده بود<br><br>که با وجود خودسوزی هنوز بوی آتش می داد<br><br>اینجا<br><br>چند استخوان پیراهن سفید به تن کرده اند<br><br>باهم قدم می زنند<br><br>و با آهنگ های شاد می رقصند<br><br>جوان ها پشت درختان عاشق می شوند<br><br>و برای هم شعر می خوانند<br><br>پیرمرد ها سیگاری روشن می کنند<br><br>و از جوانی شان می گویند<br><br>گاهی فکر می کنم<br><br>من پرم<br><br>از قبرهایی که هنوز کنده نشده اند.</font><br><br><br><br><font size="2"><br>پ-ن:ما شعر میگوییم،ما که نمیتوانیم زندگی کنیم،ما شعر می گوییم.</font><br><br><br>
+
+
+<br><br><b>
+	</b><br>
+<font style="font-size:8pt">
+									</font>
+</div></div>
+<div class=bpost><div class=date><div class=date2>نوشته شده در تاریخ چهارشنبه 10 دی 1393 توسط 
+	رسول رضایی:</div></div>
+<div class=nz><div class=nz2><a target="_self" href="javascript:newComment(36)" >نظرات 
+	(<script>setCommentCnt(36)</script>)</a></div></div></div>
+<div class=tpost><div class=tpost2><a href="../rasoul-rezaei.mihanblog.com/post/33.html">مرگ زدگی!</a></div></div>
+<div class=xpost><div class=xxpost>
+<font size="3">1)<br><br>سمفونی سکوتشان گوش دنیا را کر می کند<br><br>مرده های قبرستان<br><br><br><br><br><br><br><br>2)<br><br>هر شب<br><br>نجوا می کنند<br><br>در گوش جنازه ام<br><br>مورچه ها<br><br><br><br>رسول ر ضاییی<br><br></font><br><br><br><br><font size="3"><br>پ-ن: متنفرم از روزهایی که خودم هم نمی دانم دردم چیست</font><br>
+
+<br><br><b>
+	</b><br>
+<font style="font-size:8pt">
+									</font>
+</div></div>
+<div class=bpost><div class=date><div class=date2>نوشته شده در تاریخ سه شنبه 24 تیر 1393 توسط 
+	رسول رضایی:</div></div>
+<div class=nz><div class=nz2><a target="_self" href="javascript:newComment(33)" >نظرات 
+	(<script>setCommentCnt(33)</script>)</a></div></div></div>
+<div class=tpost><div class=tpost2><a href="../rasoul-rezaei.mihanblog.com/post/31.html">زامه یلم نه لقرچن</a></div></div>
+<div class=xpost><div class=xxpost>
+
+
+
+<font size="3">ته‌نیام <br>
+<br>
+چۊ ته‌نیا دارێ له ‌بێ‌ده‌نگی کۊە<br>
+<br>
+زامه‌یلم نه‌ڵقرچن<br>
+<br>
+هه‌ر چه‌وه‌یل تونه شه‌و تیه‌ریکا که‌ێ<br>
+<br>
+هه‌ر زڵف تونه شه‌و دریژا که‌ێ<br>
+<br>
+به‌وره‌و<br>
+<br>
+به‌وره‌‌و<br>
+<br>
+هه‌ر باوش تونه <br>
+<br>
+ک خۊن ده‌ێگه ناو ره‌گه‌یلم<br><br><br>
+برگردان:</font>
+
+<font size="3"><br>
+<br>
+تنهایم<br>
+<br>
+همچون تنها درختی در سکوت کوه<br>
+<br>
+زخمم را باز نکن<br>
+<br>
+تنها چشمهای توست که شب را تاریک می کند<br>
+<br>
+و تنها زلف توست<br>
+<br>
+که شب را به درازا کشیده است<br>
+<br>
+برگرد<br>
+<br>
+برگرد<br>
+<br>
+که تنها آغوش توست<br>
+<br>
+خون در رگ هایم می دواند </font><br>
+<br>------------------------------------------------------------------------------------------------------------------------------------------<br><font size="2"><br>پ-ن1:بی نهایت از محمد مرادی نصاری تشکر میکنم<br><br>پ-ن2:برسد به دست ابوالفضل زرینه<br><br>پ-ن3:مدت زیادی نیست سپید کوردی کار میکنم<br><br>پ-ن4:عکسی ازخودم در ادامه مطلب<br></font>
+
+
+
+
+
+
+
+
+
+
+<br><br><b>
+	<a href='../rasoul-rezaei.mihanblog.com/post/31.html'>ادامه مطلب</a></b><br>
+<font style="font-size:8pt">
+									</font>
+</div></div>
+<div class=bpost><div class=date><div class=date2>نوشته شده در تاریخ دوشنبه 19 خرداد 1393 توسط 
+	رسول رضایی:</div></div>
+<div class=nz><div class=nz2><a target="_self" href="javascript:newComment(31)" >نظرات 
+	(<script>setCommentCnt(31)</script>)</a></div></div></div>
+<div class=tpost><div class=tpost2><a href="../rasoul-rezaei.mihanblog.com/post/27.html">جز آه هوایی در سرم نیست!</a></div></div>
+<div class=xpost><div class=xxpost>
+
+
+<font size="2">همانطور که داشتم لباس هایم را می پوشیدم که به دنبال صادق بروم-یکهو چشمم به اون شال افتاد،شالی که شعرها با آن گفته ام<br><br>بوییدم و شعر شدم-و با نت های زیر روسری ات "دوست دارم"ها ساخته ام-همانطور&nbsp; در همان خلسه بودم که گوشی موبایلم زنگ خورد<br><br>خودش بود،دو به شک بودم که بردارم یانه،بردارم،برندارم،بر ندارم،بردارم،بر میدارم،نه نه ولش کن-تو همین فکرهای از هم گسیخته بودم که<br><br>گوشی را برداشتم<br><br>گفتگوی عذاب آور و مسخره تمام شد،بعد از پایان صحبت ها گوشی را محکم به دیوار کوبیدم<br><br>سویچ را برداشتم و رفتم دنبال صادق، محرم همیشه غم های من<br><br>حال بدم را به او انتقال ندادم،با خودم گفتم خودخوری کنم بهتر است،برگشتم به خانه و در خودم فرو رفتم،در افکاری که بوی تلخ جدایی می داد،بوی رفتن.<br><br>مرور کردن خاطرات خوب گذشته هم کمک خاصی به حال من نمی کند،حالم را خوب نمی کند،هیچ، تنها ترم میکند،دلتنگ ترم میکند،نابودم میکند.<br><br>در خودم فرو میروم،پیام هایت را می خوانم،تمام "دوستت دارم" ها، تمام "بای،خوب بخوابی" ها،تمام عاشقانه ها- آه ...<br><br>کاش کاش به جای دلتنگی واژه عمیق تری بود ...<br><br><br><br>پ-ن1:سطر سطر این متن رو گریستم<br><br>پ-ن2:لعنت به من که ساده دل سپردم<br><br>پ-ن3:شب است و سکوت و گریه ی دلگیری"ساعت 3 شب"<br></font>
+
+
+
+
+
+
+
+
+<br><br><b>
+	</b><br>
+<font style="font-size:8pt">
+									</font>
+</div></div>
+<div class=bpost><div class=date><div class=date2>نوشته شده در تاریخ سه شنبه 6 خرداد 1393 توسط 
+	رسول رضایی:</div></div>
+<div class=nz><div class=nz2><a target="_self" href="javascript:newComment(27)" >نظرات 
+	(<script>setCommentCnt(27)</script>)</a></div></div></div>
+<div class=tpost><div class=tpost2><a href="../rasoul-rezaei.mihanblog.com/post/25.html">به شیرینی شکلات تلخ</a></div></div>
+<div class=xpost><div class=xxpost>
+<font size="3">چه شکلات تلخی ست<br><br>بودن اما نداشتنت.<br><br><br><br><br>پ-ن1:این شعر از اولین شعرایی هست که گفتم-اگه خوب نیست بر من ببخشایید<br><br>پ-ن2:تقدیم میشه به مهربانی و شیرینی شکلات تلخ عزیزم<br><br>پ-ن3:دلم بستنی یخی می خواد دخی<br><br>پ-ن4:همیشه اشتباه کن<br></font>
+
+
+
+
+<br><br><b>
+	</b><br>
+<font style="font-size:8pt">
+									</font>
+</div></div>
+<div class=bpost><div class=date><div class=date2>نوشته شده در تاریخ شنبه 27 اردیبهشت 1393 توسط 
+	رسول رضایی:</div></div>
+<div class=nz><div class=nz2><a target="_self" href="javascript:newComment(25)" >نظرات 
+	(<script>setCommentCnt(25)</script>)</a></div></div></div>
+<div class=tpost><div class=tpost2><a href="../rasoul-rezaei.mihanblog.com/post/24.html">نمایشگاه</a></div></div>
+<div class=xpost><div class=xxpost>
+
+<font size="3">سلام دوستان جان<br><br>19و20ام نمایشگاه کتاب خواهم بود<br><br>خوشحال میشم با دوستان دیداری داشته باشم-<br><br>راستی دوربین یادتون نره<br><br>که تند تند عکس بگیریم و بندازیم فیس بوک-ملت کیف کنن!!!!!<br><br>به امید دیدار-بدرود</font><br>
+
+
+
+
+
+
+<br><br><b>
+	</b><br>
+<font style="font-size:8pt">
+									</font>
+</div></div>
+<div class=bpost><div class=date><div class=date2>نوشته شده در تاریخ جمعه 12 اردیبهشت 1393 توسط 
+	رسول رضایی:</div></div>
+<div class=nz><div class=nz2><a target="_self" href="javascript:newComment(24)" >نظرات 
+	(<script>setCommentCnt(24)</script>)</a></div></div></div>
+<div class=tpost><div class=tpost2><a href="../rasoul-rezaei.mihanblog.com/post/23.html">تو جاودانی!</a></div></div>
+<div class=xpost><div class=xxpost><font size="3">کوچه ی باروت<br><br>تابوت پشت تابوت<br><br>با تنی زخمی<br><br>فلسطین<br><br><br><br><br>پ-ن1: 24 فروردین تولد 1سالگی "تنهایی پر هیاهو"بود<br><br>پ-ن2: بخند،بگذار اردیبهشتی ترین مرد سال من باشم.<br></font><br> 
+
+
+<br><br><b>
+	</b><br>
+<font style="font-size:8pt">
+									</font>
+</div></div>
+<div class=bpost><div class=date><div class=date2>نوشته شده در تاریخ پنجشنبه 4 اردیبهشت 1393 توسط 
+	رسول رضایی:</div></div>
+<div class=nz><div class=nz2><a target="_self" href="javascript:newComment(23)" >نظرات 
+	(<script>setCommentCnt(23)</script>)</a></div></div></div>
+<div class=tpost><div class=tpost2><a href="../rasoul-rezaei.mihanblog.com/post/22.html">عنوان ندارد!</a></div></div>
+<div class=xpost><div class=xxpost>
+
+<font size="3">
+</font><font size="3"><span style="font-weight: bold;">ترس</span><br style="font-weight: bold;"><br style="font-weight: bold;"><span style="font-weight: bold;">از ناخن پاهایم خود را بالا میکشد</span><br style="font-weight: bold;"><br style="font-weight: bold;"><span style="font-weight: bold;">افسر</span><br style="font-weight: bold;"><br style="font-weight: bold;"><span style="font-weight: bold;">&nbsp;دستور شلیک می دهد</span><br style="font-weight: bold;"><br style="font-weight: bold;"><span style="font-weight: bold;">مردی</span><br style="font-weight: bold;"><br style="font-weight: bold;"><span style="font-weight: bold;">تنها آزادی اش را اعتراض کرده بود.</span><br><br><br><br><br><br><br><span style="font-weight: bold;">پ.ن- 1:سال تازه رو به همه ی دوستانم تبریک میگم-امیدوارم بهترین سال زندگیتون باشه.</span><br style="font-weight: bold;"><br style="font-weight: bold;"><span style="font-weight: bold;">پ.ن-2:زندگی واژه پوچی ست وقتی حتی یک لحظه انسان در خودش هم آسوده نیست.</span><br><br><br><br></font>
+
+
+
+
+
+
+
+
+<br><br><b>
+	</b><br>
+<font style="font-size:8pt">
+									</font>
+</div></div>
+<div class=bpost><div class=date><div class=date2>نوشته شده در تاریخ جمعه 15 فروردین 1393 توسط 
+	رسول رضایی:</div></div>
+<div class=nz><div class=nz2><a target="_self" href="javascript:newComment(22)" >نظرات 
+	(<script>setCommentCnt(22)</script>)</a></div></div></div>
+<div class=tpost><div class=tpost2><a href="../rasoul-rezaei.mihanblog.com/post/21.html">تولد</a></div></div>
+<div class=xpost><div class=xxpost><font style="font-family: tahoma,arial,helvetica,sans-serif;" size="5">
+</font><font style="font-family: tahoma,arial,helvetica,sans-serif; font-weight: bold;" size="5">
+<span style="color: rgb(255, 255, 255);">
+</span><span class="Apple-style-span" style="border-collapse: separate; color: rgb(255, 255, 255); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;"><span class="Apple-style-span" style="font-size: 13px; line-height: 18px; text-align: right;">امروز تولدم بود!!!!طبق معمول هر سال خودم برای خودم کیک درست کردم ،حوصله شمع و اینا رو نداشتم-خودم بودم و خودم با کمی <br><br>بغض و تنهایی-تنها بودیم اما سکوتمان گوش افلاکیان را کر کرد-از همه ی دوستانی که تولدمو تبریک گفتن بی نهایت سپاس گزارم و <br><br>دستشان را می بوسم-این شعرم از خودم به خودم تقدیم میکنم:<br><br>بهار می شوم<br><br>وقتی دستت را به روی صورتم میکشی<br><br>در کافه<br><br>کاش به "دوستت دارم"دعوتم کنی<br><br>به ترانه ای از فروغی<br><br>به شعری از فروغ<br><br>پایان این شعر آغوش توست.</span></span></font>
+
+
+
+
+
+<br><br><b>
+	</b><br>
+<font style="font-size:8pt">
+										برچسب ها:
+													<a href="../rasoul-rezaei.mihanblog.com/post/tag/شناسنامه&#32;ی&#32;من&#32;یک&#32;دروغ&#32;تکراریست.html" >شناسنامه ی من یک دروغ تکراریست</a>، 
+													<a href="../rasoul-rezaei.mihanblog.com/post/tag/هنوز&#32;برای&#32;متولد&#32;شدنم&#32;مجال&#32;هست!.html" >هنوز برای متولد شدنم مجال هست!</a>، 
+											<br>					</font>
+</div></div>
+<div class=bpost><div class=date><div class=date2>نوشته شده در تاریخ یکشنبه 18 اسفند 1392 توسط 
+	رسول رضایی:</div></div>
+<div class=nz><div class=nz2><a target="_self" href="javascript:newComment(21)" >نظرات 
+	(<script>setCommentCnt(21)</script>)</a></div></div></div>
+
+<div class=page>
+			(تعداد کل صفحات:2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			<a href="../rasoul-rezaei.mihanblog.com/page/1.html">
+			<b>1</b></a>&nbsp;&nbsp;			<a href="../rasoul-rezaei.mihanblog.com/page/2.html">
+			<span>2</span></a>&nbsp;&nbsp;<br><br></div>		
+<div style="text-align:center;width:525;float:right"><a href="http://www.payamblog.com/" target="_blank"><b><font color="#e1911f" size="1">.:</font></b><font color="#FFFAC8" style="font-size:8pt;"> Weblog Themes By <b>Payamblog </b></font><b><font color="#e1911f" size="1">:.</font></b></a></div><div style="width:210;float:right;">&nbsp;&nbsp;&nbsp;&nbsp;</div></div></td><td class="right"><div class="top2"></div><div class="menu">
+
+
+<div class=tmenu><div class=tmenu2>درباره وبلاگ</div></div>
+<div class=xmenu>
+<div class=xxmenu>
+<div style="text-align:center;"><img src="../static.mihanblog.com/public/user_data/web_photo/393/1176632.jpg@3363"  /></div>
+محمد رسول رضایی ام<br />
+<br />
+ 17/12/1372 به دنیا آمدم<br />
+<br />
+ساکن ایوانم از استان ایلام<br />
+<br />
+ایمیلم:rasoulrezaei727@yahoo.com<br />
+<br />
+فیس بوک:rasoul rezaei<br />
+<br />
+تمامی اشعار متعلق به بنده ست و کپی یا استفاده از آن ها به هر نحو منوط به آوردن اسم حقیر مجاز است.<br />
+<br />
+<br />
+من تمامیت کلمه ی خونم!<br />
+</div>
+<div class=xxmenu><a href="javascript:messageForm()">تماس با ما</a></div>
+<div class=xxmenu><a href="mailto:rasoulrezaei727@yahoo.com">پست الكترونیك</a></div>
+<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/rss/index.html" >RSS</a></div>
+<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/atom/index.html" >ATOM</a></div>
+</div>
+
+
+		
+<div class=tmenu><div class=tmenu2>نویسندگان</div></div>
+<div class=xmenu>
+<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/author/1014241.html">رسول رضایی:</a></div></div>
+
+<div class=tmenu><div class=tmenu2>آرشیو مطالب</div></div><div class=xmenu>
+<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/archive/1395/4.html"> تیر 1395</a></div>
+<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/archive/1394/11.html"> بهمن 1394</a></div>
+<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/archive/1394/8.html"> آبان 1394</a></div>
+<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/archive/1394/5.html"> مرداد 1394</a></div>
+<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/archive/1394/2.html"> اردیبهشت 1394</a></div>
+<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/archive/1393/10.html"> دی 1393</a></div>
+<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/archive/1393/4.html"> تیر 1393</a></div>
+<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/archive/1393/3.html"> خرداد 1393</a></div>
+<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/archive/1393/2.html"> اردیبهشت 1393</a></div>
+<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/archive/1393/1.html"> فروردین 1393</a></div>
+</div>
+
+<div class=tmenu><div class=tmenu2>پیوندهای روزانه</div></div><div class=xmenu>
+	<div class=xxmenu><a target="_blank" href="http://www.moch-wristwatch.ir/fallout-feminine-design-wristwatch-love/" title="با سلام بازم بهتون حتما سر می زنم  راستی در  صورت امکان لینک من رو تائید بفرمائید بسیار ممنون
+
+ساناز">خرید ساعت مچی زنانه</a></div>
+	<div class=xxmenu><a target="_blank" href="http://www.100chat.net" title="با سلام....
+ 
+وبلاگ خوبی داشتی ایولا
+ممنون میشم تایید بکنی
+اینم ادرس چت روم من هستش خوشحال میشم تشریف بیاری
+www.100chat.ir">100chat</a></div>
+	<div class=xxmenu><a target="_blank" href="../tahaactive2012.mihanblog.com/index.html" title="با سلام....
+ 
+خواهان تبادل لینک با وبلاگ زیبای شما هستیم.در صورت تمایل لینک رو تایید و اطلاع رسانی کنید تا وب شما را با نام  مورد نظر خودتان لینک کنیم . 
+
+با تشکر
+گروه Taha Active">طه دانلود</a></div>
+	<div class=xxmenu><a target="_blank" href="http://www.moch-wristwatch.ir/fallout-feminine-design-wristwatch-love/" title="با سلام بازم بهتون حتما سر می زنم  راستی در  صورت امکان لینک من رو تائید بفرمائید بسیار ممنون
+
+ساناز">خرید ساعت مچی زنانه</a></div>
+	<div class=xxmenu><a target="_blank" href="http://vekalat.info" title="پایگاه اطلاع رسانی وکالت دات اینفو با افتخار شما را به دیدن این سایت دعوت می نماید.">وکالت دات اینفو</a></div>
+	<div class=xxmenu><a target="_blank" href="../moshavere-tmt92.mihanblog.com/index.html" title="سلام 
+
+
+وبلاگ خوبی دارید 
+بنده مشاوره کنکوری و تحصیلی هستم 
+در صورت امکان لینک بنده رو تایید کنید تا به همه کنکوری ها و بچه های مدارس کمکی بشه 
+مرسی
+اسپمر جدید مین بلاگ : WWW.SPammer313.Mihanblog.com
+ID : RADBENKICK313">وبلاگ راهنمایی ومشاوره -مشاوره کنکوری</a></div>
+	<div class=xxmenu><a target="_blank" href="../www.spammer313.mihanblog.com/index.html" title="با عرض سلام و خسته نباشید خدمت شما
+
+وبلاگ قشنگ و پر محتوایی دارید ممنون میشم با تایید لینک من در وب خود 
+
+با من همکاری کنید 
+
+از وبت واقعآ خوشم اومد یه سر هم به وب من بزن منتظرت هستم عزیز دلم 
+
+
+-----------------------------
+
+این پیام توسط اسپمر قدرتمند ستوده ورژن 1 برای میهن بلاگ ارسال شده است
+
+جهت خرید می تونید با آی دی زیر تماس حاصل فرمایید
+
+ID : RADBENKICK313
+
+EMail : DBK_F@YAHOO.COM
+
+[گل]
+
+-----------------------------">اسپمرهای جدید و قدرتمند</a></div>
+	<div class=xxmenu><a target="_blank" href="http://www.linc.ir" title="تبادل لینک هوشمند">تبادل لینک هوشمند</a></div>
+	<div class=xxmenu><a target="_blank" href="http://smsforu.rozblog.com" title="جدیدترین اس ام اس های روزانه 
+
+عاشقانه ، خنده دار ، تبریک ، باحال ، شوخی ، فلسفی و ...">اس ام اس عاشقانه</a></div>
+	<div class=xxmenu><a target="_blank" href="http://redvpn12.tk" title="عبور راحت از فیلترینگ
+بدون قعطی
+سرعت بالا
+با قابلیت باز کردن تمام سایت ها از جمله یوتیوب و فیسبوک
+کیفیت و پایبندی شعار ماست
+http://redvpn12.tk/">عبور راحت از فیلترینگ</a></div>
+	<div class=xxmenu><a target="_blank" href="http://goo.gl/53R7yx" title="وبلاگ خوبی داری اما آمار بازدید وبلاگت کمه .تعداد نظراتت هم بسیار کمتر . دوس داری وبت پیشرفت کنه و بیاد تو رتبه ی اول گوگل و امار بازدیدت روزی صد هزار شه با تعداد نظرات بالا . پس بیا به سایت من نرم افزارهای افزایش بازدید وبلاگ رو دانلود کن  ادرس ما          
+
+    http://goo.gl/53R7yx
+
+راستی اگر سوالی داشتی من انلاینم با اسم 
+
+ata.behdad  اد کن  . پاسخگوم">افزایش بازدید میهن بلاگ619</a></div>
+	<div class=xxmenu><b>●</b> <a target="_blank" href="http://www.payamblog.com">قالب وبلاگ</a></div>
+
+<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/linkdaily/index.html"><b>همه پیوندهای روزانه</b></a></div>
+<div class=xxmenu><a href="javascript:linkdailyForm()"><b>ارسال پیوند روزانه</b></a></div>
+
+</div>
+<div class=s></div>
+
+<div class=tmenu><div class=tmenu2>آمار سایت</div></div><div class=xmenu>
+<div class=xxmenu>
+			بازدیدهای امروز : <span class=aa><script>getStatVar('today_view');</script></span> نفر<br>
+بازدیدهای دیروز : <span class=aa><script>getStatVar('yesterday_view');</script></span> نفر<br>
+كل بازدیدها : <span class=aa><script>getStatVar('total_view');</script></span> نفر<br>
+بازدید این ماه :<span class=aa> <script>getStatVar('this_month_view');</script></span> نفر<br>
+كل مطالب : <span class=aa><script>getStatVar('total_post');</script></span> عدد<br>
+آخرین بازدید : <span class=aa><script>getStatVar('last_view_date');</script></span><br>
+آخرین بروز رسانی : <span class=aa><script>getStatVar('modify_date');</script></span>
+ </div>
+</div>
+
+<div id="c" style="text-align:center;width:210;">
+<br><a target="_blank" style="text-decoration:none" href="http://www.download0098.com/category/software/security-software/antivirus-software/" >آنتی ویروس</a><br><a title="طالع بینی" href="http://irfamily.com/?cat=59">طالع بینی</a>
+<br><br></div>
+
+</div>
+<div class=menu>
+
+
+<div class=tmenu><div class=tmenu2>آخرین مطالب</div></div><div class=xmenu>
+	<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/44.html">خانم پرستار!</a></div>
+	<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/42.html">وبلاگ دوستت دارم-کاری تازه</a></div>
+	<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/40.html">اولین مجموعه ام-مثلا من</a></div>
+	<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/39.html">روز نوشت</a></div>
+	<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/38.html">بی نام</a></div>
+	<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/37.html">همه ی ما نوبت اندوه داشتیم</a></div>
+	<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/36.html">چهار ماه دلتنگی!</a></div>
+	<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/33.html">مرگ زدگی!</a></div>
+	<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/31.html">زامه یلم نه لقرچن</a></div>
+	<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/27.html">جز آه هوایی در سرم نیست!</a></div>
+	<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/25.html">به شیرینی شکلات تلخ</a></div>
+	<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/24.html">نمایشگاه</a></div>
+	<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/23.html">تو جاودانی!</a></div>
+	<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/22.html">عنوان ندارد!</a></div>
+	<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/21.html">تولد</a></div>
+		<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/post/list.html"><b>لیست آخرین 
+			مطالب</b></a></div>
+
+</div>
+
+
+<div class=tmenu><div class=tmenu2>پیوند ها</div></div><div class=xmenu>
+<div class=xxmenu><a target="_blank" href="http://www.s-halashi.blogfa.com " title="">صادق هلشی</a></div>
+<div class=xxmenu><a target="_blank" href="http://m-halashi.blogfa.com" title="">محمد هلشی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.bebahanebato.blogfa.com" title="">مریم هلشی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.fc-perspolis.com/" title="">پرسپولیس</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.kahak1984.blogfa.com" title="">زهرا احمدیان</a></div>
+<div class=xxmenu><a target="_blank" href="../www.7asheaneh.mihanblog.com/index.html" title="">نوشین حاتمی</a></div>
+<div class=xxmenu><a target="_blank" href="http://yasemi.persianblog.ir/" title="">دکتر بهروز یاسمی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.nesari69.blogfa.com" title="">محمد مرادی نصاری</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.negar-jam.blogfa.com " title="">نگار جمشید نژاد</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.pelk-e-nime-baz.blogfa.com/" title="">پلک نیمه باز</a></div>
+<div class=xxmenu><a target="_blank" href="http://poetry6.blogfa.com/" title="">پریسا ناصری</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.varan.blogfa.com" title="">جلیل صفر بیگی</a></div>
+<div class=xxmenu><a target="_blank" href="http://pagard.ayene.com/" title="">سارا محمدی اردهالی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.ermes-3.blogsky.com" title="">علی محمد محمدی</a></div>
+<div class=xxmenu><a target="_blank" href="http://shamselangeroodi.blogfa.com/" title="">شمس لنگرودی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.seyedalisalehi.com/cgi-bin/content.pl?f=0&amp;t=index" title="">سید علی صالحی</a></div>
+<div class=xxmenu><a target="_blank" href="http://shahabmogharabin.blogfa.com/" title="">شهاب مقربین</a></div>
+<div class=xxmenu><a target="_blank" href="http://deedaarhaa.blogfa.com/" title="">بیژن جلالی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.garous.net/fa" title="">گروس</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.hormozalipour.blogfa.com/" title="">هرمز علیپور</a></div>
+<div class=xxmenu><a target="_blank" href="http://leilakordbacheh.blogfa.com/" title="">لیلا کرد بچه</a></div>
+<div class=xxmenu><a target="_blank" href="http://3rfun.blogfa.com/" title="">عرفان آتش بار</a></div>
+<div class=xxmenu><a target="_blank" href="http://monire25.blogfa.com/" title="">منیره حسینی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.842.persianblog.ir/" title="">حامد عسکری</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.sepidnameh.ir " title="">بهروز سپیدنامه</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.darighodard.blogfa.com" title="">دریغ و درد(آزاده)</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.45hk4n-s.blogfa.com/" title="">45HK4N</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.namehayekhoda.blogfa.com/" title="">نامه های خدا&quot;راضیه&quot;</a></div>
+<div class=xxmenu><a target="_blank" href="http://shaerepayiz.blogfa.com " title="">منیره حسین پوری</a></div>
+<div class=xxmenu><a target="_blank" href="http://salbinaz.blogfa.com/" title="">سلبی ناز رستمی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.fubu.blogfa.com/" title="">مرتضی غلام نژاد</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.tikabird.blogfa.com" title="">اعظم اسکندری</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.gongekhabdide.blogsky.com" title="">مهرداد محمدی</a></div>
+<div class=xxmenu><a target="_blank" href="http://new-nr.blogfa.com/" title="">نسرینا رضایی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.manochehr2020.blogfa.com/" title="">منوچهر بلیده</a></div>
+<div class=xxmenu><a target="_blank" href="http://behroozfv.blogfa.com/" title="">بهروز فاطمی</a></div>
+<div class=xxmenu><a target="_blank" href="http://kawsarh.blogfa.com/" title="">کوثر حاتمی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.aaaasssskkkk.blogfa.com/" title="">شراره</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.panjereh7777.blogfa.com" title="">هیچ</a></div>
+<div class=xxmenu><a target="_blank" href="http://kawsarh.blogfa.com/" title="">کوثر</a></div>
+<div class=xxmenu><a target="_blank" href="http://cafemahtab.blogfa.com/" title="">آبان</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.patyat.blogfa.com" title="">محسن زارعی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.seyedahmado.blogfa.com/" title="">سید احمدو</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.yones-vaferi.blogfa.com" title="">یونس وافری</a></div>
+<div class=xxmenu><a target="_blank" href="http://pesarkhob77.blogfa.com/" title="">محمدعلی بنی اسدی</a></div>
+<div class=xxmenu><a target="_blank" href="http://mhnaji68.blogfa.com" title="">مهدیه ناجی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.aida-m.blogfa.com/" title="">آیدا مجید آبادی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.mohammad-emami.blogfa.com" title="">محمد امامی</a></div>
+<div class=xxmenu><a target="_blank" href="http://taherekohkan.blogfa.com/" title="">طاهره کوهکن</a></div>
+<div class=xxmenu><a target="_blank" href="http://shahla1.blogfa.com/" title="">شهلا اسدی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.ftmh.blogfa.com" title="">فاطمه قهرمانی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.khatrookhatkhati.blogfa.com" title="">شروین شیروانی خیرخواه</a></div>
+<div class=xxmenu><a target="_blank" href="http://yadegare91.blogfa.com" title="">وسعت اله کاظمیان دهکردی</a></div>
+<div class=xxmenu><a target="_blank" href="http://mojezeyeshgh.blogfa.com" title="">مهناز</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.eyvankhande.blogfa.com/" title="">احسان&quot;آتش خاموش&quot;</a></div>
+<div class=xxmenu><a target="_blank" href="http://mirkan.blogfa.com/" title="">حسین مرادی نصاری</a></div>
+<div class=xxmenu><a target="_blank" href="http://1fandak.blogfa.com" title="">احسان نوکندی</a></div>
+<div class=xxmenu><a target="_blank" href="http://koveshk.blogfa.com" title="">مهدی احمدی خواه</a></div>
+<div class=xxmenu><a target="_blank" href="http://baraito.blogfa.com/" title="">مرضیه نظامی</a></div>
+<div class=xxmenu><a target="_blank" href="http://baran31.blogfa.com" title="">فاطمه احمدی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.mosaferejadetanhaee.blogfa.com/" title="">مسافر جاده تنهایی</a></div>
+<div class=xxmenu><a target="_blank" href="http://fundak.blogfa.com/" title="">ایمان ژاله</a></div>
+<div class=xxmenu><a target="_blank" href="http://masnooi.blogfa.com/" title="">فاطمه خمر</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.khazan1368.blogfa.com" title="">حجت اله رستمی</a></div>
+<div class=xxmenu><a target="_blank" href="../www.aaaivan.mihanblog.com/index.html" title="">امجد زمانی</a></div>
+<div class=xxmenu><a target="_blank" href="http://elsher.blogfa.com/" title="">الهه فیاضی</a></div>
+<div class=xxmenu><a target="_blank" href="http://naparhizi.persianblog.ir/" title="">سیده زهرا بصارتی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.yaseinam.blogfa.com/" title="">مریم رضایی</a></div>
+<div class=xxmenu><a target="_blank" href="http://ehsan-shakeri.blogfa.com" title="">احسان شاکری</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.hojjatzamani.blogfa.com" title="">حجت زمانی</a></div>
+<div class=xxmenu><a target="_blank" href="../girlfromfire.mihanblog.com/index.html" title="">دختری از تبار آتش</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.rofa.blogfa.com/" title="">فرانک قربانی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.shabanehaye-bito.blogfa.com" title="">حمدالله لطفی</a></div>
+<div class=xxmenu><a target="_blank" href="http://kiarash53.blogfa.com/" title="">سکوت منتظر ...</a></div>
+<div class=xxmenu><a target="_blank" href="http://radepaye1000pa.blogfa.com/" title="">حدیث میر فیضی</a></div>
+<div class=xxmenu><a target="_blank" href="http://bidemajnon71.blogfa.com/" title="">سید کمال حسینی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.ewarh.persianblog.ir" title="">اکبر اکبری</a></div>
+<div class=xxmenu><a target="_blank" href="http://pnulyrics.blogfa.com" title="">انجمن شعر پیام نور ایلام</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.varaso.blogfa.com" title="">جلال كوهی</a></div>
+<div class=xxmenu><a target="_blank" href="http://pooriamohebi.blogfa.com/" title="">پوریا محبی</a></div>
+<div class=xxmenu><a target="_blank" href="http://saat-e-shenie.blogfa.com" title="">ماریا کرم نژاد</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.aliyasemi.blogfa.com" title="">علی یاسمی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.mehribanoo.blogfa.com" title="">مهری ولیان</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.roham86.blogfa.com" title="">صادق حسینی</a></div>
+<div class=xxmenu><a target="_blank" href="http://f7f8.blogfa.com" title="">مرضیه دشتبانی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.reza-s.blogfa.com" title="">&quot;ترنم تنهایی&quot;</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.residehayenachide.blogfa.com" title="">مهدی آخرتی</a></div>
+<div class=xxmenu><a target="_blank" href="../www.eshgabad1349.mihanblog.com/index.html" title="">علیرضا رضایی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.delkadeh1370.blogfa.com" title="">زهرا رحمانی</a></div>
+<div class=xxmenu><a target="_blank" href="http://padeshatanhaei.blogfa.com/" title="">محمدرضا آزادی</a></div>
+<div class=xxmenu><a target="_blank" href="http://he3-7.blogfa.com" title="">مریم اصلانی</a></div>
+<div class=xxmenu><a target="_blank" href="http://nahidzaker.blogfa.com/" title="">ناهید ذاکر</a></div>
+<div class=xxmenu><a target="_blank" href="http://ghoghnus.blogfa.com " title="">بهنام صداقت حور</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.ajib-natamam.blogfa.com" title="">آذر ولی زاده</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.khorani.blogfa.com" title="">میثم خورانی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.m-azadegan-m.blogfa.com" title="">مریم آزادگان مهر</a></div>
+<div class=xxmenu><a target="_blank" href="http://akharsouzlar.blogfa.com/" title="">نسرین رنجبر</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.mehrdadafzali.blogfa.com" title="">سید مهرداد افضلی</a></div>
+<div class=xxmenu><a target="_blank" href="http://www.salem-poorahmad.blogfa.com " title="">سالم پور احمد</a></div>
+<div class=xxmenu><a href="../rasoul-rezaei.mihanblog.com/link/index.html"><b>همه پیوندها</b></a></div>
+</div><div style="width:210;float:right;">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+</div>
+</td>
+	</tr>
+</table>
+
+</div>
+
+<div id="seo">
+<h1><a title="vpn prices" href="http://www.purchasevpn.com/Products.html">VPN prices</a></h1><h2><a href="http://www.payamblog.com" title="قالب وبلاگ">قالب وبلاگ</a></h2>
+
+
+
+</div>
+<script type=text/javascript>document.getElementById('s'+'e'+'o').style.display='none';</script> </body>
+</html> <script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'rasoul-rezaei.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

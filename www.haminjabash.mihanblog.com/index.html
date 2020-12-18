@@ -1,0 +1,1330 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://haminjabash.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*1020323*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[219]='8';commentCnt[220]='5';commentCnt[221]='4';commentCnt[222]='2';commentCnt[223]='4';commentCnt[225]='6';commentCnt[227]='5';commentCnt[228]='22';commentCnt[229]='4';commentCnt[230]='4';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[219]='0';
+mihanblogDisLikeArrCnt[219]='0';
+mihanblogLikeArrCnt[220]='0';
+mihanblogDisLikeArrCnt[220]='0';
+mihanblogLikeArrCnt[221]='0';
+mihanblogDisLikeArrCnt[221]='0';
+mihanblogLikeArrCnt[222]='0';
+mihanblogDisLikeArrCnt[222]='0';
+mihanblogLikeArrCnt[223]='0';
+mihanblogDisLikeArrCnt[223]='0';
+mihanblogLikeArrCnt[225]='0';
+mihanblogDisLikeArrCnt[225]='0';
+mihanblogLikeArrCnt[227]='0';
+mihanblogDisLikeArrCnt[227]='0';
+mihanblogLikeArrCnt[228]='0';
+mihanblogDisLikeArrCnt[228]='0';
+mihanblogLikeArrCnt[229]='0';
+mihanblogDisLikeArrCnt[229]='0';
+mihanblogLikeArrCnt[230]='0';
+mihanblogDisLikeArrCnt[230]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://haminjabash.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://haminjabash.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','190');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','جمعه 30 آذر 1397');
+	
+	setStatVar('today_view','14');
+	setStatVar('yesterday_view','17');
+	
+	setStatVar('this_month_view','1035');
+	setStatVar('last_month_view','1004');
+
+	setStatVar('total_view','225359');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (15:27)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://haminjabash.mihanblog.com/statupdate/?data[refereruri]=http://kyanvar.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607778804&data[hash]=43871ff532d7244c707690a6b407a89f&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://haminjabash.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="../haminjabash.mihanblog.com/'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://haminjabash.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://haminjabash.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://haminjabash.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://haminjabash.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://haminjabash.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://haminjabash.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://haminjabash.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://haminjabash.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://haminjabash.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://haminjabash.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://haminjabash.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://haminjabash.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://haminjabash.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://haminjabash.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://haminjabash.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Theme Designer" content="www.MyTheme.ir">
+<script src="http://mytheme.ir/themes/script.js" language="javascript"></script>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/> 
+<link rel="alternate" type="application/rss+xml" title="رقعه ای برای دوست" href="http://haminjabash.mihanblog.com/post/rss/" />
+<link rel="alternate" type="application/atom+xml" title="رقعه ای برای دوست" href="http://haminjabash.mihanblog.com/post/atom/" />
+<link href="http://mythemes.ir/t6/style.css" type="text/css" rel="stylesheet"> 
+
+<title>رقعه ای برای دوست</title>
+
+</head>
+
+<body>
+<div align="center">
+<table border="0" width="1003" cellspacing="0" cellpadding="0">
+<tr><td colspan="3" class=div1 valign="top"></td></tr>
+<tr>
+<td width="389" valign="top">
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td class=div2 valign="top"><div>
+<div class=title>رقعه ای برای دوست</div>
+<div class=des>من رشته محبت ز تو پاره می كنم،شاید گره خورد به تو نزدیكتر شوم</div>
+</div></td>
+</tr>
+	<tr>
+<td class=div3 valign="top">
+<div style="width:125px; height:25px; float:left;"></div>
+<div class=div23><form id="frm-16075508315fd1476f72a98" method="get" action="http://haminjabash.mihanblog.com/post/search/fid/16075508315fd1476f72a98"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+<form method="Get" action="http://google.com/search">
+<div class=div21>
+<input type="text" name="search_text" size="27" style="border: 0px; background: none; font-family:Tahoma; font-size:9pt"></div>
+<div class=div22><input type="image" src="http://mythemes.ir/t6/blank.gif" value="گشتي بزن" width=30 height=25></div>
+</form>
+<input type="hidden" name="frm-id" value="16075508315fd1476f72a98" id="frm-id" /></form></div>
+</td>
+	</tr>
+	<tr>
+		<td>
+		<div align="right">
+		<table border="0" width="350" cellspacing="0" cellpadding="0">
+			<tr>
+				<td class=div20 valign="top">
+
+<div class=div19>
+<b><font class=text4>درباره وبلاگ</font></b><br><br>
+<img src="../static.mihanblog.com/public/user_data/web_photo/341/1020323.jpg@5409"  /><br>
+<font class=text5>خداوندا به من بیاموز:<br />
+<br />
+دوست بدارم کسانی را، که دوستم ندارند<br />
+<br />
+عشق بورزم به کسانی، که عاشقم نیستند<br />
+<br />
+محبت کنم به کسانی، که محبتی در حقم نکردند<br />
+<br />
+بگریم با کسانی، که هرگز غمم را نخوردند<br />
+<br />
+و بخندم با کسانی،<br />
+<br />
+که هرگز شادیهایشان را با من قسمت نکردند.<br />
+<br>
+مدیر وبلاگ : <a href="http://haminjabash.mihanblog.com/post/author/869200">پگاه بانو </a></font>
+<br><br><br></div>
+
+<div class=div19><b><font class=text4>پیوندها</font></b><br>
+<a href="../www.shamsipoor.mihanblog.com/index.html" title="" target="_blank" class=text5>شمسی پور دانلود</a><br><a href="http://www.tabasomyas.blogfa.com/" title="" target="_blank" class=text5>تبسم یاس(کوثر بانو)</a><br><a href="http://bisetare33.mihanblog.com/" title="" target="_blank" class=text5>هفت آسمان بی ستاره(نازی بانو)</a><br><a href="../ava-h.mihanblog.com/index.html" title="" target="_blank" class=text5>♥ آوا AVA ♥(آوا بانو)</a><br><a href="http://volleyballirani.mihanblog.com/" title="" target="_blank" class=text5>والیبال ایران(گیتی بانو)</a><br><a href="http://happy-birds.mihanblog.com/" title="" target="_blank" class=text5>happy. birds(فاطمه بانو)</a><br><a href="http://sadegh-etemadi.persianblog.ir/" title="" target="_blank" class=text5>شب مهتابی - برکوک(آقا صادق)</a><br><a href="http://naz-ila.blogfa.com/" title="" target="_blank" class=text5>*^*جملات دردناک*^*(نازیلا بانو)</a><br><a href="http://www.kyanvar.com/" title="" target="_blank" class=text5>وبسایت حسن کیانـور ( کیان ) اشعار ترکی و فارسی</a><br><a href="http://halyhooly.loxblog.com/" title="" target="_blank" class=text5>☼. حالیـے حولیـے .☼(یـہ فرد بـآحال)</a><br><a href="../baran-m.mihanblog.com/index.html" title="" target="_blank" class=text5>ღ دل بارانی من ღ (پسرک بارانی)</a><br><a href="http://samaneh-a.mihanblog.com/" title="" target="_blank" class=text5>آرامش(صنم و سمانه بانو)</a><br><a href="http://forget-love.blogfa.com/" title="" target="_blank" class=text5>عاشقانه هایم برای تو(باران بانو)</a><br><a href="http://negaraaa.blogfa.com/" title="" target="_blank" class=text5>به دنبال خوشبختی(نگار بانو)</a><br><a href="http://mohammadfaridi.blogfa.com/" title="" target="_blank" class=text5>تنهای تنهایم(آقا محمد)</a><br><a href="http://nazli-91.blogfa.com/" title="" target="_blank" class=text5>دل نوشته ها(آقا سعید)</a><br><a href="http://htmvi.blogfa.com/" title="" target="_blank" class=text5>هوادارن تیم ملی والیبال(آقا مصطفی)</a><br><a href="http://asheghr.mihanblog.com/" title="" target="_blank" class=text5>♥دل شکـ ـــ ـــ ـــ ــسته♥(گلبرگ بانو)</a><br><a href="http://asheghe-tanhaye-iran.mihanblog.com/" title="" target="_blank" class=text5>عاشقانه تنها(آقا امید)</a><br><a href="http://www.facekhande.tk/" title="" target="_blank" class=text5>فیس خنده</a><br><a href="http://rozgare-talkh.blogfa.com/" title="" target="_blank" class=text5>روزگار تلخ(مطهره بانو)</a><br><a href="http://www.ghazalak75.blogfa.com/" title="" target="_blank" class=text5>♥ghazalak♥(غزل بانو)</a><br><a href="http://www.hedieh00.blogfa.com/" title="" target="_blank" class=text5>♥یه دختر♥(هدیه بانو)</a><br><a href="http://jirjirakaye-asheq.blogfa.com/" title="" target="_blank" class=text5>جیرجیرکای عاشق(تیبا بانو)</a><br><a href="http://www.sahel7592.blogfa.com/" title="" target="_blank" class=text5>ساحل نشین اشک(مائده بانو)</a><br><a href="http://just4u-72.blogfa.com/" title="" target="_blank" class=text5>به سلامتی عشقم(مریم بانو)</a><br><a href="http://tofl.mihanblog.com/" title="" target="_blank" class=text5>غَـــزلیــــ کـ ـ ـه شیـ ـطآنــ بَــرایـــ مَنـ سُــرود(زهرا بانو)</a><br><a href="http://kasibikhabaramad.blogfa.com/" title="" target="_blank" class=text5>کسی بی خبر آمد(فاطمه بانو)</a><br><a href="http://www.elma28.blogfa.com/" title="" target="_blank" class=text5>الما باران عشق را حس میکند(مرضیه بانو)</a><br><a href="http://www.parastoyetanha.blogfa.com/" title="" target="_blank" class=text5>فرشته عذاب(باران بانو)</a><br><a href="http://danhil.mihanblog.com/" title="" target="_blank" class=text5>هزار و یک شب(مریم بانو)</a><br><a href="http://bouyeshogh.mihanblog.com/" title="" target="_blank" class=text5>بوی شوق</a><br><a href="http://aref5731.mihanblog.com/" title="" target="_blank" class=text5>Broken Heart(آقا عارف)</a><br><a href="http://justinjoong.blogfa.com/" title="" target="_blank" class=text5>آبجی الی(الی بانو)</a><br><a href="../www.bold1.mihanblog.com/index.html" title="" target="_blank" class=text5>خنده برای همه(آقا امیر رضا)</a><br><a href="http://fereshteyeassemoni.rozblog.com/" title="" target="_blank" class=text5>فرشته آسمونی(منیژه بانو)</a><br><a href="http://sokotemakhmali.blogfa.com/" title="" target="_blank" class=text5>♥سکوت مخملی♥(سحر بانو)</a><br><a href="http://honeye.blogfa.com/" title="" target="_blank" class=text5>دختر ایرانی(هانیه بانو)</a><br><a href="../ghararnabod.mihanblog.com/index.html" title="" target="_blank" class=text5>Gharar Nabod(زری بانو)</a><br><a href="http://www.xlfg.blogfa.com/" title="" target="_blank" class=text5>عشق جعبه ی توخالی(مونا بانو)</a><br><a href="http://peranses-sooraty.mihanblog.com/" title="" target="_blank" class=text5>پرنسس صورتی(مبینا بانو)</a><br><a href="http://biatoooooooooooooo.blogfa.com/" title="" target="_blank" class=text5>ضد دختر و ضد پسر(هاله بانو)</a><br><a href="http://mybluelife.mihanblog.com/" title="" target="_blank" class=text5>روزای سراسر تنهایی(آقا علیرضا)</a><br><a href="http://www.mahvajeh.blogfa.com/" title="" target="_blank" class=text5>ماه واژه(ماه سیما بانو)</a><br><a href="http://hamneshinsofi.mihanblog.com/" title="" target="_blank" class=text5>*** kolbe soofi ***(صوفی بانو)</a><br><a href="http://iraniangirls2.blogfa.com/" title="" target="_blank" class=text5>♥♥این جا دیگه كجاست؟♥♥(فاطمه و زهرا بانو)</a><br><a href="http://www.nagoftehaeman.blogfa.com/" title="" target="_blank" class=text5>(◡‿◡✿) ناگفته های منــــــ (◡‿◡✿)(میشا بانو)</a><br><a href="http://azimblog.blogfa.com" title="" target="_blank" class=text5>شکست سکوت(آقا عظیم)</a><br><a href="http://www.ourliking.blogfa.com/" title="" target="_blank" class=text5>دلتنگی های ما(سپیده بانو)</a><br><a href="http://mozhde14.blogfa.com/" title="" target="_blank" class=text5>عاشق والیبال(مژده بانو)</a><br><a target="_blank" href="http://www.mytheme.ir" class=text5>بهترین قالب های وبلاگ</a><br>
+<a href="http://haminjabash.mihanblog.com/link/" class=text5>همه پیوندها</a><br>
+<br></div>
+
+<div class=div19></div>
+
+<div class=div19><b><font class=text4>پیوندهای روزانه</font></b><br>
+<a href="http://ipbazdid.blogfa.com" title="اولین و جدید ترین نرم افزار ارسال بازدید را برای شما دوستان طراحی کردیم
+برای دانلود به وبلاگ ما مراجعه کنید
+مزایای این نرم افزار:
+ارسال 10000بازدید روزانه واقعی و ثبت در سامانه آمار گیر هایی همچون وبگذر
+امکان ارسال همزمان بازدید به 10 سایت
+روزانه 30 نفر آنلاین
+اگر کسب در آمد از آی پی می کنید این نرم افزار برای شما عالی می باشد
+و امکانات دیگر در سایت
+همین الان دانلود کنید
+آدرس وبلاگ ما : ipbazdid.blogfa.com
+
+|||| توجه ||||
+یک روز تست رایگان برای شما برای تست نرم افزار به ما پیام دهید" target="_blank" class=text5>مریم طباطبایی</a><br><a href="../www.beheshtiyan.mihanblog.com/index.html" title="سلام دوست عزیز
+بلاگ زیبایی داری.اگه مایل به تبادل لینک هستی ابتدا منو با نام بهشتیان لینک کن بعد خبر بده تا من هم تو رو لینک کنم.
+با تشکر" target="_blank" class=text5>بهشتیان</a><br><a href="http://star-angel.mihanblog.com" title="سلام دوست گلم
+
+وبلاگ عالی داری
+
+خوشم اومد ، هم فعال ، هم مطالبش قشنگ و با مفهوم
+
+منم یه وبلاگ دارم ، اما یه وب سایت هم درست کردم که اگه بهش سر بزنی و عضوش بشی خیلی خوشحالم می کنی
+
+آدرس وبلاگ رو که داری
+
+اینم آدرس وب سایت :
+
+www.star-angel.orq.ir
+
+حتما بهم سربزنی ها ، منتظرتم ، 
+
+وارد سایت که شدی لینک برای ثبت نام هست که بعد از ثبت نام می تونی &quot;&quot; نویسنده &quot;&quot; باشی
+
+اگه نخواستی زیر مطالب سایت روی علامت چت کلیک کن و برام کامنت بزار
+
+اگه نخواستی روی قلب زیر مطالب کلیک کن و لایک بزن
+
+اگه بازم نخواستی ممنون که بهم سرزدی
+
+دوستدارم
+
+منتظرتم" target="_blank" class=text5>دل نوشته های فرشته</a><br><a href="http://www.golbargbahareh.persianblog.ir" title="سلام وبلاگتون بسیار زیبا و مفیده بیشتر مطالبتونو خوندم ولی نه همشو ممنون میشم به وبلاگ حقیر سر بزنید و کامنت بذارین باسپاس فراوان" target="_blank" class=text5>bahareh</a><br><a href="http://www.myiranmag.com" title="" target="_blank" class=text5>مجله ایران من </a><br><a href="http://img.ir" title="خسته نباشید گروه ما یه سایت آپلود عکس راه اندازی کرده و نیاز به حمایت داریم خواستم خواهش کنم از اپلودسنتر استفاده کنید و یه لینک به ما بدید توی وبلاگتون اگر ممکنه با عنوان آپلود عکس ما هم لینک شما رو قرار میدیم لطفا از این قسمت لینک رو ارسال کنید : www.link.img.ir ممنون" target="_blank" class=text5>آپلود عکس</a><br><a href="../up32.mihanblog.com/index.html" title="اس ام اس های جدید،عاشقانه،روز،مناسبتی،باحال،خنده دار،رمانتیک" target="_blank" class=text5>اس ام اس عاشقانه جدید</a><br><a href="http://syatronixi.tk" title="با سلام....
+ سرویس شبکه اجتماعی وبلاگنویسان راه اندازی شد.
+این شبکه از امروز پذیرای شما عزیزان میباشد.
+
+منتظر حضور گرمتان هستیم." target="_blank" class=text5>شبکه اجتماعی وبلاگنویسان</a><br><a href="http://7ganj.mihanblog.com" title="هفت گنج" target="_blank" class=text5>***~هفت گنج~***</a><br><a href="http://group.sunbow.ir/" title="سلام وبلاگ خوبی داری ممنون میشم به من هم سر بزنی و تو گروه عضو بشی  گروهی برای شادی و تفریح 
+محلی برای سرگرمی
+
+دانلود موسیقی های روز دنیا 
+دانلود فیلم های روز
+بهترین گروه دختر و پسرای با حال ایرانی
+
+سارا" target="_blank" class=text5>شاد ترین گروه دختر و پسرای ایرانی</a><br><a href="http://mihantools.net/" title="با سلام دوست من شما می توانید بهترین ابزار مورد نیاز خود برای وبلاگ خودتون رو از ما بخواهید کاملا رایگان" target="_blank" class=text5>ابزار مورد نیاز وبلاگ نویسان</a><br><a href="http://uploadkon.ir" title="سلام وبلاگ خوبی داری ممنون میشم به من هم سر بزنی 
+
+سایتی رایگان برای آپلود عکس و فایل وبلاگ داران عزیز" target="_blank" class=text5>آپلود رایگان عکس و فایل</a><br><a href="http://www.98tia.ir/" title="سلام دوست گلم
+وب زیبایی داریx:
+جامعه مجازی نودوهشتیا با امکاناتی ازقبیل تشکیل گروه چت صوتی تصویری پخش آهنگ و....
+آماده میزبانی از شماست.
+شما میتونید با عضویت گروه تشکیل بدید و پست ارسال کنید و بقیه دوستانتون رو به گروه دعوت کنید تا نظر بدنن و جامعه کوچک وزیبایی بسازید.
+
+عضو بشید و سپس از این لینک وبلاگتون رو معرفی کن تا بقیه نظر بدن و دوست بشین http://98tia.ir/moarefi
+
+آدرس عضویت: www.98tia.ir/signup
+
+آدرس سایت: www.98tia.ir
+
+به خانواده بزرگ نودوهشتیا محیط دلنشین وگرم بپیوندید
+اگرخواستید مارو بابرترین جامعه مجازی ایران www.98tia.ir لینک کنید.
+ممنون ومنتظریم" target="_blank" class=text5>شبکه اجتماعی بچه های نودوهشت</a><br><a href="http://www.photograph1.mihanblog.com" title="" target="_blank" class=text5>نوشته هایی از جنس دل‏</a><br><a href="http://bikaranefarhikhte.blogfa.com" title="با سلام....
+ 
+دوست عزیز من مقاله ای با عنوان &quot;خاطرات اشغال ایران&quot; نوشته ام كه از شما دعوت میكنم آن را مطالعه بفرمایید." target="_blank" class=text5>خاطرات اشغال ایران</a><br><a href="http://haminjabash.mihanblog.com/linkdaily/" class=text5>همه پیوندهای روزانه</a><br>
+<a href="javascript:linkdailyForm()" class=text5>ارسال پیوند روزانه</a><br>
+<br></div>
+
+<div class=div19>
+		<form id="frm-16075508315fd1476f72f3f" method="post" action="http://haminjabash.mihanblog.com/poll/new/fid/16075508315fd1476f72f3f/atrty/1607550831/avrvy/0/key/1f81aa386493af7320e31b1bd05731e2/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="359342" id="data[pollid]" />		
+<b><font class=text4>نظرسنجی</font></b><br>
+<div style="text-align:right; direction:rtl;"><font class=text5>آیا از عملکرد وبلاگ راضی هستید؟<br>
+<label><input type="radio" name="data[answer]" value="v1">بله</label><br><label><input type="radio" name="data[answer]" value="v2">خیر</label><br></font></div>
+<input type="submit" value="ثبت" style="font-family: Tahoma; font-size: 9pt;"><br>
+		<input type="hidden" name="frm-id" value="16075508315fd1476f72f3f" id="frm-id" /></form></div>
+
+<div class=div19><b><font class=text4>برچسبها</font></b><br>
+<a href="http://haminjabash.mihanblog.com/post/tag/%D9%86%DB%8C%DA%A9%DB%8C" class=text5>نیکی</a><br><a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1+%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" class=text5>اشعار عاشقانه</a><br><a href="http://haminjabash.mihanblog.com/post/tag/%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" class=text5>عاشقانه</a><br><a href="http://haminjabash.mihanblog.com/post/tag/%D8%AD%D9%85%DB%8C%D8%AF+%D9%85%D8%B5%D8%AF%D9%82" class=text5>حمید مصدق</a><br><a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1+%D8%A7%D9%85%DB%8C%D8%AF+%D8%B5%D8%A8%D8%A7%D8%BA+%D9%86%D9%88" class=text5>اشعار امید صباغ نو</a><br><a href="http://haminjabash.mihanblog.com/post/tag/%D9%86%DB%8C%DA%A9%DB%8C+%D9%81%DB%8C%D8%B1%D9%88%D8%B2+%DA%A9%D9%88%D9%87%DB%8C" class=text5>نیکی فیروز کوهی</a><br><a href="http://haminjabash.mihanblog.com/post/tag/%D9%81%D8%B1%DB%8C%D8%AF%D9%88%D9%86+%D9%85%D8%B4%DB%8C%D8%B1%DB%8C" class=text5>فریدون مشیری</a><br><a href="http://haminjabash.mihanblog.com/post/tag/%D9%81%D8%A7%D8%B6%D9%84+%D9%86%D8%B8%D8%B1%DB%8C" class=text5>فاضل نظری</a><br><a href="http://haminjabash.mihanblog.com/post/tag/%D9%85%D9%87%D8%AF%DB%8C+%D9%81%D8%B1%D8%AC%DB%8C" class=text5>مهدی فرجی</a><br><a href="http://haminjabash.mihanblog.com/post/tag/%D9%81%DB%8C%D8%B1%D9%88%D8%B2+%DA%A9%D9%88%D9%87%DB%8C" class=text5>فیروز کوهی</a><br><br></div>
+
+<a target='_blank' href='http://www.iranskin.com/online'><span style='text-decoration: none'>Online</span></a>
+<script type='text/JavaScript'>
+var oulb= 'http://www.iranskin.com/online/';
+function CheckBrowser(){
+if(navigator.appName == "Microsoft Internet Explorer")	{
+document.write('<scrip'+'t src="'+oulb+'js/jquery.min.js"></s'+'cript><scrip'+'t src="'+oulb+'js/js.php?c=3&t=4"></s'+'cript>');return true;}document.write('<scrip'+'t src="'+oulb+'cod.php?c=3&t=4"></s'+'cript>');
+return false; }</script>
+<script type='text/JavaScript'>CheckBrowser()</script>
+<a target='_blank' href='http://www.iranskin.com'><span style='text-decoration: none'>User</span></a>
+<script>window.onload=function() {alert("جانامنتظرتان بودم در این كلبه درویشی...خوش آمدی!")}
+window.onunload=function() {alert("جانا گویا وقت فراغ رسیده....بدرود!")}</script><div style="display:none"><h1><a title="پیغام ورود و خروج" <!-- 
+
+<center><a title="فال روزانه" href="http://pichak.net/roozanehfall" target="_blank"><img src="http://pichak.net/roozanehfall/logo.php" border="0"  width="186" height="68"></a></center>﻿﻿﻿ 
+<!-- Begin mehdi-online.mihanblog.com --><center><script type="text/javascript" src="http://mehdi-online.persiangig.com/hidden%20code/Poetry%20text.js"></script></center><div style="display:none">?<a href="http://mehdi-online.mihanblog.com/">ابزار وبلاگ نویسی</a></div><!-- End mehdi-online.mihanblog.com -->
+<!-- Begin mehdi-online.mihanblog.com --><center><script type="text/javascript" src="http://mehdi-online.persiangig.com/hidden%20code/Poetry%20text.js"></script></center><div style="display:none">?<a href="http://mehdi-online.mihanblog.com/">ابزار وبلاگ نویسی</a></div><!-- End mehdi-online.mihanblog.com -->
+
+<script type=text/javascript src=http://smsrooz.ir/java/norooz/left.js></script>
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript"          
+  src="http://night-skin.com/light/js/light10.js"></script> 
+
+
+
+
+<script type="text/javascript" language="javascript" >
+function noRightClick() {
+if (event.button==2) {
+alert('لطفا راست کلیک نکنید')
+}
+}
+document.onmousedown=noRightClick
+</script>
+<p align="center"><a style="text-decoration:none;" href="http://varoone.ir/post/80" target="_blank"> کد پیغام هنگام راست کلیک</a></p>
+<script language="javascript" type="text/javascript"src="http://mania-dv.ir/varoone/js/codejs.js"></script>
+
+
+
+<!-- shahrmajazi.Com --><script language="javascript"   type="text/javascript"  src="http://shahrmajazi.com/upload/tools/shahrmajazi78.com.js"></script><!-- shahrmajazi.Com -->
+
+
+
+
+<h2 align="center">
+<script language="JavaScript1.2">
+
+/*
+Neon Lights Text
+By JavaScript  (http://mihantools.net)
+Over 500+ free scripts here!
+*/
+
+var message="به وبلاگ من خوش آمدید"
+var neonbasecolor="gray"
+var neontextcolor="yellow"
+var flashspeed=100  //in milliseconds
+
+///No need to edit below this line/////
+
+var n=0
+if (document.all){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message.length;m++)
+document.write('<span id="neonlight">'+message.charAt(m)+'</span>')
+document.write('</font>')
+
+//cache reference to neonlight array
+var tempref=document.all.neonlight
+}
+else
+document.write(message)
+
+function neon(){
+
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message.length;m++)
+tempref[m].style.color=neonbasecolor
+}
+
+//cycle through and change individual letters to neon color
+tempref[n].style.color=neontextcolor
+
+if (n<tempref.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",1500)
+return
+}
+}
+
+function beginneon(){
+if (document.all)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+
+
+</script>
+
+</h2>
+
+
+
+
+<!-- shahrmajazi.Com --><script language="javascript"   type="text/javascript"  src="http://shahrmajazi.com/upload/tools/shahrmajazi280.com.js"></script><!-- shahrmajazi.Com -->
+
+
+
+<!-- No right Click by www.mihanfa.ir --->
+<script type="text/javascript" src="http://mihanfa.ir/serviceblog/lock/js.js"></script><div style="display:none"><h1><a href="http://www.mihanfa.ir">کد قفل راست کلیک</a></h1></div>
+<!-- No right Click by www.mihanfa.ir --->
+
+
+
+
+<script type="text/javascript" src="http://bpmaker.giffy.me/userdata/user/30/30642/1/parts.js"></script><p style="text-align:center;margin:0px;"><a href="http://bpmaker.giffy.me/"><img src="http://bpmaker.giffy.me/userdata/user/30/30642/1/banner.png?1362811933" /></a></p><p style="text-align:center;margin:2px 0px 0px 0px;font-size:10px;padding:0;"><a style="text-decoration:none;margin:0;padding:0;" href="http://bpmaker.giffy.me/parts/userPartsId/165325/">霞桜</a></p>
+
+
+
+
+
+
+<!-- Started code by varoone.ir ---- YahooID: davod_v2008  -->
+<script language="javascript" type="text/javascript">
+function disableselect(e){
+return false
+}
+function reEnable(){
+return true
+}
+document.onselectstart=new Function ("return false")
+if (window.sidebar){
+document.onmousedown=disableselect
+document.onclick=reEnable
+}
+</script>
+<p><span lang="fa">
+<a target="_blank" href="http://www.varoone.ir/post/20">کد قفل راست کلیک</a></span></p>
+<!-- Ended code by varoone.ir ---- YahooID: davod_v2008  -->
+
+
+
+
+
+
+<style>
+img { border-radius: 4px;
+border: 1px solid #fff;
+max-width: 480px;
+margin: 2px;
+padding:0px; float:center;
+filter:alpha(opacity=100);
+-moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+-webkit-transition:all 0.4s ease-in;
+-moz-transition:all 0.4s ease-in;
+-o-transition:all 0.4s ease-in;
+transition:all 0.4s ease-in;
+opacity:1.0;
+}
+img:hover{ border-radius: 7px;
+border: 1px solid #000;
+max-width: 480px;
+margin: 2px;
+padding:0px; float:center;
+filter:alpha(opacity=40);
+opacity:0.4;
+-moz-border-radius:6px;-webkit-border-radius:6px;
+box-shadow: 10px 10px 5px #000;
+-webkit-transition:all 0.4s ease-in;
+-moz-transition:all 0.4s ease-in;
+-o-transition:all 0.4s ease-in;
+transition:all 0.4s ease-in;
+}
+img:hover{
+opacity:1;filter:alpha(opacity=100);
+-webkit-transform: rotate(-4deg);
+-moz-transform: rotate(-4deg);
+
+}
+img:out{
+opacity:1;filter:alpha(opacity=100);
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+
+}
+
+</style>
+<P><A href="../webiha-pix.mihanblog.com/index.html" target=_blank><SPAN
+style="FONT-WEIGHT: 600; TEXT-DECORATION: none"><FONT 
+color=#ff99cc>کد ِکج شدَنِ تَصآویر
+</FONT></SPAN></A></P>
+
+
+
+
+
+
+<!-- Begin MeLoDiC.blogfa.com -->
+<div align=center ><embed  src="http://godfather7.persiangig.com/MeLoDiC/Flash/12/12-07.swf" width="30" height="30" wmode="transparent" type="application/x-shockwave-flash" </embed></div class =mbody><A href="http://melodic.blogfa.com/page/music" target=_blank></center><center><strong>MeLoDiC</strong></a></font></p></center>
+<!-- End MeLoDiC.blogfa.com -->
+ 
+
+</td>
+<td class=div18></td>
+<td class=div20 valign="top">
+
+<div class=div19>
+<b><font class=text4>منوی اصلی</font></b><br>
+<font class=text5>
+<a href="index.html">صفحه نخست</a><br>
+<a href="javascript:messageForm()">تماس با مدیر</a><br>
+<a href="mailto:">پست الکترونیک</a><br>
+<a href="http://haminjabash.mihanblog.com/post/rss/">RSS</a><br>
+<a href="http://haminjabash.mihanblog.com/post/atom/">ATOM</a><br><br><br>
+</div>
+
+<div class=div19></div>
+
+<div class=div19><b><font class=text4>نویسندگان</font></b><br>
+<a href="http://haminjabash.mihanblog.com/post/author/869200">پگاه بانو  (190)</a><br><br></div>
+
+<div class=div19><b><font class=text4>آرشیو وبلاگ</font></b><br>
+<a href="http://haminjabash.mihanblog.com/post/archive/1397/9" class=text5> آذر 1397</a><br><a href="http://haminjabash.mihanblog.com/post/archive/1397/7" class=text5> مهر 1397</a><br><a href="http://haminjabash.mihanblog.com/post/archive/1397/6" class=text5> شهریور 1397</a><br><a href="http://haminjabash.mihanblog.com/post/archive/1397/5" class=text5> مرداد 1397</a><br><a href="http://haminjabash.mihanblog.com/post/archive/1397/4" class=text5> تیر 1397</a><br><a href="http://haminjabash.mihanblog.com/post/archive/1397/2" class=text5> اردیبهشت 1397</a><br><a href="http://haminjabash.mihanblog.com/post/archive/1397/1" class=text5> فروردین 1397</a><br><a href="http://haminjabash.mihanblog.com/post/archive/1396/7" class=text5> مهر 1396</a><br><a href="http://haminjabash.mihanblog.com/post/archive/1395/11" class=text5> بهمن 1395</a><br><a href="http://haminjabash.mihanblog.com/post/archive/1395/7" class=text5> مهر 1395</a><br><a href="http://haminjabash.mihanblog.com/post/archive/1395/6" class=text5> شهریور 1395</a><br><a href="http://haminjabash.mihanblog.com/post/archive" class=text5>آرشیو كل مطالب</a>
+<br><br></div>
+
+<div class=div19><b><font class=text4>مطالب اخیر</font></b><br>
+<a href="http://haminjabash.mihanblog.com/post/230" class=text5>مپرس از نامم.......</a><br><a href="http://haminjabash.mihanblog.com/post/229" class=text5>شاعر بدون شعر...</a><br><a href="http://haminjabash.mihanblog.com/post/228" class=text5>گل مهتاب......</a><br><a href="http://haminjabash.mihanblog.com/post/227" class=text5>سال تحصیلی...</a><br><a href="http://haminjabash.mihanblog.com/post/225" class=text5>سرگردان شد....</a><br><a href="http://haminjabash.mihanblog.com/post/223" class=text5>زمستان....</a><br><a href="http://haminjabash.mihanblog.com/post/222" class=text5>در این خانه کسی نیست......</a><br><a href="http://haminjabash.mihanblog.com/post/221" class=text5>گل سر......</a><br><a href="http://haminjabash.mihanblog.com/post/220" class=text5>زمستان.......</a><br><a href="http://haminjabash.mihanblog.com/post/219" class=text5>وفا نمودم و او...</a><br><a href="http://haminjabash.mihanblog.com/post/218" class=text5>بهتر است...</a><br><a href="http://haminjabash.mihanblog.com/post/217" class=text5>سرشت بابکی ام....</a><br><a href="http://haminjabash.mihanblog.com/post/215" class=text5>تمام من...</a><br><a href="http://haminjabash.mihanblog.com/post/214" class=text5>فراموشی....</a><br><a href="http://haminjabash.mihanblog.com/post/213" class=text5>همین......</a><br><br></div>
+
+<div class=div19><b><font class=text4>آمار وبلاگ</font></b><br>
+<div style="text-align:right;"><font class=text5>کل بازدید : <script>getStatVar('total_view');</script><br>
+بازدید امروز :<script>getStatVar('today_view');</script><br>
+بازدید دیروز : <script>getStatVar('yesterday_view');</script><br>
+بازدید این ماه : <script>getStatVar('this_month_view');</script><br>
+بازدید ماه قبل : <script>getStatVar('last_month_view');</script><br>
+تعداد نویسندگان : <script>getStatVar('total_author');</script><br>
+تعداد کل پست ها : <script>getStatVar('total_post');</script><br>
+آخرین بازدید : <script>getStatVar('last_view_date');</script><br>
+آخرین بروز رسانی : <script>getStatVar('modify_date');</script></font></div><br><br></div>
+
+</td>
+			</tr>
+			<tr>
+				<td colspan="3">&nbsp;</td>
+			</tr>
+		</table>
+		</div>
+		</td>
+	</tr>
+	</table>
+</td>
+<td width=541 valign="top">
+<div class=div4>
+<div class=div6>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div8>
+
+<div class=div9>
+<div class=div12><a href="http://haminjabash.mihanblog.com/post/230" class=text1>مپرس از نامم.......</a></div>
+<div class=div11><img src="http://www.mythemes.ir/t6/mytheme.ir-g2.gif"></div>
+</div>
+
+<div class=div10>
+<font class=text2>جمعه 30 آذر 1397 :: نویسنده : <a href="http://haminjabash.mihanblog.com/post/author/869200" class=text3>پگاه بانو </a></font>
+</div>
+
+<div class=div13>
+<font class=text3><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div dir="auto" style="text-align: center;"><font size="4" style="" face="tahoma, arial, helvetica, sans-serif" color="#993399">ببین سیاهی بخت و مپرس از نامم</font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399">من از قبیله‌ی عشاق بی سر انجامم&nbsp;</font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399"><br></font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399">به آن دقایق پر درد زندگى سوگند</font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399">که بی تو یک نفس ای هم نفس نیارامم&nbsp;</font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399"><br></font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399">مکش ز دامن من دست با فراغت دل&nbsp;</font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399">که آفتاب غروبی به گوشه‌ی بامم&nbsp;</font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399"><br></font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399">مرا که این همه توفان طبیعتم، دریاب</font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399">که من به یک سر موی محبتى رامم&nbsp;</font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399"><br></font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399">ز عمر شکوه ندارم که خامه‌ی تقدیر</font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399">نوشته بود در آغاز نامه فرجامم&nbsp;</font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399"><br></font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399">مرا امید رهایی ز قید هستی نیست</font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399">که با تمام وجودم فتاده در دامم&nbsp;</font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399"><br></font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399">به هرکه دل بسپردم ز من چو سایه رمید</font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399">مرا ببین که شوریده بخت و ناکامم&nbsp;</font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399"><br></font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399">چگونه پای نهم در حریم حضرت دوست؟</font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399">هنوز دست ارادت نبسته احرامم&nbsp;</font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399"><br></font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399">هوای خواندن افسانه‌ام مکن اکنون&nbsp;</font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399">ورق ورق شده دیگر کتاب ایّامم&nbsp;</font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399"><br></font></div><div dir="auto" style="text-align: center;"><font size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399"><br></font></div><div dir="auto" style="text-align: center;"><font size="4" style="" face="tahoma, arial, helvetica, sans-serif" color="#993399">"رحیم معینی کرمانشاهی"</font></div>
+
+
+<br><br><b></b></font>
+<br><font class=text2><br><br>نوع مطلب :
+<font class=text3></font>
+<br>برچسب ها :
+<font class=text3><a href="http://haminjabash.mihanblog.com/post/tag/%D8%B1%D8%AD%DB%8C%D9%85%20%D9%85%D8%B9%DB%8C%D9%86%DB%8C%20%DA%A9%D8%B1%D9%85%D8%A7%D9%86%D8%B4%D8%A7%D9%87%DB%8C" class=text3>رحیم معینی کرمانشاهی</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D9%85%D8%B9%DB%8C%D9%86%DB%8C%20%DA%A9%D8%B1%D9%85%D8%A7%D9%86%D8%B4%D8%A7%D9%87%DB%8C" class=text3>معینی کرمانشاهی</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87%20%D8%B1%D8%AD%DB%8C%D9%85%20%D9%85%D8%B9%DB%8C%D9%86%DB%8C%20%DA%A9%D8%B1%D9%85%D8%A7%D9%86%D8%B4%D8%A7%D9%87%DB%8C" class=text3>اشعار عاشقانه رحیم معینی کرمانشاهی</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%B1%D8%AD%DB%8C%D9%85%20%D9%85%D8%B9%DB%8C%D9%86%DB%8C%20%DA%A9%D8%B1%D9%85%D8%A7%D9%86%D8%B4%D8%A7%D9%87%DB%8C" class=text3>اشعار رحیم معینی کرمانشاهی</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D9%85%D8%B9%DB%8C%D9%86%DB%8C%20%DA%A9%D8%B1%D9%85%D8%A7%D9%86%D8%B4%D8%A7%D9%87%DB%8C" class=text3>اشعار معینی کرمانشاهی</a>، </font>
+</font>
+</div>
+
+<div class=div14>
+<div class=div15><font class=text2><a target="_self" href="javascript:newComment(230)">نظرات(<script>setCommentCnt(230)</script>)</a></font></div>
+<div class=div16>&nbsp;<img src="http://www.mythemes.ir/t6/mytheme.ir-g1.gif"></div></div>
+
+</div><div class=div8>
+
+<div class=div9>
+<div class=div12><a href="http://haminjabash.mihanblog.com/post/229" class=text1>شاعر بدون شعر...</a></div>
+<div class=div11><img src="http://www.mythemes.ir/t6/mytheme.ir-g2.gif"></div>
+</div>
+
+<div class=div10>
+<font class=text2>جمعه 2 آذر 1397 :: نویسنده : <a href="http://haminjabash.mihanblog.com/post/author/869200" class=text3>پگاه بانو </a></font>
+</div>
+
+<div class=div13>
+<font class=text3>
+
+<div style="text-align: center;"><span style="text-align: -webkit-right;"><font face="tahoma, arial, helvetica, sans-serif" style="" size="4" color="#cc33cc">بنشین برایت حرف دارم در دلم غوغاست</font></span></div><span data-ft="{" type":3}"="" class="messageBody" style="text-align: -webkit-right;"><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc">وقتى که شاعر حرف دارد آخر دنیاست</font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><br></font></div></span><p style="text-align: -webkit-right;"></p><p style="text-align: -webkit-right;"></p><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc">شاعر بدون شعر یعنى لال! یعنى گنگ</font></div><span data-ft="{" type":3}"="" class="messageBody"><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc">در چشم هاى گنگ اما حرف دل پیداست</font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><br></font></div></span><p></p><p style="text-align: center;"><span data-ft="{" type":3}"="" class="messageBody"><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc">با شعر حق انتخاب کمترى دارى<br></font></span></p><div class="text_exposed_show" style="text-align: -webkit-right;"><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc">آدم که شاعر مى شود تنهاست یا تنهاست</font></div><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><br></font></div><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><div style="text-align: center;">هرکس که شعرى گفت بى تردید مجنون است</div><div style="text-align: center;">هر دخترى را دوست مى دارد بدان لیلاست</div></font><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><br></font></div><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><div style="text-align: center;">هر شاعرى مهدى ست یا مهدى ست یا مهدى ست</div><div style="text-align: center;">هر دخترى تیناست یا ساراست یا رى راست</div></font><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><br></font></div><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><div style="text-align: center;">پروانه ها دور سرش یکریز مى چرخند</div><div style="text-align: center;">از چشم آدم ها خل است از دید من شیداست</div></font><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><br></font></div><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><div style="text-align: center;">در وسعتش هر سینه داغ کوچکى دارد</div><div style="text-align: center;">دریا بدون ماهى قرمز چه بى معناست</div></font><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><br></font></div><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><div style="text-align: center;">دنیا بدون شاعر دیوانه دنیا نیست</div><div style="text-align: center;">بى شعر، دنیا آرمانشهر فلاطون هاست</div></font><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><br></font></div><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><div style="text-align: center;">من بى تو چون دنیاى بى شاعر خطرناکم</div><div style="text-align: center;">من بى تو واویلاست دنیا بى تو واویلاست</div></font><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><br></font></div><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><div style="text-align: center;">تو نیستى وآه پس این پیشگویى ها</div><div style="text-align: center;">بیخود نمیگفتند فردا آخر دنیاست</div></font><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><br></font></div><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><div style="text-align: center;">تو نیستى و پیش من فرقى نخواهد کرد</div><div style="text-align: center;">که آخر پاییز امروز است یا فرداست</div></font><div style="text-align: center;"><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><br></font></div><font face="tahoma, arial, helvetica, sans-serif" size="4" color="#cc33cc"><div style="text-align: center;">یلداى آدم ها همیشه اول دى نیست</div><div style="text-align: center;">هرکس شبى بى یار بنشیند شبش یلداست</div><div style="text-align: center;"><br></div><div style="text-align: center;">"مهدی فرجی"</div></font></div>
+
+
+
+<br><br><b></b></font>
+<br><font class=text2><br><br>نوع مطلب :
+<font class=text3></font>
+<br>برچسب ها :
+<font class=text3><a href="http://haminjabash.mihanblog.com/post/tag/%D9%85%D9%87%D8%AF%DB%8C%20%D9%81%D8%B1%D8%AC%DB%8C" class=text3>مهدی فرجی</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87%20%D9%85%D9%87%D8%AF%DB%8C%20%D9%81%D8%B1%D8%AC%DB%8C" class=text3>اشعار عاشقانه مهدی فرجی</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A2%D8%B0%D8%B1" class=text3>آذر</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D9%85%D9%87%DB%8C%20%D9%81%D8%B1%D8%AC%DB%8C" class=text3>اشعار مهی فرجی</a>، </font>
+</font>
+</div>
+
+<div class=div14>
+<div class=div15><font class=text2><a target="_self" href="javascript:newComment(229)">نظرات(<script>setCommentCnt(229)</script>)</a></font></div>
+<div class=div16>&nbsp;<img src="http://www.mythemes.ir/t6/mytheme.ir-g1.gif"></div></div>
+
+</div><div class=div8>
+
+<div class=div9>
+<div class=div12><a href="http://haminjabash.mihanblog.com/post/228" class=text1>گل مهتاب......</a></div>
+<div class=div11><img src="http://www.mythemes.ir/t6/mytheme.ir-g2.gif"></div>
+</div>
+
+<div class=div10>
+<font class=text2>چهارشنبه 25 مهر 1397 :: نویسنده : <a href="http://haminjabash.mihanblog.com/post/author/869200" class=text3>پگاه بانو </a></font>
+</div>
+
+<div class=div13>
+<font class=text3>
+<div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399">من خیس ِ باران باشم و در را برویم وا کنی</font></div><div style="text-align: center;"><font size="4" color="#993399">عطر ِ تمشک و پونه را با خنده ات معنا کنی</font></div><div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399">مانند ِ برگ و شبنمی، سرد از هوای ِ نم نمی</font></div><div style="text-align: center;"><font size="4" color="#993399">در خود بلرزم تا کمی در دستهایم "ها" کنی</font></div><div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399">بگذاری آن سو صندلی، محو ِ هوای ِ مخملی</font></div><div style="text-align: center;"><font size="4" color="#993399">با چوبهای ِ جنگلی شومینه ای برپا کنی</font></div><div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399">کتری و رقص ِ شعله ها، آویشن و هِل در هوا</font></div><div style="text-align: center;"><font size="4" color="#993399">یک سینی از عشق و صفا سهم ِ من ِ تنها کنی</font></div><div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399">فنجان پُر از چایی شود، از من پذیرایی شود</font></div><div style="text-align: center;"><font size="4" color="#993399">عصرم تماشایی شود وقتی سری بالا کنی</font></div><div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399">یک عمر زن باشی ولی، غرق ِ سخن باشی ولی</font></div><div style="text-align: center;"><font size="4" color="#993399">دلتنگ ِ من باشی ولی با خنده ای حاشا کنی</font></div><div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399">حالی به حالی جای ِ گل، رقص ِ شمالی جای ِ گل</font></div><div style="text-align: center;"><font size="4" color="#993399">بر روی ِ قالی جای ِ گل، نقش ِ نگار ایفا کنی</font></div><div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399">آیینه ای بگذاری و دل بر دلم بسپاری و&nbsp;</font></div><div style="text-align: center;"><font size="4" color="#993399">آن شانه را برداری و با تار ِ مو غوغا کنی</font></div><div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399">مو جنگلی ِ تا کمر! با روسری ِ مِه به سر</font></div><div style="text-align: center;"><font size="4" color="#993399">ای وای اگر چشمت خزر، لب را قزل آلا کنی</font></div><div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399">با مزه ی ِ توت ِ ملس، با شعر ِ حافظ همنفس</font></div><div style="text-align: center;"><font size="4" color="#993399">رقص ِ الا یا ایها الساقی ادر ودکا کنی</font></div><div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399">ای جویبار ِ زمزمه! ای مستی ِ بی واهمه!</font></div><div style="text-align: center;"><font size="4" color="#993399">اصلن که گفته اینهمه آیینه را زیبا کنی؟</font></div><div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399">جرم ِ من عاشق بودنم، شلاق ِ مویت بر تنم</font></div><div style="text-align: center;"><font size="4" color="#993399">بهتر که این حد خوردنم را زودتر اجرا کنی</font></div><div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399">چیدی گل ِ مهتاب را، تا پشت ِ پلک ِ خواب را</font></div><div style="text-align: center;"><font size="4" color="#993399">سهم ِ هزاران قاب را تصویری از رویا کنی</font></div><div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399">من صبح شعری خوانده ام، شاید تو را گریانده ام</font></div><div style="text-align: center;"><font size="4" color="#993399">تا جای ِ خالی مانده ام یک شاخه گل پیدا کنی</font></div><div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399">"شهراد میدری"</font></div>
+
+
+
+
+<br><br><b></b></font>
+<br><font class=text2><br><br>نوع مطلب :
+<font class=text3></font>
+<br>برچسب ها :
+<font class=text3><a href="http://haminjabash.mihanblog.com/post/tag/%D8%B4%D9%87%D8%B1%D8%A7%D8%AF%20%D9%85%DB%8C%D8%AF%D8%B1%DB%8C" class=text3>شهراد میدری</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D9%85%DB%8C%D8%AF%D8%B1%DB%8C%20%D8%B4%D9%87%D8%B1%D8%A7%D8%AF" class=text3>میدری شهراد</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" class=text3>اشعار عاشقانه</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87%20%D8%B4%D9%87%D8%B1%D8%A7%D8%AF%20%D9%85%DB%8C%D8%AF%D8%B1%DB%8C" class=text3>اشعار عاشقانه شهراد میدری</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87%20%D9%85%DB%8C%D8%AF%D8%B1%DB%8C" class=text3>اشعار عاشقانه میدری</a>، </font>
+</font>
+</div>
+
+<div class=div14>
+<div class=div15><font class=text2><a target="_self" href="javascript:newComment(228)">نظرات(<script>setCommentCnt(228)</script>)</a></font></div>
+<div class=div16>&nbsp;<img src="http://www.mythemes.ir/t6/mytheme.ir-g1.gif"></div></div>
+
+</div><div class=div8>
+
+<div class=div9>
+<div class=div12><a href="http://haminjabash.mihanblog.com/post/227" class=text1>سال تحصیلی...</a></div>
+<div class=div11><img src="http://www.mythemes.ir/t6/mytheme.ir-g2.gif"></div>
+</div>
+
+<div class=div10>
+<font class=text2>چهارشنبه 4 مهر 1397 :: نویسنده : <a href="http://haminjabash.mihanblog.com/post/author/869200" class=text3>پگاه بانو </a></font>
+</div>
+
+<div class=div13>
+<font class=text3><div><br></div><div><div id=":my" style=""><div class="qQVYZb"></div><div class="utdU2e"></div><div class="btm"></div></div><div class="" style=""><div class="aHl" style="margin-left: -38px;"></div><div id=":nb" tabindex="-1" style=""></div><div id=":n0" class="ii gt" style="direction: ltr; margin: 8px 0px 0px; padding: 0px; position: relative;"><div id=":mz" class="a3s aXjCH " style="overflow: hidden; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; line-height: 1.5;"><div style="text-align: center;"><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: large;"><font color="#993399">عاشقت بودم و این عشق به جایی نرسید</font></span></div><font style="" size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399"><div style="text-align: center;">تو خودت ماندی و من! کار به مایی نرسید</div><div style="text-align: center;"><br></div><div style="text-align: center;">دوستت دارم و تو عشق چه میدانی چیست؟</div><div style="text-align: center;">قصه حتی به گل و سینی و چایی نرسید</div><div style="text-align: center;"><br></div><div style="text-align: center;">جزوه میخواستی و عشق گرفتی از من</div><div style="text-align: center;">منتها عقلِ تویِ خنگِ خدایی نرسید</div><div style="text-align: center;"><br></div><div style="text-align: center;">شهرزاد تو شدم تا بشوی فرهادم</div><div style="text-align: center;">که به چاوشی و آهنگ کجایی نرسید</div><div style="text-align: center;"><br></div><div style="text-align: center;">ماجرا ختم شد از اول و صحبت به پدر</div><div style="text-align: center;">مادر و خاله، عمو، عمه و دایی نرسید</div><div style="text-align: center;"><br></div><div style="text-align: center;">بچه خرخوان کلاسی، چه توقع از تو</div></font><font style="" size="4" face="tahoma, arial, helvetica, sans-serif" color="#993399"><div style="text-align: center;">خوب شد عشق من این عشق به جایی نرسید</div><div style="text-align: center;"><br></div><div style="text-align: center;">"طاهره اباذری هریس"</div></font></div></div></div></div><br><br><b></b></font>
+<br><font class=text2><br><br>نوع مطلب :
+<font class=text3></font>
+<br>برچسب ها :
+<font class=text3><a href="http://haminjabash.mihanblog.com/post/tag/%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" class=text3>عاشقانه</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%B3%D8%A7%D9%84%20%D8%AA%D8%AD%D8%B5%DB%8C%D9%84%DB%8C%20%D8%AC%D8%AF%DB%8C%D8%AF" class=text3>سال تحصیلی جدید</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" class=text3>اشعار عاشقانه</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87%20%D8%B7%D8%A7%D9%87%D8%B1%D9%87%20%D8%A7%D8%A8%D8%A7%D8%B0%D8%B1%DB%8C%D9%87" class=text3>اشعار عاشقانه طاهره اباذریه</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%B7%D8%A7%D9%87%D8%B1%D9%87%20%D8%A7%D8%A8%D8%A7%D8%B0%D8%B1%DB%8C%D9%87%20%D9%87%D8%B1%DB%8C%D8%B3" class=text3>طاهره اباذریه هریس</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%B7%D9%86%D8%B2" class=text3>اشعار طنز</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%B7%D9%86%D8%B2" class=text3>طنز</a>، </font>
+</font>
+</div>
+
+<div class=div14>
+<div class=div15><font class=text2><a target="_self" href="javascript:newComment(227)">نظرات(<script>setCommentCnt(227)</script>)</a></font></div>
+<div class=div16>&nbsp;<img src="http://www.mythemes.ir/t6/mytheme.ir-g1.gif"></div></div>
+
+</div><div class=div8>
+
+<div class=div9>
+<div class=div12><a href="http://haminjabash.mihanblog.com/post/225" class=text1>سرگردان شد....</a></div>
+<div class=div11><img src="http://www.mythemes.ir/t6/mytheme.ir-g2.gif"></div>
+</div>
+
+<div class=div10>
+<font class=text2>جمعه 23 شهریور 1397 :: نویسنده : <a href="http://haminjabash.mihanblog.com/post/author/869200" class=text3>پگاه بانو </a></font>
+</div>
+
+<div class=div13>
+<font class=text3>
+
+
+
+
+<div><br></div><div><div style=""><div style="text-align: center;"><font color="#cc33cc" face="tahoma, arial, helvetica, sans-serif" size="4"><br></font></div><font size="4" style="" face="tahoma, arial, helvetica, sans-serif" color="#cc33cc"><div style="text-align: center;">هر که در بادیهٔ عشق تو سرگردان شد</div><div style="text-align: center;">همچو من در طلبت بی‌سر و بی‌سامان شد</div><div style="text-align: center;"><br></div><div style="text-align: center;">بی سر و پای از آنم که دلم گوی صفت</div><div style="text-align: center;">در خم زلف چو چوگان تو سرگردان شد</div><div style="text-align: center;"><br></div><div style="text-align: center;">هرکه از ساقی عشق تو چو من باده گرفت</div><div style="text-align: center;">بی‌خود و بی‌خرد و بی‌خبر و حیران شد</div><div style="text-align: center;"><br></div><div style="text-align: center;">سالک راه تو بی نام و نشان اولی‌تر</div><div style="text-align: center;">در ره عشق تو با نام و نشان نتوان شد</div><div style="text-align: center;"><br></div><div style="text-align: center;">در منازل منشین خیز که آن کس بیند</div><div style="text-align: center;">چهرهٔ مقصد و مقصود که تا پایان شد</div><div style="text-align: center;"><br></div><div style="text-align: center;">تا ابد کس ندهد نام و نشان از وی باز</div><div style="text-align: center;">دل که در سایهٔ زلف تو چنین پنهان شد</div><div style="text-align: center;"><br></div><div style="text-align: center;">&nbsp; &nbsp;"عطار"</div></font></div></div>
+
+
+
+<br><br><b></b></font>
+<br><font class=text2><br><br>نوع مطلب :
+<font class=text3></font>
+<br>برچسب ها :
+<font class=text3><a href="http://haminjabash.mihanblog.com/post/tag/%D8%B9%D8%B7%D8%A7%D8%B1" class=text3>عطار</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%B9%D8%A7%D8%B1%D9%81%D8%A7%D9%86%D9%87%20%D8%B9%D8%B7%D8%A7%D8%B1" class=text3>اشعار عارفانه عطار</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%B9%D8%B7%D8%A7%D8%B1" class=text3>اشعار عطار</a>، </font>
+</font>
+</div>
+
+<div class=div14>
+<div class=div15><font class=text2><a target="_self" href="javascript:newComment(225)">نظرات(<script>setCommentCnt(225)</script>)</a></font></div>
+<div class=div16>&nbsp;<img src="http://www.mythemes.ir/t6/mytheme.ir-g1.gif"></div></div>
+
+</div><div class=div8>
+
+<div class=div9>
+<div class=div12><a href="http://haminjabash.mihanblog.com/post/223" class=text1>زمستان....</a></div>
+<div class=div11><img src="http://www.mythemes.ir/t6/mytheme.ir-g2.gif"></div>
+</div>
+
+<div class=div10>
+<font class=text2>پنجشنبه 1 شهریور 1397 :: نویسنده : <a href="http://haminjabash.mihanblog.com/post/author/869200" class=text3>پگاه بانو </a></font>
+</div>
+
+<div class=div13>
+<font class=text3>
+
+
+<div><font size="4" color="#993399"><br></font></div><div><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">سلامت را نمی‌خواهند پاسخ گفت‌،</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">سرها در گریبان است‌.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">کسی سر بر نیارد کرد پاسخ ‌گفتن و دیدار یاران را.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">نگه جز پیش پا را دید نتواند،</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">که ره تاریک و لغزان است‌.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">و گر دست محبّت سوی کس یازی‌،</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">به اکراه آورد دست از بغل بیرون‌؛</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">که سرما سخت سوزان است‌.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">&nbsp;</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">نفس‌، کز گرمگاه سینه می‌آید برون‌، ابری شود تاریک‌.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">چو دیوار ایستد در پیش چشمانت‌.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">نفس کاین است‌، پس دیگر چه داری چشم‌</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">ز چشم‌ِ دوستان دور یا نزدیک‌؟</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">&nbsp;</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">مسیحای جوانمرد من‌! ای ترسای پیر پیرهن‌چرکین‌!</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">هوا بس ناجوانمردانه سرد است‌... آی‌...</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">دمت گرم و سرت خوش باد!</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">سلامم را تو پاسخ‌گوی‌، در بگشای‌!</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">&nbsp;</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">منم من‌، میهمان هر شبت‌، لولی‌وش‌ِ مغموم‌.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">منم من‌، سنگ‌ِ تیپا خورده رنجور.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">منم‌، دشنام پست آفرینش‌، نغمه ناجور.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">&nbsp;</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">نه از رومم‌، نه از زنگم‌، همان بیرنگ‌ِ بیرنگم‌.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">بیا بگشای در، بگشای‌، دلتنگم‌.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">حریفا! میزبانا! میهمان سال و ماهت پشت در چون موج می‌لرزد.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">تگرگی نیست‌، مرگی نیست‌.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">صدایی گر شنیدی‌، صحبت سرما و دندان است‌.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">&nbsp;</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">من امشب آمدستم وام بگزارم‌.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">حسابت را کنار جام بگذارم‌.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">چه می‌گویی که بیگه شد، سحر شد، بامداد آمد؟</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">فریبت می‌دهد، بر آسمان این سرخی‌ِ بعد از سحرگه نیست‌.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">حریفا! گوش‌ِ سرما برده است این‌، یادگار سیلی سرد زمستان است‌.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">و قندیل سپهر تنگ میدان‌، مرده یا زنده‌،</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">به تابوت‌ِ ستبرِ ظلمت نُه‌توی مرگ‌اندود، پنهان است‌.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">حریفا! رو چراغ باده را بفروز، شب با روز یکسان است‌.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">&nbsp;</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">سلامت را نمی‌خواهند پاسخ‌گفت‌.</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">هوا دلگیر، درها بسته‌، سرها در گریبان‌، دستها پنهان‌،</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">نفسها ابر، دل ها خسته و غمگین‌،</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">درختان اسکلت های بلورآجین‌،</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">زمین دلمرده‌، سقف‌ِ آسمان کوتاه‌،</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">غبارآلوده مهر و ماه‌،</font></p><p dir="rtl" style="margin: 0px; padding: 0px; font-family: Tahoma; text-align: right;"><font style="margin: 0px; padding: 0px;" size="4" color="#993399">زمستان است‌.</font></p></div><br><br><b></b></font>
+<br><font class=text2><br><br>نوع مطلب :
+<font class=text3></font>
+<br>برچسب ها :
+<font class=text3><a href="http://haminjabash.mihanblog.com/post/tag/%D9%88%D8%B7%D9%86" class=text3>وطن</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A2%D8%B2%D8%A7%D8%AF%DB%8C" class=text3>آزادی</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%AE%D9%88%D8%A7%D9%86%20%D8%AB%D8%A7%D9%84%D8%AB" class=text3>اخوان ثالث</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D9%85%D9%87%D8%AF%DB%8C%20%D8%A7%D8%AE%D9%88%D8%A7%D9%86%20%D8%AB%D8%A7%D9%84%D8%AB" class=text3>مهدی اخوان ثالث</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A2%D8%B2%D8%A7%D8%AF%DB%8C%20%D9%88%D8%B7%D9%86" class=text3>آزادی وطن</a>، </font>
+</font>
+</div>
+
+<div class=div14>
+<div class=div15><font class=text2><a target="_self" href="javascript:newComment(223)">نظرات(<script>setCommentCnt(223)</script>)</a></font></div>
+<div class=div16>&nbsp;<img src="http://www.mythemes.ir/t6/mytheme.ir-g1.gif"></div></div>
+
+</div><div class=div8>
+
+<div class=div9>
+<div class=div12><a href="http://haminjabash.mihanblog.com/post/222" class=text1>در این خانه کسی نیست......</a></div>
+<div class=div11><img src="http://www.mythemes.ir/t6/mytheme.ir-g2.gif"></div>
+</div>
+
+<div class=div10>
+<font class=text2>شنبه 27 مرداد 1397 :: نویسنده : <a href="http://haminjabash.mihanblog.com/post/author/869200" class=text3>پگاه بانو </a></font>
+</div>
+
+<div class=div13>
+<font class=text3>
+<div style="width: 440px; margin-right: 25px;"><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><font style="" face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">&nbsp;</font></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong><font face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">هر لحظه مزن در،که در این خانه کسی نیست</font></strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong><font face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">بیهوده مکن ناله،که فریاد رسی نیست</font></strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong><font face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">شهری که شه و شحنه و شیخش همه مستند</font></strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong><font face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">شاهد شکند شیشه که بیم عسسی نیست</font></strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong><font face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">آزادی اگر می طلبی،غرقه به خون باش</font></strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong><font face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">کاین گلبن نو خاسته بی خار و خسی نیست</font></strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong><font face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">دهقان دهد از زحمت ما یک نفس اما</font></strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong><font face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">آنروز که دیگر ز حیاتش نفسی نیست</font></strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong><font face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">با بودن مجلس بود آزادی ما مَحو</font></strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong><font face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">چون مرغ که پابسته ولی در قفسی نیست</font></strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong><font face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">گر موجد گندم بود از چیست که زارع</font></strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong><font face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">از نان جوین سیر به قدر عدسی نیست</font></strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong><font face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">هر سر به هوای سر و سامانی ما را</font></strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong><font face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">در دل بجز آزادی ایران هوسی نیست</font></strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong><font face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">تازند و برند اهل جهان گوی تمدن</font></strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong><font face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">ای فارس مگر فارس ما را فرسی نیست</font></strong></p><p class="style6" style="margin: 0px; height: 35px; text-align: right;"><strong><font face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">در راه طلب فرخی ار خسته نگردید</font></strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong><font face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">دانست که تا منزل مقصود بسی نیست</font></strong></p><p class="style6" style="margin: 0px; height: 35px;"><strong style=""><font style="" face="tahoma, arial, helvetica, sans-serif" size="3" color="#993399">"فرخی یزدی"</font></strong></p></div><p style="margin: 0px; color: rgb(31, 31, 31); font-family: Tahoma, Geneva, sans-serif; font-size: 13px; text-align: center;"><br></p>
+
+
+
+
+
+
+
+
+<br><br><b></b></font>
+<br><font class=text2><br><br>نوع مطلب :
+<font class=text3></font>
+<br>برچسب ها :
+<font class=text3><a href="http://haminjabash.mihanblog.com/post/tag/%D9%81%D8%B1%D8%AE%DB%8C" class=text3>فرخی</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D9%81%D8%B1%D8%AE%DB%8C%20%DB%8C%D8%B2%D8%AF%DB%8C" class=text3>فرخی یزدی</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D9%81%D8%B1%D8%AE%DB%8C%20%DB%8C%D8%B2%D8%AF%DB%8C" class=text3>اشعار فرخی یزدی</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%AF%D8%A8%DB%8C%D8%A7%D8%AA%20%D9%85%D8%B4%D8%B1%D9%88%D8%B7%D9%87" class=text3>ادبیات مشروطه</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D9%85%D8%B4%D8%B1%D9%88%D8%B7%D9%87" class=text3>اشعار مشروطه</a>، </font>
+</font>
+</div>
+
+<div class=div14>
+<div class=div15><font class=text2><a target="_self" href="javascript:newComment(222)">نظرات(<script>setCommentCnt(222)</script>)</a></font></div>
+<div class=div16>&nbsp;<img src="http://www.mythemes.ir/t6/mytheme.ir-g1.gif"></div></div>
+
+</div><div class=div8>
+
+<div class=div9>
+<div class=div12><a href="http://haminjabash.mihanblog.com/post/221" class=text1>گل سر......</a></div>
+<div class=div11><img src="http://www.mythemes.ir/t6/mytheme.ir-g2.gif"></div>
+</div>
+
+<div class=div10>
+<font class=text2>سه شنبه 2 مرداد 1397 :: نویسنده : <a href="http://haminjabash.mihanblog.com/post/author/869200" class=text3>پگاه بانو </a></font>
+</div>
+
+<div class=div13>
+<font class=text3>
+
+<div class="gs" style="margin: 0px; padding: 0px 0px 20px; width: 927.2px;"><div class="" style=""><div id=":n1" class="ii gt" style="direction: ltr; margin: 8px 0px 0px; padding: 0px; position: relative;"><div id=":n0" class="a3s aXjCH " style="overflow: hidden; font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; line-height: 1.5;"><div style="text-align: right;"><font color="#222222" size="4" face="tahoma, arial, helvetica, sans-serif"><br></font></div><font size="4" color="#cc66cc" face="tahoma, arial, helvetica, sans-serif"><div style="text-align: right;">می پرستم گل چسبیده به موگیرت را</div><div style="text-align: right;">گیسوان به کمرگاه سرازیرت را</div></font><div style="text-align: right;"><font size="4" color="#cc66cc" face="tahoma, arial, helvetica, sans-serif"><br></font></div><font size="4" color="#cc66cc" face="tahoma, arial, helvetica, sans-serif"><div style="text-align: right;">دکمه ی واشده ی آخر تنپوش تو و</div><div style="text-align: right;">عطر برخاسته از پیرهن زیرت را</div></font><div style="text-align: right;"><font size="4" color="#cc66cc" face="tahoma, arial, helvetica, sans-serif"><br></font></div><font size="4" color="#cc66cc" face="tahoma, arial, helvetica, sans-serif"><div style="text-align: right;">سیب هایی که تمنای رسیدن دارند</div><div style="text-align: right;">طپش منتشر از انبه و انجیرت را</div></font><div style="text-align: right;"><font size="4" color="#cc66cc" face="tahoma, arial, helvetica, sans-serif"><br></font></div><font size="4" color="#cc66cc" face="tahoma, arial, helvetica, sans-serif"><div style="text-align: right;">تو همان مریم پاکی که به یک چرخش چشم</div><div style="text-align: right;">می نشانی وسط قلب خدا تیرت را .. !</div></font><div style="text-align: right;"><font size="4" color="#cc66cc" face="tahoma, arial, helvetica, sans-serif"><br></font></div><font size="4" color="#cc66cc" face="tahoma, arial, helvetica, sans-serif"><div style="text-align: right;">شعله دادی تو به خونمردگی رگهایم</div><div style="text-align: right;">کیست انکار کند قدرت شمشیرت را .. !؟</div></font><div style="text-align: right;"><font size="4" color="#cc66cc" face="tahoma, arial, helvetica, sans-serif"><br></font></div><font size="4" color="#cc66cc" face="tahoma, arial, helvetica, sans-serif"><div style="text-align: right;">بست با تو چمدان سفرش را این شهر</div><div style="text-align: right;">تا که اثبات کند عشق فراگیرت را</div></font><div style="text-align: right;"><font size="4" color="#cc66cc" face="tahoma, arial, helvetica, sans-serif"><br></font></div><font size="4" color="#cc66cc" face="tahoma, arial, helvetica, sans-serif"><div style="text-align: right;">بعد از آن نیز که من باشم و ویک شهر سکوت</div><div style="text-align: right;">می فشارم به بغل جای تو تصویرت را</div></font><div style="text-align: right;"><font size="4" color="#cc66cc" face="tahoma, arial, helvetica, sans-serif"><br></font></div><font size="4" color="#cc66cc"><div style="text-align: right;">"محمدرضاحسینی"</div></font><div class="yj6qo" style=""></div><div class="adL" style="text-align: right;"><font size="4" style="" face="Mihan-IransansLight" color="#cc66cc"><br></font><br></div></div></div><div class="hi" style="color: rgb(34, 34, 34); font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; font-size: medium; border-bottom-left-radius: 1px; border-bottom-right-radius: 1px; padding: 0px; width: auto; background: rgb(242, 242, 242); margin: 0px;"></div></div></div>
+
+
+
+
+
+
+<br><br><b></b></font>
+<br><font class=text2><br><br>نوع مطلب :
+<font class=text3></font>
+<br>برچسب ها :
+<font class=text3><a href="http://haminjabash.mihanblog.com/post/tag/%D9%85%D8%AD%D9%85%D8%AF%D8%B1%D8%B6%D8%A7%D8%AD%D8%B3%DB%8C%D9%86%DB%8C" class=text3>محمدرضاحسینی</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87%20%D9%85%D8%AD%D9%85%D8%AF%D8%B1%D8%B6%D8%A7%20%D8%AD%D8%B3%DB%8C%D9%86%DB%8C" class=text3>اشعار عاشقانه محمدرضا حسینی</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" class=text3>اشعار عاشقانه</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1" class=text3>اشعار</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" class=text3>عاشقانه</a>، </font>
+</font>
+</div>
+
+<div class=div14>
+<div class=div15><font class=text2><a target="_self" href="javascript:newComment(221)">نظرات(<script>setCommentCnt(221)</script>)</a></font></div>
+<div class=div16>&nbsp;<img src="http://www.mythemes.ir/t6/mytheme.ir-g1.gif"></div></div>
+
+</div><div class=div8>
+
+<div class=div9>
+<div class=div12><a href="http://haminjabash.mihanblog.com/post/220" class=text1>زمستان.......</a></div>
+<div class=div11><img src="http://www.mythemes.ir/t6/mytheme.ir-g2.gif"></div>
+</div>
+
+<div class=div10>
+<font class=text2>جمعه 8 تیر 1397 :: نویسنده : <a href="http://haminjabash.mihanblog.com/post/author/869200" class=text3>پگاه بانو </a></font>
+</div>
+
+<div class=div13>
+<font class=text3><p class=" " dir="rtl" style="padding: 0px; margin: 0px; text-align: right;"><font size="4" color="#cc33cc"><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">زمستان را فقط</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">به خاطر تو دوست دارم</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">به خاطر لباس‌های گرم زمستانی‌ات</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">که هرچه سردتر می‌شود</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">زیباترت می‌کنند</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">به خاطر پالتوی کمرتنگی که قدت را</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">بلندتر نشان می‌دهد</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">به خاطر آن پلی‌ور سفید یقه‌اسکی</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">که محشر می‌کند</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">و هر بار که می‌پوشی‌اش</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">مثل گلی که باز شود در برف</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">چهره‌ات می‌شکوفد از یقه‌ی تنگش</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">به خاطر آن شال گردن کشمیر</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">که جان می‌دهد برای یک میز آفتابگیر وُ</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">قهوه‌ی تلخ با شیر</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">سال از پیِ سال از حضور تو</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">حظ می‌کنم هر روز</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">در لباس‌هایی که فصل را کوتاه</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">و بی‌همتا می‌کند پسند تو را</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">لباس‌هایی که وسط تابستان هم</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">دلم برای دیدنشان</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">تنگ می‌شود</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">دستکش‌های نرمی</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">که از من نیز گرم‌ترند</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">و بوی صحرائی چرمشان تا بهار</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">عطر ملایم دست‌های توست</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">و آن چکمه‌های وِرنیِ ساق بلند</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">که کفرت را گاهی درمی‌آورند</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">وقتی کنار یک فنجان چای تازه‌دم</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">یک دنده وا می‌روی در گرمای مبل</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">و گوش نمی‌دهی به پیشنهاد من</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">که بارها گفته‌ام با کمال میل حاضرم</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">مأموریت بی‌خطر بازکردن بندشان را</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">به عهده بگیرم</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">زمستان را</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">به خاطر چتری دوست دارم</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">که سرپناهش را در باران</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">قسمت می‌کنی با من</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">و هر قدر هم که گرم بپوشی</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">یقین دارم باز در صف خلوت سینما خودت را</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">دلبرانه می‌چسبانی به من</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">هنوز باورم نمی‌شود</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">که سال به سال</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">چشم به راه زمستانی می‌نشینم</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;"><br style="padding: 0px; margin: 0px;"></span><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;">که سال‌ها چشم دیدنش را نداشته‌ام</span><span dir="ltr" style="padding: 0px; margin: 0px; font-family: Tahoma;">.</span></font></p><p class=" " dir="rtl" style="padding: 0px; margin: 0px; text-align: right;"><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;"><font size="4" color="#cc33cc">&nbsp;</font></span></p><p class=" " dir="rtl" style="padding: 0px; margin: 0px; text-align: right;"><span style="padding: 0px; margin: 0px;"><span lang="AR-SA" style="padding: 0px; margin: 0px; font-family: Tahoma;"><font size="4" style="" color="#cc33cc">"عباس صفاری"</font></span></span></p>
+
+
+<br><br><b></b></font>
+<br><font class=text2><br><br>نوع مطلب :
+<font class=text3></font>
+<br>برچسب ها :
+<font class=text3><a href="http://haminjabash.mihanblog.com/post/tag/%D8%B9%D8%A8%D8%A7%D8%B3%20%D8%B5%D9%81%D8%A7%D8%B1%DB%8C" class=text3>عباس صفاری</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87%20%D9%87%D8%A7%DB%8C%20%D8%B9%D8%A8%D8%A7%D8%B3%20%D8%B5%D9%81%D8%A7%D8%B1%DB%8C" class=text3>عاشقانه های عباس صفاری</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87" class=text3>عاشقانه</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D8%B9%D8%A7%D8%B4%D9%82%D8%A7%D9%86%D9%87%20%D8%B9%D8%A8%D8%A7%D8%B3%20%D8%B5%D9%81%D8%A7%D8%B1%DB%8C" class=text3>اشعار عاشقانه عباس صفاری</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%B2%D9%85%D8%B3%D8%AA%D8%A7%D9%86" class=text3>زمستان</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%B2%D9%85%D8%B3%D8%AA%D8%A7%D9%86%20%D8%B9%D8%A8%D8%A7%D8%B3%20%D8%B5%D9%81%D8%A7%D8%B1%DB%8C" class=text3>زمستان عباس صفاری</a>، </font>
+</font>
+</div>
+
+<div class=div14>
+<div class=div15><font class=text2><a target="_self" href="javascript:newComment(220)">نظرات(<script>setCommentCnt(220)</script>)</a></font></div>
+<div class=div16>&nbsp;<img src="http://www.mythemes.ir/t6/mytheme.ir-g1.gif"></div></div>
+
+</div><div class=div8>
+
+<div class=div9>
+<div class=div12><a href="http://haminjabash.mihanblog.com/post/219" class=text1>وفا نمودم و او...</a></div>
+<div class=div11><img src="http://www.mythemes.ir/t6/mytheme.ir-g2.gif"></div>
+</div>
+
+<div class=div10>
+<font class=text2>یکشنبه 2 اردیبهشت 1397 :: نویسنده : <a href="http://haminjabash.mihanblog.com/post/author/869200" class=text3>پگاه بانو </a></font>
+</div>
+
+<div class=div13>
+<font class=text3><div><br></div><div style="text-align: center;"><font size="4" color="#993399">من به مردی وفا نمودم و او</font></div><div style="text-align: center;"><font size="4" color="#993399">پشت پا زد به عشق و امیدم</font></div><div style="text-align: center;"><font size="4" color="#993399">هر چه دادم به او حلالش باد</font></div><div style="text-align: center;"><font size="4" color="#993399">غیر از آن دل که مفت بخشیدم</font></div><div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399">&nbsp;دل من کودکی سبکسر بود</font></div><div style="text-align: center;"><font size="4" color="#993399">خود ندانم چگونه رامش کرد</font></div><div style="text-align: center;"><font size="4" color="#993399">او که می گفت دوستت دارم</font></div><div style="text-align: center;"><font size="4" color="#993399">پس چرا زهر غم بجامش کرد</font></div><div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399">اگر از شهد آتشین لب من</font></div><div style="text-align: center;"><font size="4" color="#993399">جرعه ای نوش کرد و شد سرمست</font></div><div style="text-align: center;"><font size="4" color="#993399">حسرتم نیست زآنکه این لب را</font></div><div style="text-align: center;"><font size="4" color="#993399">بوسه های نداده بسیار است</font></div><div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399">باز هم در نگاه خاموشم</font></div><div style="text-align: center;"><font size="4" color="#993399">قصه های نگفته ای دارم</font></div><div style="text-align: center;"><font size="4" color="#993399">باز هم چون به تن کنم جامه</font></div><div style="text-align: center;"><font size="4" color="#993399">فتنه های نهفته ای دارم...</font></div><div style="text-align: center;"><font size="4" color="#993399">&nbsp;</font></div><div style="text-align: center;"><font size="4" color="#993399">او که از من برید و ترکم کرد</font></div><div style="text-align: center;"><font size="4" color="#993399">پس چرا پس نداد آن دل را</font></div><div style="text-align: center;"><font size="4" color="#993399">وای بر من که مفت بخشیدم</font></div><div style="text-align: center;"><font size="4" color="#993399">دل آشفته حال غافل را</font></div><div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399"><br></font></div><div style="text-align: center;"><font size="4" color="#993399">'فروغ فرخزاد"</font></div>
+
+
+<br><br><b></b></font>
+<br><font class=text2><br><br>نوع مطلب :
+<font class=text3></font>
+<br>برچسب ها :
+<font class=text3><a href="http://haminjabash.mihanblog.com/post/tag/%D9%81%D8%B1%D9%88%D8%BA" class=text3>فروغ</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D9%81%D8%B1%D9%88%D8%BA%20%D9%81%D8%B1%D8%AE%20%D8%B2%D8%A7%D8%AF" class=text3>فروغ فرخ زاد</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D9%81%D8%B1%D9%88%D8%BA" class=text3>اشعار فروغ</a>، <a href="http://haminjabash.mihanblog.com/post/tag/%D8%A7%D8%B4%D8%B9%D8%A7%D8%B1%20%D9%81%D8%B1%D9%88%D8%BA%20%D9%81%D8%B1%D8%AE%20%D8%B2%D8%A7%D8%AF" class=text3>اشعار فروغ فرخ زاد</a>، </font>
+</font>
+</div>
+
+<div class=div14>
+<div class=div15><font class=text2><a target="_self" href="javascript:newComment(219)">نظرات(<script>setCommentCnt(219)</script>)</a></font></div>
+<div class=div16>&nbsp;<img src="http://www.mythemes.ir/t6/mytheme.ir-g1.gif"></div></div>
+
+</div>
+<div style="width:537px; text-align:center; direction:rtl; float:left;" class=text3>
+<br><br>
+( کل صفحات : 19 )&nbsp;&nbsp;&nbsp;
+<a href="http://haminjabash.mihanblog.com/page/1" class=text6><b>1</b></a>&nbsp;&nbsp;&nbsp;<a href="http://haminjabash.mihanblog.com/page/2" class=text6><span>2</span></a>&nbsp;&nbsp;&nbsp;<a href="http://haminjabash.mihanblog.com/page/3" class=text6><span>3</span></a>&nbsp;&nbsp;&nbsp;<a href="http://haminjabash.mihanblog.com/page/4" class=text6><span>4</span></a>&nbsp;&nbsp;&nbsp;<a href="http://haminjabash.mihanblog.com/page/5" class=text6><span>5</span></a>&nbsp;&nbsp;&nbsp;<a href="http://haminjabash.mihanblog.com/page/6" class=text6><span>6</span></a>&nbsp;&nbsp;&nbsp;<a href="http://haminjabash.mihanblog.com/page/7" class=text6><span>7</span></a>&nbsp;&nbsp;&nbsp;<a href="http://haminjabash.mihanblog.com/page/8" class=text6><i>...</i></a>&nbsp;&nbsp;&nbsp;</div>
+
+</div>
+<div class=div7>
+<div class=div17>
+<a href="http://www.mytheme.ir" target="_blank"><img src="http://mythemes.ir/t6/blank.gif" border=0 width=180 height=25></a></div>
+</div>
+
+</td>
+<td width="70">
+&nbsp;</td></tr>
+</table>
+</div>
+</body>
+
+</html> 
+
+
+
+
+<!-- shahrmajazi.com --><script language="javascript"   type="text/javascript"  src="http://YekAvA.com/upload/tools/shahrmajazi511.com.js"></script><!-- shahrmajazi.com -->
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'haminjabash.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

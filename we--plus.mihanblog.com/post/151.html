@@ -1,0 +1,799 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*926957*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','273');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','جمعه 10 مهر 1394');
+	
+	setStatVar('today_view','12');
+	setStatVar('yesterday_view','21');
+	
+	setStatVar('this_month_view','604');
+	setStatVar('last_month_view','1104');
+
+	setStatVar('total_view','331079');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (17:50)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://we--plus.mihanblog.com/statupdate/?data[refereruri]=http://we--plus.mihanblog.com/post/archive/1391/10&data[postid]=151&data[requesturi]=/post/151&data[sdate]=1608216322&data[hash]=2170fc4f0198cbed2e2ecd9da3977858&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[151]='24';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[151]='0';
+mihanblogDisLikeArrCnt[151]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://we--plus.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://we--plus.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://we--plus.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Theme Designer" content="www.payamblog.com">
+<meta name="description" content="مصاحبه با علیرضا حقیقی شماره یک پرسپولیس"/>
+<meta name="keywords" content="مصاحبه,علیرضا,حقیقی,شماره,پرسپولیس,"/> 
+<link rel="alternate" type="application/rss+xml" title=" علیرضا حقیقی" href="rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title=" علیرضا حقیقی" href="atom/index.html" />
+<script language="javascript" type="text/javascript" src="http://payamblog.com/tem/16/payamblog.js"></script>
+
+<title> علیرضا حقیقی - مصاحبه با علیرضا حقیقی شماره یک پرسپولیس</title>
+
+</head>
+
+<body>
+
+<div align="left">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td class=div2 valign=top>
+
+<div class=div60></div>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>درباره وبلاگ</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div31><center><img src="http://static.mihanblog.com//public/user_data/web_photo/309/926957.jpg?6026"  /></center><br>
+<font class=text1><br>
+مدیر وبلاگ : <a href="author/783854.html">مریم </a></font></div>
+</div><div class=div30></div>
+</div>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>مطالب اخیر</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="316.html">:-(</a></font></div><div class=div32><font class=text1><a href="315.html">آوار 12 هزار نفری بر سر آمریکا</a></font></div><div class=div32><font class=text1><a href="314.html">من اومدم!</a></font></div><div class=div32><font class=text1><a href="312.html"> *10* مقدس!</a></font></div><div class=div32><font class=text1><a href="311.html">سلاممممم</a></font></div><div class=div32><font class=text1><a href="310.html">.......!!!!</a></font></div><div class=div32><font class=text1><a href="309.html">بازم عکس!</a></font></div><div class=div32><font class=text1><a href="308.html">تسلیت....+ عکس</a></font></div><div class=div32><font class=text1><a href="307.html">اینم از پست!!!!!!!!!!!!! :-))))))))</a></font></div><div class=div32><font class=text1><a href="306.html">سلامممممممممممم!:-))))))))))</a></font></div><div class=div32><font class=text1><a href="305.html">تولد علیرضا مبارررررررررررک! :-))</a></font></div><div class=div32><font class=text1><a href="303.html">تولدت مبارک نسیم جونم! :-*</a></font></div><div class=div32><font class=text1><a href="302.html">آخرین پست 92! :-)</a></font></div><div class=div32><font class=text1><a href="301.html">:-))</a></font></div><div class=div32><font class=text1><a href="300.html">تولدم مبارک! یه دنیا ممنون! :-)</a></font></div></div><div class=div30></div>
+</div>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>آرشیو وبلاگ</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="archive/1394/7.html"> مهر 1394</a></font></div><div class=div32><font class=text1><a href="archive/1394/4.html"> تیر 1394</a></font></div><div class=div32><font class=text1><a href="archive/1394/3.html"> خرداد 1394</a></font></div><div class=div32><font class=text1><a href="archive/1393/9.html"> آذر 1393</a></font></div><div class=div32><font class=text1><a href="archive/1393/7.html"> مهر 1393</a></font></div><div class=div32><font class=text1><a href="archive/1393/6.html"> شهریور 1393</a></font></div><div class=div32><font class=text1><a href="archive/1393/5.html"> مرداد 1393</a></font></div><div class=div32><font class=text1><a href="archive/1393/4.html"> تیر 1393</a></font></div><div class=div32><font class=text1><a href="archive/1393/2.html"> اردیبهشت 1393</a></font></div><div class=div32><font class=text1><a href="archive/1393/1.html"> فروردین 1393</a></font></div><div class=div32><font class=text1><a href="archive/1392/12.html"> اسفند 1392</a></font></div><div class=div32><font class=text1><a href="archive/1392/11.html"> بهمن 1392</a></font></div><div class=div32><font class=text1><a href="archive.html">آرشیو كل مطالب</a></font></div>
+</div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>پیوندهای روزانه</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="http://www.grin.ir/" title="" target="_blank">خرید اینترنتی</a></font></div><div class=div32><font class=text1><a href="http://www.upsara.com/" title="با افتخار میزبان عکس ها و فایل های شما هستیم.
+آپلود رایگان و دائمی عکس
+
+با لینک کردن ما آدرس ما رو فراموش نکنید و از ما حمایت کنید
+
+باتشکر
+آپسرا" target="_blank">آپلود عکس</a></font></div><div class=div32><font class=text1><a href="http://buying.blog.ir/" title="" target="_blank">فروشگاه اینترنتی</a></font></div><div class=div32><font class=text1><a href="http://www.persepolisnews.ir/" title="" target="_blank">خبرگزاری باشگاه پرسپولیس ایران</a></font></div><div class=div32><font class=text1><a href="http://www.ffiri.ir" title="" target="_blank">فدراسیون فوتبال جمهوری اسلامی ایران</a></font></div><div class=div32><font class=text1><a href="http://www.sh3klak.blogfa.com/" title="" target="_blank">تصاویر مخصوص</a></font></div><div class=div32><font class=text1><a href="http://fc-perspolis.com" title="" target="_blank">وب سایت رسمی باشگاه فرهنگی ورزشی پرسپولیس</a></font></div><div class=div32><font class=text1><a href="http://www.rubin-kazan.ru" title="" target="_blank">وبسایت رسمی باشگاه روبین کازان</a></font></div><div class=div32><font class=text1><a href="../linkdaily/index.html">همه پیوندهای روزانه</a></font></div>
+<div class=div32><font class=text1><a href="javascript:linkdailyForm()">ارسال پیوند روزانه</a></font></div>
+</div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>پیوندها</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="http://sunrise-girl-1379.blogfa.com/" title="" target="_blank"> ✿◕ ‿ ◕✿ SuNRiSE ✿◕ ‿ ◕✿</a></font></div><div class=div32><font class=text1><a href="http://www.volleyball-saeid2014.blogfa.com/" title="" target="_blank">تـــک کــــــــاپــیـــتـان قلــــــــبم</a></font></div><div class=div32><font class=text1><a href="http://shima014.blogfa.com/" title="" target="_blank">دخملای فوتبالی</a></font></div><div class=div32><font class=text1><a href="http://koolbehvolleyball25.blogfa.com/" title="" target="_blank">·٠•●♥کلبه والیبالیست ها♥●•٠·(صدف جووون)</a></font></div><div class=div32><font class=text1><a href="http://2009mz.shakheh.com/" title="" target="_blank">✔️ والیبال و فوتبال ✔️(مبینا جووون)</a></font></div><div class=div32><font class=text1><a href="http://deltangivman.blogfa.com/" title="" target="_blank">دلتنگى و من(نسیم جوووونم)</a></font></div><div class=div32><font class=text1><a href="http://pro-volleyball.mihanblog.com/" title="" target="_blank">ولیبال حرفه ای(ریحانه جوووونم)</a></font></div><div class=div32><font class=text1><a href="http://reyhaneh6617.blogfa.com" title="" target="_blank">غاتی پاطی (اجی جووونم)</a></font></div><div class=div32><font class=text1><a href="http://perspolis-66.shakheh.com/" title="" target="_blank">پرسپولیس ( اونم از نوع دو آتیشه)(مبینا جون)</a></font></div><div class=div32><font class=text1><a href="http://like-perspolis.blogfa.com/" title="" target="_blank">♥فقط پرسپولیس♥پیـام صادقیان♥حسین ماهینے♥</a></font></div><div class=div32><font class=text1><a href="http://lovebadminton.rozblog.com/" title="" target="_blank">پوئن 25 تیم قهرمان من(نیکی جووون)</a></font></div><div class=div32><font class=text1><a href="http://talacheh.mihanblog.com/" title="" target="_blank">زیور الات دست ساز (طناز جووونم)</a></font></div><div class=div32><font class=text1><a href="http://mirsaeedmarouf4.blogfa.com/" title="" target="_blank">میر سعید معروف 4(میشا جووون)</a></font></div><div class=div32><font class=text1><a href="http://alirezayaghootesorkh.blogfa.com" title="" target="_blank">علیرضا حقیقی یاقوت سرخ(غزل جووون)</a></font></div><div class=div32><font class=text1><a href="http://hosein7744.mihanblog.com" title="" target="_blank">وبلاگ رسمی حسین اسدالهی</a></font></div><div class=div32><font class=text1><a href="http://just-ehsanalikhani-.mihanblog.com/" title="" target="_blank">احسان علیخانی(سپیده جووون)</a></font></div><div class=div32><font class=text1><a href="http://fano0o0s.mihanblog.com" title="" target="_blank">فانوس(ریحانه ودلارام جوووووونم)</a></font></div><div class=div32><font class=text1><a href="http://www.mylovea20.blogfa.com/" title="" target="_blank">alireza haghighi my love(نادیا جووون)</a></font></div><div class=div32><font class=text1><a href="http://nimkat2012.blogfa.com" title="" target="_blank">نیمکت(هدی و حدیث جووون)</a></font></div><div class=div32><font class=text1><a href="http://khatemarzi.mihanblog.com/" title="" target="_blank">فقط طنز برای وقت هایی که بی کاریی</a></font></div><div class=div32><font class=text1><a href="http://meysamvr.blogfa.com/" title="" target="_blank">فوتبال یعنی زندگی(آقا میثم)</a></font></div><div class=div32><font class=text1><a href="http://www.realgoalkeeper.blogfa.com/" title="" target="_blank">منو درگیر خودت کن(رومینا جووون)</a></font></div><div class=div32><font class=text1><a href="http://valibal2013.mihanblog.com" title="" target="_blank">سایت تخصصی والیبال(آقا میثم)</a></font></div><div class=div32><font class=text1><a href="http://feshangchi75.blogfa.com/" title="" target="_blank">امیر حسین فشنگچی(مهسا جووون)</a></font></div><div class=div32><font class=text1><a href="http://patoghmabahala.blogfa.com/" title="" target="_blank">کلیک کن...پاتوق باحالاست...(الناز جووون)</a></font></div><div class=div32><font class=text1><a href="http://peykan-bazargard.mihanblog.com/" title="" target="_blank">کلوپ هواداران پیکان و مهدی بازارگرد(اقا علیرضا)</a></font></div><div class=div32><font class=text1><a href="http://dehkadeh-emroozi.blogfa.com/" title="" target="_blank">دهکده ی امروزی(سارا جووون)</a></font></div><div class=div32><font class=text1><a href="http://silvermooninbluesky.blogfa.com/" title="" target="_blank">قلب شیشه ای(نیایش جووون)</a></font></div><div class=div32><font class=text1><a href="http://www.miladakbari1374.blogfa.com/" title="" target="_blank">نوشاد عالمیان(اقا میلاد)</a></font></div><div class=div32><font class=text1><a href="http://alirezahaghighi20.blogfa.com/" title="" target="_blank">فقط علیرضاحقیقی(پریا جووون)</a></font></div><div class=div32><font class=text1><a href="http://www.sarbazanvatan.blogfa.com" title="" target="_blank">سربازان وطن(اقا ارش)</a></font></div><div class=div32><font class=text1><a href="http://www.HTMVI.blogfa.com" title="" target="_blank">هواداران تیم ملی والیبال</a></font></div><div class=div32><font class=text1><a href="http://description27.blogfa.com/" title="" target="_blank">Ϡ₡ بِـــِـבפּלּ شـَـرح ... Ϡ₡(ملیکا جووون)</a></font></div><div class=div32><font class=text1><a href="http://volleyball-stars.mihanblog.com" title="" target="_blank">♥ستاره های والیبال♥(مهسا جووون)</a></font></div><div class=div32><font class=text1><a href="http://elina-note.blogfa.com/" title="" target="_blank">ღ با یک جفت کتونی خیس ღ(الینا جووون)</a></font></div><div class=div32><font class=text1><a target="_blank" href="http://www.payamblog.com">بهترین قالب های وبلاگ</a></font></div>
+<div class=div32><font class=text1><a href="../link/index.html">همه پیوندها</a></font></div>
+</div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>نویسندگان</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><font class=text1><a href="author/783854.html">مریم  (273)</a></font></div></div><div class=div30></div>
+</div>
+
+
+		
+
+<form id="frm-16082163225fdb6f024e7cd" method="get" action="http://we--plus.mihanblog.com/post/search/fid/16082163225fdb6f024e7cd"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> <div class=div24>
+<div class=div35>
+<div class=div25><font class=text5>جستجو</font></div></div>
+<div class=div342></div>
+<div class=div341>
+<div class=div32><center><input type="text" name="search_text"><br>
+<input type="submit" value="جستجو" style="font-family: Tahoma; font-size: 9pt"></center></div>
+</div><div class=div30></div>
+</div><input type="hidden" name="frm-id" value="16082163225fdb6f024e7cd" id="frm-id" /></form>
+
+<div class=div24> <div class=div35> <div class=div25><font class=text5>آمار وبلاگ</font></div></div> <div class=div342></div> <div class=div341> <div class=div32><font class=text1>کل بازدید : <script>getStatVar('total_view');</script></font></div> <div class=div32><font class=text1>بازدید امروز :<script>getStatVar('today_view');</script></font></div> <div class=div32><font class=text1>بازدید دیروز : <script>getStatVar('yesterday_view');</script></font></div> <div class=div32><font class=text1>بازدید این ماه : <script>getStatVar('this_month_view');</script></font></div> <div class=div32><font class=text1>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></font></div> <div class=div32><font class=text1>تعداد نویسندگان : <script>getStatVar('total_author');</script></font></div> <div class=div32><font class=text1>تعداد کل پست ها : <script>getStatVar('total_post');</script></font></div> <div class=div32><font class=text1>آخرین بازدید : <script>getStatVar('last_view_date');</script></font></div> <div class=div32><font class=text1>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></font></div> </div><div class=div30></div> </div>
+
+<div class=div24><center>
+</center></div>
+
+</td>
+
+<td class=div1 valign=top>
+
+<div class=div61>
+<div class=div10><font class=title> علیرضا حقیقی</font></div>
+<div class=div12><font class=des></font></div>
+</div>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+<div class=div15>
+<div class=div18><font class=text6><a href="151.html">مصاحبه با علیرضا حقیقی شماره یک پرسپولیس</a></font></div>
+<div class=div58><font class=text7>یکشنبه 17 دی 1391 :: نویسنده : <a href="author/783854.html">مریم </a></font>       </div>
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><img src="http://www.pic4ever.com/images/4lqqtqv.gif">&nbsp;<span style="font-family: georgia, 'times new roman', times, serif; font-size: medium;">سلااااااااااااااااااااام دوست جونام چطورید؟؟</span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span style="font-family: georgia, 'times new roman', times, serif; font-size: medium;">خبری چیزی نیست که بزارم عکس های <font color="#ff0000"><b>علیرضا </b></font>رو هم تازه گذاشتم ازاونجای که<b> گلنوش</b> جووووونم &nbsp;گفت مطلب جدید بزار دیگه منم گشتم یه مصاحبه برای خیییییییییییییییییلیییییییییییییییی وقت پیشه علیرضا س ولی خیلی باحاله من که خیلی دوستش دارم همشو بخونید چون خیلی باحال&nbsp;</span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><img src="http://www.pic4ever.com/images/loveshower.gif"><span style="font-family: georgia, 'times new roman', times, serif; font-size: medium;">....بعله دیگه راستی جواب های علیرضا رو <font color="#ff0000">قرمز</font> کردم&nbsp;</span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span style="font-family: georgia, 'times new roman', times, serif; font-size: medium;"><br></span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span style="font-family: georgia, 'times new roman', times, serif; font-size: medium;">فقط جلوی«عقاب آسیا»جوجه
+ام</span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span lang="FA" dir="RTL" style="line-height: 115%;"><font face="georgia, times new roman, times, serif"><b style="font-size: 11pt;">رحمتی شماره یک آسیاست،من شماره یک دنیا می شوم</b><font color="#ff0000" size="3">(رحمتی عددی نیست بابا!)</font></font></span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><b><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></b></span></span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 115%;"><b><font color="#ff0000">علیرضا حقیقی</font></b> از ۱۷ سالگی مدعی پوشیدن پیراهن شماره یک
+پرسپولیس بود.از همان روزی که پنالتی آقای گل جهان را مهار کرد تا به امروز.حالا
+او مدعی اول پیراهن یک است.حقیقی روز جمعه در ۹۰ حاضر شد و با همان اعتماد به نفس
+همیشگی از شماره یک بودنش گفت.از این که اگر قرار باشد برای او مدعی بتراشند
+پرسپولیس را ترک خواهد کرد.از این که ۵ سال بعد در اروپا بازی خواهد کرد و این که
+او قصد ندارد زیر سایه هیچ دروازه بانی باشد.چه میثاق چه رحمتی</span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL">&nbsp;خلاصه آن که پس از چند
+سالی آشنایی نگارنده با حقیقی،دیروز حقایق تازه ای از ابعاد شخصیتی این گلر جوان
+را پیدا کردم و...بهتر نیست خودتان با ما و حقیقی همراه باشید و درباره او قضاوت
+کنید؟ <font color="#ff0000">(شما لازم نیست همراه باشی من خودم میرم همراهش!!اییییییییش)</font></span></font></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span style="font-family: Arial, sans-serif;">&nbsp;</span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed">
+
+</p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL">مثل اینکه از عکس
+انداختن روی پل و اتوبان هیجان زده شدی،سوژه جالبی بود؟</span></font><span style="font-family: georgia, 'times new roman', times, serif; font-size: medium;">&nbsp;</span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span style="font-family: georgia, 'times new roman', times, serif; font-size: medium;"><br></span></p>
+
+<p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3" color="#ff0000">(<span lang="FA" dir="RTL">با خنده ای
+بلند(خیلی،خیلی&nbsp;</span></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><img src="http://www.pic4ever.com/images/4chsmu1.gif"></p>
+
+<p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL">تا به حال چنین عکسی
+گرفته بودی؟</span></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL"><br></span></font></p>
+
+<p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL" style="color: rgb(255, 0, 0);">خدا</span><span lang="FA" dir="RTL"><font color="#ff0000"> وکیلی وسط پل نه
+عکس گرفته و نه چنین عکسی دیده بود </font>(خولن اینا علیرضا جان دیگه توقعی جز این نمیره ازشون)</span></font><span style="color: rgb(255, 0, 0); font-family: Arial, sans-serif;">&nbsp;</span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span style="font-family: Arial, sans-serif;"><br></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;">
+
+</p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><img src="http://www.pic4ever.com/images/3ztzsjm.gif"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL">نترسیدی خدای نکرده با
+ماشین تصادف کنی؟</span></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL"><br></span></font></p>
+
+<span lang="FA" dir="RTL" style="color: rgb(255, 0, 0); line-height: 115%;"><font face="georgia, times new roman, times, serif" size="3">نه،مگر گلر هم ترسو می شود</font></span><span lang="FA" dir="RTL" style="font-size: 11pt; line-height: 115%; font-family: Arial, sans-serif;"><font color="#ff0000">؟</font>(شیییییییییییییره علیرضا)</span><img src="http://www.pic4ever.com/images/cheerleader3.gif"><p></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3"><br></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL" style="line-height: 115%;"></span></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL"><font face="georgia, times new roman, times, serif" size="3">یعنی چی</font>؟</span><span style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">&nbsp;</font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></p>
+
+<p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/22.gif" style="line-height: 115%;"><font color="#ff0000">(<span lang="FA" dir="RTL">خیلی خونسرد(یک
+گلر باید سر نترس داشته و بی کله باش</span></font></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><br></font></p>
+
+<p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL"><font size="3" face="georgia, times new roman, times, serif">تا به حال در اتوبان و
+آسفالت شیرجه زده بودی؟</font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">&nbsp;</font></span></p>
+
+<p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL">در دوران کودکی چرا ولی
+از موقعی که باشگاهی شدم دیگر نه</span><span dir="LTR"></span><span dir="LTR"></span>.<span style="line-height: 115%;">&nbsp;</span></font></p>
+
+<span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><br></p>خسته نشدی از بس که در پرسپولیس روی نیمکت نشستی؟</font></span><div><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></div><div><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></div><div><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">(شما خسته شدی بفرما !یعنی ببینید چقدر قدیمی که هنوز اینجا نیمکت نشین بوده!)</font></span><img src="http://www.pic4ever.com/images/97.gif"><p></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span style="color: rgb(255, 0, 0); line-height: 115%; font-family: georgia, 'times new roman', times, serif; font-size: medium;">ریز می خندد)</span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><span style="line-height: 115%;"><span lang="FA" dir="RTL">(این ریزشو خوب اومدی <font color="#ff0000">)من از سال ۷۸ با نونهالان پرسپولیس به این تیم آمدم و
+الان ۱۰ سالی می شود در این تیم سابقه</font></span></span></font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span style="color: rgb(255, 0, 0); line-height: 115%; font-family: georgia, 'times new roman', times, serif; font-size: medium;">&nbsp;دارم &nbsp;</span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span style="line-height: 115%;"><span lang="FA" dir="RTL"><font color="#ff0000">&nbsp;۱۶</font></span></span></span></span><font color="#ff0000" style="line-height: 115%;">&nbsp;سالگی هم پیشنهادات مختلفی
+داشتم،ولی عشق به پرسپولیس اجازه نداد از این تیم جدا شوم</font><span style="line-height: 115%;">(ادم گریش میگیره</span></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><span style="line-height: 115%;"><br></span></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="line-height: 115%;"></span></font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3"><span lang="FA" dir="RTL">به نظرت در فوتبال حرفه ای،عشق حماقت نیست؟</span><o:p></o:p></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><o:p><font face="georgia, times new roman, times, serif" size="3">&nbsp;</font></o:p></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif" style="line-height: 115%;"><span style="line-height: 115%;"><font color="#ff0000">شاید این چنین باشد،ولی عشق به پرسپولیس حماقت نیست</font></span></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif">&nbsp;</font><span style="line-height: 12px;">&nbsp;</span></p><div><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><img src="http://jamnews.ir/Images/News/Smal_Pic/8-11-1390/IMAGE634633721909613069.jpg"></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="line-height: 115%;">بقیش <b>ادامه ی مطلب</b></span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/100.gif" style="line-height: 115%;"></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">حتما نگا کنید هااااااااااااااااااااا</font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font face="georgia, times new roman, times, serif" size="3">&nbsp;</font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><br></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">ادامه مطلب یادتون نره هااااااااااااااااا</font></p><p></p><p></p>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<font face="georgia, times new roman, times, serif" size="3">خب کجا بودیم!!!!!!!!!!!!اهان!</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/4.gif"><div><font size="3" face="georgia, times new roman, times, serif"><br></font></div><div><font size="3" face="georgia, times new roman, times, serif"><br></font></div><div><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL"><font face="georgia, times new roman, times, serif" size="3">پس</font><font face="georgia, times new roman, times, serif" size="3">&nbsp;چرا به خاطر عشق به&nbsp;<font color="#ff0000">پرسپولیس&nbsp;</font>با این تیم تمدید نمی کنی؟!(این قبل از تمدیده )</font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif">&nbsp;</font></p><span lang="FA" dir="RTL" style="line-height: 12px;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">ببینید،من روز اولی که سر تمرین پرسپولیس رفتم با یک تلفن آقای انصاریفرد بود.حتی آن روز قرارداد هم نداشتم و به خاطر حضور آقای</font></span><div><span lang="FA" dir="RTL" style="line-height: 12px;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></div><div><span lang="FA" dir="RTL" style="line-height: 12px;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">&nbsp;</font></span></div><div><span lang="FA" dir="RTL" style="line-height: 12px;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">عابدزاده</font></span><p></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 12px;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">&nbsp;سر تمرین رفتم،ولی...(سکوت می کند)</font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 12px;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 12px;"><font size="3" face="georgia, times new roman, times, serif">ولی چی؟<o:p></o:p></font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><br></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 12px;"><font size="3" face="georgia, times new roman, times, serif">می گوید ننویسید و حرف هایی برای ننوشتن می زند<font color="#ff0000">(اعصاب بچرو به هم میزنن)</font></font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 12px;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="line-height: 18px;">چه ایرادی دارد بنویسم؟<font color="#ff0000">(تو انگار باید تو دهنت کوبیده شه)</font></span><span style="line-height: 18px;">&nbsp;</span></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 12px;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="line-height: 18px;"><br></span></font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 12px;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="line-height: 18px;">خب بنویس ۱۰ سال سابقه حضور در پرسپولیس دارم و به هر حال زور داردوقتی می بینم یکی می آید و پول بیشتری از من می گیرد</span></font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 12px;"><img src="http://www.pic4ever.com/images/no.gif"></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 12px;"><font size="3" face="georgia, times new roman, times, serif">منظورت میثاق معمارزاده و یا حضور احتمالی سید مهدی رحمتی در پرسپولیس است؟</font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 12px;"><img src="http://www.pic4ever.com/images/47b20s0.gif"></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 12px;"><font size="3" face="georgia, times new roman, times, serif">(نه بابا راست میگی؟؟؟؟؟ زرنگن این &nbsp;خبرنگارا )&nbsp;</font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 12px;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 12px;"><font size="3" face="georgia, times new roman, times, serif"><font color="#ff0000">نمی خواهم اسم ببرم</font>(برد)</font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><br></p></div></div><div><font size="3" face="georgia, times new roman, times, serif"><br></font></div><div><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><font size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL">فکر می کنی توانایی فنی
+ات با رحمتی و میثاق قابل قیاس است؟(پ ن پ)</span><o:p></o:p></font></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span lang="FA" dir="RTL"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span lang="FA" dir="RTL"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">یک فصل در پرسپولیس ثابت کردم می توانم زیر فشار بالای
+مطبوعات،رسانه ها و هواداران فیکس بازی کنم.در آن فشار مضاعف خودم را</font></span></span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span lang="FA" dir="RTL"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">&nbsp;نشان دادمو
+حالا قضاوتش با علاقمندان پرسپولیس(یه دونه ی )</font></span></span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span lang="FA" dir="RTL"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><font size="3" face="georgia, times new roman, times, serif"><br></font></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span lang="FA" dir="RTL"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">
+
+</font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL">ما که به جواب پرسش خود
+نرسیدیم،چرا با پرسپولیس ثبت نمی کنی؟</span><o:p></o:p></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">سکوت میکند</font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></p><p></p><p class="MsoNormal" align="right" style="text-align:right;mso-pagination:none;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><span lang="FA" dir="RTL"><font size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="line-height: 115%;"></span></font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL">یعنی اگر رحمتی و میثاق
+با پرسپولیس قرارداد ببندد،تو تمدید نمی کنی؟</span><o:p></o:p></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="line-height: 115%;">بعد از مکثی طولانی بستگی دارد،کدام یک به پرسپولیس بیایند</span></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span style="line-height: 115%; color: rgb(255, 0, 0);"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><o:p></o:p></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="line-height: 115%;">منظورت رحمتی است؟</span><span dir="LTR" style="line-height: 115%;"></span><span dir="LTR" style="line-height: 115%;"></span><span style="line-height: 115%;">!</span></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">بله اگر او به پرسپولیس بیاید به رغم احترام فراوانی
+که برای رحمتی قائل هستم،با این تیم ثبت نمیکنم</font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">(عاشق جوابتم منم اینقدر ازش بدم میاد !!!!ایییییشششش)</font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">&nbsp;</font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL">خاطرمان هست،در ۱۷سالگی
+پنالتی عل</span></font><span lang="FA" dir="RTL" style="font-family: georgia, 'times new roman', times, serif; font-size: medium;">ی دایی را مهار کردی.راستی آن شب تا صبح خوابت برد؟</span><span dir="LTR" style="font-family: georgia, 'times new roman', times, serif; font-size: medium;"></span><span dir="LTR" style="font-family: georgia, 'times new roman', times, serif; font-size: medium;"></span><span style="font-family: georgia, 'times new roman', times, serif; font-size: medium;">!</span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><br></font></p><p></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL">&nbsp;&nbsp;<font size="3" face="georgia, times new roman, times, serif">(<font color="#ff0000">لبخند می زند)باور کنید،یک
+هفته گیج بودم!یک هفته طول کشید تا فهمیدم پنالتی آقای گل جهان را مهار کرده ام و&nbsp;</font></font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL"><img src="http://www.pic4ever.com/images/studsmatta.gif"></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">فکر می کردی علی دایی
+پس ازآن که سرمربی تیم ملی شود،تو را به تیم ملی دعوت کند؟</font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><br></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">به هر صورت هر کس سلیقه خود را دارد،ولی بیشتر از ایشان
+از آقای قطبی توقع داشتم مرا به تیم ملی دعوت کند</font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="line-height: 115%;"></span></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><o:p><font size="3" face="georgia, times new roman, times, serif">&nbsp;</font></o:p></p>
+
+<font size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="line-height: 115%;">فکر نمی کنی سرنوشت نیما نکیسا در انتظارت باشد؟</span><span style="line-height: 115%;">&nbsp;</span></font><p></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/13.gif"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">(با کنجکاوی)چرا؟؟</font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">نیما نکیسا هم مثل تو همه جا پدرش به دنبالش بود و سر
+تمرین و بازی</font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">وسط حرفمان می پرد)الان سه سالی می شود که پدرم
+پرسپولیس نمی آید،او فقط سر بازی های پرسپولیس،آن هم به عنوان یک هوادار قدیمی</font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">&nbsp;به.ورزشگاه آزادی می رود و</font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">به گفته برخی ها،یک کمی
+زیادی بابایی هستی و<span dir="LTR"></span><span dir="LTR"></span>...(اخه باباش واقعا تو دل برو ست)<o:p></o:p></font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">ببینید همان حرف پارسال خود را تکرار می کنم،من حاضرم
+به خاطر پدرم فوتبال را کنار بگذارم،ولی هرگز پدرم را برای فوتبال کنار</font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">&nbsp;نخواهم
+گذاشت</font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">حقیقی ۵ سال بعد کجاست؟<b>(روبین کازان روسیس)</b><o:p></o:p></font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><img src="http://www.pic4ever.com/images/cancan.gif"></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">یک تیم خوب اروپایی</font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">این خواسته برای گلر
+های ایرانی کمی رویایی نیست؟<span dir="LTR"></span><span dir="LTR"></span>!<o:p></o:p></font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">&nbsp;</font></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">
+
+<span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000">حالا می بینید که رویایی نیست</font>(و دیدیم که رویایی نبود)</span></font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="line-height: 115%;"><br></span></font></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">برخی منتقدان اعتقاد دارند:علیرضا حقیقی مثل عابدزاده
+گل های بدی می خورد و</font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">قهقهه می زند)باعث افتخارم است که شبیه عابدزاده گل
+بخورم!ولی از شوخی گذشته هر گلری ممکن است گل بد بخورد.مگر ون درسار در</font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">&nbsp;فینال لیگ
+قهرمانان اروپا گل بدی از بارسلونا نخورد؟مگر کاسیاس در بازی ال کلاسیکو برابر
+بارسلونا ۶ گل نخورد؟!مشکل حقیقی گل بد</font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">&nbsp;خوردن نیست بلکه مشکل من جوانی ام است و
+کمی خوش انصافی شما</font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">به نظرت چوب جوانی خود
+را می خوری؟<o:p></o:p></font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">صد درصد!مقابل الغرافه بد نبودم،ولی پس از خوردن آن
+گل ها می خواستند مرا نابود کنند و...(غلط کردن)</font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">شاید به روابط عمومی نه
+چندان خوبت با خبرنگاران برگردد؟<o:p></o:p></font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><font color="#ff0000">یعنی به نظر شما این
+گونه است؟<span dir="LTR"></span><span dir="LTR"></span>!</font><o:p></o:p></font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><font color="#ff0000"><br></font></font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">شنیدیم گوشی ات را بر نمی داری و...(که چی؟؟؟؟؟)</font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><font color="#ff0000">خود شما چند سال است
+مرا می شناسی،آیا گوشی ام را بر نمی دارم؟</font><span dir="LTR"></span><span dir="LTR"></span>!(اصلا ما داریم مردم؟؟؟؟؟)<o:p></o:p></font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="line-height: 115%;">خب به هر حال....</span><span dir="LTR"></span><span lang="FA" style="line-height: 115%;"><span dir="LTR"></span></span></font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="line-height: 115%;"><br></span></font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><font color="#ff0000">وقتی ساعت ۱۵عصر که
+زمان استراحت من است تماس می گیرند،می توانم جواب بدهم؟</font><o:p></o:p></font></span></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">از ساعت ۱۵ تازه کار ما،خبرنگاران شروع می شود و...</font></span></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">این هم از بد شانسی من است که زمان استراحتم با کار
+شما تداخل دارد</font></span></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">بعضی ها می
+گویند:علیرضا حقیقی،دروازه بان پررویی است و<span dir="LTR"></span><span dir="LTR"></span>...!(اووووووووووو رو دادی بهش علیرضا الان دیگه نمیشه جمعش کرد)<o:p></o:p></font></span></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span style="line-height: 115%;"><span lang="FA" dir="RTL"><font size="3" face="georgia, times new roman, times, serif"><font color="#ff0000">(بر خلاف انتظار ناراحت نمی
+شود)شاید در داخل زمین چمن کمی پررو باشم،ولی خارج از آن نیستم و..</font>(ولی موافقم که پرویه)</font></span></span></span></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span style="line-height: 115%;"><span lang="FA" dir="RTL"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></span></span></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">بسیار خب،یک سوال
+فانتزی داریم،علیرضا حقیقی چند تا خط و گوشی موبایل دارد؟<o:p></o:p></font></span></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><br></font></span></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">(<span lang="FA" dir="RTL"><font color="#ff0000">از شدت خنده ریسه می
+رود!)باور کنید همین یک خط تلفن و گوشی را دارم</font></span></font></span></span></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font size="3" face="georgia, times new roman, times, serif"><br></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif">ولی خیلی از فوتبالیست ها چند گوشی دارند و..(ما از اون خانوداه هاش نیستیم)</font></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font size="3" face="georgia, times new roman, times, serif"><span lang="FA" dir="RTL" style="line-height: 115%;"></span></font></span></span></p><p class="MsoNormal" style="text-align:left;mso-pagination:none;tab-stops:400.5pt;
+mso-layout-grid-align:none;text-autospace:none;direction:ltr;unicode-bidi:embed"><font size="3" face="georgia, times new roman, times, serif">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<o:p></o:p></font></p>
+
+<span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">حرف بزنم شر درست می شود،بی خیال</font></span><p></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">بچه ها چون خیلیییییییییییییییییی زیاده بقیشو بعدا میزارم اگه خواستین بگید بزارم</font></span></span></span></span><span style="line-height: 115%;">&nbsp;</span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif"><br></font></span></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><span lang="FA" dir="RTL" style="line-height: 115%;"><font color="#ff0000" size="3" face="georgia, times new roman, times, serif">باحال بود؟؟؟نظر یادتون نره</font></span></span></span></span></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font color="#ff0000"><br></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><img src="http://f68.rubin-kazan.ru/img/news_3279.jpg"></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font color="#ff0000"><br></font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><font color="#ff0000">&nbsp;</font></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><img src="http://www.pic4ever.com/images/thankyou.gif"></p><p class="MsoNormal" align="right" style="direction: ltr; unicode-bidi: embed;"><o:p></o:p></p><p></p><p></p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#8b0542">نوع مطلب :</font>
+<br><font color="#8b0542">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(151)">نظرات (<script>setCommentCnt(151)</script>)</a></font></div>
+</div>
+</div>
+<div class=div29></div>
+<div class=div28><font class=text4>
+<br><br>
+</font>
+</div>
+
+</td>
+<td class=div0> </td>
+<td class=div3> </td>
+</tr>
+<tr>
+<td class=div2 valign=top>
+
+ </td>
+
+<td class=div01 valign=top>
+<div class=div6></div>
+<div class=div7>
+<a href="http://www.payamblog.com" target="_blank">
+<img src="http://payamblog.com/tem/16/blank.gif" border=0 width=189 height=35></a></div></td>
+<td class=div0> </td>
+<td class=div3> </td>
+</tr>
+</table>
+</div><div id="seo"><h1><a title="قالب بلاگفا" href="http://blogfa.payamblog.com/">قالب بلاگفا</a></h1><h2><a title="قالب وبلاگ"  href="http://www.payamblog.com">قالب وبلاگ</a></h2><h2><a title="vpn" href="http://www.purchasevpn.com">purchase vpn</a></h2><h2><a title="بازی اندروید"  href="http://www.download0098.com/category/mobile/android-games/">بازی اندروید</a></h2></div><script type=text/javascript>document.getElementById('s'+'e'+'o').style.display='none';</script>
+
+</body>
+
+</html>
+
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'we--plus.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.targetedwebtraffic.com" target="_blank">Buy Website Traffic</a> | <a href="https://www.seo25.com" target="_blank">Buy Targeted Website Traffic</a>
+    </div>
+</center>

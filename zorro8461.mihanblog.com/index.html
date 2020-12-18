@@ -1,0 +1,1781 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://zorro8461.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*816648*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','32');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','سه شنبه 10 فروردین 1395');
+	
+	setStatVar('today_view','0');
+	setStatVar('yesterday_view','4');
+	
+	setStatVar('this_month_view','98');
+	setStatVar('last_month_view','175');
+
+	setStatVar('total_view','195446');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (20:50)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://zorro8461.mihanblog.com/statupdate/?data[refereruri]=http://1boy-1girl.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607830477&data[hash]=677051bc1d474200ca0b2ec0d2acd1bc&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[67]='28';commentCnt[77]='6';commentCnt[84]='2';commentCnt[85]='0';commentCnt[86]='2';commentCnt[87]='6';commentCnt[88]='11';commentCnt[89]='5';commentCnt[92]='1';commentCnt[93]='7';commentCnt[95]='6';commentCnt[99]='5';commentCnt[104]='1';commentCnt[106]='0';commentCnt[107]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[67]='0';
+mihanblogDisLikeArrCnt[67]='0';
+mihanblogLikeArrCnt[77]='0';
+mihanblogDisLikeArrCnt[77]='0';
+mihanblogLikeArrCnt[84]='0';
+mihanblogDisLikeArrCnt[84]='0';
+mihanblogLikeArrCnt[85]='0';
+mihanblogDisLikeArrCnt[85]='0';
+mihanblogLikeArrCnt[86]='0';
+mihanblogDisLikeArrCnt[86]='0';
+mihanblogLikeArrCnt[87]='0';
+mihanblogDisLikeArrCnt[87]='0';
+mihanblogLikeArrCnt[88]='0';
+mihanblogDisLikeArrCnt[88]='0';
+mihanblogLikeArrCnt[89]='0';
+mihanblogDisLikeArrCnt[89]='0';
+mihanblogLikeArrCnt[92]='0';
+mihanblogDisLikeArrCnt[92]='0';
+mihanblogLikeArrCnt[93]='0';
+mihanblogDisLikeArrCnt[93]='0';
+mihanblogLikeArrCnt[95]='0';
+mihanblogDisLikeArrCnt[95]='0';
+mihanblogLikeArrCnt[99]='0';
+mihanblogDisLikeArrCnt[99]='0';
+mihanblogLikeArrCnt[104]='0';
+mihanblogDisLikeArrCnt[104]='0';
+mihanblogLikeArrCnt[106]='0';
+mihanblogDisLikeArrCnt[106]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://zorro8461.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://zorro8461.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://zorro8461.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://zorro8461.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://zorro8461.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://zorro8461.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://zorro8461.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://zorro8461.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://zorro8461.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://zorro8461.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://zorro8461.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://zorro8461.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://zorro8461.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://zorro8461.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://zorro8461.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://zorro8461.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://zorro8461.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+		
+<html>
+
+	<head>
+		<title>مطلب بازار </title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Language" content="fa">
+		<meta name="description" content=" مطالبی در رابطه با صنایع و دندان پزشکی و حیوانات " />
+		<meta name="keywords" content="رباتیک و صنایع _ هک_ لپ تاپ_ طنز_مقالات علمی_آموزش رباتیک _ بازار مطالب - حیوانات _ دنیای حیوانات- باغ وحش" />
+		
+		<link rel="alternate" type="application/rss+xml" title="مطلب بازار " 
+		  href="http://zorro8461.mihanblog.com/post/rss/" />
+		<link rel="alternate" type="application/atom+xml" title="مطلب بازار " 
+		  href="http://zorro8461.mihanblog.com/post/atom/" />
+	
+	</head>
+
+
+	<style>
+		*{font-family:tahoma;direction:rtl;color:#333333}
+		#sidebar{float:right;width:200px;margin-right:5px}
+		#content{float:left;width:500px;padding:20px}	
+		#body{display:block;font-size:12px}
+		
+		a,a:hover,a.visited{text-decoration:none}
+		.inbox{list-style:none; padding:0 4px}
+		ul{padding:3px;margin:5px;}
+		h2{color:red}
+		h2 a{color:crimson; font-size:25px; font-family:arial}
+		h3{color:Tomato; margin-top:0; font-size:20px; font-family:arial; text-align:center}
+		#header h1 a{font-size:35px; font-family:arial; float:right; color:}		
+		#header h1{margin:0; height:50px; overflow:hidden}
+		
+		.author_box img{float:right;border:none;}
+		.mihan_logo{text-align:center;height:131px;margin-top:10px;
+	background: url(../static2.mihanblog.com/public/images/logo/poweredby.gif) no-repeat top center;}
+		.slogan{
+			color:#333333; text-align:center; padding:5px 0;
+			background: url(../static2.mihanblog.com/public/images/template_packages/2/body_background.png) repeat;
+			background: expression(#FFFFFF);
+		}
+		
+		#footer{font-size:9px;display:block;margin-top:50px; float:left}
+		#footer a,#footer a:hover,#footer a:visited{color:#000;}
+		
+		.hr{border-top:1px solid #CCCCCC;height:1px;margin:3px;}	
+		
+		body{margin:0; background: #000000 url(../static2.mihanblog.com/public/user_data/user_template/625/1874809_photo_mid.jpg) no-repeat  center}
+		
+		.sidebar_box{background-color:#E0E0E0; padding:10px 5px; line-height:5px; line-height:20px}
+		.sidebar_box_border{background-color:#E0E0E0; height:1px; display:block; overflow:hidden}
+		.sidebar_box_border_div{width:185px;}
+		.seprator{margin-bottom:10px}
+		.main_menu{text-align:center}
+		.blog_title{color:#}
+		
+		#header{height:160px; overflow:hidden; background: #666666 url(../static2.mihanblog.com/public/user_data/user_template/625/1874809_photo_top.gif) center no-repeat}
+		#body{
+			background: url(../static2.mihanblog.com/public/images/template_packages/2/body_background.png) repeat;
+			background: expression(#FFFFFF);
+		}
+		#blog_body{width:750px; margin:30px auto; }
+		#footer_background{background: url(../static2.mihanblog.com/public/user_data/user_template/625/1874809_photo_bot.gif) repeat-x; padding-bottom: 204px}
+	
+		.clearfix {
+			display:inline-block;
+		}
+		.clearfix:after {
+			clear:both;
+			content:'.';
+			display:block;
+			height:0;
+			visibility:hidden;
+		}
+		* html .clearfix {
+			height:1%;
+		}
+		.clearfix {
+			display:block;
+		}
+	</style>
+	<body>
+
+
+
+
+		<div id="blog_body">
+	
+			<div id="header">
+				<h1><p style="text-align:center; margin:0"><a class="blog_title" href="http://zorro8461.mihanblog.com/zorro8461" style="margin:10px">مطلب بازار </a></p></h1>
+			</div>
+		
+			<div class="slogan">عشق یعنی آرامش در کنار تو...... و دانستن آن چه تو می خواهی بدانم</div>
+			
+			<div class="clearfix">
+			
+				<div id="body" class="clearfix">
+					
+					<div id="content">
+													
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+										<div>
+									<h2>
+										<a href="http://zorro8461.mihanblog.com/post/107">مژده مژده</a>
+									</h2>
+									<p class="date">
+										سه شنبه 10 فروردین 1395 12:30									</p>
+								</div>
+			
+								<b>نویسنده :</b>
+								<a href="http://zorro8461.mihanblog.com/post/author/681110">
+									zohre 								</a> 
+			        			
+								<br/>
+			
+											        			          	
+																<div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+<div style="text-align: center;"><font face="Mihan-Yekan" color="#cc0000" size="5">به لینک زیر حتما سر بزنید</font></div><div style="text-align: center;"><font color="#006600" face="Mihan-Yekan" size="6">translateforu.mihanblog.com</font></div><div style="text-align: center;"><font color="#cc33cc" face="Mihan-Yekan" size="6">تخفیفات شگفت انگیز نوروزی</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/7.gif"></div>
+
+
+
+
+
+												            	
+								<br>
+								
+																
+								<br>
+								<br>
+				            	
+								<a target="_self" href="javascript:newComment(107)">
+									<b>دیدگاه ها : </b>
+									<script>setCommentCnt(107)</script> نظرات								</a> 
+								
+								<br/>
+			
+													
+													        		 			
+								<b>آخرین ویرایش:</b>
+								سه شنبه 10 فروردین 1395  12:35								
+								<br><br>
+							
+															<div>
+									<h2>
+										<a href="http://zorro8461.mihanblog.com/post/106">تبریکات</a>
+									</h2>
+									<p class="date">
+										پنجشنبه 29 اسفند 1392 02:16									</p>
+								</div>
+			
+								<b>نویسنده :</b>
+								<a href="http://zorro8461.mihanblog.com/post/author/681110">
+									zohre 								</a> 
+			        			
+								<br/>
+			
+											        			          	
+																
+<font color="#CC33CC" size="5" face="tahoma,arial,helvetica,sans-serif">سال نو و نوروز باستانی 93 بر همه دوستان گلم و برو بچ خوب مبارک<br>مخلص همه هم هستیم بد جور...</font><br><font color="#6600CC" size="5">ایشالله سالی باشه پر خنده واسه همتون</font><br><font color="#FF6600" size="3">مرغ و خروس و اردک<br>عشوه و ناز و چشمک<br>می خوام بگم کم کمک<br>عید شما مبارک</font><br><img alt="تصاویر تزئین بسیار زیبای سفره هفت سین" src="http://www.funpatogh.com/uploads/admin/e1ce6653099c0361182f8e37803fc0c3399887_281766991882812_182740741785438_745803_1707748909_n.jpg" title="تصاویر تزئین بسیار زیبای سفره هفت سین" border="0" width="494" height="709"><br>
+
+
+
+
+												            	
+								<br>
+								
+																
+								<br>
+								<br>
+				            	
+								<a target="_self" href="javascript:newComment(106)">
+									<b>دیدگاه ها : </b>
+									<script>setCommentCnt(106)</script> نظرات								</a> 
+								
+								<br/>
+			
+													
+													        		 			
+								<b>آخرین ویرایش:</b>
+								پنجشنبه 29 اسفند 1392  02:29								
+								<br><br>
+							
+															<div>
+									<h2>
+										<a href="http://zorro8461.mihanblog.com/post/104">نظریه یا Theory</a>
+									</h2>
+									<p class="date">
+										پنجشنبه 17 بهمن 1392 12:37									</p>
+								</div>
+			
+								<b>نویسنده :</b>
+								<a href="http://zorro8461.mihanblog.com/post/author/681110">
+									zohre 								</a> 
+			        			
+								<br/>
+			
+											        			          	
+																
+
+<p><font size="3"><b>تئوری</b> یا نظریه به مجموعه مباحثی گفته می‌شود که برای بررسی وضعیت یا موقعیت سیستمی به کار رود. نظریه می‌تواند کاملا جنبه غیر تجربی داشته باشد مثل نظریه های ریاضی
+ و یا جنبه تجربی برای بخش‌هایی از آن مورد استفاده قرار گیرد. به عبارت 
+دیگر نظریه را می‌توان بر اساس نتایج تجربی نیز پایه گذاری کرد. منطق و ریاضی دارای نظریه‌های اولیه هستند و علوم دیگر از جمله شیمی فیزیک و پزشکی بر پایه نظریه‌های مبنی بر آنها می‌باشند.</font><br><font size="3" face="tahoma,arial,helvetica,sans-serif">نظریه به زبان ساده، غیر دقیق و مقدماتی شرح و بیانی از یک پدیده است، 
+توصیفی از روابط بین پدیده­ها یا تشریحی از علل یا عوامل یک پدیده است. نظریه، بیان 
+روابط بین دو یا چند پدیده است. یک نظریه علی به بیان روابط علی و معلولی بین پدیده 
+ها می پردازد و یک نظریه توصیفی شرح و تفصیلی از یک یا مجموعه ای از پدیده ها را 
+بیان می کند.  پس نظریه یک نظر یا ایده است؛ به همین سادگی</font></p><font size="3"></font><font size="3"><span class="mw-headline" id=".D8.B9.D9.84.D9.85"></span></font><font size="3">
+</font><p><font size="3"><b>نظریه علمی</b> نگره‌ای است که ویژگی‌های علمی داشته باشد:</font></p><font size="3">
+</font><ul><li><font size="3"><b>سازگاری</b> درونی و بیرونی (نامتناقض)</font></li><li><font size="3"><b>صرفه‌جو</b> (در توضیح و پیش‌فرض‌های اضافه)</font></li><li><font size="3"><b>کاربردی</b></font></li><li><font size="3"><b>تجربی</b> و <b>رد شدنی<br></b></font></li><li><font size="3"><b>پویا</b></font></li><li><font size="3"><b>جلورونده</b> (دست‌یابی به و جلو رفتن از نتایج نظریه‌های قبلی)</font></li><li><font size="3"><b>مشروط</b> و <b>آزمایشی</b></font></li></ul><font size="3">
+</font><p><font size="3">تئوری را می‌توان روشی برای درک یا مشاهده واقعیتها دانست، سیستم تفکری 
+که خیلی عمیقترو پویا تر از تجربیات روزمره می‌باشد. تئوریهایی که به 
+یکدیگر مرتبط هستند یک سیستم یا یک علم را تشکیل می‌دهند. دست اندرکارانی 
+که این سیستم را بدانند و سیله با قدرتی برای مشاهده و تغییر و قایع در 
+اختیار دارند. این وسیله قوی بر نگرش وشیوه جوابگویی او در کارهایش تاثیر 
+می‌گذارد چون حوزه ادراکاتش وسیعتر و عمیق تر می‌گردد و می‌تواند پی آمدهای
+ دور از ذهن را تعیین و پیش بینی کند و راه حلهای سنجیده تر و بهتر را 
+برگزیند.<span class="noprint"><sup class="Template-Fact"><span title="این ادعا نیازمند ارجاع به منابع معتبر است" style="white-space: nowrap;"></span></sup></span></font></p><font size="3">
+</font><h2><br><font size="3"><span class="mw-headline" id=".D8.AA.D8.B9.D8.B1.DB.8C.D9.81_.D8.AA.D8.A6.D9.88.D8.B1.DB.8C">تعریف تئوری (Theory)<br></span></font></h2><font size="3">
+</font><p><font size="3">یک نظریه مجموعه‌ای از سازه‌ها (مفاهیم) تعاریف و گزاره‌های به هم مرتبط
+ است که از طریق مشخص ساختن روابط بین متغیرها، با هدف تبیین و پیش بینی 
+پدیده‌ها دید نظام یافته‌ای از پدیده‌ها ارائه می‌کند (کرلینگیر، ۱۳۷۷)</font></p><font size="3">
+</font><h2><font size="3"><span class="mw-headline" id=".D8.AE.D8.B5.D9.88.D8.B5.DB.8C.D8.A7.D8.AA_.D8.AA.D8.A6.D9.88.D8.B1.DB.8C">خصوصیات تئوری</span></font></h2><font size="3">
+</font><p><font size="3">۱- تئوری باید توانایی تعیین حقایق مورد مشاهده مربوط به یک مسئله را 
+داشته باشد باید توصیف و تعیین کند چرا یک پدیده تحت یک شرایط خاص اتفاق 
+می‌افتد. <font color="#6600CC">تئوری‌‌ای که پیچیدگی کمتری داشته باشد از تئوری که دارای 
+پیچیدگی‌های بیشتری است ارزنده تر</font> می‌باشد. ۲- یک تئوری باید با حقایق مورد
+ مشاهده شده و با بدنه دانش مغایرت نداشته باشد 3- تئوری باید ابزارهای 
+لازم را برای آزمون خود داشته باشد به این معنی که در صورت تأیید باید 
+بتوان فرضیه‌هایی قیاسی دیگری از آن استنتاج کرد و پیامدهای آن را پیش بینی
+ کرد (ARY and etal ,1996)</font></p><font size="3">
+</font><h2><font size="3"><span class="mw-headline" id=".D8.AA.D8.A6.D9.88.D8.B1.DB.8C_.D9.86.D9.82.D8.AF">تئوری نقد</span></font></h2><font size="3">
+از مهم‌ترین تئوری‌ها <font color="#6600CC">تئوری نقد</font> است که در آن به بررسی درستی و نکات مثبت و منفی دیگر تئوری‌ها می‌پردازند.<br><br></font>
+
+
+
+												            	
+								<br>
+								
+																
+								<br>
+								<br>
+				            	
+								<a target="_self" href="javascript:newComment(104)">
+									<b>دیدگاه ها : </b>
+									<script>setCommentCnt(104)</script> نظرات								</a> 
+								
+								<br/>
+			
+													
+													        		 			
+								<b>آخرین ویرایش:</b>
+								پنجشنبه 17 بهمن 1392  12:44								
+								<br><br>
+							
+															<div>
+									<h2>
+										<a href="http://zorro8461.mihanblog.com/post/93">*پروانه های دوست داشتنی*</a>
+									</h2>
+									<p class="date">
+										دوشنبه 14 مرداد 1392 14:54									</p>
+								</div>
+			
+								<b>نویسنده :</b>
+								<a href="http://zorro8461.mihanblog.com/post/author/681110">
+									zohre 								</a> 
+			        			
+								<br/>
+			
+											        			          	
+																
+
+
+
+
+
+
+<br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj8BhWHvxgxhu5msNkUvhMlmTUgkjedB-bz2XympOQ4WDqa7sWOkZ9NYZi" width="303" height="219"><br><font style="color: rgb(0, 0, 0);" size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2">پَروانه حشره‌ای است از راسته </font><a title="پولک‌بالان" href="http://fa.wikipedia.org/wiki/%D9%BE%D9%88%D9%84%DA%A9%E2%80%8C%D8%A8%D8%A7%D9%84%D8%A7%D9%86"><font size="2">پولک‌بالان</font></a><font size="2"> (Lepidoptera)، از خانواده طبقه‌بندی‌نشده </font><a class="new" title="گُرزشاخکان (صفحه وجود ندارد)" href="http://fa.wikipedia.org/w/index.php?title=%DA%AF%D9%8F%D8%B1%D8%B2%D8%B4%D8%A7%D8%AE%DA%A9%D8%A7%D9%86&amp;action=edit&amp;redlink=1&amp;preload=%D8%A7%D9%84%DA%AF%D9%88:%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%D9%85%D9%82%D8%A7%D9%84%D9%87/%D8%A7%D8%B3%D8%AA%D8%AE%D9%88%D8%A7%D9%86%E2%80%8C%D8%A8%D9%86%D8%AF%DB%8C&amp;editintro=%D8%A7%D9%84%DA%AF%D9%88:%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%D9%85%D9%82%D8%A7%D9%84%D9%87/%D8%A7%D8%AF%DB%8C%D8%AA%E2%80%8C%D9%86%D9%88%D8%AA%DB%8C%D8%B3&amp;summary=%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%DB%8C%DA%A9+%D9%85%D9%82%D8%A7%D9%84%D9%87+%D9%86%D9%88+%D8%A7%D8%B2+%D8%B7%D8%B1%DB%8C%D9%82+%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF%DA%AF%D8%B1&amp;nosummary=&amp;prefix=&amp;minor=&amp;create=%D8%AF%D8%B1%D8%B3%D8%AA+%DA%A9%D8%B1%D8%AF%D9%86+%D9%85%D9%82%D8%A7%D9%84%D9%87+%D8%AC%D8%AF%DB%8C%D8%AF"><font size="2">گُرزشاخکان</font></a><font size="2">.الگوهای گوناگون رنگارنگ بر روی بال‌های پروانه‌ها و پرواز نامنظم ولی باوقار آن‌ها باعث شده تا تماشای پروانه یکی از سرگرمی‌های محبوب در برخی </font></font></font></font></font></font></font></font></font></font></font></font><br style="color: rgb(0, 0, 0);"><div style="text-align: right; color: rgb(0, 0, 0);"><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"></font></font></font><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"></font></font></font></font></font></font></font></font></font></font><p><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2">پ</font><font size="2">روانه‌ها دارای چهار مرحله در زندگیشان هستند: مرحلهٔ اول تخم است، که پروانهٔ بالغ تخم گذاری می‌کند. مرحلهٔ دوم </font></font></font></font></font></p><p><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2">کشورهابه‌شمار بیاید.</font></font></font></font></font></font></font></font></font></font></font></font></font></p><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"></font></font></font></font></font></font></font></font></font></font></font></font></font><p><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2">که تبدیل به لارو یا کرم می‌شود. در این مرحله لارو (کرمینه) مقدار زیادی برگ </font></font></font></font></font></p><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"></font></font></font></font></font></font></font></font></font></font></font></font></font><p><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2">می‌خورد تا خود را برای مرحلهٔ بعد آماده کند. مرحلهٔ سوم شفیره است که کرم تاری به نام </font><a class="mw-redirect" title="پیله" href="http://fa.wikipedia.org/wiki/%D9%BE%DB%8C%D9%84%D9%87"><font size="2">پیله</font></a><font size="2"> به‌دور </font></font></font></font></font></p><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"></font></font></font></font></font></font></font></font></font></font></font></font></font><p><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2">خود می‌بافد و مدتی در آن بدون هیچ غذایی زندگی می‌کند. مرحلهٔ چهارم که پروانه است و جانور بالغ که دارای بال است از پیله بیرون می‌آید.</font></font></font></font></font></p><br><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"></font></font></font></font></font></font></font></font></font></font></font></font></font><p><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><span class="mw-headline"><font size="4">انواع پروانه</font></span> </font></font></font></font></font></p><br><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"></font></font></font></font></font></font></font></font></font></font></font></font></font><p><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="3">پروانه اطلسی</font></font></font></font></font></font></p><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"></font></font></font></font></font></font></font></font></font></font></font></font></font><p><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2">این حشره شب‌زی بزرگ‌ترین بالها را در میان گروه پروانه‌ها دارد. اما بدن او کوچک است و در </font></font></font></font></font></p><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"></font></font></font></font></font></font></font></font></font></font></font></font></font><p><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2">حدود ۵ سانتیمتر طول دارد. بالهای جلویی نوع بالغ به سمت عقب خم شده و هر چهار بال او دارای طرحهای نیمه شفاف می‌باشند.</font></font></font></font></font></p><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"></font></font></font></font></font></font></font></font></font></font></font></font></font><p><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2">این پروانه درشت هیکل دارای </font><a class="new" title="شاخک (صفحه وجود ندارد)" href="http://fa.wikipedia.org/w/index.php?title=%D8%B4%D8%A7%D8%AE%DA%A9&amp;action=edit&amp;redlink=1&amp;preload=%D8%A7%D9%84%DA%AF%D9%88:%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%D9%85%D9%82%D8%A7%D9%84%D9%87/%D8%A7%D8%B3%D8%AA%D8%AE%D9%88%D8%A7%D9%86%E2%80%8C%D8%A8%D9%86%D8%AF%DB%8C&amp;editintro=%D8%A7%D9%84%DA%AF%D9%88:%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%D9%85%D9%82%D8%A7%D9%84%D9%87/%D8%A7%D8%AF%DB%8C%D8%AA%E2%80%8C%D9%86%D9%88%D8%AA%DB%8C%D8%B3&amp;summary=%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%DB%8C%DA%A9+%D9%85%D9%82%D8%A7%D9%84%D9%87+%D9%86%D9%88+%D8%A7%D8%B2+%D8%B7%D8%B1%DB%8C%D9%82+%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF%DA%AF%D8%B1&amp;nosummary=&amp;prefix=&amp;minor=&amp;create=%D8%AF%D8%B1%D8%B3%D8%AA+%DA%A9%D8%B1%D8%AF%D9%86+%D9%85%D9%82%D8%A7%D9%84%D9%87+%D8%AC%D8%AF%DB%8C%D8%AF"><font size="2">شاخک</font></a><font size="2"> های بسیار کوچکی است و تا به سن بلوغ نرسد، غذا نمی‌خورد. نرها و ماده‌ها از </font></font></font></font></font></p><p><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="3">پروانه بلوطی</font></font></font></font></font></font></p><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"></font></font></font></font></font></font></font></font></font></font></font></font></font><p><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2">نظر اندازه و رنگ با همدیگر فرق دارند. نوع نر خیلی بزرگ‌تر از نوع ماده است. </font></font></font></font></font></p><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"></font></font></font></font></font></font></font></font></font></font></font></font></font><p><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2">نوع ماده تا زمانی که نوع نر آن را پیدا کند و با او جفتگیری نماید، پرواز نمی‌کند.</font></font></font></font></font></p><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><p><font size="2"><font size="2"><font size="2"><b>پروانه شطرنجی دم چلچله‌ای</b></font></font></font></p></font></font></font></font></font></font></font></font></font></font></font></font></font><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><p><font size="2"><font size="2"><font size="2">این پروانه <a title="استوا" href="http://fa.wikipedia.org/wiki/%D8%A7%D8%B3%D8%AA%D9%88%D8%A7">استوایی</a> که در همه جا پراکنده است، یک پرواز کننده قوی می‌باشد و احتمالاً برای </font></font></font></p></font></font></font></font></font></font></font></font></font></font></font></font></font><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><p><font size="2"><font size="2"><font size="2">پیدا کردن غذا مهاجرت می‌کند. پیله این پروانه به خوبی استتار شده و در </font></font></font></p></font></font></font></font></font></font></font></font></font></font></font></font></font><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><p><font size="2"><font size="2"><font size="2">صورت مورد تهدید قرار گرفتن، شاخ چنگالی شکل پشت سرشان را باد می‌کند. این شاخ بوی تنفر انگیز و بدی را در فضا منتشر می‌کند.</font></font></font></p></font></font></font></font></font></font></font></font></font></font></font></font></font><br><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><p><font size="2"><font size="2"><font size="2"><b>پروانه فینیقیه‌ای</b></font></font></font></p></font></font></font></font></font></font></font></font></font></font></font></font></font><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><p><font size="2"><font size="2"><font size="2">نام دیگر این پروانه آپولوی کوچک می‌باشد. این پروانه در مناطق کوهستانی زندگی می‌کند و به ندرت درمناطق پایین‌تر دیده شده است. </font></font></font></p></font></font></font></font></font></font></font></font></font></font></font></font></font><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><p><font size="2"><font size="2"><font size="2">طرح روی بالهای این پروانه متغیر است بالهای او بسیار نازک بوده و دارای <a class="new" title="پولک (صفحه وجود ندارد)" href="http://fa.wikipedia.org/w/index.php?title=%D9%BE%D9%88%D9%84%DA%A9&amp;action=edit&amp;redlink=1&amp;preload=%D8%A7%D9%84%DA%AF%D9%88:%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%D9%85%D9%82%D8%A7%D9%84%D9%87/%D8%A7%D8%B3%D8%AA%D8%AE%D9%88%D8%A7%D9%86%E2%80%8C%D8%A8%D9%86%D8%AF%DB%8C&amp;editintro=%D8%A7%D9%84%DA%AF%D9%88:%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%D9%85%D9%82%D8%A7%D9%84%D9%87/%D8%A7%D8%AF%DB%8C%D8%AA%E2%80%8C%D9%86%D9%88%D8%AA%DB%8C%D8%B3&amp;summary=%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%DB%8C%DA%A9+%D9%85%D9%82%D8%A7%D9%84%D9%87+%D9%86%D9%88+%D8%A7%D8%B2+%D8%B7%D8%B1%DB%8C%D9%82+%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF%DA%AF%D8%B1&amp;nosummary=&amp;prefix=&amp;minor=&amp;create=%D8%AF%D8%B1%D8%B3%D8%AA+%DA%A9%D8%B1%D8%AF%D9%86+%D9%85%D9%82%D8%A7%D9%84%D9%87+%D8%AC%D8%AF%DB%8C%D8%AF">پولک</a> های ظریفی می‌باشند که نیمه شفاف به نظر می‌آید. پروانه فینیقیه در مقابل سرما بسیار مقاوم است و با وجود آن فقط در فصل تابستان فعال است.</font></font></font></p></font></font></font></font></font></font></font></font></font></font></font></font></font><p><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><strong>پروانه کوچک پستچی</strong></font></font></font></font></font></p><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"></font></font></font></font></font></font></font></font></font></font></font></font></font><p><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2">این پروانه استوایی در حاشیه جنگلها زندگی می‌کند و از شهد گل ساعتی تغذیه می‌کند. گونه این </font></font></font></font></font></p><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"></font></font></font></font></font></font></font></font></font></font></font></font></font><p><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2">پروانه دارای .۳ رنگ مختلف بوده و با لرزاندن بالهای خود پرندگان مزاحم را از خود دور می‌کند.</font></font></font></font></font></p><br><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><font size="2"><p><img src="file:///C:/Users/Dell/AppData/Local/Temp/moz-screenshot-23.png" alt=""></p></font></font></font></font></font></font></font></font></font></font></font></font></font><p><font style="color: rgb(0, 0, 0);"><font size="2"><font size="2"><font size="2"><font size="2">&nbsp;</font></font></font></font></font><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKB27GlyOzwxGGGtHlMDTCEGzKP1iaw9QeKHUSqh2_DdaxHInMg0rSP1GM" width="355" height="232"></p>
+
+
+
+
+<img src="file:///C:/Users/Dell/AppData/Local/Temp/moz-screenshot-24.png" alt=""></div>
+
+
+
+
+
+												            	
+								<br>
+								
+																
+								<br>
+								<br>
+				            	
+								<a target="_self" href="javascript:newComment(93)">
+									<b>دیدگاه ها : </b>
+									<script>setCommentCnt(93)</script> نظرات								</a> 
+								
+								<br/>
+			
+													
+													        		 			
+								<b>آخرین ویرایش:</b>
+								پنجشنبه 17 بهمن 1392  12:51								
+								<br><br>
+							
+															<div>
+									<h2>
+										<a href="http://zorro8461.mihanblog.com/post/95">پاندا کوچولو ....</a>
+									</h2>
+									<p class="date">
+										دوشنبه 14 مرداد 1392 14:45									</p>
+								</div>
+			
+								<b>نویسنده :</b>
+								<a href="http://zorro8461.mihanblog.com/post/author/681110">
+									zohre 								</a> 
+			        			
+								<br/>
+			
+											        			          	
+																
+
+
+
+
+
+
+
+
+
+
+
+<p><img src="file:///C:/Users/Dell/AppData/Local/Temp/moz-screenshot-25.png" alt=""></p><p><img src="file:///C:/Users/Dell/AppData/Local/Temp/moz-screenshot-26.png" alt=""><font color="#333333" size="2"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAFgAaQMBIgACEQEDEQH/xAAcAAABBAMBAAAAAAAAAAAAAAAEAAMFBgECBwj/xAA7EAACAQMCBAMFBwIEBwAAAAABAgMABBEFIRITMUEGUWEUIjJxkQeBobHB0fBCUiNUk+EWJENTcpKi/8QAGAEAAwEBAAAAAAAAAAAAAAAAAQIDAAT/xAAdEQEBAAICAwEAAAAAAAAAAAAAAQIRAzESIUFh/9oADAMBAAIRAxEAPwCAjLTmcIHZLgmMcec8YGQR51Ix8q2RzBGFVrkBRgDbhycemc0LJHB7JKyQ8EjS+4xJ295RkHt2P0p/UgBATDkLGVIUH+kBge2fhApIZVYQrSq/wk1LGyhmgZlOJF3DZ6/OqrPeNbtwIAWz0ztRmma2GdYZlMZbbOdq65nih40TcidvdZSrg54T1+40bb3sqHLqvCdsN1FM6oGaRW3IU5HrWWCyANncjO43FLdymHyKkze0BmPAu6q3WjoZI5WQocxsP6qhIFkyVGVUDJOKOuLpw0CRKu6/CFp5S0eJkXmCYKFXvntQ8UEcAaW0AdW7A9KAkKvM4dSATvvtjvRS3MVvFwRjCHfNZtGJLhknIIGT8QG4waEvYCYw7AU7OC0yzQgEYwVpi+m4VGWx6Vthr2A5SrzCjAMCAF70xyn9afyONXXoetOc3+ZpYZYolS4tmXiLGKLouwVuv1GPqKJumdraN5MyPLFxZxu23Uf+5/m1DCRbeKRYiy81ZDxHA2/ffHzwKLDl76zhiw7GVVBUYAwQT18tx8xXLitT2hfZamoW4k1qZ0dt1jgO6j1NWfTfso8PWfA8ntM7JneRxvkYq46c8ccSqAPmaC8c6/P4b8PPqFnp73zhgpVOkYP9TY34R6edXv4lunT4e0S4thbTWUTJjGQMMNvOqn4m+zoQ6fLc6NOZmhHEsLrlsdxnvUNo/jnxbe6lEf8Ah6Z7V3AcR2sgAB6kOdq6ddTiFWDuUyMg+VCbN6ed7XUrcyFZGK+YqZ0y0k1NC9pHNO0XxLChbA9cVTNaMcer3SozEc0kHAG2fIVP/Zv4kfQfFNrO4JgnIgYD1IwaPnY1xiZuNPvBGA9rcIDv70TD9KiXt70cQNvLwjfPAcYr0tBdxzoDsc07wRt1VSvqKW8m28XmjJtolEpw6joRg0BeyCfoMN516R1vQtK1iMxalaRyAjAkAAYd9j91cV8c+DZ/Dt5xxMZLGUnlv3B8jTTLcLYqDFwAzAFcb4pnmD+Zp2Uurdip7Vpg/wBooiszRPFZrLxPxB0xlhgnPz2GRW97ctBcxPupSdj5YHHk9vvpSEtYDhLOJJiOIHPCSwIz64zUNrlw2SwGFCtwk9cZJ/WuZZ2iy1MR2gcYYAZIzQejeNLLxIZYNKZy0JBl41KlRnYjzBx+NUrw74mS4soQ7Z4hg9zn5VWdFa+0PxbPc2FlK9kxZWBQgcBwe/kQPpTzLVT07P4h8dpoGnNI9vz7jhxGnFgM3z7Csazrceo2tyIOBglsJMg/CScedc71qa21W5S+u7e5lkijwtsQOBT3O+M01LqE9vok1jawsJZVCs7vgHO2PPv+FGcs37bwkm3PdfeNtUm5RBHF1C4BoW2maKVHQkMjBlI7Ebg1reRyQ3MkUpBdG4Tg5ptcjetvbPQXgHxfHq9jFG0mLiNQrhjvt1NXiDWIjlEkDY615U0vU7iwaT2dynMxxkHBIHarppnjTlQqkkpRgAAxXi9N9x50LBegVu0k64obWLS11awltLpA0bj6Hsa5z4b8RtfTHlTCZdlAJwc79u/1q9W9xxxCRceoNGXQWOC6zZyafqctrMMNE5Xfv60LhP4auP2o2fFrEF2E4UmjGfVh1qo8qP8At/GrS7KnJg6worA+5OJAxJ95SDjH3A1GXzBr63SPHLacqwO/nUxdx4t592BiPcYAB6flv+dQuoFmubeQAcEd2r522DMPr1ArkWy6WYGNWjQsMKpJyPQY/OsQxMGbBG56E/WmHXmHDDYLnP8APlTkZJuIwmWxvt9al4l22JAkLY2OQa1ugkGWOCUHStXJfJOfdzv94oPWXcWkpUkNyM5Hyo+Lbc5upOdcyy/3MSKbBxWBWRuQK6SnEHU+dZBPatSfLtSB7VhWjwZcSLfKqlQCdya7Zp9y7wgBsqV+L9a4JoFwbZnkVisnQeVXmx8V3semLEi8y4DY4zsAP1pL2pNaTP2mMDaWnCwJ5jY9Bj/auf8AE3l+NWea6k1Uo2oQwYTtl1279DW3sej/AOVi/wBeWr49I3sMszvzHb/qBmWEHqMbH1AO38xUJq5X2WBghBWWMq+SNs9MH1qfLKqe4wDmFwGU5xjHmOv+1QevqFtFBO0SBQTudtgM/dXNFr0sNu6NHCj9MniOe2D+9PSStbs0QI4egPcDrj+eVRdu3uIwIxnB+mKJmYM6vgHKgj8qTXtONkIcMD0wf3qP1u44bMSYBYRHPrjajlBVGYgDMi/f1qK1iImIx+jD8qb6yhhMfFS2zsKJaJlDZwAuxGeuCP3FaRwPJ8KbVbcaSmanLXwxd3UoSC4tc8Cs3Mk4MZ+fX5+u+N6Fi0whOOQEVOaHawqhEwCnzJwDU7nPg60nNN8INDEvH7E7Y97ikU/rUlHpC2cPNlhtgM4wACfpvQVjFAj5jl4dwACy4P4U7dXX+Mka3HowOMfX60szmwqQhK8DcmNM+XJA3prlah/21+i/tQ73n/Lv/iqHU44cjfenvbV81/8AitebQaASRkNIxypELSKv9uck9vMCorxIFmtbllDHhGd9sb1mlRivwXZMFiRuo4A4375qV5IltmYghkII/wDE9vqaVKlpIacFoxg8SqBt5980BqeBw5zk9fnwilSofWQVjYJLqkyuucggfdipeHSo4ieHGB1pUqnyHxre5sI+XkDAHnUdLDHbk8twR2I6GlSrcVDLsdpt1Cmo2nMCqizxFiTlQOMZzntiuiT6joiqQ15pHEeInBiydtt8fOsUqbLEcctUE19oJjZpJ9PTAwOCRPI9fwqi+2x/5lf9WlSqeHFIpnyWv//Z" alt="" name="imgthumb15" class="th imgthumb15" title="http://blog.ahmadnia.net/spip.php?article1711" style="display: inline-block; margin: 0px -1px 0px 0px;" align="middle" border="0" width="162" height="139"></font></p><p><font color="#333333" size="2">پاندا ن</font><font color="#333333" size="2">وعی </font><a title="خرس" href="http://fa.wikipedia.org/wiki/%D8%AE%D8%B1%D8%B3"><font color="#333333" size="2">خرس</font></a><font color="#333333" size="2"> است </font><font color="#333333" size="2">که در نواحی مرکزی و جنوب </font><font color="#333333" size="2">غربی </font><a title="چین" class="mw-redirect" href="http://fa.wikipedia.org/wiki/%DA%86%DB%8C%D9%86"><font color="#333333" size="2">چین</font></a><font color="#333333" size="2"> زندگی می‌کند. پاندا به سادگی توسط لکه‌های سیاه روی گوش و دور چشم و دور بدنش قابل شناسایی است. این حیوان هرچند در راسته زیستی </font><a title="گوشتخوارسانان" class="mw-redirect" href="http://fa.wikipedia.org/wiki/%DA%AF%D9%88%D8%B4%D8%AA%D8%AE%D9%88%D8%A7%D8%B1%D8%B3%D8%A7%D9%86%D8%A7%D9%86"><font color="#333333" size="2">گوشتخوارسانان</font></a><font color="#333333" size="2"> قرار دارد اما ۹۹٪ رژیم </font><br></p><p><font color="#333333" size="2">غذایی آن را گیاه </font><a title="بامبو" class="mw-redirect" href="http://fa.wikipedia.org/wiki/%D8%A8%D8%A7%D9%85%D8%A8%D9%88"><font color="#333333" size="2">بامبو</font></a><font color="#333333" size="2"> تشکیل می‌دهد. پانداهایی که در اسارت نگهداری می‌شوند غذاهایی مانند </font><a title="عسل" href="http://fa.wikipedia.org/wiki/%D8%B9%D8%B3%D9%84"><font color="#333333" size="2">عسل</font></a><font color="#333333" size="2">، تخم پرندگان، </font><a title="ماهی" href="http://fa.wikipedia.org/wiki/%D9%85%D8%A7%D9%87%DB%8C"><font color="#333333" size="2">ماهی</font></a><font color="#333333" size="2">، </font><a title="مرکبات" href="http://fa.wikipedia.org/wiki/%D9%85%D8%B1%DA%A9%D8%A8%D8%A7%D8%AA"><font color="#333333" size="2">مرکبات</font></a><font color="#333333" size="2">، </font><a title="موز" href="http://fa.wikipedia.org/wiki/%D9%85%D9%88%D8%B2"><font color="#333333" size="2">موز</font></a><font color="#333333" size="2">، برگ گیاهان و </font><a title="سیب زمینی" class="mw-redirect" href="http://fa.wikipedia.org/wiki/%D8%B3%DB%8C%D8%A8_%D8%B2%D9%85%DB%8C%D9%86%DB%8C"><font color="#333333" size="2">سیب زمینی</font></a><font color="#333333" size="2"> را هم مصرف می‌کنند.</font></p><p><font color="#333333" size="2">پاندا امروزه فقط در چند کوهستان مرکزی </font><a title="چین" class="mw-redirect" href="http://fa.wikipedia.org/wiki/%DA%86%DB%8C%D9%86"><font color="#333333" size="2">چین</font></a><font color="#333333" size="2"> عمدتاً در ایالت </font><a title="سیچوآن" href="http://fa.wikipedia.org/wiki/%D8%B3%DB%8C%DA%86%D9%88%D8%A2%D9%86"><font color="#333333" size="2">سیچوآن</font></a><font color="#333333" size="2"> و در حد کمتری در </font><a title="شاآن‌شی" class="mw-redirect" href="http://fa.wikipedia.org/wiki/%D8%B4%D8%A7%D8%A2%D9%86%E2%80%8C%D8%B4%DB%8C"><font color="#333333" size="2">شاآن‌شی</font></a><font color="#333333" size="2"> و </font><a title="گانسو" href="http://fa.wikipedia.org/wiki/%DA%AF%D8%A7%D9%86%D8%B3%D9%88"><font color="#333333" size="2">گانسو</font></a><font color="#333333" size="2"> <br>زندگی می‌کنند. پانداها زمانی در نواحی کم‌ارتفاع‌تر هم زندگی می‌کردند اما با پیشرفت زمین‌های زراعی و همزمان </font><a title="جنگل‌زدایی" href="http://fa.wikipedia.org/wiki/%D8%AC%D9%86%DA%AF%D9%84%E2%80%8C%D8%B2%D8%AF%D8%A7%DB%8C%DB%8C"><font color="#333333" size="2">از بین رفتن جنگل‌ها</font></a><font color="#333333" size="2"> و برخی از عوامل دیگر پانداها به مناطق مرتفع پناه آوردند.</font></p><p><font color="#333333" size="2">نسل این جانور به شدت در معرض تهدید است. بر اساس گزارش‌ها ۲۳۹ پاندا در چین در باغ وحش و ۲۷ پاندا نیز در باغ وحش‌های بیرون از چین می‌زیند. <br>همچنین تخمین زده می‌شود حدوداً ۱٬۵۹۰ پاندا در طبیعت زندگی می‌کنند اما یک مطالعه بر اساس تحلیل‌های ژنتیکی تخمین زده که بین ۲٬۰۰۰ تا&nbsp;3000 پاندا می‌تواند در طبیعت وجود داشته باشد و گزارش‌هایی نیز نشان می‌دهند که پانداهای موجود در طبیعت در حال ازدیاد می‌باشند. اما اتحادیه بین‌المللی حفاظت از محیط زیست اعتقاد دارد این گزارشها برای بیرون آوردن نام پاندا از جانوران در معرض خطر انقراض کافی نیست.</font></p><p><font color="#333333" size="2">در حالی که همچنان </font><a title="اژدها" href="http://fa.wikipedia.org/wiki/%D8%A7%DA%98%D8%AF%D9%87%D8%A7"><font color="#333333" size="2">اژدها</font></a><font color="#333333" size="2"> اثر ملی و تاریخی چین است در این اواخر پاندای بزرگ نیز به یک علامت و مشخصه برای چین تبدیل شده است. تصویر خرس پاندا روی بسیاری از سکه‌های </font><a title="نقره" href="http://fa.wikipedia.org/wiki/%D9%86%D9%82%D8%B1%D9%87"><font color="#333333" size="2">نقره</font></a><font color="#333333" size="2"> و </font><a title="طلا" href="http://fa.wikipedia.org/wiki/%D8%B7%D9%84%D8%A7"><font color="#333333" size="2">طلا</font></a><font color="#333333" size="2"> و </font><a title="پلاتین" href="http://fa.wikipedia.org/wiki/%D9%BE%D9%84%D8%A7%D8%AA%DB%8C%D9%86"><font color="#333333" size="2">پلاتین</font></a><font color="#333333" size="2"> مربوط به چین مدرن حک شده و حتی </font><a title="تمبر" href="http://fa.wikipedia.org/wiki/%D8%AA%D9%85%D8%A8%D8%B1"><font color="#333333" size="2">تمبر</font></a><font color="#333333" size="2"> با عکس و اسم خرس پاندا منتشر شده است. حالت خوردن گیاه بامبو توسط خرس پاندا به یک نماد صلح‌جویی در مقابل <br><br>شکارچیان تبدیل شده است. گفته شده خرس پاندا یک حیوان اهلی و آموزش‌پذیر است و حمله آن به انسان اغلب به خاطر آزار و اذیتی بوده که از انسان به آن رسیده تا به علت خوی وحشی خود جانور.</font></p><p><br><font color="#333333" size="2">طبقه‌بندی جانورشناختی پاندا تا مدتها مورد بحث بود چرا که این حیوان مشخصات خرس‌ها و </font><a title="راکون" href="http://fa.wikipedia.org/wiki/%D8%B1%D8%A7%DA%A9%D9%88%D9%86"><font color="#333333" size="2">راکون‌ها</font></a><font color="#333333" size="2"> را همزمان در خود دارد. اما تحقیقات مولکولی جدید اثبات کرده که پاندا قطعاً نوعی خرس است و نزدیکترین خویشاوند زنده آن </font><a title="خرس عینکی" href="http://fa.wikipedia.org/wiki/%D8%AE%D8%B1%D8%B3_%D8%B9%DB%8C%D9%86%DA%A9%DB%8C"><font color="#333333" size="2">خرس عینکی</font></a><font color="#333333" size="2"> بومی آمریکای جنوبی است.</font></p><p><font color="#333333"><br></font><font color="#333333" size="2"><a class="image" href="http://commons.wikimedia.org/wiki/File:Panda_Cub_from_Wolong,_Sichuan,_China.JPG?uselang=fa"><font color="#333333" size="2"><img class="thumbimage" style="height: 215px; width: 480px;" alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Panda_Cub_from_Wolong%2C_Sichuan%2C_China.JPG/250px-Panda_Cub_from_Wolong%2C_Sichuan%2C_China.JPG" srcset="http://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Panda_Cub_from_Wolong%2C_Sichuan%2C_China.JPG/375px-Panda_Cub_from_Wolong%2C_Sichuan%2C_China.JPG 1.5x, http://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Panda_Cub_from_Wolong%2C_Sichuan%2C_China.JPG/500px-Panda_Cub_from_Wolong%2C_Sichuan%2C_China.JPG 2x"></font></a></font><br>&nbsp;<img src="file:///C:/Users/Dell/AppData/Local/Temp/moz-screenshot-22.png" alt=""></p><img src="file:///C:/Users/Dell/AppData/Local/Temp/moz-screenshot-20.png" alt=""><img src="file:///C:/Users/Dell/AppData/Local/Temp/moz-screenshot-19.png" alt=""><img src="file:///C:/Users/Dell/AppData/Local/Temp/moz-screenshot-21.png" alt="">
+
+
+
+
+
+												            	
+								<br>
+								
+																
+								<br>
+								<br>
+				            	
+								<a target="_self" href="javascript:newComment(95)">
+									<b>دیدگاه ها : </b>
+									<script>setCommentCnt(95)</script> نظرات								</a> 
+								
+								<br/>
+			
+													
+													        		 			
+								<b>آخرین ویرایش:</b>
+								پنجشنبه 17 بهمن 1392  12:54								
+								<br><br>
+							
+															<div>
+									<h2>
+										<a href="http://zorro8461.mihanblog.com/post/99">جدید ترین ها.....</a>
+									</h2>
+									<p class="date">
+										سه شنبه 21 خرداد 1392 23:38									</p>
+								</div>
+			
+								<b>نویسنده :</b>
+								<a href="http://zorro8461.mihanblog.com/post/author/681110">
+									zohre 								</a> 
+			        			
+								<br/>
+			
+											        			          	
+																
+
+
+<p align="center">
+
+
+<font size="3">
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font size="3">&nbsp;</font></p><div class="news_detail_text"><font size="3">نمایندگان سازمان بین المللی حفاظت از منابع طبیعی با همکاری انجمن ملی جغرافیایی طی سفری به گینه نو موفق به کشف گونه‌های جدید زیستی از جمله قورباغه پینوکیو شدند.</font></div><div class="news_detail_text"><br><font size="3">سفری اکتشافی به کوهستان فوجا در گینه نو که به مناسبت سال تنوع گونه های زیستی توسط سازمان بین المللی حفظ منابع طبیعی و انجمن ملی جغرافیایی انجام گرفت منجر به کشف تعدادی از گونه‌های جدید زیستی از قبیل قورباغه پینوکیو و شاه کبوترها شده است.<br>قورباغه پینوکیو: این قورباغه درختی زائده بلندی بر روی بینی اش دارد که در زمان فعالیت به سمت بالا متمایل شده و در زمان بی حرکتی به سمت پایین صورت قورباغه قرار می گیرد.</font></div><div class="news_detail_text"></div><font size="3"><div class="news_detail_text">&nbsp;</div><p align="center" class="news_detail_text"><a href="http://www.irannaz.com/group.htm" target="_blank"><font size="3"><img width="550" height="366" style="width: 415px; height: 360px;" alt="" src="http://www.irannaz.com/user_files/image/albom/heivanejadid/1.jpg" border="0"></font></a><div align="left"><a href="http://www.irannaz.com/group.htm" target="_blank"><font size="3">&nbsp;</font></a></div><p></p></font><p align="center" class="news_detail_text"></p><div class="news_detail_text" style="text-align: center;"><title></title><font size="3">&nbsp;</font><br><font size="3">قورباغه پینوکیو</font></div><div class="news_detail_text"><br><font size="3"> گمان می‌رود این قورباغه که به دلیل دماغ بلندش به پینوکیو شهرت یافته است. از خانواده Litoria باشد که به قورباغه های درختی استرالیایی شناخته می شوند.</font></div><div class="news_detail_text"><font size="3">&nbsp;</font></div><div class="news_detail_text" style="text-align: center;"><title></title><font size="3"> </font><a href="http://www.irannaz.com/group.htm" target="_blank"><font size="3"><img width="550" height="366" style="width: 444px; height: 360px;" alt="" src="http://www.irannaz.com/user_files/image/albom/heivanejadid/2.jpg" border="0"></font></a><br><font size="3">کانگوروی کوتوله (Wallaby)</font></div><div class="news_detail_text"><br><font size="3">این جاندار کوچکترین گونه از کانگوروها است که تا به حال در جهان کشف شده است. این جاندار که به تازگی کشف شده است کوچکترین نمونه از کانگوروهای کوتوله به شمار می رود و تنها سه گونه از این جانداران در جهان زندگی می‌کنند.</font></div><div class="news_detail_text"><font size="3">&nbsp;</font></div><div class="news_detail_text" style="text-align: center;"><title></title><font size="3"> </font><a href="http://www.irannaz.com/group.htm" target="_blank"><font size="3"><img width="550" height="366" style="width: 443px; height: 384px;" alt="" src="http://www.irannaz.com/user_files/image/albom/heivanejadid/3.jpg" border="0"></font></a><br><font size="3">شاه کبوتر</font></div><div class="news_detail_text"><br><font size="3"> این پرنده طی اکتشاف چهار بار دیده شده است اما از آنجا که پیش از این هرگز چنین جانداری دیده نشده بود نتیجه گرفته شد که تعداد زیادی از این نوع پرنده وجود ندارند. این پرنده گونه ای جدید از شاه کبوترها به شمار می رود که توسط پرهای خاکستری و سفید رنگش<br> از دیگر گونه ها تشخیص داده می‌شود.</font></div><div class="news_detail_text"><font size="3">&nbsp;</font></div><div class="news_detail_text" style="text-align: center;"><title></title><font size="3"> </font><a href="http://www.irannaz.com/group.htm" target="_blank"><font size="3"><img width="550" height="366" style="width: 465px; height: 360px;" alt="" src="http://www.irannaz.com/user_files/image/albom/heivanejadid/4.jpg" border="0"></font></a><br><font size="3">موش درختی</font></div><div class="news_detail_text"><br><font size="3"> یکی از گونه های جدید موشهای درختی که تنها در اندونزی، استرالیا و گینه نو یافت می‌شوند</font></div><div class="news_detail_text"><font size="3">&nbsp;</font></div><div class="news_detail_text" style="text-align: center;"><title></title><font size="3"> </font><a href="http://www.irannaz.com/group.htm" target="_blank"><font size="3"><img width="550" height="366" style="width: 475px; height: 360px;" alt="" src="http://www.irannaz.com/user_files/image/albom/heivanejadid/5.jpg" border="0"></font></a><br><font size="3">خفاش شکوفه</font></div><div class="news_detail_text"><br><font size="3"> این خفاش از دیگر گونه‌های جدید خانواده Syconycteris به شمار می‌رود که غذای خود را از شهد شکوفه های درختان در جنگلهای بارانی تامین می کند و از این رو به خفاش شکوفه شهرت یافته است.</font></div>
+
+
+
+
+
+
+
+
+
+
+
+												            	
+								<br>
+								
+																
+								<br>
+								<br>
+				            	
+								<a target="_self" href="javascript:newComment(99)">
+									<b>دیدگاه ها : </b>
+									<script>setCommentCnt(99)</script> نظرات								</a> 
+								
+								<br/>
+			
+													
+													        		 			
+								<b>آخرین ویرایش:</b>
+								چهارشنبه 22 خرداد 1392  12:55								
+								<br><br>
+							
+															<div>
+									<h2>
+										<a href="http://zorro8461.mihanblog.com/post/92">طوطی</a>
+									</h2>
+									<p class="date">
+										جمعه 13 بهمن 1391 20:30									</p>
+								</div>
+			
+								<b>نویسنده :</b>
+								<a href="http://zorro8461.mihanblog.com/post/author/681110">
+									zohre 								</a> 
+			        			
+								<br/>
+			
+											        			          	
+																
+
+<font color="#333333" size="2"><p><font color="#333333" size="2"><font color="#333333" size="2"><font color="#333333" size="2"><font color="#333333" size="2"><br>&nbsp;</font></font></font></font></p><font color="#333333" size="2"><font color="#333333" size="2"><font color="#333333" size="2"><font color="#333333" size="2"><p><font color="#333333" size="2"><font color="#333333" size="2"><font color="#333333" size="2">طوطی پرنده‌ای اغلب سبزرنگ و از راسته </font><a title="طوطی‌سانان" href="http://fa.wikipedia.org/wiki/%D8%B7%D9%88%D8%B7%DB%8C%E2%80%8C%D8%B3%D8%A7%D9%86%D8%A7%D9%86"><font color="#333333" size="2">طوطی‌سانان</font></a><font color="#333333" size="2">(Psittaciformes) است که توانایی تقلید آوای آدمی در آن قابل تحسین است. <br><br>طوطی‌ها عموما در نواحی گرم و مرطوب آفریقا و هند زیست می‌کنند. ۳۷۲ گونه از <br><br>پرندگان را که در ۸۶ جنس طبقه‌بندی می‌شوند، از راستهٔ طوطــی‌ها به‌شمار <br>می‌آورند. <br>این پرندگان بیشتر در نواحی گرمسیر استوایی زندگی می‌کنند <br></font></font></font><font color="#333333" size="2"><font color="#333333" size="2"></font></font></p><font color="#333333" size="2"><font color="#333333" size="2"><p><font color="#333333" size="2"></font></p><p><br><br><font color="#333333" size="2">واژه‌ی طوطی </font><a class="mw-redirect" title="معرب" href="http://fa.wikipedia.org/wiki/%D9%85%D8%B9%D8%B1%D8%A8"><font color="#333333" size="2">معرب</font></a><font color="#333333" size="2"> توتی است و معنای آن پرنده‌ای است سبز رنگ که به عرف آن را طوطا نامند و شکرشکن، <br><br><br>شکرفشان، شکرمقال، شکرین‌مقال، شیرین‌زبان، شیرین‌سخن، خوش نوا و خوش حرف <br><br>که همه اینها از صفات اوست. ناگفته نماند که در ادبیات فارسی و خصوصا در بین <br>اشعار <br>شعرایی چون مولوی و عطار از طوطی و صفاتش که غالبا به آمیخته با صفاتی <br>انسانی&nbsp; است، به نیکی یاد شده است.</font></p><p><br>&nbsp;</p><p><font color="#333333" size="2">بیشتر جمعیت طوطی‌ها در مناطق گرم و حاره‌ای و <br>همچنین در مناطق معتدل </font><a class="mw-redirect" title="نیمکره جنوبی" href="http://fa.wikipedia.org/wiki/%D9%86%DB%8C%D9%85%DA%A9%D8%B1%D9%87_%D8%AC%D9%86%D9%88%D8%A8%DB%8C"><font color="#333333" size="2">نیمکرهٔ جنوبی</font></a><font color="#333333" size="2"> <br><br><br>پراکنده شده‌ است. بیشترین تنوع گونه‌ای این راسته در امریکای جنوبی و <br>استرالاسیا(منطقه‌ای که شامل استرالیا و نیوزلند و جزیره‌های جنوب غربی اقیانوس <br>آرام می‌شود)است. از ویژگی‌های مورفولوژیکی طوطی‌ها که مختص این <br>راسته می‌باشد <br>می‌توان به نـــوک کـج و قوی، قامت راست، پاهای قوی و پاهای پنجه‌دار که حالت زیگو <br>داکتیل دارد اشاره کرد. رنگ اکثر طوطی‌ها سبز می‌باشد که این رنگ با رنگهای روشن <br>دیگر ترکیب شده است. گاهی نیز طوطی‌ها دارای چندیدن رنگ مختلف <br>هستند.<br></font></p><p><br>&nbsp;</p><p><font color="#333333" size="2">طوطی‌های کاکــل دار(کوکاتوها)دارای تنوع رنگی <br>از رنگ یـــکدست سفید تا یکدست سیاه هستند. ویژگی دیگر این خانواده وجود یک <br><br><br>کاکل متحرک از جنس پر بر روی سرشان است. همینطور، حالت کمی از دیمرفیسم <br>جنسی در این‌ گونه دیده می‌شود. طوطی کوچک وزنی به اندازه ۱۰ گرم و طولی به <br>اندازه‌ی ۸ سانتیمتر دارد در حالی که طوطی یاقوت به عنوان بزرگترین این راسته دارای <br>طول ۱ متر طول و وزنی حدودا ۴ کیلوگرم است.</font><font color="#333333" size="2">تغذیه در طوطی‌ها بیشتر از مواد گیاهی مانند دانه، تخم گیاهان، غنچه‌ها و <br>... <br>می‌باشد. قابل ذکر است که عدهٔ کوچکی از این راسته </font><a title="حشرات" href="http://fa.wikipedia.org/wiki/%D8%AD%D8%B4%D8%B1%D8%A7%D8%AA"><font color="#333333" size="2">حشرات</font></a><font color="#333333" size="2"> و حیوانات کوچک چون <br><br>موش های صحرایی را می‌خورند.</font></p><p><br>&nbsp;</p><p><font color="#333333" size="2">بیشتر طوطی‌ها در حفره‌های درختان و صخره‌ها لانه سازی می‌کنند، تخم‌های سفید رنگ می‌گذارند و جوجه‌های آشیان نشین <br>دارند. <br><br>طوطی‌ها چون عده‌ای از </font><a title="کلاغ" href="http://fa.wikipedia.org/wiki/%DA%A9%D9%84%D8%A7%D8%BA"><font color="#333333" size="2">کلاغ‌ها</font></a><font color="#333333" size="2"> (کلاغ سیاه و کلاغ کبود)، از با هوش‌ترین پرندگان در سطح جهان محسوب می‌شوند. <br>قدرت تقلید صدای انسان ‌در طوطی باعث شکار گونه‌های وحشی آن برای فروش به‌عنوان حیوان خانگی شده است.</font><font color="#333333" size="2">شکار طـوطـی‌هـای وحشی بـه‌مـنظور فـروش آنها و یا برای تــفریـح نه‌تنها باعث تخریب زیستگاهشان بلکه کاهش شمار آنها شده است. البته اداره‌ی حفاظت محیط زیست اخیراً اقداماتی را جهت مراقبت از زیستگاه این پرندگان زیبای در حال انقراض، انجام داده‌ است که باعث حفظ سایر گونه‌های این پرنده شده‌ است .</font></p><p></font></font></font></font></font></font></font>&nbsp;</p>
+
+
+
+												            	
+								<br>
+								
+																
+								<br>
+								<br>
+				            	
+								<a target="_self" href="javascript:newComment(92)">
+									<b>دیدگاه ها : </b>
+									<script>setCommentCnt(92)</script> نظرات								</a> 
+								
+								<br/>
+			
+													
+													        		 			
+								<b>آخرین ویرایش:</b>
+								جمعه 25 اسفند 1391  15:21								
+								<br><br>
+							
+															<div>
+									<h2>
+										<a href="http://zorro8461.mihanblog.com/post/89">گنجشک کوچولو...</a>
+									</h2>
+									<p class="date">
+										چهارشنبه 13 دی 1391 22:07									</p>
+								</div>
+			
+								<b>نویسنده :</b>
+								<a href="http://zorro8461.mihanblog.com/post/author/681110">
+									zohre 								</a> 
+			        			
+								<br/>
+			
+											        			          	
+																
+<font color="#000000"><font face="tahoma,arial,helvetica,sans-serif"><p><font color="#000000" size="3" face="tahoma,arial,helvetica,sans-serif"><font color="#000000"><font face="tahoma,arial,helvetica,sans-serif"><br><font color="#000000" size="3" face="tahoma,arial,helvetica,sans-serif">گنجشک&nbsp;به پرندگان خانوادهٔ گنجشکیان گفته می‌شود که خود در راستهٔ </font><a title="گنجشک‌سانان" href="http://fa.wikipedia.org/wiki/%DA%AF%D9%86%D8%AC%D8%B4%DA%A9%E2%80%8C%D8%B3%D8%A7%D9%86%D8%A7%D9%86"><font color="#000000" size="3" face="tahoma,arial,helvetica,sans-serif">گنجشک‌سانان</font></a><font color="#000000" size="3" face="tahoma,arial,helvetica,sans-serif"> می‌گنجند. </font><a title="گنجشک خانگی" href="http://fa.wikipedia.org/wiki/%DA%AF%D9%86%D8%AC%D8%B4%DA%A9_%D8%AE%D8%A7%D9%86%DA%AF%DB%8C"><font color="#000000" size="3" face="tahoma,arial,helvetica,sans-serif">گنجشک <br><br>خانگی</font></a><font color="#000000" size="3" face="tahoma,arial,helvetica,sans-serif"> معروفترین گونهٔ گنجشک است که در تعداد بسیار زیاد در تمامی قاره‌های جهان و عمدتأ در مناطق شهری زندگی می‌کند. گنجشک‌ها را نزدیک‌ترین حیوان وحشی به انسان توصیف می‌کنند. گنجشک پرنده‌ای است کوچک با منقار کلفت و مخروطی و پاهای نسبتاً کوتاه که اغلب پر و بال رنگارنگ ندارد. گنجشکان بیشتر بصورت اجتماعی بسر می‌برند و بطور دست‌جمعی زاد و ولد می‌کنند. پروازی نیرومند دارند. در بیشتر گونه‌ها </font><a class="mw-redirect" title="دودیسی جنسیتی" href="http://fa.wikipedia.org/wiki/%D8%AF%D9%88%D8%AF%DB%8C%D8%B3%DB%8C_%D8%AC%D9%86%D8%B3%DB%8C%D8%AA%DB%8C"><font color="#000000" size="3" face="tahoma,arial,helvetica,sans-serif">دودیسی جنسیتی</font></a><font color="#000000" size="3" face="tahoma,arial,helvetica,sans-serif"> (تفاوت نر و ماده) مشاهده می‌شود. در سوراخ‌های درختان، شکاف دیوار و صخره‌ها لانه <br>می‌سازند. بیشتر از دانه‌ها و مواد گیاهی و گاه جانوری تغذیه می‌کنند.</font></font></font></font></p><font color="#000000" size="3" face="tahoma,arial,helvetica,sans-serif"><font color="#000000"><font face="tahoma,arial,helvetica,sans-serif"><p><br><a class="image" href="http://commons.wikimedia.org/wiki/File:Sparrowchick.JPG?uselang=fa"><img class="thumbimage" alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Sparrowchick.JPG/220px-Sparrowchick.JPG" width="220" height="293" srcset="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Sparrowchick.JPG/330px-Sparrowchick.JPG 1.5x, http://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Sparrowchick.JPG/440px-Sparrowchick.JPG 2x"></a></p><h2><font face="tahoma,arial,helvetica,sans-serif"><font size="3"><font color="#000000"><span id=".D9.85.D9.88.D8.B3.D9.85_.D8.AA.D8.AE.D9.85.DA.AF.D8.B0.D8.A7.D8.B1.DB.8C" class="mw-headline">موسم تخمگذاری</span> </font></font></font></h2><p><font color="#000000" size="3" face="tahoma,arial,helvetica,sans-serif">موسم تخم گذاری و </font><a title="جفت‌گیری" href="http://fa.wikipedia.org/wiki/%D8%AC%D9%81%D8%AA%E2%80%8C%DA%AF%DB%8C%D8%B1%DB%8C"><font color="#000000" size="3" face="tahoma,arial,helvetica,sans-serif">جفت‌گیری</font></a><font color="#000000" size="3" face="tahoma,arial,helvetica,sans-serif"> گنجشکها معمولاً از نیمه فصل </font><a title="بهار" href="http://fa.wikipedia.org/wiki/%D8%A8%D9%87%D8%A7%D8%B1"><font color="#000000" size="3" face="tahoma,arial,helvetica,sans-serif">بهار</font></a><font color="#000000" size="3" face="tahoma,arial,helvetica,sans-serif"> آغاز می‌شود و تا اواخر پائیز <br>ادامه دارد. ماده از ۴ تا ۶ تخم سفید رنگ باعلائم سرخ ــ قهوه‌ای می‌گذارد. <br><br>گنجشکانی که در نواحی معتدل بسر می‌برند گاه بافرا رسیدن </font><a class="mw-redirect" title="پائیز" href="http://fa.wikipedia.org/wiki/%D9%BE%D8%A7%D8%A6%DB%8C%D8%B2"><font color="#000000" size="3" face="tahoma,arial,helvetica,sans-serif">پائیز</font></a><font color="#000000" size="3" face="tahoma,arial,helvetica,sans-serif"> و </font><a title="زمستان" href="http://fa.wikipedia.org/wiki/%D8%B2%D9%85%D8%B3%D8%AA%D8%A7%D9%86"><font color="#000000" size="3" face="tahoma,arial,helvetica,sans-serif">زمستان</font></a><font color="#000000" size="3" face="tahoma,arial,helvetica,sans-serif"> بسوی نواحی گرم مهاجرت <br>می‌کنند.</font></p></font></font></font></font></font>
+
+												            	
+								<br>
+								
+																
+								<br>
+								<br>
+				            	
+								<a target="_self" href="javascript:newComment(89)">
+									<b>دیدگاه ها : </b>
+									<script>setCommentCnt(89)</script> نظرات								</a> 
+								
+								<br/>
+			
+													
+													        		 			
+								<b>آخرین ویرایش:</b>
+								چهارشنبه 13 دی 1391  22:23								
+								<br><br>
+							
+															<div>
+									<h2>
+										<a href="http://zorro8461.mihanblog.com/post/88">یلداتون زمستونی!</a>
+									</h2>
+									<p class="date">
+										جمعه 1 دی 1391 00:00									</p>
+								</div>
+			
+								<b>نویسنده :</b>
+								<a href="http://zorro8461.mihanblog.com/post/author/681110">
+									zohre 								</a> 
+			        			
+								<br/>
+			
+											        			          	
+																
+<p>
+
+
+<font size="3">به همه دوستان شب خاطره انگیز یلدا رو تبریک می گم</font></p><p><font size="3">امید وارم لحظه های خوشی رو در کنار خانواده هاتون سپری کنید.</font></p><p>&nbsp;</p>
+
+												            	
+								<br>
+								
+																
+								<br>
+								<br>
+				            	
+								<a target="_self" href="javascript:newComment(88)">
+									<b>دیدگاه ها : </b>
+									<script>setCommentCnt(88)</script> نظرات								</a> 
+								
+								<br/>
+			
+													
+													        		 			
+								<b>آخرین ویرایش:</b>
+								جمعه 1 دی 1391  00:03								
+								<br><br>
+							
+															<div>
+									<h2>
+										<a href="http://zorro8461.mihanblog.com/post/87">آهو ( غزال)</a>
+									</h2>
+									<p class="date">
+										دوشنبه 20 آذر 1391 17:14									</p>
+								</div>
+			
+								<b>نویسنده :</b>
+								<a href="http://zorro8461.mihanblog.com/post/author/681110">
+									zohre 								</a> 
+			        			
+								<br/>
+			
+											        			          	
+																<P align=right><FONT color=#000000><FONT size=3><B>آهو</B> یا <B>غزال</B> شامل گونه‌های زیادی از بزکوهی و سرده غزال است و یا در گذشته چنین در نظر گرفته می‌شد. آهوها به عنوان جانورانی چابک شناخته می‌شوند. آن‌ها می‌توانند ناگهانی سرعت خود را به ۹۷ کیلومتر یا ۶۰ مایل در ساعت برساند و یا هنگام دویدن سرعت خود را در ۴۸ کیلومتر (۳۰ مایل) در ساعت نگه دارد.آهوها بیشتر در صحراها، مرغزارها (زمین‌های چمن) و </FONT></FONT><A title=ساوانا href="http://fa.wikipedia.org/wiki/%D8%B3%D8%A7%D9%88%D8%A7%D9%86%D8%A7"><FONT color=#000000 size=3>ساوانای</FONT></A><FONT color=#000000 size=3> </FONT><A title=آفریقا href="http://fa.wikipedia.org/wiki/%D8%A2%D9%81%D8%B1%DB%8C%D9%82%D8%A7"><FONT color=#000000 size=3>آفریقا</FONT></A><FONT color=#000000 size=3>، </FONT><A title="غرب آسیا" href="http://fa.wikipedia.org/wiki/%D8%BA%D8%B1%D8%A8_%D8%A2%D8%B3%DB%8C%D8%A7"><FONT color=#000000 size=3>جنوب غرب آسیا</FONT></A><FONT color=#000000 size=3>، </FONT><A title="آسیای میانه" href="http://fa.wikipedia.org/wiki/%D8%A2%D8%B3%DB%8C%D8%A7%DB%8C_%D9%85%DB%8C%D8%A7%D9%86%D9%87"><FONT color=#000000 size=3>آسیای میانه</FONT></A><FONT color=#000000 size=3> و </FONT><A title="شبه‌قاره هند" href="http://fa.wikipedia.org/wiki/%D8%B4%D8%A8%D9%87%E2%80%8C%D9%82%D8%A7%D8%B1%D9%87_%D9%87%D9%86%D8%AF"><FONT color=#000000 size=3>شبه‌قاره هند</FONT></A><FONT color=#000000 size=2><FONT size=3> دیده می‌شوند. این جانور بیشتر به صورت گله‌ای زندگی می‌کنند و از گیاهان نرم و لطیف و برگ‌ها می‌خورد و کمتر به گیاهان خشن رو می‌آورد.</FONT></P>
+<P align=center><FONT size=3><IMG style="WIDTH: 429px; HEIGHT: 236px" alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Slender-horned_gazelle_%28Cincinnati_Zoo%29.jpg/220px-Slender-horned_gazelle_%28Cincinnati_Zoo%29.jpg" width=220 height=165 srcset="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Slender-horned_gazelle_%28Cincinnati_Zoo%29.jpg/330px-Slender-horned_gazelle_%28Cincinnati_Zoo%29.jpg 1.5x, http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Slender-horned_gazelle_%28Cincinnati_Zoo%29.jpg/440px-Slender-horned_gazelle_%28Cincinnati_Zoo%29.jpg 2x"></FONT></P></FONT>
+<P><FONT color=#000000 size=3>آهوها اندام به نسبت کوچکی دارند. بلندی بیشتر آن‌ها تا شانه، میان ۶۱ تا ۱۱۰ سانتی متر (۲ تا ۳٫۵ پا) است و رنگ آن‌ها قهوه‌ای مایل به زرد است.</FONT></P>
+<P><FONT color=#000000 size=3>آهوها در سه سرده غزال، اودورکاس و نانجر دسته بندی می‌شوند. سرده غزال‌ها ۱۳ گونه دارند که چهار گونهٔ آن‌ها منقرض شده‌است (آهوی قرمز، آهوی عربی، آهوی ملکهٔ سبا و آهوی سعودی) و بیشتر آهوهایی که جان سالم به در برده‌اند در خطر نابودی اند. آن‌هایی که نزدیک ترین خویشاوندی را به سرده غزال‌ (غزال‌های اصلی) دارند عبارتند از آهوهای تبتی، </FONT><A class=new title="آهوی مغولی (صفحه وجود ندارد)" href="http://fa.wikipedia.org/w/index.php?title=%D8%A2%D9%87%D9%88%DB%8C_%D9%85%D8%BA%D9%88%D9%84%DB%8C&amp;action=edit&amp;redlink=1&amp;preload=%D8%A7%D9%84%DA%AF%D9%88:%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%D9%85%D9%82%D8%A7%D9%84%D9%87/%D8%A7%D8%B3%D8%AA%D8%AE%D9%88%D8%A7%D9%86%E2%80%8C%D8%A8%D9%86%D8%AF%DB%8C&amp;editintro=%D8%A7%D9%84%DA%AF%D9%88:%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%D9%85%D9%82%D8%A7%D9%84%D9%87/%D8%A7%D8%AF%DB%8C%D8%AA%E2%80%8C%D9%86%D9%88%D8%AA%DB%8C%D8%B3&amp;summary=%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%DB%8C%DA%A9+%D9%85%D9%82%D8%A7%D9%84%D9%87+%D9%86%D9%88+%D8%A7%D8%B2+%D8%B7%D8%B1%DB%8C%D9%82+%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF%DA%AF%D8%B1&amp;nosummary=&amp;prefix=&amp;minor=&amp;create=%D8%AF%D8%B1%D8%B3%D8%AA+%DA%A9%D8%B1%D8%AF%D9%86+%D9%85%D9%82%D8%A7%D9%84%D9%87+%D8%AC%D8%AF%DB%8C%D8%AF"><FONT color=#000000 size=3>مغولی</FONT></A><FONT color=#000000 size=3> (گونه‌هایی از نژاد پروکاپرا) </FONT><A class=new title="سیاه آسیایی (صفحه وجود ندارد)" href="http://fa.wikipedia.org/w/index.php?title=%D8%B3%DB%8C%D8%A7%D9%87_%D8%A2%D8%B3%DB%8C%D8%A7%DB%8C%DB%8C&amp;action=edit&amp;redlink=1&amp;preload=%D8%A7%D9%84%DA%AF%D9%88:%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%D9%85%D9%82%D8%A7%D9%84%D9%87/%D8%A7%D8%B3%D8%AA%D8%AE%D9%88%D8%A7%D9%86%E2%80%8C%D8%A8%D9%86%D8%AF%DB%8C&amp;editintro=%D8%A7%D9%84%DA%AF%D9%88:%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%D9%85%D9%82%D8%A7%D9%84%D9%87/%D8%A7%D8%AF%DB%8C%D8%AA%E2%80%8C%D9%86%D9%88%D8%AA%DB%8C%D8%B3&amp;summary=%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%DB%8C%DA%A9+%D9%85%D9%82%D8%A7%D9%84%D9%87+%D9%86%D9%88+%D8%A7%D8%B2+%D8%B7%D8%B1%DB%8C%D9%82+%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF%DA%AF%D8%B1&amp;nosummary=&amp;prefix=&amp;minor=&amp;create=%D8%AF%D8%B1%D8%B3%D8%AA+%DA%A9%D8%B1%D8%AF%D9%86+%D9%85%D9%82%D8%A7%D9%84%D9%87+%D8%AC%D8%AF%DB%8C%D8%AF"><FONT color=#000000 size=3>سیاه آسیایی</FONT></A><FONT color=#000000 size=3> یا سرویکاپرا، </FONT><A title=ایمپالا href="http://fa.wikipedia.org/wiki/%D8%A7%DB%8C%D9%85%D9%BE%D8%A7%D9%84%D8%A7"><FONT color=#000000 size=3>ایمپالای</FONT></A><FONT color=#000000 size=3> و </FONT><A class=new title="اسپرینگباک (صفحه وجود ندارد)" href="http://fa.wikipedia.org/w/index.php?title=%D8%A7%D8%B3%D9%BE%D8%B1%DB%8C%D9%86%DA%AF%D8%A8%D8%A7%DA%A9&amp;action=edit&amp;redlink=1&amp;preload=%D8%A7%D9%84%DA%AF%D9%88:%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%D9%85%D9%82%D8%A7%D9%84%D9%87/%D8%A7%D8%B3%D8%AA%D8%AE%D9%88%D8%A7%D9%86%E2%80%8C%D8%A8%D9%86%D8%AF%DB%8C&amp;editintro=%D8%A7%D9%84%DA%AF%D9%88:%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%D9%85%D9%82%D8%A7%D9%84%D9%87/%D8%A7%D8%AF%DB%8C%D8%AA%E2%80%8C%D9%86%D9%88%D8%AA%DB%8C%D8%B3&amp;summary=%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%DB%8C%DA%A9+%D9%85%D9%82%D8%A7%D9%84%D9%87+%D9%86%D9%88+%D8%A7%D8%B2+%D8%B7%D8%B1%DB%8C%D9%82+%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF%DA%AF%D8%B1&amp;nosummary=&amp;prefix=&amp;minor=&amp;create=%D8%AF%D8%B1%D8%B3%D8%AA+%DA%A9%D8%B1%D8%AF%D9%86+%D9%85%D9%82%D8%A7%D9%84%D9%87+%D8%AC%D8%AF%DB%8C%D8%AF"><FONT color=#000000 size=3>اسپرینگباک</FONT></A><FONT color=#000000 size=3> آفریقایی است.</FONT></P>
+<P><FONT color=#000000 size=3>یکی از انواع معروف آفریقایی آهوها، </FONT><A class=mw-redirect title="آهوی تامسون" href="http://fa.wikipedia.org/wiki/%D8%A2%D9%87%D9%88%DB%8C_%D8%AA%D8%A7%D9%85%D8%B3%D9%88%D9%86"><FONT color=#000000 size=3>آهوی تامسون</FONT></A><FONT color=#000000 size=3> است (<I>تامسون اودورکاس</I>) بلندی آن‌ها تا شانه ۵۲ تا ۶۷ سانتی متر (۲۰ تا ۲۶ اینچ) و رنگ آن‌ها قهوه‌ای و سپید همراه با یک نوار سیاه‌است. نرهای آن‌ها شاخ‌های بلند و بیشتر خمیده دارند. آرام تر می‌دوند ولی پرش‌های بلندی پیش از گریز دارند. این جانور در خطر حیوانات درنده مانند </FONT><A title="شیر (گربه‌سان)" href="http://fa.wikipedia.org/wiki/%D8%B4%DB%8C%D8%B1_(%DA%AF%D8%B1%D8%A8%D9%87%E2%80%8C%D8%B3%D8%A7%D9%86)"><FONT color=#000000 size=3>شیرها</FONT></A><FONT color=#000000 size=3> یا </FONT><A title=یوزپلنگ href="http://fa.wikipedia.org/wiki/%DB%8C%D9%88%D8%B2%D9%BE%D9%84%D9%86%DA%AF"><FONT color=#000000 size=3>یوزپلنگ‌ها</FONT></A><FONT color=#000000 size=3> است.</FONT></P>
+<P align=center><A class=image href="http://fa.wikipedia.org/wiki/%D9%BE%D8%B1%D9%88%D9%86%D8%AF%D9%87:Gazella_thomsonii_-_Disney%27s_Animal_Kingdom_Lodge,_Orlando,_Florida,_USA_-_20100916.jpg"><IMG style="WIDTH: 375px; HEIGHT: 207px" class=thumbimage alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gazella_thomsonii_-_Disney%27s_Animal_Kingdom_Lodge%2C_Orlando%2C_Florida%2C_USA_-_20100916.jpg/220px-Gazella_thomsonii_-_Disney%27s_Animal_Kingdom_Lodge%2C_Orlando%2C_Florida%2C_USA_-_20100916.jpg" width=220 height=181 srcset="http://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gazella_thomsonii_-_Disney%27s_Animal_Kingdom_Lodge%2C_Orlando%2C_Florida%2C_USA_-_20100916.jpg/330px-Gazella_thomsonii_-_Disney%27s_Animal_Kingdom_Lodge%2C_Orlando%2C_Florida%2C_USA_-_20100916.jpg 1.5x, http://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Gazella_thomsonii_-_Disney%27s_Animal_Kingdom_Lodge%2C_Orlando%2C_Florida%2C_USA_-_20100916.jpg/440px-Gazella_thomsonii_-_Disney%27s_Animal_Kingdom_Lodge%2C_Orlando%2C_Florida%2C_USA_-_20100916.jpg 2x"></A></P>
+<P><FONT color=#000000 size=3>واژهٔ <I>Gazelle</I> یا <B>غزال</B> در ریشهٔ عربی است که نخستین بار وارد زبان فرانسوی میانه و سپس در نزدیکی‌های سال ۱۶۰۰ از فرانسوی وارد انگلیسی شد. مردمان عرب به صورت سنّتی به شکار آهو می‌رفتند. این جانور در ادبیات عرب نماد زیبایی زنان بوده‌است . برخی زبان شناسان بر این باورند که واژهٔ </FONT><A title=غزل href="http://fa.wikipedia.org/wiki/%D8%BA%D8%B2%D9%84"><FONT color=#000000 size=3>غزل</FONT></A><FONT color=#000000 size=3> که گونه‌ای شعر در ادبیات عاشقانه‌است بیشتر به دلیل همانندسازی زیبایی معشوق و آهو به یکدیگر، این چنین نامگذاری شده‌است. در داستان‌ها گفته می‌شود که </FONT><A title=خلیفه href="http://fa.wikipedia.org/wiki/%D8%AE%D9%84%DB%8C%D9%81%D9%87"><FONT color=#000000 size=3>خلیفه</FONT></A><FONT color=#000000 size=3> </FONT><A title="عبدالملک مروان" href="http://fa.wikipedia.org/wiki/%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%85%D9%84%DA%A9_%D9%85%D8%B1%D9%88%D8%A7%D9%86"><FONT color=#000000 size=3>عبدالملک مروان</FONT></A><FONT color=#000000 size=3> (۶۴۶ تا ۷۰۵) یک بار یک آهو را به دلیل شباهتش به معشوقش آزاد کرده‌است</FONT></P>
+<P align=center><FONT color=#000000 size=2></FONT>&nbsp;</P>												            	
+								<br>
+								
+																
+								<br>
+								<br>
+				            	
+								<a target="_self" href="javascript:newComment(87)">
+									<b>دیدگاه ها : </b>
+									<script>setCommentCnt(87)</script> نظرات								</a> 
+								
+								<br/>
+			
+													
+													        		 			
+								<b>آخرین ویرایش:</b>
+								-  -								
+								<br><br>
+							
+															<div>
+									<h2>
+										<a href="http://zorro8461.mihanblog.com/post/86">اسب (horse)</a>
+									</h2>
+									<p class="date">
+										پنجشنبه 9 آذر 1391 22:28									</p>
+								</div>
+			
+								<b>نویسنده :</b>
+								<a href="http://zorro8461.mihanblog.com/post/author/681110">
+									zohre 								</a> 
+			        			
+								<br/>
+			
+											        			          	
+																
+<font color="#000000" size="3"><p><font color="#000000" size="3"><font color="#000000" size="3"><font color="#000000" size="3">واژه <b>اسب</b> (Aspa) (آفریده نیک) که در </font><a title="اوستا" href="http://fa.wikipedia.org/wiki/%D8%A7%D9%88%D8%B3%D8%AA%D8%A7"><font color="#000000" size="3">اوستا</font></a><font color="#000000" size="3"> آمده‌است، خود یک واژه، از دوره پیش از تاریخ و به احتمال زیاد </font><a title="ماد" href="http://fa.wikipedia.org/wiki/%D9%85%D8%A7%D8%AF"><font color="#000000" size="3">مادی</font></a><font color="#000000" size="3">(</font><a title="پارت" href="http://fa.wikipedia.org/wiki/%D9%BE%D8%A7%D8%B1%D8%AA"><font color="#000000" size="3">پارتی</font></a><font color="#000000" size="3">، اوستایی)است، و در پارسی باستان (asa)بوده و در </font><a title="سانسکریت" class="mw-redirect" href="http://fa.wikipedia.org/wiki/%D8%B3%D8%A7%D9%86%D8%B3%DA%A9%D8%B1%DB%8C%D8%AA"><font color="#000000" size="3">سانسکریت</font></a><font color="#000000" size="3">(acva) آمده‌است. و بسیاری از نامهای اساطیری در متون کهن از این واژه گرفته شده‌است، به مانند: «</font><a title="اسپریس (صفحه وجود ندارد)" class="new" href="http://fa.wikipedia.org/w/index.php?title=%D8%A7%D8%B3%D9%BE%D8%B1%DB%8C%D8%B3&amp;action=edit&amp;redlink=1&amp;preload=%D8%A7%D9%84%DA%AF%D9%88:%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%D9%85%D9%82%D8%A7%D9%84%D9%87/%D8%A7%D8%B3%D8%AA%D8%AE%D9%88%D8%A7%D9%86%E2%80%8C%D8%A8%D9%86%D8%AF%DB%8C&amp;editintro=%D8%A7%D9%84%DA%AF%D9%88:%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%D9%85%D9%82%D8%A7%D9%84%D9%87/%D8%A7%D8%AF%DB%8C%D8%AA%E2%80%8C%D9%86%D9%88%D8%AA%DB%8C%D8%B3&amp;summary=%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%DB%8C%DA%A9+%D9%85%D9%82%D8%A7%D9%84%D9%87+%D9%86%D9%88+%D8%A7%D8%B2+%D8%B7%D8%B1%DB%8C%D9%82+%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF%DA%AF%D8%B1&amp;nosummary=&amp;prefix=&amp;minor=&amp;create=%D8%AF%D8%B1%D8%B3%D8%AA+%DA%A9%D8%B1%D8%AF%D9%86+%D9%85%D9%82%D8%A7%D9%84%D9%87+%D8%AC%D8%AF%DB%8C%D8%AF"><font color="#000000" size="3">اسپریس</font></a><font color="#000000" size="3">» به معنی </font><a title="میدان اسب دوانی (صفحه وجود ندارد)" class="new" href="http://fa.wikipedia.org/w/index.php?title=%D9%85%DB%8C%D8%AF%D8%A7%D9%86_%D8%A7%D8%B3%D8%A8_%D8%AF%D9%88%D8%A7%D9%86%DB%8C&amp;action=edit&amp;redlink=1&amp;preload=%D8%A7%D9%84%DA%AF%D9%88:%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%D9%85%D9%82%D8%A7%D9%84%D9%87/%D8%A7%D8%B3%D8%AA%D8%AE%D9%88%D8%A7%D9%86%E2%80%8C%D8%A8%D9%86%D8%AF%DB%8C&amp;editintro=%D8%A7%D9%84%DA%AF%D9%88:%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%D9%85%D9%82%D8%A7%D9%84%D9%87/%D8%A7%D8%AF%DB%8C%D8%AA%E2%80%8C%D9%86%D9%88%D8%AA%DB%8C%D8%B3&amp;summary=%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF+%DB%8C%DA%A9+%D9%85%D9%82%D8%A7%D9%84%D9%87+%D9%86%D9%88+%D8%A7%D8%B2+%D8%B7%D8%B1%DB%8C%D9%82+%D8%A7%DB%8C%D8%AC%D8%A7%D8%AF%DA%AF%D8%B1&amp;nosummary=&amp;prefix=&amp;minor=&amp;create=%D8%AF%D8%B1%D8%B3%D8%AA+%DA%A9%D8%B1%D8%AF%D9%86+%D9%85%D9%82%D8%A7%D9%84%D9%87+%D8%AC%D8%AF%DB%8C%D8%AF"><font color="#000000" size="3">میدان اسب دوانی</font></a><font color="#000000" size="3"> <br>و «</font><a title="اسپست" class="mw-redirect" href="http://fa.wikipedia.org/wiki/%D8%A7%D8%B3%D9%BE%D8%B3%D8%AA"><font color="#000000" size="3">اسپست</font></a><font color="#000000" size="3">» به معنای یونجه که با تلفظی متفاوت به برخی زبانهای دیگر منتقل شده‌است.</font><br></font></font></p><p><font color="#000000" size="3"><font color="#000000" size="3"><font color="#000000" size="3">نام اسب همواره با واژه‌هایی مانند چابکی همراه بوده‌است. پیشینیان برای اسب‌های خود احترام بسیاری قائل بودند به گونه‌ای که صاحب اسب، نیاکان اسب نژادین خود را تا ۱۲ نسل پشت می‌دانست و به هنگام مرگ <br>اسبش به شدت غمگین می‌شد.<sup> </sup>همچنین اسب را جانوری نجیب نیز می‌شناسند. ولی در <br>هنگام خشم اسب نزدیکی به او بسیار خطرناک است.</font></font></font></p><p><font color="#000000" size="3"><font color="#000000" size="3"><br>&nbsp;</font></font></p><li><font color="#000000" size="3"><font color="#000000" size="3"><font size="3"><font color="#000000">اَبرَش: اسبی که در پوستش لکه‌هایی به <br><br><br>غیر از رنگ اصلی‌اش وجود داشته باشد.</font></font><br><br><br></font></font><li><font color="#000000" size="3"><font color="#000000" size="3"><font color="#000000" size="3">باره یا بارگی: به معنی مطلق اسب گفته می‌شود و <br>ربطی به باربری ندارد.</font><br><br></font></font><li><font color="#000000" size="3"><font color="#000000" size="3"><font color="#000000" size="3">بالاد و بالاده: اسب تندرو یا اسب یدکی.</font><br><br></font></font><li><font color="#000000" size="3"><font color="#000000" size="3"><font color="#000000" size="3">بوز: اسب نیله (کبودرنگ).</font><br><br></font></font><li><font color="#000000" size="3"><font color="#000000" size="3"><font color="#000000" size="3">توسن: اسب سرکش.</font><br><br></font></font><li><font color="#000000" size="3"><font color="#000000" size="3"><font color="#000000" size="3">جُرده: اسب </font><a title="اخته" class="mw-redirect" href="http://fa.wikipedia.org/wiki/%D8%A7%D8%AE%D8%AA%D9%87"><font color="#000000" size="3">اخته</font></a><font color="#000000" size="3">.</font><br><br></font></font><li><font color="#000000" size="3"><font color="#000000" size="3"><font color="#000000" size="3">چرمه: کلا به معنی اسب، یا اسب سپید یا اسبی که <br><br>دست و پایش سپید باشد.</font><br><br></font></font><li><font color="#000000" size="3"><font color="#000000" size="3"><font color="#000000" size="3">خنگ: اسب سپید.</font><br><br></font></font><li><font color="#000000" size="3"><font color="#000000" size="3"><font color="#000000" size="3">سمند: اسب زرد.</font><br><br></font></font><li><font color="#000000" size="3"><font color="#000000" size="3"><font size="3"><font color="#000000">شولک: اسب <br>تیزرفتار</font></font><br><br></font></font><li><font color="#000000" size="3"><font color="#000000" size="3"><font color="#000000" size="3">نَوَند: اسب تندرو.</font><br><br></font></font><li><font color="#000000" size="3"><font color="#000000" size="3"><font color="#000000" size="3">یَکران: اسب نژاده و نجیب.</font><br><p><a title="عمر خیام" class="mw-redirect" href="http://fa.wikipedia.org/wiki/%D8%B9%D9%85%D8%B1_%D8%AE%DB%8C%D8%A7%D9%85"><font color="#000000" size="3">عمر خیام</font></a><font color="#000000" size="3"> در کتاب </font><a title="نوروزنامه" href="http://fa.wikipedia.org/wiki/%D9%86%D9%88%D8%B1%D9%88%D8%B2%D9%86%D8%A7%D9%85%D9%87"><font color="#000000" size="3">نوروزنامه</font></a><font color="#000000" size="3"> نام گونه‌های اسب را چنین بیان می‌کند:</font><br></p></font></font></li><ul><li><font color="#000000" size="3"><font color="#000000" size="3"><font size="3"><font color="#000000">الوس‌چرمه، سرخ‌چرمه، تازی‌چرمه، خنگ، <br><br><br>بادخنگ، مگس‌خنگ، سبزخنگ، پیسهٔ کمیت، کمیت، شبدیز، خورشید، گور سرخ، <br>زردرخش، <br><br>سیارخش، خرماگون، چشینه، شولک، پیسه، ابرگون، خاک‌رنگ، دیزه، <br>بهگون، میگون،&nbsp; بادروی، <br>گلگون، ارغون، بهارگون، آبگون، نیلگون، ابرکاس، باوبار، <br>سپیدزرده، <br>بورسار، <br>بنفشه‌گون، ادس، زاغ‌چشم، سبزپوست، سیمگون، ابلق، سپید، <br><br>سمند.</font></font></font></font></li></ul></font>
+
+												            	
+								<br>
+								
+																
+								<br>
+								<br>
+				            	
+								<a target="_self" href="javascript:newComment(86)">
+									<b>دیدگاه ها : </b>
+									<script>setCommentCnt(86)</script> نظرات								</a> 
+								
+								<br/>
+			
+													
+													        		 			
+								<b>آخرین ویرایش:</b>
+								پنجشنبه 16 خرداد 1392  00:01								
+								<br><br>
+							
+															<div>
+									<h2>
+										<a href="http://zorro8461.mihanblog.com/post/85">انکسر ظهری .... ( پشتم شکست با رفتنت عباس من .....)</a>
+									</h2>
+									<p class="date">
+										شنبه 4 آذر 1391 14:45									</p>
+								</div>
+			
+								<b>نویسنده :</b>
+								<a href="http://zorro8461.mihanblog.com/post/author/681110">
+									zohre 								</a> 
+			        			
+								<br/>
+			
+											        			          	
+																<FONT size=3>در کلاس عاشقی عباس غوغا می کند <BR><BR>در دل هر عاشقی عباس مأوا می کند <BR><BR>هر کسی خواهد رود در مکتب عشق حسین <BR><BR>ثبت نامش را فقط عباس امضاء می کند<BR><BR>تاسوعا روز قمر بنی هاشم تسلیت باد<BR></FONT>												            	
+								<br>
+								
+																
+								<br>
+								<br>
+				            	
+								<a target="_self" href="javascript:newComment(85)">
+									<b>دیدگاه ها : </b>
+									<script>setCommentCnt(85)</script> نظرات								</a> 
+								
+								<br/>
+			
+													
+													        		 			
+								<b>آخرین ویرایش:</b>
+								شنبه 4 آذر 1391  14:49								
+								<br><br>
+							
+															<div>
+									<h2>
+										<a href="http://zorro8461.mihanblog.com/post/84">شیر کوهی (پوما)</a>
+									</h2>
+									<p class="date">
+										پنجشنبه 27 مهر 1391 21:47									</p>
+								</div>
+			
+								<b>نویسنده :</b>
+								<a href="http://zorro8461.mihanblog.com/post/author/681110">
+									zohre 								</a> 
+			        			
+								<br/>
+			
+																	<b>ارسال شده در:</b>
+																			<a href="http://zorro8461.mihanblog.com/post/category/9">
+											مقالات علمی										</a>،
+												              	  		     
+									<br>
+											        			          	
+																<P><FONT color=#333333 size=3 face=tahoma,arial,helvetica,sans-serif>شیر کوهی یا پوما (نام علمی: <I>Puma concolor</I>) جانوری مهره‌دار از رده </FONT><A title=پستانداران href="http://fa.wikipedia.org/wiki/%D9%BE%D8%B3%D8%AA%D8%A7%D9%86%D8%AF%D8%A7%D8%B1%D8%A7%D9%86"><FONT color=#333333 size=3 face=tahoma,arial,helvetica,sans-serif>پستانداران</FONT></A><FONT color=#333333 size=3 face=tahoma,arial,helvetica,sans-serif>، راسته </FONT><A class=mw-redirect title=گوشتخواران href="http://fa.wikipedia.org/wiki/%DA%AF%D9%88%D8%B4%D8%AA%D8%AE%D9%88%D8%A7%D8%B1%D8%A7%D9%86"><FONT color=#333333 size=3 face=tahoma,arial,helvetica,sans-serif>گوشتخواران</FONT></A><FONT color=#333333 size=3 face=tahoma,arial,helvetica,sans-serif>، خانواده </FONT><A title=گربه‌سانان href="http://fa.wikipedia.org/wiki/%DA%AF%D8%B1%D8%A8%D9%87%E2%80%8C%D8%B3%D8%A7%D9%86%D8%A7%D9%86"><FONT color=#333333 size=3 face=tahoma,arial,helvetica,sans-serif>گربه‌سانان</FONT></A><FONT color=#333333 size=3 face=tahoma,arial,helvetica,sans-serif> است. نام دیگر شیر کوهی، پلنگ آمریکایی می‌باشد.</FONT></P>
+<P><FONT color=#333333 size=3 face=tahoma,arial,helvetica,sans-serif>شیر کوهی در بین گربه‌سانان کوچک که می‌توانند خرخر کنند ولی قادر به نعره کشیدن نیستند، بزرگ‌ترین جثه را دارد. شیر کوهی یک شکارچی تنها می‌باشد که در پگاه و شامگاه بیشترین فعالیت را دارد.</FONT></P>
+<P><FONT color=#333333 size=3 face=tahoma,arial,helvetica,sans-serif>هر شیر کوهی قلمرو خاص خود را دارد. آنها به آرامی به طعمه خود نزدیک می‌شوند و بعد از روی یک درخت یا سنگ به روی شکار می‌پرند. آنها طعمه خود را به‌وسیله </FONT><A class=mw-redirect title=پنجه href="http://fa.wikipedia.org/wiki/%D9%BE%D9%86%D8%AC%D9%87"><FONT color=#333333 size=3 face=tahoma,arial,helvetica,sans-serif>پنجه‌های</FONT></A><FONT color=#333333 size=3 face=tahoma,arial,helvetica,sans-serif> بسیار تیز خود نگه می‌دارند و به‌وسیله یک ضربه روی گردن، طعمه را می‌کشند.</FONT></P>
+<P align=center><A class=image href="http://fa.wikipedia.org/wiki/%D9%BE%D8%B1%D9%88%D9%86%D8%AF%D9%87:Cougar_closeup.jpg"><IMG style="WIDTH: 489px; HEIGHT: 233px" alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Cougar_closeup.jpg/250px-Cougar_closeup.jpg" width=250 height=187></A></P>												            	
+								<br>
+								
+																
+								<br>
+								<br>
+				            	
+								<a target="_self" href="javascript:newComment(84)">
+									<b>دیدگاه ها : </b>
+									<script>setCommentCnt(84)</script> نظرات								</a> 
+								
+								<br/>
+			
+													
+													        		 			
+								<b>آخرین ویرایش:</b>
+								-  -								
+								<br><br>
+							
+															<div>
+									<h2>
+										<a href="http://zorro8461.mihanblog.com/post/77"> صبح بچه دانشگاهی ایرونی </a>
+									</h2>
+									<p class="date">
+										چهارشنبه 26 مهر 1391 23:06									</p>
+								</div>
+			
+								<b>نویسنده :</b>
+								<a href="http://zorro8461.mihanblog.com/post/author/681110">
+									zohre 								</a> 
+			        			
+								<br/>
+			
+																	<b>ارسال شده در:</b>
+																			<a href="http://zorro8461.mihanblog.com/post/category/8">
+											متفرقه از همه جا										</a>،
+												              	  		     
+									<br>
+											        			          	
+																<A class=postlink href="http://www.pic1.iran-forum.ir/"><IMG alt="" src="http://www.pic1.iran-forum.ir/images/up9/63613359209940516415.jpg"></A> 												            	
+								<br>
+								
+																
+								<br>
+								<br>
+				            	
+								<a target="_self" href="javascript:newComment(77)">
+									<b>دیدگاه ها : </b>
+									<script>setCommentCnt(77)</script> نظرات								</a> 
+								
+								<br/>
+			
+													
+													        		 			
+								<b>آخرین ویرایش:</b>
+								چهارشنبه 26 مهر 1391  22:44								
+								<br><br>
+							
+															<div>
+									<h2>
+										<a href="http://zorro8461.mihanblog.com/post/67">I want a wife....</a>
+									</h2>
+									<p class="date">
+										یکشنبه 2 مهر 1391 14:31									</p>
+								</div>
+			
+								<b>نویسنده :</b>
+								<a href="http://zorro8461.mihanblog.com/post/author/681110">
+									zohre 								</a> 
+			        			
+								<br/>
+			
+																	<b>ارسال شده در:</b>
+																			<a href="http://zorro8461.mihanblog.com/post/category/8">
+											متفرقه از همه جا										</a>،
+												              	  		     
+									<br>
+											        			          	
+																
+<span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt; mso-fareast-font-family: "Times New Roman"; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;'><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br>“I want a Wife” <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">اثر جودی برادی</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>» <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="FA">۱۳۹۰</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;' dir="rtl" lang="FA"> </span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">بهمن </span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="FA">۲۸ </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">آتوسا صدر </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">من جزو آن دسته از آدم‌هایی هستم كه به آن‌ها «عیال» می‌گویند</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">البته «مادر» هم هستم</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">چند وقت پیش در یك مهمانی آقایی از دوستان رادیدم ، كه تازگی از همسرش طلاق گرفته است . می‌گفت باز می‌خواهد تجدید فراش كند</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">با خود اندیشیدم «چه فكر خوبی، راستی كیست كه زن نخواهد؟</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>» <br><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">راستش را بخواهید «من هم زن می‌خواهم.» چرا؟ </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">جوابش ساده است</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>: <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">می‌خواهم دوباره درس خواندن را شروع كنم و منبع درآمدی برای خودم و (در صورت لزوم) خانواده‌ام ایجاد كنم</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">زنی می‌خواهم كه زحمت‌كش باشد و مرا به دانش‌گاه بفرستد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">و در حالی كه من در آرامش درس می‌خوانم، از فرزندانمان مراقبت كند</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">به درس و مشق و بهداشت آن‌ها برسد. آن‌ها را همیشه تمیز و سالم نگه دارد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">به زندگی شخصی و اجتماعی آن‌ها برسد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">آن‌ها را به اماكن اجتماعی (پارك، موزه، باغ وحش) ببرد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">اگر بیمار شدند، از آن‌ها مراقبت كند</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">نگذارد بیماری آن‌ها مانع تمركز من شود</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">شاغل باشد و درآمد قابل توجهی را به خانه بیاورد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">درآمدش را صرف من و فرزندانمان كند</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">برای فرزندانمان از كارش بزند</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">البته شاید این كار از درآمدش بكاهد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">اما مشكلی نیست من تاب میاورم</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br><br><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">زنی می‌خواهم كه نیازهای فردی مرا ارج نهد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">خانه را مرتب و پاكیزه نگه دارد. به بی‌نظمی‌هایم سامان دهد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">لباس‌هایم را بشوید. اتو كند. تا كند. برایم لباس نو بخرد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">وسایل شخصیم را مرتب كند تا راحت پیدایشان كنم</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">آشپز چیره‌ای باشد. خرید كند و غذاهای لذیذ بپزد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">وقتی به مسافرت می‌روم هم‌راهم باشد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">محیط را برای تفریح و استراحتم آماده كند</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">از كار و زندگیش شكایت نكند</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">شنونده‌ی خوبی باشد. به حرفهایم گوش دهد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">در مشكلات درسی به من كمك كند. تكالیف درسیم را انجام دهد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">وقتی درسم تمام شد و شغل مناسب پیدا كردم، شغلش را رها كند</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">در خانه بماند و از بچه‌ها مراقبت كند</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br><br><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">زنی می‌خواهم كه به زندگی اجتماعی من برسد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">وقتی به مهمانی دعوت می‌شویم بچه‌ها را نیاورد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">هروقت مهمان دعوت می‌كنم با روی گشاده‌پذیرای آن‌ها باشد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">با سكوت محبّت‌آمیزش بحث‌ها و گفت‌گوهای ما را تایید كند</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">بچه‌ها را زودتر بخواباند كه مزاحم من و مهمانانم نشوند</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">از مهمانانم پذیرایی كند. ظرف‌های خالی را از مقابل ما بردارد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">زنی می‌خواهم كه نیازهای جنسی مرا درك كند</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">حداكثر لذت جنسی را به من بدهد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">همیشه مطمئن شود كه ارضا شده‌ام</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">به نیازهای جنسی خود شاخ و برگ ندهد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">بی‌میلی مرا درك كند</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">مسوولیت كامل كنترل بارداری را بر عهده بگیرد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">من بچه‌ی اضافی نمی‌خواهم</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">به من وفادار بماند. بداند كه زندگی پرمشغله‌ی من جایی برای حسادت ندارد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">درك كند كه ممكن است بیش از یك هم‌خوابه اختیار كنم. چون همیشه به اجتماع نیاز دارم</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">آزادم بگذارد كه اگر دیگری را مناسب‌تر از او دیدم، او را جای‌گزین كنم</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">بعد از طلاق مسوولیت بچه‌ها را بپذیرد</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">چون می‌خواهم زندگی جدیدی را شروع كنم وقتی برای بچه داری ندارم</span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'>. <br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">خودتان قضاوت كنید. شما جای من بودید زن نمی‌خواستید؟ </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br><br><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">زن سینه‌های برجسته نیست </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">موی مش كرده </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">ابروی برداشته </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">لبانِ قرمز نیست </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">زن لباسِ سفید </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br>... </span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">شب با شكوه عروسی </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">بوی خوشِ قرمه سبزی </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">هوسِ شب‌های جمعه </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">قرار‌هایِ تاریكی‌ ، كوچه پشتی‌، تویِ یك ماشین نیست </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">زن خون ریزی </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">كمر دردِ ماهانه </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">پوكی استخوان </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">یك زنِ پا بماه </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">حال تهوع </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">استفراغ </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">درد‌های زایمان </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">مادر بچه‌ها نیست </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">زن عصایِ روز‌های پیری </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">پرستار ، وقتِ مریضی </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">رفیقِ پای منقل </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">مزه بیار عرق دوره‌های دوستانه نیست </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">زن </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">وجود دارد </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">روح دارد </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">قدرت </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">جسارت </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">پا به پای یك مرد ، زور دارد </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">عشق </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">اشك </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">نیاز </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">محبت </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">یك دنیا آرزو دارد </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">زن ... همیشه ... همه جا ... حضور دارد </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">و اگر تمام اینها یادت رفت </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">تنها یك چیز را به خاطر داشته باش </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">كه هنوز هیچ مردی پیدا نشده </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">كه بخواهد در ایران </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br></span><span style="color: black; line-height: 115%; font-family: Mitra; font-size: 16pt;" dir="rtl" lang="AR-SA">جایِ یك زن باشد </span><span style='color: black; line-height: 115%; font-family: "Times","serif"; font-size: 16pt;'><br><br></span></span>
+
+												            	
+								<br>
+								
+																
+								<br>
+								<br>
+				            	
+								<a target="_self" href="javascript:newComment(67)">
+									<b>دیدگاه ها : </b>
+									<script>setCommentCnt(67)</script> نظرات								</a> 
+								
+								<br/>
+			
+													
+													        		 			
+								<b>آخرین ویرایش:</b>
+								چهارشنبه 5 مهر 1391  21:51								
+								<br><br>
+							
+																	     	
+						<br><br>
+				     		 
+							     	
+					
+													تعداد کل صفحات : 3  
+														<a href="http://zorro8461.mihanblog.com/page/1"> <b>1</b></a>  
+														<a href="http://zorro8461.mihanblog.com/page/2"> <span>2</span></a>  
+														<a href="http://zorro8461.mihanblog.com/page/3"> <span>3</span></a>  
+																
+					
+						<div id="footer" class="clearfix">
+							<strong>
+								POWERED BY <a href="../www.mihanblog.com/index.html">
+								<font color="#FF0000" size="2px">M</font>IHAN
+								<font color="#FF0000" size="2px">B</font>LOG.COM</a>
+							</strong>
+						</div>
+					</div>		
+				
+					<div id="sidebar">
+							<form id="frm-16078304775fd58bcdc9f16" method="get" action="http://zorro8461.mihanblog.com/post/search/fid/16078304775fd58bcdc9f16"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+								<div class="sidebar_box_border_div">
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<div class="sidebar_box">
+										<input type="text" name="search_text" style="width:90px"/>
+										<input type="submit" value="جستجو"/>
+									</div>
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+								</div>
+							<input type="hidden" name="frm-id" value="16078304775fd58bcdc9f16" id="frm-id" /></form>						   
+							<div class="seprator"><img src="../static2.mihanblog.com/public/images/empty.gif"/></div>
+					
+							<div class="sidebar_box_border_div">
+								<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+								<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+								<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+								<div class="sidebar_box">
+									<div style="text-align:center">
+										<div align="center" style="border:none; width:160px; overflow:hidden"><img src="../static.mihanblog.com/public/user_data/web_photo/273/816648.jpg@2142"  /></div>
+										<a href="http://zorro8461.mihanblog.com/zorro8461@ymail.com"> پست الکترونیک</a><br/>
+										<a href="javascript:messageForm()">تماس با ما</a><br/>
+										<div style="text-align:center">*امین و زهره و خدای مهربون*</div>
+										<div class="clearfix" style="margin-right:70px">
+											<a href="http://zorro8461.mihanblog.com/post/rss/"><img style="border:none; float:right" src="../static2.mihanblog.com/public/images/icon/rss.gif"/></a>
+											<a href="http://zorro8461.mihanblog.com/post/atom/"><img style="border:none; float:right" src="../static2.mihanblog.com/public/images/icon/atom.gif"/></a>
+										</div>
+									</div>
+								</div>
+								<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+								<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+								<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+							</div>
+
+							<div class="seprator"><img src="../static2.mihanblog.com/public/images/empty.gif"/></div>
+							
+							
+		<form id="frm-16078304775fd58bcdca6e6" method="post" action="http://zorro8461.mihanblog.com/poll/new/fid/16078304775fd58bcdca6e6/atrty/1607830477/avrvy/0/key/85bf79f1848c86155ffc881b5b2fd5a8/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="262041" id="data[pollid]" />		
+								<div class="sidebar_box_border_div">
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<div class="sidebar_box">
+										<h3>نظرسنجی</h3>
+										کدام یک از فصل های سال از دیدگاه شما آرامش بخش تر , الهام بخش تر و زیبا تر است ؟<br>
+																					<label><input type="radio" name="data[answer]" value="v1">بهار</label>											<br>
+																					<label><input type="radio" name="data[answer]" value="v2">پائیز</label>											<br>
+																					<label><input type="radio" name="data[answer]" value="v3">زمستان</label>											<br>
+																					<label><input type="radio" name="data[answer]" value="v4">تابستان</label>											<br>
+											
+										<input type="submit" value="ممنونم  که  ثبتش می کنی"/>
+									</div>
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+								</div>
+							
+		<input type="hidden" name="frm-id" value="16078304775fd58bcdca6e6" id="frm-id" /></form> 
+														
+							<div class="seprator"><img src="../static2.mihanblog.com/public/images/empty.gif"/></div>					
+							
+							
+							<div class="seprator"><img src="../static2.mihanblog.com/public/images/empty.gif"/></div>					
+							
+															<div class="sidebar_box_border_div">
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<div class="sidebar_box">
+										<h3>آرشیو موضوعی</h3>
+																					<a href="http://zorro8461.mihanblog.com/post/category/11"> 
+												آموزش زبان انگلیسی(3)
+											</a> 
+											<br/>
+						          													<a href="http://zorro8461.mihanblog.com/post/category/10"> 
+												هک (hack)(3)
+											</a> 
+											<br/>
+						          													<a href="http://zorro8461.mihanblog.com/post/category/9"> 
+												مقالات علمی(9)
+											</a> 
+											<br/>
+						          													<a href="http://zorro8461.mihanblog.com/post/category/8"> 
+												متفرقه از همه جا(4)
+											</a> 
+											<br/>
+						          													<a href="http://zorro8461.mihanblog.com/post/category/5"> 
+												نوترون - هسته ای(1)
+											</a> 
+											<br/>
+						          											</div>
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+								</div>
+														
+							<div class="seprator"><img src="../static2.mihanblog.com/public/images/empty.gif"/></div>														
+
+															<div class="sidebar_box_border_div">						    
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<div class="sidebar_box">
+										<div>
+											<h3>نویسندگان</h3>
+											 	
+												<a href="http://zorro8461.mihanblog.com/post/author/681110"><img src="../static.mihanblog.com/public/user_data/user_photo/228/681110.jpg" style="width:16px;" /></a>												<a href="http://zorro8461.mihanblog.com/post/author/681110">
+													zohre (32)
+												</a>
+											<br/>
+																					</div>
+									</div>
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+								</div>
+														
+							<div class="seprator"><img src="../static2.mihanblog.com/public/images/empty.gif"/></div>					
+							
+															<div class="sidebar_box_border_div">
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<div class="sidebar_box">
+										<h3>صفحات جانبی</h3>
+										     	
+											<a href="http://zorro8461.mihanblog.com/extrapage/2">
+												آموزش											</a>
+											<br/>
+										     	
+											<a href="http://zorro8461.mihanblog.com/extrapage/1">
+												اشتراک نظرات											</a>
+											<br/>
+										      	
+									</div>	
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+								</div>
+							 
+							
+							<div class="seprator"><img src="../static2.mihanblog.com/public/images/empty.gif"/></div>						    							
+							
+															<div class="sidebar_box_border_div">
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<div class="sidebar_box">
+										<h3>آرشیو</h3>
+																					<a href="http://zorro8461.mihanblog.com/post/archive/1395/1"> فروردین 1395</a>
+											<br/>
+																					<a href="http://zorro8461.mihanblog.com/post/archive/1392/5"> مرداد 1392</a>
+											<br/>
+																					<a href="http://zorro8461.mihanblog.com/post/archive/1392/3"> خرداد 1392</a>
+											<br/>
+																					<a href="http://zorro8461.mihanblog.com/post/archive/1391/11"> بهمن 1391</a>
+											<br/>
+																					<a href="http://zorro8461.mihanblog.com/post/archive/1391/10"> دی 1391</a>
+											<br/>
+																					<a href="http://zorro8461.mihanblog.com/post/archive/1391/9"> آذر 1391</a>
+											<br/>
+																					<a href="http://zorro8461.mihanblog.com/post/archive/1391/7"> مهر 1391</a>
+											<br/>
+																					<a href="http://zorro8461.mihanblog.com/post/archive/1391/6"> شهریور 1391</a>
+											<br/>
+																				<a href="http://zorro8461.mihanblog.com/post/archive"><b>همه آرشیوها</b></a>
+									</div>
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+								</div>
+										    														
+							
+							<div class="seprator"><img src="../static2.mihanblog.com/public/images/empty.gif"/></div>					
+							
+															<div class="sidebar_box_border_div">
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<div class="sidebar_box">
+										<h3>لینکستان</h3>
+										     	
+											<a href="http://per30.mihanblog.com" title="" target="_blank">
+												مطلب و موضوعات جالب											</a>
+											<br/>
+										     	
+											<a href="http://www.medical-electronic.mihanblog.com" title="" target="_blank">
+												dr.elec											</a>
+											<br/>
+										     	
+											<a href="http://www.ataghalam.com" title="" target="_blank">
+												آتا قلم ( بهزاد )											</a>
+											<br/>
+										     	
+											<a href="http://farshad-fr4.mihanblog.com" title="" target="_blank">
+												sms بازار											</a>
+											<br/>
+										     	
+											<a href="../black-whitelife2.mihanblog.com/index.html" title="" target="_blank">
+												زندگی سیاه و سفید											</a>
+											<br/>
+										     	
+											<a href="../zirzamin5.mihanblog.com/index.html" title="" target="_blank">
+												امیر علی											</a>
+											<br/>
+										     	
+											<a href="http://neyrang.mihanblog.com" title="" target="_blank">
+												چوپان دروغ گو											</a>
+											<br/>
+										     	
+											<a href="http://modern2013.blogfa.com" title="" target="_blank">
+												می خوای خونتو جلد کنی											</a>
+											<br/>
+										     	
+											<a href="http://pic4mee.mihanblog.com" title="" target="_blank">
+												مریم											</a>
+											<br/>
+										     	
+											<a href="http://senatorvadoostan.mihanblog.com" title="" target="_blank">
+												سناتور											</a>
+											<br/>
+										     	
+											<a href="http://bashgaheparvazeyadha.mihanblog.com" title="" target="_blank">
+												باشگاه پرواز											</a>
+											<br/>
+										     	
+											<a href="http://ma3ta.com" title="" target="_blank">
+												امین و مهشید و خدای مهربون											</a>
+											<br/>
+										     	
+											<a href="http://ashegdownload.mihanblog.com/" title="" target="_blank">
+												persian download center											</a>
+											<br/>
+										     	
+											<a href="http://mosafer71117.blogfa.com" title="" target="_blank">
+												مسافر											</a>
+											<br/>
+										     	
+											<a href="http://shapariyoon.mihanblog.com" title="" target="_blank">
+												شاپری											</a>
+											<br/>
+										     	
+											<a href="../www.1boy-1girl.mihanblog.com/index.html" title="" target="_blank">
+												المیرا											</a>
+											<br/>
+																				<a href="http://zorro8461.mihanblog.com/link/"><b>همه لینکها</b></a>
+									</div>	
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+								</div>
+								
+						    
+							<div class="seprator"><img src="../static2.mihanblog.com/public/images/empty.gif"/></div>					
+							
+															<div class="sidebar_box_border_div">
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<div class="sidebar_box">
+										<h3>لینکدونی</h3>
+										     	
+											<a href="http://buyup.ir" title="ارزانترین فروشگاه اینترنتی" target="_blank">
+												فروشگاه اینترنتی بای آپ											</a>
+											<br/>
+										     	
+											<a href="http://saharicons.mihanblog.com" title="سلام
+وبلاگ قشنگی داری
+خوشحال میشم بهم سربزنی
+موفق باشی" target="_blank">
+												سحر											</a>
+											<br/>
+										     	
+											<a href="http://sunbow.ir/" title="سلام وبلاگ خوبی داری ممنون میشم به من هم سر بزنی" target="_blank">
+												عکس بازیگران											</a>
+											<br/>
+										     	
+											<a href="http://movies.groups.yahoo.com/group/dpbahal/join" title="با عضویت در گروه دختر پسرهای با حالشما روزانه از ما ایمیل هایی در تعداد کم و با کیفیت دریافت میکنید؛ 
+این گروه بدون ارسال پست های تبلیغاتی شاید مورد رضایت شما قرار بگیرید
+راهنمای عضویت
+http://taabir.mihanblog.com/extrapage/joinlearn" target="_blank">
+												گروه اینترنتی دختر پسر های باحال											</a>
+											<br/>
+										     	
+											<a href="http://www.bimerazi.com" title="سلام خواستم بگم مطالب خیلی خوبی دارین
+با تشکر" target="_blank">
+												حمید رئیسی											</a>
+											<br/>
+										     	
+											<a href="http://movies.groups.yahoo.com/group/dpbahal/join" title="با عضویت در گروه دختر پسرهای با حالشما روزانه از ما ایمیل هایی در تعداد کم و با کیفیت دریافت میکنید؛ 
+این گروه بدون ارسال پست های تبلیغاتی شاید مورد رضایت شما قرار بگیرید
+راهنمای عضویت
+http://taabir.mihanblog.com/extrapage/joinlearn" target="_blank">
+												گروه اینترنتی دختر پسر های باحال											</a>
+											<br/>
+										     	
+											<a href="http://www.smssajad.mihanblog.com" title="" target="_blank">
+												شهر دیدنی ها											</a>
+											<br/>
+										     	
+											<a href="http://arashdownload.mihanstore.net/product.php?id=237" title="سلام وبلاگ خوبی داری ممنون میشم به من هم سر بزنی" target="_blank">
+												آموزش زبان انگلیسی											</a>
+											<br/>
+										     	
+											<a href="http://arashdownload.mihanstore.net/in.php?id=113" title="این هندزفری قادر است صدای شما را عوض کند  و به این وسیله می توانید سربه سر دوستان خود بگذارید  اونقدر حرفه ای تغییر میده که فرد مقابل اصلا تشخیص نمیده  داره با  صدای تغییر یافته صحبت می کنه" target="_blank">
+												هندزفری تغییر صدا											</a>
+											<br/>
+										     	
+											<a href="http://arashdownload.mihanstore.net/in.php?id=37" title="با سلام وب لاگ خوبی داری حتما بازم بهت سر می زنم لطفا لینک منو هم تائید کن ممنون
+سوسن" target="_blank">
+												آموزش پرورش قارچ											</a>
+											<br/>
+																				<a href="http://zorro8461.mihanblog.com/linkdaily/"><b>همه لینکها</b></a>
+										<a href="javascript:linkdailyForm()"><b>ارسال لینک</b></a>
+									</div>
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+								</div>
+							    														 	
+							
+							<div class="seprator"><img src="../static2.mihanblog.com/public/images/empty.gif"/></div>					
+							
+															<div class="sidebar_box_border_div">
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>	    
+									<div class="sidebar_box">
+										<div>
+											<h3>مطالب اخیر</h3>
+											 	
+												<a href="http://zorro8461.mihanblog.com/post/107">
+													مژده مژده												</a>
+												<br/>
+											 	
+												<a href="http://zorro8461.mihanblog.com/post/106">
+													تبریکات												</a>
+												<br/>
+											 	
+												<a href="http://zorro8461.mihanblog.com/post/104">
+													نظریه یا Theory												</a>
+												<br/>
+											 	
+												<a href="http://zorro8461.mihanblog.com/post/93">
+													*پروانه های دوست داشتنی*												</a>
+												<br/>
+											 	
+												<a href="http://zorro8461.mihanblog.com/post/95">
+													پاندا کوچولو ....												</a>
+												<br/>
+											 	
+												<a href="http://zorro8461.mihanblog.com/post/99">
+													جدید ترین ها.....												</a>
+												<br/>
+											 	
+												<a href="http://zorro8461.mihanblog.com/post/92">
+													طوطی												</a>
+												<br/>
+											 	
+												<a href="http://zorro8461.mihanblog.com/post/89">
+													گنجشک کوچولو...												</a>
+												<br/>
+											 	
+												<a href="http://zorro8461.mihanblog.com/post/88">
+													یلداتون زمستونی!												</a>
+												<br/>
+											 	
+												<a href="http://zorro8461.mihanblog.com/post/87">
+													آهو ( غزال)												</a>
+												<br/>
+											 	
+												<a href="http://zorro8461.mihanblog.com/post/86">
+													اسب (horse)												</a>
+												<br/>
+											 	
+												<a href="http://zorro8461.mihanblog.com/post/85">
+													انکسر ظهری .... ( پشتم شکست با رفتنت عباس من .....)												</a>
+												<br/>
+											 	
+												<a href="http://zorro8461.mihanblog.com/post/84">
+													شیر کوهی (پوما)												</a>
+												<br/>
+											 	
+												<a href="http://zorro8461.mihanblog.com/post/77">
+													 صبح بچه دانشگاهی ایرونی 												</a>
+												<br/>
+											 	
+												<a href="http://zorro8461.mihanblog.com/post/67">
+													I want a wife....												</a>
+												<br/>
+																					</div>
+									</div>
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+								</div>
+														
+							<div class="seprator"><img src="../static2.mihanblog.com/public/images/empty.gif"/></div>														
+							
+															<div class="sidebar_box_border_div">
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+								    <div class="sidebar_box">
+										<h3>آمار وبلاگ </h3>
+										کل بازدید:<script>getStatVar('total_view');</script><br/>
+										بازدید امروز :<script>getStatVar('today_view');</script><br/>
+										بازدید دیروز : <script>getStatVar('yesterday_view');</script><br/>
+										بازدید این ماه : <script>getStatVar('this_month_view');</script><br/>
+										بازدید ماه قبل : <script>getStatVar('last_month_view');</script><br/>
+										تعداد نویسندگان : <script>getStatVar('total_author');</script><br/>
+										تعداد کل مطالب : <script>getStatVar('total_post');</script><br/>
+										آخرین بازدید : <script>getStatVar('last_view_date');</script><br/>
+										آخرین بروز رسانی : <script>getStatVar('modify_date');</script><br/>
+									</div>	
+									<b class="sidebar_box_border" style="margin:0 1px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 2px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+									<b class="sidebar_box_border" style="margin:0 3px"><img src="../static2.mihanblog.com/public/images/empty.gif"/></b>
+								</div>
+														  							
+						    
+							<div class="seprator"><img src="../static2.mihanblog.com/public/images/empty.gif"/></div>					
+
+							<div class="sidebar_box_border_div">
+								<!-- Online Support by www.1abzar.com --->
+<script type="text/javascript" src="http://1abzar.ir/abzar/tools/support/1abzar.php?admin=zorro8461&mod=4"></script><div style="display:none"><h2><a href="http://www.1abzar.com">پشتیبانی</a></h2></div>
+<!-- Online Support by www.1abzar.com --->
+
+
+
+
+<embed src="http://www.609.ir/Clock/Default/Default_3.swf" width="150px" height="150px" type="application/x-shockwave-flash" wmode="transparent" />
+
+
+<A href="http://www.ataghalam.com/" target=_blank><IMG 
+src="http://img4up.com/up2/10487623388219190012.jpg"width='150' height='111' border=0></A
+
+
+
+							</div>
+
+							<div class="sidebar_box_border_div">
+								<div class="mihan_logo"></div>
+							</div>
+					</div>
+
+				</div>
+			</div>
+			
+			<div id="footer_background"><img src="../static2.mihanblog.com/public/images/empty.gif"/></div>
+								
+		</div>				
+		
+	</body>
+ <!-- PersianStat -->
+<!-- URL: http://zorro8461.mihanblog.com -->
+<script language='javascript' type='text/javascript' src='http://www.persianstat.com/service/stat.js'></script>
+<script language='javascript' type='text/javascript'>
+persianstat(10171702, 0);
+</script>
+<!-- /PersianStat -->
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'zorro8461.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

@@ -1,0 +1,2361 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://tractorfc1.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 1399/09/22');
+		/*1201060*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[458]='110';commentCnt[992]='93';commentCnt[993]='29';commentCnt[994]='30';commentCnt[995]='165';commentCnt[996]='27';commentCnt[997]='82';commentCnt[998]='90';commentCnt[999]='86';commentCnt[1000]='54';commentCnt[1001]='171';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[458]='35';
+mihanblogDisLikeArrCnt[458]='2';
+mihanblogLikeArrCnt[992]='19';
+mihanblogDisLikeArrCnt[992]='0';
+mihanblogLikeArrCnt[993]='8';
+mihanblogDisLikeArrCnt[993]='0';
+mihanblogLikeArrCnt[994]='7';
+mihanblogDisLikeArrCnt[994]='1';
+mihanblogLikeArrCnt[995]='12';
+mihanblogDisLikeArrCnt[995]='2';
+mihanblogLikeArrCnt[996]='7';
+mihanblogDisLikeArrCnt[996]='5';
+mihanblogLikeArrCnt[997]='8';
+mihanblogDisLikeArrCnt[997]='1';
+mihanblogLikeArrCnt[998]='12';
+mihanblogDisLikeArrCnt[998]='2';
+mihanblogLikeArrCnt[999]='7';
+mihanblogDisLikeArrCnt[999]='1';
+mihanblogLikeArrCnt[1000]='5';
+mihanblogDisLikeArrCnt[1000]='1';
+mihanblogLikeArrCnt[1001]='6';
+mihanblogDisLikeArrCnt[1001]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://tractorfc1.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://tractorfc1.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','920');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','چهارشنبه 1394/12/5');
+	
+	setStatVar('today_view','39');
+	setStatVar('yesterday_view','47');
+	
+	setStatVar('this_month_view','3955');
+	setStatVar('last_month_view','4522');
+
+	setStatVar('total_view','978370');
+	setStatVar('last_view_date','شنبه 1399/09/22 (15:49)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://tractorfc1.mihanblog.com/statupdate/?data[refereruri]=http://kyanvar.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607778802&data[hash]=7ae3239d01f30385715a72f3fdf6d20c&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://tractorfc1.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="../tractorfc1.mihanblog.com/'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://tractorfc1.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://tractorfc1.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://tractorfc1.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://tractorfc1.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://tractorfc1.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://tractorfc1.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://tractorfc1.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://tractorfc1.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://tractorfc1.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://tractorfc1.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://tractorfc1.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://tractorfc1.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://tractorfc1.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://tractorfc1.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://tractorfc1.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Theme Designer" content="www.MyTheme.ir">
+
+    <meta name="description" content="تراختور،اخبارتراختور،اخبارتراکتور،عکس های تراکتور،عکس های تراختور،پوسترتراختور،حامیان تراختور،عاشقان تراختور،تراختورچیلار،نقل وانتقالات،عکس بازیکنان تراختور،تراکنورسازی،هواداران تراختور،شعارهای تراختور،مقالات تراختور،رمضان،استقلال،سپاهان،پرسپولیس،جوادنکونام,علی کریمی،فرهادمجیدی،کیروش،تونی،خطیبی،جدول لیگ برتر،شهادت امام علی،کدهای وبلاگ تراختور،دبیری،والیبال،شهرداری ارومیه،شهرداری تبریز"/>
+    <meta name="keywords" content="تراختور،تراکتور،آذربایجان،آزربایجان،تراختورسازی،عکس های تراختور،تراختورعاشیقلری.اخبارتراختور"/>
+    <link rel="alternate" type="application/rss+xml" title="تراختورعاشیقلری" href="http://tractorfc1.mihanblog.com/post/rss/" />
+    <link rel="alternate" type="application/atom+xml" title="تراختورعاشیقلری" href="http://tractorfc1.mihanblog.com/post/atom/" />
+    <link href="http://mihanblog.com/public/public/user_data/template/2099949/style.css" type="text/css" rel="stylesheet">
+
+    <title>تراختورعاشیقلری</title>
+</head>
+
+<body>
+
+<div align="center">
+<table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;</td>
+<td class=div2>
+<div class=div00>
+
+<div class=div60>
+    <div class=div101>
+        <div class=div10><font class=title>تراختورعاشیقلری</font></div></div>
+    <div class=div11>
+        <div class=div12><font class=des>یاتمازتراختوربایراغی</font></div></div>
+</div>
+
+<div class=ss>
+    <div class=s1><form id="frm-16075147285fd0ba684920f" method="get" action="http://tractorfc1.mihanblog.com/post/search/fid/16075147285fd0ba684920f"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+        <div class=s2>
+            <input type="text" name="search_text" size="20" style="border: 0px none; background: none; font-family:Tahoma; font-size:9pt; direction:ltr; color:#ffffff;"></div>
+        <div class=s3><input type="image" src="http://mihanblog.com/public/public/user_data/template/2099949/blank.gif" width=22 height=21 value="آخدار"></div>
+    <input type="hidden" name="frm-id" value="16075147285fd0ba684920f" id="frm-id" /></form></div>
+
+    <div class=s4>
+        <div class=s5><font class=text10>
+            <a href="index.html">صفحه نخست</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:messageForm()">تماس با مدیر</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="mailto:">پست الکترونیک</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://tractorfc1.mihanblog.com/post/rss/">RSS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://tractorfc1.mihanblog.com/post/atom/">ATOM</a></font></div></div>
+</div>
+
+<div class=div1700>
+    <div class=div171></div>
+
+    <div class=div170>
+
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>درباره وبلاگ</font></div></div>
+
+            <div class=div341>
+                <div class=sm></div>
+                <div class=div31><font class=text1><center><img src="../static.mihanblog.com/public/user_data/web_photo/401/1201060.jpg@5232"  /><br><br>
+                    جامع ترین و بروزترین وبلاگ حمایتی تراختور</center><br>
+                    <b>مدیر وبلاگ :</b> <a href="http://tractorfc1.mihanblog.com/post/author/1033221">احمد </a></font></div>
+            </div><div class=div30></div>
+        </div>
+
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>مطالب اخیر</font></div></div>
+
+            <div class=div341><font class=text1><ul>
+                <li><a href="http://tractorfc1.mihanblog.com/post/1001">خاطره ی شیرین تراختور _الجزیره و کاغذی که از این بازی به یادگار داریم </a></li><li><a href="http://tractorfc1.mihanblog.com/post/1000">ما طرفدارتراختورهستیم نه این تیمی که مال ما نیست/بازهم به استادیوم می آییم تا روزیکه تراختوررا بازپس بگیریم</a></li><li><a href="http://tractorfc1.mihanblog.com/post/999">نه با2برداستقلال که با10بردهم حسابمان صاف نمیشود ولی به خاطر تراختورسکوت میکنیم/لیدرها خودسری نکنند</a></li><li><a href="http://tractorfc1.mihanblog.com/post/998">بی لیاقتیتان در حفظ تونی را با اشتباه اوردن قلعه نویی تکمیل نکنید/چه با تونی محبوب چه بی او یاتماز تراختور بایراغی</a></li><li><a href="http://tractorfc1.mihanblog.com/post/997">از نکته های تلخ و مهم بازی امروز بخوانید/ از ذهن قوی دشمنان و از آینده ای که در ذهن خام خود برایمان ساخته اند</a></li><li><a href="http://tractorfc1.mihanblog.com/post/996">ورزش3وتلاش نافرجام/خودی ها مواظب باشند</a></li><li><a href="http://tractorfc1.mihanblog.com/post/995">هیچ اتحادی با هیچکس در این لیگ نداریم/فحش های 40هزارنفریتان در خاطرمان هست هنوز</a></li><li><a href="http://tractorfc1.mihanblog.com/post/994">فصلی چند تومن برای اعتراض به جمعه ی سیاه </a></li><li><a href="http://tractorfc1.mihanblog.com/post/993">هواداران حتما بخوانند/از25اردیبهشت تا8مرداد و آمادگی برای حضور</a></li><li><a href="http://tractorfc1.mihanblog.com/post/992">برسدبه دست مهدی کیانی وحبیب گردانی/تامستقیم باتونی حرف نزده ایدهیچ جانروید</a></li>            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>موضوعات</font></div></div>
+
+            <div class=div341><font class=text1><ul>
+                <li><a href="http://tractorfc1.mihanblog.com/post/category/3">مقاله های اختصاصی تراختورعاشیقلری (250)</a></li><li><a href="http://tractorfc1.mihanblog.com/post/category/1">تراختوردان تازاخبرلر (506)</a></li><li><a href="http://tractorfc1.mihanblog.com/post/category/2">تراختوردان گوزل عکس و پوسترلر (92)</a></li><li><a href="http://tractorfc1.mihanblog.com/post/category/4">مقاله هایارسالی هواداران و سایرسایت ها (53)</a></li><li><a href="http://tractorfc1.mihanblog.com/post/category/5">اخبارسایرتیم های آذربایجان (89)</a></li>            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>آرشیو وبلاگ</font></div></div>
+
+            <div class=div341><font class=text1><ul>
+                <li><a href="http://tractorfc1.mihanblog.com/post/archive/1394/12"> اسفند 1394</a></li><li><a href="http://tractorfc1.mihanblog.com/post/archive/1394/10"> دی 1394</a></li><li><a href="http://tractorfc1.mihanblog.com/post/archive/1394/9"> آذر 1394</a></li><li><a href="http://tractorfc1.mihanblog.com/post/archive/1394/7"> مهر 1394</a></li><li><a href="http://tractorfc1.mihanblog.com/post/archive/1394/6"> شهریور 1394</a></li><li><a href="http://tractorfc1.mihanblog.com/post/archive/1394/5"> مرداد 1394</a></li><li><a href="http://tractorfc1.mihanblog.com/post/archive/1394/3"> خرداد 1394</a></li><li><a href="http://tractorfc1.mihanblog.com/post/archive/1394/2"> اردیبهشت 1394</a></li><li><a href="http://tractorfc1.mihanblog.com/post/archive/1393/12"> اسفند 1393</a></li><li><a href="http://tractorfc1.mihanblog.com/post/archive/1393/11"> بهمن 1393</a></li><li><a href="http://tractorfc1.mihanblog.com/post/archive/1393/8"> آبان 1393</a></li><li><a href="http://tractorfc1.mihanblog.com/post/archive/1393/7"> مهر 1393</a></li><li><a href="http://tractorfc1.mihanblog.com/post/archive/1393/6"> شهریور 1393</a></li><li><a href="http://tractorfc1.mihanblog.com/post/archive/1393/5"> مرداد 1393</a></li><li><a href="http://tractorfc1.mihanblog.com/post/archive/1393/4"> تیر 1393</a></li>                <li><b><a href="http://tractorfc1.mihanblog.com/post/archive">آرشیو كل مطالب</a></b></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>پیوندهای روزانه</font></div></div>
+
+            <div class=div341><font class=text1><ul>
+                <li><a href="http://www.upsara.com/" title="با افتخار میزبان عکس ها و فایل های شما هستیم.
+آپلود رایگان و دائمی عکس
+آپ سرا
+
+با لینک کردن از ما حمایت کنید" target="_blank">آپلود عکس</a></li><li><a href="http://ttboy1970.mihanblog.com/" title="" target="_blank">تهران تراختورچیلاری</a></li><li><a href="http://saharam.ir/" title="سلام
+ممنون از سایت خوبتون
+خیلی ممنون میشم این لینک رو تائید کنید
+باز هم بهتون سر می زنم
+در پناه خداوند باشید
+خدانگهدار" target="_blank">سایت سحارم</a></li><li><a href="http://traxtor-mars.blogfa.com" title="" target="_blank">فقط تراختورعشقی</a></li><li><a href="http://dooni.ir" title="سلام, وبلاگ خوبی داری
+امیدوارم موفق باشی." target="_blank">مطالب جذاب</a></li><li><a href="http://www.jozveha.ir" title="جزوه ها اولین و بزرگترین مرجع دانلود کتابها-مقالات و پایان نامه های همه رشته های دانشگاهی به صورت کاملا رایگان. برای اولین بار دربرگیرنده کلیه رشته های مهندسی و غیر مهندسی" target="_blank">بزرگترین پرتال دانشجویان</a></li><li><a href="http://www.easymusic.ir/tag/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF-%D8%A2%D9%87%D9%86%DA%AF-%D8%B4%D8%A7%D8%AF/" title="دانلود آهنگ شاد" target="_blank">دانلود آهنگ شاد</a></li><li><a href="../tahaactive2012.mihanblog.com/index.html" title="با سلام....
+ 
+خواهان تبادل لینک با وبلاگ زیبای شما هستیم.در صورت تمایل لینک رو تایید و اطلاع رسانی کنید تا وب شما را با نام  مورد نظر خودتان لینک کنیم . 
+
+با تشکر
+گروه Taha Active" target="_blank">طه دانلود</a></li><li><a href="http://www.100chat.net" title="با سلام....
+ 
+وبلاگ خوبی داشتی ایولا
+ممنون میشم تایید بکنی
+اینم ادرس چت روم من هستش خوشحال میشم تشریف بیاری
+www.100chat.ir" target="_blank">100chat</a></li><li><a href="http://buy.namakstan.ir/" title="سلام
+وب بسیار خوب و عالی داری
+اگه لطف کنی و این لینک رو تائید کنید
+ممنونت میشم
+امیدوارم که همیشه موفق باشی" target="_blank">فروشگاه اینترنتی</a></li>                <li><b><a href="http://tractorfc1.mihanblog.com/linkdaily/">همه پیوندهای روزانه</a></b></li>
+                <li><b><a href="javascript:linkdailyForm()">ارسال پیوند روزانه</a></b></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>پیوندها</font></div></div>
+
+            <div class=div341><font class=text1><ul>
+                <li><a href="http://www.kyanvar.mihanblog.com/" title="" target="_blank">اشعارترکی و فارسی حسن کیانور</a></li><li><a href="http://hediyeyenazekhoda.niniweblog.com/" title="" target="_blank">هدیه ی ناز خدا</a></li><li><a href="http://urmulo.mihanblog.com/" title="" target="_blank">اورمو اؤلکه سی</a></li><li><a href="http://www.tractor-az.ir/" title="" target="_blank">تراکتور اذربایجان</a></li><li><a href="http://girmizi-t.r98.ir/" title="" target="_blank">قیرمیزی تراختور</a></li><li><a href="http://traxturnews.blogfa.com/" title="" target="_blank">گالری تراکتور</a></li><li><a href="http://midwifery92tbz.blogfa.com/" title="" target="_blank">مامایی تبریزورودی92</a></li><li><a href="http://www.tractorfc.com" title="" target="_blank">تراختوراف سی</a></li><li><a href="http://abrhayefarari-az-aseman.mihanblog.com/" title="" target="_blank">وقتی به نام هیچوقت(ابرهای فراری ازآسمان)</a></li><li><a href="http://teractorz.mihanblog.com/" title="" target="_blank">تراختورقهرمان</a></li><li><a href="http://www.trakhtorlink.com/" title="" target="_blank">تراختورلینک</a></li><li><a href="http://f16azizi.mihanblog.com" title="" target="_blank">باغچه ی علم</a></li><li><a href="http://www.ligebartar.com/" title="" target="_blank">لیگ برتر</a></li><li><a href="http://www.arashkayko7m.blogfa.com/" title="" target="_blank">تراکتور</a></li><li><a href="http://khiyavtraxtorchi.blogfa.com/" title="" target="_blank">آذربایجان مشکین شهر</a></li><li><a href="http://alumaa.mihanblog.com" title="" target="_blank">کیف آلوما والت</a></li><li><a href="http://bodyshaping.ir" title="" target="_blank">گن لاغری</a></li><li><a href="http://soori2000.blogfa.com/" title="" target="_blank">دانش آموزی</a></li><li><a href="http://www.hotelasan.ir" title="با سلام واحترام به استحضار میرساند سامانه رزرواسیون هتل آسان به جهت تسهیل در مسافرت های داخلی امکان رزرو بیش از 700 هتل و هتل آپارتمان کشور را با تخفیفات ویژه (تا 70 درصد تخفیف ) فراهم نموده است" target="_blank">هتل آسان</a></li><li><a href="http://shopfarsi.ir" title="" target="_blank">عینک آفتابی</a></li>                <li><a target="_blank" href="http://www.mytheme.ir">بهترین قالب های وبلاگ</a></li>
+                <li><b><a href="http://tractorfc1.mihanblog.com/link/">همه پیوندها</a></b></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>نویسندگان</font></div></div>
+
+            <div class=div341><font class=text1><ul>
+                <li><a href="http://tractorfc1.mihanblog.com/post/author/1033221">احمد  (879)</a></li>            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>صفحات جانبی</font></div></div>
+
+            <div class=div341><font class=text1><ul>
+                <li><a href="http://tractorfc1.mihanblog.com/extrapage/photogallery">گالری عکس وب سایت تراختورعاشیقلری</a></li>            </ul></font></div><div class=div30></div>
+        </div>
+        
+		
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>برچسبها</font></div></div>
+
+            <div class=div341><font class=text1><ul>
+                <li><a href="http://tractorfc1.mihanblog.com/post/tag/%D9%BE%D8%B1%D8%B3%D9%BE%D9%88%D9%84%DB%8C%D8%B3">پرسپولیس</a></li><li><a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D8%B1%D8%A7%D8%AE%D8%AA%D9%88%D8%B1">تراختور</a></li><li><a href="http://tractorfc1.mihanblog.com/post/tag/%D8%A7%D8%B3%D8%AA%D9%82%D9%84%D8%A7%D9%84">استقلال</a></li><li><a href="http://tractorfc1.mihanblog.com/post/tag/%DA%AF%D8%B3%D8%AA%D8%B1%D8%B4+%D9%81%D9%88%D9%84%D8%A7%D8%AF">گسترش فولاد</a></li><li><a href="http://tractorfc1.mihanblog.com/post/tag/%D8%B9%DA%A9%D8%B3+%D9%87%D8%A7%DB%8C+%D8%AA%D8%B1%D8%A7%D8%AE%D8%AA%D9%88%D8%B1">عکس های تراختور</a></li><li><a href="http://tractorfc1.mihanblog.com/post/tag/%D8%B9%D9%84%DB%8C+%DA%A9%D8%B1%DB%8C%D9%85%DB%8C">علی کریمی</a></li><li><a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D8%B1%D8%A7%D8%AE%D8%AA%D9%88%D8%B1%D8%B9%D8%A7%D8%B4%DB%8C%D9%82%D9%84%D8%B1%DB%8C">تراختورعاشیقلری</a></li><li><a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D8%B1%D8%A7%DA%A9%D8%AA%D9%88%D8%B1">تراکتور</a></li><li><a href="http://tractorfc1.mihanblog.com/post/tag/%D8%A2%D8%B0%D8%B1%D8%A8%D8%A7%DB%8C%D8%AC%D8%A7%D9%86">آذربایجان</a></li><li><a href="http://tractorfc1.mihanblog.com/post/tag/%D8%B3%D9%BE%D8%A7%D9%87%D8%A7%D9%86">سپاهان</a></li>            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div24>
+            <div class=div35>
+                <div class=div25><font class=text5>آمار وبلاگ</font></div></div>
+
+            <div class=div341><font class=text1><ul>
+                <li>کل بازدید : <script>getStatVar('total_view');</script></li>
+                <li>بازدید امروز :<script>getStatVar('today_view');</script></li>
+                <li>بازدید دیروز : <script>getStatVar('yesterday_view');</script></li>
+                <li>بازدید این ماه : <script>getStatVar('this_month_view');</script></li>
+                <li>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></li>
+                <li>تعداد نویسندگان : <script>getStatVar('total_author');</script></li>
+                <li>تعداد کل پست ها : <script>getStatVar('total_post');</script></li>
+                <li>آخرین بازدید : <script>getStatVar('last_view_date');</script></li>
+                <li>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></li>
+            </ul></font></div><div class=div30></div>
+        </div>
+        <div class=div024><center><a target='_blank' href='http://www.iranskin.com/online'><span style='text-decoration: none'>Online</span></a>
+<script type='text/JavaScript'>
+var oulb= 'http://www.iranskin.com/online/';
+function CheckBrowser(){
+if(navigator.appName == "Microsoft Internet Explorer")	{
+document.write('<scrip'+'t src="'+oulb+'js/jquery.min.js"></s'+'cript><scrip'+'t src="'+oulb+'js/js.php?c=5&t=5"></s'+'cript>');return true;}document.write('<scrip'+'t src="'+oulb+'cod.php?c=5&t=5"></s'+'cript>');
+return false; }</script>
+<script type='text/JavaScript'>CheckBrowser()</script>
+<a target='_blank' href='http://www.iranskin.com'><span style='text-decoration: none'>User</span></a>
+
+<script language='JavaScript' type='text/javascript' src='http://upload.mania-
+dv.ir/traxtor/right.js'></script>
+<script language='JavaScript' type='text/javascript' src='http://upload.mania-dv.ir/traxtor/html-traxtor.js'></script> 
+
+
+
+
+
+<a href="http://azarteraktor.blogfa.com/" target="_blank"><img src="http://azarteraktor.persiangig.com/baneraz.gif" alt="azarteraktor" /></a></center>
+            <style>
+                .mihan_logo {
+                    background: url("http://mihanblog.com/public/public/images/logo/poweredby.gif") no-repeat scroll center top transparent;
+                    height: 131px;
+                    margin-top: 10px;
+                    text-align: center;
+                }
+            </style>
+            <div class="mihan_logo"></div>
+
+        </div>
+
+        <div class=div025></div>
+    </div></div>
+
+<div class=div20>
+
+    		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://tractorfc1.mihanblog.com/post/458">پست ثابت:تراختورعاشیقلری باهمین روند درمسیربالارفتن ازپله های ترقی</a></font></div>
+            <div class=div58><font class=text7>شنبه 1392/05/19 :: نویسنده : <a href="http://tractorfc1.mihanblog.com/post/author/1033221">احمد </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+<b><font size="2"><font face="tahoma,arial,helvetica,sans-serif">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</font></font></b><p align="center"><b><font size="2"><font face="tahoma,arial,helvetica,sans-serif"><img align="bottom" alt="" src="http://s3.picofile.com/file/7365415371/clubturk_ir_trakhtirtools_4_.gif" border="0" vspace="0" hspace="0"></font></font></b></p><p align="center"><b><font size="2"><font face="tahoma,arial,helvetica,sans-serif"><img width="620" height="684" style="width: 561px; height: 684px;" src="http://www.uplooder.net/img/image/7/d1a1a230903957544cfd6c4c04fc905c/15614508703474408400.jpg"></font></font></b></p><p align="center"><b><font size="2"><font face="tahoma,arial,helvetica,sans-serif"><img width="614" height="253" align="bottom" style="width: 557px; height: 253px;" alt="" src="http://www.8pic.ir/images/33719482172044718326.jpg" border="0" vspace="0" hspace="0"></font></font></b></p><div class="irc_mutc"><b><font size="2"><font face="tahoma,arial,helvetica,sans-serif"><a class="irc_mutl" href="http://www.google.com/url?sa=i&amp;rct=j&amp;q=&amp;esrc=s&amp;source=images&amp;cd=&amp;cad=rja&amp;uact=8&amp;docid=8yLVC3DqoCL34M&amp;tbnid=q4WPT0KRUCQ3fM:&amp;ved=0CAUQjRw&amp;url=http%3A%2F%2Fphotos.eslatosht.com%2F%25DA%25A9%25D8%25A7%25D8%25B1%25D8%25AA-%25D9%25BE%25D8%25B3%25D8%25AA%25D8%25A7%25D9%2584-%25D8%25B1%25D9%2588%25D8%25B2-%25D9%2585%25D8%25A7%25D8%25AF%25D8%25B1%2F&amp;ei=U4lTU5mdMYjHtAaM9YGgCA&amp;bvm=bv.65058239,d.Yms&amp;psig=AFQjCNG7abD6QGpFSHcTKHqA9DpTgRTwSA&amp;ust=1398069958150520" data-ved="0CAUQjRw"><br></a></font></font></b></div><b><font class="text4" face="tahoma,arial,helvetica,sans-serif"><p><font face="tahoma,arial,helvetica,sans-serif"><font size="2">&nbsp;پست ثابت:&nbsp;	سلام بر تمام هواداران تراختور.امدواریم دراین مدت اندک از وبلاگ تراختورعاشیقلری راضی بوده باشید.ما تمام تلاشمان را میکنیم تا شما دوستان را از تمامی اخبار مهم تراختور در سریع ترین زمان ممکن مطلع سازیم.همچنین عکس های بازی هاو....وپوستر های زیبای تیم و بازیکنان را در وب قرار میدهیم تارضایت شمارا جلب کرده و شما دوستان زمان شیرینی را در وبلاگ ما داشته باشیدو تا کنون توانسته ایم از بسیاری از سایت ها نیز به روز تر باشیم.نظرات شما&nbsp;مشوق ماست در ادامه ی این حرکت وانتقادات شما کمک کننده ما در بهتر شدن سایت هست.پس یه قول ما تورک ها&nbsp; باخیش یاددان چیخماسین.(نظریادت نره).همچنین به&nbsp;دوستانی هم که تازه به جمع ما اضافه شدن هم خوشامد میگیم و امیدواریم ز این سایت خوشتون بیاد.الانم میخواستم تورکی بنویسم ولی به خاطر هواداران عزیز خارج از آذربایجان این مطلبو فارسی نوشتم.در ضمن شرکت در نظرسنجی ها رو هم فراموش نکنید.باتشکر به امید موفقیت <font color="#ff0000" style="font-size: large;">تمام تیم های آذربایجان</font> علی الخصوص <font color="#ff0000" style="font-size: large;">تراختور.</font></font></font></p><p><font color="#ff0000" face="tahoma,arial,helvetica,sans-serif" size="2">درصورت درخواست برای نویسنده شدن زیر این پست پیغام بگذارید</font></p><p><font color="#ff0000"><font face="tahoma,arial,helvetica,sans-serif"><font size="2"><font color="#33cc00">یاشاسین آذربایجان</font>،یاشاسین تراختور<font color="#330099">،یاشاسین گسترش</font></font></font></font></p><p><font size="2"><font color="#ff0000" face="tahoma,arial,helvetica,sans-serif">مدیران تراختور عاشیقلری</font><br></font></p></font></b><b><font size="2"><font face="tahoma,arial,helvetica,sans-serif">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</font></font></b>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/category/3" class=text4>مقاله های اختصاصی تراختورعاشیقلری</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D8%B1%D8%A7%D8%AE%D8%AA%D9%88%D8%B1" class=text4>تراختور</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D8%B1%D8%A7%DA%A9%D8%AA%D9%88%D8%B1" class=text4>تراکتور</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%DA%AF%D8%B3%D8%AA%D8%B1%D8%B4%20%D9%81%D9%88%D9%84%D8%A7%D8%AF" class=text4>گسترش فولاد</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%A2%D8%B0%D8%B1%D8%A8%D8%A7%DB%8C%D8%AC%D8%A7%D9%86" class=text4>آذربایجان</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D8%B1%D8%A7%D8%AE%D8%AA%D9%88%D8%B1%D8%B9%D8%A7%D8%B4%DB%8C%D9%82%D9%84%D8%B1%DB%8C" class=text4>تراختورعاشیقلری</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%B9%DA%A9%D8%B3%20%D9%87%D8%A7%DB%8C%20%D8%AA%D8%B1%D8%A7%D8%AE%D8%AA%D9%88%D8%B1" class=text4>عکس های تراختور</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                                <br><br></font>
+
+
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://tractorfc1.mihanblog.com/post/458#commentlist">نظرات (<script>setCommentCnt(458)</script>)</a></font></div>
+
+            <div style="float: left; margin-left: 68px; margin-top: 23px;"><script>mihanblogPostLike('458','like')</script></div>
+
+
+
+        </div>
+        <style>
+
+
+            .mihanblog_like_likeCnt{
+                right: 0;
+            }
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 64px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:635px; float:left; background:#424242; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 30px; padding:0 0 10px 0;}
+            .com1{ width:617px; float:left; background:#860909; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:390px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:597px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:597px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:607px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://tractorfc1.mihanblog.com/post/1001">خاطره ی شیرین تراختور _الجزیره و کاغذی که از این بازی به یادگار داریم </a></font></div>
+            <div class=div58><font class=text7>چهارشنبه 1394/12/5 :: نویسنده : <a href="http://tractorfc1.mihanblog.com/post/author/1033221">احمد </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+
+<img src="http://s6.picofile.com/file/8240424868/tmp_27604_IMG_20160223_115530280457319.jpg " alt="" hspace="0" vspace="0" align="bottom" border="0"><p><br>
+</p>
+<p>26 فوریه ی 2013 دست در دست هم دادیم و پس از سالها تلاش و خون دل خوردن ها و حق خوری ها راهی آسیا شدیم و حماسه ای خلق کردیم که آسیا به وجودمان افتخار کرد.آنروز تیمی که با 13 بازیکن در 3 جام شرکت کرده بود با همراهی هواداران و یک بازی بسیار زیبا الجزیره ی پر مهره را در تبریز زمین گیر کرد.بلیت این دیدار را که اولین بازی آسیایی محبوبمان بود خیلی از ماها هنوز نگه داشته ایم.هرچند پس از این بازی به خاطر اتفاقاتی که افتاد دیگر تیم نتوانست یا نگذاشتند به روند خود در آن فصل ادامه دهد.<br>
+</p>
+
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/category/3" class=text4>مقاله های اختصاصی تراختورعاشیقلری</a>،&nbsp;<a href="http://tractorfc1.mihanblog.com/post/category/2" class=text4>تراختوردان گوزل عکس و پوسترلر</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D8%B1%D8%A7%D8%AE%D8%AA%D9%88%D8%B1" class=text4>تراختور</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%A2%D8%B3%DB%8C%D8%A7" class=text4>آسیا</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D9%84%DB%8C%DA%AF%20%D9%82%D9%87%D8%B1%D9%85%D8%A7%D9%86%D8%A7%D9%86" class=text4>لیگ قهرمانان</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%A7%D9%84%D8%AC%D8%B2%DB%8C%D8%B1%D9%87" class=text4>الجزیره</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                                <br><br></font>
+
+
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://tractorfc1.mihanblog.com/post/1001#commentlist">نظرات (<script>setCommentCnt(1001)</script>)</a></font></div>
+
+            <div style="float: left; margin-left: 68px; margin-top: 23px;"><script>mihanblogPostLike('1001','like')</script></div>
+
+
+
+        </div>
+        <style>
+
+
+            .mihanblog_like_likeCnt{
+                right: 0;
+            }
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 64px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:635px; float:left; background:#424242; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 30px; padding:0 0 10px 0;}
+            .com1{ width:617px; float:left; background:#860909; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:390px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:597px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:597px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:607px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://tractorfc1.mihanblog.com/post/1000">ما طرفدارتراختورهستیم نه این تیمی که مال ما نیست/بازهم به استادیوم می آییم تا روزیکه تراختوررا بازپس بگیریم</a></font></div>
+            <div class=div58><font class=text7>سه شنبه 1394/10/1 :: نویسنده : <a href="http://tractorfc1.mihanblog.com/post/author/1033221">احمد </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+<ol>
+	<li style="text-align: justify;"><font face="arial, helvetica, sans-serif" size="4"><font color="#cc0000">اختصاصی-تراختورعاشیقلری:</font>تراختور امروز به استقلالی باخت که مربی تیمم رویایش بازگشت به نیمکت آن و آرزوی ستاره تیمم یکبار پوشیدن پیراهن آن است.ما هواداران امروز در هوای زیر صفر تبریز با حضور بیش از 30هزارنفریمان نشان دادیم هیچگاه نمیگذاریم تراختور تنها بماند و حتی به این مربی که هیچ علاقه ای به حضورش روی نیمکت نداشتیم فرصت دادیم.ولی این مرد به بازیکنی که ستاره ی تیم قبلش بود ولی امروز از دادن حتی یک پاس صحیح عاجز مانده بود و عامل اصلی گل دوم استقلال بود 90 دقیقه فرصت داد تا در اخر با جمله ی فدای سرم در اینستا پاسخمان را دهد.شاید این بازیکن در تمرینات عملکرد قابل قبولی ارائه میدهد که فیکسش میکنید ولی آیا بازیش را در زمین ندیدی آقای مربی که تعویضش کنی؟</font></li>
+	<li><font face="arial, helvetica, sans-serif" size="4">آری ما طرفداز تراختور هستیم و خواهیم ماند ولی این تیمی که امروز بازی کرد نه دل بازیکنانش با ماست نه مربیش و نه مدیرانش.پس این تیم تراختور ما نیست ولی ما تا بازپس گیری تراختور تلاشمان را خواهیم کرد.امروز حتی وقتی تیم عقب بود و در آستانه ی حذف،هیچ تلاش و عطش خاصی در تیم برای گلزنی دیده نمیشد یعنی انگار برنامه ای نبود برای اینکار از سوی کادر فنی و حتی پس از شکست به جز معدودی از بازیکنانمان که بحثشان از بقیه جداست ناراحتی خاصی هم در چهره ی بقیه دیده نمیشد.شجاع خلیلزاده و اخباری به امثال بختیار نشان دادند میتوان سرباز بود ولی با تعصب بود.</font></li>
+	<li><font face="arial, helvetica, sans-serif" size="4">پوشیدن پیراهن تراختور و حمایت غیور مردان آذربایجان لایق بازیکنان و مربیان با شرفی است که حتی اگر تعصبی هم نداشته باشند به حرمت هوادار و یا حداقل حرمت پولی که میگیرند تا لحضی اخر میجنگد.پیراهن تراختور از اولش هم برای بعضی ها گشاد بوده و لیاقت بعضی ها همان پوشیدن پیراهن دردانه های پایتخت است.</font></li>
+</ol>
+<ul>
+	<li><font face="arial, helvetica, sans-serif" size="4">چه قدر دلم تنگ شده به روز هایی که باشگاه و هوادار جدا از هم نبودند و خیلی راحت استادیوم پر میشد.دلم خیلی زود تنگ شده برای مربی که شاید مسلمان نبود ولی به تعهداتش پایبند بود.دلم تنگ شده برای فریادهایمان که یک صدا فریاد میزدیم مهدی باتعصب،ممد اف14،اکرامی بامرام و.....و این بازیکنان با جان و دل برایمان تلاش میکردند و حتی اگر تیم میباخت ناراضی از تیم به خانه برنمیگشتیم.ولی محال است اجازه دهیم پرچم تراختور را اینگونه پایین بکشید.با کمک خدا تا هستیم تلاش میکنیم تا تیمی که با پیراهن قرمز در یادگار بازی میکند تراختور ما باشد نه تراختوری که دشمنانم میخواهند.<font color="#009900">یاتماز تراختور بایراغی</font></font></li>
+</ul>
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/category/3" class=text4>مقاله های اختصاصی تراختورعاشیقلری</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D8%B1%D8%A7%D8%AE%D8%AA%D9%88%D8%B1" class=text4>تراختور</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%A7%D8%B3%D8%AA%D9%82%D9%84%D8%A7%D9%84" class=text4>استقلال</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D9%82%D9%84%D8%B9%D9%87%20%D9%86%D9%88%DB%8C%DB%8C" class=text4>قلعه نویی</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%A8%D8%AE%D8%AA%DB%8C%D8%A7%D8%B1%D8%B1%D8%AD%D9%85%D8%A7%D9%86%DB%8C" class=text4>بختیاررحمانی</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D9%85%D8%B8%D9%84%D9%88%D9%85%DB%8C" class=text4>مظلومی</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1%DB%8C" class=text4>اخباری</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%B3%D8%B1%D8%A8%D8%A7%D8%B2" class=text4>سرباز</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                                <br><br></font>
+
+
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://tractorfc1.mihanblog.com/post/1000#commentlist">نظرات (<script>setCommentCnt(1000)</script>)</a></font></div>
+
+            <div style="float: left; margin-left: 68px; margin-top: 23px;"><script>mihanblogPostLike('1000','like')</script></div>
+
+
+
+        </div>
+        <style>
+
+
+            .mihanblog_like_likeCnt{
+                right: 0;
+            }
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 64px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:635px; float:left; background:#424242; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 30px; padding:0 0 10px 0;}
+            .com1{ width:617px; float:left; background:#860909; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:390px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:597px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:597px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:607px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://tractorfc1.mihanblog.com/post/999">نه با2برداستقلال که با10بردهم حسابمان صاف نمیشود ولی به خاطر تراختورسکوت میکنیم/لیدرها خودسری نکنند</a></font></div>
+            <div class=div58><font class=text7>چهارشنبه 1394/09/18 :: نویسنده : <a href="http://tractorfc1.mihanblog.com/post/author/1033221">احمد </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+<font face="arial, helvetica, sans-serif" size="4">اختصاصی-تراختورعاشیقلری:کاری که نباید میشد شد.به لطف مدیریت غیر فوتبالیمان امیر قلعه نویی سرمربی تراختور شد تاداغ آن دروغ هایش در دلهایمان &nbsp;تازه شود.سخت است جانشین آن پیرمرد صاف و ساده و عاشق و البته با دانشی که فوتبال زیبایی را که میخواستیم ارائه میداد مردی باشد که یکبار آنگونه دوروییش ثابت شده و البته فوتبال بزن زیرش و ...</font><div><font face="arial, helvetica, sans-serif" size="4">.مطمئنا امیرقلعه نویی برای برد &nbsp;دو بازی استقلال حساب ویژه ای بازکرده تا بتواند دل هواداران را به سادگی به دست بیاورد .اما نه امیر خان دیگر اعتمادی به امثالت نیست حتی اگر 10 بازی را هم ببری.با افرادی مثل تو قهرمانی هم طعم همیشگی را برایمان ندارد چه برسد به پیروزی برابر استقلال.</font></div><div><font face="arial, helvetica, sans-serif" size="4">اما به خاطر معشوقمان تراختور مجبوریم تو را فقط تحمل کنیم.یعنی باید فعلا سکوت کنیم تا تراختورمان بیش از این ضربه نبیند.امیدواریم این فصل را بتوانی با نتایج خوب بگذرانی و بعد بروی به تیم محبوبت استقلال.البته شنیده میشود برای فصل بعد هم قرارداد بسته ای که فکرکنم برای خودت هم باورش سخت باشد1/5 فصل در تراختور بمانی چه برسد به ما که بارها دیده ایم وعده های پوچت را.</font></div><div><font face="arial, helvetica, sans-serif" size="4">&nbsp;مطمئنا دل ما هم مثل شما هواداران از اینکه چنین فردی مربی تراختور شده به درد آمده است ولی باید صبر پیشه کنیم تا تراختورمان توسط این مدیران نا لایق به گردآب نیفتد و بیش از این ضربه نبیند و دشمنانمان بیش از این خوشحال نشوند.باید فعلا سکوت کنیم تا این افراد بهانه ای بعدا نداشته باشند.</font></div><div><font face="arial, helvetica, sans-serif" size="4">قهر با استادیوم را هم فراموش کنید.ما برای این افراد به استادیوم نمیرویم و مهم تراختور است که نباید تنها بماند.و البته 100 افسوس که تونی این فصل نتوانست استادیوم پر یادگار را ببیند.</font></div><div><font face="arial, helvetica, sans-serif" size="4">و به لیدر هایی که به نظر میرسد نه به خاطر تراختور بلکه برای مربی مورد علاقه شان که سرمربی نشده و به جلوی هیئت فوتبال رفته اند هم بگوییم که شما انقدر کار اشتباه کرده اید که وقتی شما اینچنین اعتراض میکنید ما در اعتراض های خود شک میکنیم که نکند اشتباه کرده ایم.پس سرجای خود بنشینید و با هواداران همسو باشید تا بیرونتان نیاندازیم.همین شما ها بودید که دل تونی را هرروز خون میکردید.اعتراض هم اگر باشد که هست باید به صورت دسته جمعی و با حضور همه باشد که در استادیوم مقدور است نه اینکه هر کس کاغذی در دست بگیرد و شهر را بگردد.</font></div><div><font face="arial, helvetica, sans-serif" size="4" color="#ff0000">یاتماز تراختوربایراغی</font></div>
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/category/3" class=text4>مقاله های اختصاصی تراختورعاشیقلری</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D8%B1%D8%A7%D8%AE%D8%AA%D9%88%D8%B1" class=text4>تراختور</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D8%B1%D8%A7%DA%A9%D8%AA%D9%88%D8%B1" class=text4>تراکتور</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%A2%D8%B0%D8%B1%D8%A8%D8%A7%DB%8C%D8%AC%D8%A7%D9%86" class=text4>آذربایجان</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%A7%D9%85%DB%8C%D8%B1%D9%82%D9%84%D8%B9%D9%87%20%D9%86%D9%88%DB%8C%DB%8C" class=text4>امیرقلعه نویی</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D9%84%DB%8C%D8%AF%D8%B1" class=text4>لیدر</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                                <br><br></font>
+
+
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://tractorfc1.mihanblog.com/post/999#commentlist">نظرات (<script>setCommentCnt(999)</script>)</a></font></div>
+
+            <div style="float: left; margin-left: 68px; margin-top: 23px;"><script>mihanblogPostLike('999','like')</script></div>
+
+
+
+        </div>
+        <style>
+
+
+            .mihanblog_like_likeCnt{
+                right: 0;
+            }
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 64px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:635px; float:left; background:#424242; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 30px; padding:0 0 10px 0;}
+            .com1{ width:617px; float:left; background:#860909; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:390px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:597px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:597px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:607px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://tractorfc1.mihanblog.com/post/998">بی لیاقتیتان در حفظ تونی را با اشتباه اوردن قلعه نویی تکمیل نکنید/چه با تونی محبوب چه بی او یاتماز تراختور بایراغی</a></font></div>
+            <div class=div58><font class=text7>سه شنبه 1394/09/17 :: نویسنده : <a href="http://tractorfc1.mihanblog.com/post/author/1033221">احمد </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><p>تراختورعاشیقلری:تونی،این پیرمرد عاشق و محبوب که خیلی زود با اخلاق خاص و ناب و دانش زیادش در قلب ما جا گرفت بار دیگر از تراختور کوچ کرد.میگویند به خاطر مشکلات خانوادگی رفته خیلی دلمان میخواهد باورش کنیم افسوس که بی لیاقتی مدیریت ها در این چند سال این اجازه را نمیدهد.مطمئنا همه ی هواداران عاشق که دانش فراآسیایی این مربی را در موفقیت تراختور کافی میدانستند و بزرگی این مربی را باور داشتند دلشان با شنیدن این خبر گرفته ولی خب موقعیت حساس تیممان تراختور شرایط نوشتن متن های احساسی را از ما دریغ کرده به خصوص که مار هایی در تلاش برای چنبره زدن بر روی تراختور هستند تا از رفتن تونی کبیر برگترین استفاده را کنند و نامی مجدد برای خود دست و پا کنند.
+</p>
+<p>مهم ترین نامی که به گوش میرسد نام امیر قلعه نویی هست که که با کارهایی که کرده است حتی خوشبین ترین هواداران نیز اندک تنفری از وی دارند.تراختور جای امثال این مرد نیست و اگر میخواهید باعث بی نظمی نشوید و مردم را از خود متنفر نسازید این کار را نکنید و بگذارید حرمت میان هواداران و شما حفظ شود.
+</p>
+<p>نام دیگر نام رسول خطیبی است که هرچند قضیه ی وی با امیر قلعه نویی بسار متفاوت است ولی به نظر نمیرسد با توجه به اتفاقات فصل پیش مورد مناسبی برای این برهه باشد.ولی وی چند سال بعد پس از کسب تجربه میتواند مربی خوبی برای تراختور شود اگر قدر خود را بداند و وارد بعضی بازی ها نشود.
+</p>
+<p>شاید بشود حسین فرکی را مربی خوبی برای این برهه دانست هرچند با توجه به اینکه وی فصل پیش سرمربی تیمی اصفهانی بود که قهرمانیمان را که نه ولی جاممان را ربود دل خوشی از وی نداشته باشیم ولی باتوجه به شرایط فعلی میتواند راه چاره ی مدیریت برای کنترل حواشی باشد.
+</p>
+<p>و این را هم دشمنانمان بدانند که چه با تونی محبوبمان چه بی او نمیگذاریم پرچم تراختور بخوابد و بهتر است زمین خوردن تراختور را همان در خوابتان ببینید چون این آرزو را به گور خواهید برد
+</p>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/category/3" class=text4>مقاله های اختصاصی تراختورعاشیقلری</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D8%B1%D8%A7%D8%AE%D8%AA%D9%88%D8%B1%D8%8C%D8%AA%D8%B1%D8%A7%DA%A9%D8%AA%D9%88%D8%B1%D8%8C%D8%AA%D9%88%D9%86%DB%8C%D8%8C%D8%A2%D8%B0%D8%B1%D8%A8%D8%A7%DB%8C%D8%AC%D8%A7%D9%86%D8%8C%D8%A7%D9%85%DB%8C%D8%B1%D9%82%D9%84%D8%B9%D9%87%20%D9%86%D9%88%DB%8C%DB%8C%D8%8C%D8%AA%D9%88%D9%86%DB%8C%D8%8C%D8%A7%D9%88%D9%84%DB%8C%D9%88%DB%8C%D8%B1%D8%A7%D8%8C%D8%AE%D8%B7%DB%8C%D8%A8%DB%8C%D8%8C%D9%85%D8%A7%D9%81%DB%8C%D8%A7%D8%8C%D9%81%D8%B1%DA%A9%DB%8C%D8%8C%D8%A7%D8%B3%D8%AA%D9%82%D9%84%D8%A7%D9%84%D8%8C%D8%B3%D9%BE%D8%A7%D9%87%D8%A7%D9%86" class=text4>تراختور،تراکتور،تونی،آذربایجان،امیرقلعه نویی،تونی،اولیویرا،خطیبی،مافیا،فرکی،استقلال،سپاهان</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                                <br><br></font>
+
+
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://tractorfc1.mihanblog.com/post/998#commentlist">نظرات (<script>setCommentCnt(998)</script>)</a></font></div>
+
+            <div style="float: left; margin-left: 68px; margin-top: 23px;"><script>mihanblogPostLike('998','like')</script></div>
+
+
+
+        </div>
+        <style>
+
+
+            .mihanblog_like_likeCnt{
+                right: 0;
+            }
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 64px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:635px; float:left; background:#424242; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 30px; padding:0 0 10px 0;}
+            .com1{ width:617px; float:left; background:#860909; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:390px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:597px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:597px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:607px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://tractorfc1.mihanblog.com/post/997">از نکته های تلخ و مهم بازی امروز بخوانید/ از ذهن قوی دشمنان و از آینده ای که در ذهن خام خود برایمان ساخته اند</a></font></div>
+            <div class=div58><font class=text7>جمعه 1394/07/3 :: نویسنده : <a href="http://tractorfc1.mihanblog.com/post/author/1033221">احمد </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+<div><img src="http://oyaglig.com/wp-content/uploads/2015/09/photo_2015-09-25_19-13-28-640x480.jpg" alt="photo_2015-09-25_19-13-28"></div>
+<font face="arial, helvetica, sans-serif" size="4"><font color="#ff0000">اختصاصی-تراختورعاشیقلری</font>:25 اردیبهشت ماه بود که فکر کردند افسانه ی تراختور و تراختورچی تمام شده و دیگر پیکر تراختور جان ندارد.</font><span style="font-family: arial, helvetica, sans-serif; font-size: large;">باید قبول هم کنیم برنامه هایشان تا حدودی عملی شد و امسال سکوهای یادگار بیشتر به سردی گرایید ولی پس از دیدن حمایت همه جانبه در فضاهای مجازی و &nbsp;کوچه محلات شهر های آذربایجان فهمیدند که عشق تراختور در قلب های این دیار پاک خاموش شدنی نیست.باید ضربه ای دیگر میزدند تا لااقل تا پایان این فصل خیالشان راحت باشد.</span><div><span style="font-family: arial, helvetica, sans-serif; font-size: large;">واقعا هم انتخاب به جایی بود انتخاب جناب محسن خان تولکی ببخشید تورکی.لااقل اینطوری مهره ای دیگرشان نمیسوخت و میتوانستند آن مهره های نسوخته را برای بازی های مهم تر نگه دارند.بله این آقا طبق انتظار از همان ابتدا نشان داد جو استادیوم الکی هم علیه وی نیست.هرکجای زمین بازیکن پرسپولیس روی زمین می افتاد دیگر بازیکنانمان منتظر سوتش نمیشدند چون میدانستند چه برخوردی باشد چه نه این خطا هست.از همان ابتدا زمزمه هایی از استادیوم به گوش مرسید که اگه پرسپولیس بتونه به محوطه برسه باید منتظر پنالتی باشیم و چه خوب پیشبینی کرده بودند هواداران.</span></div><div><span style="font-family: arial, helvetica, sans-serif; font-size: large;">بخشی هم از این حرکات مربوط به حضور با دانش ترین مربی ممکن برای لیگ ایران در نیمکت تراختور است که<b> شاید برخی از هواداران خودی متاسفانه بازی &nbsp;های زیبا و تونی تاکای وی را فراموش کرده باشند اما انهایی که در پی ضربه زدن به ما هستند هیچگاه فراموش نمیکنند ومیدانند با حضور آن مرد، تراختور هرچقدرهم زخمی باشد امکان پیروزی دارد.البته اکثریت هواداران باهوش هستند و همه جوره پشت این مرد ایستاده اند چون وی نیز دیگر یکی از ماست.</b></span><div><font face="arial, helvetica, sans-serif" size="4">از سوشا مکانی هم بگویم که همه جا ادعای جوانمردی میکند و از وقتی تیمش به ناحق گل زد بیش از نصف دقایق روی زمین افتاده بود.</font></div><div><font face="arial, helvetica, sans-serif" size="4">از اکرادی بگویم که به خیال خود قرار بود با 10ها اتوبوس به تبریز بیایند و تعدادشان به تعداد انگشتان دستانمان هم نبود.</font></div><div><font face="arial, helvetica, sans-serif" size="4">از سربازانمان بنویسم از بختیار رحمانی که حتی آمادگیش نصف زمانی که در فولاد بود نیست.</font></div><div><font face="arial, helvetica, sans-serif" size="4">و البته قبول هم میکنیم با توجه به از دست رفتن اسکلت کلی تیم و بی لیاقتی مدیران در نگهداشتن بازیکنان تاثیرگذار فصل پیش ،تیم هنوز به امادگی کامل نرسیده و ضعف هایی به خصوص در گلزنی و ضربات پایانی دارد.</font></div><div><font face="arial, helvetica, sans-serif" size="4">آنها دیگر فکر میکنند ما نیستیم ولی نشان خواهیم تا اخر پای عهدمان هستیم و هیچگاه عشقمان, تراختور و در این برهه که تونی باید باشد وی را تنها نخواهیم گذاشت</font><span style="font-family: arial, helvetica, sans-serif; font-size: large;">&nbsp;و</span></div><div><span style="font-family: arial, helvetica, sans-serif; font-size: large;">&nbsp;صدای یاشاسین آذربایجان از یادگار قطع نخواهد شد.افسانه ی تراختور پایان نمیپذیرد</span></div><div><font face="arial, helvetica, sans-serif" size="4" color="#33cc00">یاتماز تراختور بایراغی</font></div></div>
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/category/3" class=text4>مقاله های اختصاصی تراختورعاشیقلری</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D8%B1%D8%A7%D8%AE%D8%AA%D9%88%D8%B1" class=text4>تراختور</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D9%BE%D8%B1%D8%B3%D9%BE%D9%88%D9%84%DB%8C%D8%B3" class=text4>پرسپولیس</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D9%85%D8%AD%D8%B3%D9%86%20%D8%AA%D9%88%D8%B1%DA%A9%DB%8C" class=text4>محسن تورکی</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%A2%D8%B0%D8%B1%D8%A8%D8%A7%DB%8C%D8%AC%D8%A7%D9%86" class=text4>آذربایجان</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                                <br><br></font>
+
+
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://tractorfc1.mihanblog.com/post/997#commentlist">نظرات (<script>setCommentCnt(997)</script>)</a></font></div>
+
+            <div style="float: left; margin-left: 68px; margin-top: 23px;"><script>mihanblogPostLike('997','like')</script></div>
+
+
+
+        </div>
+        <style>
+
+
+            .mihanblog_like_likeCnt{
+                right: 0;
+            }
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 64px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:635px; float:left; background:#424242; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 30px; padding:0 0 10px 0;}
+            .com1{ width:617px; float:left; background:#860909; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:390px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:597px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:597px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:607px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://tractorfc1.mihanblog.com/post/996">ورزش3وتلاش نافرجام/خودی ها مواظب باشند</a></font></div>
+            <div class=div58><font class=text7>چهارشنبه 1394/06/4 :: نویسنده : <a href="http://tractorfc1.mihanblog.com/post/author/1033221">احمد </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><font face="arial, helvetica, sans-serif" size="4">
+اختصاصی-تراختورعاشیقلری:تراختور امروز نتوانست از پس استقلال خوزستان بر بیاید تا بدخواهان تونی و انهایی که حضور تونی در تراختور را &nbsp;نگران کننده میدانند بیش از پیش به این مربی فشار بیاورند و سعی کنند از محبوبیت بیش از حد وی نزد هواداران بکاهند.البته هواداران واقعی تراختور بازی های فصل اولی را که تونی در تیم بود و تیم از هفته ی 6 شروع به بازی هایی فراتر از آسیا کرد و حتی تفاوت های تیم قبل و بعد از حضور تونی در دو فصل اخیر را مییدانند و به این زودی ها پشت وی را خالی نمیکنند ولی خب در این میان افرادی نیز اسیر تبلیغات رسانه ای بدخواهان تراختور میشوند و شروع به انتقاد در این برهه میکند.انتقاد و حتی اعتراض زمان خود را دارد و هوادار تراختور به خوبی از این موضوع آگاه است و این را چه در زمان جعفری و چه درزمان جلالی نشان داده است.
+
+</font><div><font face="arial, helvetica, sans-serif" size="4">یکی از سایت هایی که به دفعات خصومت خود با تراختور و هوادارانش را نشان داده سایت ورزش 3 است.تیتر سرشار از کینه ی امروز ورزش 3 پس از بازی که تلاشی است برای بازی با احساسات هواداران کاملا بیانگر این موضوع است.البته نویسندگان این سایت به این تیتر هم قانع نشده اند ودر ابتدا در شرح بازی به طور عجیبی تراختور را ضعیف جلوه داده اند تا بلکه نظر هواداران نسبت به تونی عوض شود.نکته &nbsp;جالب اینکه پس تعریف از بازی استقلال و کوبیدن تراختور موقعیت های خطرناک بازی نوشته شده که اکثر آن برای تراختور بوده است.</font></div><div><font face="arial, helvetica, sans-serif" size="4">البته ما هم قبول داریم تراختور هنوز تراختور مورد انتظار هواداران نیست ولی آلزایمر هم نداریم که بازی های 3 فصل اخیربا تونی را فراموش کنیم و ناامید شویم.البته این اتمام کار نویسندگان محترم این سایت نبوده و در حواشی بازی نیز به حالت تمسخرآمیزی به تشویق تونی در استادیوم اشاره شده است.</font></div><div><font face="arial, helvetica, sans-serif" size="4">البته هوادارن تراختور به این موضوعات و خصومت ها در این سالها عادت کرده اند و هیچ نگرانی و گله ای راجب این موضوع نیست.نکته ی اذیت کننده همراه شدن معدودی از هواداران با این افراد و افراد جیره بگیری که با نام های کاربری متفاوت سعی در تخریب تونی در سایت ها را دارند ، است.البته این جو منفی علیه تیم در این سالها همواره شکست خورده و ان شالله به لطف خدا و هوشیاری هواداران مثل همیشه شکست خواهد خورد تا تراختور این برهه را هم مثل برهه های سخت تری که در این سالها از آن عبور کرده رد کند</font></div><div><font face="arial, helvetica, sans-serif" size="4">البته صحبت هایی مبنی بر کمکاری بازیکنان به خصوص بازیکنان سرباز هست که فعلا بنا را بر شایعه بودن این اخبار گذاشته ایم و مطمئنا خودبازیکنان بهتر میدانند فرجام درگیری با هواداران تراختور را که اگر خودشان هم کاری نکنند آهشان دامانشان را خواهد گرفت.درباره ی این موضوع و جیره بگیران در سایت ها ان شاالله بیشتر خواهیم نوشت.</font></div>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/category/3" class=text4>مقاله های اختصاصی تراختورعاشیقلری</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D8%B1%D8%A7%D8%AE%D8%AA%D9%88%D8%B1" class=text4>تراختور</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D9%88%D9%86%DB%8C" class=text4>تونی</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%A2%D8%AA%D8%A7%D8%AA%D9%88%D9%86%DB%8C" class=text4>آتاتونی</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D9%88%D8%B1%D8%B2%D8%B43" class=text4>ورزش3</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AD%D8%A7%D8%B4%DB%8C%D9%87" class=text4>حاشیه</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%A7%D8%B3%D8%AA%D9%82%D9%84%D8%A7%D9%84%20%D8%AE%D9%88%D8%B2%D8%B3%D8%AA%D8%A7%D9%86" class=text4>استقلال خوزستان</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                                <br><br></font>
+
+
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://tractorfc1.mihanblog.com/post/996#commentlist">نظرات (<script>setCommentCnt(996)</script>)</a></font></div>
+
+            <div style="float: left; margin-left: 68px; margin-top: 23px;"><script>mihanblogPostLike('996','like')</script></div>
+
+
+
+        </div>
+        <style>
+
+
+            .mihanblog_like_likeCnt{
+                right: 0;
+            }
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 64px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:635px; float:left; background:#424242; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 30px; padding:0 0 10px 0;}
+            .com1{ width:617px; float:left; background:#860909; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:390px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:597px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:597px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:607px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://tractorfc1.mihanblog.com/post/995">هیچ اتحادی با هیچکس در این لیگ نداریم/فحش های 40هزارنفریتان در خاطرمان هست هنوز</a></font></div>
+            <div class=div58><font class=text7>جمعه 1394/05/30 :: نویسنده : <a href="http://tractorfc1.mihanblog.com/post/author/1033221">احمد </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+<font face="arial, helvetica, sans-serif" size="4">اختصاصی-تراختورعاشیقلری:باتوجه به اتفاقاتی که در دو بازی اخیر پرسپولیس افتاده و به خصوص در بازی اخر این تیم که آقای فغانی، قهرمان آقایان در جمعه ی سیاه آذربایجان سوت هایی را به ضرر این تیم به صدا درآورد، اکنون هواداران این دردانه ی پایتخت نشین سعی دارند با وصل کردن این جریانات به اتفاقات 25اردیبهشت از آب گل آلود ماهی بگیرند و فدراسیون نشینان هم سعی بر این دارند تا با این اتفاقات خود را از حوادث 25 اردیبهشت مبرا کنند و همه ی این جریانات را یک اتفاق قلمداد کنند.در این بین هواداران پرسپولیس با نوشتن جملاتی مثل اتحاد پرسولیس و تراکتور و اتحاد دو سرخ سعی بر تحریک هواداران تراختور را دارند و البته متاسفانه بعضی از هواداران تراختور &nbsp;نیزاین افرادرا همراهی میکنند.</font><div><font face="arial, helvetica, sans-serif" size="4">یادمان نرفته جلوی همین پرسپولیس بود؛ زمانیکه علی دایی سرمربیشان بود و کریم باقری کاپیتانشان 40 هزار نفری با فریادهایشان انواع توهین هارا به ما کردند و درآخر کاسه کوزه هارا سرمان شکستند.اکنون شاید چند وقتی هست که اصفهانی ها گوی سبقت را از دردانه ها ربوده اند ولی مطمئنا حساب تراختور و هوادارانش با دردانه ها و طرفداران فدراسیون نشینشان صاف نخواهد شد.اگر شما اکنون به دنبال 3 امتیاز برای فرار از قعر جدول هستید ما کسانی هستیم که جاممان را جلوی چشمانمان گرفتند.هرچند قهرمان واقعی لیگ بودیم ولی حق کشی ها امانمان را برید.هنوز ماجرای محسن تورکی هم یادمان نرفته یا همین سوت های اشتباه محسن قهرمانی چند هفته قبل از بازی پرسپولیس با سپاهان در آزادی به ضررمان.همین چند روز پیش که دادکان از گوشه هایی از فساد در این فوتبال کثیف پرده برداری کرد.آن کدام بازی بین دو تیم پرطرفدار در آزادی بود که به گفته ی آقای دادکان &nbsp;از قهرمانی خواسته شده بود بازی را به نفع یکی در بیاورد ؟آیا این تنها اتفاق از این دست در این فوتبال است؟</font></div><div><font face="arial, helvetica, sans-serif" size="4">آری ما دیگر هیچ متحد و دوستی در این لیگ نخواهیم داشت نه متحد اصفهانی میخواهیم نه از دردانه ها منتظر کمک هستیم.مگر اینکه تیمی دیگر از آذربایجان پا به لیگ بگذارد که کادرش &nbsp;واقعا با تراختور همدل باشد.</font></div><div><font face="arial, helvetica, sans-serif" size="4">یاتماز تراختور بایراقی</font></div>
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/category/3" class=text4>مقاله های اختصاصی تراختورعاشیقلری</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D8%B1%D8%A7%D8%AE%D8%AA%D9%88%D8%B1" class=text4>تراختور</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D9%BE%D8%B1%D8%B3%D9%BE%D9%88%D9%84%DB%8C%D8%B3" class=text4>پرسپولیس</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D9%85%D8%AD%D8%B3%D9%86%20%D9%82%D9%87%D8%B1%D9%85%D8%A7%D9%86%DB%8C" class=text4>محسن قهرمانی</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D9%81%D8%BA%D8%A7%D9%86%DB%8C" class=text4>فغانی</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D9%85%D8%AD%D8%B3%D9%86%20%D8%AA%D9%88%D8%B1%DA%A9%DB%8C" class=text4>محسن تورکی</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%B3%D9%BE%D8%A7%D9%87%D8%A7%D9%86" class=text4>سپاهان</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2" class=text4>تبریز</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                                <br><br></font>
+
+
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://tractorfc1.mihanblog.com/post/995#commentlist">نظرات (<script>setCommentCnt(995)</script>)</a></font></div>
+
+            <div style="float: left; margin-left: 68px; margin-top: 23px;"><script>mihanblogPostLike('995','like')</script></div>
+
+
+
+        </div>
+        <style>
+
+
+            .mihanblog_like_likeCnt{
+                right: 0;
+            }
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 64px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:635px; float:left; background:#424242; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 30px; padding:0 0 10px 0;}
+            .com1{ width:617px; float:left; background:#860909; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:390px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:597px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:597px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:607px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://tractorfc1.mihanblog.com/post/994">فصلی چند تومن برای اعتراض به جمعه ی سیاه </a></font></div>
+            <div class=div58><font class=text7>سه شنبه 1394/05/13 :: نویسنده : <a href="http://tractorfc1.mihanblog.com/post/author/1033221">احمد </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><div><img src="http://www.entekhab.ir/files/fa/news/1394/2/26/91420_292.jpg"></div><font face="arial, helvetica, sans-serif" size="4"><font color="#ff0000">
+
+اختصاصی-تراختورعاشیقلری</font>:در خبر ها داشتیم تراختور به جرم اعتراض هواداران به یکی از داوران بازی های فصل گذشته اش در بازی با نفت جریمه ی نقدی شده و از مدیران تراختور خواسته شده به رفتار هواداران نظارت داشته باشند.</font><div><font face="arial, helvetica, sans-serif" size="4">انگار پس از آن بازی کثیف با میلیون ها عاشق و آن دروغ بزرگ و از دست رفتن جان یکی از برادرانمان و البته پس از بازی کثیف تر پس از بازی در رسانه ها و دروغ های پی در پی به مردم و رفع اتهام از خود و پیداکردن متهم های واهی و پس از آن حکم های قاطعانه و محکم آقایان انتظار داشتند از تمام کسانیکه در این مدت زحمت کشیدند برایمان از فغانی گرفته تا کفاشیان و بهران و تاج و ششگلانی و اسبقیان و... تشکر کنیم و با شعار فدراسیون متشکریم به استقبال فصل پیش رو برویم.و یا همه ی این اتفاقات را به فراموشی بسپاریم انگار نه انگار که جمعه ی سیاهی بوده.دل میلیون ها نفر شکسته.با احساسات 100هزار نفر بازی شده و فردی جانش را از دست داده.</font></div><div><font face="arial, helvetica, sans-serif" size="4">اکنون درخواست داریم اگر آقایان &nbsp;این رویه را درپیش خواهند گرفت بهتر است به جای یک هفته یکبار &nbsp;کل فصل را باهم حساب کنند تا مدیران تراختور تکلیف دخل و خرج خود را بدانند.&nbsp;</font></div><div><font face="arial, helvetica, sans-serif" size="4">و این را هم بدانید که شاید شعار هایمان راجب آن روز 1 سال،2سال یا هر موقع دیگر تمام شود ولی یاد آن روز برای همیشه در حافظه مان خواهد ماند</font></div>
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/category/3" class=text4>مقاله های اختصاصی تراختورعاشیقلری</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                                <br><font color="#c70900">لینک های مرتبط :</font>
+                                <br><br></font>
+
+
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://tractorfc1.mihanblog.com/post/994#commentlist">نظرات (<script>setCommentCnt(994)</script>)</a></font></div>
+
+            <div style="float: left; margin-left: 68px; margin-top: 23px;"><script>mihanblogPostLike('994','like')</script></div>
+
+
+
+        </div>
+        <style>
+
+
+            .mihanblog_like_likeCnt{
+                right: 0;
+            }
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 64px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:635px; float:left; background:#424242; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 30px; padding:0 0 10px 0;}
+            .com1{ width:617px; float:left; background:#860909; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:390px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:597px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:597px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:607px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://tractorfc1.mihanblog.com/post/993">هواداران حتما بخوانند/از25اردیبهشت تا8مرداد و آمادگی برای حضور</a></font></div>
+            <div class=div58><font class=text7>سه شنبه 1394/05/6 :: نویسنده : <a href="http://tractorfc1.mihanblog.com/post/author/1033221">احمد </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+
+
+<div><img src="http://imagetop.ir/wp-content/uploads/2014/07/%D9%BE%D9%88%D8%B3%D8%AA%D8%B1-%D8%B2%DB%8C%D8%A8%D8%A7%DB%8C-%D8%AA%D8%B1%D8%A7%D8%AE%D8%AA%D9%88%D8%B1.jpg"></div><div><font color="#ff0000" style="font-family: arial, helvetica, sans-serif; font-size: large;">ختصاصی-تراختورعاشیقلری</font><span style="font-family: arial, helvetica, sans-serif; font-size: large;">:زمان زیادی تا اولین بازی تراختور در فصل جدید نمانده.اتفاقابازی اول لیگ را باید در مقابل نفت تهران انجام دهیم.نفتی که فصل پیش برابرش آخرین بازی لیگ را انجام دادیم و 100هزار نفر گردهم آمدیم تا اولین قهرمانی رسمی مان را جشن بگیریم.هرچند قبلا دو بار قهرمانی واقعی لیگ بودیم.ولی افسوس و صد افسوس که نتوانستند شادیمان را ببینند و خنده هایمان را به گریه تبدیل کردند و با دروغی بزرگ با احساسات هواداران بازی کردند.هنوز نتوانستیم قبول کنیم آرای مضحک کمیته ی انضباطی و فدراسیون را.خیانت های علنی خودی ها و دورویی حریفان را.</span></div><div><font size="4" face="arial, helvetica, sans-serif">شاید باورش برایشان سخت باشد که آذربایجان در تدارک است تا مثل همیشه از تراختورش حمایت کند.حتی نخواهیم گذاشت مثل سال پیش که در یکی دو بازی یادگار سرد شده بود امسال یادگار خالی بماند.شاید جامتان برایمان ارزشی نداشته باشد ولی تراختورمان برایمان پرارزش است و تا آخر پشتش ایستاده ایم.برایمان هم مهم نیست ساعات بازی هایمان را به گرمترین ساعات روزبیاندازید ما خواهیم آمد. امسال علاوه بر دردانه های پایتخت که همیشه خارچشمشان بودیم و اصفهانی هایی که سابقا اظهار دوستی میکردند تا مجید جلالی مثلا جوانگرا و خیلی های دیگربیش از پیش منتظر شکستنمان هستند.چیزی که آرزویش را بر دلشان خواهیم گذاشت.&nbsp;</font></div><div><font size="4" face="arial, helvetica, sans-serif">نخواهیم گذاشت پیرمرد پرتغالی محبوب آذربایجان تنها بماند در مقابل ظلم های پنهان و آشکارتان. امسال تراختور مزیت های بسیار بیشتری نسبت به سالهای پیش دارد و به جرئت میتوان گفت امیدوارکننده ترین تراختور پس از بازگشت به لیگ است.هرچند در این سالها اسم تراختور از گمنام ترین بازیکنان، بازیکنانی نامی ساخته و همیشه مدعی بوده.امسال مربیمان از اول لیگ همان کسی است که میخواستیم.تونی آمده با اینکه دیگر میتوان گفت تونی سال اول نیست که نداند در اینجا چه ها میشودآنروز ها که در تبریز تیکی تاکا را به نمایش میگذاشت و آنطور سعی کردند زمینش بزنند فکر میکردیم دیگر برنمیگردد چون مشکلات تراختور را دیده ولی او برگشت چون به قدرت هواداران ایمان داشت.امسال هرچند3 بازیکن مطرح فصل پیش و مهدی با تعصب را که همیشه در قلبمان خواهد ماند را از دست دادیم ولی به لطف خدا و تلاش های عوامل تیم ،تیم خوبی در همه ی خطوط بسته شده.4 بازیکن خارجی جذب تیم شده اند که هریک کارنامه های خوبی دارند.امسال تیم نیمکت خوبی هم دارد و با قدرت بیشتری نسبت به سال های پیش میتواند در سه جام شرکت کند.&nbsp;</font></div><div><font size="4" face="arial, helvetica, sans-serif">البته این به این معنا نیست که باید در هر بازی انتظار پیروزی داشته باشیم و باید به بازیکنان و کادر فنی فرصت کافی برای هماهنگی داده شود.</font></div><div><font size="4" face="arial, helvetica, sans-serif">در صفحات اجتماعی هم متن هایی دست به دست میچرخد مبنی بر حرکت نمادین در دقیقه ی 86 با نشان دادن کارت قرمز به فدراسیون نشینان که برای عملی شدنش باید سایت های پرطرفدار نیز اطلاع رسانی کنند.</font></div><div><font size="4" face="arial, helvetica, sans-serif">حرف آخر هم اینکه امسال باید همه مان پای ثابت باشیم.نه مثل سال پیش که 20-25هزار نفر پای ثابت بودند 15-20هزار نفر متغیر در هر بازی.امسال باید دست در دست هم سالی کابوس وار برای آنانکه نمیتوانند موفقیتمان را ببینند بسازیم.سالی که دیگر ایران دو قهرمان ندارد و تنها قهرمان ان ما هستیم.</font></div><div><font face="arial, helvetica, sans-serif" size="4">متن لینک زیر را هم پیشنهاد میشود بخوانید</font></div><div><a href="http://tractorfc1.mihanblog.com/post/981" target="_blank" title=""><font face="arial, helvetica, sans-serif" size="4">http://tractorfc1.mihanblog.com/post/981</font></a></div><div><br></div>
+
+
+
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/category/3" class=text4>مقاله های اختصاصی تراختورعاشیقلری</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D8%B1%D8%A7%D8%AE%D8%AA%D9%88%D8%B1" class=text4>تراختور</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D8%B1%D8%A7%DA%A9%D8%AA%D9%88%D8%B1" class=text4>تراکتور</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D9%81%D8%B5%D9%84%20%D8%AC%D8%AF%DB%8C%D8%AF" class=text4>فصل جدید</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D9%86%D9%82%D9%84%20%D9%88%D8%A7%D9%86%D8%AA%D9%82%D8%A7%D9%84%D8%A7%D8%AA" class=text4>نقل وانتقالات</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D9%88%D9%86%DB%8C" class=text4>تونی</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                                <br><br></font>
+
+
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://tractorfc1.mihanblog.com/post/993#commentlist">نظرات (<script>setCommentCnt(993)</script>)</a></font></div>
+
+            <div style="float: left; margin-left: 68px; margin-top: 23px;"><script>mihanblogPostLike('993','like')</script></div>
+
+
+
+        </div>
+        <style>
+
+
+            .mihanblog_like_likeCnt{
+                right: 0;
+            }
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 64px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:635px; float:left; background:#424242; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 30px; padding:0 0 10px 0;}
+            .com1{ width:617px; float:left; background:#860909; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:390px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:597px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:597px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:607px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://tractorfc1.mihanblog.com/post/992">برسدبه دست مهدی کیانی وحبیب گردانی/تامستقیم باتونی حرف نزده ایدهیچ جانروید</a></font></div>
+            <div class=div58><font class=text7>پنجشنبه 1394/03/28 :: نویسنده : <a href="http://tractorfc1.mihanblog.com/post/author/1033221">احمد </a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+<font face="arial, helvetica, sans-serif" size="4"><font color="#ff0000">اختصاصی-تراختورعاشیقلری</font>:هر چند تراختور هرموقع که تونی روی نیمکتش بوده خوب بوده و رضایت هواداران را جلب کرده اما در زمان حضو تونی تیم با یک مشکل بزرگ مواجه میشود به نام اطرفیان و دایه های مهربان تر از مادر که هر سال برای تیم مشکلی پدیدمی آورند.و نقش تونی در این ماجراها این است که فکر میکند چون این افراد در تیم هستند هدفشان کمک به تیم است و چیزی جز راست نمیگویند.</font><div><img src="http://www.sbf.ir/Content/media/image/2015/04/22867_orig.jpg"></div><div><font face="arial, helvetica, sans-serif" size="4">ابتدا از مشکل کاپیتان مهدی باتعصب شروع میکنیم.قبل از هرچیز باید از زحمات وی در این مدت تشکرکرد.میخواستیم متنی به وی برای این سالهایی که در تراختور بود بنویسیم که دیدیم هنوز زود است مهدی از تیم برود.در هر صورت؛به نظر میرسد منشا مشکل کاپیتان با تیم سرپرست تیم است.سرپرستی که در ماجرای جمعه ی سیاه به خوبی خود را نشان داد.و به نظر میرسد این درگیری به جایی رسیده است که به کاپیتان گفته اند در لیست تونی نیست و باید برود.</font></div><div><font face="arial, helvetica, sans-serif" size="4">مهدی باید مستقیما با خود تونی صحبت کند.در ابتدا به نظر نمیرسد باتوجه به روابط کیانی و تونی و اطلاع تونی از محبوبیت وی ،تونی کیانی را از لیست خارج کند ولی اگر چنین هم باشد مهدی باید دلایل تونی را بشنود که واقعا این کار فنی بوده است یا ماجرای زیرآب زدن در کار است.اگر چنین ماجرایی در کار بود مطمئنا با توضیح های تو و حمایت هواداران تونی به خوبی قانع میشود و از تو حمایت خواهد کرد.</font></div><div><font face="arial, helvetica, sans-serif" size="4">حتی اگر بنا بر رفتن کاپیتان هم باشد مدیریت باید در یک مراسم باشکوه خداحافظی اورا اعلام کند که هواداران نیز در آن مراسم حضور داشته باشند.نه اینکه بازیکنی که میتوان گفت اکنون یکی از بزرگان تاریخ باشگاه است این چنین با ناراحتی تیم را ترک کند.</font></div><div><img src="http://static.goal.com/354200/354298_heroa.jpg"></div><div><font face="arial, helvetica, sans-serif" size="4">در مورد قضیه ی حبیب گردانی و اتفاقات پیش آمده نیز ما نمیتوانیم قضاوت کنیم.حبیب اگرواقعا دوست دارد درتراختور بماند و هیچ تقصیری ندارد مستقیما با تونی حرف بزند و مدارکش را ارائه کند تا تونی تصمیم بگیرد.مطمئنا واسطه هایی هستند که دوست ندارند بازیکن محبوب درتراختور باقی بماند و این واسطه ها اخباری نادرست را به تونی میرسانند.فقط دارد دیر میشود و هرچه سریعتر باید اقدام کنید.</font></div><div><font face="arial, helvetica, sans-serif" size="4">همانطور که هوادار دوست ندارد کاپیتانش از تیم برود مطمئنا دوست هم نداردشایعات پیرامون حبیب واقعیت داشته باشد و او به این زودی تراختور را ترک کند.</font></div>
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#c70900">نوع مطلب :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/category/3" class=text4>مقاله های اختصاصی تراختورعاشیقلری</a>،&nbsp;                <br><font color="#c70900">برچسب ها :</font>
+                <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D8%B1%D8%A7%D8%AE%D8%AA%D9%88%D8%B1" class=text4>تراختور</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D9%85%D9%87%D8%AF%DB%8C%20%DA%A9%DB%8C%D8%A7%D9%86%DB%8C" class=text4>مهدی کیانی</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AD%D8%A8%DB%8C%D8%A8%20%DA%AF%D8%B1%D8%AF%D8%A7%D9%86%DB%8C" class=text4>حبیب گردانی</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D8%AA%D9%88%D9%86%DB%8C%20%D8%A7%D9%88%D9%84%DB%8C%D9%88%DB%8C%D8%B1%D8%A7" class=text4>تونی اولیویرا</a>، <a href="http://tractorfc1.mihanblog.com/post/tag/%D9%87%D9%88%D8%A7%D8%AF%D8%A7%D8%B1" class=text4>هوادار</a>،                 <br><font color="#c70900">لینک های مرتبط :</font>
+                                <br><br></font>
+
+
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://tractorfc1.mihanblog.com/post/992#commentlist">نظرات (<script>setCommentCnt(992)</script>)</a></font></div>
+
+            <div style="float: left; margin-left: 68px; margin-top: 23px;"><script>mihanblogPostLike('992','like')</script></div>
+
+
+
+        </div>
+        <style>
+
+
+            .mihanblog_like_likeCnt{
+                right: 0;
+            }
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 64px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:635px; float:left; background:#424242; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 30px; padding:0 0 10px 0;}
+            .com1{ width:617px; float:left; background:#860909; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:390px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:597px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:597px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:607px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div>
+    <div class=div29></div>
+    <div class=div28><font class=text9>
+                <br><br>
+        ( کل صفحات : 92 )&nbsp;&nbsp;&nbsp;
+            <a href="http://tractorfc1.mihanblog.com/page/1" class=text4><b>1</b></a>&nbsp;&nbsp;&nbsp;<a href="http://tractorfc1.mihanblog.com/page/2" class=text4><span>2</span></a>&nbsp;&nbsp;&nbsp;<a href="http://tractorfc1.mihanblog.com/page/3" class=text4><span>3</span></a>&nbsp;&nbsp;&nbsp;<a href="http://tractorfc1.mihanblog.com/page/4" class=text4><span>4</span></a>&nbsp;&nbsp;&nbsp;<a href="http://tractorfc1.mihanblog.com/page/5" class=text4><span>5</span></a>&nbsp;&nbsp;&nbsp;<a href="http://tractorfc1.mihanblog.com/page/6" class=text4><span>6</span></a>&nbsp;&nbsp;&nbsp;<a href="http://tractorfc1.mihanblog.com/page/7" class=text4><span>7</span></a>&nbsp;&nbsp;&nbsp;<a href="http://tractorfc1.mihanblog.com/page/8" class=text4><i>...</i></a>&nbsp;&nbsp;&nbsp;    </font>
+    </div>
+</div>
+
+</div>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+    <td>&nbsp;</td>
+    <td>
+        <div class=div06>
+            <div class=div7>
+                <a href="http://www.mytheme.ir" target="_blank">
+                    <img src="http://mihanblog.com/public/public/user_data/template/2099949/blank.gif" border=0 width=182 height=35></a></div>
+        </div>
+    </td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+</div>
+<style>
+    img{
+        max-width : 640px;
+    }
+</style>
+</body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'tractorfc1.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

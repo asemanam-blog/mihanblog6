@@ -1,0 +1,860 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mrhonar.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*386042*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[82]='40';commentCnt[83]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[82]='0';
+mihanblogDisLikeArrCnt[82]='0';
+mihanblogLikeArrCnt[83]='0';
+mihanblogDisLikeArrCnt[83]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://mrhonar.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://mrhonar.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','56');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','سه شنبه 13 شهریور 1397');
+	
+	setStatVar('today_view','1');
+	setStatVar('yesterday_view','16');
+	
+	setStatVar('this_month_view','285');
+	setStatVar('last_month_view','364');
+
+	setStatVar('total_view','164310');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (04:56)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://mrhonar.mihanblog.com/statupdate/?data[refereruri]=http://jade-ehsas.mihanblog.com/&data[postid]=&data[requesturi]=/&data[sdate]=1607827324&data[hash]=31028fd835c01c17611f500dc29dbe33&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://mrhonar.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="../mrhonar.mihanblog.com/'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://mrhonar.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://mrhonar.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://mrhonar.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://mrhonar.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://mrhonar.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://mrhonar.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://mrhonar.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://mrhonar.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://mrhonar.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://mrhonar.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://mrhonar.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://mrhonar.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://mrhonar.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://mrhonar.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://mrhonar.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META NAME="description" CONTENT=" - بسم هستی بخش هستی<br />
+<br />
+<br />
+مریم<br />
+<br />
+متولد   8/29/ 1369. <br />
+<br />
+ اهل شهر شهریارم : تبریز<br />
+<br />
+می نویسم بیشتر مقالات<br />
+<br />
+<br />
+عاشق هنرم <br />
+<br />
+و  یادگرفتن<br />
+<br />
+یادگرفتن چیزای مختلف درمورد کل هستی<br />
+<br />
+<br />
+دانشجوی روانشناسی <br />
+<br />
+<br />
+سعی میکنم همیشه خودم باشم فقط همین<br />
+<br />
+<br />
+<br />
+">
+<META NAME="keywords" CONTENT=",, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs, Blogs">
+<META NAME="DesignerUrl" CONTENT="http://nightnama.ir">
+<META NAME="Designer" CONTENT="NIGHTnama">
+<link rel="alternate" type="application/rss+xml" title="*mr&quot;هنرِباران&quot; mr*" href="http://mrhonar.mihanblog.com/post/rss/" />
+<meta name="GENERATOR" content="BlogFa.com">
+<title>*mr&quot;هنرِباران&quot; mr*</title>
+<link href="http://nightnama.ir/theme/121/style.css" type="text/css" rel="stylesheet">
+</style>
+
+<link rel="alternate" type="application/atom+xml" title="*mr&quot;هنرِباران&quot; mr*" href="http://mrhonar.mihanblog.com/post/atom/" />
+
+</head>
+
+<body>
+<!--Design By : nightnama.ir-->
+<div class=Top>
+<div class=nightnama>
+<div align =center>
+<div class="page" dir="rtl" >
+<div  class ="header" >
+<h1>*mr&quot;هنرِباران&quot; mr*</h1></a>
+<p class="subtitle">به آنچه فکر می کنی بیندیش</p></div>
+	<!-- end header -->
+<!--Design By : nightnama.ir-->
+<div class="bodyposts">
+<div class="space"></div>
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="post">
+<a name="<-PostId->"></a>
+<h2 class="Title">بعدمدتها</a></h2>
+<div class="Content"><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>بنام مهربانترین همیشگی&nbsp;<div><br></div><div>یه زمانی این وبلاگ هر چند روز اپدیت میشدوصدهانفر مهمونش بودن .</div><div>به احتمال قوی دیگه دوستان هنرباران رو ازیادبردن و شاید حتی ادرس این خونه پرازدلنوشته وشعر ومقاله رو ازیادبردن.</div><div><br></div><div>وشایدم یه روزی یه سری به هنرباران زدن.❤وشاید ردپایی ارخودشون گذاشتن ...</div><div><br></div><div>امیدوارم تک تک مخاطبین ودوستان گلم الان که توفصل تازه ای اززندگیشونن بهترین حسو از زندگیشون داشته باشن.</div><div><br></div><div>شهریورتون ناب <br /><br /><b></b><br /><font style="font-size:8pt"></font>"</div>
+<div class ="date"> [ سه شنبه 13 شهریور 1397 ]  [ 01:08 ق.ظ ]  [ mr  ]
+[ <a target="_self" href="javascript:newComment(83)"target="_self">نظرات (<script>setCommentCnt(83)</script>)</a> ]</div></div>
+<div class="post">
+<a name="<-PostId->"></a>
+<h2 class="Title">ایمانم آرزوست </a></h2>
+<div class="Content">
+<div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3" style="direction: rtl; ">بنام حق</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">خدایا</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">قلمم می نویسد با یاد تویی که زندگانی دوباره به من بخشیدی و &nbsp;بخشیدی مرا&nbsp;</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">واین منم که گاهی نمیبخشم&nbsp;</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">در این روزگار گاهی آدمها سیاه پوش اتفاق هایی میشوند و دلگرفته&nbsp;</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">این آدمها هر چقدر هم که دورو برشان شلوغ باشد بازهم جز تو کسی ندارند و ندارند و ندارند</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">به خداییت قسم صدساله هم باشند گاه مثل بچه ای نوپا در می دوند و نمی دانند به کجا چنین شتابان؟؟؟</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">زمین خوردنشان هم درد دارد اما فرقش با زمین خوردن بچگی ها این است که بچه ها گریه میکرند و یهو گریه کنان دردشان میگرفت&nbsp;</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">اما آدم بزرگها زمین میخورند و دردشان تدریجی و زخمشان ارام ارام روحشان را خش خشی میکند</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">خداوند&nbsp;</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">در این زمین آدمهایی هست که سخت پشیمانند&nbsp;</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">پشیمان از گذشته و بد بودنهایشان&nbsp;</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">سخت می خندد گاهی ناامید میشوند که میبخشیشان</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">و تسلیم اخم بزرگ زمانه میشوند و بی تفاوت به لبخند خوبی ها</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">بار الها</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">دستان بندگانت چه پاک و چه گناهکار&nbsp;</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">همان دستانیست که تو آفریدی&nbsp;</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">دست نواشت را آغشته کن به دریای امیدی که همیشه ازان توست&nbsp;</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">و بکش بر سر همه ی کسانی که بدهکار خویشند&nbsp;</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">شاید که بازگردند به خود&nbsp;</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">شاید که در میان این همه تردیدشان&nbsp;</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">این غربت زمینی که اسمش را می گذارند مشکل</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">یادمان بیاید که چقدر نزدیکی</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">بگذار تمام بی قراران و منتظران&nbsp;</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">تمام دلتنگانی که قلبشان سرشار از انتظار امید است&nbsp;</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">با نسیمی از مهربانی الهی صبح روشنشان آغاز شود&nbsp;</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">دلگرمی و قوت دل</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">امید و ایمان</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">آری&nbsp;</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">خدایم&nbsp;</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">ایمانم آرزوست&nbsp;</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3">مریم &nbsp; ای....فر &nbsp;30 خرداد 1393</font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div><div style="text-align: right;"><font class="Apple-style-span" face="tahoma, arial, helvetica, sans-serif" size="3"><br></font></div>
+
+
+
+<br /><br /><b></b><br /><font style="font-size:8pt"></font>"</div>
+<div class ="date"> [ جمعه 30 خرداد 1393 ]  [ 09:35 ب.ظ ]  [ mr  ]
+[ <a target="_self" href="javascript:newComment(82)"target="_self">نظرات (<script>setCommentCnt(82)</script>)</a> ]</div></div>
+	<!-- end post -->
+<!--Design By : nightnama.ir-->
+</div><div class="sidebar">
+<!--Design By : nightnama.ir-->
+
+
+
+<h1><font face="comic sans ms" style="font-size: 11pt"><b>About Me</b></font></h1>
+<div class="About">
+<div style="text-align: justify"  >
+	<div align=center > <img src="http://mrhonar.mihanblog.com/&lt;-BlogPhotoLink-&gt;" >   </div>    
+بسم هستی بخش هستی<br />
+<br />
+<br />
+مریم<br />
+<br />
+متولد   8/29/ 1369. <br />
+<br />
+ اهل شهر شهریارم : تبریز<br />
+<br />
+می نویسم بیشتر مقالات<br />
+<br />
+<br />
+عاشق هنرم <br />
+<br />
+و  یادگرفتن<br />
+<br />
+یادگرفتن چیزای مختلف درمورد کل هستی<br />
+<br />
+<br />
+دانشجوی روانشناسی <br />
+<br />
+<br />
+سعی میکنم همیشه خودم باشم فقط همین<br />
+<br />
+<br />
+<br />
+</div>  
+<!--Design By : nightnama.ir-->
+
+ 
+<h1><font face="comic sans ms" style="font-size: 11pt"><b>Menu</b></font></h1>
+<div style="text-align: Center"  >
+<br><br>
+<a href="index.html">صفحه اصلی</a><br>
+<a href="javascript:messageForm()">ایمیل</a><br>
+<a href="http://www.nightnama.ir/">قالب های نایت نما</a><br>
+
+<!--Design By : nightnama.ir-->
+
+<h1><font face="comic sans ms" style="font-size: 11pt"><b>Authors</b></font></h1>
+<a href="http://mrhonar.mihanblog.com/post/author/275215"   >mr </a><br>
+<!--Design By : nightnama.ir-->
+
+<h1><font face="comic sans ms" style="font-size: 11pt"><b>Lastpost</b></font></h1>
+<br><br>
+<a href="http://mrhonar.mihanblog.com/post/83" title="سه شنبه 13 شهریور 1397">بعدمدتها</a><br>
+<a href="http://mrhonar.mihanblog.com/post/82" title="جمعه 30 خرداد 1393">ایمانم آرزوست </a><br>
+<a href="http://mrhonar.mihanblog.com/post/81" title="پنجشنبه 21 فروردین 1393">بهار و بهشت </a><br>
+<a href="http://mrhonar.mihanblog.com/post/80" title="چهارشنبه 29 آبان 1392">مزه ی تولد مریــــــــــــــــــــــــم </a><br>
+<a href="http://mrhonar.mihanblog.com/post/79" title="جمعه 10 آبان 1392">حقارت درونی </a><br>
+<a href="http://mrhonar.mihanblog.com/post/78" title="سه شنبه 16 مهر 1392">پاییـــــــــــــــــــــــــــــز من </a><br>
+<a href="http://mrhonar.mihanblog.com/post/75" title="شنبه 23 شهریور 1392">هوای دل من</a><br>
+<a href="http://mrhonar.mihanblog.com/post/71" title="شنبه 16 شهریور 1392">ملکه ی مهربونی </a><br>
+<a href="http://mrhonar.mihanblog.com/post/70" title="چهارشنبه 6 شهریور 1392">جاذبه رو به خداست</a><br>
+<a href="http://mrhonar.mihanblog.com/post/69" title="جمعه 25 مرداد 1392">کمی پر رنگ *</a><br>
+<a href="http://mrhonar.mihanblog.com/post/68" title="یکشنبه 15 بهمن 1391">به لحظه هایت افتخارکن....</a><br>
+<a href="http://mrhonar.mihanblog.com/post/66" title="شنبه 31 تیر 1391">میزبانی تو ....</a><br>
+<a href="http://mrhonar.mihanblog.com/post/65" title="یکشنبه 14 خرداد 1391">معجز ه ی  مردانگی قلب ها </a><br>
+<a href="http://mrhonar.mihanblog.com/post/63" title="جمعه 22 اردیبهشت 1391">معجز ه ی چشمان  مادرم</a><br>
+<a href="http://mrhonar.mihanblog.com/post/61" title="پنجشنبه 31 فروردین 1391">سوال همیشگی.... زندگی؟</a><br>
+<a href="http://mrhonar.mihanblog.com/post/58" title="سه شنبه 1 فروردین 1391">1391</a><br>
+<a href="http://mrhonar.mihanblog.com/post/56" title="چهارشنبه 10 اسفند 1390">ســــــــخت     تــــــــــــــــــــــــــــــــــــــــــــــر    از ســــــــخـــت</a><br>
+<a href="http://mrhonar.mihanblog.com/post/55" title="شنبه 3 دی 1390">ســـــــــــــلام یلدای زمستون</a><br>
+<a href="http://mrhonar.mihanblog.com/post/54" title="شنبه 28 آبان 1390">ســــــــــــــلام مـــــــــــریــــــــم...سلاــــــــم زندگـــــــــــــــــــــــــــــــــــــــــــــــی</a><br>
+<a href="http://mrhonar.mihanblog.com/post/53" title="چهارشنبه 4 آبان 1390">دل و بزن به دریااااااااااااااااا......!!!!!!!!!!!!!!!!</a><br>
+<!--Design By : nightnama.ir-->
+<h1><font face="comic sans ms" style="font-size: 11pt"><b>LinkDump</b></font></h1>
+<a href="http://101recipe.com/" target="_blank" title="" >آشپزی</a><br>
+<a href="http://shatak.blogfa.com" target="_blank" title="استاد" >شتک</a><br>
+<a href="http://www.picgozar.com" target="_blank" title="حسام" >پیک گذز</a><br>
+<a href="http://www.shereno.com/" target="_blank" title="سایت شعر نو" >مجمو عه شعر نو*</a><br>
+<a href="http://fajrfestival.ir" target="_blank" title="فیلم فجر" >جشنواره ی بین المللی فیلم فجر</a><br>
+<a href="http://jayezeyeadabi.com" target="_blank" title="دبیر خانه ی جشنواره" >جایزه ی ادبی ایران</a><br>
+<a href="http://barzakhmag.com/final/" target="_blank" title="پایگاه ادبی و اندیشه" >برزخ</a><br>
+<a href="http://www.pana.ir/" target="_blank" title="پانا" >خبر گزاری پانا</a><br>
+<a href="http://abandokht.blogfa.com" target="_blank" title="همزادم زیبایی" >آباندخت</a><br>
+<a href="http:///www.jade-ehsas.mihanblog.com" target="_blank" title="فاطیما و بچه های جاده ی احساسمون" >جاده ی احساس</a><br>
+<a href="http://www.minilawyer.mihanblog.com" target="_blank" title="حسام" >وکیل کوچولو</a><br>
+<a href="http://dkhodayi.blogfa.com" target="_blank" title="" >استاد داود خدایی</a><br>
+<div><a href="http://mrhonar.mihanblog.com/linkdaily/"><b>همه پیوندهای روزانه</b></a></div><div><a href="javascript:linkdailyForm()"><b>ارسال پیوند روزانه</b></a></div><div style="width:261;float:right;height:69;background:url('../mrhonar.mihanblog.com/m1.jpg.html') no-repeat top right;font-size:10pt;color:#ffdc7d;"><div style="padding:12 20 0 0;">آمار سایت</div></div><div style="width:261;float:right;font-size:9pt;background:url('../mrhonar.mihanblog.com/m2.gif.html') repeat-y right;"><div class=xxxmenu>بازدیدهای امروز : <span class=aa><script>getStatVar('today_view');</script></span> نفر<br />بازدیدهای دیروز : <span class=aa><script>getStatVar('yesterday_view');</script></span> نفر<br />كل بازدیدها : <span class=aa><script>getStatVar('total_view');</script></span> نفر<br />بازدید این ماه :<span class=aa> <script>getStatVar('this_month_view');</script></span> نفر<br />كل مطالب : <span class=aa><script>getStatVar('total_post');</script></span> عدد<br />آخرین بازدید : <span class=aa><script>getStatVar('last_view_date');</script></span><br />آخرین بروز رسانی : <span class=aa><script>getStatVar('modify_date');</script></span></div></div><div style="width:261;float:right;height:35;background:url('../mrhonar.mihanblog.com/m3.jpg.html') no-repeat top right;"></div><a href="javascript:void(0)" onclick ="OpenLD();">آرشیو پیوندهای روزانه</a>
+<!--Design By : nightnama.ir-->
+<h1><font face="comic sans ms" style="font-size: 11pt"><b>Archives</b></font></h1>
+<br><br>
+<span dir="ltr">
+<a href="http://mrhonar.mihanblog.com/post/archive/1397/6"> شهریور 1397</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1393/3"> خرداد 1393</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1393/1"> فروردین 1393</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1392/8"> آبان 1392</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1392/7"> مهر 1392</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1392/6"> شهریور 1392</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1392/5"> مرداد 1392</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1391/11"> بهمن 1391</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1391/4"> تیر 1391</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1391/3"> خرداد 1391</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1391/2"> اردیبهشت 1391</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1391/1"> فروردین 1391</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1390/12"> اسفند 1390</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1390/10"> دی 1390</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1390/8"> آبان 1390</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1390/7"> مهر 1390</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1390/6"> شهریور 1390</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1390/5"> مرداد 1390</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1390/4"> تیر 1390</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1390/3"> خرداد 1390</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1390/2"> اردیبهشت 1390</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1390/1"> فروردین 1390</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1389/12"> اسفند 1389</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1389/11"> بهمن 1389</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1389/10"> دی 1389</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1389/9"> آذر 1389</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1389/8"> آبان 1389</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1389/7"> مهر 1389</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1389/6"> شهریور 1389</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1389/5"> مرداد 1389</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1389/4"> تیر 1389</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1389/3"> خرداد 1389</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1389/2"> اردیبهشت 1389</a><br>
+<a href="http://mrhonar.mihanblog.com/post/archive/1389/1"> فروردین 1389</a><br>
+</span>
+<!--Design By : nightnama.ir-->
+<h1><font face="comic sans ms" style="font-size: 11pt"><b>Categories</b></font></h1>
+<a href="http://mrhonar.mihanblog.com/post/category/3">روانشناسی (27)</a><br>
+<a href="http://mrhonar.mihanblog.com/post/category/2">هنری (26)</a><br>
+<a href="http://mrhonar.mihanblog.com/post/category/1">ادبی (32)</a><br>
+	
+<!--Design By : nightnama.ir-->
+<h1><font face="comic sans ms" style="font-size: 11pt"><b>Links</b></font></h1>
+<br><br>
+
+<a href="http://www.my-likes.blogfa.com/" target="_blank" >دوست داشتنی هام</a><br>
+<a href="http://www.learn-pc-win.blogfa.com/" target="_blank" >آموزش کامپیوتر و ویندوز</a><br>
+<a href="http://www.apa.org" target="_blank" >American Psychological Association</a><br>
+<a href="http://www.irancpa.com" target="_blank" >انجمن علمی روانشناسی ایران</a><br>
+<a href="http://kashkoolemantoma.blogfa.com/" target="_blank" >گردش و ورزش و ارزش</a><br>
+<a href="http://s-gh1359.blogfa.com/" target="_blank" >عاشق ترینم</a><br>
+<a href="http://vida2251.blogfa.com/" target="_blank" >مونس های روحی ویدا</a><br>
+<a href="http://diruzhaye-salam.blogfa.com/" target="_blank" >نیمه ی گمشده</a><br>
+<a href="http://shapariirani.mihanblog.com" target="_blank" >شاپری ایرانی</a><br>
+<a href="http://daryaye-ehsas.blogfa.com" target="_blank" >دریای احساس</a><br>
+<a href="http://deliaram.blogfa.com" target="_blank" >دلی آرام</a><br>
+<a href="http://gonahasli.blogfa.com" target="_blank" >گناه اصلی</a><br>
+<a href="http://90910vpv.blogfa.com" target="_blank" >زندگی جاریست.......</a><br>
+<a href="http://shima-azar.persianblog.ir/" target="_blank" >رازهای قاشق طلایی</a><br>
+<a href="http://zartosht77.blogfa.com/" target="_blank" >♥دل ♥ نوشته های ♥ من♥</a><br>
+<a href="http://ostadvashagerd.persianblog.ir" target="_blank" >ایرج میرزا شاعری دیر اشنا</a><br>
+<a href="http://hesamghazi.persianblog.ir" target="_blank" >حقیقت, داستان و افسانه</a><br>
+<a href="http://kimiyabana.blogfa.com" target="_blank" >دل نوشته ها</a><br>
+<a href="http://omid6265.blogfa.com/" target="_blank" >امید</a><br>
+<a href="http://jahangiri110.blogfa.com" target="_blank" >علمداران وعلامتکشان</a><br>
+<a href="http://saedtbz.blogfa.com" target="_blank" >داستان کوتاه سعید</a><br>
+<a href="http://cagebird.mihanblog.com" target="_blank" >پرنده قفسی</a><br>
+<a href="http://darvish600.mihanblog.com/" target="_blank" >دلنوشته های یک دهاتی</a><br>
+<a href="http://www.negar-1372.blogfa.com" target="_blank" >دنیای کوچک نگار</a><br>
+<a href="http://monnom.blogfa.com" target="_blank" >روی میز آشپزخانه</a><br>
+<a href="http://www.rahaee1361.blogfa.com/" target="_blank" >دست نوشته های یلدا</a><br>
+<a href="http://www.elshen.blogfa.com" target="_blank" >تانسو</a><br>
+<div><a href="http://mrhonar.mihanblog.com/link/"><b>همه پیوندها</b></a></div><a target="_blank" href="http://nightnama.ir/">قالب های نایت نما</a><br>
+</cb:block_link>
+<!--Design By : nightnama.ir-->
+
+<div class="custom">	
+
+<h1><font face="comic sans ms" style="font-size: 11pt"><b>Other</b></font></h1>
+<div align="center"><!-- Begin Night-Skin.com Counter code --><p align="center"><a target="_blank" href="http://night-skin.com/"><font face="Tahoma" color="35586B" style="font-size: 8pt; text-decoration:none">امارگیر حرفه ای سایت</font></a></p><center><script type="text/javascript" src="http://night-skin.com/tools/counter/stat.php?site=http://mrhonar.mihanblog.com&font=35586B&backg=FFFFFF"></script></center><div style="display:none;"><a href="http://night-skin.com/"><h1>سایت خدماتی نایت اسکین - امارگیر سایت</h1></a></div><!-- End Night-Skin.com Counter code -->
+
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=2501423&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=2501423" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code -->
+/"><img 
+
+<a href="http://www.shereno.com/"><img src="http://www.shereno.com/shereno_logo.gif" border="0" alt="www.shereno.com"></a><a href="http://www.shereno.com/"><img src="http://www.shereno.com/slogo.gif" border="0" alt="www.shereno.com"></a></div>
+<!--Design By : nightnama.ir-->
+
+<h1><font face="comic sans ms" style="font-size: 11pt"><b>NIGHTnama</b></font></h1>
+<center><br><br>
+
+<script type="text/javascript" src="http://nightnama.ir/jscodes/ads.js"></script></center></div>﻿
+<div class=li-Sid><center>
+<a target="_blank" title="پورتال جامع یورفان" href="http://yourfun.ir/">پورتال جامع یورفان</a> |
+<a target="_blank" title="چت | چت روم فارسی" href=" http://www.redchat.ir/">چت | چت روم فارسی</a> |
+<a target="_blank" title="طراحی سایت" href="http://www.hamkarweb.ir/">طراحی سایت</a>
+</div>
+
+<h1><font face="comic sans ms" style="font-size: 11pt"><b>Design</b></font></h1>
+<br>
+<a href="http://nightnama.ir">قالب های نایت نما</a><br><br>
+	<!-- end sidebar -->
+<!--Design By : nightnama.ir-->
+</div>
+</table>
+<p></p>
+<p></p>
+</body>
+
+</html>
+
+
+
+
+
+
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'mrhonar.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

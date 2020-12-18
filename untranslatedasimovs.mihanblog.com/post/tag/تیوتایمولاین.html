@@ -1,0 +1,2849 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*1619438*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','296');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','چهارشنبه 11 مرداد 1396');
+	
+	setStatVar('today_view','4');
+	setStatVar('yesterday_view','24');
+	
+	setStatVar('this_month_view','999');
+	setStatVar('last_month_view','888');
+
+	setStatVar('total_view','1060740');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (12:18)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://untranslatedasimovs.mihanblog.com/statupdate/?data[refereruri]=http://untranslatedasimovs.mihanblog.com/post/archive/1395/4&data[postid]=&data[requesturi]=/post/tag/%D8%AA%DB%8C%D9%88%D8%AA%D8%A7%DB%8C%D9%85%D9%88%D9%84%D8%A7%DB%8C%D9%86&data[sdate]=1608212009&data[hash]=83e6617c434b8b166b795598c8178b18&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[313]='2';commentCnt[315]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[313]='1';
+mihanblogDisLikeArrCnt[313]='0';
+mihanblogLikeArrCnt[315]='0';
+mihanblogDisLikeArrCnt[315]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://untranslatedasimovs.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://untranslatedasimovs.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+
+<head>
+<style>
+    /*
+    Theme Name: Smashing Theme - Widget Ready V
+    Theme URI: http://smashingmagazine.com/
+    Description: Designed by <a href="http://www.designdisease.com">Elena G. - DesignDisease</a>.
+    Version: 1.01
+    Author: Design Disease
+    Author URI: http://wp-themes.designdisease.com/
+    */
+
+
+@font-face {
+  font-family: 'IRANSans-web';
+  src: url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-Bold.eot?') format('eot'),  /* IE6–8 */
+  url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-Bold.woff2') format('woff2'),  /* Chrome36+, Opera24+*/
+  url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-Bold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'IRANSans-web';
+  src: url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('eot'),  /* IE6–8 */
+  url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),  /* Chrome36+, Opera24+*/
+  url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-weight: 900;
+}
+
+
+@font-face {
+  font-family: 'IRANSans-web';
+  src: url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('eot'),  /* IE6–8 */
+  url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),  /* Chrome36+, Opera24+*/
+  url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'IRANSans-web';
+  src: url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-LightExpanded.eot?') format('eot'),  /* IE6–8 */
+  url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-LightExpanded.woff2') format('woff2'),  /* Chrome36+, Opera24+*/
+  url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-LightExpanded.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-weight: 300;
+}
+
+
+@font-face {
+  font-family: 'IRANSans-web';
+  src: url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-Expanded.eot?') format('eot'),  /* IE6–8 */
+  url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-Expanded.woff2') format('woff2'),  /* Chrome36+, Opera24+*/
+  url('http://untranslatedasimovs.mihanblog.com/public/public/fonts/Iransans-Expanded.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-weight: normal;
+}
+
+.IRANSansUltraLight {
+  font-family: IRANSans-web;
+  color: #000;
+  margin-right: 50px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #FFF;
+  font-weight: 200;
+}
+
+.IRANSansLight {
+  font-family: IRANSans-web;
+  color: #000;
+  margin-right: 50px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #FFF;
+  font-weight: 300;
+}
+
+.IRANSans {
+  font-family: IRANSans-web;
+  color: #000;
+  margin-right: 50px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #FFF;
+  font-weight: normal;
+}
+
+.IRANSansBold {
+  font-family: IRANSans-web;
+  color: #000;
+  margin-right: 50px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #FFF;
+  font-weight: bold;
+}
+
+.IRANSansBlack {
+  font-family: IRANSans-web;
+  color: #000;
+  margin-right: 50px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #FFF;
+  font-weight: 900;
+}
+
+body { 
+  background: #fff url(http://untranslatedasimovs.mihanblog.com/public/public/user_data/template/23/images/BkgBody.gif) repeat center;
+  overflow-x:hidden;
+  font-family:IRANSans-web,tahoma, Arial, Helvetica, sans-serif;
+  font-size: 12px; 
+  margin: 0px; 
+  color:#35383d;  
+  padding:30px 0px 0px 0px;
+}
+.container{
+  padding:0px;
+}
+html{font-family:IRANSans-web,tahoma !important;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+
+
+a:link { text-decoration: none; color : #218dd1; border: 0px; -moz-outline-style: none;}
+a:active { text-decoration: underline; color : #218dd1; border: 0px; -moz-outline-style: none;}
+a:visited { text-decoration: none; color : #218dd1; border: 0px; -moz-outline-style: none;}
+a:hover { text-decoration: underline; color : #cc0000; border: 0px; -moz-outline-style: none;}
+a:focus { outline: none;-moz-outline-style: none;}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+img{
+    max-width : 505px;
+}
+h1, h2, h3, h4 { font-family:IRANSans-web, Arial, Helvetica, sans-serif;}
+
+img { padding: 0px; margin: 0px; border: none; text-align: center;}
+hr { border-left:0px solid #abb0b5; border-right:0px solid #abb0b5; border-top:1px dotted #abb0b5; border-bottom:0px solid #abb0b5; height : 1px;  }
+
+
+input { font-family: 'Verdana'; color: #282b31; font-size: 11px;}
+textarea { font-family: 'Verdana'; color: #282b31; font-size: 11px;}
+select { font-family: 'Verdana'; color: #282b31; font-size: 11px;}
+
+.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.container:before,.container:after{content:" ";display:table}.container:after{clear:both}@media (min-width: 768px){.container{width:750px}}@media (min-width: 992px){.container{width:970px}}@media (min-width: 1200px){.container{width:1170px}}.container-fluid{margin-right:auto;margin-left:auto;}.container-fluid:before,.container-fluid:after{content:" ";display:table}.container-fluid:after{clear:both}.row{margin-left:-15px;margin-right:-15px}.row:before,.row:after{content:" ";display:table}.row:after{clear:both}.col-xs-1,.col-sm-1,.col-md-1,.col-lg-1,.col-xs-2,.col-sm-2,.col-md-2,.col-lg-2,.col-xs-3,.col-sm-3,.col-md-3,.col-lg-3,.col-xs-4,.col-sm-4,.col-md-4,.col-lg-4,.col-xs-5,.col-sm-5,.col-md-5,.col-lg-5,.col-xs-6,.col-sm-6,.col-md-6,.col-lg-6,.col-xs-7,.col-sm-7,.col-md-7,.col-lg-7,.col-xs-8,.col-sm-8,.col-md-8,.col-lg-8,.col-xs-9,.col-sm-9,.col-md-9,.col-lg-9,.col-xs-10,.col-sm-10,.col-md-10,.col-lg-10,.col-xs-11,.col-sm-11,.col-md-11,.col-lg-11,.col-xs-12,.col-sm-12,.col-md-12,.col-lg-12{position:relative;min-height:1px;}.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12{float:left}.col-xs-1{width:8.33333%}.col-xs-2{width:16.66667%}.col-xs-3{width:25%}.col-xs-4{width:33.33333%}.col-xs-5{width:41.66667%}.col-xs-6{width:50%}.col-xs-7{width:58.33333%}.col-xs-8{width:66.66667%}.col-xs-9{width:75%}.col-xs-10{width:83.33333%}.col-xs-11{width:91.66667%}.col-xs-12{width:100%}.col-xs-pull-0{right:auto}.col-xs-pull-1{right:8.33333%}.col-xs-pull-2{right:16.66667%}.col-xs-pull-3{right:25%}.col-xs-pull-4{right:33.33333%}.col-xs-pull-5{right:41.66667%}.col-xs-pull-6{right:50%}.col-xs-pull-7{right:58.33333%}.col-xs-pull-8{right:66.66667%}.col-xs-pull-9{right:75%}.col-xs-pull-10{right:83.33333%}.col-xs-pull-11{right:91.66667%}.col-xs-pull-12{right:100%}.col-xs-push-0{left:auto}.col-xs-push-1{left:8.33333%}.col-xs-push-2{left:16.66667%}.col-xs-push-3{left:25%}.col-xs-push-4{left:33.33333%}.col-xs-push-5{left:41.66667%}.col-xs-push-6{left:50%}.col-xs-push-7{left:58.33333%}.col-xs-push-8{left:66.66667%}.col-xs-push-9{left:75%}.col-xs-push-10{left:83.33333%}.col-xs-push-11{left:91.66667%}.col-xs-push-12{left:100%}.col-xs-offset-0{margin-left:0%}.col-xs-offset-1{margin-left:8.33333%}.col-xs-offset-2{margin-left:16.66667%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-4{margin-left:33.33333%}.col-xs-offset-5{margin-left:41.66667%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-7{margin-left:58.33333%}.col-xs-offset-8{margin-left:66.66667%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-10{margin-left:83.33333%}.col-xs-offset-11{margin-left:91.66667%}.col-xs-offset-12{margin-left:100%}@media (min-width: 768px){.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12{float:left}.col-sm-1{width:8.33333%}.col-sm-2{width:16.66667%}.col-sm-3{width:25%}.col-sm-4{width:33.33333%}.col-sm-5{width:41.66667%}.col-sm-6{width:50%}.col-sm-7{width:58.33333%}.col-sm-8{width:66.66667%}.col-sm-9{width:75%}.col-sm-10{width:83.33333%}.col-sm-11{width:91.66667%}.col-sm-12{width:100%}.col-sm-pull-0{right:auto}.col-sm-pull-1{right:8.33333%}.col-sm-pull-2{right:16.66667%}.col-sm-pull-3{right:25%}.col-sm-pull-4{right:33.33333%}.col-sm-pull-5{right:41.66667%}.col-sm-pull-6{right:50%}.col-sm-pull-7{right:58.33333%}.col-sm-pull-8{right:66.66667%}.col-sm-pull-9{right:75%}.col-sm-pull-10{right:83.33333%}.col-sm-pull-11{right:91.66667%}.col-sm-pull-12{right:100%}.col-sm-push-0{left:auto}.col-sm-push-1{left:8.33333%}.col-sm-push-2{left:16.66667%}.col-sm-push-3{left:25%}.col-sm-push-4{left:33.33333%}.col-sm-push-5{left:41.66667%}.col-sm-push-6{left:50%}.col-sm-push-7{left:58.33333%}.col-sm-push-8{left:66.66667%}.col-sm-push-9{left:75%}.col-sm-push-10{left:83.33333%}.col-sm-push-11{left:91.66667%}.col-sm-push-12{left:100%}.col-sm-offset-0{margin-left:0%}.col-sm-offset-1{margin-left:8.33333%}.col-sm-offset-2{margin-left:16.66667%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-4{margin-left:33.33333%}.col-sm-offset-5{margin-left:41.66667%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-7{margin-left:58.33333%}.col-sm-offset-8{margin-left:66.66667%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-10{margin-left:83.33333%}.col-sm-offset-11{margin-left:91.66667%}.col-sm-offset-12{margin-left:100%}}@media (min-width: 992px){.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12{float:left}.col-md-1{width:8.33333%}.col-md-2{width:16.66667%}.col-md-3{width:25%}.col-md-4{width:33.33333%}.col-md-5{width:41.66667%}.col-md-6{width:50%}.col-md-7{width:58.33333%}.col-md-8{width:66.66667%}.col-md-9{width:75%}.col-md-10{width:83.33333%}.col-md-11{width:91.66667%}.col-md-12{width:100%}.col-md-pull-0{right:auto}.col-md-pull-1{right:8.33333%}.col-md-pull-2{right:16.66667%}.col-md-pull-3{right:25%}.col-md-pull-4{right:33.33333%}.col-md-pull-5{right:41.66667%}.col-md-pull-6{right:50%}.col-md-pull-7{right:58.33333%}.col-md-pull-8{right:66.66667%}.col-md-pull-9{right:75%}.col-md-pull-10{right:83.33333%}.col-md-pull-11{right:91.66667%}.col-md-pull-12{right:100%}.col-md-push-0{left:auto}.col-md-push-1{left:8.33333%}.col-md-push-2{left:16.66667%}.col-md-push-3{left:25%}.col-md-push-4{left:33.33333%}.col-md-push-5{left:41.66667%}.col-md-push-6{left:50%}.col-md-push-7{left:58.33333%}.col-md-push-8{left:66.66667%}.col-md-push-9{left:75%}.col-md-push-10{left:83.33333%}.col-md-push-11{left:91.66667%}.col-md-push-12{left:100%}.col-md-offset-0{margin-left:0%}.col-md-offset-1{margin-left:8.33333%}.col-md-offset-2{margin-left:16.66667%}.col-md-offset-3{margin-left:25%}.col-md-offset-4{margin-left:33.33333%}.col-md-offset-5{margin-left:41.66667%}.col-md-offset-6{margin-left:50%}.col-md-offset-7{margin-left:58.33333%}.col-md-offset-8{margin-left:66.66667%}.col-md-offset-9{margin-left:75%}.col-md-offset-10{margin-left:83.33333%}.col-md-offset-11{margin-left:91.66667%}.col-md-offset-12{margin-left:100%}}@media (min-width: 1200px){.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12{float:left}.col-lg-1{width:8.33333%}.col-lg-2{width:16.66667%}.col-lg-3{width:25%}.col-lg-4{width:33.33333%}.col-lg-5{width:41.66667%}.col-lg-6{width:50%}.col-lg-7{width:58.33333%}.col-lg-8{width:66.66667%}.col-lg-9{width:75%}.col-lg-10{width:83.33333%}.col-lg-11{width:91.66667%}.col-lg-12{width:100%}.col-lg-pull-0{right:auto}.col-lg-pull-1{right:8.33333%}.col-lg-pull-2{right:16.66667%}.col-lg-pull-3{right:25%}.col-lg-pull-4{right:33.33333%}.col-lg-pull-5{right:41.66667%}.col-lg-pull-6{right:50%}.col-lg-pull-7{right:58.33333%}.col-lg-pull-8{right:66.66667%}.col-lg-pull-9{right:75%}.col-lg-pull-10{right:83.33333%}.col-lg-pull-11{right:91.66667%}.col-lg-pull-12{right:100%}.col-lg-push-0{left:auto}.col-lg-push-1{left:8.33333%}.col-lg-push-2{left:16.66667%}.col-lg-push-3{left:25%}.col-lg-push-4{left:33.33333%}.col-lg-push-5{left:41.66667%}.col-lg-push-6{left:50%}.col-lg-push-7{left:58.33333%}.col-lg-push-8{left:66.66667%}.col-lg-push-9{left:75%}.col-lg-push-10{left:83.33333%}.col-lg-push-11{left:91.66667%}.col-lg-push-12{left:100%}.col-lg-offset-0{margin-left:0%}.col-lg-offset-1{margin-left:8.33333%}.col-lg-offset-2{margin-left:16.66667%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-4{margin-left:33.33333%}.col-lg-offset-5{margin-left:41.66667%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-7{margin-left:58.33333%}.col-lg-offset-8{margin-left:66.66667%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-10{margin-left:83.33333%}.col-lg-offset-11{margin-left:91.66667%}.col-lg-offset-12{margin-left:100%}}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-xs{display:none !important}.visible-sm{display:none !important}.visible-md{display:none !important}.visible-lg{display:none !important}.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block{display:none !important}@media (max-width: 767px){.visible-xs{display:block !important}table.visible-xs{display:table}tr.visible-xs{display:table-row !important}th.visible-xs,td.visible-xs{display:table-cell !important}}@media (max-width: 767px){.visible-xs-block{display:block !important}}@media (max-width: 767px){.visible-xs-inline{display:inline !important}}@media (max-width: 767px){.visible-xs-inline-block{display:inline-block !important}}@media (min-width: 768px) and (max-width: 991px){.visible-sm{display:block !important}table.visible-sm{display:table}tr.visible-sm{display:table-row !important}th.visible-sm,td.visible-sm{display:table-cell !important}}@media (min-width: 768px) and (max-width: 991px){.visible-sm-block{display:block !important}}@media (min-width: 768px) and (max-width: 991px){.visible-sm-inline{display:inline !important}}@media (min-width: 768px) and (max-width: 991px){.visible-sm-inline-block{display:inline-block !important}}@media (min-width: 992px) and (max-width: 1199px){.visible-md{display:block !important}table.visible-md{display:table}tr.visible-md{display:table-row !important}th.visible-md,td.visible-md{display:table-cell !important}}@media (min-width: 992px) and (max-width: 1199px){.visible-md-block{display:block !important}}@media (min-width: 992px) and (max-width: 1199px){.visible-md-inline{display:inline !important}}@media (min-width: 992px) and (max-width: 1199px){.visible-md-inline-block{display:inline-block !important}}@media (min-width: 1200px){.visible-lg{display:block !important}table.visible-lg{display:table}tr.visible-lg{display:table-row !important}th.visible-lg,td.visible-lg{display:table-cell !important}}@media (min-width: 1200px){.visible-lg-block{display:block !important}}@media (min-width: 1200px){.visible-lg-inline{display:inline !important}}@media (min-width: 1200px){.visible-lg-inline-block{display:inline-block !important}}@media (max-width: 767px){.hidden-xs{display:none !important}}@media (min-width: 768px) and (max-width: 991px){.hidden-sm{display:none !important}}@media (min-width: 992px) and (max-width: 1199px){.hidden-md{display:none !important}}@media (min-width: 1200px){.hidden-lg{display:none !important}}.visible-print{display:none !important}@media print{.visible-print{display:block !important}table.visible-print{display:table}tr.visible-print{display:table-row !important}th.visible-print,td.visible-print{display:table-cell !important}}.visible-print-block{display:none !important}@media print{.visible-print-block{display:block !important}}.visible-print-inline{display:none !important}@media print{.visible-print-inline{display:inline !important}}.visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}@media print{.hidden-print{display:none !important}}
+/*# sourceMappingURL=responsive.css.map */
+
+    /* Header +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+    /**/ * html .Header {text-align:right;height: 80px;} /* */
+.Header {}
+
+.Header .HL {
+     text-align: right;
+  direction: rtl;
+  padding: 29px 20px 0px 0px;
+  background: url('http://static.mihanblog.com//public/user_data/user_files/543/1627803//HeaderBkg.png') repeat-x;
+  position: relative;
+  min-height: 80px;
+  background-color: #fff;
+  border-radius: 6px 6px 0px 0px;
+  display: flex;
+}
+
+.HL p.Desc{   color: #808080;
+  font-size: 11px;
+  padding: 0px 8px;
+  margin: 0;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  font-family: IRANSans-web,'Arial';
+}
+.Header h1 { margin: 0px;
+  font-weight: 500;
+  color: #EF6021;
+  margin-bottom: 0px;
+  text-align: right;
+  font-size: 16px;
+  margin-top: 10px;}
+.Header h1 a { }
+.Header h1 a:visited { color:#ff3300; text-decoration: none; }
+.Header h1 a:hover { color:#ff3300; text-decoration: none; }
+    /* Search ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Search {background: url(http://mihanblog.com/public/public/user_data/template/23/images/Search.gif) no-repeat left top; width: 220px; height: 63px;}
+.Search  div { padding: 28px 10px 10px 10px; margin: 0px;}
+.Search  input { border: none; color: #fff; font-size: 11px;}
+.Search  input.search {width: 21px; height: 21px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/SearchButton.gif) no-repeat;}
+.Search  input.keyword { background:transparent none repeat scroll 0 0;border:medium none;direction:rtl;padding:5px 5px 5px 15px;width:180px; }
+#buttonsearch { padding: 0px; margin: -21px 175px 0px 0px; top: 0px; background: none; }
+
+    /* Syndicate ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.Syn { width: 60px;padding-left: 13px;}
+.Syn ul { text-align:left;margin: 0px; padding: 0px;}
+.Syn li { background: url(http://mihanblog.com/public/public/user_data/template/23/images/SynIco.gif) no-repeat left center; margin: 0px; padding: 0px 0px 1px 15px; list-style-type: none; font-size: 10px; color:#25252b;}
+.Syn li a { color:#25252b; font-size: 10px; text-decoration: underline; }
+.Syn li a:visited { color:#25252b; font-size: 10px; text-decoration: underline; }
+.Syn li a:hover { color:#25252b; font-size: 10px; text-decoration: underline; }
+
+    /* Container +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.CON {margin:0px;text-align:right;background: #fff;position: relative; padding: 0px; overflow: hidden;}
+
+    /* Side Central Single +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SCS { background: url(http://mihanblog.com/public/public/user_data/template/23/images/SC.gif) no-repeat left top; }
+.SCS h1 { font-size: 20px; font-weight: normal; background: url(http://mihanblog.com/public/public/user_data/template/23/images/Dotted.gif) repeat-x bottom; padding-bottom: 10px; letter-spacing: -1px; }
+.SCS h2 { font-size: 18px; font-weight: normal; }
+.SCS h3 { font-size: 14px; font-weight: bold; }
+
+.SCS p { font-size: 12px; line-height: 17px;}
+.SCS p strong {}
+.SCS img {}
+.SCS ul { padding: 10px 0px; margin: 0px; }
+.SCS li { padding: 2px 0px 2px 15px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostContentLiIco.png) no-repeat left top; font-size: 11px; line-height: 15px; color:#4c4c4c; }
+.SCS blockquote { padding: 2px 10px; background: #e9f8ff; margin: 0px; color:#336699; }
+.SCS blockquote p { font-size: 11px; padding: 5px 0px; margin: 5px 0px; line-height: 15px;}
+.SCS blockquote li { padding: 2px 0px 2px 15px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostContentBlockLiIco.png) no-repeat left top; font-size: 11px; line-height: 15px; color:#336699; }
+.SCS blockquote a { color:#0080ca; }
+.SCS blockquote a:visited { color:#0080ca; }
+.SCS blockquote a:hover { color:#003399; }
+
+    /* Side Central +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.SC h2 { font-weight: normal;}
+.pagetitle { font-size: 24px; font-weight: normal; letter-spacing: -1px; border-bottom: solid 1px #787878; padding: 0px 0px 15px 0px; margin: 0px 0px 15px 0px; color:#787878;}
+.SC{background:#fff;  padding:8px 14px;   min-height: 1012px; text-align:right;}
+    /* Menu +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.Menu { 
+  background: url(http://untranslatedasimovs.mihanblog.com/public/public/user_data/template/23/images/Dotted.gif) repeat-x top;
+  height: 20px;
+  padding: 24px 0px 17px 25px;
+  clear: both;
+}
+.Menu em { display: none}
+.Menu ul { list-style: none; margin: 0px; padding: 0px;}
+.Menu ul li ul { display: none;}
+.Menu li { padding: 0px; margin: 0px; display: inline; font-size: 10px; line-height: 11px; font-weight: bold;}
+.Menu a { padding: 0px 0px 0px 3px; margin-right: 2px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/MLeft.png) no-repeat left top; float: left;}
+.Menu a span { padding: 4px 9px 5px 6px; display: block; background: url(http://mihanblog.com/public/public/user_data/template/23/images/MRight.png) no-repeat right top; float: right; }
+.Menu a span { float: none; color: #3b98d2;}
+.Menu a:hover span { color: #3b98d2;}
+.Menu a:hover { background-position: 0% -20px; color:#ffffff; text-decoration: none;}
+.Menu a:hover span { background-position: 100% -20px;  color:#ffffff;}
+.Menu .on { background: url(http://mihanblog.com/public/public/user_data/template/23/images/MLeft.png) no-repeat left bottom; color:#ffffff; }
+.Menu .on span { background: url(http://mihanblog.com/public/public/user_data/template/23/images/MRight.png) no-repeat right bottom; color:#ffffff; }
+
+    /* Post +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Post { overflow:hidden;padding:5px; position: relative; clear: left;}
+.PostHead { direction:rtl;position: relative; clear: left;}
+.PostHead h1 { text-align:right;font-size: 15px; line-height: 19px; letter-spacing: -1px; font-weight: normal; padding: 0px 2px 1px 0px; margin: 0px; color:#cc0000;}
+.PostHead h1 a { color: #218dd1; text-decoration: none;}
+.PostHead h1 a:visited { color: #218dd1; text-decoration: none;}
+.PostHead h1 a:hover { color:#cc0000; text-decoration: none;}
+.PostHead ul { text-align:right;padding: 0px; margin: 0px;}
+.PostHead li { list-style-type: none; display:block}
+.PostHead li a { color:#8a98a2; text-decoration: underline;}
+.PostHead li a:visited { color:#8a98a2; text-decoration: underline;}
+.PostHead li a:hover { color:#8a98a2; text-decoration: underline;}
+
+.PostAuthor {background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostAuthor.png) no-repeat right center; padding: 1px 12px 1px 5px; margin: 0px; font-size: 10px; color:#8a98a2; font-weight: bold;display:block;}
+.PostCateg { float:right;background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostCategr.png) no-repeat right center; padding: 1px 12px 1px 5px; margin: 0px; font-size: 10px; color:#8a98a2; font-weight: bold;display:block;}
+
+    /**/ * html .PostTime { right: 30px;} /**/
+.PostTime { position: absolute; top: 20px; color:#8a98a2;}
+
+.PostContent {  
+font-family:IRANSans-web, Arial, Helvetica, sans-serif !important;
+direction: rtl;
+  text-align:right;
+  background: url(http://untranslatedasimovs.mihanblog.com/public/public/user_data/template/23/images/Dotted.gif) repeat-x bottom;
+  color: #666;
+  padding: 14px 0;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 32px;
+  text-shadow: 0 1px 0 #FFF; }
+.PostContent p { color:#444640; font-size: 12px; line-height: 17px;}
+.PostContent p strong {}
+.PostContent img {}
+.PostContent ul { padding: 10px 0px; margin: 0px; }
+.PostContent li { padding: 2px 15px 2px 0px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostContentLiIco.png) no-repeat right top; font-size: 11px; line-height: 15px; color:#4c4c4c; }
+.PostContent blockquote { padding: 2px 10px; background: #e9f8ff; margin: 0px; color:#336699; }
+.PostContent blockquote p { font-size: 11px; padding: 5px 0px; margin: 5px 0px; line-height: 15px;}
+.PostContent blockquote li { padding: 2px 0px 2px 15px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostContentBlockLiIco.png) no-repeat left top; font-size: 11px; line-height: 15px; color:#336699; }
+.PostContent blockquote a { color:#0080ca; }
+.PostContent blockquote a:visited { color:#0080ca; }
+.PostContent blockquote a:hover { color:#003399; }
+.PostContent a { text-decoration: underline;}
+
+.PostDet { text-align:left;direction:rtl;padding-top: 10px;}
+.PostDet ul { padding: 0px; margin: 0px;}
+.PostDet li { padding: 2px 0px 5px 15px; margin: 0px 10px 0px 0px; list-style-type: none; display: inline; color:#336699; font-size: 10px; font-weight: bold; }
+.PostDet li a {color:#ff3300;}
+.PostDet li a:visited { text-decoration: underline; color:#ff3300;}
+.PostDet li a:hover { text-decoration: underline; color:#990000;}
+
+.PostCom { background: url(http://mihanblog.com/public/public/user_data/template/23/images/PostCom.png) no-repeat left center; }
+
+
+    /* Side Right +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SR {display:flex;text-align:right;background: url('http://static.mihanblog.com//public/user_data/user_files/543/1627803/BGCR.png') repeat right top;border-radius: 0px 6px 6px 0px; }
+.SR .poll #poll_question {color:#660000; }
+.SR h2 { font-size: 12px; letter-spacing: normal; font-weight: bold;}
+.SR h3 { font-size: 12px; letter-spacing: normal; font-weight: bold;}
+
+    /* Side Right Left +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SRL { color:#fff;  background: #666;border-radius: 0px 6px 6px 0px;  align-items: stretch;}
+.SRL h3 { color:#ffffcc; padding: 5px 0px 5px 0px; margin: 0px; text-transform: uppercase; font-size: 12px; color:#666; letter-spacing: 0px;}
+.SRL p { color:#fff; font-size: 11px;}
+
+    /* Panel SRL +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.PT { height: 5px; width: 5px; position: absolute; top: 0px; right: 0px;}
+    /**/ *html .PT  { right: 5px;} /**/
+.Panel { position: relative; margin: 5px 5px 5px 0px; padding: 10px 10px 10px 10px;  color:#333; font-size: 11px;}
+.Panel ul { margin: 0px; padding: 0px;}
+.Panel ul li {direction:rtl;margin: 0px; padding: 0px; list-style-type: none; font-size: 11px; }
+.Panel ul li a { background: url(http://mihanblog.com/public/public/user_data/template/23/images/CategLi.png) no-repeat right top; display: block; padding: 1px 10px 2px 0px; font-size: 10px; }
+.Panel ul li a:visited { background: url(http://mihanblog.com/public/public/user_data/template/23/images/CategLi.png) no-repeat right top; display: block; }
+.Panel ul li a:hover { background: #ffffff url(http://mihanblog.com/public/public/user_data/template/23/images/CategLi.png) no-repeat right top; display: block; text-decoration: none;}
+
+.Panel ul ul li { margin: 0px; padding: 0px 0px 0px 10px; list-style-type: none; font-size: 10px; border-bottom: solid 1px #e1f3fa;}
+.Panel ul ul li a { margin: 0px; padding: 0px; list-style-type: none; font-size: 10px; background: none;}
+.Panel ul ul li a:visited { margin: 0px; padding: 0px; list-style-type: none; font-size: 10px; background: none;}
+.Panel ul ul li a:hover { margin: 0px; padding: 0px; list-style-type: none; font-size: 10px; background: none;}
+
+.Panel p { color:#333; font-size: 11px;}
+
+
+    /* Panel Blue +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PBlue .PT { }
+.PBlue { background: #e1f3fa; border-left: solid 10px #c7e5f1;}
+.PBlue ul { border-top: solid 1px #c7e5f1;}
+.PBlue ul li { border-bottom: solid 1px #c7e5f1;}
+.PBlue ul li a {color:#336699;}
+.PBlue ul li a:visited { color:#336699; }
+.PBlue ul li a:hover { color:#003366;}
+.PBlue ul ul li { border-bottom: solid 1px #e1f3fa;}
+
+    /* Panel Yellow +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PYellow .PT { }
+.PYellow { background: #faf4e1; border-left: solid 10px #ebe3c8;}
+.PYellow ul { border-top: solid 1px #ebe3c8;}
+.PYellow ul li { border-bottom: solid 1px #ebe3c8;}
+.PYellow ul li a { color:#cc6600;}
+.PYellow ul li a:visited { color:#cc6600; }
+.PYellow ul li a:hover { color:#993300;}
+.PYellow ul ul li { border-bottom: solid 1px #faf4e1;}
+
+    /* Panel Pink +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PPink .PT { }
+.PPink { background: #f2e2d5; border-left: solid 10px #e4cab5;}
+.PPink ul { border-top: solid 1px #e4cab5;}
+.PPink ul li { border-bottom: solid 1px #e4cab5;}
+.PPink ul li a { color:#993333;}
+.PPink ul li a:visited { color:#993333; }
+.PPink ul li a:hover { color:#660000;}
+.PPink ul ul li { border-bottom: solid 1px #f2e2d5;}
+
+
+    /* Panel Green +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PGreen .PT {}
+.PGreen { background: #95E088; border-left: solid 10px #70B764;}
+.PGreen ul { border-top: solid 1px #70B764;}
+.PGreen ul li { border-bottom: solid 1px #70B764;}
+.PGreen ul li a { color:#993333;}
+.PGreen ul li a:visited { color:#993333; }
+.PGreen ul li a:hover { color:#660000;}
+.PGreen ul ul li { border-bottom: solid 1px #70B764;}
+
+    /* Panel Marron +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PMaroon .PT {}
+.PMaroon { background: #FAE4E3; border-left: solid 10px #F39199;}
+.PMaroon ul { border-top: solid 1px #F39199;}
+.PMaroon ul li { border-bottom: solid 1px #F39199;}
+.PMaroon ul li a { color:#993333;}
+.PMaroon ul li a:visited { color:#993333; }
+.PMaroon ul li a:hover { color:#660000;}
+.PMaroon ul ul li { border-bottom: solid 1px #7F39199;}
+
+
+    /* Panel Marron +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.PGray .PT { }
+.PGray { background: #D4D4D4; border-left: solid 10px #A1A1A1;}
+.PGray ul { border-top: solid 1px #A1A1A1;}
+.PGray ul li { border-bottom: solid 1px #A1A1A1;}
+.PGray ul li a { color:#993333;}
+.PGray ul li a:visited { color:#993333; }
+.PGray ul li a:hover { color:#660000;}
+.PGray ul ul li { border-bottom: solid 1px #A1A1A1;}
+
+    /* Side Right Right +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.SRR { direction:rtl;position: relative; color:#fff; font-size: 11px;padding:10px; }
+.SRR h3 { background: url(http://mihanblog.com/public/public/user_data/template/23/images/SRRH3.gif) repeat-x left bottom; color:#333; padding: 0px 0px 5px 0px; margin: 0px 0px 5px 0px; letter-spacing: 0px; }
+.SRR h2 { background: url(http://mihanblog.com/public/public/user_data/template/23/images/SRRH3.gif) repeat-x left bottom; color:#fff; padding: 0px 0px 5px 0px; margin: 0px 0px 5px 0px; letter-spacing: 0px; }
+.SRR ul { padding: 0px; margin: 0px;}
+.SRR li { line-height:16px;padding: 0px 8px 0px 0px; margin: 0px; list-style-type: none; background: url(http://mihanblog.com/public/public/user_data/template/23/images/SRRIco.png) no-repeat right top; color:#999;  line-height: 16px;
+  padding: 0px 8px 0px 0px;
+  margin: 0px;
+  list-style-type: none;
+  background: url(http://untranslatedasimovs.mihanblog.com/public/public/user_data/template/23/images/SRRIco.png) no-repeat right top;
+  color: #E6E6E6;
+  font-size: 10px;}
+.SRR li a { color:#fff;}
+.SRR li a:visited { color:#fff; }
+.SRR li a:hover { color:#fff;}
+.SRR p { color:#fff; font-size: 11px;}
+
+.SRR #user_logo img{width:100%;height:100%;margin-bottom:5px;}
+.SRR #user_logo p{padding:0px;margin:0px}
+.SRR #user_logo a{color:#fff;font-size:13px;padding:2px 0;}
+
+
+    /* Footer ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.Footer { text-align:left;background: #fff url(http://mihanblog.com/public/public/user_data/template/23/images/Footer.gif) no-repeat left bottom; position: relative; clear: left; padding: 15px 30px 15px 30px; }
+
+.FL { position: absolute; top: -8px; left: -15px; height: 8px; width: 8px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/FL.gif) no-repeat left top; }
+.FR { position: absolute; top: -8px; right: -400px; background: url(http://mihanblog.com/public/public/user_data/template/23/images/FR.gif) no-repeat left top; height: 8px; width: 188px; }
+.Footer p { font-size: 10px; color:#8a8a93; padding: 0px; margin: 0px; }
+.Footer a { color:#8a8a93; text-decoration: underline;}
+.Footer a:visited { color:#8a8a93; text-decoration: underline;}
+.Footer a:hover { color:#8a8a93; text-decoration: underline;}
+
+
+.owner_photo{
+    color:#fff;
+    float:right;
+    margin:5px 0px 5px 5px;
+}
+
+
+.clearfix {display: inline-block;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+.poll{
+    direction:rtl;
+}
+.poll li{
+    list-style:none;
+    background:none;
+    padding:0px;
+}
+.cloud li{
+    list-style:none;
+    background:none;
+    padding:0px 2px;
+    float:right;
+}
+
+
+
+input.btn {  padding: 4px 14px;
+font-size:10px;
+  font-family: IRANSans-web,tahoma;
+  border: medium none;
+  color: #DEDEDE;
+  margin-top: 10px;
+  background-color: #595959;
+  border-radius: 7px;}
+input.btn:hover {color:#595959; background-color:#DEDEDE;cursor:pointer;border:medium none; margin-top: 10px;}
+input.btnIE { margin-top: 10px; }
+
+
+.mihan_logo{
+    background: url(http://mihanblog.com/public/public/images/logo/poweredby.gif) no-repeat top center;
+    text-align:center;
+    height:131px;
+    margin-top:10px;
+}
+
+.stat li{background:none;}
+.stat span{color:#660000;}
+
+#parentheses p{
+    float:right;
+    padding:0px 1px;
+    margin:0px;
+    direction:rtl;
+    text-align:right;
+
+}
+.PBlue ul #parentheses p{color:#336699;}
+
+.page_box ul{
+    direction:rtl;
+    height:17px;
+    text-align:right;
+    list-style:none;
+}
+.page_box ul{
+    height:17px;
+}
+.page_box li{
+    float:right;
+    margin-right:5px;
+    list-style:none;
+    background:none;
+    height:17px;
+   padding-bottom: 7px;
+}
+.page_box a{
+    border:1px solid #CCCCCC;
+    display:block;
+    line-height:17px;
+    text-align:center;
+    width:17px;
+    color:#A21096;
+}
+.page_box a:hover{
+    text-decoration:none;
+}
+.page_box a b{
+    color:#fff;
+    background:#EFD5EF none repeat scroll 0 0;
+    display:block;
+    line-height:17px;
+    text-align:center;
+    width:17px;
+}
+.cb_general{
+    line-height:18px;
+}
+
+.cb_share{
+    text-align:right;
+    padding: 10px 0;
+}
+.cb_share a{
+    font-size:11px;
+    text-decoration:none;
+}
+.cb_share a img{
+  padding: 7px 4px;
+  position: absolute;
+}
+
+
+
+.cblike{
+    margin:4px 0px;
+}
+.cblike a {
+    float:left;
+    padding:3px;
+    text-align:center;
+    font-size:12px;
+    color:#FFF;
+    display:block;
+    line-height:15px;
+    text-decoration: none;
+}
+
+
+
+
+.cblike a.clike_plus {
+    background-color:#009900 ; /*green #039B03*/
+
+    border-radius: 5px ;
+
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    /*border:1px solid green;
+             border-right:0px;*/
+}
+.cblike a.clike_minus {
+    background-color:#CC0000;
+    border-radius: 5px ;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+    /*border:1px solid red;
+             border-left:0px;*/
+}
+.cblike a.clike_minus:hover {
+    background-color:red;
+    text-decoration: none;
+}
+.cblike a.clike_plus:hover {
+    background-color:green;
+    text-decoration: none;
+}
+.cblike a span{
+    font-weight:bold;
+    font-size:13px;
+
+    color:#fff;
+}
+/* start nav */
+.Nav{
+  top: 0;
+  right:-200px;
+  width: 200px;
+  height: 100%;
+  text-align:right;
+  background-color: #333;
+  z-index:1000;
+  overflow-y:scroll;
+  direction:ltr;
+    position: fixed;
+   -moz-transition: all ease 0.25s;
+  -o-transition: all ease 0.25s;
+  transition: all ease 0.25s;
+  -webkit-transition: all ease 0.25s;
+}
+ .Nav::-webkit-scrollbar {
+  width:7px;
+  }
+  .Nav::-webkit-scrollbar-track {
+  background-color: #333;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+  }
+  .Nav::-webkit-scrollbar-thumb {
+  background-color: #222;
+  }
+ .Nav::-webkit-scrollbar-thumb:hover {
+  background-color:#717171;
+  }
+
+.Nav .SubNav{
+  color:#eee;
+}
+.Nav .HomeLink{
+  text-align:right;
+}
+.Nav .HomeLink a:hover{
+    color:#FF3200;
+  text-decoration: none;
+}
+.Nav .HomeLink a{
+color:#eee;
+ font-weight: normal;
+  font-size: 11px;
+  padding: 6px 13px;
+  margin: 0 0 0 0;
+  }
+.Nav .SubNav h3{
+  font-weight: normal;
+  font-size: 11px;
+  padding: 6px 13px;
+  background-color: rgba(67, 66, 66, 0.8);
+  margin: 0 0 0 0;
+  border-right: 3px solid #FF3200;
+    border-bottom: 1px solid #414141;
+}
+.SubNav ul{
+  padding:0px;
+  margin:0px;
+}
+.SubNav ul li{
+   list-style-type: none;
+  border-bottom: 1px solid #414141;
+  font-weight: normal;
+  font-size: 10px;
+  padding: 4px 22px;
+}
+.SubNav ul li a{
+  color:#eee;
+}
+.SubNav ul li a:hover{
+  color:#FF3200;
+  text-decoration: none;
+}
+.openNav{
+right:0px !important;
+ z-index: 100;
+}
+.MoveBody{
+    margin-right:200px;
+}
+#overlay{
+z-index:80;
+ position:fixed;
+  height:140%;
+  width:100%;
+  background:rgba(0,0,0,0.5);
+  margin-top:-30px;
+}
+.bodyNav{
+  margin-right:250px;
+}
+.aparatFrame{
+text-align: center;
+  position: relative;
+  padding-bottom: 57.25%;
+  overflow: hidden;
+}
+.aparatFrame iframe{
+display: block;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width:250px){
+.msgbody textarea{
+  width: 106px !important;
+  }
+  } 
+@media screen and (max-width:270px) and (min-width:250px){
+.msgbody textarea{
+  width: 110px !important;
+  }
+  }
+@media screen and (max-width:318px) and (min-width:270px){
+.msgbody textarea{
+  width: 136px !important;
+  }
+ 
+  }
+
+  @media screen and (max-width: 318px){
+     .HL .HeadDesc{
+    margin-right:22px;
+  }
+  .Header .HL {
+  padding: 20px 5px 0px 0px !important;
+}
+  }
+@media screen and (max-width:383px) and (min-width:318px){
+.msgbody textarea{
+  width: 186px !important;
+  }
+  }
+@media screen and (max-width:424px) and (min-width:383px){
+.msgbody textarea{
+  width: 235px !important;
+  }
+  }
+  
+
+@media screen and (max-width:448px){
+
+  .PostContent{
+    font-size:13px;
+  }
+  .Header .HL{
+    padding:20px 16px 0px 0px;
+  }
+  .Header h1{
+    font-size:13px;
+  }
+  .PostHead h1{
+    font-size:13px;
+  }
+}
+@media screen and (max-width:574px){
+  .comment_form label{
+  text-align:right !important;
+}
+}
+
+@media screen and (max-width:300px){
+  .comment_form_row input.comment_form_textbox{
+    width:100%;
+  }
+}
+
+@media screen and (max-width:574px) and (min-width: 420px){
+.msgbody textarea{
+    width:270px !important;
+  }
+}
+
+
+@media screen and (max-width:990px) and (min-width:768px){
+.msgbody textarea{
+  width: 255px;
+}
+}
+
+@media screen and (min-width: 992px){
+    #overlay{
+display:none;
+}
+}
+
+@media screen and (max-width: 992px){
+  .Nav{
+  display:block !important;
+}
+}
+
+@media screen and (max-width: 991px){
+  .SR {
+ border-radius:0px !important; 
+ display:block;
+}
+.SC{
+  min-height: 100px;
+}
+.PostTime {
+position: relative;
+  clear: both;
+  top: 0;
+  text-align: right;
+}
+
+.SR {
+  text-align: right;
+  background: #fff;
+  padding: 0px;
+  }
+  .SRR li {
+    color:#333;
+  }
+  .SRR{
+  color: #fff;
+  text-align: center;
+  padding: 32px 0px 0px 0px;
+  }
+    body{
+    padding-top:15px;
+    overflow-x: hidden;
+    top:0;
+  }
+}
+
+
+
+.OpenDrawer{
+   float: right;
+  padding: 6px;
+  background-color: #FF3200;
+  border-radius: 5px;
+  margin: 16px 0px 0px 25px;
+}
+.OpenDrawer .OpenChild{
+  background: #FFFFFF;
+  height: 2px;
+  width: 17px;
+  display: block;
+  margin: 3px;
+}
+.HL .SideBtn{float:right;}
+.HL .HeadDesc{float:right;}
+            /*** COMMENT BODY***/
+        .comment_body{
+            background: #FAF4E1;
+            margin:10px;
+            border-radius: 5px;
+            border-right:5px solid #EBE3C8;
+            overflow:hidden;
+        }
+
+        .comment .comment_reply {
+            background: none repeat scroll 0 0 #F2E2D5;
+            border-radius: 5px 5px 5px 5px;
+            border-right: 5px solid #E4CAB5;
+            font-size: 10px;
+            width: 350px;
+            margin-top:10px;
+            overflow:hidden;
+        }
+        .comment .comemnt_text {
+            direction: rtl;
+            line-height: 1.5em;
+            text-align: right;
+        }
+
+
+
+        .comment .name {
+            font-weight: 600;
+            color: #4E3E09;
+            padding-right: 5px;
+            text-align: right;
+            line-height: 26px;
+            float: right;
+        }
+
+
+        .comment .date {
+            font-size: 10px;
+            padding: 5px;
+            color: #7E7E7E;
+            float: left;
+        }
+
+
+        .comment .comemnt_web {
+            padding: 5px 0 5px 15px; color: #999; direction: ltr; text-align: left;
+
+        }
+
+
+        .comment .comemnt_web a {
+            color: #554c3d;
+            text-decoration: underline;
+        }
+
+
+
+        .comment_det{
+            border-bottom:1px solid #F4F4F2;
+            padding:4px;
+
+        }
+
+
+        .comment .name,.date,.comemnt_text,.comment_reply{
+            margin-right:3px;
+            padding-right:3px;
+
+        }
+
+            /**** COMMENT FORM ****/
+
+        .comment_form {
+            background: none repeat scroll 0 0 #FAE4E3;
+            border-radius: 5px 5px 5px 5px;
+            border-right: 5px solid #F39199;
+            direction: rtl;
+            margin: 10px;
+            padding: 20px;
+
+        }
+
+
+
+        .comment_form label {
+            display: block;
+            float: right;
+            text-align: left;
+            font-size: 11px;
+            color: #555;
+            padding-left: 10px;
+            width:100px;
+        }
+
+
+        .comment_form .comment_form_row {
+            margin: 3px 0;
+        }
+
+
+        #imageCodeWrapper .imageCode_input #imgstr {
+            font-size: 25px;
+            height: 34px;
+            width: 70px;
+        }
+
+        .comment_form input.btn { input.btn {
+                                      background: url("http://mihanblog.com/public/public/user_data/template/23/images/SubmitComment.gif") no-repeat scroll 0 0         transparent;
+                                      border: medium none;
+                                      color: #FFFFFF;
+                                      font-family:IRANSans-web, tahoma;
+                                      height: 26px;
+                                      margin-top: 10px;
+                                      padding: 0;
+                                      width: 85px;
+                                  }
+        .comment_form .comment_form_textarea, .comment_form .comment_form_textbox {
+            border: 1px solid #C5C5C5;
+        }
+
+        .aparatFrame {
+  text-align: center;
+  position: relative;
+  padding-bottom: 57.25%;
+  overflow: hidden;
+}
+<a href="http://update.1bn.eu/" target="_blank"><img border="0" src="http://update.1bn.eu/logo.gif" width="88" height="31" alt="لیست وبلاگهای به روز شده"></a>
+.aparatFrame iframe {
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+</style>
+    <title>ترجمه نشده های آیزاک اَزیموف - مطالب ابر تیوتایمولاین</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content=""/>
+    <meta name="keywords" content="آیزاک، آسیموف، آیزاک آسیموف، ایزاک، ایزاک آسیموف"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="alternate" type="application/rss+xml" title="ترجمه نشده های آیزاک اَزیموف" href="../rss/index.html" />
+    <link rel="alternate" type="application/atom+xml" title="ترجمه نشده های آیزاک اَزیموف" href="../atom/index.html" />
+    <script type="text/javascript" src="http://static.mihanblog.com//public/user_data/user_files/543/1627803/respond.min.js"></script>
+    <script type="text/javascript">
+  function sideNav() {
+  var sideNav = document.getElementById("SideMenu");
+   if(!hasClass(sideNav,"openNav")){
+   sideNav.className += "openNav";
+   if(!document.getElementById("overlay")){
+     var overlay = document.createElement("div");
+    // document.getElementsByTagName('body')[0].appendChild(overlay);
+     insertAfter(sideNav,overlay)
+     var att = document.createAttribute("id");   
+     att.value = "overlay";                          
+     overlay.setAttributeNode(att);
+     overlay.addEventListener("click", hideSideNav);
+     }
+     }else{
+          removeClass(sideNav,"openNav");
+     }
+}
+function hideSideNav(){
+  var sideNav = document.getElementById("SideMenu");
+   removeClass(sideNav,"openNav");
+  document.getElementsByTagName('body')[0].removeChild(document.getElementById("overlay"));
+}
+function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
+
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+
+function insertAfter(referenceNode, newNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+  
+
+</script>
+
+</head>
+
+<body>
+
+
+
+<div class="Nav visible-xs " id="SideMenu">
+<div class="HomeLink">
+<h3><a href="../../index.html">صفحه اصلی</a></h3></div>
+
+    <!-- Start Recent posts -->
+          <div class="SubNav">
+        <h3>آخرین پست&zwnj;ها</h3>
+        <ul class="clearfix">
+                            <li><a  href="../368.html">احتمال چاپ مجموعۀ «معماهای باشگاه اتحاد»</a></li>
+                            <li><a  href="../353.html">فصلنامۀ تخصصی داستان‌های علمی‌تخیلی «فصل علم و خیال»</a></li>
+                            <li><a  href="../339.html">فصل علم و خیال شمارۀ چهار</a></li>
+                            <li><a  href="../338.html">ایزدان هم، خدایان هم!</a></li>
+                            <li><a  href="../337.html">کتاب‌های آیزاک ازیموف در کتابخونۀ من</a></li>
+                            <li><a  href="../336.html">دانلود کتاب صوتی «... که در اندیشۀ او هستی»</a></li>
+                            <li><a  href="../335.html">دانلود کتاب «اتفاقی نخواهد افتاد»</a></li>
+                            <li><a  href="../334.html">هالووین (قسمت دوم)</a></li>
+                            <li><a  href="../333.html">هالووین (قسمت نخست)</a></li>
+                            <li><a  href="../332.html">اتفاقی نخواهد افتاد</a></li>
+                            <li><a  href="../331.html">چیز کوچک (قسمت دوم)</a></li>
+                            <li><a  href="../330.html">چیز کوچک (قسمت نخست)</a></li>
+                            <li><a  href="../329.html">فصل علم و خیال-شمارۀ 3</a></li>
+                            <li><a  href="../328.html">«برجیس را بخر!» منتشر شد</a></li>
+                            <li><a  href="../327.html">«داداش کوچولو»ها</a></li>
+                        <li><a  href="../list.html"><b>لیست آخرین پست&zwnj;ها</b></a></li>
+        </ul>
+        </div>
+        <!-- End Recent posts -->
+ 
+    <br />
+            <!-- Start Categ -->
+        <div class="SubNav">
+            <h3>آرشیو موضوعی</h3>
+            <ul>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="../category/1.html"><p>داستان</p><p>(2)</p></a></li>
+                            </ul>
+            <div class="PT"></div>
+        </div>
+        <!-- End Categ -->
+    
+    <!-- Start Archives -->
+            <div class="SubNav">
+            <h3>آرشیو</h3>
+            <ul>
+                                    <li><a href='../archive/1396/5.html' title=' مرداد 1396(1)'> مرداد 1396</a></li>
+                                    <li><a href='../archive/1396/3.html' title=' خرداد 1396(1)'> خرداد 1396</a></li>
+                                    <li><a href='../archive/1395/9.html' title=' آذر 1395(1)'> آذر 1395</a></li>
+                                    <li><a href='../archive/1395/8.html' title=' آبان 1395(1)'> آبان 1395</a></li>
+                                    <li><a href='../archive/1395/7.html' title=' مهر 1395(4)'> مهر 1395</a></li>
+                                    <li><a href='../archive/1395/6.html' title=' شهریور 1395(7)'> شهریور 1395</a></li>
+                                    <li><a href='../archive/1395/5.html' title=' مرداد 1395(8)'> مرداد 1395</a></li>
+                                    <li><a href='../archive/1395/4.html' title=' تیر 1395(4)'> تیر 1395</a></li>
+                                    <li><a href='../archive/1395/3.html' title=' خرداد 1395(15)'> خرداد 1395</a></li>
+                                    <li><a href='../archive/1395/2.html' title=' اردیبهشت 1395(27)'> اردیبهشت 1395</a></li>
+                                <li><a href="../archive.html"><b>لیست آرشیوها</b></a></li>
+            </ul>
+            <div class="PT"></div>
+        </div>
+        <!-- End Archives -->
+
+    <!-- Start Links -->
+            <div class="SubNav">
+            <h3>لینکدونی</h3>
+            <ul>
+                                    <li><a href="http://AMIN2002.mihanblog.com" title="" target="_blank">یک قدم تا قلم</a></li>
+                                    <li><a href="http://www.daneshforum.ir" title="انجمن علمی دانش آموزان و دانشجویان" target="_blank">دانش فروم</a></li>
+                                    <li><a href="http://oloome7.mihanblog.com" title="مطالب علمی" target="_blank">سرزمین علم</a></li>
+                                    <li><a href="http://www.book.i20.ir/" title="سلام دوست عزیز
+اگه وقت داشتی یه سر به موارد زیر بزن 
+منتظر حضور گرمت هستم
+www.i20.ir
+اسلام شناسی
+----
+کانال تلگرام
+قدمی بسوی ظهور برداریم
+https://telegram.me/i20ir
+و کانال تلگرام
+یاد خدا
+https://telegram.me/i20ir313" target="_blank">کتابخانه آنلاین</a></li>
+                                    <li><a href="http://esteva.mihanblog.com" title="انصافا وبلاگ زیبایی دارید .
+
+این لینک را تایید کنید  لطفا" target="_blank">استوا</a></li>
+                                    <li><a href="http://i20.ir/" title="آی بیست سایت تخصصی اسلام شناسی پایگاه دانلود کتب مذهبی
+سایت آی‏ بیست بصورت تخصصی کتب دینی اسلام شناسی را جهت دانلود قرار می دهد" target="_blank">اسلام شناسی</a></li>
+                                <li><b><a href="../../linkdaily/index.html">همه لینک&zwnj;ها</a></b></li>
+                <li><b><a href="javascript:linkdailyForm()">ارسال لینک به لینکدونی</a></b></li>
+            </ul>
+            <div class="PT"></div>
+        </div>
+        <!-- End Links -->
+
+    <!-- Start Links -->
+            <div class="SubNav">
+            <h3>لینکستان</h3>
+            <ul>
+                                    <li><a href="http://s9.picofile.com/file/8269250176/Nothing_Might_Happen_PC_Edition_.pdf.html" title=""  target="_blank">کتاب «اتفاقی نخواهد افتاد» نسخۀ رایانه و لپتاپ</a></li>
+                                    <li><a href="http://s8.picofile.com/file/8269249684/Nothing_Might_Happen_Mobile_Edition_.pdf.html" title=""  target="_blank">کتاب «اتفاقی نخواهد افتاد» نسخۀ تلفن همراه و تبلت</a></li>
+                                    <li><a href="http://http://s6.picofile.com/file/8255238850/_That_Thou_Art_Mindful_Of_Him_Mobile_Edition_.pdf.html" title=""  target="_blank">...که در اندیشۀ او هستی-نسخۀ تلفن همراه و تبلت</a></li>
+                                    <li><a href="http://http://s6.picofile.com/file/8255238476/_That_Thou_Art_Mindful_Of_Him_PC_Edition_.pdf.html" title=""  target="_blank">... که در اندیشۀ او هستی-نسخۀ رایانه و لپتاپ</a></li>
+                                    <li><a href="http://ketabnak.com/book/75006/" title=""  target="_blank">دانلود کتاب «کلید واژه و معماهای دیگر»</a></li>
+                                    <li><a href="http://s7.picofile.com/file/8234182076/The_Early_Asimov_Vol_3_PC_Version.pdf.html" title=""  target="_blank">اولین داستان‌های آیزاک ازیموف-جلد سوم-ورژن PC</a></li>
+                                    <li><a href="http://s6.picofile.com/file/8234181826/The_Early_Asimov_Vol_3_Mobile_Version.pdf.html" title=""  target="_blank">اولین داستان‌های آیزاک ازیموف-جلد سوم-ورژن موبایل</a></li>
+                                    <li><a href="http://s6.picofile.com/file/8234181626/The_Early_Asimov_Vol_2_PC_Version.pdf.html" title=""  target="_blank">اولین داستان‌های آیزاک ازیموف-جلد دوم-ورژن PC</a></li>
+                                    <li><a href="http://s7.picofile.com/file/8234181468/The_Early_Asimov_Vol_2_Mobile_Version.pdf.html" title=""  target="_blank">اولین داستان‌های آیزاک ازیموف-جلد دوم-ورژن موبایل</a></li>
+                                    <li><a href="http://s7.picofile.com/file/8234181300/The_Early_Asimov_Vol_1_PC_Version.pdf.html" title=""  target="_blank">اولین داستان‌های آیزاک ازیموف-جلد اول-ورژن PC</a></li>
+                                    <li><a href="http://s7.picofile.com/file/8234181050/The_Early_Asimov_Vol_1_Mobile_Version.pdf.html" title=""  target="_blank">اولین داستان‌های آیزاک ازیموف-جلد اول-ورژن موبایل</a></li>
+                                    <li><a href="http://khordeandishe.blogsky.com/" title=""  target="_blank">وبلاگ محمد علیزاده عطار (از مترجمین داستانهای آیزاک آسیموف)</a></li>
+                                    <li><a href="http://s6.picofile.com/file/8201546284/More_Tales_Of_The_Black_Widowers.zip.html" title=""  target="_blank">دانلود کتاب «داستانهای بیشتر از بیوه مردان سیاه»</a></li>
+                                    <li><a href="http://s3.picofile.com/file/8204741242/Isaac_Asimov_s_Persian_Translated_Books.pdf.html" title=""  target="_blank">فهرست کتابهای ترجمه شدۀ آیزاک آسیموف به زبان فارسی</a></li>
+                                    <li><a href="https://www.facebook.com/profile.php?id=100008272297108" title=""  target="_blank">پروفایل فیسبوک من</a></li>
+                                    <li><a href="http://s3.picofile.com/file/8208520892/How_to_solve_a_Rubik_s_Cube_by_Fridrich_Method.pdf.html" title=""  target="_blank">آموزش حل مکعب روبیک</a></li>
+                                <li><a href="../../link/index.html"><b>همه لینک&zwnj;ها</b></a></li>
+            </ul>
+            <div class="PT"></div>
+        </div>
+        <!-- End Links -->
+
+    <!-- Start extrapage -->
+        <!-- End extrapage -->
+
+</div>
+
+<div class="PageWrap">
+<div class="Header container">
+<div class=" col-md-8 col-lg-8 col-sm-12 col-xs-12">
+<div class="HL">
+<div class="SideBtn">
+<a href="تیوتایمولاین.html#" class="OpenDrawer visible-sm visible-xs" id="open" onclick="sideNav()">
+<span class="OpenChild"></span>
+<span class="OpenChild"></span>
+<span class="OpenChild"></span>
+</a></div>
+  <div class="HeadDesc">  <h1><a href="../../index.html">ترجمه نشده های آیزاک اَزیموف</a></h1>
+    <p class="Desc"></p></div>
+</div></div>
+<div class=" col-lg-4 col-md-4 hidden-sm hidden-xs">
+    <div class="HR">
+    <div class="Syn">
+        <ul>
+            <li><a href="../rss/index.html">RSS</a></li>
+            <li><a href="../atom/index.html">Atom</a></li>
+        </ul>
+    </div> 
+
+  <form id="frm-16082120095fdb5e29ddd20" method="get" action="http://untranslatedasimovs.mihanblog.com/post/search/fid/16082120095fdb5e29ddd20"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+        <div class="Search">
+            <div>
+                <input type="text" name="search_text" class="keyword" />
+                <div id="buttonsearch"><input type="submit" value="" class="search" /></div>
+            </div>
+        </div>
+    <input type="hidden" name="frm-id" value="16082120095fdb5e29ddd20" id="frm-id" /></form>
+    
+</div>
+</div>
+</div> 
+
+
+<div class="BGC container">
+<!-- start header -->
+
+
+
+
+
+<!-- Container -->
+<div class="container-fluids">
+
+<!-- Start SC -->
+<div style=" background-color: #fff;" class=" col-md-8 col-lg-8 col-sm-12 col-xs-12">
+<div class="SC">
+<div class="Menu">
+    <ul>
+        <li><a class="on" href="mailto:s.simorq@gmail.com"><span>ایمیل به ما</span></a></li>
+        <li><a class="on" href="javascript:messageForm()"><span>تماس با ما</span></a></li>
+
+        <!--<li class="page_item page-item-2"><a href="http://wp-themes.designdisease.com/testrun/about/" title="About"><span>About</span></a></li>-->
+    </ul>
+<a href="http://update.1bn.eu/" target="_blank"><img border="0" src="http://update.1bn.eu/logo.gif" width="88" height="31" alt="لیست وبلاگهای به روز شده"></a>
+</div>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		    <div class="Post clearfix" id="315">
+
+        <div class="PostHead">
+            <h1><a href="../315.html" rel="bookmark">تیوتایمولاین و عصر فضا</a></h1>
+            <ul>
+                <li class="PostAuthor clearfix">نویسنده: <a href="../author/1347787.html">س. سیمرغ</a> </li>
+
+                
+            </ul>
+        </div>
+        <small class="PostTime clearfix">جمعه 4 تیر 1395</small>
+
+
+
+
+        <div class="PostContent clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://untranslatedasimovs.mihanblog.com/post/315&amp;title=تیوتایمولاین و عصر فضا">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/logo/package2/logo_color_16_16.png" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo clearfix"></div><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div style="mso-element:para-border-div;border:none;border-bottom:solid #5B9BD5 1.0pt;
+mso-border-bottom-themecolor:accent1;padding:0in 0in 4.0pt 0in">
+
+<p class="MsoTitle" align="center" dir="RTL" style="text-align:center;text-indent:
+19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><b><span lang="FA">تیوتایمولاین و
+عصر فضا(بخش سوم)</span></b><span lang="FA"><o:p></o:p></span></font></p><p class="MsoTitle" align="center" dir="RTL" style="text-align:center;text-indent:
+19.35pt;line-height:200%"><b style="font-family: Mihan-Iransans; line-height: 32px; text-align: justify; text-indent: 0px;"><font size="2">ترجمۀ داود ابراهیمی (ابراهیم فروزان)</font></b></p>
+
+</div>
+
+<p class="MsoNormal" align="center" dir="RTL" style="text-align:center;text-indent:
+19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">رونوشت سخنرانی ارائه شده در دوازدهمین نشست
+سالانۀ انجمن شیمی </span><span lang="FA">پایان زمانی</span><span lang="AR-SA">&nbsp;آمریكا</span><span dir="LTR"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">آقایان؛ مرا بنیان‌گذار دانش شیمی </span><span lang="FA">پایان زمان</span><span lang="AR-SA">ی می‌خوانند و من نمی‌توانم از این
+موضوع به خود نبالم . ایجاد علمی جدید افتخاری است كه فقط به افراد كمی رسیده است.
+من هنوز می‌توانم به وضوح روزی را به یاد بیاورم که در سال 1974 برای نخستین بار
+مقداری </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA">
+درون آب انداختم و فكر كردم متوجه چیز خاصی شده‌ام. بدون شك خیلی سریع حل شد، اما
+به این مسأله عادت داشتم. به نظر می‌رسید </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA">
+همیشه به محض رسیدن به آب ناپدید می‌شود</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">اما من هرگز با نمونۀ </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA">ی به خلوص ذره‌ای كه آن روز به دست
+آورده بودم كار نكرده بودم، یادم می‌آید همان طور كه نزدیک شدن پودر سفید به آب را
+نگاه می‌كردم با خودم فكر كردم: عجیب است! این دفعه <i>پیش</i> از رسیدن به آب حل
+شد</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>!<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">خوب این داستان برای شما تكراری است،
+خودم می‌دانم،‌ اما باز می‌خواهم روی آن هیجان کسب اطمینان، اندازه‌گیری‌های صورت
+گرفته، زمان‌سنجی چشمی اولیه و كارهای دقیق‌تر با </span><span lang="FA">پایان زمان</span><span lang="AR-SA">‌سنج، مثل همان كه الآن در اسمیتسونیَن
+هست، مکث</span><span dir="LTR"></span><span dir="LTR"></span><span lang="AR-SA" dir="LTR"><span dir="LTR"></span><span dir="LTR"></span> </span><span lang="AR-SA">كنم</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">اعلام خاصیت </span><span lang="FA">پایان زمان</span><span lang="AR-SA">ی یعنی همین واقعیت كه ماده‌ای وجود
+دارد كه 1.12 ثانیه پیش از آن كه آب به آن اضافه شود حل می‌شود یك جنبش به وجود
+آورد. مطمئنم كه همه‌ی شما آن را به یاد می‌آورید</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.</span><span dir="RTL"></span><span dir="RTL"></span><span dir="RTL"></span><span dir="RTL"></span> <span lang="AR-SA">با این وجود به نحوی این
+فكر پیش آمد كه </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA">
+یك تقلب است. نظراتی که در مجلات علمی یا معتبر چاپ می‌شد مشخصاً لحن تمسخرآمیز
+داشت. در تماس‌های محرمانه‌ای که به دستم رسیده دیده‌ام که متأسفانه آزمایشاتی را
+تشریح کردند که مشخصاً از نظر علمی بی‌اعتبار هستند و من فقط می‌توانم نتیجه بگیرم
+که یک جور شوخی هستند. شاید آخرین شاهد</span><span dir="LTR"></span><span dir="LTR"></span><span lang="AR-SA" dir="LTR"><span dir="LTR"></span><span dir="LTR"></span> </span><span lang="AR-SA">برای آسیب‌هایی که ایشان وارد کردند
+همین باشد كه انجمن شیمی </span><span lang="FA">پایان زمان</span><span lang="AR-SA">ی
+آمریكا پس از 12 سال می‌تواند فقط 15 نفر را برای گوش فرا دادن به این سخنرانی جمع
+كند</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">آقایان این شوخی گران‌قیمتی بود كه به
+قیمت رهبری ما در مسابقه به سمت فضا تمام شد. همان زمان که محققین آمریكایی به زحمت
+می‌توانستند اعتباری برای ادامۀ تحقیقات </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA">
+جمع کرده و محدود به آزمایش‌ها در مقیاس كوچك بوده و زیر فشار جو دیرباوری
+همكارانشان له می‌شدند، اتحاد جماهیر شوروی شهر خروشچفسك را در كوه‌های اورال ساخت
+كه لقب آن، </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA">
+گراد، به خوبی نشان‌دهنده‌ی ماهیت فعالیت‌هایی است كه پشت دیوارهای آزمایشگاه‌های
+علمی مدرن و مجهز آن‌جا انجام می‌شود</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">در این که شوروی </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA"> را جدی گرفته و دارد با آن كارهایی
+انجام می‌دهد هیچ شکی وجود ندارد و ما هنوز هم در خواب خرگوشی خودمان هستیم. هیچ
+شخصیت سیاسی مهمی این مسأله را جدی و خطرناك نمی‌بیند</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>. </span><span lang="AR-SA">اگر هم آن‌ها چیزی در رسانه‌ها گفته
+باشند این است كه «</span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA">
+چیست؟» من الآن قصد دارم برای این سیاست‌مداران كوته‌بین توضیح بدهم </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA"> برای تلاش‌های فضایی ما چه معنایی دارد</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">با اختراع باتری دورزمان توسط آن مك‌لارن
+و دونالد میچی از دانشگاه ادینبورو تحقیقات </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA"> از مرحله‌ای كه الآن می‌توانیم آن را
+مرحله‌ی كلاسیك بدانیم، عبور كرد و به مرحله مدرن وارد شد. اگر شما جایی این موضوع
+را خوانده‌اید قاعدتاً غیب‌بین هستید، زیرا رسانه‌های عمومی و بیشتر نشریات علمی
+سرسختانه راه سكوت در پیش گرفتند</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>. </span><span lang="AR-SA">در واقع مقالۀ اصلی در مجله‌ی كوچك اما
+بسیار محترم «نتایج تکرار ناپذیر» به ویراستاری الكساندر كوهن لایق و توانا چاپ
+شد. اجازه بدهید باتری دورزمان را توصیف كنم</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">یك </span><span lang="FA">پایان زمان</span><span lang="AR-SA">‌سنج، كه همه‌ی ما با آن آشنا هستیم،
+ابزاری است كه آب را به صورت خودكار به لولۀ حاوی </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA"> می‌رساند. </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA"> 1.12 ثانیه پیش از آن كه آب به آن برسد
+حل می‌شود</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">تصور كنید چنین </span><span lang="FA">پایان زمان</span><span lang="AR-SA">‌سنجی به یك </span><span lang="FA">پایان زمان</span><span lang="AR-SA">‌سنج مشابه دیگری متصل باشد، به نحوی كه
+حل شدن </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA">
+در اولی پیپت آب‌ریز دومی را فعال كند. </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA">
+واحد دوم 1.12 ثانیه قبل از ریختن آب حل می‌شود، یعنی 2.24 ثانیه پیش از ریختن آب
+در واحد اول</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">بی‌نهایت </span><span lang="FA">پایان زمان</span><span lang="AR-SA">‌سنج را می‌توان بدین صورت به یكدیگر
+متصل نمود و </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA">
+هر واحد 1.12 ثانیه قبل از واحد بعدی در زنجیره حل می‌شود. یك باتری دارای حدود
+77000 واحد موجب می‌شود آخرین نمونه‌ی </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA">
+یك روز كامل پیش از ریختن آب حل شود</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">چنین باتری‌هایی هم در ادینبورو ساخته
+شده هم در آزمایشگاه من در بوستون، كه این باتری‌ها مدل‌های بسیار پیچیده‌ای هستند
+كه از مدارهای چاپی و كوچك‌سازی پیشرفته در آن‌ها استفاده شده است. ابزاری با حجم
+كمتر از یك فوت مكعب می‌تواند بازه‌‌ی </span><span lang="FA">پایان زمان</span><span lang="AR-SA">ی
+24 ساعت را پوشش دهد. شواهد قوی اما غیر مستقیمی وجود دارد كه شوروی ابزارهای
+بسیار پیچیده‌تری در اختیار دارد و آن‌ها را در مقیاس تجاری تولید می‌كند</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">كاربرد عملی واضح این باتری دورزمان در
+پیش‌بینی وضع هوا است. به عبارت دیگر اگر جزء اول </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA"> به نحوی در فضای باز قرار بگیرد كه در
+معرض باران احتمالی باشد، جزء آخر روز قبل حل می‌شود و بدین ترتیب یك راه بدون خطا
+برای پیش‌بینی باران به فاصله‌ی یك روز به دست می‌آید</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">مطمئنم كه همه‌ی شما آقایان متوجه هستید
+كه باتری دورزمان را می‌توان برای پیش‌بینی‌های عمومی هم استفاده نمود</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">یك مثال بسیار سطحی مطرح می‌كنم، فرض
+كنید شما به نتیجه‌ی یك مسابقه اسب‌دوانی علاقه‌مندید. مثلاً شما می‌خواهید روی
+اسب برنده شرط ‌بندی كنید</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>. </span><span lang="AR-SA">بیست و چهار ساعت پیش از مسابقه می‌توانید
+در ذهن خود عزمتان را جزم كنید كه اگر اسب مورد نظر روز بعد برنده شد، به محض
+رسیدن خبر فوراً آب را به جزء اول باتری دورزمان اضافه كنید و اگر برنده نشد نكنید</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">با چنین عزمی، شما فقط باید مراقب جزء
+آخر باشید</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>. </span><span lang="AR-SA">اگر
+</span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA"> در جزء آخر حل شد،</span><span dir="LTR"></span><span dir="LTR"></span><span lang="AR-SA" dir="LTR"><span dir="LTR"></span><span dir="LTR"></span> </span><span lang="AR-SA">از
+طریق زنجیره‌ی حل شدن‌های باتری با فواصل زمانی 1.12 ثانیه كه البته شما لازم نیست
+نگران این جزئیات باشید،</span><span dir="LTR"></span><span dir="LTR"></span><span lang="AR-SA" dir="LTR"><span dir="LTR"></span><span dir="LTR"></span> </span><span lang="AR-SA">شما می‌توانید مطمئن باشید كه بدون شك
+اسب مورد نظرتان برندۀ مسابقه بوده است</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>. </span><span lang="AR-SA">حتی اگر میلتان کشید که زرق و برقش را
+زیاد کنید می‌توانید كاری كنید كه حل شدن آخرین جزء یك چراغ چشمك‌زن را روشن كند،
+ناقوسی به صدا درآید، مقداری خرج انفجاری منفجر شود یا هر چیزی كه بتواند توجه شما
+را جلب كند</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">آقایان شما می‌خندید، اما آیا نمی‌توان
+از این سیستم بدون هیچ تغییری برای پرتاب یك ماهواره استفاده نمود؟</span><span dir="LTR"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">فرض کنید چهار ساعت پس از پرتاب، یک
+وسیلۀ خودکار روی مدار دورسنج ماهواره یک سیگنال به پایگاه پرتاب بفرستد. بعد فرض
+کنید سیستم جوری طراحی شده باشد که این سیگنال رادیویی جزء اول یک باتری دورزمان
+را فعال کند</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">متوجه نتیجه هستید؟ ارسال سیگنال چهار
+ساعت پس از پرتاب فقط می‌تواند به این معنی باشد که ماهواره به سلامت در مدار قرار
+گرفته است. اگر این گونه نبود پیش از گذشت چهار ساعت سقوط کرده و از بین می‌رفت. بنابراین
+اگر امروز آخرین جزء باتری دورزمان حل شود، می‌توانیم مطمئن باشیم که فردا پرتاب
+موفقی خواهیم داشت و سایر اقدامات را طبق برنامه انجام می‌دهیم</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">اگر آخرین جزء حل نشد یعنی پرتاب موفقیت‌آمیز
+نخواهد بود بنابراین مشکلی در مونتاژ ماهواره وجود دارد. گروهی از تکنیسین‌ها
+دستگاه را چک می‌کنند و هر وقت که قطعه‌ی ‌معیوب درست شد باتری دورزمان فعال می‌شود.
+در نهایت پرتاب با انتظار موفقیت صد در صد برنامه‌ریزی می‌شود</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">هنوز هم مطلب به نظرتان خنده‌دار می‌آید،
+آقایان؟</span><span dir="LTR"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">آیا این تنها راه توجیه موفقیت‌های دائم
+شوروی در مقایسه با نتایج یک خط در میان ما نیست؟ البته رسم این است که نمایش
+موفقیت‌های پی در پی پرتاب‌های شوروی را بر این اساس بگذاریم که ایشان عامدانه
+شکست‌هایشان را پنهان می‌کنند. اما آیا واقعاً این طور است؟ آیا آن‌ها با همخوانی
+قابل توجهی موفقیت‌هایشان را در زمان‌هایی برنامه‌ریزی نکردند که بیشترین استفاده
+را از آن‌ها ببرند؟</span><span dir="LTR"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">اسپوتنیک 1 کمتر از یک ماه بعد از صدمین
+سالگرد تولد تسیولکوفسکی، پیشگام علم موشکی شوروی، پرتاب شد</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>. </span><span lang="AR-SA">اسپوتنیک 2 به مناسبت چهلمین سالگرد
+انقلاب شوروی پرتاب شد. لونیک 2 درست پیش از بازدید خروشچف از ایالات متحده پرتاب
+شد. لونیک 3 در سومین سالگرد اسپوتنیک 1 پرتاب شد</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">انطباق تصادفی؟ یا آن‌ها به راحتی با
+کمک باتری دورزمان قدرت پیش‌بینی داشته‌اند؟ شاید آن‌ها چند مونتاژ مختلف از موشک
+را تست کرده و آن را که موفقیتش پیش‌بینی شده بود را انتخاب کرده بودند؟ دیگر چطور
+می‌توان توضیح داد که چرا ایالات متحده نمی‌تواند مانند آن‌ها یک موشک را در روزی
+خاص با موفقیت پرتاب کند؟</span><span dir="LTR"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">همچنین به خاطر بیاورید که آن چنان که
+بعضی‌ها گفته‌اند شوروی همیشه موفقیتش را پس از اطمینان از کسب آن اعلام نمی‌کند.
+اقلاً در یک مورد که ایشان زودتر دستیابی به هدف را اعلام کردند</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">آن گاه که لونیک 3 در راه رسیدن به مدار
+ماه بود دانشمندان شوروی با اطمینان اعلام کردند که لونیک در طی مدار خود از روی
+پنهان ماه عکس خواهد گرفت. اگر بحث فقط سر مدار لونیک بود ایشان مشکلی نداشتند. از
+مسیر حرکت و محل زمین، ماه و لونیک مدار آن را می‌شود با دقت بالایی محاسبه کرد</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">اما دانشمندان شوروی چطور می‌توانستند
+مطمئن باشند که دوربین پیچیده‌ی نصب شده به خوبی کار خواهد کرد؟ آیا ممکن است که
+انجام موفقیت‌آمیز کار دوربین را به راه‌اندازی یک باتری دورزمان در پایگاه پرتاب
+متصل کرده باشند؟ آیا ممکن است باتری ایشان را تا آن حد از موفقیت و پیروزی پرستیژ
+مطمئن کرده باشد تا روز پیش از گرفتن تصاویر اخبار را اعلام کنند؟</span><span dir="LTR"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">من می‌گویم که جواب این است: معلوم است
+که بله</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>!<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">و در مورد تلاش‌های آتی برای فرستادن
+انسان به فضا چه؟ فرض کنید که فرد قبول کند که پس از مدت معینی از پرتاب یک سیگنال
+را دستی بفرستد. وقتی که هنوز فضانورد روی زمین است یک باتری دورزمان به ما خواهد
+گفت که نه تنها او در مدار است بلکه زنده و به حدی سالم است که می‌تواند سیگنال را
+ارسال کند</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">اگر باتری دورزمان فعال نشود فرد پرتاب
+نمی‌شود. به همین سادگی. تا وقتی که ممکن است فضانورد صدمه ببیند گام <i>انسان در
+فضا</i> به تعویق می‌افتد. با توجه به بی‌خیالی دولت ما نسبت به </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA"> به نظر قطعی می‌رسد که شوروی پیش از ما
+به این هدف برسد</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">احتمالاً می‌توان این اصل را به تمام
+دستاوردهای علمی و غیر علمی تعمیم داد. به طور نظری می‌توان ابرباتری‌های عظیمی
+ساخت که نتایج انتخابات سال آینده را پیش‌بینی کنند</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>. </span><span lang="AR-SA">خوب من به اندازه‌ی کافی در مورد این
+موضوع صحبت کردم. اجازه دهید در کنار مزایای بزرگ در مورد بعضی ملاحظات مربوط به
+خطرات بزرگ تحقیقات </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA">
+هم صحبت کنم</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><span dir="LTR"><font face="Mihan-Iransans" size="2">***<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">خطرات از قدیمی‌ترین متناقض‌نمای </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA"> شروع می‌شوند: تناقض فریب. به عبارت
+دیگر احتمال این که </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA">
+حل شود اما با اضافه نکردن آب آن را فریب داد. همان طور که در آزمایشگاه من روشن
+شده است بحث اصلی در مقابل این نظر مربوط به نظریه‌ی اتم </span><span lang="FA">پایان زمان</span><span lang="AR-SA"> است که تا کنون توسط نیم دوجین محقق
+دیگر تأیید شده است. یکی از پیوندهای یک یا چند اتم کربن در مولکول </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA"> تشکیل یک ابرساختار زمانی روی بعد زمان
+می‌دهند. یک پیوند 1.12 ثانیه در گذشته و یکی 1.12 ثانیه در آینده است. با حل شدن
+سر آتی مولکول </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA">
+و کشیدن بقیه مولکول، در واقع یک واقعه‌ی محتمل را پیش‌بینی نمی‌کند، بلکه یک
+واقعه‌ی حقیقی آینده را ثبت می‌نماید</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">با این وجود به طور نظری اثبات شده است
+که فریب دادن </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA">
+ممکن است. با استفاده از اصل عدم قطعیت هایزنبرگ می‌توان اثبات کرد که نمی‌توان با
+قطعیت گفت که آیا یک مولکول </span><span lang="FA">تیوتایمولاین</span><span lang="FA">
+</span><span lang="AR-SA">پیش از اضافه شدن آب حل می‌شود یا خیر، در واقع احتمال این که
+حل نشود زیاد هم هست</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">این موضوع بدون شک برای یک مولکول صحیح
+است. اما حتا کوچک‌ترین نمونه‌ی میکروسکوپی که عملاً در پیچیده‌ترین باتری‌های
+دورزمان استفاده می‌شود هم حاوی کوئینتیلیون‌ها مولکول </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA"> است و احتمال این که تمام این
+کوئینتیلیون‌ها یا حتی کسر قابل مشاهده‌ای از آن‌ها حل نشوند بی‌نهایت اندک است</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">شکست یک باتری دورزمان که هزاران واحد
+در آن وجود دارد وابسته به شکست هر یک از واحدهای آن است. احتمال آن‌چه که شکست
+هایزنبرگ خوانده می‌شود قابل محاسبه است و بعضی تخمین زده‌اند یا اقلاً به نظر می‌رسد
+که نشان داده‌اند که احتمال این که یک باتری به اشتباه پاسخ مثبت دهد یک بار در
+بیش از یک میلیون بار است</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">در چنین موقعیتی بدون این که به جزء اول
+باتری دورزمان آب اضافه شده باشد جزء آخر حل می‌شود. برعکس این موقعیت رایج‌تر هم
+هست، با وجودی که به جزء اول آب اضافه شده باز هم جزء آخر حل نمی‌شود</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>. </span><span lang="AR-SA">طبیعتاً حالت اول از نظر تئوری جالب‌تر
+است چرا که</span><span dir="LTR"></span><span dir="LTR"></span><span lang="AR-SA" dir="LTR"><span dir="LTR"></span><span dir="LTR"></span> </span><span lang="AR-SA">سؤالی پیش می‌آید: پس آب از کجا آمده
+است؟</span><span dir="LTR"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">برای ثبت چنین جواب مثبت اشتباه، حل شدن
+بدون اضافه شدن آب، در آزمایشگاه من آزمایش‌هایی صورت گرفته است. احتمال ایجاد
+ماده از هیچ وجود دارد و این مسأله به خاطر ارتباطی که با نظریه‌ی جهان ایستای گلد
+هویل دارد اهمیت زیادی دارد</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">قاعدۀ این آزمایش آسان بود. یکی از
+دانشجویان من برای اجرای آزمایش با صداقت تمام یک باتری را برای ثبت اضافه کردن
+دستی آب در روز بعد راه‌اندازی می‌کرد</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>. </span><span lang="AR-SA">جزء آخر به لحاظ نظری می‌بایست حل شود. سپس
+من دانشجوی اول را سر کار دیگری می‌گماردم و دانشجوی دیگری را با این دستورالعمل
+که آب را اضافه نکند مسئول باتری قرار می‌دادم</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">ابتدا ما بسیار متعجب شدیم که تحت این
+شرایط یک بار در هر بیست بار جزء آخر حل می‌شد. این رقم بسیار بزرگ‌تر از آن بود
+که با شکست هایزنبرگ قابل توجیه باشد</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>. </span><span lang="AR-SA">اما فوراً مشخص شد که </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA"> فریب نخورده است. در هر مورد چیزی آب
+را اضافه کرده بود. در مورد اول دانشجوی اصلی برگشته بود که آب را اضافه کند و پیش
+از این که بتوانند او را متوقف کنند این کار را کرده بود. در مورد دیگری اتفاقاً
+آب ریخته بود. یک بار دیگر نظافت‌چی</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>...<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">تعریف کردن شیوه‌هایی که </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA"> جلوی فریب خوردنش را می‌گیرد خسته
+کننده است. همین قدر کافی است که بگویم ما حتا یک مورد هم شکست هایزنبرگ نداشتیم</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">البته در این موقع ما جلوی اتفاقات عادی
+را گرفتیم در نتیجه آمار شکست دروغین کاهش یافت. مثلاً باتری را در محفظه‌های بسته
+خشکی قرار دادیم؛ اما حین آزمایشات محفظه‌ها ترک برداشتند و شکستند</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">در آخرین آزمایشمان فکر کردیم دیگر
+حتماً شکست هایزنبرگ را داریم، اما در نهایت این آزمایش در مجلات منتشر نشد. به
+جای آن من سعی کردم نتایج را به مسئولین ذیربط گزارش دهم که البته موفق نشدم. اجازه
+دهید این آزمایش را برای شما توضیح دهم</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><span dir="LTR"><font face="Mihan-Iransans" size="2">****<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">ما یک باتری را بعد از ثبت اثر حل شدن
+در یک محفظه ریخته‌گری شده فولادی قرار دادیم. در همان زمانی که ما منتظر رسیدن
+زمان اضافه شدن آب و اضافه نکردن آن بودیم توفان دایان نیوانگلند را درنوردید. آن
+زمان اوت 1955 بود. توفان پیش‌بینی شده و مسیر آن محاسبه شده بود و ما برای آن
+آماده بودیم. در سال‌های 1954 و 1955 توفان‌های متعددی در نیوانگلند اتفاق افتاده
+بودند و ما دیگر آب‌دیده شده بودیم</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">در این لحظه هواشناسی اعلام کرد که خطر
+گذشته است و توفان به سمت دریا می‌وزد. ما نفس راحتی کشیدیم و منتظر زمان صفر شدیم</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">اما اگر یکی از شما آن روز در نیوانگلند
+بوده باشد می‌داند که هواشناسی بعداً اعلام کرد که توفان را گم کرده است؛ توفان به
+سرعت بازگشت؛ در بسیاری جاها در یک ساعت بعد دوازده سانتیمتر یا بیشتر باران
+بارید؛ رودخانه‌ها طغیان کردند و سیلاب سرازیر شد</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">من باران را نگاه می‌کردم، سیل می‌آمد. رودخانه‌ی
+کوچک میان دانشگاهمان را نگاه می‌کردم که سیلابی شده و بالا می‌آمد و از همه طرف
+روی چمنزار گسترده می‌شد. ردیف درختان به نظر می‌آمد وسط آب روییده‌اند</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">من فریاد زدم که تبر بیاورند. یکی از
+دانشجویانم آن را آورد. او بعداً می‌گفت من چنان وحشیانه فریاد زدم که او فکر کرده
+بود من دچار جنون آدمکشی شده‌ام</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">من محفظه‌ی فولادی را شکستم. باتری
+دورزمان را خارج کردم. در آفتاب کم‌رمق آن روز توفانی یک پیاله آب را پر کردم و
+منتظر زمان صفر شدم تا در زمان مناسب روی باتری بریزم</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">به محض این که آب را ریختم باران آرام
+شد و توفان عقب نشینی کرد</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">نمی‌گویم ما باعث برگشتن توفان شدیم اما
+بالاخره می‌بایست به نحوی آب به باتری اضافه شود. اگر لازم می‌شد که بدین منظور
+محفظه‌ی فولادی را امواج برده تا توسط باد و آب شکسته شود این اتفاق می‌افتاد. واقعیت
+حل شدن جزء آخر این را پیش‌بینی کرده بود؛ و یا شاید برعکس، پیش‌بینی کرده بود که
+من عاقلانه آزمایش را خراب می‌کنم. من گزینه‌ی اخیر را انتخاب کردم</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">در نتیجۀ تمام این آزمایشات، من می‌توانم
+این را یک بمب صلح‌آمیز بنامم. جاسوس‌های دشمن که در یک مملکت خاص کار می‌کنند می‌توانند
+باتری‌های دورزمان بسازند و آن‌ها را فعال کنند تا یک مورد که جزء آخر حل شود پیش
+بیاید. این باتری را می‌توان در یک کپسول فلزی قرار داده و در ارتفاع خیلی بالا
+نزدیک جریان آبی گذاشت. بیست و چهار ساعت بعد جریان سهمگینی به وجود می‌آید زیرا
+فقط بدین ترتیب ممکن است که آب به محفظه برسد. این واقعه همراه با بادهای شدید
+خواهد بود زیرا فقط بدین ترتیب می‌توان محفظه را شکست</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">خسارات وارده به اندازه‌ی انفجار یک بمب
+هیدروژنی خواهد بود اما باتری دورزمان بمبی صلح‌آمیز است زیرا استفاده از آن منجر
+به اقدام متقابل و جنگ نخواهد شد. هیچ دلیلی به جز فرض مشیت الهی برای این واقعه
+پیدا نمی‌شود</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">چنین بمبی فناوری و هزینۀ اندکی دارد. کوچک‌ترین
+مملکت، کوچک‌ترین گروه انقلابی و مخالف می‌تواند آن را بسازد</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">بعضی وقت‌ها که حالم خوب نیست فکر می‌کنم
+نکند توفان نوح، واقعه‌ای که آثار آن در رسوبات بین‌النهرین یافت شده است، نتیجه
+آزمایش‌های سومریان باستان با </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA">
+بوده است</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>!<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">آقایان! من به شما می‌گویم اگر ما اکنون
+یک وظیفه فوری داشته باشیم این است که دولتمان را متقاعد کنیم که برای کنترل تمام
+منابع بین‌المللی </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA">
+فشار بیاورد. </span><span lang="FA">تیوتایمولاین</span><span lang="AR-SA">
+اگر به خوبی استفاده شود بی‌نهایت مفید است و اگر از آن سوء استفاده شود بی‌نهایت
+مرگبار خواهد بود</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">حتا یک میلی‌گرم از آن نباید به دستان
+غیر مسئول برسد</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>!<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span lang="AR-SA">آقایان، من شما را به پیکار در راه
+امنیت جهان فرا می‌خوانم</span><span dir="LTR"></span><span dir="LTR"></span><span dir="LTR"><span dir="LTR"></span><span dir="LTR"></span>!<o:p></o:p></span></font></p><p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2"><span dir="LTR"><br></span></font></p><p class="MsoNormal" dir="RTL" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:
+auto;text-indent:19.35pt;line-height:200%"><font face="Mihan-Iransans" size="2" color="#cc0000">نکته: این مقاله&nbsp;<span style="line-height: 32px; text-align: justify;">پیش از این در شمارۀ 26 ماهنامۀ الکترونیکی «شگفتزار» منتشر گردیده است</span></font></p><font face="Mihan-Iransans" size="2" color="#cc0000">
+
+</font><p class="MsoNormal" dir="RTL" style="line-height:200%"><span dir="LTR"><o:p><font face="Mihan-Iransans" size="2">&nbsp;</font></o:p></span></p>
+
+
+</p>
+            <p></p>
+            <p></p>
+
+            <!--<blockquote><p> Mauris eu wisi. Ut ante dui, aliquet nec, congue non, accumsan sit amet, lectus. </p></blockquote>-->
+
+            <ul class="clearfix">
+
+                                    <li>
+                        برچسب&zwnj;ها:
+                                                    <a href="آیزاک.html" >آیزاک</a>،
+                                                    <a href="آسیموف.html" >آسیموف</a>،
+                                                    <a href="آیزاک&#32;آسیموف.html" >آیزاک آسیموف</a>،
+                                                    <a href="ایزاک&#32;آسیموف.html" >ایزاک آسیموف</a>،
+                                                    <a href="تیوتایمولاین.html" >تیوتایمولاین</a>،
+                                                &nbsp;
+                    </li>
+                
+
+
+                
+
+            </ul>
+
+        </div>
+    
+        <div  class="PostDet">
+            <li style="float: left;" class="PostCom">   <a target="_self" href="../315.html#commentlist" class="comment-link">نظرات(<script>setCommentCnt(315)</script>)</a>&nbsp;</li>
+            <div style="float: left; margin-top: -5px;"> <script>mihanblogPostLike('315','like')</script></div>
+        </div>
+    </div>
+
+
+    <div class="clearer"></div>
+    <div class="Post clearfix" id="313">
+
+        <div class="PostHead">
+            <h1><a href="../313.html" rel="bookmark">کاربردهای تیوتایمولاین در ریز روان پزشکی</a></h1>
+            <ul>
+                <li class="PostAuthor clearfix">نویسنده: <a href="../author/1347787.html">س. سیمرغ</a> </li>
+
+                
+            </ul>
+        </div>
+        <small class="PostTime clearfix">شنبه 29 خرداد 1395</small>
+
+
+
+
+        <div class="PostContent clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://untranslatedasimovs.mihanblog.com/post/313&amp;title=کاربردهای تیوتایمولاین در ریز روان پزشکی">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/logo/package2/logo_color_16_16.png" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo clearfix"></div>
+<div style="text-align: justify;"><span style="font-family: Mihan-Iransans; font-size: small;">مقدمه: در سال 1947، هنگامی که آیزاک ازیموف در حال کار بر روی رسالۀ دکترایش بود، ایده‌ای به ذهنش رسید. این ایده در بارهۀ ماده‌ای به نام «تیوتایمولاین» بود که ویژگی بی‌همتایی داشت. تیوتایمولاین خالص می‌توانست 1/12 ثانیه پیش از افزوده شدن آب مقطر به آن، در آب حل شود!</span></div><div><div><div style="text-align: justify;"><font face="Mihan-Iransans" size="2">آیزاک ابتدا می‌خواست از این ایده برای نوشتن یک داستان علمی‌تخیلی استفاده کند، اما تصمیم گرفت با این ایده، یک نوع مقاله با سبک خشک و رسمس رساله‌های دکترا بنویسد. آن مقاله را نوشت و برای جان کمبل فرستاد. جان کمبل آن را قبول کرد و در شمارۀ ماه مارس سال 1948 مجلۀ استاوندینگ ساینس فیکشن به چاپ رسید.</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="2">آیزاک بعدا سه مطلب دیگر هم در مورد تیوتایمولاین نوشت. یکی از آنها مقاله و دوتای دیگر به نوعی داستان هستند.</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="2">مقالات و داستان‌های تیوتایمولاین عبارتند از:</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="2">1. ویژگی‌های پایان زمانی تیوتایمولاین بازتصعید شده (استاوندینگ ساینس فیکشن، مارس 1948، مقاله)</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="2">2. کاربردهای تیوتایمولاین در ریز روان پزشکی (استاوندینگ ساینس فیکشن، دسامبر 1953، مقاله)</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="2">3. تیوتایمولاین و عصر فضا (آنالوگ، سپتامبر 1960، داستان)</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="2">4. تیوتایمولاین به سوی ستارگان (ویژه نامۀ استاوندینگ: یادبود جان کمبل، 1973، داستان)</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="2">یکی از دوستان این وبلاگ به نام آقای داود ابراهیمی زحمت کشیده‌اند و هر چهار مطلب را ترجمه نموده و برای انشار در وبلاگ فرستاده‌اند. اما نخستین این مطالب و داستان‌ها، پیش از این توسط این جانب ترجمه شده و در جلد سوم کتاب «اولین داستان‌های آیزاک ازیموف» قرار دارد که می‌توانید آن را از همین وبلاگ دریافت کنید. آخرین مطلب هم ترجمه شده و در کتاب «برجیس را بخر و داستان‌های دیگر» قرار دارد که از آنجا که پیش از این با ناشر برای انتشار آن رسماً قرارداد بسته‌ام، از قرار دادن آن در این وبلاگ معذورم. اما در مورد مقالۀ شمارۀ 2 و داستان شمارۀ 3 مشکلی وجود ندارد و می‌توانید آنها را در ادامۀ این مطلب، بخوانید. لازم به ذکر است که مقالۀ کاربردهای «تیوتایمولاین در ریز روان پزشکی»، پیش از این در شمارۀ 25 ماهنامۀ الکترونیکی «شگفتزار» منتشر گردیده است.</font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="2"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="2"><br></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="4"><b>کاربردهای تیوتایمولاین در ریز روان پزشکی</b></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="4"><b>ترجمۀ داود ابراهیمی (ابراهیم فروزان)</b></font></div><div style="text-align: justify;"><font face="Mihan-Iransans" size="2"><br></font></div><div><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><font face="Mihan-Iransans" size="2"><span lang="FA">چند سال پیش ویژگی</span><span lang="FA">‌‌های</span><span lang="FA"> غیرعادی پایان ‌زمانی تیوتایمولاین
+خالص در همین مجله گزارش شد. با وجود کاربردهای نظری جذاب این ماده، به دلیل
+برخوردهای بدبینانه با این گزارش، تحقیقات در این زمینه کاهش یافته است. اما این آزمایشگاه
+با بودجۀ تحقیقاتی فراهم شده توسط انجمن امریکایی پیشرفت روان پزشکی کمّی&nbsp;موفق
+شد تحقیقات پیشین خود در این زمینه را ادامه دهد که نتایج به دست آمده در عین مفید
+بودن دور از انتظار هم بود.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">بخشی از هدف این مقاله نشان دادن این مطلب
+است که به وسیله تیوتایمولاین می‌توان نوعی عدم تعادل روانی را شناسایی نمود و تشخیص
+آن را از یک هنر نامطمئن به علم دقیقی تبدیل نمود.</font></span></p><p class="MsoNormal" dir="RTL" style="text-align: center; text-indent: 28.35pt;"><font face="Mihan-Iransans" size="3"><b><span style="text-indent: 28.35pt; font-stretch: normal;">1.</span><span style="text-indent: 28.35pt; font-stretch: normal;"> &nbsp;</span><span dir="RTL" style="text-indent: 28.35pt; text-indent: 28.35pt;"></span><span lang="FA" style="text-indent: 28.35pt;">اتم کربن پایان‌زمانی</span></b></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">همان طور که در مقالۀ پیشین که در این زمینه
+منتشر شد توضیح داده شده است، ویژگی منحصر به فرد تیوتایمولاین نرخ فوق‌العاده سریع
+حل شدن آن در آب مقطر است. در واقع این نرخ به حدی سریع است که تیوتایمولاین 1.12
+ثانیه پیش از اضافه شدن آب حل می‌شود. این پایان زمانی یا زمان منفی حل شدن تا جایی
+که ما می‌دانیم واقعاً منحصر به فرد است. باروشک و لیبنیچ [2] ویژگی پایان زمانی
+جزئی‌ای برای بعضی از مشتقات خاص تیوتایمولاین گزارش کرده‌اند، اما ما نتوانستیم یافته‌های
+ایشان را تصدیق کنیم.<o:p></o:p></font></span></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><font face="Mihan-Iransans" size="2"><span lang="FA">پایان زمانی باید نتیجۀ ساختار مولکولی تیوتایمولاین
+باشد و نخستین فرضی که به ذهن می</span><span lang="FA">‌رسد،</span><span lang="FA"> اثر اتم‌های کربن متنوع آن است. این نخستین بار نیست که پیشرفتی
+در شناخت ما از‌ اتم کربن منجر به پیشرفتی در علم شیمی شده است.<o:p></o:p></span></font></p>
+
+<p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">در قرن نوزدهم معلوم شد که چهار پیوند
+والانسی کربن در گوشه‌های یک مربع قرار ندارند (هر چند که هنوز روی تخته و در کتاب‌های
+درسی این گونه ترسیم می‌شود) بلکه در رئوس یک چهار وجهی قرار گرفته‌اند (شکل 1).
+تفاوت این دو حالت این است که در حالت اول تمام پیوندها در یک صفحه قرار دارند و
+در حالت دوم پیوندها در دو صفحه عمود به هم تقسیم شده‌اند. دیدگاه دوم توضیح خواصی
+مانند ایزومر نوری را ممکن نمود که با تعبیر قدیمی‌تر اتم کربن مسطح قابل توضیح
+نبود.<o:p></o:p></font></span></p>
+
+<div><div id="ftn1" style="text-align: center;"><font face="Mihan-Iransans" size="2"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s7.picofile.com/file/8256260900/planer.jpg" alt="">
+
+</font></div><div id="ftn1" style="text-align: justify;"><p class="MsoSubtitle" dir="RTL" style="text-align: center; text-indent: 28.35pt;"><font face="Mihan-Iransans" size="3"><b><span lang="FA">شکل </span><!--[if supportFields]><span
+lang=FA style='font-family:"IRANSans",serif'><span style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span></span><span dir=LTR style='font-family:"IRANSans",serif'>SEQ</span><span
+dir=RTL></span><span dir=RTL></span><span lang=FA style='font-family:"IRANSans",serif'><span
+dir=RTL></span><span dir=RTL></span> شكل \* </span><span dir=LTR
+style='font-family:"IRANSans",serif'>ARABIC</span><span dir=RTL></span><span
+dir=RTL></span><span style='font-family:"IRANSans",serif'><span dir=RTL></span><span
+dir=RTL></span> <span lang=FA><span style='mso-element:field-separator'></span></span></span><![endif]--><span lang="FA">1</span><!--[if supportFields]><span
+lang=FA style='font-family:"IRANSans",serif'><span style='mso-element:field-end'></span></span><![endif]--><span lang="FA"> - اتمهای کربن مسطح و چهار وجهی<o:p></o:p></span></b></font></p><p class="MsoNormal" dir="RTL" style="text-indent:28.35pt"><span lang="FA"><font face="Mihan-Iransans" size="2">اکنون بار دیگر می‌توانیم قلمرو دید خود را
+توسعه دهیم. می‌توانیم از اتم کربن چهار وجهی به اتم کربن پایان زمانی برسیم که دو
+صفحۀ حاوی پیوندهای اتم کربن آن در فضای عادی قرار نگرفته‌اند. بلکه یکی از آنها
+زمانی است، یعنی در بُعد زمان گسترده شده است. در صفحۀ زمانی، یک پیوند به سمت دیروز
+است و یک پیوند به سمت فردا. چنین اتم کربنی را نمی‌توان به شیوه معمول رو کاغذ
+نشان داد و تلاش برای این منظور هم بی‌فایده است.<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-indent:28.35pt"><span lang="FA"><font face="Mihan-Iransans" size="2">واضح است که چنین اتم کربن پایان زمانی بسیار
+ناپایدار است و بسیار به ندرت می‌تواند تشکیل شود، در واقع تا جایی که ما می‌دانیم
+فقط در مولکول تیوتایمولاین وجود دارد. هنوز مشخص نیست که چه چیزی در ساختار تیوتایمولاین
+و اتصالات اتمی آن می‌تواند منجر به این وضعیت شود، اما بدون شک اتم پایان زمانی
+وجود دارد. در نتیجه جزئی از مولکول تیوتایمولاین در گذشته و جزئی از آن در آینده
+قرار دارد.<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-indent:28.35pt"><span lang="FA"><font face="Mihan-Iransans" size="2">همین قسمتی از مولکول که در آینده است در آبی
+که آن هم در آینده است حل می‌شود (یعنی آبی که قرار است به تیوتایمولاین اضافه شود
+اما هنوز نشده است)، سپس بقیۀ مولکول هم به داخل محلول کشیده می‌شود و در آبی که
+ظاهراً آنجا نیست حل می‌شود. با درک این موضوع، معما و تناقض رفتار تیوتایمولاین
+حل می‌شود و تبدیل به موضوعی معمولی و قابل تحلیل ریاضی می‌شود.<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-indent:28.35pt"><span lang="FA"><font face="Mihan-Iransans" size="2">&nbsp;چنین
+تحلیل ریاضیاتی در حال انجام است و به زودی منتشر خواهد شد. در همین رابطه می‌توان
+اشاره نمود که وجود ویژگی پایان زمانی، وجود ویژگی برون‌زمانی&nbsp;را هم
+الزامی می‌نماید. در آزمایشگاه‌های ما تلاش قابل توجهی برای شناسایی این خواص برون‌زمانی
+صورت می‌گیرد. برای مثال فرض کنید نمونۀ کوچکی از محلول تیوتایمولاین در غلظت
+استاندارد یک میلی‌گرم در میلی‌لیتر با سرعت زیاد و در دمایی که به تیوتایمولاین
+لطمه نخورد تبخیر شود، در این حالت قاعدتاً تیوتایمولاین بایستی 1.12 ثانیه <i>بعد</i>
+از این که آب تبخیر شد ته نشین شود. چنین پدیده‌ای هنوز مشاهده نشده است اما اما
+احساس می‌کنیم مشکل فقط ایجاد شیوۀ مناسب برای سنجش آن است.</font></span></p><p class="MsoNormal" dir="RTL" style="text-indent:28.35pt"><font face="Mihan-Iransans" size="3"><b><span style="text-indent: 28.35pt;">2.<span style="font-stretch: normal;">&nbsp;</span></span><span dir="RTL" style="text-indent: 28.35pt; text-indent: 28.35pt;"></span><span lang="FA" style="text-indent: 28.35pt;">تصفیه پایان زمانی</span></b></font></p><p class="MsoNormal" dir="RTL" style="text-indent:28.35pt"><span lang="FA"><font face="Mihan-Iransans" size="2">هیچ چیز به اندازۀ مشکلات خالص‌سازی در راه
+تحقیقیات تیوتایمولاین مانع ایجاد نکرده است. از آنجا که مقدار اندکی ناخالصی می‌تواند
+تأثیرات پایان زمانی تیوتایمولاین را بپوشاند و در تکرار نتایج کمّی آزمایشات
+تداخل ایجاد کند، تلاش‌های زیادی در راه خالص‌سازی آن صورت گرفته است. چندین بار
+تبلور و تصعید ضروری بوده است. روش تصفیۀ پایان زمانی برای ساده نمودن این روال
+ابداع شده است.<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-indent:28.35pt"><span lang="FA"><font face="Mihan-Iransans" size="2">همان گونه که در مقالات پیشین آورده شده
+است، با حل کردن عصارۀ پوست بوتۀ روزاسی کارلسبادنسیس روفو<span style="line-height: 21.4667px;">&nbsp;</span>در آب
+مقطر 5 درجه سانتی‌گراد و سپس خشک کردن آن (انجماد خشک)، منجر به تولید پودر زرد کمرنگی
+می‌شود که یک میلی‌گرم آن ظرف مدت 0.72- ثانیه در یک میلی‌ لیتر آب حل می‌شود.
+(نباید مرحلۀ عصاره‌گیری را زیاد طول داد تا مواد نامحلول‌تر و غیر پایان زمانی
+عصاره داخل محلول شوند. این مواد به سرعت تمام آثار پایان زمانی را در پودر نهایی
+از بین می‌برند.)<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-indent:28.35pt"><span lang="FA"><font face="Mihan-Iransans" size="2">پس از به دست آوردن پودر ناخالص با پایان
+زمانی کافی، فقط یک مرحلۀ دیگر برای به دست آوردن تیوتایمولاین با خلوص بالا لازم
+است. فیلتر پایان زمانی نشان داده شده در شکل 2 نموداری ساده شده از گزارش کامل ارائه
+شده توسط این آزمایشگاه است. در اینجا توضیح مختصر فرآیند کافی است. فیلتر پایان
+زمانی اصولاً ابزاری برای تصفیه با مکش سریع است. شیرهای 1 و 2 به وسیلۀ یک مدار
+الکترونیکی که در این نمودار نشان داده نشده است کنترل می‌شوند. در شروع فرآیند شیر
+1 بسته است و 100 میلی‌لیتر آب مقطر در محفظه «الف» است. روی فیلتر شیشه‌ای محفظۀ «ب»
+یک گرم پودر تیوتایمولاین ناخالص گذاشته شده است. در این هنگام شیر 2 (که شیر دو
+طرفه است) باز می‌شود تا محفظه‌های «ب» و «پ» را به هم وصل کند. سپس مدار الکتریکی
+بسته می‌شود که موجب فعال شدن پمپ خلأ می‌گردد. پنج ثانیه پس از بسته شدن، مدار الکتریکی
+یک زمان سنج رله‌ای را فعال می‌کند که همزمان شیر 1 را باز می‌کند و شیر 2 را در
+وضعیت اتصال محفظۀ «ب» و «ت» قرار می‌دهد. نتیجۀ چنین فرآیندی آشکار است. 0.72 ثانیه
+پیش از این که شیر 1 باز شود مولکول تیوتایمولاین موجود در عصارۀ ناخالص در آبی که
+قرار است اضافه شود حل می‌شود و ناخالصی‌ها که هنوز وجود آب بر آنها تأثیری
+نگذاشته نامحلول باقی می‌مانند. به خاطر خلأ موجود در زیر تیوتایمولاین محلول از شیشه
+فیلتر گذشته و به محفظه «پ» می‌ریزد. وقتی شیر 1 و 2 باز می‌شوند، کلیۀ ناخالصی‌هایی
+که محلول در آب هستند در آبی که هم ‌اکنون روی عصاره اضافه شده است حل می‌شوند و
+به محفظه «ت» مکیده می‌شوند.</font></span></p></div></div></div><div style="text-align: center;"><font face="Mihan-Iransans" size="2"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s6.picofile.com/file/8256260934/filter.jpg" alt=""></font></div></div></div><div style="text-align: center;"><p class="MsoSubtitle" dir="RTL" style="text-align: center; text-indent: 28.35pt;"><font face="Mihan-Iransans" size="3"><b><span lang="FA">شکل </span><!--[if supportFields]><span
+lang=FA style='font-family:"IRANSans",serif'><span style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span></span><span dir=LTR style='font-family:"IRANSans",serif'>SEQ</span><span
+dir=RTL></span><span dir=RTL></span><span lang=FA style='font-family:"IRANSans",serif'><span
+dir=RTL></span><span dir=RTL></span> شكل \* </span><span dir=LTR
+style='font-family:"IRANSans",serif'>ARABIC</span><span dir=RTL></span><span
+dir=RTL></span><span style='font-family:"IRANSans",serif'><span dir=RTL></span><span
+dir=RTL></span> <span lang=FA><span style='mso-element:field-separator'></span></span></span><![endif]--><span lang="FA">2</span><!--[if supportFields]><span
+lang=FA style='font-family:"IRANSans",serif'><span style='mso-element:field-end'></span></span><![endif]--><span lang="FA"> - طرح ساده شدۀ فیلتر پایان زمانی<o:p></o:p></span></b></font></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">محلول محفظه «پ» در خلأ خشک منجمد شد و یک میلی‌گرم
+پودر سفید رنگ به دست آمده در زمان 1.124- ثانیه در یک میلی ‌لیتر آب حل شد، یعنی
+سریع‌تر از خالص‌ترین تیوتایمولاینی که با روش‌های دیگر به دست آمده است. وجود
+ناخالصی یونی درون آب مقطر آزمایش شد و احتمال بروز تداخل در مشاهدات آتی داده
+نشد.</font></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><font face="Mihan-Iransans" size="3"><b><span style="text-indent: 27pt;">3.</span><span lang="FA" style="text-indent: 27pt;">پایان ‌زمان‌ سنج ‌بین</span></b></font></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><font face="Mihan-Iransans" size="2"><span lang="FA">پایان‌ زمان ‌سنج که در مقالۀ قبلی من در این
+مجله تشریح شد، ابزاری است دارای محفظه کوچکی حاوی پودر تیوتایمولاین که مانع گذر یک
+شعاع نور می‌شود که در صورت عدم ممانعت، شعاع نور بر یک سلول فتوالکتریک متمرکز می</span><span lang="FA">‌شود</span><span lang="FA">. حل شدن تیوتایمولاین محفظه را
+شفاف می‌کند و با فعال شدن سلول فتوالکتریک مدار بسته شده و زمان دقیق حل شدن مشخص
+می‌گردد. چون آب از طریق یک پیپت خودکار با کنترل الکتریکی اضافه می‌شود زمان اضافه
+شدن آب را می‌توان با دقت زیادی تعیین کرد. زمان حل شدن منهای زمان اضافه شدن آب،
+بازه درون زمانی را مشخص می</span><span lang="FA">‌کند</span><span lang="FA">.<o:p></o:p></span></font></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">برای همکاران ما در این آزمایشگاه مشخص بوده
+است که نه تنها بایستی به زمان حل شدن تیوتایمولاین توجه زیادی نمود، بلکه به نحوه
+حل شدن آن هم باید توجه کرد. لامبگر و هوفنی از همین آزمایشگاه اخیراً یک دوربین فیلم‌برداری
+بسیار کوچک (درون‌ زمان‌ سنج ‌بین) به سیستم اضافه کرده‌اند که به کمک آن می‌توان
+انحرافات اندک از حل شدن معمول را مشخص نمود [4]. با وجود این که هدف اولیه از
+ساخت این دستگاه آزمودن فرضیات مربوط به اتم کربن پایان زمانی بوده است، ثابت شد که
+درون‌زمان‌سنج‌بینی در یک سری آزمایش که در ادامه توضیح داده می‌شود، اهمیت بسیار
+زیادی دارد.</font></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><font face="Mihan-Iransans" size="3"><b><span style="text-indent: 28.35pt;">4.<span style="font-stretch: normal;">&nbsp;</span></span><span dir="RTL" style="text-indent: 28.35pt; text-indent: 28.35pt;"></span><span lang="FA" style="text-indent: 28.35pt;">اراده ‌سنجی</span></b></font></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">همان طور که توضیح داده خواهد شد فیلتر پایان
+زمانی هم بایستی مانند درون ‌زمان‌ سنجی با حداقل دخالت انسان انجام شود. دلیل این
+الزام واضح است. قبلاً پیشنهادات بی‌فایده‌ای ارائه شده بود مبنی بر این که آب را پس
+از حل شدن تیوتایمولاین و پیش از زمان واقعی اضافه شدن آب از سیستم خارج نمایند و
+با حل شدن تیوتایمولاین در آبی که اضافه نشده است آن را گول بزنند. لازم به گفتن نیست
+که در چنین تلاش جسورانه‌ای فقط خود آزمایش‌کننده گول می‌خورد، زیرا با محاسبات
+ابتدایی ریاضی نشان داده می‌شود که پیشنهاد ایشان (اگر واقعاً جدی بوده باشد!) ناقض
+قانون دوم ترمودینامیک است [5].<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">با این وجود، با فراهم آمدن مقادیر قابل
+توجه تیوتایمولاین کاملاً خالص به وسیله تصفیۀ پایان زمانی، محاسبۀ تأثیر ارادۀ
+انسان بر زمان منفی حل شدن (همان بازه پایان زمانی) امکان‌پذیر شد و بالعکس می‌توان
+گفت سنجش قدرت اراده انسان به وسیله تیوتایمولاین ممکن شد. روش به دست آمده اراده‌سنجی
+نامیده شد.<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">از آغاز آزمایشات دیده شده بود که شخصیت‌های
+قاطع و بااراده وقتی آب را با دست اضافه می‌کنند به بازه پایان زمانی کامل دست می‌یابند.
+به عبارت دیگر متمرکز شدن ذهن ایشان بر اضافه کردن آب موجب می‌شد که هیچ شکی به دلشان
+راه نیابد و در نهایت اضافه کردن آب با همان قاطعیتی انجام می‌شد که با ابزار مکانیکی
+انجام می‌شد.<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">سایر افرادی که طبیعتی کم و بیش مردد و بی‌میل
+داشتند به نتایجی کاملاً متفاوت دست یافتند. حتی وقتی ایشان خود را مجبور می‌نمودند
+که با رسیدن یک علامت فوراً آب را اضافه کنند و به ما اطمینان می‌دادند که هیچ تردیدی
+در انجام عمل ندارند باز هم زمان منفی حل شدن کاهش قابل ملاحظه‌ای می‌یافت. بدون شک
+تردید داخلی چنان در اعماق ذهن ایشان رسوخ کرده بود و ناخودآگاه آن را پنهان می‌کردند
+که حتی خود ایشان هم آگاهانه از وجود آن خبر نداشتند. اهمیت چنین بروز فیزیکی و
+قابل سنجشی با تجهیزاتی کمّی برای روان‌شناسان واضح است.<o:p></o:p></font></span></p><p class="MsoSubtitle" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</font></span></p><div><div style="text-align: center;"><font face="Mihan-Iransans" size="2"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s7.picofile.com/file/8256260926/INTERVAL.jpg" alt=""></font></div><div style="text-align: center;"><p class="MsoSubtitle" dir="RTL" style="text-align: center; text-indent: 28.35pt;"><font face="Mihan-Iransans" size="3"><b><span lang="FA">شکل </span><!--[if supportFields]><span
+lang=FA style='font-family:"IRANSans",serif'><span style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span></span><span dir=LTR style='font-family:"IRANSans",serif'>SEQ</span><span
+dir=RTL></span><span dir=RTL></span><span lang=FA style='font-family:"IRANSans",serif'><span
+dir=RTL></span><span dir=RTL></span> شكل \* </span><span dir=LTR
+style='font-family:"IRANSans",serif'>ARABIC</span><span dir=RTL></span><span
+dir=RTL></span><span style='font-family:"IRANSans",serif'><span dir=RTL></span><span
+dir=RTL></span> <span lang=FA><span style='mso-element:field-separator'></span></span></span><![endif]--><span lang="FA">3</span><!--[if supportFields]><span
+lang=FA style='font-family:"IRANSans",serif'><span style='mso-element:field-end'></span></span><![endif]--><span lang="FA"> - منحنی توزیع بازه‌های پایان
+زمانی در مردان و زنان<o:p></o:p></span></b></font></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><font face="Mihan-Iransans" size="2"><span lang="FA">یک آزمایش گستردۀ اراده‌سنجی بر روی 87 پسر
+دانشجوی سال اولی کالج کامستاک لود (کراودد کریک، داکوتای شمالی)&nbsp;انجام
+شد. معلوم شد که توزیع قدرت اراده طبق منحنی احتمالی معمول زنگی شکل صورت می‌گیرد.
+دو دانشجو در همۀ تکرارها زمان حل شدنی معادل 1.10- یا بهتر کسب کردند و دو دانشجو
+هم حتی بازه پایان زمانی مثبت به دست آوردند. نکته جالب این بود که در بین دختران
+دانشجو (در آزمایش دیگری روی 62 دختر دانشجو) منحنی احتمال به سمت ارادۀ قوی‌تر
+جابجا شده بود (شکل 3). میانگین کل زمان‌های مشاهده شده برای تمام نمونه‌های مرد
+0.625- بوده است در حالی که برای خانم‌ها 0.811- بوده است. این نتیجه تفاوت جنسیتی
+که در تمام عصر تاریخ مکتوب مشخص بوده است </span><span lang="FA">ـ</span><span lang="FA">
+اقلاً برای مردها </span><span lang="FA">ـ</span><span lang="FA"> را اثبات می‌کند.<o:p></o:p></span></font></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><font face="Mihan-Iransans" size="2"><span lang="FA">شواهدی هم وجود دارد که باور کنیم بازه پایان
+زمانی با وضعیت لحظه‌ای ذهن فرد تغییر می‌کند. یکی از دانشجویان به نام ا. ه. که
+در بیش از 10 آزمایش، بازه پایان زمانی بین 0.55- تا 0.62- به دست می‌آورد، ناگهان
+به بازه 0.92- افزایش یافت. این افزایش در اعتماد به نفس قابل توجه بود. تکنیسین
+مسئول آزمایش در پاسخ به این مسأله بیان کرد که هیچ اتفاق ناخواسته‌ای روی نداده
+است بلکه فقط آن روز عصر دانشجو از تکنیسین برای قدم زدن در محوطه دعوت کرده و تکنیسین
+دعوت او را قبول نموده است. از آنجا که ا. ه. ورزشکار نبوده به نظر نمی‌رسید که
+راه رفتن بتواند چنین تأثیری بر روی او بگذارد. برای تحلیل بهتر تأثیر، نویسندۀ
+مقاله تصمیم گرفت داوطلبانه به عنوان نفر سوم گروه ا. ه. را در محوطه همراهی کند.
+باور کردنی نبود که بازه پایان زمانی در آزمایش بعد به 0.14- کاهش یافت. اگر مجاز
+به قدری جولان ذهنی باشیم می‌توانیم بگوییم یک تفاوت جنسیتی دیگر در آزمایشات تیوتایمولاین
+مشاهده شده است، زیرا نویسنده مقاله (و دانشجو) مرد است و تکنیسین زن بوده است </span><span lang="FA">ـ</span><span lang="FA"> یک زن قابل توجه! ـ به تازگی بعضی
+از وجوه این وضعیت مبهم توسط مک‌لوینسن توضیح داده شده‌اند [6].</span></font></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><font face="Mihan-Iransans" size="3"><b><span style="text-indent: 28.35pt;">5.<span style="font-stretch: normal;">&nbsp;&nbsp;</span></span><span dir="RTL" style="text-indent: 28.35pt; text-indent: 28.35pt;"></span><span lang="FA" style="text-indent: 28.35pt;">اراده‌سنجی شیزوفرنی</span></b></font></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">نخستین کسی که رفتار غیرعادی تیوتایمولاین
+تحت تأثیر بعضی آزمایش‌شوندگان خاص را مشاهده کرد لمبگر از همین آزمایشگاه بود که
+روی محلول دست‌ساز و مکانیکی تیوتایمولاین آزمایشات پایان زمان ‌سنج ‌بینی انجام می‌داد
+[7]. معمولاً پودر تیوتایمولاین بدون تغییر با سرعت خیلی زیاد حل می‌شد (زمان بین
+حالت کاملاً جامد و حالت کاملاً محلول کمتر از یک هزارم ثانیه است). اما در مورد یکی
+آزمایش‌شونده به نام ج. گ. ب. این حالت عجیب مشاهده شد که بین حل شدن یک قسمت از تیوتایمولاین
+و قسمت دیگر زمان قابل توجهی فاصله افتاده است. ده‌ها مرتبه تکرار آزمایشات اثبات
+می‌نمود که هیچ ایرادی به پایان ‌زمان ‌سنج و پایان ‌زمان‌ سنج‌ بین وارد نمی‌باشد.
+این را مجموعۀ نتایجی که در مقاله لمبگر آورده شده است هم نشان می‌دهد.<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">وقتی آزمایش‌شونده تحت تحلیل روانی بسیار دقیق
+قرار گرفت مشخص شد مبتلا به شیزوفرنی ناشناخته‌ای بوده است. تأثیر وجود دو شخصیت
+ذهنی با دو درجه اعتماد به نفس بر بازه پایان زمانی واضح است.<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">به لطف دکتر اَلن ا. ویندیشگریتز از انجمن
+جسم و روان (پوتلیکر، اوکلاهما)<span style="line-height: 21.4667px;">&nbsp;</span>موفق
+شدیم از 150 بیمار مبتلا به انواع مختلف شیزوفرنی به عنوان موضوع آزمایش اراده‌سنجی
+استفاده کنیم.<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">نتیجۀ فوری این مطالعات نشان‌گر این بود که
+با پایان ‌زمان‌ سنج‌ بینی می‌توان شیزوفرنی عادی را به سه نوع مختلف تقسیم نمود.
+این سه نوع را می‌توان شیزوفرنی افقی، شیزوفرنی عمودی و شیزوفرنی پراکنده خواند.
+مرز تفاوت رفتار تیوتایمولاین در در شیزوفرنی افقی خطی افقی است. بیشتر مواقع نیمه
+بالایی تیوتایمولاین حدود 0.01 ثانیه زودتر از نیمه پایینی حل می‌شود. این نوع را
+می‌توان «نوع بالایی» نامید. در موارد بسیار کمتری هم نیمه پایینی زودتر حل می‌شود
+که به آن «نوع پایینی» می‌گوییم.<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">به همین ترتیب در شیزوفرنی عمودی دو طرف یک
+خط عمودی زمان حل شدن تفاوت می‌کند. در این مورد تقریباً نیمی از موارد نیمه سمت
+چپ زودتر حل می‌شود و در نیمی دیگر قسمت سمت راست. به این دو حالت به ترتیب «نوع چپی»
+و «نوع راستی» می‌گوییم. دلیل تشابه نسبت موارد وقوع دو نوع شیزوفرنی عمودی و
+تفاوت نسبت وقوع دو نوع شیزوفرنی افقی مسأله‌ای است که باید مورد توجه قرار گیرد.
+پیشنهاد شده است که نیروی گرانش در این امر دخیل است، اما هیچ آزمایش مستقیمی این
+را تأیید نکرده است.<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">&nbsp;</font></span></p><p class="MsoSubtitle" dir="RTL" style="text-indent:28.35pt"></p><div style="text-align: center;"><span style="text-indent: 28.35pt;"><font face="Mihan-Iransans" size="3"><b>جدول 1 - توزیع گروه‌های شیزوفرنی</b></font></span></div><span lang="FA"><font face="Mihan-Iransans"><div style="text-align: center;"><span style="text-indent: 28.35pt;"><font size="3"><b>بیماران مؤسسه جسم و روان</b></font></span></div><font size="2"><o:p></o:p></font></font></span><p></p><div align="center"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s6.picofile.com/file/8256260892/schizopherny.jpg" alt="">
+
+</div><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">&nbsp;</font></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">در شیزوفرنی پراکنده هیچ مرز مشخصی بین تیوتایمولاینی
+که زودتر حل می‌شود و تیوتایمولاینی که دیرتر حل می‌شود وجود ندارد. بلکه قسمت‌های
+مختلف نمونه به طرز ناهماهنگ و تصادفی حل می‌شوند.<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">تمام انواع شیزوفرنی فوق‌الذکر را می‌توان
+تحت اسم عمومی دگرشیزوفرنی<span style="line-height: 21.4667px;">&nbsp;</span>گروه‌بندی
+کرد، زیرا دو شخصیت با اراده‌های متفاوت دخیل هستند. بیشتر افراد آزمایش‌شده مبتلا
+به دگرشیزوفرنی بودند. اما باقیماندۀ افراد از نظر روان‌ پزشکی تمامی علائم شیزوفرنی
+را نشان می‌دهند اما موجب هیچ اختلافی در بازۀ پایان زمانی نمی‌شدند. ما بدین نتیجه
+رسیدیم که این افراد دارای دو شخصیت با اراده مشابه هستند، پس مبتلا به هم‌شیزوفرنی&nbsp;هستند.<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">خلاصۀ توزیع بیماران در گروه‌های مختلف شیزوفرنی
+در جدول 1 آورده شده است.<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">می‌توان به جز گروه‌بندی بیماران در گروه‌های
+فوق، ایشان را براساس میزان تفاوتی که در بازۀ پایان زمانی قسمت نخست و قسمت دوم
+به وجود می‌آورند هم طبقه‌بندی کرد. از آنجا که بیشترین تفاوت مشاهده شده 0.010
+ثانیه بوده است و پایان زمان‌ سنج‌ بین به راحتی می‌تواند بازه زمانی 0.001 ثانیه
+را اندازه کند، ده درجه مشخص می‌نماییم. درجه 10 یک صدم ثانیه اختلاف را نشان می‌دهد،
+درجه نه، 0.009 ثانیه اختلاف و به همین ترتیب تا درجه 1 که نشان‌دهنده یک هزارم
+ثانیه اختلاف است.<o:p></o:p></font></span></p><p class="MsoSubtitle" dir="RTL" style="text-align: center; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans"><b><font size="3">جدول 2 - فراوانی درجات مختلف در کل انواع شیزوفرنی</font></b><font size="2"><o:p></o:p></font></font></span></p><div align="center"><img hspace="0" border="0" align="baseline" vspace="0" src="http://s7.picofile.com/file/8256260876/Schizopherny2.jpg" alt=""></div><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">همان طور که در جدول 2 می‌توان دید معمولاً
+جمعیت درجات پایین‌تر بیشتر است (لازم به توضیح است که فقط 145 بیمار در جدول 2
+آورده شده‌اند، زیرا واضح است که برای پنج بیمار هم‌شیزوفرنی درجه‌بندی کاربردی
+ندارد).<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">ارزش بالقوه مقادیر این زیرگروه‌های شیزوفرنی
+غیر قابل محاسبه است و علم جدیدی به نام ریز روان پزشکی کمّی را ایجاد نموده است.
+بیان وضعیت یک بیمار با عبارت "شیزوفرنی عمودی، نوع چپی، درجه 3" نسبت
+به عبارت ساده "مبتلا به شیزوفرنی" چقدر می‌تواند مفیدتر باشد؟<o:p></o:p></font></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">تنها اشکالی که ممکن است به بنای عظیمی که تازه
+برپا شده است وارد باشد این است که هنوز هیچ مفهوم پزشکی برای قسمت‌بندی ریز روان ‌پزشکی
+ما ارائه نشده است [8]. با این وجود نباید اجازه داد عدم موفقیت در کاربرد، زیبایی
+چشم‌گیر و تقارن زیبای روش جدید پایان ‌زمان‌ سنج‌ بینی و علم ریز روان‌ پزشکی کمّی
+مشتق از آن را محو نماید.</font></span></p><p class="MsoNormal" dir="RTL" style="text-align: justify; text-indent: 28.35pt;"><font face="Mihan-Iransans" size="2"><span style="text-indent: 28.35pt;">6.<span style="font-stretch: normal;">&nbsp;&nbsp;</span></span><span lang="FA" style="text-indent: 28.35pt;">مراجع</span></font></p><p class="MsoListParagraphCxSpFirst" style="margin-top:0in;margin-right:0in;
+margin-bottom:10.0pt;margin-left:.5in;mso-add-space:auto;text-align:justify;
+text-justify:inter-ideograph;text-indent:28.35pt;mso-list:l1 level1 lfo1;
+direction:ltr;unicode-bidi:embed"><!--[if !supportLists]--><font face="Mihan-Iransans" size="2"><span style="line-height: 115%;">1-<span style="font-stretch: normal; line-height: normal;">&nbsp;</span></span><span style="line-height: 115%;">I. Asimov, <i>Journal of
+Astounding Science Fiction</i>, 50 (1), 120-125 (1948), ‘The Endochronic
+Properties of Resublimated Thiotimoline’<o:p></o:p></span></font></p><p class="MsoListParagraphCxSpMiddle" style="margin-top:0in;margin-right:0in;
+margin-bottom:10.0pt;margin-left:.5in;mso-add-space:auto;text-align:justify;
+text-justify:inter-ideograph;text-indent:28.35pt;mso-list:l1 level1 lfo1;
+direction:ltr;unicode-bidi:embed"><!--[if !supportLists]--><font face="Mihan-Iransans" size="2"><span style="line-height: 115%;">2-<span style="font-stretch: normal; line-height: normal;">&nbsp;</span></span><!--[endif]--><span dir="LTR"></span><span style="line-height: 115%;">H. A. Barosjek, and C. Z.
+Libnicz, <i>Acta Scandinavica Micropsychiatrica</i>, 1, 273-281 (1950), ‘The
+Endochronic Properties of Methylthiotimoline, Ethylthiotimoline and
+Isobutylthiotimoline’<o:p></o:p></span></font></p><p class="MsoListParagraphCxSpMiddle" style="margin-top:0in;margin-right:0in;
+margin-bottom:10.0pt;margin-left:.5in;mso-add-space:auto;text-align:justify;
+text-justify:inter-ideograph;text-indent:28.35pt;mso-list:l1 level1 lfo1;
+direction:ltr;unicode-bidi:embed"><!--[if !supportLists]--><font face="Mihan-Iransans" size="2"><span style="line-height: 115%;">3-</span>&nbsp;<span style="line-height: 115%;">T. Lumbegger, and A. E.
+Hophni, <i>Analytical Psycochemistry</i>, 15, 1-7 (1951), ‘A New Device for the
+Purification of Thiotimoline Based of the Principles of Endochronicity’<o:p></o:p></span></font></p><p class="MsoListParagraphCxSpMiddle" style="margin-top:0in;margin-right:0in;
+margin-bottom:10.0pt;margin-left:.5in;mso-add-space:auto;text-align:justify;
+text-justify:inter-ideograph;text-indent:28.35pt;mso-list:l1 level1 lfo1;
+direction:ltr;unicode-bidi:embed"><!--[if !supportLists]--><font face="Mihan-Iransans" size="2"><span style="line-height: 115%;">4-<span style="font-stretch: normal; line-height: normal;">&nbsp;</span></span><span style="line-height: 115%;">T. Lumbegger, and A. E.
+Hophni, <i>Annals of Psychocolloid Behavior</i>, 123, 403-406 (1951), ‘The
+Theoretical Basis of Endochronic Behavior as Indicated by Solution Phenomena’<o:p></o:p></span></font></p><p class="MsoListParagraphCxSpMiddle" style="margin-top:0in;margin-right:0in;
+margin-bottom:10.0pt;margin-left:.5in;mso-add-space:auto;text-align:justify;
+text-justify:inter-ideograph;text-indent:28.35pt;mso-list:l1 level1 lfo1;
+direction:ltr;unicode-bidi:embed"><!--[if !supportLists]--><font face="Mihan-Iransans" size="2"><span style="line-height: 115%;">5-<span style="font-stretch: normal; line-height: normal;">&nbsp;</span></span><span style="line-height: 115%;">O. W. Stannich, <i>Zeitschrift
+f</i></span><i><span style="line-height: 115%;">ü</span></i><i><span style="line-height: 115%;">r mathematischen Psychiatromessungen</span></i><span style="line-height: 115%;">, 101,
+1129-1176 (1948), ‘The Paradox of Thiotimoline’<o:p></o:p></span></font></p><p class="MsoListParagraphCxSpMiddle" style="margin-top:0in;margin-right:0in;
+margin-bottom:10.0pt;margin-left:.5in;mso-add-space:auto;text-align:justify;
+text-justify:inter-ideograph;text-indent:28.35pt;mso-list:l1 level1 lfo1;
+direction:ltr;unicode-bidi:embed"><!--[if !supportLists]--><font face="Mihan-Iransans" size="2"><span style="line-height: 115%;">6-</span>&nbsp;<span style="line-height: 115%;">O. O. McLevinson, <i>Proceedings
+of the Society for the Entertainment of Servicemen</i>, 16, 22-31 (1957),
+‘Differences in Mental Attitude, as Measured by Thiotimoline Studies, of Walk
+with Members of One’s Own and the Opposite Sex. New light on a puzzling
+problem’<o:p></o:p></span></font></p><p class="MsoListParagraphCxSpMiddle" style="margin-top:0in;margin-right:0in;
+margin-bottom:10.0pt;margin-left:.5in;mso-add-space:auto;text-align:justify;
+text-justify:inter-ideograph;text-indent:28.35pt;mso-list:l1 level1 lfo1;
+direction:ltr;unicode-bidi:embed"><!--[if !supportLists]--><font face="Mihan-Iransans" size="2"><span style="line-height: 115%;">7-<span style="font-stretch: normal; line-height: normal;">&nbsp;</span></span><!--[endif]--><span dir="LTR"></span><span style="line-height: 115%;">T. Lumbegger, <i>A
+preliminary note. Annals of Mental Biology</i>, 66, 123<i> </i>(1950), ‘The
+Anomalous Behavior of Thiotimoline Under the Influence of a Particular Subject’<o:p></o:p></span></font></p><p class="MsoListParagraphCxSpLast" style="margin-top:0in;margin-right:0in;
+margin-bottom:10.0pt;margin-left:.5in;mso-add-space:auto;text-align:justify;
+text-justify:inter-ideograph;text-indent:28.35pt;mso-list:l1 level1 lfo1;
+direction:ltr;unicode-bidi:embed"><!--[if !supportLists]--><font face="Mihan-Iransans" size="2">8-<span style="font-stretch: normal;">&nbsp;</span><span style="line-height: 115%;">A. E. Windischgraets, <i>Proceedings
+of the Royal Society for Biophilosophical Measurements</i>, (London), Series B
+128, 92-109 (1952), ‘Possible Correlation Between Patient Characteristics and
+the Micropsychiatric Value Revealed by Endochronometroscopic Measurements’</span><o:p></o:p></font></p><p class="MsoSubtitle" dir="RTL" style="text-align: right; text-indent: 28.35pt;"><span lang="FA"><font face="Mihan-Iransans" size="2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</font></span></p><div><div style="text-align: justify;"><br></div><div id="ftn4">
+
+</div>
+
+</div></div><div id="ftn2">
+
+</div>
+
+</div></div>
+
+</p>
+            <p></p>
+            <p></p>
+
+            <!--<blockquote><p> Mauris eu wisi. Ut ante dui, aliquet nec, congue non, accumsan sit amet, lectus. </p></blockquote>-->
+
+            <ul class="clearfix">
+
+                                    <li>
+                        برچسب&zwnj;ها:
+                                                    <a href="آیزاک.html" >آیزاک</a>،
+                                                    <a href="آسیموف.html" >آسیموف</a>،
+                                                    <a href="آیزاک&#32;آسیموف.html" >آیزاک آسیموف</a>،
+                                                    <a href="ایزاک&#32;آسیموف.html" >ایزاک آسیموف</a>،
+                                                    <a href="تیوتایمولاین.html" >تیوتایمولاین</a>،
+                                                &nbsp;
+                    </li>
+                
+
+
+                
+
+            </ul>
+
+        </div>
+    
+        <div  class="PostDet">
+            <li style="float: left;" class="PostCom">   <a target="_self" href="../313.html#commentlist" class="comment-link">نظرات(<script>setCommentCnt(313)</script>)</a>&nbsp;</li>
+            <div style="float: left; margin-top: -5px;"> <script>mihanblogPostLike('313','like')</script></div>
+        </div>
+    </div>
+
+
+    <div class="clearer"></div>
+
+
+<!-- Comment -->
+
+
+<div>
+
+   
+
+    </div>
+<!-- End Comment-->
+
+
+
+<!-- Start Nav -->
+<div align="right" class="page_box">
+    </div>
+<!-- End Nav -->
+
+
+</div></div>
+<!-- End SC -->
+<div class="SR col-md-4 col-lg-4 col-sm-12 col-xs-12">
+<div class="SRL hidden-sm col-md-6 col-lg-6 hidden-xs">
+            <!-- Start Categ -->
+        <div class="Panel PBlue">
+            <h3>آرشیو موضوعی</h3>
+            <ul>
+                                    <li  id="parentheses"  class="clearfix"><a class="clearfix" href="../category/1.html"><p>داستان</p><p>(2)</p></a></li>
+                            </ul>
+            <div class="PT"></div>
+        </div>
+        <!-- End Categ -->
+    
+    <!-- Start Archives -->
+            <div class="Panel PYellow">
+            <h3>آرشیو</h3>
+            <ul>
+                                    <li><a href='../archive/1396/5.html' title=' مرداد 1396(1)'> مرداد 1396</a></li>
+                                    <li><a href='../archive/1396/3.html' title=' خرداد 1396(1)'> خرداد 1396</a></li>
+                                    <li><a href='../archive/1395/9.html' title=' آذر 1395(1)'> آذر 1395</a></li>
+                                    <li><a href='../archive/1395/8.html' title=' آبان 1395(1)'> آبان 1395</a></li>
+                                    <li><a href='../archive/1395/7.html' title=' مهر 1395(4)'> مهر 1395</a></li>
+                                    <li><a href='../archive/1395/6.html' title=' شهریور 1395(7)'> شهریور 1395</a></li>
+                                    <li><a href='../archive/1395/5.html' title=' مرداد 1395(8)'> مرداد 1395</a></li>
+                                    <li><a href='../archive/1395/4.html' title=' تیر 1395(4)'> تیر 1395</a></li>
+                                    <li><a href='../archive/1395/3.html' title=' خرداد 1395(15)'> خرداد 1395</a></li>
+                                    <li><a href='../archive/1395/2.html' title=' اردیبهشت 1395(27)'> اردیبهشت 1395</a></li>
+                                <li><a href="../archive.html"><b>لیست آرشیوها</b></a></li>
+            </ul>
+            <div class="PT"></div>
+        </div>
+        <!-- End Archives -->
+
+    <!-- Start Links -->
+            <div class="Panel PPink">
+            <h3>لینکدونی</h3>
+            <ul>
+                                    <li><a href="http://AMIN2002.mihanblog.com" title="" target="_blank">یک قدم تا قلم</a></li>
+                                    <li><a href="http://www.daneshforum.ir" title="انجمن علمی دانش آموزان و دانشجویان" target="_blank">دانش فروم</a></li>
+                                    <li><a href="http://oloome7.mihanblog.com" title="مطالب علمی" target="_blank">سرزمین علم</a></li>
+                                    <li><a href="http://www.book.i20.ir/" title="سلام دوست عزیز
+اگه وقت داشتی یه سر به موارد زیر بزن 
+منتظر حضور گرمت هستم
+www.i20.ir
+اسلام شناسی
+----
+کانال تلگرام
+قدمی بسوی ظهور برداریم
+https://telegram.me/i20ir
+و کانال تلگرام
+یاد خدا
+https://telegram.me/i20ir313" target="_blank">کتابخانه آنلاین</a></li>
+                                    <li><a href="http://esteva.mihanblog.com" title="انصافا وبلاگ زیبایی دارید .
+
+این لینک را تایید کنید  لطفا" target="_blank">استوا</a></li>
+                                    <li><a href="http://i20.ir/" title="آی بیست سایت تخصصی اسلام شناسی پایگاه دانلود کتب مذهبی
+سایت آی‏ بیست بصورت تخصصی کتب دینی اسلام شناسی را جهت دانلود قرار می دهد" target="_blank">اسلام شناسی</a></li>
+                                <li><b><a href="../../linkdaily/index.html">همه لینک&zwnj;ها</a></b></li>
+                <li><b><a href="javascript:linkdailyForm()">ارسال لینک به لینکدونی</a></b></li>
+            </ul>
+            <div class="PT"></div>
+        </div>
+        <!-- End Links -->
+
+    <!-- Start Links -->
+            <div class="Panel PMaroon">
+            <h3>لینکستان</h3>
+            <ul>
+                                    <li><a href="http://s9.picofile.com/file/8269250176/Nothing_Might_Happen_PC_Edition_.pdf.html" title=""  target="_blank">کتاب «اتفاقی نخواهد افتاد» نسخۀ رایانه و لپتاپ</a></li>
+                                    <li><a href="http://s8.picofile.com/file/8269249684/Nothing_Might_Happen_Mobile_Edition_.pdf.html" title=""  target="_blank">کتاب «اتفاقی نخواهد افتاد» نسخۀ تلفن همراه و تبلت</a></li>
+                                    <li><a href="http://http://s6.picofile.com/file/8255238850/_That_Thou_Art_Mindful_Of_Him_Mobile_Edition_.pdf.html" title=""  target="_blank">...که در اندیشۀ او هستی-نسخۀ تلفن همراه و تبلت</a></li>
+                                    <li><a href="http://http://s6.picofile.com/file/8255238476/_That_Thou_Art_Mindful_Of_Him_PC_Edition_.pdf.html" title=""  target="_blank">... که در اندیشۀ او هستی-نسخۀ رایانه و لپتاپ</a></li>
+                                    <li><a href="http://ketabnak.com/book/75006/" title=""  target="_blank">دانلود کتاب «کلید واژه و معماهای دیگر»</a></li>
+                                    <li><a href="http://s7.picofile.com/file/8234182076/The_Early_Asimov_Vol_3_PC_Version.pdf.html" title=""  target="_blank">اولین داستان‌های آیزاک ازیموف-جلد سوم-ورژن PC</a></li>
+                                    <li><a href="http://s6.picofile.com/file/8234181826/The_Early_Asimov_Vol_3_Mobile_Version.pdf.html" title=""  target="_blank">اولین داستان‌های آیزاک ازیموف-جلد سوم-ورژن موبایل</a></li>
+                                    <li><a href="http://s6.picofile.com/file/8234181626/The_Early_Asimov_Vol_2_PC_Version.pdf.html" title=""  target="_blank">اولین داستان‌های آیزاک ازیموف-جلد دوم-ورژن PC</a></li>
+                                    <li><a href="http://s7.picofile.com/file/8234181468/The_Early_Asimov_Vol_2_Mobile_Version.pdf.html" title=""  target="_blank">اولین داستان‌های آیزاک ازیموف-جلد دوم-ورژن موبایل</a></li>
+                                    <li><a href="http://s7.picofile.com/file/8234181300/The_Early_Asimov_Vol_1_PC_Version.pdf.html" title=""  target="_blank">اولین داستان‌های آیزاک ازیموف-جلد اول-ورژن PC</a></li>
+                                    <li><a href="http://s7.picofile.com/file/8234181050/The_Early_Asimov_Vol_1_Mobile_Version.pdf.html" title=""  target="_blank">اولین داستان‌های آیزاک ازیموف-جلد اول-ورژن موبایل</a></li>
+                                    <li><a href="http://khordeandishe.blogsky.com/" title=""  target="_blank">وبلاگ محمد علیزاده عطار (از مترجمین داستانهای آیزاک آسیموف)</a></li>
+                                    <li><a href="http://s6.picofile.com/file/8201546284/More_Tales_Of_The_Black_Widowers.zip.html" title=""  target="_blank">دانلود کتاب «داستانهای بیشتر از بیوه مردان سیاه»</a></li>
+                                    <li><a href="http://s3.picofile.com/file/8204741242/Isaac_Asimov_s_Persian_Translated_Books.pdf.html" title=""  target="_blank">فهرست کتابهای ترجمه شدۀ آیزاک آسیموف به زبان فارسی</a></li>
+                                    <li><a href="https://www.facebook.com/profile.php?id=100008272297108" title=""  target="_blank">پروفایل فیسبوک من</a></li>
+                                    <li><a href="http://s3.picofile.com/file/8208520892/How_to_solve_a_Rubik_s_Cube_by_Fridrich_Method.pdf.html" title=""  target="_blank">آموزش حل مکعب روبیک</a></li>
+                                <li><a href="../../link/index.html"><b>همه لینک&zwnj;ها</b></a></li>
+            </ul>
+            <div class="PT"></div>
+        </div>
+        <!-- End Links -->
+
+    <!-- Start extrapage -->
+        <!-- End extrapage -->
+
+    <div align="center"></div>
+</div>
+<div class=" col-sm-12 col-xs-12 col-md-6 col-lg-6">
+<div class="SRR">
+<div class="hidden-xs hidden-sm">
+    <div id="user_logo" class="clearfix">
+        <div align="center"><img src="http://static.mihanblog.com//public/user_data/web_photo/540/1619438.jpg?1925"  /></div>
+        <div align="center"><a href="../author/1347787.html">س. سیمرغ</a></div>
+        <p>مطالب درج شده در این وبلاگ شامل قانون کپی رایت نمی باشد. استفاده از مطالب این وبلاگ به هر نحو آزاد بوده و نیازی به ذکر منبع و درج لینک نمی باشد. هر چند از اینکه این وبلاگ را معرفی کنید، خوشحال خواهم شد. <br />
+دقت داشته باشید که تنها لینک‌هایی تأیید خواهند شد که با محتوای این وبلاگ ارتباط داشته باشند. مانند سایت‌ها و وبلاگ‌های علمی و داستانی.<br />
+همچنین پیام‌هایی تأیید خواهند شد که نشان از مطالعۀ محتوای وبلاگ داشته باشند.<br />
+اینستاگرام مدیر وبلاگ: @s.simorq<br />
+</p>
+    </div><br />
+
+    <!-- Start Recent posts -->
+            <h3>آخرین پست&zwnj;ها</h3>
+        <ul class="clearfix">
+                            <li><a  href="../368.html">احتمال چاپ مجموعۀ «معماهای باشگاه اتحاد»</a></li>
+                            <li><a  href="../353.html">فصلنامۀ تخصصی داستان‌های علمی‌تخیلی «فصل علم و خیال»</a></li>
+                            <li><a  href="../339.html">فصل علم و خیال شمارۀ چهار</a></li>
+                            <li><a  href="../338.html">ایزدان هم، خدایان هم!</a></li>
+                            <li><a  href="../337.html">کتاب‌های آیزاک ازیموف در کتابخونۀ من</a></li>
+                            <li><a  href="../336.html">دانلود کتاب صوتی «... که در اندیشۀ او هستی»</a></li>
+                            <li><a  href="../335.html">دانلود کتاب «اتفاقی نخواهد افتاد»</a></li>
+                            <li><a  href="../334.html">هالووین (قسمت دوم)</a></li>
+                            <li><a  href="../333.html">هالووین (قسمت نخست)</a></li>
+                            <li><a  href="../332.html">اتفاقی نخواهد افتاد</a></li>
+                            <li><a  href="../331.html">چیز کوچک (قسمت دوم)</a></li>
+                            <li><a  href="../330.html">چیز کوچک (قسمت نخست)</a></li>
+                            <li><a  href="../329.html">فصل علم و خیال-شمارۀ 3</a></li>
+                            <li><a  href="../328.html">«برجیس را بخر!» منتشر شد</a></li>
+                            <li><a  href="../327.html">«داداش کوچولو»ها</a></li>
+                        <li><a  href="../list.html"><b>لیست آخرین پست&zwnj;ها</b></a></li>
+        </ul>
+        <!-- End Recent posts -->
+    <br />
+            <h3>نویسندگان</h3>
+        <ul class="clearfix">
+                            <li class="clearfix"  id="parentheses">
+                    <p><a href="../author/1347787.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/450/1347787.jpg" style="width:16px;" /></a></p><a  class="clearfix" href="../author/1347787.html"><p>س. سیمرغ</p><p>(296)</p></a>
+                </li>
+
+                    </ul>
+        <br/>
+
+    <!-- Start Recent Poll -->
+    
+		    <!-- End Recent Poll -->
+    <br />
+</div>
+
+            <h3><span class="clearfix">آمار وبلاگ</span></h3>
+        <ul class='stat'>
+            <li>کل بازدید : <span><script>getStatVar('total_view');</script></span></li>
+            <li>بازدید امروز :<span><script>getStatVar('today_view');</script></span></li>
+            <li>بازدید دیروز : <span><script>getStatVar('yesterday_view');</script></span></li>
+            <li>بازدید این ماه : <span><script>getStatVar('this_month_view');</script></span></li>
+            <li>بازدید ماه قبل : <span><script>getStatVar('last_month_view');</script></span></li>
+            <li>تعداد نویسندگان : <span><script>getStatVar('total_author');</script></span></li>
+            <li>تعداد کل پست&zwnj;ها : <span><script>getStatVar('total_post');</script></span></li>
+            <li>آخرین بازدید : <span><script>getStatVar('last_view_date');</script></span></li>
+            <li>آخرین بروز رسانی : <span><script>getStatVar('modify_date');</script></span></li>
+        </ul>
+        <br />
+
+<div class="hidden-xs hidden-sm">
+    <!-- Start Recent Tag_Cloud -->
+            <h3><span class="clearfix">اَبر برچسب&zwnj;ها</span></h3>
+        <div class="clearfix">
+            <ul class="cloud">
+                                    <li><a href="لطفاً+شرح+دهید.html" style="font-size:1.07em">لطفاً شرح دهید</a>&nbsp;</li>
+                                    <li><a href="نویسنده!+نویسنده!.html" style="font-size:1em">نویسنده! نویسنده!</a>&nbsp;</li>
+                                    <li><a href="ایزاک.html" style="font-size:1.82em">ایزاک</a>&nbsp;</li>
+                                    <li><a href="آیزاک+آسیموف.html" style="font-size:2em">آیزاک آسیموف</a>&nbsp;</li>
+                                    <li><a href="آیزاک.html" style="font-size:1.98em">آیزاک</a>&nbsp;</li>
+                                    <li><a href="آسیموف.html" style="font-size:1.99em">آسیموف</a>&nbsp;</li>
+                                    <li><a href="بیوه+مردان+سیاه.html" style="font-size:1.08em">بیوه مردان سیاه</a>&nbsp;</li>
+                                    <li><a href="ازازل.html" style="font-size:1.01em">ازازل</a>&nbsp;</li>
+                                    <li><a href="آزازل.html" style="font-size:1.01em">آزازل</a>&nbsp;</li>
+                                    <li><a href="ایزاک+آسیموف.html" style="font-size:1.92em">ایزاک آسیموف</a>&nbsp;</li>
+                            </ul>
+        </div>
+        <!-- End Recent Tag_Cloud -->
+    <br />
+
+</div>
+    <div align="center" class="mihan_logo"></div>
+
+
+
+
+
+</div></div>
+
+</div>
+</div>
+
+<!-- tainer -->
+
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+<div class="Footer">
+    <p><strong>POWERED BY <a href="http://www.mihanblog.com/"><font color="#FF0000" size="2px">M</font>IHAN<font color="#FF0000" size="2px">B</font>LOG.COM</a></strong><br />
+        Smashing Theme is created by: www.designdisease.com</p>
+</div>
+<div class="col-lg-4 col-md-4 hidden-sm hidden-xs"></div>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+    var map = ["\u0660","\u0661","\u0662","\u0663","\u0664", "\u0665","\u0666","\u0667","\u0668","\u0669"];
+
+
+function replaceNumbers(node) {
+ if (node.nodeType === 3 && node.parentNode.localName != "style" && node.parentNode.localName != "script") {
+   node.nodeValue = node.nodeValue.replace(/[0-9]/g, getArabicNumber);
+ }
+ 
+}
+
+function getArabicNumber(n) {
+ return map[parseInt(n,10)];
+}
+
+function walk(node, func) {
+ func(node);
+ node = node.firstChild;
+ while (node) {
+ walk(node, func);
+ node = node.nextSibling;
+ }
+};
+
+walk(document.body, replaceNumbers);
+
+</script>
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'untranslatedasimovs.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.targetedwebtraffic.com" target="_blank">Buy Website Traffic</a> | <a href="https://www.seo25.com" target="_blank">Buy Targeted Website Traffic</a>
+    </div>
+</center>

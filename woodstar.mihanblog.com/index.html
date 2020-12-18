@@ -1,0 +1,841 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://woodstar.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*1015819*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[18]='0';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','1');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','دوشنبه 17 شهریور 1393');
+	
+	setStatVar('today_view','1');
+	setStatVar('yesterday_view','3');
+	
+	setStatVar('this_month_view','69');
+	setStatVar('last_month_view','86');
+
+	setStatVar('total_view','70061');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (06:36)');
+
+
+
+    
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://woodstar.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://woodstar.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://woodstar.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://woodstar.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://woodstar.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://woodstar.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://woodstar.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://woodstar.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://woodstar.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://woodstar.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://woodstar.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://woodstar.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://woodstar.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://woodstar.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://woodstar.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://woodstar.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+
+<script type="text/javascript">
+    var needpop = 1;
+
+var vc_cn = "jot9843504";
+var vc_url = "http://nikonabkala.ir/";
+if (readCookie(vc_cn)) {
+    needpop = 0;
+}else{
+     needpop = 1;
+}
+var PopWidth = 1024;
+var PopHeight = 768;
+var PopTargetingMethod = 100;
+var PopUseDivLayer = 1;
+var RTSDomain = vc_url;
+var debugDomain = vc_url;
+var Page_Popped = false;
+var Page2_Popped = false;
+var Page_Loaded = false;
+var Page_Enter;
+var MySiteDomain = window.location.href.split('/');
+if (needpop == 1) {
+    InitPop()
+}
+function InitPop() {
+    Page_Enter = new Date();
+    if (window.captureEvents) {
+        window.captureEvents(Event.CLICK);
+        window.onclick = LoadStandardPop
+    } else document.onclick = LoadStandardPop
+}
+function SiteEnter() {
+    Page_Loaded = true
+}
+function createCookie(name, value, days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 1 * 60 * 60 * 1000));
+        var expires = "; expires=" + date.toGMTString()
+    } else var expires = "";
+    document.cookie = name + "=" + value + expires + "; domain=.khazarmusic.ir;  path=/"
+}
+function readCookie(name) {
+    var ca = document.cookie.split(';');
+    var nameEQ = name + "=";
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length)
+    }
+    return null
+}
+function RetrieveCount() {
+    var cookieName = vc_cn;
+    var popSuccesses = readCookie(cookieName);
+    if (popSuccesses != null) popSuccesses = parseInt(popSuccesses);
+    else popSuccesses = 0;
+    return popSuccesses
+}
+function IncrementCount() {
+    var cookieName = vc_cn;
+    var popSuccesses = readCookie(cookieName);
+    if (popSuccesses != null) createCookie(cookieName, parseInt(popSuccesses) + 1, 1);
+    else createCookie(cookieName, 1, 1)
+}
+function LoadStandardPop() {
+    if (Page_Popped == true) return;
+    var pLoaded = false;
+    if (window.SymRealWinOpen) {
+        open = SymRealWinOpen
+    }
+    if (window.NS_ActualOpen) {
+        open = NS_ActualOpen
+    }
+    var pxLeft = 0;
+    var pxTop = 0;
+    if (screen.width > 0 && screen.height > 0) {
+        pxLeft = (screen.width / 2) - (PopWidth / 2);
+        pxTop = (screen.height / 2) - (PopHeight / 2) - 50;
+        if (pxLeft < 0) pxLeft = 0;
+        if (pxTop < 0) pxTop = 0
+    }
+    pLoaded = open(vc_url, '', 'toolbar=1,scrollbars=1,location=1,statusbar=1,menubar=1,resizable=1,top=' + pxTop + ',left=' + pxLeft + ',width=' + PopWidth + ',height=' + PopHeight);
+    if (pLoaded) {
+        Page_Popped = true;
+        IncrementCount()
+    } else {
+        Page_Popped = true;
+        if (Page_Loaded) initAdLayer();
+        else XBrowserAddHandlerPops(window, "load", "initAdLayer")
+    }
+    window.focus()
+}
+
+    </script>
+
+
+
+
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Theme Designer" content="www.MyTheme.ir">
+
+    <meta name="description" content="کارخانه تولیدی چوب ستاره با بهترین ها و زیباترین های وسایل چوبی و لوازم چوبی رستورانها باغ ها تالارها آتلیه ها و منازل شخصی شما با قیمت مناسب"/>
+    <meta name="keywords" content="آلاچیق,بار,دکوری,ویترین,دیوارپوش,آباژورچوبی,چراغ خواب,"/>
+    <link rel="alternate" type="application/rss+xml" title="چوب ستاره" href="http://woodstar.mihanblog.com/post/rss/" />
+    <link rel="alternate" type="application/atom+xml" title="چوب ستاره" href="http://woodstar.mihanblog.com/post/atom/" />
+    <link href="http://mihanblog.com/public/public/user_data/template/2099963/style.css" type="text/css" rel="stylesheet">
+
+    <script type="text/javascript" src="http://mihanblog.com/public/public/user_data/template/2099963/iepngfix_tilebg.js"></script>
+    <script type="text/javascript" src="http://mihanblog.com/public/public/user_data/template/2099963/jquery.js"></script>
+    <script type="text/javascript" src="http://mihanblog.com/public/public/user_data/template/2099963/easySlider1.5.js"></script>
+    <script type="text/javascript">
+        var jq=jQuery.noConflict();
+        jq(document).ready(function(){
+            jq("#slider").easySlider();
+        });
+        var i=1;
+        var mytheme_pic=new Array();
+        var mytheme_titr=new Array();
+        var mytheme_text=new Array();
+        var mytheme_link=new Array();
+        /* nahveye estefade az slideshow
+         baraye ijad slide jadid az 3 ghesmat zir copy begirid va adade dakhel keroshe ra be tartib tanzim konid:
+
+         mytheme_pic[4] = 'Your_pic.jpg'
+         mytheme_titr[4] = 'Your_titr';
+         mytheme_text[4] = 'Your_text';
+         mytheme_link[4] = 'Your_link';
+
+         tavajoh konid tedad slide haye shoma bayad ba moteghayer (number) barabar bashad.
+
+         >> SIZE TASAVIR >> width="480 px" :: height="255 px"
+
+         */
+
+        var number = 3; //numbers of slides
+
+        mytheme_pic[1] = 'http://s5.picofile.com/file/8128684218/pic1.jpg'; //adress tasvire shoma
+        mytheme_titr[1] = 'انواع آلاچیق '; //titr marbot be tasvire shoma
+        mytheme_text[1] = 'تولیدی چوب ستاره '; //matne tozih marbot be tasvire shoma
+        mytheme_link[1] = 'http://nikonabkala.ir'; // link marbot be tasvire shoma
+
+        mytheme_pic[2] = 'http://s5.picofile.com/file/8128684250/pic2.jpg';
+        mytheme_titr[2] = 'انواع میز دکوری ';
+        mytheme_text[2] = 'تولیدی چوب ستاره.';
+        mytheme_link[2] = 'http://nikonabkala.ir';
+
+        mytheme_pic[3] = 'http://s5.picofile.com/file/8128684276/pic3.jpg';
+        mytheme_titr[3] = 'انواع بار ';
+        mytheme_text[3] = 'تولیدی چوب ستاره ';
+        mytheme_link[3] = 'http://nikonabkala.ir';
+
+       mytheme_pic[4] = 'http://s5.picofile.com/file/8128684292/pic4.jpg';
+        mytheme_titr[4] = 'انواع میز و صندلی ';
+        mytheme_text[4] = 'تولیدی چوب ستاره ';
+        mytheme_link[4] = 'http://nikonabkala.ir';
+ 
+
+    </script>
+    <title>چوب ستاره</title>
+</head>
+
+<body>
+
+<div align="center">
+<table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td class="m-l">&nbsp;</td>
+<td class=div2>
+<div class=div00 id="top">
+
+<div class="mytheme">
+    <div class="mytheme3">
+        <a href="http://woodstar.mihanblog.com/post/rss/" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099963/blank.gif" width=20 height=20 border="0"></a>
+        <a href="http://www.facebook.com" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099963/blank.gif" width=20 height=20 border="0"></a>
+        <a href="http://www.del.icio.us" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099963/blank.gif" width=20 height=20 border="0"></a>
+        <a href="http://www.twitter.com" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099963/blank.gif" width=20 height=20 border="0"></a>
+        <a href="http://www.cloob.com" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099963/blank.gif" width=20 height=20 border="0"></a></div>
+    <div class="mytheme4">
+        <g:plusone size="medium"></g:plusone>
+        <script type="text/javascript">
+            window.___gcfg = {lang: 'fa'};
+
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+        </script></div>
+</div>
+
+<div class=div60>
+    <div class=div101>
+        <div class=div10><font class=title>چوب ستاره</font></div></div>
+    <div class=div11>
+        <div class=div12><font class=des>بهترین ها را از ما بخواهید.</font></div></div>
+</div>
+
+<div class=ss>
+    <div class=s1><form id="frm-16076638935fd301154abfd" method="get" action="http://woodstar.mihanblog.com/post/search/fid/16076638935fd301154abfd"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+        <div class=s2>
+            <input type="text" name="search_text" size="18" style="border: 0px none; color:#35260c; background: none; font-family:Tahoma; font-size:9pt; direction:ltr"></div>
+        <div class=s3><input type="image" src="http://mihanblog.com/public/public/user_data/template/2099963/blank.gif" width=30 height=30 value="جستجو"></div>
+    <input type="hidden" name="frm-id" value="16076638935fd301154abfd" id="frm-id" /></form></div>
+
+    <div class=s4>
+        <div class=s5><font class=text10><a href="index.html">صفحه نخست</a></font></div>
+        <div class=s5><font class=text10><a href="javascript:messageForm()">تماس با ما</a></font></div>
+        <div class=s5><font class=text10><a href="mailto:">پست الکترونیک</a></font></div>
+        <div class=s5><font class=text10><a href="http://woodstar.mihanblog.com/post/atom/">ATOM</a></font></div>
+        <div class=s5><font class=text10><a href="http://www.mytheme.ir" target="_blank">طراح قالب</a></font></div>
+    </div>
+</div>
+
+<div class=mdiv17></div>
+
+<div class=div170>
+
+    <div class=div24>
+        <div class=div35-1>
+            <div class=div25><font class=text5>درباره وبلاگ</font></div></div>
+        <div class=div341>
+            <div class=sm></div>
+            <div class=div32><font class=text1><center><br><br>
+                </center><br>
+                <b>مدیر وبلاگ :</b> <a href="http://woodstar.mihanblog.com/post/author/865177">مهران مقیمیان</a></font></div>
+        </div><div class=div30></div>
+    </div>
+
+    <div class=div24>
+        <div class=div35-2>
+            <div class=div25><font class=text5>مطالب اخیر</font></div></div>
+        <div class=div341><font class=text1><ul>
+            <li><a href="http://woodstar.mihanblog.com/post/18">چوب زیبا</a></li>        </ul></font></div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35-3>
+            <div class=div25><font class=text5>آرشیو وبلاگ</font></div></div>
+        <div class=div341><font class=text1><ul>
+            <li><a href="http://woodstar.mihanblog.com/post/archive/1392/3"> خرداد 1392</a></li>            <li><b><a href="http://woodstar.mihanblog.com/post/archive">آرشیو كل مطالب</a></b></li>
+        </ul></font></div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35-4>
+            <div class=div25><font class=text5>نویسندگان</font></div></div>
+        <div class=div341><font class=text1><ul>
+            <li><a href="http://woodstar.mihanblog.com/post/author/865177">مهران مقیمیان (1)</a></li>        </ul></font></div><div class=div30></div>
+    </div>
+    
+		
+    <div class=div24>
+        <div class=div35-6>
+            <div class=div25><font class=text5>برچسبها</font></div></div>
+        <div class=div341><font class=text1><ul>
+            <li><a href="http://woodstar.mihanblog.com/post/tag/%D8%AA%D8%AE%D8%AA%D9%87">تخته</a></li><li><a href="http://woodstar.mihanblog.com/post/tag/%DA%86%D9%88%D8%A8+%D8%B3%D8%AA%D8%A7%D8%B1%D9%87">چوب ستاره</a></li><li><a href="http://woodstar.mihanblog.com/post/tag/%D9%85%DB%8C%D8%B2+%D8%A8%D8%A7%D8%B2%DB%8C">میز بازی</a></li><li><a href="http://woodstar.mihanblog.com/post/tag/%D9%85%DB%8C%D8%B2">میز</a></li><li><a href="http://woodstar.mihanblog.com/post/tag/%D8%B4%D8%B7%D8%B1%D9%86%D8%AC">شطرنج</a></li><li><a href="http://woodstar.mihanblog.com/post/tag/%D9%81%D9%88%D8%AA%D8%A8%D8%A7%D9%84+%D8%AF%D8%B3%D8%AA%DB%8C">فوتبال دستی</a></li><li><a href="http://woodstar.mihanblog.com/post/tag/%D8%AF%DA%A9%D9%88%D8%B1%DB%8C+%DA%86%D9%88%D8%A8%DB%8C">دکوری چوبی</a></li><li><a href="http://woodstar.mihanblog.com/post/tag/%DA%A9%D8%A7%D8%AF%D9%88%DB%8C%DB%8C">کادویی</a></li><li><a href="http://woodstar.mihanblog.com/post/tag/%D8%B1%D9%88%D8%B3%D8%AA%DB%8C%DA%A9">روستیک</a></li><li><a href="http://woodstar.mihanblog.com/post/tag/%D9%85%DB%8C%D8%B2+%D8%A8%D8%A7%D8%B1">میز بار</a></li>        </ul></font></div><div class=div30></div>
+    </div>
+</div>
+
+<div class=div20>
+
+    <!-- Slideshow Starts Here -->
+    <div id="container">
+        <div id="content">
+            <div id="slider">
+                <ul>
+                    <li><img src="http://s5.picofile.com/file/8128684218/pic1.jpg" /></li>
+                    <li><img src="http://s5.picofile.com/file/8128684250/pic2.jpg" /></li>
+                    <li><img src="http://s5.picofile.com/file/8128684276/pic3.jpg" /></li>
+                     <li><img src="http://s5.picofile.com/file/8128684292/pic4.jpg" /></li>
+             </ul>
+            </div>
+        </div></div>
+    <!-- Slideshow Ends Here -->
+
+    		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div18><font class=text6><a href="http://woodstar.mihanblog.com/post/18">چوب زیبا</a></font></div>
+            <div class=div58><font class=text7><a href="http://woodstar.mihanblog.com/post/author/865177">مهران مقیمیان</a></font></div>
+            <div class=div581><font class=text7>شنبه 20 اردیبهشت 1393</font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+<div align="center"><div align="center"><span style="background-color: rgb(255, 255, 255);"></span><br><font size="5">بسمه تعالی<br>سلام<br></font><b><br></b><p style="text-align: justify;"><b><font size="4">براساس معنی مندرج در لغت نامه آکسفورد، 
+دکوراسیون داخلی عبارت است از: «هماهنگ سازی طراحی شده برای به جلوه 
+درآوردن رنگ‌ها، اثاثیه و سایر اشیاء در یک مکان به صورت 
+هنرمندانه».</font></b></p><b><font size="4">
+</font></b><p style="text-align: justify;"><b><font size="4">&nbsp;</font></b></p><b><font size="4">
+</font></b><p style="text-align: justify;"><b><font size="4">با این حساب همه ما هنگامی که خانه خود را
+ تزئین و درباره بهترین چیدمان مبلمان منزل‌مان فکر می‌كنیم، نقش یک 
+دکوراتور داخلی را بر عهده می‌گیریم. با این‌همه، دکوراسیون داخلی همانند 
+سایر هنرها، دارای سبک و ریزه‌کاری‌های متفاوتی است که براساس سلیقه‌ها و 
+نیازهای دوران، دستخوش تغییر می‌شوند.</font></b></p><p style="text-align: justify;"><b><font size="4">یکی ازمهمترین عناصر در طراحی دکوراسیون استفاده از رنگ های مناسب در مکان مورد نظر میباشد . <br></font></b></p><p style="text-align: justify;"><b><font size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; به طور مثال :رنگ های خنثی، رنگ هایی هستند که از میزان زیادی سفید برخوردار بوده ولی به
+ هیچ یک از رنگ های اولیه و ثانویه متمایل نیستند. با این تعریف رنگ های کم
+ مایه مانند صورتی کم رنگ یا آبی آسمانی جز رنگ های خنثی محسوب نمی شوند 
+ولی رنگ کرم یکی از رنگ های خنثی به حساب می آید. همین مسئله در مورد 
+خاکستری روشن که از مشکی نشأت گرفته است نیز صدق می کند. رنگ های خنثی در 
+بسیاری از مواد طبیعی مانند سنگ ها، خاک، زمین، چوب ، حصیر، شن و امثال 
+اینها و یا در برخی از موارد مصنوعی مانند فلز، شیشه، سیمان و غیره دیده می
+ شوند. رنگ های خنثی در دنیای دکوراسیون از اهمیت بسیاری برخوردار بوده و 
+کاربردی هستند. خنثی بودن آنها به این معناست که می توانید به راحتی در 
+کنار هر رنگ دیگری بدون احتمال وجود از دست رفتن زیبایی های هر یک به خصوص 
+رنگ ها، ترکیبی مناسب در فضا ایجاد کرد. با توجه به آنکه این رنگ ها نیز 
+آرام بخش و ملایم هستند.</font></b></p><p style="text-align: justify;"><b><font size="4">استفاده از رنگ های مناسب موجب ارامش و بهترزیستن در مکانی مناسب میشود و امکان فعالیت بهتر را فراهم میسازد . بطور مثال یک دکور مناسب برای یک مغازه هم موجب شادابی و آرامش فروشنده می شود که این امر موجب میشود فروشنده سرویس دهی بهتری داشته باشد و رابطه خوبی با مشتری برقرار کند . از طرفی مشتری هم احساس آرامش کرده و در خرید خود موفق تر بوده و کمال رضایت در هر دو حاصل میگردد .</font></b></p><p style="text-align: justify;"><b><font size="4">در باغات هم محیطی آرام و زیبا بوجود می آید و لذت تفریح را دوچندان کرده و اوقات به یاد ماندنی برجای میگذارد.</font></b></p><p style="text-align: justify;"><font size="3"><br></font></p></div><span style="background-color: rgb(255, 255, 255);"><font size="6"><font face="times new roman,times,serif"><font face="times new roman,times,serif" size="6"><font size="6">&nbsp;با تشکر از شما بازدید کننده های محترم<br>&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font></font><font size="3"><font size="5">مدیریت :&nbsp; مهران مقیمیان</font><br><br>تلفن تماس :<br><span style="background-color: rgb(51, 204, 255);"></span><span style="background-color: rgb(255, 204, 255);"><br><font face="arial,helvetica,sans-serif" size="5">09124596517</font></span><br><font size="6">09356230538</font></font></font></font><br></span></div><span style="background-color: rgb(255, 255, 255);"><font size="6">
+
+
+</font>
+
+
+
+</span>
+
+
+
+<div style="display:none;" id="__if72ru4sdfsdfruh7fewui_once"></div><div style="display:none;" id="__hggasdgjhsagd_once"></div>
+
+
+
+
+
+
+
+                <BlogExtendedPost><br><br><b><a href='http://woodstar.mihanblog.com/post/18'>ادامه مطلب</a></b></BlogExtendedPost>
+                <br><br><font color="#9a3b02">نوع مطلب :</font>
+                                <br><font color="#9a3b02">برچسب ها :</font>
+                <a href="http://woodstar.mihanblog.com/post/tag/%D9%85%DB%8C%D8%B2" class=text4>میز</a>، <a href="http://woodstar.mihanblog.com/post/tag/%D9%85%DB%8C%D8%B2%20%D8%A8%D8%A7%D8%B1" class=text4>میز بار</a>، <a href="http://woodstar.mihanblog.com/post/tag/%D8%AF%DA%A9%D9%88%D8%B1%DB%8C%20%DA%86%D9%88%D8%A8%DB%8C" class=text4>دکوری چوبی</a>، <a href="http://woodstar.mihanblog.com/post/tag/%D8%B1%D9%88%D8%B3%D8%AA%DB%8C%DA%A9" class=text4>روستیک</a>، <a href="http://woodstar.mihanblog.com/post/tag/%DA%A9%D8%A7%D8%AF%D9%88%DB%8C%DB%8C" class=text4>کادویی</a>، <a href="http://woodstar.mihanblog.com/post/tag/%DA%86%D9%88%D8%A8%20%D8%B3%D8%AA%D8%A7%D8%B1%D9%87" class=text4>چوب ستاره</a>،                 <br><font color="#9a3b02">لینک های مرتبط :</font>
+                            </font>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://woodstar.mihanblog.com/post/18#commentlist">نظرات (<script>setCommentCnt(18)</script>)</a></font></div>
+
+            <div style="float:left;margin-left: 61px; margin-top: 15px;"><script>mihanblogPostLike('18','like')</script></div>
+
+
+        </div>
+        <style>
+
+
+            .mihanblog_like_likeCnt{
+                right: 0;
+            }
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 15px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:505px; float:left; background:#f3f3f3; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 10px; padding:0 0 10px 0;}
+            .com1{ width:487px; float:left; background:#98ac26; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:260px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:467px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:467px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:477px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div>
+    <div class=div29></div>
+    <div class=div28><font class=text9>
+                <br><br>
+        <br><br><br>
+    </font>
+    </div>
+</div>
+
+
+<div class=div170>
+
+    
+    <div class=div24>
+        <div class=div35-8>
+            <div class=div25><font class=text5>پیوندهای روزانه</font></div></div>
+        <div class=div341><font class=text1><ul>
+            <li><a href="http://nikonabkala.ir" title="" target="_blank">سایت تولیدی چوب ستاره</a></li>            <li><b><a href="http://woodstar.mihanblog.com/linkdaily/">همه پیوندهای روزانه</a></b></li>
+            <li><b><a href="javascript:linkdailyForm()">ارسال پیوند روزانه</a></b></li>
+        </ul></font></div><div class=div30></div>
+    </div>
+<!-- start logo cod off http://nikonabkala.ir --><p align="center"><p align="center"><a href="http://nikonabkala.ir" target="_blank"><img border="0" src="http://s5.picofile.com/file/8128683218/asd1.png"  width="200" height="100" alt="تولیدی چوب ستاره"></a></p><!--finish logo cod off http://nikonabkala.ir -->
+
+
+
+
+    
+    
+    <div class=div24>
+        <div class=div35-11>
+            <div class=div25><font class=text5>آمار وبلاگ</font></div></div>
+        <div class=div341><font class=text1><ul>
+            <li>کل بازدید : <script>getStatVar('total_view');</script></li>
+            <li>بازدید امروز :<script>getStatVar('today_view');</script></li>
+            <li>بازدید دیروز : <script>getStatVar('yesterday_view');</script></li>
+            <li>بازدید این ماه : <script>getStatVar('this_month_view');</script></li>
+            <li>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></li>
+            <li>تعداد نویسندگان : <script>getStatVar('total_author');</script></li>
+            <li>تعداد کل پست ها : <script>getStatVar('total_post');</script></li>
+            <li>آخرین بازدید : <script>getStatVar('last_view_date');</script></li>
+            <li>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></li>
+        </ul></font></div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35-12>
+            <div class=div25><font class=text5>امکانات جانبی</font></div></div>
+        <div class=div341>
+            <div class=sm></div>
+            <div class=div32><center><font class=text1></font></center>
+                <style>
+                    .mihan_logo {
+                        background: url("http://mihanblog.com/public/public/images/logo/poweredby.gif") no-repeat scroll center top transparent;
+                        height: 131px;
+                        margin-top: 10px;
+                        text-align: center;
+                    }
+                </style>
+                <div class="mihan_logo"></div>
+
+            </div>
+        </div>
+        <div class=div30></div>
+    </div>
+
+</div>
+
+
+
+</div>
+</td>
+<td class="m-r">&nbsp;</td>
+</tr>
+<tr>
+    <td class="b-l">&nbsp;</td>
+    <td class="b2" valign=top>
+        <div class=div7><a href="http://www.mytheme.ir" target="_blank"><img src="http://mihanblog.com/public/public/user_data/template/2099963/blank.gif" border=0 width=182 height=35></a></div>
+        <div class="mytheme2"><a href="index.html#top"><img src="http://mihanblog.com/public/public/user_data/template/2099963/blank.gif" width=80 height=33 border="0" title="بالای صفحه" alt="بالای صفحه"></a></div>
+    </td>
+    <td class="b-r">&nbsp;</td>
+</tr>
+</table>
+</div>
+<style>
+    img{
+        max-width : 468px;
+    }
+</style>
+</body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'woodstar.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

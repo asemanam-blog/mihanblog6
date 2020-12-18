@@ -1,0 +1,703 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc@rsd.html" />
+<script type="text/javascript" src="../../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*281110*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','119');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','دوشنبه 23 تیر 1399');
+	
+	setStatVar('today_view','3');
+	setStatVar('yesterday_view','12');
+	
+	setStatVar('this_month_view','742');
+	setStatVar('last_month_view','315');
+
+	setStatVar('total_view','230842');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (05:30)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://yaddasht88.mihanblog.com/statupdate/?data[refereruri]=http://yaddasht88.mihanblog.com/post/118&data[postid]=3&data[requesturi]=/post/3&data[sdate]=1607833174&data[hash]=ff83581a23abbac292caeb5dd833111c&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[3]='10';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[3]='0';
+mihanblogDisLikeArrCnt[3]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://yaddasht88.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://yaddasht88.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://yaddasht88.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://yaddasht88.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://yaddasht88.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://yaddasht88.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://yaddasht88.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://yaddasht88.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://yaddasht88.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://yaddasht88.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://yaddasht88.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://yaddasht88.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://yaddasht88.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://yaddasht88.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://yaddasht88.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://yaddasht88.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://yaddasht88.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<title>یادّاشتهای مامان خانمی - فیلم های  یواشکی!!!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="designer" content="Blog Skin">
+<meta name="author" content="مامان خانمی ">
+<meta name="designerUrl" content="http://www.blogskin.ir/">
+<meta http-equiv="expires" content="never">
+<script src="http://blogskin.ir/blog.js" language="javascript"></script>
+<meta name="description" content="یادّاشتهای مامان خانمی - اینجا جایی است که دوست دارم گهگاه چیزهایی بنویسم از دغدغه ها خاطره ها روزهای خوب و شادی ها و چیزهایی که در ذهنم وول می خورند و مرا قلقلک می دهند... و فکر می کنم بعدها ازخواندنشان لذت ببرم و شایدم لبخندکی کوچک بزنم!!<br />
+ - یادّاشتهای مامان خانمی">
+<meta name="keywords" content="یادّاشتهای مامان خانمی,yaddasht88, Blog, Weblog, Iran, Farsi, Weblogs, Blogskin">
+<link rel="alternate" type="application/rss+xml" title="یادّاشتهای مامان خانمی" href="rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title="یادّاشتهای مامان خانمی" href="atom/index.html" />
+<link href="http://blogskins.ir/35/style.css" type="text/css" rel="stylesheet"
+
+</head>
+
+<body>
+
+<div align=center><div style="width:100%;float:right">
+<div class=main>
+<div class=top1></div><div class=top2>
+<div class=titr><div class=titr2>یادّاشتهای مامان خانمی</div></div>
+<div class=des><div class=des2></div></div>
+</div>
+<div class=top3></div>
+
+<div class=menu>
+
+<div class=tmenu><div class=tmenu2>درباره وبلاگ</div></div>
+<div class=xmenu>
+<div class=xxmenu>
+<div style="text-align:center;"><img src="../../static.mihanblog.com/public/user_data/web_photo/94/281110.jpg@2712"  /></div>
+<font color="#444444">اینجا جایی است که دوست دارم گهگاه چیزهایی بنویسم از دغدغه ها خاطره ها روزهای خوب و شادی ها و چیزهایی که در ذهنم وول می خورند و مرا قلقلک می دهند... و فکر می کنم بعدها ازخواندنشان لذت ببرم و شایدم لبخندکی کوچک بزنم!!<br />
+</font></div>
+<div class=xxmenu><b>•</b> <a href="javascript:messageForm()"تماس با سوگل</a></div>
+<div class=xxmenu><b>•</b> <a href="mailto:worker8888@gmail.com">پست الكترونیك</a></div>
+<div class=xxmenu><a href="rss/index.html" >RSS</a></div>
+<div class=xxmenu><a href="atom/index.html" >ATOM</a></div>
+</div>
+<div class=tmenu><div class=tmenu2>موضوعات</div></div><div class=xmenu>
+<div class=xxmenu><b>•</b> <a href="category/3.html">گاف نوشت (1)</a></div>
+<div class=xxmenu><b>•</b> <a href="category/2.html">نوستال روزهای کار (2)</a></div>
+<div class=xxmenu><b>•</b> <a href="category/1.html">ادعیه جات (1)</a></div>
+</div>
+  
+<div class=tmenu><div class=tmenu2>جدیدترین مطالب</div></div><div class=xmenu>
+	<div class=xxmenu><b>•</b> <a href="131.html">اندر احوالات خرید خانه</a></div>
+	<div class=xxmenu><b>•</b> <a href="130.html">سن فقط یک عدد است!</a></div>
+	<div class=xxmenu><b>•</b> <a href="129.html">اندراحوالات مامان شدن</a></div>
+	<div class=xxmenu><b>•</b> <a href="128.html">حقوق حیوانات</a></div>
+	<div class=xxmenu><b>•</b> <a href="127.html">شرح حال</a></div>
+	<div class=xxmenu><b>•</b> <a href="126.html">این همه آشفته حالی...</a></div>
+	<div class=xxmenu><b>•</b> <a href="125.html">نقل قول انتخاباتی!</a></div>
+	<div class=xxmenu><b>•</b> <a href="124.html">نقل قول</a></div>
+	<div class=xxmenu><b>•</b> <a href="123.html">اردیبهشت ماه من!</a></div>
+	<div class=xxmenu><b>•</b> <a href="122.html">حذف می کنم اینجا رو...</a></div>
+	<div class=xxmenu><b>•</b> <a href="121.html">زمانی برای مُردن</a></div>
+	<div class=xxmenu><b>•</b> <a href="120.html">اندراحوالات دکتر رفتن2</a></div>
+	<div class=xxmenu><b>•</b> <a href="119.html">اندراحوالات دکتر رفتن1</a></div>
+	<div class=xxmenu><b>•</b> <a href="118.html">کلاف سر در گم</a></div>
+	<div class=xxmenu><b>•</b> <a href="117.html">یلدای تنها</a></div>
+		<div class=xxmenu><b>•</b> <a href="list.html"><b>لیست آخرین 
+			مطالب</b></a></div>
+
+</div>
+
+
+		<div class=tmenu><div class=tmenu2>صفحه نخست</div></div>
+<div class=xmenu>
+<div class=xxmenu><b>•</b> <a href="author/178593.html">مامان خانمی </a></div></div>
+<div class=bmenu></div>
+<div class=tmenu><div class=tmenu2>یکی بود یکی نبود</div></div><div class=xmenu>
+<div class=xxmenu><b>•</b> <a href="archive/1399/4.html"> تیر 1399</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1399/1.html"> فروردین 1399</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1398/12.html"> اسفند 1398</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1396/8.html"> آبان 1396</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1396/7.html"> مهر 1396</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1396/5.html"> مرداد 1396</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1396/2.html"> اردیبهشت 1396</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1395/12.html"> اسفند 1395</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1395/11.html"> بهمن 1395</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1395/10.html"> دی 1395</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1395/9.html"> آذر 1395</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1395/7.html"> مهر 1395</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1395/4.html"> تیر 1395</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1395/3.html"> خرداد 1395</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1395/2.html"> اردیبهشت 1395</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1394/12.html"> اسفند 1394</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1394/11.html"> بهمن 1394</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1394/6.html"> شهریور 1394</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1393/11.html"> بهمن 1393</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1393/9.html"> آذر 1393</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1393/5.html"> مرداد 1393</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1393/4.html"> تیر 1393</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1392/11.html"> بهمن 1392</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1392/9.html"> آذر 1392</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1392/4.html"> تیر 1392</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1391/12.html"> اسفند 1391</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1391/11.html"> بهمن 1391</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1391/10.html"> دی 1391</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1391/7.html"> مهر 1391</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1391/6.html"> شهریور 1391</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1391/5.html"> مرداد 1391</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1391/4.html"> تیر 1391</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1391/2.html"> اردیبهشت 1391</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1391/1.html"> فروردین 1391</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1390/12.html"> اسفند 1390</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1390/11.html"> بهمن 1390</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1390/10.html"> دی 1390</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1390/9.html"> آذر 1390</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1390/8.html"> آبان 1390</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1390/7.html"> مهر 1390</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1390/6.html"> شهریور 1390</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1390/5.html"> مرداد 1390</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1390/4.html"> تیر 1390</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1390/3.html"> خرداد 1390</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1390/2.html"> اردیبهشت 1390</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1390/1.html"> فروردین 1390</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1389/12.html"> اسفند 1389</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1389/11.html"> بهمن 1389</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1389/10.html"> دی 1389</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1389/9.html"> آذر 1389</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1389/8.html"> آبان 1389</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1389/7.html"> مهر 1389</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1389/6.html"> شهریور 1389</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1389/5.html"> مرداد 1389</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1389/4.html"> تیر 1389</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1389/3.html"> خرداد 1389</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1389/2.html"> اردیبهشت 1389</a></div>
+<div class=xxmenu><b>•</b> <a href="archive/1389/1.html"> فروردین 1389</a></div>
+</div>
+
+<div class=tmenu><div class=tmenu2>خواندنی ترین مطالب</div></div><div class=xmenu>
+<div class=xxmenu><b>•</b> <a target="_blank" href="103.html" title="">اندر احوالات انگشت نگاری2</a></div>
+<div class=xxmenu><b>•</b> <a target="_blank" href="102.html" title="">اندر احوالات انگشت نگاری1</a></div>
+<div class=xxmenu><b>•</b> <a target="_blank" href="86.html" title="">بانك زیر ذره بین من</a></div>
+<div class=xxmenu><b>•</b> <a target="_blank" href="../../www.yaddasht88.mihanblog.com/post/64.html" title="">آن گوشی عزیز تر از جان</a></div>
+<div class=xxmenu><b>•</b> <a target="_blank" href="56.html" title="">بیست و اندی سال پیش در چنین روزی...!</a></div>
+<div class=xxmenu><b>•</b> <a target="_blank" href="../../www.yaddasht88.mihanblog.com/post/49.html" title="">جزییاتی از زندگی شخصی من!</a></div>
+<div class=xxmenu><b>•</b> <a target="_blank" href="../../www.yaddasht88.mihanblog.com/post/47.html" title="">همراه اول یا دزد سرِگردنه!</a></div>
+<div class=xxmenu><b>•</b> <a target="_blank" href="41.html" title="">همه مزیت های مرد بودن!</a></div>
+<div class=xxmenu><b>•</b> <a target="_blank" href="38.html" title="">تماس گوگل با من!!!</a></div>
+<div class=xxmenu><b>•</b> <a target="_blank" href="36.html" title="">عزیزم به کاهدون زدی!!!</a></div>
+<div class=xxmenu><b>•</b> <a target="_blank" href="30.html" title="">یازده ماه خوردی یه ماه نخور!</a></div>
+<div class=xxmenu><b>•</b> <a target="_blank" href="26.html" title="">بررسی تلوزیونِ این ور آب و اون ور آب</a></div>
+<div class=xxmenu><b>•</b> <a target="_blank" href="23.html" title="">وبلاگ،پشتِ پرده</a></div>
+<div class=xxmenu><b>•</b> <a target="_blank" href="14.html" title="">چیزی شبیه معجزه با عشق ممکن می شود...</a></div>
+<div class=xxmenu><b>•</b> <a target="_blank" href="10.html" title="">بودن یا نبودن مساله ای نیست!</a></div>
+<div class=xxmenu><b>•</b> <a target="_blank" href="9.html" title="">آنالیز پسرها</a></div>
+<div class=xxmenu><b>•</b> <a target="_blank" href="3.html" title="">فیلم های یواشکی</a></div>
+<div class=xxmenu><b>•</b> <a href="https://www.magicp30.tv" target="_blank">دانلود فیلم</a></div>
+
+<div class=xxmenu><b>•</b> <a href="../link/index.html"><b>همه پیوندها</b></a></div>
+</div>
+
+
+
+
+
+
+
+<div class=tmenu><div class=tmenu2>آمار وبلاگ</div></div><div class=xmenu>
+<div class=xxmenu><font color="#444444">
+			بازدیدهای امروز : <span class=aa><script>getStatVar('today_view');</script></span> نفر<br>
+بازدیدهای دیروز : <span class=aa><script>getStatVar('yesterday_view');</script></span> نفر<br>
+كل بازدیدها : <span class=aa><script>getStatVar('total_view');</script></span> نفر<br>
+بازدید این ماه :<span class=aa> <script>getStatVar('this_month_view');</script></span> نفر<br>
+كل مطالب : <span class=aa><script>getStatVar('total_post');</script></span> عدد<br>
+آخرین بازدید : <span class=aa><script>getStatVar('last_view_date');</script></span><br>
+آخرین بروز رسانی : <span class=aa><script>getStatVar('modify_date');</script></span>
+ </div>
+</div>
+
+<div id="c" style="text-align:center;width:210;float:right">
+<br><br></div>
+
+</div>
+
+<div class=post>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=tpost><div class=tpost2><a href="3.html">فیلم های  یواشکی!!!</a></div></div>
+<div class=xpost><div class=xxpost><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 200%; FONT-FAMILY: 'Tahoma','sans-serif'; mso-bidi-language: FA">
+<P dir=rtl style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; LINE-HEIGHT: 200%; unicode-bidi: embed; TEXT-ALIGN: justify"><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 200%; FONT-FAMILY: 'Tahoma','sans-serif'">تلفن همراه با اینکه یه وسیله مفید بوده ولی تبدیل به یه معضل شده تو جامعه . چون هنوز فرهنگ استفاده درست از اون در جامعه ما(ایران) جا نیفتاده. و هر کس به خودش اجازه میده به حریم خصوصی دیگران تجاوز کنه.</SPAN></P>
+<P dir=rtl style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; LINE-HEIGHT: 200%; unicode-bidi: embed; TEXT-ALIGN: justify"><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 200%; FONT-FAMILY: 'Tahoma','sans-serif'">نمونش تو گوشی یکی از اقوام(البته تو گوشی خودمم هس!) که به صورتی به دس ما رسید پر بود از فیلم های دختران در حال رقص در موقعیت های مختلف از جمله در کوه و دشت و صحرا و پارتی و تالار و از این جور جاها(که بعضی مختلط هم بود!!!<IMG src="http://www.mihanblog.com/public/public/rte/images_new/smiles/23.gif">) حالا اونم چه رقصی کاش یه رقص خوشگل بود همشون مثه مارمولک به خودشون پیچ و تابی می دادن که فقط بیا و ببین، با اون اندام که چه عرض کنم هیکل نتراشیده و نخراشیده<IMG src="http://www.mihanblog.com/public/public/rte/images_new/smiles/4.gif"></SPAN></P>
+<P dir=rtl style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; LINE-HEIGHT: 200%; unicode-bidi: embed; TEXT-ALIGN: justify"><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 200%; FONT-FAMILY: 'Tahoma','sans-serif'">بعضی از این فیلما که به درخواست خود طرف گرفته شده بود و یواشکی هم نبود(تازه طرف کلی هم کیف کرده بود که مشهور شده و فیلمشو همه دیدن)<IMG src="http://www.mihanblog.com/public/public/rte/images_new/smiles/1.gif"> ولی بیشترشون یواشکی بود مثلن یکشون در یه عروسی گرفته شده بود که دوربین و زیر میز قرار داده بودن. از نحوه فیلم گرفتنش معلوم بود</SPAN></P>
+<P dir=rtl style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; LINE-HEIGHT: 200%; unicode-bidi: embed; TEXT-ALIGN: justify"><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 200%; FONT-FAMILY: 'Tahoma','sans-serif'">با دیدن این فیلما جرئت و جسارت رقصیدن تو عروسی ها رو از دس دادم و به نوعی می ترسم همین چن وقت پیش تو عروسی پسر داییم یه گوشه نشسته بودم و به نوعی پوشش خودمو حفظ کرده بودم که مبادا کسی ازمون فیلمی نگیره و آتو دستش ندیم راستی اول ما که تو باب این چیزا نبودیم آزادانه تو تالار به این طرف اون طرف می رفتیم که یکی از اقوام خیر اندیش گوشزدی به ما داد ما هم مثه بچه آدم نشستیم و حس خودنمایمون سرکوب شد<IMG src="http://www.mihanblog.com/public/public/rte/images_new/smiles/2.gif"></SPAN></P>
+<P dir=rtl style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; LINE-HEIGHT: 200%; unicode-bidi: embed; TEXT-ALIGN: justify"><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 200%; FONT-FAMILY: 'Tahoma','sans-serif'">بعد از اون تو یه عروسی میخاستم ببینم که فیلم گرفتن اون هم به صورت یواشکی چه مزه ای داره که ناموفق بودم چون تازه کار بودم لو رفتم و از اون به بعد پشت دستمو و داغ کردم که دیگه یواشکی فیلم نگیرم قبلش کسب اجازه کنم<IMG src="http://www.mihanblog.com/public/public/rte/images_new/smiles/13.gif"></SPAN></P>
+<P dir=rtl style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; LINE-HEIGHT: 200%; unicode-bidi: embed; TEXT-ALIGN: justify"><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 200%; FONT-FAMILY: 'Tahoma','sans-serif'">البته این مسئله فقط در مورد بعضی خانما صدق می کنه آقایون</SPAN><SPAN lang=FA dir=ltr style="FONT-SIZE: 14pt; LINE-HEIGHT: 200%; FONT-FAMILY: 'Tahoma','sans-serif'"> </SPAN><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 200%; FONT-FAMILY: 'Tahoma','sans-serif'">واسشون مهم نیس تازه با این موضوع کنار اومدن کلی حال می کنن چون یه راه ساده هس واسه مشهور شدن و پز دادن به این اون</SPAN><SPAN dir=ltr style="FONT-SIZE: 14pt; LINE-HEIGHT: 200%; FONT-FAMILY: 'Tahoma','sans-serif'"><SPAN>&nbsp; </SPAN></SPAN><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 200%; FONT-FAMILY: 'Tahoma','sans-serif'">و با چن بار بلوتوث کردن به کل نقاط ایران میرسه!!!<IMG src="http://www.mihanblog.com/public/public/rte/images_new/smiles/4.gif"><IMG src="http://www.mihanblog.com/public/public/rte/images_new/smiles/3.gif"></SPAN></P>
+<P dir=rtl style="MARGIN: 0in 0in 10pt; DIRECTION: rtl; LINE-HEIGHT: 200%; unicode-bidi: embed; TEXT-ALIGN: justify"><B><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 200%; FONT-FAMILY: 'Tahoma','sans-serif'">پس نوشت:</SPAN></B><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 200%; FONT-FAMILY: 'Tahoma','sans-serif'"> توصیه من به اونایی که نمی خان فیلمشون پخش بشه ولی قر تو کمرشون فراواونه اینکه هیچ وقت نرقصن حتی وقتی تو اتاقشون تنها تنهای هستن چون دیوار موش داره(از نوع آدم) موش هم دوربین داره!!!</SPAN></P></SPAN><br><br><b></b><br>
+<font style="font-size:8pt">
+									</font>
+
+</div></div>
+<div class=bpost><div class=date><div class=date2>نوشته شده در تاریخ سه شنبه 3 آذر 1388 توسط مامان خانمی </div></div>
+<div class=nz><div class=nz2><a target="_self" href="javascript:newComment(3)" >نظرات (<script>setCommentCnt(3)</script>)</a></div></div></div>
+
+
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'yaddasht88.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

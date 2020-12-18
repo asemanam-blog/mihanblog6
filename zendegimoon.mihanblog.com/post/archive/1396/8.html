@@ -1,0 +1,1394 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*641954*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[377]='0';commentCnt[378]='0';commentCnt[379]='0';commentCnt[380]='1';commentCnt[381]='0';commentCnt[382]='1';commentCnt[383]='0';commentCnt[384]='2';commentCnt[385]='1';commentCnt[386]='1';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[377]='0';
+mihanblogDisLikeArrCnt[377]='0';
+mihanblogLikeArrCnt[378]='0';
+mihanblogDisLikeArrCnt[378]='0';
+mihanblogLikeArrCnt[379]='0';
+mihanblogDisLikeArrCnt[379]='0';
+mihanblogLikeArrCnt[380]='0';
+mihanblogDisLikeArrCnt[380]='0';
+mihanblogLikeArrCnt[381]='0';
+mihanblogDisLikeArrCnt[381]='0';
+mihanblogLikeArrCnt[382]='0';
+mihanblogDisLikeArrCnt[382]='0';
+mihanblogLikeArrCnt[383]='0';
+mihanblogDisLikeArrCnt[383]='0';
+mihanblogLikeArrCnt[384]='0';
+mihanblogDisLikeArrCnt[384]='0';
+mihanblogLikeArrCnt[385]='0';
+mihanblogDisLikeArrCnt[385]='0';
+mihanblogLikeArrCnt[386]='0';
+mihanblogDisLikeArrCnt[386]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://zendegimoon.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://zendegimoon.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','504');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','چهارشنبه 5 آذر 1399');
+	
+	setStatVar('today_view','16');
+	setStatVar('yesterday_view','81');
+	
+	setStatVar('this_month_view','5245');
+	setStatVar('last_month_view','3943');
+
+	setStatVar('total_view','251460');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (05:31)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://zendegimoon.mihanblog.com/statupdate/?data[refereruri]=http://zendegimoon.mihanblog.com/post/archive&data[postid]=&data[requesturi]=/post/archive/1396/8&data[sdate]=1608173846&data[hash]=a76abdf167aa3de9e71f3dfae113dbf5&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<title>زندگی یک زوج ایرانی آلمانی - مطالب  آبان 1396</title>
+<base href="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Language" content="fa">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="alternate" type="application/rss+xml" title="زندگی یک زوج ایرانی آلمانی" href="../../rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title="زندگی یک زوج ایرانی آلمانی"  href="../../atom/index.html" />
+<style type="text/css">
+
+body { font-family: Tahoma; font-size: 8pt; text-align: center; direction: ltr; line-height: 18px; margin: 0px; background-color: #F3B08E; }
+.page { width: 990px; margin-right: auto; margin-left: auto; direction: rtl; background-color: #FADED0; margin-top: 0px; margin-bottom: 0px; padding: 0px; }
+/******************* header ******************/
+.header { height: 400px; width: 990px; text-align: center; background-repeat: no-repeat; margin-bottom: 0px; background-image: url(http://s7.picofile.com/file/8252907026/theme_01.jpg); }
+.header-mid { width: 90%; margin-left: auto; padding-top: 50px; text-align: right; margin-right: auto; }
+.header h1 { font-family: Arial; font-size: 28px; font-weight: bold; margin: 0px; }
+.header h3 { font-family: Tahoma; font-size: 12px; margin: 0px; padding-top: 20px; color: #F6D0C0; }
+.header A { color: #F6D0C0; text-decoration: none; }
+/****************** navbar ******************/
+.navbar { height: 60px; width: 990px; text-align: center; margin-top: 0px; margin-bottom: 10px; background-repeat: no-repeat; background-position: center top; background-image: url(http://s6.picofile.com/file/8252907042/theme_02.jpg); }
+.navbar-mid { width: 90%; margin-right: auto; margin-left: auto; padding-top: 18px; }
+.navbar ul { padding: 0px; margin: 0px 30px 0px 0px; }
+.navbar li { float: right; list-style-type: none; font-size: 9pt; font-weight: bold; margin-left: 40px; }
+.navbar li a:link { color: #000000; text-decoration: none; }
+.navbar li a:visited { color: #000000; text-decoration: none; }
+.navbar li a:hover { color: #626262; text-decoration: none; }
+/***************** content *******************/
+.main { width: 990px; }
+.content { float: right; width: 550px; }
+.bodypost { width: 550px; margin-bottom: 15px; background-image: url(http://s7.picofile.com/file/8252907192/theme_10.jpg); background-repeat: repeat-y; }
+.bodypost a:link { color: #808080; text-decoration: none; }
+.bodypost a:visited { color: #808080; text-decoration: none; }
+.bodypost a:hover { color: #000000; text-decoration: none; }
+.ptitle { height: 60px; text-align: center; background-repeat: no-repeat; background-position: center; background-image: url(http://s6.picofile.com/file/8252907092/theme_07.jpg); }
+.ptitle-mid { text-align: right; width: 450px; margin-right: 80px; margin-left: 20px; padding-top: 20px; }
+.ptitle a:link { color: #000; text-decoration: none; }
+.ptitle a:visited { color: #000; text-decoration: none; }
+.ptitle a:hover { color: #000; text-decoration: none; }
+.ptitle h2 { margin: 0px; font-family: Arial; font-size: 12pt; font-weight: bold; }
+.ptext { text-align: center; font-family: Tahoma; font-size: 9pt; }
+.ptext-mid { width: 95%; margin-right: auto; margin-left: auto; padding-top: 3px; padding-bottom: 3px; text-align: right; }
+.ptext img { max-width: 95%; height: auto; }
+.ptext img:hover { }
+.pinfo { }
+.pinfo-mid { width: 95%; margin-right: auto; margin-left: auto; text-align: right; padding-bottom: 10px; }
+.author { float: right; width: 45%; }
+.date { float: left; width: 45%; }
+.pcat { }
+.pcat-mid { width: 95%; margin-right: auto; margin-left: auto; text-align: right; padding-top: 3px; padding-bottom: 5px; }
+.pcomore { font-size: 9pt; }
+.pcomore-mid { text-align: right; width: 95%; margin-right: auto; margin-left: auto; padding-top: 12px; }
+.pcomore a:link { color: #000000; }
+.pcomore a:visited { color: #000000; }
+.pcomore a:hover { color: #000000; }
+.pmore { float: right; width: 40%; }
+.pcomment { float: left; width: 40%; }
+.p-bbg { height: 20px; background-repeat: no-repeat; background-position: center; background-image: url(http://s7.picofile.com/file/8252907284/theme_12.jpg); }
+.paper { width: 550px; background-color: #FCF1EB; border-radius: 10px; border: 1px solid #F09F76; }
+.paper-tbg { height: 10px; }
+.paper-text { text-align: center; font-family: Tahoma; font-size: 9pt; font-weight: bold; background-repeat: repeat-y; background-position: center; }
+.paper-text-mid { width: 90%; margin-top: auto; margin-bottom: auto; padding-top: 5px; padding-bottom: 5px; }
+.paper-text a:link { color: #000; text-decoration: none; }
+.paper-text a:visited { color: #000; text-decoration: none; }
+.paper-text a:hover { color: #535353; text-decoration: none; }
+.paper-text ul { margin: 0px; padding: 0px; }
+.paper-text li { float: right; margin-left: 20px; list-style-type: none; }
+.paper-text li a:link { color: #000; text-decoration: none; }
+.paper-text li a:visited { color: #000; text-decoration: none; }
+.paper-text li a:hover { color: #535353; text-decoration: none; }
+.paper-bbg { height: 10px; }
+.rpapers { float: right; width: 49%; }
+.lpapers { float: left; width: 49%; }
+/***************** rbar **********************/
+.right { float: right; width: 200px; margin-left: 10px; margin-right: 10px; }
+.rm { margin-bottom: 10px; }
+.rmtitle { height: 60px; text-align: center; font-family: Arial; font-size: 11pt; font-weight: bold; color: #000; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907068/theme_05.jpg); }
+.rmtitle-mid { width: 160px; margin-right: auto; margin-left: auto; padding-top: 20px; text-align: right; }
+.rmtext { text-align: center; background-repeat: repeat-y; background-image: url(http://s7.picofile.com/file/8252907126/theme_09.jpg); }
+.rmtext-mid { width: 90%; margin-right: auto; margin-left: auto; text-align: right; padding-top: 5px; padding-bottom: 5px; }
+.rmtext a:link { color: #000; text-decoration: none; }
+.rmtext a:visited { color: #000; text-decoration: none; }
+.rmtext a:hover { color: #666; text-decoration: none; }
+.rmtext ul { padding: 0px; margin: 0px; }
+.rmtext li { list-style-type: none; }
+.rmtext li a:link { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.rmtext li a:visited { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.rmtext li a:hover { color: #666; text-decoration: none; display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; }
+.rmtext img { max-width: 98%; height: auto; }
+.rmtext img:hover { }
+.rm-bbg { height: 20px; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907268/theme_11.jpg); }
+/***************** lbar ***********************/
+.left { float: left; width: 200px; margin-left: 10px; }
+.lm { margin-bottom: 10px; }
+.lmtitle { height: 60px; text-align: center; font-family: Arial; font-size: 11pt; font-weight: bold; color: #000; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907068/theme_05.jpg); }
+.lmtitle-mid { width: 160px; margin-right: auto; margin-left: auto; padding-top: 20px; text-align: right; }
+.lmtext { text-align: center; background-repeat: repeat-y; background-image: url(http://s7.picofile.com/file/8252907126/theme_09.jpg); }
+.lmtext-mid { width: 90%; margin-right: auto; margin-left: auto; text-align: right; padding-top: 5px; padding-bottom: 5px; }
+.lmtext a:link { color: #000; text-decoration: none; }
+.lmtext a:visited { color: #000; text-decoration: none; }
+.lmtext a:hover { color: #666; text-decoration: none; }
+.lmtext ul { padding: 0px; margin: 0px; }
+.lmtext li { list-style-type: none; }
+.lmtext li a:link { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.lmtext li a:visited { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.lmtext li a:hover { color: #666; text-decoration: none; display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; }
+.lmtext img { max-width: 98%; height: auto; }
+.lmtext img:hover { }
+.lm-bbg { height: 20px; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907268/theme_11.jpg); }
+/*************** footer **************************/
+.footer { height: 240px; width: 990px; margin-top: 10px; margin-bottom: 0px; font-family: Tahoma; font-size: 10pt; color: #000; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907334/theme_14.jpg); }
+.footer-mid { width: 80%; margin-right: auto; margin-left: auto; padding-top: 100px; text-align: center; }
+.footer a:link { color: #000; text-decoration: none; font-weight: normal; }
+.footer a:visited { color: #000; text-decoration: none; font-weight: normal; }
+.footer a:hover { color: #000; text-decoration: none; font-weight: normal; }
+/************** etc class **************************/
+.profile-img { text-align: center; margin-top: 5px; margin-bottom: 5px; }
+.profile-text { text-align: justify; }
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="header-mid">
+      <h1><a href="../../../index.html">زندگی یک زوج ایرانی آلمانی</a></h1>
+      <h3>خاطرات زندگی من در آلمان</h3>
+    </div>
+  </div>
+  <!--- e header --->
+  
+  <div class="navbar">
+    <div class="navbar-mid">
+      <ul>
+        <li><a href="../../../index.html">خانه</a></li>
+        <li><a href="../../archive.html">آرشیو</a></li>
+        <li><a href="mailto:">ایمیل</a></li>
+        <li><a href="../../rss/index.html">RSS</a></li>
+        <li><a href="http://cafeskin.blogfa.com/">قالب وبلاگ</a></li>
+        <li><a href="../../list.html">عناوین </a></li>
+      </ul>
+    </div>
+  </div>
+  <!--- e navbar ---->
+  
+  <div class="main">
+    <div class="right">
+      <div class="rm">
+        <div class="rmtitle">
+          <div class="rmtitle-mid">درباره من</div>
+        </div>
+        <div class="rmtext">
+          <div class="rmtext-mid">
+            <div class="profile-img"> <img src="http://static.mihanblog.com//public/user_data/web_photo/214/641954.jpg?1092"  /></div>
+            <div class="profile-text">می روم راه دور...خیلی دور..آسمان وطن خدا حافظ<br />
+شهر سرد قدیمی ام بدرود،ایران زیبای من خدا حافظ<br />
+<br />
+می روم راه دور خیلی دور،دورم از چشمهای روشن تو<br />
+منتظر می شوم تو هم برسی،تا دلم بشکفد به دیدن تو<br />
+<br />
+کوله بارم چه قدر سنگین است&quot;از وطن نان و نور آوردم<br />
+عطردلچسب چادر مادر،عشق را با غرور آوردم<br />
+<br />
+شانه های برادرم اینجاست،موی خوشبوی مادرم اینجاست<br />
+گرمی مهربان دست پدر،کیف قرآن و دفترم اینجاست<br />
+<br />
+می روم راه دور خیلی دور،تو همیشه کنار من هستی<br />
+دوستت دارم و دلم با توست،دور و نزدیک،یار من هستی</div>
+          </div>
+        </div>
+        <div class="rm-bbg"></div>
+      </div>
+              <div class="rm">
+          <div class="rmtitle">
+            <div class="rmtitle-mid">موضوعات</div>
+          </div>
+          <div class="rmtext">
+            <div class="rmtext-mid">
+              <ul>
+                                  <li> <a href="../../category/6.html">ادبی&nbsp;(14) </a> </li>
+                                  <li> <a href="../../category/4.html">مقاله&nbsp;(17) </a> </li>
+                                  <li> <a href="../../category/16.html">همسرم&nbsp;(3) </a> </li>
+                                  <li> <a href="../../category/5.html">نومزدنگ&nbsp;(5) </a> </li>
+                                  <li> <a href="../../category/2.html">بعد ازدواجمون&nbsp;(42) </a> </li>
+                                  <li> <a href="../../category/9.html">آشپزی های من&nbsp;(13) </a> </li>
+                                  <li> <a href="../../category/15.html">آموزش زبان آلمانی&nbsp;(15) </a> </li>
+                                  <li> <a href="../../category/1.html">پیش از ازدواجمون&nbsp;(20) </a> </li>
+                                  <li> <a href="../../category/8.html">ایده واسه زندگیمون&nbsp;(5) </a> </li>
+                                  <li> <a href="../../category/14.html">آموزش و پرورش آلمان&nbsp;(51) </a> </li>
+                                  <li> <a href="../../category/7.html">منو بیشتر بشناسین&nbsp;(2) </a> </li>
+                                  <li> <a href="../../category/11.html">مراحل اداری ازدواج ما&nbsp;(3) </a> </li>
+                                  <li> <a href="../../category/13.html">تجربه های مسافرت ما&nbsp;(36) </a> </li>
+                                  <li> <a href="../../category/17.html">فستیوال ها و جشن های آلمان&nbsp;(5) </a> </li>
+                                  <li> <a href="../../category/10.html">فرهنگ آلمانی و زندگی در آلمان&nbsp;(170) </a> </li>
+                                  <li> <a href="../../category/12.html">عقاید خودم و همسر راجع به زندگی&nbsp;(26) </a> </li>
+                              </ul>
+            </div>
+          </div>
+          <div class="rm-bbg"></div>
+        </div>
+                    <div class="rm">
+          <div class="rmtitle">
+            <div class="rmtitle-mid">نویسندگان</div>
+          </div>
+          <div class="rmtext">
+            <div class="rmtext-mid">
+              <ul>
+                                  <li><a href="../../author/123269.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/42/123269.jpg" style="width:16px;" /></a> <a href="../../author/123269.html" style="display:inline;"> باران &nbsp;(504) 	            خیلی فعال و پر جنب و جوشم...اراده قوی دارم و اعتماد به نفس بالایی هم دارم.کمی زود رنجم،خصوصیت بارزم شجاعتمه.عاشق ورزشم هر جا ورز</a></li>
+                              </ul>
+            </div>
+          </div>
+          <div class="rm-bbg"></div>
+        </div>
+                                <div class="rm">
+          <div class="rmtitle">
+            <div class="rmtitle-mid">آرشیو</div>
+          </div>
+          <div class="rmtext">
+            <div class="rmtext-mid">
+              <ul>
+                                  <li><a href='../1399/9.html'> آذر 1399</a></li>
+                                  <li><a href='../1399/8.html'> آبان 1399</a></li>
+                                  <li><a href='../1399/7.html'> مهر 1399</a></li>
+                                <li><a href="../../archive.html"><b>کل آرشیوها</b></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="rm-bbg"></div>
+        </div>
+          </div>
+    <!--- e right --->
+    
+    <div class="content">
+              
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		          <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../386.html">
+                <h2>مسلمانان!مسلمانان!مسلمانی،مسلمانی</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : یکشنبه 28 آبان 1396 11:09 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">مسلمانان!مسلمانان!مسلمانی،مسلمانی</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">می دانی كه مسلمانی رسم است پیش از آنكه اسم باشد.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">می دانی كه مسلمانی نه در ماه رمضان خلاصه می شود و نه در محرم و نه در صفر.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">می دانی كه شادی و شعف و وجد در هیچ عیدی مختصر نخواهد شد ؛ و عمق این اندوه نیز نه در نهمین روز این ماه می گنجد و نه در دهمین روزِ همه ماه ها و همه سال ها و همه قرن های رفته و نیامده...&nbsp; اما به جای همه این ها كاش كاری كنی...</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">به آن دفتر پنهان در سینه ات رجوعی كن، مروری كن، ورقی بزن؛</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">نام های بسیاری در سینه داری كه می دانی از تو به سوگ نشسته اند، عزا دارشان كرده ای، عذابشان داده ای، رنج رسانده ای، زخم زده ای... از شجاعترین مولایت از سالار شهیدان مددی بخواه و یكی از آن همه نامِ خنجر خورده و زخم دیده و مجروح را صدا بزن؛ دوایی ببر، مرهمی برسان، عذری بخواه ، بخشایشی، رضایتی طلب كن... یكی از هزار شرط مسلمانی را به جا آور...یكی را فقط.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">نهصد سال پیش از این سنایی خطاب به ما گفت:</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">مسلمانان،مسلمانان، مسلمانی،مسلمانی</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">از این آیین بی دیننان پشیمانی،پشیمانی</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">مسلمانی كنون اسمیست بر عرفی و عاداتی</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">دریغا كو مسلمانی، دریغا كو مسلمانی</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><a href="https://www.instagram.com/explore/tags/%D8%B9%D8%B1%D9%81%D8%A7%D9%86_%D9%86%D8%B8%D8%B1%D8%A2%D9%87%D8%A7%D8%B1%DB%8C/" style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline; color: rgb(0, 53, 105); text-decoration-line: none;">#عرفان_نظرآهاری</a><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">&nbsp;</span>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/6.html">ادبی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../386.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(386)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../385.html">
+                <h2>گذاشتن عکس کودک در اینترنت</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : یکشنبه 28 آبان 1396 11:08 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">کالسکه که خواهر همسر واسه بچه گرفته،خیلی قدیمیه چون کالسکه جدید اینجا خیلی خیلی گرونه حدود پونصد یورو به بالا! نمی‌دونم قیمت کالسکه ایران چنده! اما کسیو ایران ندیدم چیزای دسته دوم واسه بچه بخره!</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">کلاس نداره! مردم چی میگن&nbsp;</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">ضمنا به هممون گفته اجازه عکس گرفتن از بچه من و گذاشتن توی اینترنت رو ندارید!!! فکر کنید چقدر واسشون این مسئله مهمه! البته من درک نمی‌کنم!</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">شما نظرتون راجع به گرفتن عکس از بچه و توی نت گذاشتن چیه؟</span>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/10.html">فرهنگ آلمانی و زندگی در آلمان</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../385.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(385)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../384.html">
+                <h2>حذب آ اف دی آلمان</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : یکشنبه 28 آبان 1396 11:07 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">روی این پوستر انتخاباتی«آ اف دی» نوشته شده: "برقع؟ ما بیکینی را ترجیح می‌دهیم"</span><img style="-webkit-user-select: none;background-position: 0px 0px, 10px 10px;background-size: 20px 20px;background-image:linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),linear-gradient(45deg, #eee 25%, white 25%, white 75%, #eee 75%, #eee 100%);" src="data:image/jpeg;base64,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"><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">به گفته ناظران تغییرات گسترده‌ای در فضای سیاسی آلمان در حال رخ دادن است و این فضا در حال دگرگونی است و احتمال این که حزب ضد مهاجرت و ضداسلام "آلترناتیو برای آلمان" (AfD) بتواند به پارلمان را پیدا کند بسیار بالا است. این حزب تاکنون هیچ نماینده‌ای در پارلمان نداشته است.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">نظرسنجی‌ها نشان می‌دهد که AfD در انتخابات پارلمانی امروز یکشنبه ۲۴ سپتامبر (دوم مهر) با کسب ۱۲ درصد آرا بتواند تا ۵۰ کرسی را در بوندستاگ (پارلمان آلمان) به دست آورد.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">این حزب در سال ۲۰۱۳ به عنوان حزبی ضد یورو، واحد پول اروپایی، تاسیس شد اما بعدا به حزبی تبدیل شد که با مخالفت با مهاجرت و ضدیت با اسلام شناخته می‌شد. AfD در حال حاضر در ۱۳ پارلمان محلی از ۱۶ ایالت آلمان نماینده دارد</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">بی بی سی</span>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/10.html">فرهنگ آلمانی و زندگی در آلمان</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../384.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(384)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../383.html">
+                <h2>انتخابات پارلمانی آلمان</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : یکشنبه 28 آبان 1396 11:06 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">مردم آلمان در انتخابات پارلمانی این کشور امروز به پای صندوقهای رای رفته‌اند. براساس گزارشها حوزه‌های انتخاباتی در ساعت ۸ صبح به وقت محلی (۶ گرینویچ) کار خود را آغاز کردند.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">اگر نظرسنجی‌ها درست باشد، حزب حزب حاکم دموکرات مسیحی (CDU) خانم مرکل پیروز خواهد بود و وی برای یک دوره چهارساله دیگر هم صدر اعظم آلمان خواهد شد. اما پیش‌بینی‌ها حاکی از آن است که برای اولین بار از زمان جنگ جهانی دوم، شش حزب از جمله یک حزب راستگرای افراطی به بوندستاگ (پارلمان آلمان) راه پیدا می‌کنند.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">این انتخابات برای آنگلا مرگل، صدر اعظم کنونی این کشور، آزمایشی مهم خواهد بود. اهمیت این نکته در آن است که این اولین انتخابات سراسری آلمان بعد از آن است که دولت خانم مرکل در سال ۲۰۱۵ مرزها را به روی سیل پناهجویان و مهاجران باز کرد و حدود ۹۰۰ هزار نفر را پذیرفت.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">اگرچه خانم مرکل وعده داد که دولت از پس این سیل مهاجرت برمی‌آید و در نهایت هم توانست تا حد زیادی آن را کنترل کند؛ اما ضربه‌ای که حزب خانم مرکل از نظر سیاسی خورد قابل انکار نبود. و مساله مهاجرت و پناهجویی به یکی از مهمترین مسایل انتخاباتی تبدیل شد.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">این انتخابات برای بقیه اروپا هم مهم است. آلمان به دلیل اقتصادش نقشی تعیین‌کننده در اتحادیه اروپا دارد و بودجه اتحادیه بیش از هر کشور دیگری به آلمان وابسته است.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">سیستم رای‌گیری چگونه است؟</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">هر چهار سال یک بار آلمانی‌های بالای ۱۸ سال در انتخابات بوندستاگ یا پارلمان آلمان شرکت می‌کنند. سیستم انتخابات ترکیبی پیچیده از نظام اکثریت ساده و روش نسبی توزیع آراء است.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">تعداد واجدان شرایط حدود ۶۱ و نیم میلیون نفر است که هر کدام دو رای دارند. رای اول رای مستقیم به نامزدهای حوزه‌های انتخاباتی است. رای دوم به فهرست احزاب در هر یک از ۱۶ ایالت آلمان داده می‌شود.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">هر یک از احزاب برای راه یافتن به بوندستاگ یا پارلمان فدرال آلمان باید یا پنج درصد آرا را از رای دوم کسب کنند یا سه کرسی از رای اول به دست آورد و بر این اساس، کرسی‌های پارلمان طبق فرمول خاصی به نسبت آراء ریخته شده بین احزابی که به این حد نصاب برسند تقسیم می‌شود.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">در مجموع بیش از ۴۸۰۰ کاندیدا در این انتخابات رقابت می‌کنند که ۲۹ درصدآنها زن هستند. احزاب سبز و چپ نیمی از نامزدهای خود را از میان زنان انتخاب کرده‌اند.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">سالخورده‌ترین نامزد ۸۹ سال دارد و جوانترین کاندیدا ۱۸ ساله است.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">بی بی سی</span>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/10.html">فرهنگ آلمانی و زندگی در آلمان</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../383.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(383)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../382.html">
+                <h2>خرید وسایل رایگان از فیسبوک!!!!</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : یکشنبه 28 آبان 1396 11:05 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">توی سایت فیس بوک یه قسمت مارکت داره که داخلش جنسای رایگان هم هست! شما فقط باید برید وجنسو بیارید! نیاز به پرداخت نیست!&nbsp;</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">چقدر خوب...</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">دارم فکر میکنم چقدر خوب میشد هرکسی هرچیزی رو که نیاز نداره به رایگان به بقیه بده یا عوض کنه... هر کدوم از ما چقدر وسایل اضافی داخل خونمون دادیم؟... چیزایی که فقط گذاشتیم داخل جعبه و سالی یه بار یه نگاه بهشون میندازیم...</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">و چقدر بارمونو اضافه می‌کنند این وسایل بی مصرف!&nbsp;</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">و هر کدوم از ما چقدر وسایلی رو نگه میداریم که خیلیای دیگه بهشون نیاز دارند؟...</span>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/10.html">فرهنگ آلمانی و زندگی در آلمان</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../382.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(382)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../381.html">
+                <h2>wandergeselle واندرگسله</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : یکشنبه 28 آبان 1396 10:52 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;"><img style="-webkit-user-select: none;background-position: 0px 0px, 10px 10px;background-size: 20px 20px;background-image:linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),linear-gradient(45deg, #eee 25%, white 25%, white 75%, #eee 75%, #eee 100%);" src="data:image/jpeg;base64,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"></span></div><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">امروز راجع به واندر گسله یاد گرفتم ‌</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">wandergeselle</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">واندرگسله به چه کسانی میگن؟</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">اینها گروهی از مردم هستند که بعد از گذراندن دوره آموزشی یه کار دستی،از شهر به شهر میرند و کار میکنند و درآمد کسب میکنند. این گروه از مردم شغل هایی که با دست انجام میشن،مثل نجاری،کارهای تعمیراتی،ساختن آلات موسیقی،خوانندگی و... رو انجام میدند. لباسشون همینه که توی تصویر می‌بینید. البته لباس هر شغلی متفاوته...</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">پیشینه این شغل به پانصد سال قبل بر میگرده....</span>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/10.html">فرهنگ آلمانی و زندگی در آلمان</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../381.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(381)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../380.html">
+                <h2>تفاوت فرهنگی ایران و آلمان 2 </h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : یکشنبه 28 آبان 1396 10:51 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">چقدر تفاوت! از زمین تا آسمونه تفاوت فرهنگی کشور ما و اینجا!! دخترا اینجا با مردی که دوست دارند زندگی می‌کنه و هنوز ازدواج نکرده باردار میشن و هیچ کسی به جامعه ‌و خانوادش جواب پس نمیده چون این انتخاب رو خودشون کردند،پس باید پای انتخابشون بایستند! اینجا تفاوتی بین دختر و پسر قایل نمیشن! حق و حقوق بچه ها توی خانواده به یه اندازست! و حالا دخترای سرزمینم که همیشه یه فاصله زیاد با مردا داشتند.... اجازه انتخاب همسر آیندشون رو نداشتند...</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">چند وقت پیش پدر دوست پسر خواهر همسر&nbsp; ازش خواسته که پدر مادرش رو ببینه و با هم آشنا بشن،گفته که باید زودتر از به دنیا اومدن بچه همو بشناسند!!!و توی بیمارستان موقع به دنیا اومدن بچه همو از قبل شناخته باشن</span> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/10.html">فرهنگ آلمانی و زندگی در آلمان</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../380.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(380)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../379.html">
+                <h2>kinder fluhmarkt فلومارکت بچه ها</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : یکشنبه 28 آبان 1396 10:48 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <img style="-webkit-user-select: none;background-position: 0px 0px, 10px 10px;background-size: 20px 20px;background-image:linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),linear-gradient(45deg, #eee 25%, white 25%, white 75%, #eee 75%, #eee 100%);" src="https://image.jimcdn.com/app/cms/image/transf/none/path/sfb1c38a1156acc8a/image/id2df108d1dee38bb/version/1391491869/image.jpg"><span style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;">با خواهرای همسر اومدیم فلومارکت لباس و اسباب بازی بچه واسه نی نی هاشون خیلی از مردم وسایل دسته دوم میخرند چون معتقدن تا یه مدت محدودی میتونن ازش استفاده کنند! قیمتها خیلی مناسبه و به نظرم خیلی فکر خوبیه وسایل دسته دوم واسه بچه ها،مثلا اون صندلی ماشین سی یورو بود قیمتش بود. صد و بیست تومن. اگر بخواین اینو نو بخرین سه چهار برابره قیمتش</span>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/10.html">فرهنگ آلمانی و زندگی در آلمان</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../379.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(379)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../378.html">
+                <h2>کادوی تولدم</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : یکشنبه 28 آبان 1396 10:47 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 با&nbsp;<span style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;">مادربزرگ همسر اومدیم خرید میخواد واسه تولدم یه چی بخره و گفته خودم میتونم انتخاب کنم&nbsp; انتخاب سخته نظر مادربزرگ جان اینه که یه وسیله آشپزی بخرم. مادربزرگه دیگه</span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/2.html">بعد ازدواجمون</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../378.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(378)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../377.html">
+                <h2>fluhmarkt بازار فول مارکت،فروش وسایل قدیمی</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : یکشنبه 28 آبان 1396 10:45 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <img style="-webkit-user-select: none;background-position: 0px 0px, 10px 10px;background-size: 20px 20px;background-image:linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),linear-gradient(45deg, #eee 25%, white 25%, white 75%, #eee 75%, #eee 100%);cursor: zoom-in;" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Dresden_Flohmarkt_Elbwiese.jpg" width="849" height="637"><span style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;">فلومارکت،بازار وسایل دسته دوم،یه عالمه چیزای خوشگل میشه اینجا پیدا کرد من که میتونم ساعت ها اینجا بگردم و خسته نشم </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/10.html">فرهنگ آلمانی و زندگی در آلمان</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../377.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(377)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                    
+      <!--- e bodypost --->
+      
+            <!--- e barge ---->
+      
+              <div class="paper">
+          <div class="paper-tbg"></div>
+          <div class="paper-text">
+            <div class="paper-text-mid"> تعداد کل صفحات : 2               <a href="8/page/1.html"> <b>1</b></a>  <a href="8/page/2.html"> <span>2</span></a>               <div style="clear:both"></div>
+            </div>
+          </div>
+          <div class="paper-bbg"></div>
+        </div>
+            
+      <!--- e paper --->
+      
+      <style>
+
+.text100 , .text100 a{color: #000000;font-size: 8pt;text-transform: none;}
+.text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+.text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+.com{width: 100%;float: left;background-color: #ECECEC;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;margin: 10px auto;padding: 0 0 10px 0;}
+.com a { text-decoration: none;}
+.com1{width: 98%;float: left;background-color: #D9D9D9;	-webkit-border-radius: 5px;	-moz-border-radius: 5px;border-radius: 5px;margin: 10px 20px 0 10px;padding: 0 0 3px 0;}
+.com3{ width:50%; float:left; text-align:right; direction:rtl; line-height:27px;}
+.com2{ width:30%px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+.com4{ width:96%; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:12px;}
+.com5{width: 96%;float: left;background-color: #E9E9E9; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;margin: 3px 3px 0 3px;
+	padding: 7px;direction: rtl;	text-align: right;-moz-box-shadow: inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;	box-shadow: inset #444 0px 0px 5px;
+	font-size: 12px;}
+.com6{ width:97%; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+.com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+.comment_form .comment_form_msg {background: none repeat scroll 0 0 #F6F6F6;border: 1px solid #E6E6E6; margin: 5px;    padding: 5px;}
+</style>
+          </div>
+    <!--- e content --->
+    
+    <div class="left">
+      <div class="lm">
+        <div class="lmtitle">
+          <div class="lmtitle-mid">جستجو در وبلاگ</div>
+        </div>
+        <div class="lmtext">
+          <div class="lmtext-mid">
+            <form id="frm-16079573705fd77b7a9b116" method="get" action="http://zendegimoon.mihanblog.com/post/search/fid/16079573705fd77b7a9b116"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+              <input type="text" name="search_text"/>
+              <input type="submit" value="جستجو"/>
+            <input type="hidden" name="frm-id" value="16079573705fd77b7a9b116" id="frm-id" /></form>          </div>
+        </div>
+        <div class="lm-bbg"></div>
+      </div>
+              <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">تازه ترین مطالب</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                                  <li><a href="../../544.html" title="چهارشنبه 5 آذر 1399"> پیش بینی آینده... </a></li>
+                                  <li><a href="../../543.html" title="دوشنبه 3 آذر 1399"> از شیر گرفتن آقا پسر </a></li>
+                                  <li><a href="../../542.html" title="شنبه 24 آبان 1399"> قبل از آشنایی با همسر </a></li>
+                                <li><a href="../../list.html">لیست تمام مطالب</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+                    <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid"> لینک های روزانه </div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                                  <li><a href="http://behzadwin.blogsky.com/" title="" target="_blank">مخمور جام عشق</a> </li>
+                                  <li><a href="http://mamooli.persianblog.ir/" title="" target="_blank">یه دختر معمولی با یه زندگی معمولی</a> </li>
+                                  <li><a href="http://elmiradad.blogfa.com/" title="" target="_blank">روزگار تلخ و شیرین من در غربت</a> </li>
+                                  <li><a href="http://tanhaian.persianblog.ir/" title="" target="_blank">دل نوشته های من در غربت</a> </li>
+                                  <li><a href="http://khateratemanca.blogfa.com/" title="" target="_blank">زندگی من در غربت</a> </li>
+                                  <li><a href="http://www.cafealone.com" title="شعر,مینیمال,جملات فلسفی,داستان کوتاه" target="_blank">کافه تنهایی</a> </li>
+                                  <li><a href="http://dinon.ir/" title="" target="_blank">آمــوزش و پاسخگــویی به سوالات علــوم کامپیوتــر</a> </li>
+                                  <li><a href="http://66darjostojoo.blogfa.com/" title="" target="_blank">در جست و جو</a> </li>
+                                  <li><a href="http://pzi.parsiblog.com/" title="" target="_blank">..••●●ساعت به وقت غربت●●••..</a> </li>
+                                  <li><a href="http://moalem-ko0cho0lo0.blogfa.com/" title="" target="_blank">خاطرات معلم کــوچــولــو 1</a> </li>
+                                <li><a href="../../../linkdaily/index.html"><b>همه لینکها</b></a></li>
+                <li><a href="javascript:linkdailyForm()"><b>ارسال لینک</b></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+            
+		<form id="frm-16079573705fd77b7a9b8df" method="post" action="http://zendegimoon.mihanblog.com/poll/new/fid/16079573705fd77b7a9b8df/atrty/1607957370/avrvy/0/key/d25d9e6b4b61adf7052ae5cfb25bef8c/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="356955" id="data[pollid]" />		
+        <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">نظرسنجی</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid"> دوست دارین بیشتر راجع به چی بنویسم؟<br>
+               <label><input type="radio" name="data[answer]" value="v1">فرهنگ آلمانی</label><br>
+               <label><input type="radio" name="data[answer]" value="v2">زندگی در آلمان</label><br>
+               <label><input type="radio" name="data[answer]" value="v3">ویزا و مراحل اداری ازدواج</label><br>
+               <label><input type="radio" name="data[answer]" value="v4">زندگی با همسرم در آلمان</label><br>
+                            <input type="submit" value="ثبت"/>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+      
+		<input type="hidden" name="frm-id" value="16079573705fd77b7a9b8df" id="frm-id" /></form>              <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">دوستان</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                <li><a href="http://cafeskin.blogfa.com/">قالب وبلاگ</a></li>
+                                  <li> <a href="http://deutschlernen1.blogsky.com/" title=""  target="_blank"> بزرگترین سایت کتب و پادکست های زبان آلمانی</a></li>
+                                  <li> <a href="http://mamoolii.blogsky.com" title=""  target="_blank"> یه دختر معمولی با یه زندگی معمولی</a></li>
+                                  <li> <a href="http://mamoolii.blogsky.com" title=""  target="_blank"> یه دختر معمولی با یه زندگی معمولی 2</a></li>
+                                  <li> <a href="http://travle.blogsky.com/" title=""  target="_blank"> سفر - کوچ سرفینگ - تجربه متفاوت</a></li>
+                                  <li> <a href="http://aalmaan.blogfa.com/" title=""  target="_blank"> یادداشت‌های پراکنده در مورد آلمان</a></li>
+                                  <li> <a href="http://studieindeutsch.blogspot.com" title=""  target="_blank"> مهاجرت،تحصیل و زندگی در آلمان</a></li>
+                                  <li> <a href="http://moalem-ko0cho0lo0.blogsky.com/" title=""  target="_blank"> خاطرات معلم کــوچــولــو 2</a></li>
+                                  <li> <a href="http://www.mehditravel87.blogfa.com/" title=""  target="_blank"> سفر به کل دنیا با دوچرخه</a></li>
+                                  <li> <a href="http://wonderland.blog.ir/" title=""  target="_blank"> آزاده در سرزمین عجایب</a></li>
+                                  <li> <a href="http://bluecardgermany.blogsky.com/" title=""  target="_blank"> اقامت کاری کشور آلمان</a></li>
+                                  <li> <a href="http://leiligermany.blogsky.com/" title=""  target="_blank"> زندگی پر از خاطره است</a></li>
+                                  <li> <a href="http://habibashtari.blogfa.com/" title=""  target="_blank"> سفر به دنیا با دوچرخه</a></li>
+                                  <li> <a href="http://booyehbehesht.niniweblog.com/" title=""  target="_blank"> ♡ ♡ بوی بهشت ♡ ♡</a></li>
+                                  <li> <a href="http://weineurope.blogsky.com/" title=""  target="_blank"> من و همسرم در اروپا</a></li>
+                                  <li> <a href="http://ebrahimnejad.persianblog.ir/" title=""  target="_blank"> یک ایرانی در بوستون</a></li>
+                                  <li> <a href="http://aroshayeasemani.persianblog.ir/" title=""  target="_blank"> عروس های آسمانی</a></li>
+                                  <li> <a href="http://bhb.blogfa.com/" title=""  target="_blank"> بلندی های بادگیر</a></li>
+                                  <li> <a href="http://mennomen.mihanblog.com" title=""  target="_blank"> my white house</a></li>
+                                  <li> <a href="http://www.mybabydream.blogfa.com/" title=""  target="_blank"> رویای کودکی من</a></li>
+                                  <li> <a href="http://delavarenoor.persianblog.ir/" title=""  target="_blank"> از رویا تا واقعیت</a></li>
+                                <li><a href="../../../link/index.html"><b>همه لینکها</b></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+            <div class="lm">
+        <div class="lmtitle">
+          <div class="lmtitle-mid">لینک های مفید</div>
+        </div>
+        <div class="lmtext">
+          <div class="lmtext-mid"> 
+            <!--- Start links  ----><ul>
+<li><a href="http://wallz.ir/" target="_blank" title="گرافیک">والز</a></li>
+<li><a href="http://kiosk724.ir/" target="_blank" title="کتاب و مجله الکترونیکی">کیوسک 724</a></li>
+<li><a href="http://sitesetup.ir/" target="_blank" title="طراحی سایت و قالب وبلاگ">سایت ستاپ</a></li>
+<li><a href="http://theme.sitesetup.ir/" target="_blank" title="قالب حرفه ای وبلاگ">قالب وبلاگ حرفه ای</a></li>
+</ul> <!--- End links  ---->  
+          </div>
+        </div>
+        <div class="lm-bbg"></div>
+      </div>
+      <div class="lm">
+        <div class="lmtitle">
+          <div class="lmtitle-mid">ابزارک های وبلاگ</div>
+        </div>
+        <div class="lmtext">
+          <div class="lmtext-mid"> <br>
+            <a href="http://cafeskin.blogfa.com/">قالب وبلاگ</a><br>
+            <br>
+                          <ul>
+                <li>کل بازدید:<script>getStatVar('total_view');</script></li>
+                <li>بازدید امروز :<script>getStatVar('today_view');</script></li>
+                <li>یازدید دیروز : <script>getStatVar('yesterday_view');</script></li>
+                <li>بازدید این ماه : <script>getStatVar('this_month_view');</script></li>
+                <li>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></li>
+                <li>تعداد نویسندگان : <script>getStatVar('total_author');</script></li>
+                <li>تعداد کل مطالب : <script>getStatVar('total_post');</script></li>
+                <li>آخرین بازدید : <script>getStatVar('last_view_date');</script></li>
+                <li>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></li>
+              </ul>
+                        <br>
+            <div style="text-align:center;"> <!-- Begin https://dornamusic.com -->
+<center><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><audio style="width:100%" controls autoplay loop><source src="http://s.dornamusic.com/mp3/17/4/26/Reza-Sadeghi-Man-Ba-Toam-128-DornaMusic.Com.mp3" type="audio/mpeg" /></audio></br>
+<a title="دانلود آهنگ جدید من با توام – رضا صادقی" target="_blank" href="https://dornamusic.com/songs/reza-sadeghi-man-ba-toam/">دانلود آهنگ جدید من با توام – رضا صادقی</a></center>
+<!-- End https://dornamusic.com -->
+
+
+
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=3660612&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=3660612" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code --> </div>
+          </div>
+        </div>
+        <div class="lm-bbg"></div>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+    <!--- e left --->
+    
+    <div style="clear:both"></div>
+  </div>
+  <!--- e main --->
+  
+  <div class="footer">
+    <div class="footer-mid">تمام حقوق وبلاگ متعلق به نویسنده‌ی آن می باشد :: <a href="http://cafeskin.blogfa.com/"> قالب وبلاگ: کافه اسکین</a> 
+      <!--- برای حفظ حقوق طراح قالب لطفا نام و آدرس طراح را تغییر نداده و پاک نفرمایید. سپاس ---> 
+    </div>
+  </div>
+  <!--- e footer ---> 
+  
+</div>
+<!--- e page --->
+
+</body>
+</html>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'zendegimoon.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

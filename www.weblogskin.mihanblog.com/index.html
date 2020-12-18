@@ -1,0 +1,811 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://weblogskin.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('یکشنبه 23 آذر 1399');
+		/*584634*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[19]='14';commentCnt[20]='13';commentCnt[21]='53';commentCnt[22]='130';commentCnt[23]='272';commentCnt[25]='83';commentCnt[26]='20';commentCnt[27]='31';commentCnt[28]='306';commentCnt[30]='31';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','27');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','پنجشنبه 18 تیر 1394');
+	
+	setStatVar('today_view','30');
+	setStatVar('yesterday_view','170');
+	
+	setStatVar('this_month_view','3551');
+	setStatVar('last_month_view','4031');
+
+	setStatVar('total_view','2567528');
+	setStatVar('last_view_date','یکشنبه 23 آذر 1399 (06:14)');
+
+
+
+    
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://weblogskin.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="../weblogskin.mihanblog.com/'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://weblogskin.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://weblogskin.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://weblogskin.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://weblogskin.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://weblogskin.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://weblogskin.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://weblogskin.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://weblogskin.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://weblogskin.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://weblogskin.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://weblogskin.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://weblogskin.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://weblogskin.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://weblogskin.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://weblogskin.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="Theme Designer" content="www.weblogskin.mihanblog.com">
+
+<meta name="description" content="کدهای قالب میهن بلاگ ، بلاگفا ، پرشین بلاگ ، بلاگ اسکای ، کد جاوا اسکریپت ساعت ، کد جاوا آمارگیر ، قالب میهن بلاگ ، کد آهنگ وبلاگ ، کد موزیک وبلاگ و وب سایت ، آموزش کامل وبلاگ نویسی ، کد های اوقات شرعی ، قالب های هنری ، مذهبی ، کلاسیک ، قالب ساده و سبک ، قالب عاشقانه و ورزشی ، ترفند های وبلاگ نویسی و اینترنتی ، کد فال و حدیٍث ، ابزار رایگان وبمستر ها ، دیکشنری آنلاین ، رتبه سنج گوگل ، کد لودینگ صفحه ، چت روم در وبلاگ - mihanblog ، blogfa ، blogsky ، persianblog"/>
+<meta name="keywords" content="قالب وبلاگ میهن بلاگ بلاگفا کد جاوا اسکریپت ، کد آهنگ و موزیک ، آموزش وبلاگ نویسی ، ابزار رایگان وبمستر ها"/> 
+<link href="http://aks-man.persiangig.com/weblogskin/favicon.ico" rel="shortcut icon">
+<link rel="alternate" type="application/rss+xml" title="قالب و کد وبلاگ رایگان" href="http://weblogskin.mihanblog.com/post/rss/" />
+<link rel="alternate" type="application/atom+xml" title="قالب و کد وبلاگ رایگان" href="http://weblogskin.mihanblog.com/post/atom/" />
+
+<script src="http://aks-man.persiangig.com/weblogskin/script.js" language="javascript"></script>
+<title>قالب و کد وبلاگ رایگان</title>
+<script type="text/javascript" src="http://aks-man.persiangig.com/weblogskin/menu-files/stmenu.js"></script>
+
+</head>
+
+<body>
+
+<div align="center">
+<table border="0" width="100%" height="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;</td>
+<td class=div2>
+<div class=div00>
+
+<div class=div60>
+<div class=div101>
+<table style="width:800px"><tr>
+<td align="top" dir="rtl"><font class=title>قالب و کد وبلاگ رایگان</font>  </td>
+<td align="center"> <img src="http://aks-man.persiangig.com/weblogskin/weblogskin-logo.gif" alt="سایت طراحی قالب و کد های جاوا اسکریپت"/>
+
+</td>
+</tr></table>
+
+</div>
+<div class=div11>
+<div class=div12><font class=des></font></div></div>
+</div>
+
+<div class=ss>
+<div class=s1><form id="frm-16075924335fd1e9f1b6a7a" method="get" action="http://weblogskin.mihanblog.com/post/search/fid/16075924335fd1e9f1b6a7a"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+<div class=s2>
+<input type="text" name="search_text" size="20" style="border: 0px none; background: none; font-family:Tahoma; font-size:9pt; direction:ltr"></div>
+<div class=s3><input type="image" src="http://mythemes.ir/t31/blank.gif" width=22 height=21 value="جستجو"></div>
+<input type="hidden" name="frm-id" value="16075924335fd1e9f1b6a7a" id="frm-id" /></form></div>
+
+<div class=s4>
+<div class=s5><font class=text10>
+<a href="index.html">صفحه نخست</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="javascript:messageForm()">تماس با مدیر</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="mailto:">پست الکترونیک</a>&nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="http://weblogskin.mihanblog.com/post/rss/">RSS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<a href="http://weblogskin.mihanblog.com/post/atom/">ATOM</a></font></div></div>
+</div>
+
+<div class=mdiv17></div>
+
+<div class=mdiv170>
+<img src="http://aks-man.persiangig.com/weblogskin/weblogskin.mihanblog.gif"/>
+<div class=mdiv24>
+<div class=mdiv35>
+<div class=mdiv25><font class=text5>درباره وبلاگ</font></div></div>
+<div class=sm></div>
+<div class=mdiv341>
+<div class=mdiv31><center><br><br>
+<font class=text1>تهیه و انتشار قالب های رایگان برای میهن بلاگ ، بلاگفا ، پرشین بلاگ ، بلاگ اسکای و ... کدهای جاوا اسکریپت ساعت ، آمار گیر ، وضعیت یاهو ، اوقات شرعی ، آموزش تصویری وبلاگ نویسی و تغییر قالب ... کدهای موزیک و آهنگ وبلاگ ، ابزار رایگان وبمستر ها</center><br>
+	<b>مدیر وبلاگ :</b> <a href="http://weblogskin.mihanblog.com/post/author/85530">ایرانی </a></font></div>
+</div><div class=mdiv30></div>
+</div>
+
+<div class=mdiv24>
+<div class=mdiv35>
+<div class=mdiv25><font class=text5>مطالب اخیر</font></div></div>
+<div class=sm></div>
+<div class=mdiv341><font class=text1><ul>
+<li><a href="http://weblogskin.mihanblog.com/post/30">کد تصادفی عکس و تصویر وب سایت</a></li><li><a href="http://weblogskin.mihanblog.com/post/28">آموزش کامل و گام به گام قرار دادن آهنگ و موزیک در وبلاگ</a></li><li><a href="http://weblogskin.mihanblog.com/post/27">قالب وبلاگ رویایی ، هنری و پسرانه</a></li><li><a href="http://weblogskin.mihanblog.com/post/26">قالب وبلاگ آبی آسمانی فیروزه ای ( بلاگفا - پرشین بلاگ )</a></li><li><a href="http://weblogskin.mihanblog.com/post/25">کد تغییر نشانگر موس بازدید کنندگان وبلاگ </a></li><li><a href="http://weblogskin.mihanblog.com/post/23">قالب وبلاگ عاشقانه و قرمز رنگ ( my love عشق من )</a></li><li><a href="http://weblogskin.mihanblog.com/post/22">قالب وبلاگ شاد ، دخترانه ، فانتزی ، عروسکی</a></li><li><a href="http://weblogskin.mihanblog.com/post/21">کد جاوا اسکریپت قطرات شبنم در وبلاگ و سایت</a></li><li><a href="http://weblogskin.mihanblog.com/post/20">نمایش رتبه سنج گوگل در وبلاگ و وبسایت</a></li><li><a href="http://weblogskin.mihanblog.com/post/19">قالب هنری میهن بلاگ و پرشین بلاگ</a></li><li><a href="http://weblogskin.mihanblog.com/post/18">قالب وبلاگ فوق حرفه ای و زیبا</a></li><li><a href="http://weblogskin.mihanblog.com/post/17">قالب زیبای هنری دکوراسیون و نقاشی</a></li><li><a href="http://weblogskin.mihanblog.com/post/16">قالب مشکی و هنری عاشقانه ( میهن بلاگ - بلاگفا )</a></li><li><a href="http://weblogskin.mihanblog.com/post/15">قالب وبلاگ مخصوص طراحان و نقاشان ( مدادرنگی )</a></li><li><a href="http://weblogskin.mihanblog.com/post/14">کد ساعت عقربه ای برای وبلاگ و وبسایت  - سری سوم</a></li></ul></font></div><div class=mdiv30></div>
+</div>
+<div class=mdiv24>
+<div class=mdiv35>
+<div class=mdiv25><font class=text5>آرشیو وبلاگ</font></div></div>
+<div class=sm></div>
+<div class=mdiv341><font class=text1><ul>
+<li><a href="http://weblogskin.mihanblog.com/post/archive/1394/4"> تیر 1394</a></li><li><a href="http://weblogskin.mihanblog.com/post/archive/1390/3"> خرداد 1390</a></li><li><a href="http://weblogskin.mihanblog.com/post/archive/1390/2"> اردیبهشت 1390</a></li><li><b><a href="http://weblogskin.mihanblog.com/post/archive">آرشیو كل مطالب</a></b></li>
+</ul></font></div><div class=mdiv30></div>
+</div>
+<div class=mdiv24>
+<div class=mdiv35>
+<div class=mdiv25><font class=text5>نویسندگان</font></div></div>
+<div class=sm></div>
+<div class=mdiv341><font class=text1><ul>
+<li><a href="http://weblogskin.mihanblog.com/post/author/85530">ایرانی  (27)</a></li></ul></font></div><div class=mdiv30></div>
+</div>
+
+		
+<div class=mdiv24>
+<div class=mdiv35>
+<div class=mdiv25><font class=text5>برچسبها</font></div></div>
+<div class=sm></div>
+<div class=mdiv341><font class=text1><ul>
+<li><a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%B4%D9%86%DA%AF%D8%AA%D8%B1%DB%8C%D9%86+%D9%82%D8%A7%D9%84%D8%A8+%D9%87%D8%A7%DB%8C+%D9%88%D8%A8%D9%84%D8%A7%DA%AF+%D8%B1%D8%A7%DB%8C%DA%AF%D8%A7%D9%86">قشنگترین قالب های وبلاگ رایگان</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8+%D9%88%D8%A8%D9%84%D8%A7%DA%AF+%D8%A8%D8%A7+%D8%B9%DA%A9%D8%B3+%D8%B2%D9%85%DB%8C%D9%86%D9%87+%D8%AB%D8%A7%D8%A8%D8%AA">قالب وبلاگ با عکس زمینه ثابت</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8+%D9%85%DB%8C%D9%87%D9%86+%D8%A8%D9%84%D8%A7%DA%AF+%D8%B2%DB%8C%D8%A8%D8%A7+%D9%88+%D9%87%D9%86%D8%B1%DB%8C">قالب میهن بلاگ زیبا و هنری</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8+%D8%B9%D8%B4%D9%82%D9%88%D9%84%D8%A7%D9%86%D9%87+%D9%88+%D8%B9%D8%B4%D9%82%DB%8C">قالب عشقولانه و عشقی</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8+%D9%88%D8%A8%D9%84%D8%A7%DA%AF+%D8%B1%D8%A7%DB%8C%DA%AF%D8%A7%D9%86+%D9%BE%D8%B3%D8%B1%D8%A7%D9%86%D9%87">قالب وبلاگ رایگان پسرانه</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%D9%86%D8%AD%D9%88%D9%87+%D9%82%D8%B1%D8%A7%D8%B1+%D8%AF%D8%A7%D8%AF%D9%86+%D8%A2%D9%87%D9%86%DA%AF+%D9%88+%D9%85%D9%88%D8%B2%DB%8C%DA%A9+%D8%AF%D8%B1+%D9%88%D8%A8%D8%B3%D8%A7%DB%8C%D8%AA">نحوه قرار دادن آهنگ و موزیک در وبسایت</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF+%D8%B9%D9%88%D8%B6+%DA%A9%D8%B1%D8%AF%D9%86+%D9%88+%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1+%D9%86%D8%B4%D8%A7%D9%86%DA%AF%D8%B1+%D9%85%D9%88%D8%B3+%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%A7%D9%86">کد عوض کردن و تغییر نشانگر موس کاربران</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/fgh%27+nojvhki+ahn">fgh' nojvhki ahn</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/galeb+abi+firozei+blogfa">galeb abi firozei blogfa</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/code+java+script+mouse">code java script mouse</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8+%D9%88%D8%A8%D9%84%D8%A7%DA%AF+%D9%82%D9%84%D8%A8+%D9%88+%D8%AF%D9%84+%D9%82%D8%B1%D9%85%D8%B2">قالب وبلاگ قلب و دل قرمز</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%D8%B2%DB%8C%D8%A8%D8%A7%D8%AA%D8%B1%DB%8C%D9%86+%DA%A9%D8%AF+%D9%87%D8%A7%DB%8C+%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA+%D9%85%D8%B1%D8%A8%D9%88%D8%B7+%D8%A8%D9%87+%D9%85%D9%88%D8%B3">زیباترین کد های اسکریپت مربوط به موس</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8+%D9%88%D8%A8%D9%84%D8%A7%DA%AF+%D8%AE%D9%88%D8%B4%DA%AF%D9%84+%D8%A8%D8%A7+%D8%B9%DA%A9%D8%B3+%D9%85%D8%AA%D8%AD%D8%B1%DA%A9">قالب وبلاگ خوشگل با عکس متحرک</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/galeb+royayi">galeb royayi</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8+%D9%BE%D8%A7%D8%B1%D8%B3%DB%8C+%D8%A8%D9%84%D8%A7%DA%AF">قالب پارسی بلاگ</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%D8%B2%DB%8C%D8%A8%D8%A7%D8%AA%D8%B1%DB%8C%D9%86+%D9%88+%D8%AE%D9%88%D8%B4%DA%AF%D9%84+%D8%AA%D8%B1%DB%8C%D9%86+%D9%82%D8%A7%D9%84%D8%A8+%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA">زیباترین و خوشگل ترین قالب اینترنت</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF+%D9%87%D8%A7%DB%8C+%D9%85%D9%88%D8%B4%D9%88%D8%A7%D8%B1%D9%87">کد های موشواره</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF+%D9%82%D8%B1%D8%A7%D8%B1+%D8%AF%D8%A7%D8%AF%D9%86+%D8%A2%D9%87%D9%86%DA%AF+%D8%AF%D8%B1+%D9%88%D8%A8%D9%84%D8%A7%DA%AF">کد قرار دادن آهنگ در وبلاگ</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/galeb+gashang+ehsasi+va+royayi">galeb gashang ehsasi va royayi</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/galeb+weblog+dokhtaraneh">galeb weblog dokhtaraneh</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/cod+java+skirpt+mose">cod java skirpt mose</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/galeb+weblog+pesaraneh">galeb weblog pesaraneh</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/galeb+mu+love">galeb mu love</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8+%D8%B3%D8%A7%D8%AF%D9%87+%D9%87%D9%86%D8%B1%DB%8C+%D9%BE%D8%B1%D8%B4%DB%8C%D9%86+%D8%A8%D9%84%D8%A7%DA%AF">قالب ساده هنری پرشین بلاگ</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8+%D9%88%D8%A8%D9%84%D8%A7%DA%AF+%D8%B1%D8%A7%DB%8C%DA%AF%D8%A7%D9%86+%D8%AE%D9%88%D8%B4%DA%AF%D9%84+%D9%88+%D8%B1%D9%88%D8%A8%D8%A7%D9%86+%D9%82%D8%B1%D9%85%D8%B2">قالب وبلاگ رایگان خوشگل و روبان قرمز</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/galeb+asheganeh+va+galb+del">galeb asheganeh va galb del</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8+%D9%88%D8%A8%D9%84%D8%A7%DA%AF+%D8%B9%D8%B4%D9%82+%D9%85%D9%86+my+love">قالب وبلاگ عشق من my love</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4+%DA%A9%D8%A7%D9%85%D9%84+%D9%82%D8%B1%D8%A7%D8%B1+%D8%AF%D8%A7%D8%AF%D9%86+%D8%A2%D9%87%D9%86%DA%AF+%D8%AF%D8%B1+%D9%88%D8%A8%D9%84%D8%A7%DA%AF">آموزش کامل قرار دادن آهنگ در وبلاگ</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%3Bn+hs%3Bvd%5Cj+kahk%27v">;n hs;vd\j kahk'v</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/rhgf">rhgf</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8+%D9%88%D8%A8%D9%84%D8%A7%DA%AF+%D9%81%DB%8C%D8%B1%D9%88%D8%B2%D9%87+%D8%A7%DB%8C+%D8%A8%D9%84%D8%A7%DA%AF%D9%81%D8%A7">قالب وبلاگ فیروزه ای بلاگفا</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%D9%BE%D8%AE%D8%B4+%D9%85%D9%88%D8%B3%DB%8C%D9%82%DB%8C+%D9%88+%D9%85%D8%AF%D8%A7%D8%AD%DB%8C+%D8%AF%D8%B1+%D9%88%D8%A8%D9%84%D8%A7%DA%AF">پخش موسیقی و مداحی در وبلاگ</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/ghaleb+weblag+shad+va+fantezi">ghaleb weblag shad va fantezi</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF+%D9%87%D8%A7%DB%8C+%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA+%D9%85%D8%A7%D9%88%D8%B3">کد های اسکریپت ماوس</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF+%D9%85%D9%88%D8%B2%DB%8C%DA%A9+%D9%88+%D8%AA%D8%B1%D8%A7%D9%86%D9%87+%D8%AF%D8%B1+%D9%88%D8%A8%D9%84%D8%A7%DA%AF">کد موزیک و ترانه در وبلاگ</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF+%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1+%D9%86%D8%B4%D8%A7%D9%86%DA%AF%D8%B1+%D9%85%D9%88%D8%B3">کد تغییر نشانگر موس</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/galeb+kodakaneh+va+khoshgel">galeb kodakaneh va khoshgel</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF+%D9%85%D9%88%D8%B3">کد موس</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8+%D9%88%D8%A8%D9%84%D8%A7%DA%AF+%D8%B2%DB%8C%D8%A8%D8%A7+%D9%88+%D8%B1%D9%88%DB%8C%D8%A7%DB%8C%DB%8C">قالب وبلاگ زیبا و رویایی</a></li><li><a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8+%D9%88%D8%A8%D9%84%D8%A7%DA%AF+%D8%B3%D8%A7%D8%AF%D9%87+%D8%A2%D8%A8%DB%8C+%D8%B1%D9%86%DA%AF">قالب وبلاگ ساده آبی رنگ</a></li></ul></font></div><div class=mdiv30></div>
+</div>
+</div>
+
+<div class=div20>
+<!----------------------------------------------------------------------------->
+<script type="text/javascript">
+<!--
+stm_bm(["menu0a5b",970,"http://aks-man.persiangig.com/weblogskin/menu-files/","blank.gif",0,"","",1,0,250,0,1000,1,0,0,"","",0,0,1,2,"default","hand","",1,25],this);
+stm_bp("p0",[0,4,0,0,0,0,0,0,100,"",-2,"",-2,50,0,0,"#999999","transparent","",3,0,0,"#000000","",-1,-1,0,"","",3,"",20,8,0,"","right.gif",3,"",-1,-1,0,"","",3,"left.gif",40,8,0,"","left.gif",3,"","","","",20,20,20,20,20,20,20,20]);
+stm_ai("p0i0",[0,"پارسی بلاگ","","",-1,-1,0,"http://www.weblogskin.mihanblog.com/extrapage/parsiblog","_blank","","قالب های وبلاگ مخصوص پارسی بلاگ","","",0,0,0,"","",0,0,0,1,1,"#66CC66",1,"#66CC66",1,"mainmenuout-middle.gif","mainmenuover-middle.gif",1,1,0,0,"#009900","#009900","#000000","#333333","8pt Tahoma","8pt Tahoma",0,0,"mainmenuout-left.gif","mainmenuover-left.gif","mainmenuout-right.gif","mainmenuover-right.gif",20,20,40],100,40);
+stm_aix("p0i1","p0i0",[0,"بلاگ اسکای","","",-1,-1,0,"http://www.weblogskin.mihanblog.com/extrapage/blogsky","_blank","","قالب های وبلاگ مخصوص بلاگ اسکای"],106,40);
+stm_aix("p0i2","p0i0",[0,"پرشین بلاگ","","",-1,-1,0,"http://www.weblogskin.mihanblog.com/extrapage/persianblog","_blank","","قالب های وبلاگ مخصوص پرشین بلاگ"],100,40);
+stm_aix("p0i3","p0i0",[0,"بلاگفا","","",-1,-1,0,"http://www.weblogskin.mihanblog.com/extrapage/blogfa","_blank","","قالب های وبلاگ مخصوص بلاگ فا"],100,40);
+stm_aix("p0i4","p0i0",[0,"میهن بلاگ","","",-1,-1,0,"http://www.weblogskin.mihanblog.com/extrapage/mihanblog","_blank","","قالب های  وبلاگ مخصوص میهن بلاگ"],100,40);
+stm_ep();
+stm_em();
+//-->
+</script>
+<br>
+<!-------------------------------------------------------------------->
+
+ <div align="center"><a href="http://www.irantablig.com" ><img src="http://www.irantablig.com/images/irantablig.gif" border=0  alt="درج تبلیغات ، آگهی و نیازمندی های رایگان در اینترنت" /></a></div>
+
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class=div18><font class=text6><a href="http://weblogskin.mihanblog.com/post/30">کد تصادفی عکس و تصویر وب سایت</a></font></div>
+<div class=div58><font class=text7>پنجشنبه 18 تیر 1394 :: نویسنده : <a href="http://weblogskin.mihanblog.com/post/author/85530">ایرانی </a></font></div>
+
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div style="text-align: center;"><font style="font-family: 
+arial,helvetica,sans-serif; font-weight: bold; color: rgb(204, 0, 0);" size="6">کد تصادفی عکس و تصویر وبلاگ و وب 
+سایت<br><br></font><img src="http://www.photo-aks.com/photo/nature/landscape/small/best-view.jpg" alt="" align="bottom" hspace="0" border="0" vspace="0"><font style="font-family: arial,helvetica,sans-serif; font-weight: bold; 
+color: rgb(204, 0, 0);" size="6"> </font><img src="http://www.photo-aks.com/photo/nature/flowers/rose/small/red-rose-flower.jpg" alt="کد تصادفی عکس گل ها" align="bottom" hspace="0" border="0" vspace="0"><img src="http://www.photo-aks.com/photo/images/love/small/two_hearts_together.jpg" alt="" align="bottom" hspace="0" border="0" vspace="0"><br><img src="http://www.photo-aks.com/photo/images/baby/small/baby-pic.jpg" alt="کد عکس تصادفی کودکان" align="bottom" hspace="0" border="0" vspace="0"> <img src="http://www.photo-aks.com/photo/images/religious/mahdi/small/ya-saheb-zaman-3d.jpg" alt="کد عکس تصادفی مذهبی" align="bottom" hspace="0" border="0" vspace="0"> <img src="http://www.photo-aks.com/photo/animals/bird/parrot/small/colorful_macaw.jpg" alt="کد عکس تصادفی پرندگان" align="bottom" hspace="0" border="0" vspace="0"><br><font size="2"><br></font><div style="text-align: 
+right;"><font size="2">با سلام خدمت همه دوستان و وبلاگ نویسان 
+عزیز ، در این پست می خواهم <span style="font-weight: bold; color: 
+rgb(0, 0, 153);">کد قرار دادن عکس و تصویر تصادفی در 
+وبلاگ</span> را که توسط <a href="http://photo-aks.com/" target="_blank" title="">بزرگترین سایت عکس ایران ( <span style="font-weight: bold;">فوتوعکس</span> ) </a>ارائه شده
+ است را خدمت شما معرفی کنم . این کد ها بر اساس موضوعات مختلف طبقه بندی 
+شده است و شما می توانید کد مربوط به موضوع وبلاگ و وبسایت خود را کپی کرده
+ و در قسمت مربوط به کد های جاوا اسکریپت سایت و وبلاگ خود قرار دهید . 
+<br><br>برای دریافت کد مربوطه به آدرس زیر مراجعه فرمایید 
+:<br></font><a href="http://www.photo-aks.com/random-photo.aspx" target="_blank" title=""><font size="2"><br></font><div style="text-align: center; color: rgb(51, 204, 0);"><font size="3">کد جاوا اسکریپت عکس تصادفی برای وبلاگ و 
+سایت</font></div></a></div></div>
+
+
+
+
+
+
+<BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#c70900">نوع مطلب :</font>
+<a href="http://weblogskin.mihanblog.com/post/category/8" class=text4>کد های جاوا اسکریپت</a>،&nbsp;<br><font color="#c70900">برچسب ها :</font>
+</font></div></div>
+<div class=div26>
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(30)">نظرات (<script>setCommentCnt(30)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class=div18><font class=text6><a href="http://weblogskin.mihanblog.com/post/28">آموزش کامل و گام به گام قرار دادن آهنگ و موزیک در وبلاگ</a></font></div>
+<div class=div58><font class=text7>جمعه 6 خرداد 1390 :: نویسنده : <a href="http://weblogskin.mihanblog.com/post/author/85530">ایرانی </a></font></div>
+
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><P align=center><FONT face=arial,helvetica,sans-serif><FONT color=#993399><FONT size=5>آموزش کامل و گام به گام قرار دادن<STRONG> <FONT color=#ff0000>آهنگ و موزیک در وبلاگ</FONT></STRONG></FONT></FONT></FONT></P>
+<P align=center><FONT face=Arial color=#660000 size=3><IMG src="http://www.mihanblog.com/public/public/rte/images_new/smiles/102.gif">&nbsp;learning music and sound java script code in the weblog <IMG src="http://www.mihanblog.com/public/public/rte/images_new/smiles/102.gif"></FONT></P>
+<P align=center><FONT face=Arial color=#660000 size=3><IMG alt="آموزش کامل و گام به گام قرار دادن آهنگ در وبلاگ" hspace=0 src="http://aks-man.persiangig.com/weblogskin/templates/music_notes.jpg" align=baseline border=0></FONT></P>
+<P align=right><FONT face=tahoma,arial,helvetica,sans-serif color=#009900 size=2>در این قسمت می خواهم جزئیات کامل و گام به گام قرار دادن آهنگ و موزیک و ترانه در وبلاگ را آموزش بدهم با ما همراه باشید <IMG src="http://www.mihanblog.com/public/public/rte/images_new/smiles/1.gif"></FONT></P>
+<P align=right><FONT color=#000000 size=2>حتما تا به حال وارد&nbsp;سایت ها و وبلاگ هایی شده اید که هنگام ورود به آن سایت آهنگی و ترانه ای شروع به پخش شدن می کند . خوب ممکن است آهنگ مذهبی و مداحی باشد و یا ترانه و آهنگ های مجاز و غیر و مجاز و یا موزیک و موسیقی بی کلام&nbsp;به هر حال هرچی که هست به سلیقه مدیر وبلاگ بستگی دارد . ما نحوه قرار دادن آهنگ را&nbsp;آموزش می دهیم ،&nbsp;استفاده درست و غلط آن بر عهده خود شماست ! <IMG src="http://www.mihanblog.com/public/public/rte/images_new/smiles/3.gif"></FONT></P>
+<P align=right><FONT color=#000000 size=2>حتما می دانید سایت هایی وجود دارند که کد های آماده با آهنگ های از پیش تعیین شده را در اختیار شما قرار می دهند ،&nbsp;ولی می خواهیم&nbsp; نحوه قرار دادن آهنگ و موسیقی <STRONG>دلخواه</STRONG> شما را که از سیستم و کامپیوتر خودتان انتخاب کرده اید را آموزش&nbsp;بدهیم .</FONT></P>
+<P align=right><FONT color=#000000 size=2><EM>مواد لازم :</EM>&nbsp;یک عدد آهنگ و ترانه دلخواه شما&nbsp;با پسوند های Mp3 ، Wma&nbsp;, ...&nbsp;که در سیستم و هارد خودتان&nbsp;و یا حتی فضای اینترنت وجود دارد&nbsp; + 5 دقیقه وقت </FONT></P>
+<P align=right><FONT color=#000000 size=2><FONT color=#ff6600><STRONG>مرحله اول</STRONG> </FONT>: &nbsp;ابتدا باید <STRONG>آهنگ و ترانه</STRONG> خود را در یکی از سایت های فضای رایگان آپلود (&nbsp;بارگذاری ) قرار دهید و لینک آن را در از آن سایت گرفته و در اختیار داشته باشید .</FONT></P>
+<P align=right><FONT color=#000000 size=2><STRONG><FONT color=#009900>توضیح بیشتر&nbsp;&nbsp;:</FONT></STRONG> همانطور که می دانید یک فایل (&nbsp;مثلا&nbsp;فایل صوتی&nbsp;mp3&nbsp;یا فایل تصویری jpg&nbsp;&nbsp;) برای اینکه در دسترس دیگران قرار گیرد باید از هارد و فضای داخلی سیستم کامپیوتر شما به فضای اینترنت منتقل شود تا زمانی که سیستم شما خاموش و از شبکه اینترنت خارج است دیگران بتوانند به آن دسترسی داشته باشند .</FONT></P>
+<P align=right><FONT color=#000000 size=2>سایت هایی که این خدمات را به شما می دهند فایل مورد نظر (&nbsp;در اینجا فایل صوتی&nbsp;) را از شما (&nbsp;کامپیوتر شما&nbsp;) گرفته و در فضای هارد سیستم خود قرار می دهند (&nbsp;که همیشه روشن و در دسترس عموم&nbsp;است&nbsp;) و یک لینک دسترسی به آن فایل خودتان را در اختیار شما قرار می دهند مثل این آدرس :</FONT></P>
+<P style="DIRECTION: rtl" align=center><FONT color=#000000><FONT style="DIRECTION: ltr" size=2>&nbsp; </FONT><FONT style="DIRECTION: ltr" size=2>http://aks-man.persiangig.com/music.mp3&nbsp; یا &nbsp;&nbsp;http://upload.com/ahang.wma </FONT></FONT></P>
+<P align=right><FONT color=#009900 size=2>دو&nbsp;سایت مخصوص آپلود فایل رایگان : </FONT></P>
+<P style="DIRECTION: ltr" align=left><FONT style="DIRECTION: ltr" size=2><FONT color=#000000><A href="http://www.persiangig.com/">http://www.persiangig.com</A> </FONT><FONT color=#000000>&nbsp;(&nbsp;نیاز به عضویت )</FONT></FONT></P>
+<P style="DIRECTION: ltr" align=left><FONT size=2><FONT color=#000000><A href="http://up.iranblog.com/">http://up.iranblog.com</A>&nbsp;</FONT><FONT color=#000000>&nbsp;(&nbsp;بدون نیاز&nbsp;به عضویت&nbsp;)</FONT></FONT><FONT style="DIRECTION: rtl" color=#000000 size=2> </FONT></P>
+<P align=right><FONT color=#000000 size=2>بعد از آپلود فایل صوتی خودتان در یکی از سایت های بالا یا هر سایتی که به شما این خدمات را می دهد نوبت به مرحله دوم می رسد .</FONT></P>
+<P align=right><FONT color=#000000 size=2><FONT color=#ff6600><STRONG>مرحله دوم :</STRONG>&nbsp;</FONT> در کد اسکریپت زیر به جای عبارت <FONT color=#cc33cc>آدرس آهنگ شما </FONT>&nbsp;لینکی را که بعد از آپلود یا بارگذاری فایل صوتی خودتان در مرحله اول بدست آوردید ، قرار می دهید ... </FONT><FONT color=#000000 size=2></P>
+<P align=center><FONT size=2><SPAN style="DIRECTION: ltr"><TEXTAREA style="WIDTH: 503px; HEIGHT: 348px" rows=8 cols=50>&lt;!-- www.weblogskin.mihanblog.com --&gt;
+&lt;p align="center"&gt;
+&lt;object classid="clsid:6BF52A52-394A-11D3-B153-00C04F79FAA6" id="WindowsMediaPlayer1" width="140" height="44" style="border: 1px dotted #999"&gt;
+    &lt;param name="URL" value="آدرس آهنگ شما"&gt;
+          &lt;param name="autoStart" value="-1"&gt;
+          &lt;param name="volume" value="100"&gt;
+          &lt;param name="rate" value="1"&gt;
+  &lt;/object&gt;&lt;/font&gt;&lt;/body&gt;
+&lt;br&gt;&lt;span lang="en-us"&gt;&lt;a title="دریافت کد های آهنگ  ، موسیقی و ترانه در وبلاگ" href="http://weblogskin.mihanblog.com/post/28"&gt;
+&lt;span style="font-size: 8pt;text-decoration:none"&gt;
+&lt;font face="Tahoma"&gt;WeblogSkin&lt;/font&gt;&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;span style="font-size: 8pt"&gt;
+&lt;/span&gt;
+&lt;/p&gt;
+&lt;!-- www.weblogskin.mihanblog.com --&gt;</TEXTAREA></SPAN></FONT></P></FONT>
+<P align=right><FONT color=#000000 size=2>حالا کد شما آماده قرار دادن در وبلاگ می باشد با کپی کردن و قرار دادن آن در قسمت تنظیمات وبلاگ خود (&nbsp;کد های جاوا اسکریپت&nbsp;) آهنگ و موسیقی شما برای بازدیدکنندگان تان پخش خواهد شد .</FONT></P>
+<P align=center><FONT color=#3333ff size=2>نظرات و سوالات و ... یادتون نره <IMG src="http://www.mihanblog.com/public/public/rte/images_new/smiles/30.gif"></FONT></P>
+<P align=center><FONT face=arial,helvetica,sans-serif color=#ff0000 size=6><STRONG>وبلاگ اسکین</STRONG></FONT></P>
+<P align=center>&nbsp;</P>
+<P align=right><FONT color=#660000 size=2><STRONG>کی وردها :</STRONG> آموزش و یادگیری قرار دادن آهنگ در وبلاگ - اموزش گام به گام نحوه ایجاد و قرار دادن کد آهنگ و ترانه و موسیقی در بلاگ - کد آهنگ در وبلاگ - کد جاوا اسکریپت قرار دادن آهنگ در وبلاگ - کد آماده اسکریپت پخش آهنگ با مدیا پلییر در وبلاگ و سایت - کد اماده خواندن ترانه و موسیقی و ام پی تری در وبلاگ - آموزش و یادگیری کامل با جزئیات قرار دادن mp3 در وبلاگ - کامل ترین آموزش رایگان قرار دادن کد آهنگ در وبلاگ - کد آماده پخش ترانه های جدید در وبلاگ - اهنگ در وبلاگ - آحنگ </FONT></P>
+<P align=right><FONT color=#660000 size=2>amozesh garar dadan ahang dar weblog - mosigi dar weblog - taraneh dar weblog - code script music in weblog - kode ahang dar weblog - mosik dar site - amozesh kamel ba joziyat va gam be gam music dar weblog - Hl,ca rvhv nhnk ;n Hik' nv ,fgh' -</FONT></P><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#c70900">نوع مطلب :</font>
+<a href="http://weblogskin.mihanblog.com/post/category/8" class=text4>کد های جاوا اسکریپت</a>،&nbsp;<a href="http://weblogskin.mihanblog.com/post/category/1" class=text4>کد آهنگ مذهبی و مداحی</a>،&nbsp;<br><font color="#c70900">برچسب ها :</font>
+<a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF%20%D9%82%D8%B1%D8%A7%D8%B1%20%D8%AF%D8%A7%D8%AF%D9%86%20%D8%A2%D9%87%D9%86%DA%AF%20%D8%AF%D8%B1%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF" class=text4>کد قرار دادن آهنگ در وبلاگ</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF%20%D9%85%D9%88%D8%B2%DB%8C%DA%A9%20%D9%88%20%D8%AA%D8%B1%D8%A7%D9%86%D9%87%20%D8%AF%D8%B1%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF" class=text4>کد موزیک و ترانه در وبلاگ</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%DA%A9%D8%A7%D9%85%D9%84%20%D9%82%D8%B1%D8%A7%D8%B1%20%D8%AF%D8%A7%D8%AF%D9%86%20%D8%A2%D9%87%D9%86%DA%AF%20%D8%AF%D8%B1%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF" class=text4>آموزش کامل قرار دادن آهنگ در وبلاگ</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D9%BE%D8%AE%D8%B4%20%D9%85%D9%88%D8%B3%DB%8C%D9%82%DB%8C%20%D9%88%20%D9%85%D8%AF%D8%A7%D8%AD%DB%8C%20%D8%AF%D8%B1%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF" class=text4>پخش موسیقی و مداحی در وبلاگ</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D9%86%D8%AD%D9%88%D9%87%20%D9%82%D8%B1%D8%A7%D8%B1%20%D8%AF%D8%A7%D8%AF%D9%86%20%D8%A2%D9%87%D9%86%DA%AF%20%D9%88%20%D9%85%D9%88%D8%B2%DB%8C%DA%A9%20%D8%AF%D8%B1%20%D9%88%D8%A8%D8%B3%D8%A7%DB%8C%D8%AA" class=text4>نحوه قرار دادن آهنگ و موزیک در وبسایت</a>، </font></div></div>
+<div class=div26>
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(28)">نظرات (<script>setCommentCnt(28)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class=div18><font class=text6><a href="http://weblogskin.mihanblog.com/post/27">قالب وبلاگ رویایی ، هنری و پسرانه</a></font></div>
+<div class=div58><font class=text7>شنبه 31 اردیبهشت 1390 :: نویسنده : <a href="http://weblogskin.mihanblog.com/post/author/85530">ایرانی </a></font></div>
+
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><P align=center><FONT face=arial,helvetica,sans-serif color=#ff6600 size=6><STRONG>قالب هنری و رویایی بسیار زیبای پسرانه</STRONG></FONT></P>
+<P align=center><FONT face=tahoma,arial,helvetica,sans-serif color=#009900 size=3>مخصوص میهن بلاگ و پرشین بلاگ</FONT></P>
+<P align=center><IMG alt="قالب وبلاگ قرمز پسرانه با پس زمینه متحرک " hspace=0 src="http://mihantheme.com/wp-content/uploads/2010/08/22.jpg" align=baseline border=0></P>
+<DIV class=theme-x><FONT size=2><IMG height=8 hspace=3 src="http://www.mytheme.ir/main_files/ss.jpg" width=8 border=0>نوع قالب : <SPAN><STRONG>هنری -&nbsp;پسرانه - رویایی و عاشقانه</STRONG></SPAN></FONT></DIV>
+<DIV class=theme-x>
+<DIV><FONT size=2><IMG height=8 hspace=3 src="http://www.mytheme.ir/main_files/ss.jpg" width=8 border=0>وضوح نمایش : <SPAN>800x600</SPAN></FONT></DIV></DIV>
+<DIV class=theme-x>
+<DIV><FONT size=2><IMG height=8 hspace=3 src="http://www.mytheme.ir/main_files/ss.jpg" width=8 border=0>حجم كلی <STRONG>قالب</STRONG> : <SPAN>متوسط</SPAN></FONT></DIV></DIV>
+<DIV class=theme-x><FONT size=2><SPAN><STRONG><IMG height=8 hspace=3 src="http://www.mytheme.ir/main_files/ss.jpg" width=8 border=0>رنگ غالب</STRONG> در این قالب : <STRONG><FONT color=#00cccc><FONT color=#006600>سبز سوخته</FONT> </FONT></STRONG>+ <STRONG><FONT color=#cc0000>قرمز خونی</FONT></STRONG></SPAN></FONT></DIV>
+<DIV class=theme-x><FONT size=2><SPAN><IMG height=8 hspace=3 src="http://www.mytheme.ir/main_files/ss.jpg" width=8 border=0>مخصوص سرویس های وبلاگ دهی :&nbsp;<STRONG><FONT color=#3366ff>میهن بلاگ&nbsp;و پرشین بلاگ</FONT></STRONG></SPAN></FONT></DIV>
+<DIV class=theme-x><FONT size=2><SPAN></SPAN></FONT>&nbsp;</DIV>
+<DIV class=theme-x align=center><FONT color=#666600 size=2><SPAN>برای مشاهده کد قالب وبلاگ به <STRONG>ادامه مطلب</STRONG> مراجعه فرمایید</SPAN></FONT></DIV><BlogExtendedPost><br><br><b><a href='http://weblogskin.mihanblog.com/post/27'>ادامه مطلب -کد قالب پسرانه</a></b></BlogExtendedPost>
+<br><br><font color="#c70900">نوع مطلب :</font>
+<a href="http://weblogskin.mihanblog.com/post/category/4" class=text4>قالب های میهن بلاگ mihanblog</a>،&nbsp;<a href="http://weblogskin.mihanblog.com/post/category/14" class=text4>قالب های پرشین بلاگ persianblog</a>،&nbsp;<a href="http://weblogskin.mihanblog.com/post/category/6" class=text4>قالب هنری</a>،&nbsp;<a href="http://weblogskin.mihanblog.com/post/category/2" class=text4>قالب احساسی و عاشقانه</a>،&nbsp;<br><font color="#c70900">برچسب ها :</font>
+<a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%D8%B1%D8%A7%DB%8C%DA%AF%D8%A7%D9%86%20%D9%BE%D8%B3%D8%B1%D8%A7%D9%86%D9%87" class=text4>قالب وبلاگ رایگان پسرانه</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D9%85%DB%8C%D9%87%D9%86%20%D8%A8%D9%84%D8%A7%DA%AF%20%D8%B2%DB%8C%D8%A8%D8%A7%20%D9%88%20%D9%87%D9%86%D8%B1%DB%8C" class=text4>قالب میهن بلاگ زیبا و هنری</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%D8%AE%D9%88%D8%B4%DA%AF%D9%84%20%D8%A8%D8%A7%20%D8%B9%DA%A9%D8%B3%20%D9%85%D8%AA%D8%AD%D8%B1%DA%A9" class=text4>قالب وبلاگ خوشگل با عکس متحرک</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%D8%A8%D8%A7%20%D8%B9%DA%A9%D8%B3%20%D8%B2%D9%85%DB%8C%D9%86%D9%87%20%D8%AB%D8%A7%D8%A8%D8%AA" class=text4>قالب وبلاگ با عکس زمینه ثابت</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%D8%B2%DB%8C%D8%A8%D8%A7%20%D9%88%20%D8%B1%D9%88%DB%8C%D8%A7%DB%8C%DB%8C" class=text4>قالب وبلاگ زیبا و رویایی</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%B4%D9%86%DA%AF%D8%AA%D8%B1%DB%8C%D9%86%20%D9%82%D8%A7%D9%84%D8%A8%20%D9%87%D8%A7%DB%8C%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%D8%B1%D8%A7%DB%8C%DA%AF%D8%A7%D9%86" class=text4>قشنگترین قالب های وبلاگ رایگان</a>، <a href="http://weblogskin.mihanblog.com/post/tag/galeb&#32;weblog&#32;pesaraneh" class=text4>galeb weblog pesaraneh</a>، <a href="http://weblogskin.mihanblog.com/post/tag/galeb&#32;royayi" class=text4>galeb royayi</a>، <a href="http://weblogskin.mihanblog.com/post/tag/galeb&#32;gashang&#32;ehsasi&#32;va&#32;royayi" class=text4>galeb gashang ehsasi va royayi</a>، </font></div></div>
+<div class=div26>
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(27)">نظرات (<script>setCommentCnt(27)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class=div18><font class=text6><a href="http://weblogskin.mihanblog.com/post/26">قالب وبلاگ آبی آسمانی فیروزه ای ( بلاگفا - پرشین بلاگ )</a></font></div>
+<div class=div58><font class=text7>شنبه 31 اردیبهشت 1390 :: نویسنده : <a href="http://weblogskin.mihanblog.com/post/author/85530">ایرانی </a></font></div>
+
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><P align=center><FONT face=arial,helvetica,sans-serif size=6><STRONG>قالب وبلاگ <FONT color=#33ccff>آبی آسمانی</FONT> رنگ</STRONG> </FONT></P>
+<P align=center><FONT face=tahoma,arial,helvetica,sans-serif size=4>مخصوص بلاگفا و&nbsp;پرشین بلاگ</FONT></P>
+<P align=center><IMG alt="قالب وبلاگ آبی آسمانی رنگ - بلاگفا و پرشین بلاگ" hspace=0 src="http://blogskin.ir/theme-big/weblog6-b.jpg" align=baseline border=0></P>
+<DIV class=theme-x>
+<DIV><FONT size=2><IMG height=8 hspace=3 src="http://www.mytheme.ir/main_files/ss.jpg" width=8 border=0>نوع قالب : <SPAN><STRONG>هنری - كلاسیك - ساده</STRONG></SPAN></FONT></DIV></DIV>
+<DIV class=theme-x>
+<DIV><FONT size=2><IMG height=8 hspace=3 src="http://www.mytheme.ir/main_files/ss.jpg" width=8 border=0>وضوح نمایش : <SPAN>800x600</SPAN></FONT></DIV></DIV>
+<DIV class=theme-x>
+<DIV><FONT size=2><IMG height=8 hspace=3 src="http://www.mytheme.ir/main_files/ss.jpg" width=8 border=0>حجم كلی <STRONG>قالب</STRONG> : <SPAN>متوسط</SPAN></FONT></DIV></DIV>
+<DIV class=theme-x><FONT size=2><IMG height=8 hspace=3 src="http://www.mytheme.ir/main_files/ss.jpg" width=8 border=0>مرورگرهای سازگار : <SPAN>+IE 6</SPAN></FONT></DIV>
+<DIV class=theme-x><FONT size=2><SPAN><STRONG><IMG height=8 hspace=3 src="http://www.mytheme.ir/main_files/ss.jpg" width=8 border=0>رنگ غالب</STRONG> در این قالب : <STRONG><FONT color=#00cccc>آبی آسمانی</FONT></STRONG> + <STRONG>سفید</STRONG></SPAN></FONT></DIV>
+<DIV class=theme-x><FONT size=2><SPAN><IMG height=8 hspace=3 src="http://www.mytheme.ir/main_files/ss.jpg" width=8 border=0>مخصوص سرویس های وبلاگ دهی : <STRONG><FONT color=#3366ff>بلاگفا و پرشین بلاگ</FONT></STRONG></SPAN></FONT></DIV>
+<DIV class=theme-x><FONT size=2><SPAN><STRONG></STRONG></SPAN></FONT>&nbsp;</DIV>
+<DIV class=theme-x align=center><FONT color=#cc66cc size=2><SPAN>برای دریافت&nbsp;کد قالب مورد نظر به ادامه مطلب مراجعه فرماید</SPAN></FONT></DIV><BlogExtendedPost><br><br><b><a href='http://weblogskin.mihanblog.com/post/26'>ادامه مطلب - کد قالب آبی آسمانی</a></b></BlogExtendedPost>
+<br><br><font color="#c70900">نوع مطلب :</font>
+<a href="http://weblogskin.mihanblog.com/post/category/14" class=text4>قالب های پرشین بلاگ persianblog</a>،&nbsp;<a href="http://weblogskin.mihanblog.com/post/category/11" class=text4>قالب های بلاگفا blogfa</a>،&nbsp;<a href="http://weblogskin.mihanblog.com/post/category/6" class=text4>قالب هنری</a>،&nbsp;<a href="http://weblogskin.mihanblog.com/post/category/5" class=text4>قالب کلاسیک و ساده</a>،&nbsp;<br><font color="#c70900">برچسب ها :</font>
+<a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%D8%B3%D8%A7%D8%AF%D9%87%20%D8%A2%D8%A8%DB%8C%20%D8%B1%D9%86%DA%AF" class=text4>قالب وبلاگ ساده آبی رنگ</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%D9%81%DB%8C%D8%B1%D9%88%D8%B2%D9%87%20%D8%A7%DB%8C%20%D8%A8%D9%84%D8%A7%DA%AF%D9%81%D8%A7" class=text4>قالب وبلاگ فیروزه ای بلاگفا</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D8%B3%D8%A7%D8%AF%D9%87%20%D9%87%D9%86%D8%B1%DB%8C%20%D9%BE%D8%B1%D8%B4%DB%8C%D9%86%20%D8%A8%D9%84%D8%A7%DA%AF" class=text4>قالب ساده هنری پرشین بلاگ</a>، <a href="http://weblogskin.mihanblog.com/post/tag/galeb&#32;abi&#32;firozei&#32;blogfa" class=text4>galeb abi firozei blogfa</a>، </font></div></div>
+<div class=div26>
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(26)">نظرات (<script>setCommentCnt(26)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class=div18><font class=text6><a href="http://weblogskin.mihanblog.com/post/25">کد تغییر نشانگر موس بازدید کنندگان وبلاگ </a></font></div>
+<div class=div58><font class=text7>شنبه 24 اردیبهشت 1390 :: نویسنده : <a href="http://weblogskin.mihanblog.com/post/author/85530">ایرانی </a></font></div>
+
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><P align=center><FONT face=arial,helvetica,sans-serif size=5><STRONG>کدهای بسیار زیبای تغییر نشانگر موس&nbsp;(ماوس)</STRONG></FONT></P>
+<P align=center><STRONG><FONT face=Arial size=5><FONT size=2></FONT></STRONG>&nbsp;</P></FONT>
+<P align=center><IMG alt="کد اسکریپت تغییر نشانگر موس - موش واره -ماوس" hspace=0 src="http://aks-man.persiangig.com/weblogskin/mouse/mouse.gif" align=baseline border=0></P>
+<P align=center>&nbsp;</P>
+<P align=right><FONT size=2><FONT color=#ff6600><STRONG>توضیح در مورد کد</STRONG> </FONT>: با قرار دادن این کد ها در وبلاگ خود ، هنگامی که بازدید کنندگان به وبلاگ شما مراجعه می کنند ، <STRONG>نشانگر موس</STRONG> آنها به شکل مورد نظر شما در خواهد آمد . این کد کاربر پسند بوده و بر زیبایی وبلاگ شما خواهد افزود .</FONT></P>
+<P align=right><FONT color=#993300 size=2>برای اینکه شکل موس کاربران هنگامی که به وبلاگ شما مراجعه می کنند تغییر کند ، یکی از کد های زیر (&nbsp;ادامه مطلب&nbsp;)&nbsp;را که نمونه شکل آنها در بالا نشان داده شده است را در قالب وبلاگ خود&nbsp; قبل از کد &lt;html&nbsp;/&gt;&nbsp; ( که معمولا در انتهای قالب شما قرار دارد ) قرار دهید .</FONT></P>
+<P align=right><FONT size=2><STRONG><FONT color=#009900>توضیح بیشتر و چزئی تر :</FONT></STRONG> دقت کنید کار بسیار ساده ای است به بخش ویرایش قالب وبلاگ خود بروید و در قسمتی که کد های قالب وبلاگ شما را (&nbsp;در جعبه ای در سمت&nbsp;چپ&nbsp;) نمایش خواهد داد ، در آخرین خطوط کد عبارت &lt;&nbsp;html /&gt; را پیدا کرده و کد مورد نظر خود را قبل آن قرار دهید ( برای انتخاب کد مورد نظر ابتدا&nbsp;داخل جعبه کد موس مورد نظر کلیک کرده (&nbsp;کلیک چپ&nbsp;)&nbsp;و سپس کلیک راست موس را فشار داده و&nbsp;از منوی ظاهر شده select all&nbsp;را&nbsp;برای انتخاب کل&nbsp;کد کلیک و سپس دوباره کلیک راست کرده و این بار گزینه copy را از منوی&nbsp;ضاهر شده انتخاب کنید&nbsp;، برای قرار دادن کد&nbsp;کپی شده در قالب وبلاگ نیز به همین روش می توانید paste کنید &nbsp;).</FONT></P>
+<P align=center><FONT color=#3333ff size=2>برای دریافت کد اسکریپت تغییر نشانگر موس به <STRONG><FONT color=#ff6600>ادامه مطلب</FONT></STRONG> مراجه کنید .</FONT></P><BlogExtendedPost><br><br><b><a href='http://weblogskin.mihanblog.com/post/25'>ادامه مطلب - کد تغییر نشانگر موس</a></b></BlogExtendedPost>
+<br><br><font color="#c70900">نوع مطلب :</font>
+<a href="http://weblogskin.mihanblog.com/post/category/19" class=text4>کدهای اسکریپت ماوس ( موس )</a>،&nbsp;<br><font color="#c70900">برچسب ها :</font>
+<a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF%20%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1%20%D9%86%D8%B4%D8%A7%D9%86%DA%AF%D8%B1%20%D9%85%D9%88%D8%B3" class=text4>کد تغییر نشانگر موس</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF%20%D9%87%D8%A7%DB%8C%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA%20%D9%85%D8%A7%D9%88%D8%B3" class=text4>کد های اسکریپت ماوس</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF%20%D8%B9%D9%88%D8%B6%20%DA%A9%D8%B1%D8%AF%D9%86%20%D9%88%20%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1%20%D9%86%D8%B4%D8%A7%D9%86%DA%AF%D8%B1%20%D9%85%D9%88%D8%B3%20%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%D8%A7%D9%86" class=text4>کد عوض کردن و تغییر نشانگر موس کاربران</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D8%B2%DB%8C%D8%A8%D8%A7%D8%AA%D8%B1%DB%8C%D9%86%20%DA%A9%D8%AF%20%D9%87%D8%A7%DB%8C%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA%20%D9%85%D8%B1%D8%A8%D9%88%D8%B7%20%D8%A8%D9%87%20%D9%85%D9%88%D8%B3" class=text4>زیباترین کد های اسکریپت مربوط به موس</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF%20%D9%87%D8%A7%DB%8C%20%D9%85%D9%88%D8%B4%D9%88%D8%A7%D8%B1%D9%87" class=text4>کد های موشواره</a>، <a href="http://weblogskin.mihanblog.com/post/tag/code&#32;java&#32;script&#32;mouse" class=text4>code java script mouse</a>، <a href="http://weblogskin.mihanblog.com/post/tag/cod&#32;java&#32;skirpt&#32;mose" class=text4>cod java skirpt mose</a>، <a href="http://weblogskin.mihanblog.com/post/tag/;n&#32;hs;vd\j&#32;kahk'v" class=text4>;n hs;vd\j kahk'v</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF%20%D9%85%D9%88%D8%B3" class=text4>کد موس</a>، </font></div></div>
+<div class=div26>
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(25)">نظرات (<script>setCommentCnt(25)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class=div18><font class=text6><a href="http://weblogskin.mihanblog.com/post/23">قالب وبلاگ عاشقانه و قرمز رنگ ( my love عشق من )</a></font></div>
+<div class=div58><font class=text7>چهارشنبه 21 اردیبهشت 1390 :: نویسنده : <a href="http://weblogskin.mihanblog.com/post/author/85530">ایرانی </a></font></div>
+
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><FONT face=arial,helvetica,sans-serif color=#cc0000 size=6>
+<P align=center><FONT face=arial,helvetica,sans-serif color=#cc0000 size=6><STRONG>قالب عاشقانه و قلب قرمز رنگ </STRONG></FONT></P>
+<P align=center><FONT face=arial,helvetica,sans-serif color=#006600 size=5>my love عشق من</FONT></P>
+<P align=center><FONT face=tahoma,arial,helvetica,sans-serif color=#3333ff size=2>مخصوص میهن بلاگ - پرشین بلاگ - بلاگ اسکای - پارسی بلاگ</FONT></P>
+<P align=center><STRONG><IMG alt="قالب عاشقانه و قلب و دوستی قرمز رنگ" hspace=0 src="http://www.mytheme.ir/themes/35.jpg" align=baseline border=0></STRONG></P>
+<P align=right><FONT face=tahoma,arial,helvetica,sans-serif color=#4f4f4f size=2><IMG height=8 hspace=3 src="http://www.mytheme.ir/main_files/ss.jpg" width=8 border=0>&nbsp;موضوع قالب : <STRONG>عاشقانه - ولنتاین&nbsp;-&nbsp;قلب - شاد&nbsp;- روبان</STRONG>&nbsp;</FONT><BR><FONT face=tahoma,arial,helvetica,sans-serif color=#4f4f4f size=2><IMG height=8 hspace=3 src="http://www.mytheme.ir/main_files/ss.jpg" width=8 border=0>&nbsp;رنگ غالب این قالب : <STRONG><FONT color=#cc0000>قرمز رنگ</FONT><BR></STRONG><IMG height=8 hspace=3 src="http://www.mytheme.ir/main_files/ss.jpg" width=8 border=0>&nbsp;وضوح نمایش : 1024*768 پیکسل<BR><IMG height=8 hspace=3 src="http://www.mytheme.ir/main_files/ss.jpg" width=8 border=0>&nbsp;قالب های موجود برای&nbsp;: <STRONG><FONT color=#3333ff>میهن بلاگ - پرشین بلاگ - بلاگ اسکای - پارسی بلاگ</FONT></STRONG><BR><IMG height=8 hspace=3 src="http://www.mytheme.ir/main_files/ss.jpg" width=8 border=0>&nbsp;حجم قالب : 120 كیلو بایت</FONT><FONT color=#4f4f4f><FONT color=#cc0000><BR></FONT><FONT face=tahoma,arial,helvetica,sans-serif size=2><IMG height=8 hspace=3 src="http://www.mytheme.ir/main_files/ss.jpg" width=8 border=0>&nbsp;مرورگر : Internet Explorer 6,7,8 - Firefox 2,3</FONT></FONT></P>
+<P align=center><FONT face=arial,helvetica,sans-serif color=#ff6600 size=5><STRONG>وبلاگ اسکین</STRONG></FONT></P>
+<P align=center><IMG alt="وبلاگ اسکین" hspace=0 src="http://aks-man.persiangig.com/weblogskin/weblogskin.mihanblog2.gif" align=baseline border=0></P>
+<P align=center><FONT face=Tahoma color=#009900 size=2>برای دریافت کد قالب ها به <STRONG>ادامه مطلب</STRONG> مراجعه کنید .</FONT></FONT></P><BlogExtendedPost><br><br><b><a href='http://weblogskin.mihanblog.com/post/23'>ادامه مطلب - کد قالب ها</a></b></BlogExtendedPost>
+<br><br><font color="#c70900">نوع مطلب :</font>
+<a href="http://weblogskin.mihanblog.com/post/category/4" class=text4>قالب های میهن بلاگ mihanblog</a>،&nbsp;<a href="http://weblogskin.mihanblog.com/post/category/14" class=text4>قالب های پرشین بلاگ persianblog</a>،&nbsp;<a href="http://weblogskin.mihanblog.com/post/category/13" class=text4>قالب های بلاگ اسکای blogsky</a>،&nbsp;<a href="http://weblogskin.mihanblog.com/post/category/18" class=text4>قالب های پارسی بلاگ parsiblog</a>،&nbsp;<a href="http://weblogskin.mihanblog.com/post/category/2" class=text4>قالب احساسی و عاشقانه</a>،&nbsp;<br><font color="#c70900">برچسب ها :</font>
+<a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%D9%82%D9%84%D8%A8%20%D9%88%20%D8%AF%D9%84%20%D9%82%D8%B1%D9%85%D8%B2" class=text4>قالب وبلاگ قلب و دل قرمز</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%D8%B9%D8%B4%D9%82%20%D9%85%D9%86%20my%20love" class=text4>قالب وبلاگ عشق من my love</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D8%B9%D8%B4%D9%82%D9%88%D9%84%D8%A7%D9%86%D9%87%20%D9%88%20%D8%B9%D8%B4%D9%82%DB%8C" class=text4>قالب عشقولانه و عشقی</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%D8%B1%D8%A7%DB%8C%DA%AF%D8%A7%D9%86%20%D8%AE%D9%88%D8%B4%DA%AF%D9%84%20%D9%88%20%D8%B1%D9%88%D8%A8%D8%A7%D9%86%20%D9%82%D8%B1%D9%85%D8%B2" class=text4>قالب وبلاگ رایگان خوشگل و روبان قرمز</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D9%BE%D8%A7%D8%B1%D8%B3%DB%8C%20%D8%A8%D9%84%D8%A7%DA%AF" class=text4>قالب پارسی بلاگ</a>، <a href="http://weblogskin.mihanblog.com/post/tag/galeb&#32;mu&#32;love" class=text4>galeb mu love</a>، <a href="http://weblogskin.mihanblog.com/post/tag/galeb&#32;asheganeh&#32;va&#32;galb&#32;del" class=text4>galeb asheganeh va galb del</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D8%B2%DB%8C%D8%A8%D8%A7%D8%AA%D8%B1%DB%8C%D9%86%20%D9%88%20%D8%AE%D9%88%D8%B4%DA%AF%D9%84%20%D8%AA%D8%B1%DB%8C%D9%86%20%D9%82%D8%A7%D9%84%D8%A8%20%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA" class=text4>زیباترین و خوشگل ترین قالب اینترنت</a>، </font></div></div>
+<div class=div26>
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(23)">نظرات (<script>setCommentCnt(23)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class=div18><font class=text6><a href="http://weblogskin.mihanblog.com/post/22">قالب وبلاگ شاد ، دخترانه ، فانتزی ، عروسکی</a></font></div>
+<div class=div58><font class=text7>شنبه 17 اردیبهشت 1390 :: نویسنده : <a href="http://weblogskin.mihanblog.com/post/author/85530">ایرانی </a></font></div>
+
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><P align=center><FONT face=arial,helvetica,sans-serif><FONT size=5><STRONG><FONT size=6>قالب دخترانه</FONT></STRONG> <STRONG>شاد ، فانتزی ، عروسکی ، <FONT color=#ffcccc>صورتی رنگ</FONT></STRONG></FONT></FONT></P>
+<P align=center><IMG border=0 hspace=0 alt="قالب وبلاگ شاد دخترانه عروسکی فانتزی" align=baseline src="http://www.mytheme.ir/themes/26.jpg"></P>
+<P align=right><BR><FONT face=tahoma,arial,helvetica,sans-serif><FONT size=2>موضوع <STRONG>قالب</STRONG> : <STRONG><FONT color=#3333ff>عروسکی - فانتزی - شاد - دخترانه - صورتی</FONT></STRONG><BR>وضوح نمایش : 1024*768<BR>حجم<STRONG> قالب</STRONG> : 115 كیلو بایت <BR><STRONG>قالب</STRONG> های موجود برای : <FONT color=#009900>میهن بلاگ - بلاگفا - پرشین بلاگ - بلاگ اسکای&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT><BR>مرورگر : Internet Explorer 6,7,8 - Firefox 2,3 <BR>رنگ غالب این قالب : <FONT color=#ffcccc><STRONG>صورتی</STRONG></FONT></FONT></FONT><FONT color=#ffcccc size=3><STRONG>&nbsp;&nbsp; </STRONG></FONT></P>
+<P align=center><FONT color=#ff6600 size=2>برای مشاهده و دریافت کد ها مخصوص وبلاگ خود به <STRONG><FONT color=#333333>ادامه مطلب</FONT></STRONG> مراجعه کنید .</FONT></P><BlogExtendedPost><br><br><b><a href='http://weblogskin.mihanblog.com/post/22'>ادامه مطلب - مشاهده کد قالب وبلاگ ها</a></b></BlogExtendedPost>
+<br><br><font color="#c70900">نوع مطلب :</font>
+<a href="http://weblogskin.mihanblog.com/post/category/4" class=text4>قالب های میهن بلاگ mihanblog</a>،&nbsp;<a href="http://weblogskin.mihanblog.com/post/category/14" class=text4>قالب های پرشین بلاگ persianblog</a>،&nbsp;<a href="http://weblogskin.mihanblog.com/post/category/13" class=text4>قالب های بلاگ اسکای blogsky</a>،&nbsp;<a href="http://weblogskin.mihanblog.com/post/category/17" class=text4>قالب های دخترانه و فانتزی</a>،&nbsp;<br><font color="#c70900">برچسب ها :</font>
+<a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%D8%AF%D8%AE%D8%AA%D8%B1%D8%A7%D9%86%D9%87" class=text4>قالب وبلاگ دخترانه</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%D9%81%D8%A7%D9%86%D8%AA%D8%B2%DB%8C%20%D9%88%20%D8%B4%D8%A7%D8%AF" class=text4>قالب وبلاگ فانتزی و شاد</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%D8%B5%D9%88%D8%B1%D8%AA%DB%8C%20%D8%AE%D9%88%D8%B4%DA%AF%D9%84" class=text4>قالب وبلاگ صورتی خوشگل</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%DA%A9%D9%88%D8%AF%DA%A9%D8%A7%D9%86%D9%87%20%D9%88%20%D8%B4%D8%A7%D8%AF" class=text4>قالب وبلاگ کودکانه و شاد</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%D8%AF%D8%AE%D8%AA%D8%B1%D9%88%D9%86%D9%87%20%D9%88%20%D8%B2%DB%8C%D8%A8%D8%A7" class=text4>قالب وبلاگ دخترونه و زیبا</a>، <a href="http://weblogskin.mihanblog.com/post/tag/galeb&#32;weblog&#32;dokhtaraneh" class=text4>galeb weblog dokhtaraneh</a>، <a href="http://weblogskin.mihanblog.com/post/tag/ghaleb&#32;weblag&#32;shad&#32;va&#32;fantezi" class=text4>ghaleb weblag shad va fantezi</a>، <a href="http://weblogskin.mihanblog.com/post/tag/galeb&#32;kodakaneh&#32;va&#32;khoshgel" class=text4>galeb kodakaneh va khoshgel</a>، <a href="http://weblogskin.mihanblog.com/post/tag/rhgf" class=text4>rhgf</a>، <a href="http://weblogskin.mihanblog.com/post/tag/fgh'&#32;nojvhki&#32;ahn" class=text4>fgh' nojvhki ahn</a>، </font></div></div>
+<div class=div26>
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(22)">نظرات (<script>setCommentCnt(22)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class=div18><font class=text6><a href="http://weblogskin.mihanblog.com/post/21">کد جاوا اسکریپت قطرات شبنم در وبلاگ و سایت</a></font></div>
+<div class=div58><font class=text7>پنجشنبه 15 اردیبهشت 1390 :: نویسنده : <a href="http://weblogskin.mihanblog.com/post/author/85530">ایرانی </a></font></div>
+
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><P align=center><FONT color=#3333ff face=arial,helvetica,sans-serif><FONT size=5>کد جاوا اسکرپت ریزش <STRONG>قطرات شبنم&nbsp; </STRONG></FONT></FONT><FONT color=#3333ff size=6 face=arial,helvetica,sans-serif><FONT size=4>بسیار زیبا در وبلاگ</FONT></FONT></P>
+<P align=center><FONT color=#3333ff size=6 face=arial,helvetica,sans-serif><FONT size=4><IMG src="http://www.grablogo.com/tutorials/water-drop-icon/water-drop-icon11.gif"></FONT></FONT></P>
+<P align=right><FONT color=#3333ff face=Arial><FONT color=#000000></FONT><FONT size=2><FONT face=tahoma,arial,helvetica,sans-serif><STRONG><FONT color=#cc0000>توضیح کد :</FONT></STRONG><FONT color=#333399> این کد جاوا اسکریپت یکی از زیبا ترین کد های اسکریپت موجود می باشد که با قرار دادن آن در وبلاگ و وبسایت خود<STRONG> قطره های شبنم</STRONG> (&nbsp;<STRONG>قطرات آب</STRONG>&nbsp;) در روی صفحه مانیتور بازدید کننده و وبلاگ شما ایجاد می شود و با قرار گرفتن اشاره گر موس روی هر <STRONG>قطره شبنم</STRONG> آن<STRONG> قطره</STRONG> لیز خورده و از صفحه می افتد و <STRONG>قطره شبنم</STRONG> دیگری جای آن را می گیرد ، بقیه قطرات در صورت دست نخوردن بعد از مدتی می افتند و <STRONG>قطرات</STRONG> دیگری جای آنها را نیز می گیرد .</FONT></FONT></FONT></FONT></P>
+<P align=right><FONT size=2>این کد <STRONG>طراوات و شادابی</STRONG> خاصی به وبلاگ شما خواهد داد و کاربر پسند ، احساساتی و عاشقانه است .</FONT></P>
+<P align=right><FONT size=2>این کد را می توانید در قسمت مخصوص&nbsp;کد های جاوا اسکریت وبلاگ خود قرار دهید ، اما برای آنکه در اجرای کد مشکلی وجود نداشته باشد و قطرات شبنم تمام صفحه وبلاگ شما را در بر بگیرند در قسمت ویرایش قالب وبلاگ خود عبارت <STRONG>&lt;html/&gt;</STRONG> را که در انتهای کد قالب شما وجود دارد&nbsp;یافته و این کد را قبل از ان قرار دهید .</FONT></P>
+<P align=center><FONT style="DIRECTION: ltr" size=2><TEXTAREA style="WIDTH: 491px; HEIGHT: 58px" rows=1 cols=36>&lt;!-- www.weblogskin.mihanblog.com --&gt;
+&lt;script language="javascript" src="http://aks-man.persiangig.com/weblogskin/js-files/ghatreh.js"&gt;&lt;/script&gt;
+&lt;!-- www.weblogskin.mihanblog.com --&gt;</TEXTAREA></FONT><FONT color=#663366 size=2></FONT></P>
+<P align=right><FONT size=2><FONT color=#666600>شما می توانید نمونه&nbsp;اجرایی این کد را در <FONT color=#cc0000><STRONG><A title="" href="http://weblogskin.blogfa.com/page/shabnam.aspx" target=_blank><FONT color=#cc0000><STRONG>اینجا</STRONG></FONT></A></STRONG></FONT> مشاهده فرمایید .</FONT></FONT></P><BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+<br><br><font color="#c70900">نوع مطلب :</font>
+<a href="http://weblogskin.mihanblog.com/post/category/8" class=text4>کد های جاوا اسکریپت</a>،&nbsp;<br><font color="#c70900">برچسب ها :</font>
+<a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF%20%D9%82%D8%B7%D8%B1%D8%A7%D8%AA%20%D8%B4%D8%A8%D9%86%D9%85%20%D8%AF%D8%B1%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF" class=text4>کد قطرات شبنم در وبلاگ</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA%20%D9%82%D8%B7%D8%B1%D9%87%20%D9%87%D8%A7%DB%8C%20%D8%A2%D8%A8%20%D8%AF%D8%B1%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF" class=text4>کد جاوا اسکریپت قطره های آب در وبلاگ</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA" class=text4>کد جاوا اسکریپت</a>، <a href="http://weblogskin.mihanblog.com/post/tag/code&#32;gatarat&#32;shabnam&#32;dar&#32;weblog" class=text4>code gatarat shabnam dar weblog</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D8%B2%D8%AE%DB%8C%D8%AB%20%D8%AA%D8%B4%D8%B1%D8%B4%20%D8%B3%D8%B2%D9%82%D9%87%D8%AD%D9%81" class=text4>زخیث تشرش سزقهحف</a>، </font></div></div>
+<div class=div26>
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(21)">نظرات (<script>setCommentCnt(21)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class=div18><font class=text6><a href="http://weblogskin.mihanblog.com/post/20">نمایش رتبه سنج گوگل در وبلاگ و وبسایت</a></font></div>
+<div class=div58><font class=text7>پنجشنبه 15 اردیبهشت 1390 :: نویسنده : <a href="http://weblogskin.mihanblog.com/post/author/85530">ایرانی </a></font></div>
+
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><P align=center><FONT color=#ff6600 size=5 face=arial,helvetica,sans-serif><STRONG>نمایش رتبه سنج گوگل در وبلاگ و وبسایت شما</STRONG></FONT></P>
+<P align=center><FONT color=#3333ff size=4 face=arial,helvetica,sans-serif>کد جاوا&nbsp;اسکریپت نمایش پیج رنک google page ranke</FONT></P>
+<P align=center><IMG border=0 hspace=0 alt="رتبه سنج گوگل در وبلاگ" src="http://seanseo.com/wp-content/uploads/Improve-Your-Pagerank.jpg"></P>
+<P align=right><FONT color=#3333ff size=2 face=tahoma,arial,helvetica,sans-serif><STRONG><FONT color=#cc0000>پیج رنک گوگل چیست ؟</FONT></STRONG>&nbsp;:<FONT color=#660000> </FONT><FONT color=#333399>حتما تا به حال در وبلاگ ها و وبسایت ها نمونه شکل های زیر را مشاهده کرده اید و یا درباره <STRONG>پیج رنگ</STRONG>&nbsp;چیزهایی شنیده اید ،که&nbsp;در اصطلاح رتبه سنج صفحه سایت های&nbsp;گوگل نام دارند ، به عبارتی <STRONG>موتور جستجو گر گوگل</STRONG> برای سایت های اینترنتی بر اساس یک سری پارمتر هایی از قبیل (&nbsp; اهمیت سایت ،&nbsp;پر محتوا بودن ، تعداد لینک های خارجی به سایت ، قدمت سایت&nbsp;و ...&nbsp;) رتبه بندی می کند که نتایج جستجوی خود را نیز بر اساس این رتبه بندی لیست می کند ، به عبارتی صفحاتی که دارای رنک بالاتری هستند در نتیجه جستجو در ابتدای لیست نتایج نمایش داده می شوند .</FONT></FONT></P>
+<P align=right><FONT color=#333399 size=2>پیج رنک یک عدد بین 0 تا 10 می باشد ، ساین هایی مثل خود <STRONG>گوگل</STRONG> دارای رنک 10 (&nbsp;بالاترین امتیاز&nbsp;) می باشند .</FONT></P>
+<P align=right><FONT color=#333399 size=2>برای اینکه بتوانید رنک صفحه اول وبلاگ و وبسایت تان&nbsp;(&nbsp;یا هر صفحه که می خواهید&nbsp;) را بدانید می توانید&nbsp;یا به صورت مستقیم به آدرسی که&nbsp;گوگل برای این کار اختصاص داده مراجعه کنید یعنی این لینک روبرو :</FONT></P>
+<P style="DIRECTION: ltr" align=left><A href="http://www.checkpagerank.net/checker"><FONT color=#ff6600 size=2>http://www.checkpagerank.net/checker</FONT></A></P>
+<P align=right><FONT color=#660000><FONT size=2>اگر هم بخواهید&nbsp;<STRONG>پیج رنک وبلاگتان</STRONG> برای بازدید کنندگان تان نمایش داده شود از کد&nbsp;موجود در ادامه مطلب یا همان "&nbsp;<STRONG><FONT color=#3366ff>کد اسکریپت پیج رنک گوگل</FONT></STRONG>&nbsp;"&nbsp;با تغییراتی که توضیح خواهم داد استفاده کنید . </FONT>&nbsp;</FONT></P><BlogExtendedPost><br><br><b><a href='http://weblogskin.mihanblog.com/post/20'>کد اسکریپت پیج رنک گوگل</a></b></BlogExtendedPost>
+<br><br><font color="#c70900">نوع مطلب :</font>
+<a href="http://weblogskin.mihanblog.com/post/category/16" class=text4>ابزار نمایش رتبه سنج گوگل</a>،&nbsp;<br><font color="#c70900">برچسب ها :</font>
+<a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF%20%D9%BE%DB%8C%D8%AC%20%D8%B1%D9%86%DA%AF%20%DA%AF%D9%88%DA%AF%D9%84%20%D8%AF%D8%B1%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF" class=text4>کد پیج رنگ گوگل در وبلاگ</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D8%B1%D8%AA%D8%A8%D9%87%20%D8%B3%D9%86%D8%AC%20%DA%AF%D9%88%DA%AF%D9%84" class=text4>رتبه سنج گوگل</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA%20%D9%BE%DB%8C%D8%AC%20%D8%B1%D9%86%DA%A9%20%DA%AF%D9%88%DA%AF%D9%84" class=text4>کد جاوا اسکریپت پیج رنک گوگل</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D9%BE%DB%8C%D8%AC%20%D8%B1%D9%86%DA%AF%20%DB%8C%D8%A7%20%D8%B1%D8%AA%D8%A8%D9%87%20%D8%B3%D9%86%D8%AC%20%DA%AF%D9%88%DA%AF%D9%84%20%DA%86%DB%8C%D8%B3%D8%AA%20%D8%9F" class=text4>پیج رنگ یا رتبه سنج گوگل چیست ؟</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D8%A7%D8%A8%D8%B2%D8%A7%D8%B1%20%D9%86%D9%85%D8%A7%DB%8C%D8%B4%20%D8%B1%D8%AA%D8%A8%D9%87%20%DA%AF%D9%88%DA%AF%D9%84" class=text4>ابزار نمایش رتبه گوگل</a>، <a href="http://weblogskin.mihanblog.com/post/tag/page&#32;rank&#32;google" class=text4>page rank google</a>، <a href="http://weblogskin.mihanblog.com/post/tag/java&#32;script&#32;code&#32;page&#32;rank&#32;google" class=text4>java script code page rank google</a>، <a href="http://weblogskin.mihanblog.com/post/tag/hfchv&#32;klhda&#32;vjfi&#32;sk[" class=text4>hfchv klhda vjfi sk[</a>، <a href="http://weblogskin.mihanblog.com/post/tag/abzar&#32;namayesh&#32;rotbeh&#32;sang&#32;gogel" class=text4>abzar namayesh rotbeh sang gogel</a>، <a href="http://weblogskin.mihanblog.com/post/tag/page&#32;rank&#32;gogle" class=text4>page rank gogle</a>، </font></div></div>
+<div class=div26>
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(20)">نظرات (<script>setCommentCnt(20)</script>)</a></font></div>
+</div>
+</div><div class=div54>
+<div class=div15>
+<div class=div015></div>
+<div class=div18><font class=text6><a href="http://weblogskin.mihanblog.com/post/19">قالب هنری میهن بلاگ و پرشین بلاگ</a></font></div>
+<div class=div58><font class=text7>چهارشنبه 14 اردیبهشت 1390 :: نویسنده : <a href="http://weblogskin.mihanblog.com/post/author/85530">ایرانی </a></font></div>
+
+</div>
+<div class=div21>
+<div class=div55></div>
+<div class=div56><font class=text4><P align=center><FONT face=arial,helvetica,sans-serif size=6><STRONG>قالب هنری <FONT color=#996633>میهن بلاگ</FONT> و <FONT color=#cc9933>پرشین بلاگ</FONT></STRONG></FONT></P>
+<P align=center><STRONG><FONT face=Arial color=#cc9933><FONT size=5><FONT color=#000000>تیره</FONT> و <FONT color=#ff6600>ر</FONT><FONT color=#3366ff>ن</FONT><FONT color=#993399>گ</FONT><FONT color=#33ff33>ا</FONT><FONT color=#ff9900>ر</FONT>ن<FONT color=#33ccff>گ</FONT></FONT></FONT></STRONG></P>
+<P align=center><IMG alt="قالب وبلاگ تیره و با امکانات زیاد" hspace=0 src="http://topskin.ir/theme-big/weblog36-b.jpg" align=baseline border=0></P>
+<DIV class=theme-x><FONT size=2><STRONG>نوع قالب</STRONG> : <SPAN>هنری&nbsp;- دانلود - تیره و رنگارنگ</SPAN></FONT></DIV>
+<DIV class=theme-x>
+<DIV><FONT size=2><STRONG>وضوح نمایش</STRONG> : <SPAN>768*1024</SPAN></FONT></DIV></DIV>
+<DIV class=theme-x>
+<DIV><FONT size=2><STRONG>حجم كلی قالب</STRONG> : <SPAN>متوسط</SPAN></FONT></DIV>
+<DIV><FONT size=2><SPAN><STRONG>رنگ غالب این قالب</STRONG> : قهوه سوخته و رنگارنگ</SPAN></FONT></DIV></DIV>
+<DIV class=theme-x>
+<DIV><FONT size=2>مرورگرهای سازگار : <SPAN>+IE 6+ | FireFox 2</SPAN></FONT></DIV>
+<DIV><FONT size=2><SPAN></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT size=2><SPAN><FONT color=#33cc00>توضیح قالب</FONT> : <FONT color=#996633>این قالب وبلاگ همانطور که ذکر شد مخصوص کاربران میهن بلاگ و پرشین بلاگ تهیه شده است ، از ویژگی های آن می توان به استفاده از رنگ های متنوع و شاد در طراحی منو های آن اشار کرد ، البته قالب در حالت کلی به رنگ خاکستری سوخته می باشد </FONT></SPAN></FONT></DIV>
+<DIV><FONT size=2><SPAN></SPAN></FONT>&nbsp;</DIV>
+<DIV><FONT color=#009900 size=2><SPAN>برای مشاهده کد های موجود این قالب&nbsp;( <STRONG>میهن بلاگ</STRONG> و&nbsp;<STRONG>پرشین بلاگ</STRONG>&nbsp;) به ادامه مطب یا همان "<FONT color=#006600><STRONG>کد قالب ها" </STRONG></FONT>مراجعه کنید . </SPAN></FONT></DIV></DIV><BlogExtendedPost><br><br><b><a href='http://weblogskin.mihanblog.com/post/19'>کد قالب ها </a></b></BlogExtendedPost>
+<br><br><font color="#c70900">نوع مطلب :</font>
+<a href="http://weblogskin.mihanblog.com/post/category/4" class=text4>قالب های میهن بلاگ mihanblog</a>،&nbsp;<a href="http://weblogskin.mihanblog.com/post/category/14" class=text4>قالب های پرشین بلاگ persianblog</a>،&nbsp;<a href="http://weblogskin.mihanblog.com/post/category/6" class=text4>قالب هنری</a>،&nbsp;<br><font color="#c70900">برچسب ها :</font>
+<a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF%20%D9%82%D8%A7%D9%84%D8%A8%20%D9%87%D9%86%D8%B1%DB%8C%20%D9%85%DB%8C%D9%87%D9%86%20%D8%A8%D9%84%D8%A7%DA%AF" class=text4>کد قالب هنری میهن بلاگ</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%DA%A9%D8%AF%20%D9%82%D8%A7%D9%84%D8%A8%20%D9%87%D9%86%D8%B1%DB%8C%20%D9%BE%D8%B1%D8%B4%DB%8C%D9%86%20%D8%A8%D9%84%D8%A7%DA%AF" class=text4>کد قالب هنری پرشین بلاگ</a>، <a href="http://weblogskin.mihanblog.com/post/tag/%D9%82%D8%A7%D9%84%D8%A8%20%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%D8%B1%D9%86%DA%AF%D8%A7%D8%B1%D9%86%DA%AF%20%D9%88%20%D8%AA%DB%8C%D8%B1%D9%87" class=text4>قالب وبلاگ رنگارنگ و تیره</a>، <a href="http://weblogskin.mihanblog.com/post/tag/ghalebeh&#32;honari&#32;weblog" class=text4>ghalebeh honari weblog</a>، </font></div></div>
+<div class=div26>
+<div class=div27><font class=text8><a target="_self" href="javascript:newComment(19)">نظرات (<script>setCommentCnt(19)</script>)</a></font></div>
+</div>
+</div>
+<div class=div29></div>
+<div class=div28><font class=text9>
+<br><br>
+( کل صفحات : 3 )&nbsp;&nbsp;&nbsp;
+<a href="http://weblogskin.mihanblog.com/page/1" class=text4><b>1</b></a>&nbsp;&nbsp;&nbsp;<a href="http://weblogskin.mihanblog.com/page/2" class=text4><span>2</span></a>&nbsp;&nbsp;&nbsp;<a href="http://weblogskin.mihanblog.com/page/3" class=text4><span>3</span></a>&nbsp;&nbsp;&nbsp;</font>
+</div>
+</div>
+
+<div class=div17>
+
+<div class=div170>
+
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=mtext5>موضوعات</font></div></div>
+<div class=sm2></div>
+<div class=div341><font class=mtext1><ul>
+<li><a href="http://weblogskin.mihanblog.com/post/category/19">کدهای اسکریپت ماوس ( موس ) (1)</a></li><li><a href="http://weblogskin.mihanblog.com/post/category/17">قالب های دخترانه و فانتزی (1)</a></li><li><a href="http://weblogskin.mihanblog.com/post/category/16">ابزار نمایش رتبه سنج گوگل (1)</a></li><li><a href="http://weblogskin.mihanblog.com/post/category/15">کد جاوا اسکریپت ساعت در وبلاگ (3)</a></li><li><a href="http://weblogskin.mihanblog.com/post/category/4">قالب های میهن بلاگ mihanblog (13)</a></li><li><a href="http://weblogskin.mihanblog.com/post/category/14">قالب های پرشین بلاگ persianblog (9)</a></li><li><a href="http://weblogskin.mihanblog.com/post/category/13">قالب های بلاگ اسکای blogsky (6)</a></li><li><a href="http://weblogskin.mihanblog.com/post/category/18">قالب های پارسی بلاگ parsiblog (1)</a></li><li><a href="http://weblogskin.mihanblog.com/post/category/11">قالب های بلاگفا blogfa (6)</a></li><li><a href="http://weblogskin.mihanblog.com/post/category/12">آموزش وبلاگ نویسی و ترفند ها (1)</a></li><li><a href="http://weblogskin.mihanblog.com/post/category/6">قالب هنری (8)</a></li><li><a href="http://weblogskin.mihanblog.com/post/category/5">قالب کلاسیک و ساده (4)</a></li><li><a href="http://weblogskin.mihanblog.com/post/category/7">قالب مذهبی و دینی (1)</a></li><li><a href="http://weblogskin.mihanblog.com/post/category/2">قالب احساسی و عاشقانه (3)</a></li><li><a href="http://weblogskin.mihanblog.com/post/category/9">کد وضعیت یاهو در وبلاگ (1)</a></li><li><a href="http://weblogskin.mihanblog.com/post/category/8">کد های جاوا اسکریپت (4)</a></li><li><a href="http://weblogskin.mihanblog.com/post/category/3">آموزش تغییر قالب وبلاگ (2)</a></li><li><a href="http://weblogskin.mihanblog.com/post/category/1">کد آهنگ مذهبی و مداحی (1)</a></li></ul></font></div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=mtext5>پیوندهای روزانه</font></div></div>
+<div class=sm2></div>
+<div class=div341><font class=mtext1><ul>
+<li><a href="https://www.totikala.ir" title="ارائه اطلاعات مفید و کاربردی جهت بررسی، مقایسه و خرید بهتر محصولات مورد نظر شما" target="_blank">طوطی کالا</a></li><li><a href="http://www.kafsabisalar.ir" title="شرکت خدمات کفسابی، نماشویی و سنگ سابی سالار در تبریز و شمال غرب کشور" target="_blank">کفسابی سالار</a></li><li><a href="https://www.nushdaro.com" title="داروخانه آنلاین نوش دارو، فروش اینترنتی انواع مکمل های دارویی، مکمل های بدنسازی، مکمل های غذایی، لوازم آرایشی و بهداشتی، ویتامین ها و تجهیزات پزشکی با مجوز وزارت بهداشت" target="_blank">نوش دارو</a></li><li><a href="http://www.kafsabihajipour.ir/" title="خدمات کفسابی و نماشویی حاجی پور در تبریز و شمال غرب کشور" target="_blank">کفسابی در تبریز</a></li><li><a href="https://www.balmusic.ir" title="دانلود جدیدترین ترانه ها و آهنگ های جدید ایرانی و خارجی، دانلود آهنگ با لینک مستقیم با کیفیت 128 و 320" target="_blank">دانلود آهنگ جدید</a></li><li><a href="http://www.looper.ir/daily-omen.html" title="فال روزانه، فال روز، فال امروز مجله اینترنتی لوپر" target="_blank">فال امروز</a></li><li><a href="http://www.nlink.ir" title="نیوز لینک ، تیتر جدیدترین و آخرین اخبار ایران و جهان" target="_blank">نیوز لینک</a></li><li><a href="http://www.charge4iran.ir" title="خرید شارژ ایرانسل ، همراه اول ، رایتل و تالیا" target="_blank">خرید شارژ ایرانسل ، همراه اول ، رایتل و تالیا</a></li><li><a href="http://www.looper.ir" title="مجله اینترنتی لوپر | سبک زندگی ، سلامت ، آشپزی ، دکوراسیون ، سرگرمی ، موسیقی ، دانش و فن آوری ، ورزشی" target="_blank">مجله اینترنتی لوپر</a></li><li><a href="http://imdb4iran.mihanblog.com" title="دانلود فیلم و سریال ایرانی و خارجی با لینک مستقیم" target="_blank">دانلود فیلم و سریال با لینک مستقیم</a></li><li><b><a href="http://weblogskin.mihanblog.com/linkdaily/">همه پیوندهای روزانه</a></b></li>
+<li><b><a href="javascript:linkdailyForm()">ارسال پیوند روزانه</a></b></li>
+</ul></font></div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=mtext5>پیوندها</font></div></div>
+<div class=sm2></div>
+<div class=div341><font class=mtext1><ul>
+<li><a href="https://www.totikala.ir" title="سایت طوطی کالا، راهنمای انتخاب هوشمندانه شما برای خرید بهترین برند کالاهای ایرانی و خارجی با قیمت مناسب" target="_blank">طوطی کالا</a></li><li><a href="http://www.kafsabisalar.ir" title="شرکت خدمات کفسابی، نماشویی و سنگ سابی سالار در تبریز و شمال غرب کشور" target="_blank">کفسابی و نماشویی در تبریز</a></li><li><a href="http://www.abandsanat.ir" title="شرکت پلیمری آبند صنعت سهند، مجری احداث استخرهای پلیمری ژئوممبران و ژئوتکستایل با قیمت مناسب و کادر مجرب" target="_blank">ورق ژئوممبران و ژئوتکستایل</a></li><li><a href="https://www.nushdaro.com" title="داروخانه آنلاین نوش دارو، فروش اینترنتی انواع مکمل های دارویی، مکمل های بدنسازی، مکمل های غذایی، لوازم آرایشی و بهداشتی، ویتامین ها و تجهیزات پزشکی با مجوز وزارت بهداشت" target="_blank">داروخانه آنلاین نوش دارو</a></li><li><a href="http://www.kafsabihajipour.ir/" title="خدمات کفسابی و نماشویی حاجی پور در تبریز و شمال غرب کشور" target="_blank">کفسابی در تبریز</a></li><li><a href="http://www.balmusic.ir" title="دانلود جدیدترین ترانه ها و آهنگ های جدید ایرانی و خارجی، دانلود آهنگ با لینک مستقیم با کیفیت 128 و 320" target="_blank">بالموزیک، دانلود آهنگ و آلبوم جدید</a></li><li><a href="http://www.gaflan.net" title="شرکت جهانگردی و سیاحتی قافلان گشت میانه، فروش بلیط هواپیما و بلیط قطار و تورهای مشهد، سرعین و کیش" target="_blank">شرکت قافلان گشت میانه</a></li><li><a href="http://www.carpetarman.com/" title="نخ و نقشه تابلو فرش آرمان" target="_blank">نخ و نقشه آرمان</a></li><li><a href="http://www.azarsanatsahand.com/" title="ژئوممبران و ژئوتکستایل" target="_blank">شرکت آذر صنعت سهند</a></li><li><a href="http://www.looper.ir/daily-omen.html" title="فال روزانه، فال روز، فال امروز مجله اینترنتی لوپر" target="_blank">فال روزانه</a></li><li><a href="http://www.nlink.ir" title="نیوز لینک ، تیتر جدیدترین و آخرین اخبار ایران و جهان" target="_blank">نیوز لینک</a></li><li><a href="http://www.looper.ir/sleep/" title="تعبیر خواب اینترنتی لوپر" target="_blank">تعبیر خواب آنلاین</a></li><li><a href="http://www.looper.ir" title="مجله اینترنتی لوپر | سبک زندگی ، سلامت ، آشپزی ، دکوراسیون ، سرگرمی ، موسیقی ، دانش و فن آوری ، ورزشی" target="_blank">مجله اینترنتی لوپر</a></li><li><a href="http://imdb4iran.mihanblog.com" title="دانلود فیلم و سریال ایرانی و خارجی با لینک مستقیم" target="_blank">دانلود فیلم و سریال با لینک مستقیم</a></li><li><a href="http://mobile3enter.mihanblog.com" title="بزرگترین سایت دانلود نرم افزار ، بازی ، تم ، اس ام اس ، آهنگ های مخصوص موبایل" target="_blank">مرکز تخصصی موبایل</a></li><li><a href="http://mobile3enter.rozblog.com" title="جدیدترین نرم افزار ها ، بازی ها ، آهنگ ها ، اس ام اس ها ، تم های مخصوص موبایل و گوشی های تلفن" target="_blank">سایت تخصصی موبایل</a></li><li><a href="http://www.pishroo.ir" title="برنامه نویسی ، طراحی سایت ، پروژه دانشجویی ، مقاله و تحقیق" target="_blank">پیشرو پروژه</a></li><li><a href="http://www.photo-aks.com" title="گالری عکس و تصویر فتوعکس" target="_blank">عکس و تصویر</a></li><li><a href="http://opengl.mihanblog.com" title="گرافیک کامپیوتری opengl - پروژه های آماده تحویل و انجام و سفارشی برنامه های گرافیکی" target="_blank">گرافیک کامپیوتری opengl</a></li><li><a target="_blank" href="index.html">بهترین قالب های وبلاگ</a></li>
+<li><b><a href="http://weblogskin.mihanblog.com/link/">همه پیوندها</a></b></li>
+</ul></font></div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=mtext5>صفحات جانبی</font></div></div>
+<div class=sm2></div>
+<div class=div341><font class=mtext1><ul>
+<li><a href="http://weblogskin.mihanblog.com/extrapage/weblog">سفارش طراحی وبلاگ</a></li><li><a href="http://weblogskin.mihanblog.com/extrapage/mihanblog">قالب های میهن بلاگ</a></li><li><a href="http://weblogskin.mihanblog.com/extrapage/blogfa">قالب های موجود بلاگفا</a></li><li><a href="http://weblogskin.mihanblog.com/extrapage/persianblog">قالب های پرشین بلاگ</a></li><li><a href="http://weblogskin.mihanblog.com/extrapage/blogsky">قالب های بلاگ اسکای</a></li><li><a href="http://weblogskin.mihanblog.com/extrapage/parsiblog">قالب های پارسی بلاگ</a></li></ul></font></div><div class=div30></div>
+</div>
+<div class=div24>
+<div class=div35>
+<div class=div25><font class=mtext5>آمار وبلاگ</font></div></div>
+<div class=sm2></div>
+<div class=div341><font class=mtext1><ul>
+<li>کل بازدید : <script>getStatVar('total_view');</script></li>
+<li>بازدید امروز :<script>getStatVar('today_view');</script></li>
+<li>بازدید دیروز : <script>getStatVar('yesterday_view');</script></li>
+<li>بازدید این ماه : <script>getStatVar('this_month_view');</script></li>
+<li>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></li>
+<li>تعداد نویسندگان : <script>getStatVar('total_author');</script></li>
+<li>تعداد کل پست ها : <script>getStatVar('total_post');</script></li>
+<li>آخرین بازدید : <script>getStatVar('last_view_date');</script></li>
+<li>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></li>
+</ul></font></div><div class=div30></div>
+</div>
+<div class=div024><center><!-- Begin photo-aks.com random image code -->
+<div align="center"><font face="Tahoma" style="font-size: 12px"><a target="_blank" href="http://www.photo-aks.com"><span lang="fa" style="text-decoration: none">بزرگترین گالری عکس</span></a></font></div><div align="center"><script type="text/javascript" src="http://photo-aks.com/codes/photo-aks.js"></script>
+<script type="text/javascript" src="http://photo-aks.com/codes/love.js"></script>
+<script type="text/javascript" src="http://photo-aks.com/codes/animlas.js"></script>
+<script type="text/javascript" src="http://photo-aks.com/codes/flowers.js"></script></div>
+<!-- End photo-aks.com random image code -->
+
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=2129175&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=2129175" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code --></center></div>
+</div>
+
+</div>
+
+</div>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td class=b1>&nbsp;</td>
+<td class=b2>
+<div class=div6></div>
+<div class=div7>
+<img src="http://mythemes.ir/t31/blank.gif" border=0 width=182 height=35></div>
+</td>
+<td class=b1>&nbsp;</td>
+</tr>
+</table>
+</div>
+<script language="javascript" src="http://mypopup.ir/v2/adsystem/adsystem.php?u=719"></script>
+<script type="text/javascript" src='http://irpopup.ir/show2.php?user=1788&type=1'></script>
+</body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'weblogskin.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

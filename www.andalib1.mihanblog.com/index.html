@@ -1,0 +1,1791 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://andalib1.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*766825*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','34');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','پنجشنبه 27 شهریور 1393');
+	
+	setStatVar('today_view','1');
+	setStatVar('yesterday_view','2');
+	
+	setStatVar('this_month_view','173');
+	setStatVar('last_month_view','114');
+
+	setStatVar('total_view','71237');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (15:20)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://andalib1.mihanblog.com/statupdate/?data[refereruri]=&data[postid]=&data[requesturi]=/&data[sdate]=1608231774&data[hash]=e1ef8482ec3baf04bf2d68df167341dd&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[12]='911';commentCnt[21]='8';commentCnt[22]='15';commentCnt[23]='16';commentCnt[24]='32';commentCnt[27]='45';commentCnt[28]='47';commentCnt[29]='82';commentCnt[30]='28';commentCnt[31]='71';commentCnt[32]='27';commentCnt[34]='71';commentCnt[35]='217';commentCnt[38]='125';commentCnt[39]='70';commentCnt[40]='120';commentCnt[41]='48';commentCnt[44]='43';commentCnt[45]='30';commentCnt[46]='40';commentCnt[48]='4';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[12]='0';
+mihanblogDisLikeArrCnt[12]='0';
+mihanblogLikeArrCnt[21]='0';
+mihanblogDisLikeArrCnt[21]='0';
+mihanblogLikeArrCnt[24]='0';
+mihanblogDisLikeArrCnt[24]='0';
+mihanblogLikeArrCnt[27]='0';
+mihanblogDisLikeArrCnt[27]='0';
+mihanblogLikeArrCnt[28]='0';
+mihanblogDisLikeArrCnt[28]='0';
+mihanblogLikeArrCnt[30]='0';
+mihanblogDisLikeArrCnt[30]='0';
+mihanblogLikeArrCnt[31]='0';
+mihanblogDisLikeArrCnt[31]='0';
+mihanblogLikeArrCnt[34]='0';
+mihanblogDisLikeArrCnt[34]='0';
+mihanblogLikeArrCnt[35]='0';
+mihanblogDisLikeArrCnt[35]='0';
+mihanblogLikeArrCnt[38]='0';
+mihanblogDisLikeArrCnt[38]='0';
+mihanblogLikeArrCnt[39]='0';
+mihanblogDisLikeArrCnt[39]='0';
+mihanblogLikeArrCnt[40]='0';
+mihanblogDisLikeArrCnt[40]='0';
+mihanblogLikeArrCnt[41]='0';
+mihanblogDisLikeArrCnt[41]='0';
+mihanblogLikeArrCnt[44]='0';
+mihanblogDisLikeArrCnt[44]='0';
+mihanblogLikeArrCnt[45]='0';
+mihanblogDisLikeArrCnt[45]='0';
+mihanblogLikeArrCnt[46]='0';
+mihanblogDisLikeArrCnt[46]='0';
+mihanblogLikeArrCnt[48]='0';
+mihanblogDisLikeArrCnt[48]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://andalib1.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://andalib1.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://andalib1.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://andalib1.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://andalib1.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://andalib1.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://andalib1.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://andalib1.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://andalib1.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://andalib1.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://andalib1.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://andalib1.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://andalib1.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://andalib1.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://andalib1.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://andalib1.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://andalib1.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<head>
+<script language="JavaScript1.2">
+<!--
+
+top.window.moveTo(0,0);
+if (document.all) {
+top.window.resizeTo(screen.availWidth,screen.availHeight);
+}
+else if (document.layers||document.getElementById) {
+if (top.window.outerHeight<screen.availHeight||top.window.outerWidth<screen.availWidth){
+top.window.outerHeight = screen.availHeight;
+top.window.outerWidth = screen.availWidth;
+}
+}
+
+//-->
+</script>
+<title>به بلــــــــــــــ ـــ ـــــــــــــــــــــــ ــــــ ـــ ــــــندی فریاد سکوت</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="keywords" content="به بلــــــــــــــ ـــ ـــــــــــــــــــــــ ــــــ ـــ ــــــندی فریاد سکوت,andalib1">
+      <META NAME="description" CONTENT="به بلــــــــــــــ ـــ ـــــــــــــــــــــــ ــــــ ـــ ــــــندی فریاد سکوت - اینجا دلی تنـــــــگ است....   ">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="designer" content="http://blogs.dehkadeyedownload.ir" />
+      <link rel="alternate" type="application/rss+xml" title="به بلــــــــــــــ ـــ ـــــــــــــــــــــــ ــــــ ـــ ــــــندی فریاد سکوت" href="http://andalib1.mihanblog.com/post/rss/" />
+<style>
+<!--
+body{font-family:Tahoma;font-size:8pt;padding:0px;margin:0px;color:#d1dcf3;background:#fff}
+a, a:visited{color:#494949;text-decoration: none}a:hover{color:#000000;text-decoration: none}
+body {
+	BACKGROUND: #d8dbb9 url('') top left fixed no-repeat ; 
+}
+.link1{width:170px;}
+.link2{background:#d8dbb9 url() right no-repeat;padding:0px;font-weight:bold;text-align:center;color:#3f3e48;}
+#page{background:url() center repeat-y;width:870px}img{border:none}
+#uwrapper {margin:0;padding:0;text-align:center;background-image:url(http://dl.dehkadeyedownload.ir/themes/image/74-2.jpg); background-repeat:repeat-x; background-position-y:top;}
+#header{height:0px;background:url() no-repeat right; }
+#header div{color:#2C2215;font-family:verdana;font-size:21pt;font-weight:bold;text-align:center;padding-top:50px}
+#header div p{margin-top:5px;margin-bottom:0px;color:#2C2215;font-family:Tahoma;font-size: 9pt;font-weight:normal;text-align:center;direction:rtl}
+#headerb{height:0px}
+#content{padding:0px 7px}
+#main{background:#ebedd5 url(http://dl.dehkadeyedownload.ir/themes/image/74-3.jpg) repeat center;float:right;width:550px;text-align:right;overflow:hidden}
+#main2{height:60px;background: url() top no-repeat;}
+#post{padding:0 0px;text-align:right}
+#posttitle{height:44px;background: url() center no-repeat;text-align:right;font-size:9pt;font-weight:42;direction:rtl;padding-top:14px;padding-right:30px}
+#posttitle a, #posttitle a:visited {color:#526065}#posttitle a:hover {color:#526065}
+#postbody{text-align: justify;padding:0px 10px 5px 3;font-size:8pt;color:#282d2f;line-height:1.5em;direction:rtl;}
+#postbody p{margin-top:10px;margin-bottom:0px}
+#postdesc{padding-top:15px;padding-right:22px;padding-left:7px;color:#606a6d;direction:rtl}
+#space{height:20px}
+#sidebar{float:left;background:#e3e6c6 url(http://dl.dehkadeyedownload.ir/themes/image/74.jpg) no-repeat top center ;width:300px;padding-top:430px;color:#364a51;line-height:1.5em;text-align:right}
+#sidebar a, #sidebar a:visited {color:#343434}#sidebar a:hover {color:#364a51}
+#mmenu{width:170px;ine-height: 1.5em;text-align:center;direction:rtl;}
+#sidebar ul{font-size:8pt;list-style-type: none;margin: 0px;padding:0 5px 20px 5px}
+#sidebar li {font-size:8pt;padding-right:5px;padding-bottom:0px;line-height:1.5em;direction:rtl}
+#photo{width:170px;padding-top:5px;padding-bottom:2px;text-align:center}
+#about{width:170px;text-align: justify;font-size:8pt;padding:10px 7px 20px 7px;color:#343434;direction:rtl}
+#feed{margin:0px;padding-bottom:10px;text-align:center}
+#custom{width:170px;color:#5e7161;overflow:auto;margin:10px 0;text-align:center;direction:rtl}
+-->
+</style>
+<script lang ="javascript">
+function GetBC(lngPostid)
+{
+intTimeZone=<-BlogTimeZone->;
+strBlogId="andalib1";
+intCount=-1;
+strResult="";
+try {
+for (i=0;i<BlogComments.length;i+=2)
+{
+if (BlogComments[i]==lngPostid)
+intCount=BlogComments[i+1] ;
+}
+}  catch( e) {
+}
+if ( intCount==-1)  strResult="آرشیو نظرات";
+if ( intCount==0)  strResult="نظر بدهید";
+if ( intCount==1)  strResult="یک نظر";
+if ( intCount>1)  strResult=intCount + " نظر" ;
+strUrl="http://commenting.blogfa.com/?blogid=" +strBlogId + "&postid=" + lngPostid + "&timezone=" + intTimeZone ;
+strResult ="<a href="http://andalib1.mihanblog.com/\&quot;javascript:void(0)\&quot;" onclick=\"javascript:window.open('" + strUrl + "','blogfa_comments','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px')\" >" +  strResult + " </a>" ;
+document.write ( strResult ) ;
+}
+function OpenLD()
+{
+window.open('LinkDump.aspx','blogfa_ld','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px');
+return true;
+}
+</script>
+</head>
+<body>
+<div id=uwrapper>
+<div align=center>
+<div id=page>
+
+<div id=content>
+<div id=main>
+<div id=main2>
+<center><br>
+<font color="#364a51" face="Arial" style="font-size: 15pt">
+<b>  به بلــــــــــــــ ـــ ـــــــــــــــــــــــ ــــــ ـــ ــــــندی فریاد سکوت</b><p>
+<font color="#364a51" face="Tahoma" style="font-size: 8pt">
+  اینجا دلی تنـــــــگ است....   <p>
+</center>
+<p></div>
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/12"><b>پست ثابت</b></a></div>
+<div id=postbody><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+<div align="center">
+بسمه تعالی<br></div><br><br><i><font size="4"><br></font></i><div align="right">خوش اومدین ....<br><div align="center"><img style="margin-top: 92px;" id="irc_mi" src="http://www.odyssei.com/gallery/1044_alone_on_preikestolen.jpg" height="269" width="453"></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br></div>
+<div id=postdesc> نوشته شده در پنجشنبه 8 تیر 1391 ساعت 
+	11:18 ق.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(12)">محبت  <script>setCommentCnt(12)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/48"><b>5/23</b></a></div>
+<div id=postbody>
+داور یک کارت قرمز دکلمه میکند<div>و شاعری اخراج میشود</div><div>انگار شاعر</div><div>در این مصرع توپ را به پای یار زده بود ....<br>(مبینا دهرویه)</div>
+
+<br></div>
+<div id=postdesc> نوشته شده در پنجشنبه 27 شهریور 1393 ساعت 
+	09:33 ب.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(48)">نظرات  <script>setCommentCnt(48)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/46"><b>به نام قلم و هر انچه که مینویسد ...</b></a></div>
+<div id=postbody>
+<font face="georgia,times new roman,times,serif" size="3">روزهایی که زیر درخت البالو&nbsp; گم نمیشوم <br>احساس میکنم<br>قرار است بیایی ...<br>
+
+
+</font>
+
+<br></div>
+<div id=postdesc> نوشته شده در پنجشنبه 28 شهریور 1392 ساعت 
+	10:39 ب.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(46)">دیدگاه  <script>setCommentCnt(46)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/45"><b>1392/06/01</b></a></div>
+<div id=postbody>
+
+
+<font size="3"><b><font color="#FFCC00" face="wingdings"><font color="#000000">1/قید که خوب است<br>فعل و فاعل و مفعول تو را هم زده ام ....</font><br></font><font face="wingdings"><br><br><br>2/گرسنگی دختر مزرعه<br>نه به آفت ربط دارد<br>نه به خشکسالی<br>به مرخصی هایی برمی گردد<br>که مترسک<br>برای اسکی روی برف گرفته بود ...<br></font></b></font>
+
+
+
+
+
+
+
+
+<br></div>
+<div id=postdesc> نوشته شده در چهارشنبه 30 مرداد 1392 ساعت 
+	11:16 ق.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(45)">دیدگاه  <script>setCommentCnt(45)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/44"><b>به نام خداوند جان و خرد ...</b></a></div>
+<div id=postbody><div align="center"><font face="courier new,courier,monospace"><b><font size="3">دوستان عزیزم سلام</font></b><br><b><font size="3"><font size="3">ممنون ا<font size="3">ز حضورتون<br><font size="3"><font size="3"><font size="3">بعد ا<font size="3">ز مدت ها <font size="3">چند ت<font size="3">ا<font size="3"> از <font size="3">کارامو گذاشتم</font></font></font></font></font></font></font></font><br></font></font></font></b><b><font size="3">امیدوارم خوشتون بیاد<font size="3"> و اینکه خوشحال میشم اگر<font size="3"> نظرتونو درباره ی اثار بگ<font size="3">ید</font></font> ....</font></font></b><br><b><font size="3"><font size="3"><font size="3">سپاس فراوان </font></font></font></b><img src="http://mihanblog.com/public/public/rte/images_new/smiles/1.gif"></font><br></div><br><b><font face="georgia,times new roman,times,serif" size="3"><font size="3"><br></font>دنبالش کرده&nbsp; بودند<br>نفس کم آورده اند<br>گربه مرد.<br><br>*موش ها زیاد بودند.</font></b><br><br><br>و یه اثر دیگه در قالب کاری کلماتور:<br><br><font face="arial,helvetica,sans-serif"><b><font size="3">اعتماد نکن <br>به چشمهایت<br>این روزها<br>ان ها هم خوب یاد گرفته اند<br>تبانی کنند</font></b></font><br><font face="arial,helvetica,sans-serif"><b><font size="3">با عینک ها....</font></b></font><br><br>و این هم اخرین اثر:<br><br><font face="georgia,times new roman,times,serif" size="3"><b>تمام عشق خود<br>به نیمه گمشده اش را می فروشد<br>برای خرید نقشه<br>نقشه ای که نیمه های گمشده روی ان علامت گذاری شده اند<br>حال<br>دو نیمه <br>دو وجو ناقص اند<br>که بی عشق<br>وصالشان<br>(( دو خط موازی)) می شود....<br><br></b></font><div align="left"><font face="tahoma,arial,helvetica,sans-serif" size="3"><b><font size="3"><font size="3">منتظر <font size="3">نظراتتونم....</font></font></font></b></font><br></div><br>
+
+
+<br></div>
+<div id=postdesc> نوشته شده در سه شنبه 4 تیر 1392 ساعت 
+	07:49 ب.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(44)">دیدگاه  <script>setCommentCnt(44)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/41"><b>سلامی از جنس بهار به دوستان بهاری ام.........</b></a></div>
+<div id=postbody>
+
+
+
+<div align="center"><font color="#CC33CC" face="courier new,courier,monospace"><font size="3">پس قول بده<br>قبل از بهار<br>تو در خانه ام را باز کنی<br><br>باید خوب بدانی<br>تا تو مرا تحویل نگیری<br>سال من که نو نمیشود........</font><br></font></div><br><br>سلام .....<br>نوروز پشاپیش مبارک....<br>امیدوارم عید امسال اغازی باشه برای رسیدن به تمام ارزوهاتون...... <img src="http://mihanblog.com/public/public/rte/images_new/smiles/15.gif"><br>چند تا کار از خودم تو ادامه مطلب هست... اگه،اگه دوست داشتین خوشحال مشم نظرتونو در موردشون بدونم............ <img src="http://mihanblog.com/public/public/rte/images_new/smiles/3.gif">
+
+
+
+
+
+
+
+
+
+
+<br><a href='http://andalib1.mihanblog.com/post/41'>ادامه مطلب</a></div>
+<div id=postdesc> نوشته شده در یکشنبه 27 اسفند 1391 ساعت 
+	12:32 ب.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(41)">لطف دوستانم.......  <script>setCommentCnt(41)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/40"><b>ممنون. قدم رنجه کردین.........</b></a></div>
+<div id=postbody>
+<!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:RelyOnVML/>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+
+<p class="MsoNormal" dir="RTL"><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-font-family:Calibri;mso-ascii-theme-font:
+minor-latin;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;
+mso-bidi-font-family:Arial;mso-bidi-theme-font:minor-bidi" lang="FA">&nbsp;<br></span></p>
+
+<p class="MsoNormal" dir="RTL"><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-font-family:Calibri;mso-ascii-theme-font:
+minor-latin;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;
+mso-bidi-font-family:Arial;mso-bidi-theme-font:minor-bidi" lang="FA">عاشق دستکش هایش بود.</span></p>
+
+<p class="MsoNormal" dir="RTL"><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-font-family:Calibri;mso-ascii-theme-font:
+minor-latin;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;
+mso-bidi-font-family:Arial;mso-bidi-theme-font:minor-bidi" lang="FA">&nbsp;در روزهای سرد زمستان انها نمیگذاشتند,</span></p><p class="MsoNormal" dir="RTL"><span style="font-size:18.0pt;line-height:
+115%;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-ascii-font-family:Calibri;mso-ascii-theme-font:
+minor-latin;mso-hansi-font-family:Calibri;mso-hansi-theme-font:minor-latin;
+mso-bidi-font-family:Arial;mso-bidi-theme-font:minor-bidi" lang="FA"> کسی به دستهای بی انگشت او بخندد ...</span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/17.gif"></p><p class="MsoNormal" dir="RTL">&nbsp;</p>
+
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>FA</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="--"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;}
+</style>
+<![endif]-->
+
+<br></div>
+<div id=postdesc> نوشته شده در شنبه 16 دی 1391 ساعت 
+	11:00 ب.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(40)">با مراما؟؟!؟!  <script>setCommentCnt(40)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/39"><b>به نام یگانه یکتای بی همتا</b></a></div>
+<div id=postbody>
+
+<div align="center"><font size="4"><br>سلام به همه ی دوستای خوبم<img src="http://mihanblog.com/public/public/rte/images_new/smiles/11.gif"></font><br><font size="4">خوبین بچه ها؟؟؟<img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"></font><br><font size="4">سه تا اثر گذاشتم تو ادامه مطلب که از خودمه امیدوارم خوشتون بیاد!!!</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/15.gif"><br><font size="4">راستی یلـــــــــــــداتون مبارک!!!</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/41.gif"><br><img style="padding-right: 8px; padding-top: 8px; padding-bottom: 8px;" src="http://berooztarinha.com/wp-content/uploads/2012/12/k-y-2.jpg" id="il_fi" height="245" width="358"><br><br><img style="padding-right: 30px; padding-top: 8px; padding-bottom: 8px;" src="http://t1.gstatic.com/images?q=tbn:ANd9GcR2gmOhdwXgwf8zwxvtNhfCDoD2chcLzkTJ6Iygzt6m-Jtgi7N_kNwy2wB3jg" id="il_fi" height="208" width="243"><br><br></div>
+
+
+
+
+
+
+<br><a href='http://andalib1.mihanblog.com/post/39'>ادامه مطلب</a></div>
+<div id=postdesc> نوشته شده در پنجشنبه 30 آذر 1391 ساعت 
+	02:08 ب.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(39)">کجا؟؟نظر بده دیگه!!!  <script>setCommentCnt(39)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/38"><b>ســــــــــــــــــــــــــــــــــــــــلام</b></a></div>
+<div id=postbody>
+
+
+
+
+<font face="courier new,courier,monospace" size="3">
+
+سلام<br>من بالاخره اومدم</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/8.gif"><br><font face="courier new,courier,monospace" size="3">الانم چندتا اثر از خودم گذاشم <br>اونایی که منو بخشیدن و دوست دارن برن تو ادامه مطلب و این چند تا طرحی که از خودم گذاشتمو بخونن</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/3.gif"><br><font face="courier new,courier,monospace" size="3">منتظر نقدای قشنگتون هستم.................</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/6.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/6.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/6.gif"><br><font face="courier new,courier,monospace" size="3"><br></font><br><div align="center"><img src="http://www.web.iran-forum.ir/uploads/posts/2012-05/1335914411_130041.jpg" alt="فانتزی های عاشقانه را بشناسید " title="فانتزی های عاشقانه را بشناسید "></div><div align="left"><font face="courier new,courier,monospace" size="3"><br></font></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><a href='http://andalib1.mihanblog.com/post/38'>ادامه مطلب</a></div>
+<div id=postdesc> نوشته شده در دوشنبه 29 آبان 1391 ساعت 
+	02:49 ب.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(38)">بامعرفتا  <script>setCommentCnt(38)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/35"><b>بالاخره سیراب شدی؟؟؟؟</b></a></div>
+<div id=postbody>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt" align="center"><font color="#FFFFFF"><span style="FONT-SIZE: 16pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Esfehan'" lang="FA"><span style="FONT-SIZE: 16pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Esfehan'" lang="FA">با یک قطره اب&nbsp;</span>که سیراب میشوی حیرت میکنی!<!--?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /--><o:p></o:p></span></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt" align="center"><font color="#FFFFFF"><span style="FONT-SIZE: 16pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Esfehan'" lang="FA">نمی دانی اشک من است </span></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt" align="center"><span style="FONT-SIZE: 16pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Esfehan'" lang="FA"><font color="#FFFFFF">هنکامی </font><font color="#33ccff"><font color="#FFFFFF">که <font color="#FFFF00">د</font></font><font color="#FFFF00">ریا را سر کشیدی </font></font></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt" align="center"><font color="#FFFF00"><span style="FONT-SIZE: 16pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Esfehan'" lang="FA">و هنوز </span><span style="FONT-SIZE: 16pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Esfehan'" lang="FA">تشنه بودی!</span></font><span dir="ltr" style="FONT-SIZE: 16pt; LINE-HEIGHT: 115%; mso-bidi-font-family: 'B Esfehan'"><o:p></o:p></span></p>
+
+<br></div>
+<div id=postdesc> نوشته شده در سه شنبه 21 شهریور 1391 ساعت 
+	02:34 ب.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(35)">دیدگاه  <script>setCommentCnt(35)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/34"><b>....</b></a></div>
+<div id=postbody><P align=center><FONT face=tahoma,arial,helvetica,sans-serif size=4><FONT color=#33cc00>سرم را با در</FONT><FONT color=#009900>وغهایت&nbsp;</FONT><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Esfehan'"><FONT color=#009900>گــــــــــ</FONT><FONT color=#ffcc33>ــــــــــــــرم</FONT></SPAN><FONT color=#ffcc33>&nbsp;کردی....</FONT></FONT></P>
+<P align=center><FONT face=tahoma,arial,helvetica,sans-serif size=4><FONT color=#ff6600>بس است.س</FONT><FONT color=#ff0000>رم جوش امد!</FONT></FONT></P>
+<P align=center>&nbsp;</P><br></div>
+<div id=postdesc> نوشته شده در سه شنبه 21 شهریور 1391 ساعت 
+	01:57 ب.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(34)">نظرات  <script>setCommentCnt(34)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/32"><b>ببخشید!!!</b></a></div>
+<div id=postbody><FONT size=4><SPAN lang=FA style="FONT-SIZE: 8.5pt; FONT-FAMILY: 'B Bardiya'; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma"><STRONG>
+<P dir=rtl style="DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right" align=justify><FONT size=4><SPAN lang=FA style="FONT-SIZE: 8.5pt; FONT-FAMILY: 'B Bardiya'"><STRONG>سلام </STRONG></SPAN></FONT></P>
+<P dir=rtl style="DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right" align=center><SPAN lang=FA style="FONT-SIZE: 8.5pt; FONT-FAMILY: 'B Bardiya'"><FONT size=3>شرمنده همه ی دوستان. من چند روزی نمیتونم پست جدید بزارم.اخه یه امتحان فوق العاده سخت دارم.از همتون میخوام برام دعا کنین چون اصلا امیدوار نیستم که قبول شم!!!</FONT></SPAN></P>
+<P dir=rtl style="DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right" align=center><SPAN lang=FA style="FONT-SIZE: 8.5pt; FONT-FAMILY: 'B Bardiya'"><FONT size=3>مرسی و دلم براتون تنگ میشه!دعا هم یادتون نره!!<IMG src="http://mihanblog.com/public/public/rte/images_new/smiles/20.gif"><IMG src="http://mihanblog.com/public/public/rte/images_new/smiles/27.gif"><IMG src="http://mihanblog.com/public/public/rte/images_new/smiles/27.gif"></FONT></SPAN></P>
+<P dir=rtl style="DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right" align=center><SPAN lang=FA style="FONT-SIZE: 8.5pt; FONT-FAMILY: 'B Bardiya'"></SPAN></P>
+<P align=center><A href="http://www.khanum.ir/uploads/tefl.jpg"><IMG class="alignnone size-medium wp-image-540" title=tefl style="WIDTH: 444px; HEIGHT: 231px" height=199 alt="" src="http://www.khanum.ir/uploads/tefl-300x199.jpg" width=300></A></P></STRONG></SPAN></FONT><br></div>
+<div id=postdesc> نوشته شده در شنبه 18 شهریور 1391 ساعت 
+	09:03 ب.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(32)">نظرات  <script>setCommentCnt(32)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/31"><b>خوشبخت شوند!</b></a></div>
+<div id=postbody>
+<font size="4"><span style="line-height: 115%; font-family: 'B Aseman';" lang="FA"><!--?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /--><o:p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt" align="center"><span style="line-height: 115%; font-family: 'B Aseman';" lang="FA">وقتی <o:p></o:p></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt" align="center"><span style="line-height: 115%; font-family: 'B Aseman';" lang="FA"><font color="#ff0000"><font color="#FFFFFF">گل رز</font> </font>به عقد کاکتوس دراید...<o:p></o:p></span></p>
+</o:p></span>
+
+</font><br></div>
+<div id=postdesc> نوشته شده در چهارشنبه 8 شهریور 1391 ساعت 
+	07:32 ب.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(31)">دیدگاه  <script>setCommentCnt(31)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/30"><b>عاشق اینجور مهمونام.....</b></a></div>
+<div id=postbody>
+<span style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Aseman'; mso-ascii-font-family: 'AEZ camping'; mso-hansi-font-family: 'AEZ camping'" lang="FA"></span><span dir="ltr" style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'AEZ camping'; mso-bidi-font-family: 'B Aseman'"><!--?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /--><o:p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt"><span style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Elm Border'; mso-ascii-font-family: AlphaFitness; mso-hansi-font-family: AlphaFitness" lang="FA">سفره را پهن کردم<o:p></o:p></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt"><span style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Elm Border'; mso-ascii-font-family: AlphaFitness; mso-hansi-font-family: AlphaFitness" lang="FA">همه چیز برای امدنش اماده بود<o:p></o:p></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt"><span style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Elm Border'; mso-ascii-font-family: AlphaFitness; mso-hansi-font-family: AlphaFitness" lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#ff0000">&nbsp;&nbsp;</font><font color="#FFFF00"> بشقابی غم<o:p></o:p></font></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt"><font color="#FFFF00"><span style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Elm Border'; mso-ascii-font-family: AlphaFitness; mso-hansi-font-family: AlphaFitness" lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; لیوانی اشک<o:p></o:p></span></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt"><span style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Elm Border'; mso-ascii-font-family: AlphaFitness; mso-hansi-font-family: AlphaFitness" lang="FA"><font color="#33ccff"><font color="#FFFF00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; کاسه ای انتظار</font><o:p></o:p></font></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt"><span style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Elm Border'; mso-ascii-font-family: AlphaFitness; mso-hansi-font-family: AlphaFitness" lang="FA">امد.<o:p></o:p></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt"><span style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Elm Border'; mso-ascii-font-family: AlphaFitness; mso-hansi-font-family: AlphaFitness" lang="FA">انگار بود.<o:p></o:p></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt"><span style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Elm Border'; mso-ascii-font-family: AlphaFitness; mso-hansi-font-family: AlphaFitness" lang="FA">سفره شامم را که دید گفت:<o:p></o:p></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt"><span style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Elm Border'; mso-ascii-font-family: AlphaFitness; mso-hansi-font-family: AlphaFitness" lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#FFFF00"> غمت را با خودم خواهم برد<o:p></o:p></font></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt"><font color="#FFFF00"><span style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Elm Border'; mso-ascii-font-family: AlphaFitness; mso-hansi-font-family: AlphaFitness" lang="FA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; لیوان اشکت را می نوشم<o:p></o:p></span></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt"><span style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Elm Border'; mso-ascii-font-family: AlphaFitness; mso-hansi-font-family: AlphaFitness" lang="FA"><font color="#33ccff"><font color="#FFFF00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; و کاسه ی انتظارت را سر میکشم.</font><o:p></o:p></font></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt"><span style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Elm Border'; mso-ascii-font-family: AlphaFitness; mso-hansi-font-family: AlphaFitness" lang="FA">از خوشحالی اشک در چشمانم پرواز کرد.<o:p></o:p></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt"><span style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Elm Border'; mso-ascii-font-family: AlphaFitness; mso-hansi-font-family: AlphaFitness" lang="FA">رفت.<o:p></o:p></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt" align="center"><span style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Elm Border'; mso-ascii-font-family: AlphaFitness; mso-hansi-font-family: AlphaFitness" lang="FA"><font color="#000000"><font style="BACKGROUND-COLOR: #33ccff"><span style="background-color: rgb(255, 255, 0);">گفتم:چقدر خوب است با خدا شام خوردن....</span><o:p></o:p></font></font></span></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt" align="center">
+</p><p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt"><span style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-ascii-font-family: 'AEZ camping'; mso-hansi-font-family: 'AEZ camping'; mso-bidi-font-family: Arial; mso-bidi-theme-font: minor-bidi" lang="FA"><o:p><font style="BACKGROUND-COLOR: #33ccff"></font></o:p></span></p><span dir="ltr" style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'AEZ camping'; mso-bidi-font-family: 'B Aseman'"><o:p>&nbsp;</o:p></span><p></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt">&nbsp;</p></o:p></span>
+
+<br></div>
+<div id=postdesc> نوشته شده در چهارشنبه 8 شهریور 1391 ساعت 
+	06:54 ب.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(30)">نظرات  <script>setCommentCnt(30)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/29"><b>نمیفهمم؟؟؟؟</b></a></div>
+<div id=postbody><div align="center"><strong><font color="#33cc00"><font size="2">هرچه فکر میکنم نمیفهمم</font></font></strong><br><strong><font color="#33cc00"><font size="2"><font size="2">که باد برگها را م<font size="2">ی رقصان<font size="2">د یا برگها برای باد می رقصند.............</font></font></font></font></font></strong><br><strong></strong></div><p><span style="background-color: rgb(51, 204, 0);">&nbsp;</span></p>
+<h1 style="TEXT-ALIGN: center"><a href="http://www.iranvij.ir/forum" rel="nofollow"><span class="Apple-style-span" style="FONT-WEIGHT: normal; FONT-SIZE: 12px"><img style="WIDTH: 319px; HEIGHT: 299px" alt="" src="http://www.iranvij.ir/upload/images/ipgoj59fguntjagczlt.jpg" height="450" width="600"></span></a></h1>
+
+
+
+<br></div>
+<div id=postdesc> نوشته شده در جمعه 27 مرداد 1391 ساعت 
+	08:52 ب.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(29)">بنظر من؟؟  <script>setCommentCnt(29)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/28"><b>به من قول بده....</b></a></div>
+<div id=postbody><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-ascii-font-family: Calibri; mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: Arial; mso-bidi-theme-font: minor-bidi">
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#993399>خودت که خوب می دانی</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#993399>هر روز</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#993399><SPAN>&nbsp;</SPAN>بعد از اینکه برایت نان گرم میگیرم</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#993399>می نشینیم و ساعتها </FONT><FONT color=#ffccff>با هم حرف میزنیم</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#ffccff>با پارچه ای نمدار مرتب و تمیزت میکنم</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#ffccff>انگار از همه زیباتری...</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#ffccff>اما&nbsp; تو صبورتر ازآنی که واژه ای به زبان بیاوری</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#ffccff>تو فقط مرا نگاه میکنی و </FONT><FONT color=#cc66cc>گوش فرا می دهی</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#cc66cc>اما</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#cc66cc>اما دیگر خسته شده ام</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#cc66cc>با من حرف بزن</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#cc66cc>اگر قول دهی ح</FONT><FONT color=#ffccff>رف بزنی</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#ffccff>قول دهی مرهم غصه هایم باشی و به من پند دهی</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#ffccff>من هم قول میدهم</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#ffccff>برایت یک </FONT><FONT color=#cc33cc>قاب بخرم</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#cc33cc>تا با همه ی عکسهای این آلبوم فرق داشته باشی....</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><FONT color=#cc33cc></FONT></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><FONT color=#cc33cc></FONT>&nbsp;</P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN dir=ltr style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%">&nbsp;</P></SPAN></SPAN>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt" align=left><SPAN dir=ltr style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%"><O:P><IMG src="http://kartpostal.persiangig.com/ghab/ghab1.jpeg"></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt"></P>
+<P>&nbsp;</P></O:P></SPAN><br></div>
+<div id=postdesc> نوشته شده در جمعه 20 مرداد 1391 ساعت 
+	10:33 ق.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(28)">حرف من...  <script>setCommentCnt(28)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/27"><b>من او را دوست داشتم.....باور کنید!!</b></a></div>
+<div id=postbody><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'; mso-ascii-font-family: Calibri; mso-ascii-theme-font: minor-latin; mso-hansi-font-family: Calibri; mso-hansi-theme-font: minor-latin; mso-bidi-font-family: Arial; mso-bidi-theme-font: minor-bidi">
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#ff6666>دوستش داشتم</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#ff9966>اما می دانستم یک روز او را از من میگیرند.</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#ffcc66>چشمانی عسلی،مژه هایی پرپشت،موهای بلند مشکی</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#ffff00>هر وقت دستم را روی قلبش میگذاشتم برایم حرف میزد</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#33ff33>کم کم عاشق هم شدیم</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#66cccc>چند سال گذشت.من رفتم</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#cc33cc>اما او ماند.همچنان وفادار...</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#999900>حالا که دوباره امده ام </FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#ff9966>او را میبینم.چشمانش هنوز باز است.اما انگار پیر شده</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#66ffff>دستم را میگذارم روی قلبش تا دوباره برایم حرف بزند</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#3333ff>تا خواست حرف بزند</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#33ccff>دخترم گفت:</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><FONT color=#ff0000>مامان این عروسک بچگی هاته؟میدیش به من؟</FONT></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt">&nbsp;</P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt"><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arial','sans-serif'"><IMG style="WIDTH: 277px; HEIGHT: 286px" height=327 alt="عكس عروسك های زیبا" hspace=0 src="http://persianv.com/photo/albums/doll/aroosak-persianv_(1).jpg" width=262 align=baseline border=0></SPAN></P></SPAN><br></div>
+<div id=postdesc> نوشته شده در یکشنبه 15 مرداد 1391 ساعت 
+	11:19 ب.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(27)">مرحمت دوستان  <script>setCommentCnt(27)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/24"><b>یادش بخیر............</b></a></div>
+<div id=postbody><P><IMG style="WIDTH: 308px; HEIGHT: 302px" height=273 src="http://susawebtools.ir/img/gallery/khaterat/8.jpg" width=370 tiptitle="خاطرات دیروز, تصاویر خاطره انگیز, عکس های قدیمی, جلد کتاب قدیمی, خاطره, خاطرات, تصاویر قدیمی, old pic"></P>
+<P>&nbsp;</P>
+<P><IMG style="WIDTH: 303px; HEIGHT: 412px" height=453 src="http://susawebtools.ir/img/gallery/khaterat/6.jpg" width=255 tiptitle="خاطرات دیروز, تصاویر خاطره انگیز, عکس های قدیمی, جلد کتاب قدیمی, خاطره, خاطرات, تصاویر قدیمی, old pic"></P>
+<P>&nbsp;</P>
+<P><IMG style="WIDTH: 340px; HEIGHT: 247px" height=321 src="http://susawebtools.ir/img/gallery/khaterat/4.jpg" width=450 tiptitle="خاطرات دیروز, تصاویر خاطره انگیز, عکس های قدیمی, جلد کتاب قدیمی, خاطره, خاطرات, تصاویر قدیمی, old pic"></P>
+<P><IMG style="WIDTH: 243px; HEIGHT: 335px" height=474 src="http://susawebtools.ir/img/gallery/khaterat/5.jpg" width=301 tiptitle="خاطرات دیروز, تصاویر خاطره انگیز, عکس های قدیمی, جلد کتاب قدیمی, خاطره, خاطرات, تصاویر قدیمی, old pic"></P>
+<P><FONT size=3>من این عکسا و این اهنگو گذاشتم تا یکم یاد قدیما بیافتیم!!!یادش بخیر!!!!</FONT></P>
+<P>&nbsp;</P>
+<P>&nbsp;یکی از دوستان (سیاوش خشنود کارشناسزبان و ادب پارسی)خواستن این مطلبو زیر این عکسا بزارم و منم به خواستشون احترام میزارم:</P>
+<DIV class=clearfix style="PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FLOAT: right; PADDING-BOTTOM: 0px; WIDTH: 40px; PADDING-TOP: 0px"></DIV>
+<P>&nbsp;</P>
+<DIV style="FLOAT: right; WIDTH: 535px">
+<DIV>
+<DIV class=clearfix>
+<DIV></DIV></DIV>هرچندخاطره ها فراموش نمیشن ودراثر یک تصادف آخر به یاد میان ولی اما من ریختم دور وبهش نمی اندیشم چون بدردم نمی خورن.<BR>من تومدرسه خیلی مظلوم بودم وبی صدا وآروم اما همه چیز روگردن می انداختن ویک همسایه داشتیم که بهش میگفتن "حمامی ها"اینا توشهر همسر گیرشون نمیاد میرن از دهات همسر میگیرن خلاصه بچه این همسایه :"دفتر مشقم می دزدید ویک روز همینجور که دانش آمزا از هم میپرسن ؟توچکارکردی امروز و...راستی مشقت نوشتی ؟ منم ناخواسته بهش گفتم :نوشتی؟گفت آره ! دفترم از لای کتاب دفترش توکیفش دیدم وتکش در نکردم ، دفترمم دولوکس دولای شاهی شبیه همینا که شبیه کاغذ پارسی وکاهیه بود رفتم به معلممون گفتم وخودش کتکش که زد هیچ بعد فرستادش دفتر اوناهم سیری کتکش زدن.البته این مال دوم دبستان بود که خانم خدایاری معلممون بودوچندسال بعدمرد وشوهرش خیاط بود از همین کسایی که بود اون روزها که باسیکل میشدن معلم.<BR>از این معلم یک کتاب قصه بنام : گندموکی میخوره تا 10سال پیش یادگار داشتم که برادرم تواسباب کشی بردش و گم شد .من اون روز که کتاب بهم هدیه رسیده بود خوشحال بودم وبه پسر داییم فخر کتاب می فروختم ومیگفتم :کتاب بهترین دوسته وجاویدانه</DIV></DIV><br></div>
+<div id=postdesc> نوشته شده در چهارشنبه 11 مرداد 1391 ساعت 
+	07:05 ب.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(24)">محبت دوستان  <script>setCommentCnt(24)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/23"><b>از همین الان بگویم من فقط در خوشی با تو هستم....</b></a></div>
+<div id=postbody><P align=center><STRONG><EM><FONT size=4><FONT color=#33cc00>اینجا پر </FONT><FONT color=#99ff99>از "ما</FONT>"<FONT color=#009900>بود </FONT></FONT></EM></STRONG></P><STRONG><EM>
+<P align=center><BR><FONT size=4><FONT color=#33cc00>ضیافت</FONT> <FONT color=#99ff99>که تمام </FONT><FONT color=#009900>شد</FONT></FONT></P>
+<P align=center><BR><FONT size=4><FONT color=#33cc00>یک "من</FONT><FONT style="BACKGROUND-COLOR: #000000">" هم</FONT> <FONT color=#33cc00>نبو</FONT></FONT></EM></STRONG><A href="http://parsskin.com/" target=_blank></A><FONT size=4><FONT color=#33cc00><STRONG><EM>د!</EM></STRONG><STRONG><EM> </EM></STRONG></FONT></FONT></P>
+<P align=right><A href="http://parsskin.com/" target=_blank><FONT size=4><IMG style="WIDTH: 83px; HEIGHT: 40px" height=40 src="http://blogcod.parsskin.com/zibasazi/other/1/8.gif" width=40 border=0></FONT></A></P><br></div>
+<div id=postdesc> نوشته شده در چهارشنبه 11 مرداد 1391 ساعت 
+	11:15 ق.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(23)">نقد من  <script>setCommentCnt(23)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/22"><b>اینجا چیزی موجود نیست...</b></a></div>
+<div id=postbody><FONT size=3>
+<P><FONT size=3><FONT color=#3333ff>وقتی واژه ای برای روییدن<BR>و قافیه ای برای رقصیدن<BR></FONT><FONT color=#33ccff>در دفتر کهنه ی شعرم<BR>موجود نیست<BR>آن را میبندم</FONT><BR><FONT color=#ccffff>و منتظر باران میمانم<BR>شاید تا صد سال دیگر<BR>باران واژه ببارد.... </FONT></FONT></P>
+<P><FONT color=#ccffff size=3><A onclick="MM_openBrWindow('displayimage.php?pid=26&amp;fullsize=1','619292647501983216897c','scrollbars=yes,toolbar=no,status=no,resizable=yes,width=805,height=536')" href="javascript:;"></A></FONT>&nbsp;</P>
+<P><IMG class=image style="WIDTH: 447px; HEIGHT: 190px" height=480 alt="" src="http://bahar-20.com/pichak/albums/userpics/10001/11.jpg" width=720 border=0></P>
+<P><A onclick="MM_openBrWindow('displayimage.php?pid=26&amp;fullsize=1','619292647501983216897c','scrollbars=yes,toolbar=no,status=no,resizable=yes,width=805,height=536')" href="javascript:;"></A><A onclick="MM_openBrWindow('displayimage.php?pid=1144&amp;fullsize=1','21308784155019810708e47','scrollbars=yes,toolbar=no,status=no,resizable=yes,width=905,height=678')" href="javascript:;"></A></P></FONT><br></div>
+<div id=postdesc> نوشته شده در چهارشنبه 11 مرداد 1391 ساعت 
+	11:12 ق.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(22)">به نظر من.......  <script>setCommentCnt(22)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+  <FONT color=#282d2f>
+<div id=post>
+<div id=posttitle><a href="http://andalib1.mihanblog.com/post/21"><b>به جانم افتادی....</b></a></div>
+<div id=postbody><P><FONT size=4><FONT color=#663333>چوب ک</FONT>ه&nbsp;شدم<BR><FONT color=#660000>موریانه شدی&nbsp;</FONT><BR><FONT color=#3333ff>باز هم&nbsp;توانستی به جانم بیافتی!</FONT></FONT></P><br></div>
+<div id=postdesc> نوشته شده در چهارشنبه 11 مرداد 1391 ساعت 
+	11:07 ق.ظ  توسط <a href="http://andalib1.mihanblog.com/post/author/633646">مبینا  </a><a target="_self" href="javascript:newComment(21)">نظردونی  <script>setCommentCnt(21)</script> </a>| <span dir="rtl" ><script type="text/javascript">GetBC(<-PostId->);</script></span></div>
+<div id=space></div>
+
+                       <hr width="60%" size="1" color="#627177" align="center" >
+                 
+</div>
+
+<center>
+<table style="border-right: #ececec 1px solid; border-top: #ececec 1px solid; border-left: #a6a6a6 1px solid; direction: rtl; border-bottom: #a6a6a6 1px solid; height: 7px; font-size: 7pt;">
+<tr><td><a href="http://blogs.dehkadeyedownload.ir" target=_blank>قالب برای بلاگ</a> <br></td></tr>
+</table><br><br>
+
+
+</div>
+
+<div id=sidebar>  
+<br>
+
+
+<center>
+
+<FONT style="FONT-SIZE: 10pt">
+<b>
+<div class="link1" >
+<div align=left>
+	<div class="link2"> About </div>
+</b>
+<br>
+<div align=right>
+<div id=about><FONT style="FONT-SIZE: 8pt">
+سلام<br />
+تو ابن وبلاگ هر مطلبی که نوشته میشه متعلق به نویسنده وبلاگه.<br />
+به هیچ عنوان حق کپی ندارید<br />
+مانا باشید ...</div>
+
+<center>
+<br>
+<FONT style="FONT-SIZE: 10pt">
+<b>
+<div class="link1" >
+<div align=left>
+	<div class="link2"> Menu </div>
+</b>
+<br>
+
+<div id=mmenu>
+<ul>
+<li><a href="index.html">خانه</a></li>
+<li><a href="mailto:">ایمیل</a></li>
+<li><a target="_blank" href="http://blogs.dehkadeyedownload.ir">قالب</a></li>
+</ul></div>
+
+<FONT style="FONT-SIZE: 10pt">
+<b>
+<div class="link1" >
+<div align=left>
+	<div class="link2"> Authors </div>
+</b>
+<br>
+
+<div id=mmenu>
+<ul>
+<li><a target="_blank" href="http://andalib1.mihanblog.com/post/author/633646" >مبینا   33 </a></li></ul>
+</div>
+
+
+
+<FONT style="FONT-SIZE: 10pt">
+<b>
+<div class="link1" >
+<div align=left>
+	<div class="link2"> LinkDump </div>
+</b>
+<br>
+
+<div id=mmenu>
+<ul>
+<li><a target="_blank" href="http://yagot.dayanshop.com/products/category/69/" title="با سلام اگر ممکنه لینک مطلب جدید من رو تائید کنی ممنون میشم">ساعت دیواری</a></li><li><a target="_blank" href="http://donyalar.com/category/photo-gallery/actors" title="عکس بازیگران---سلام در صورت امکان خواهشا لینک منو تائید کنید ممنون">عکس بازیگران</a></li><li><a target="_blank" href="http://www.bivafa2e.mihanblog.com" title="">عشق+زندگی</a></li><li><a target="_blank" href="http://uploadkon.ir" title="سلام وبلاگ خوبی داری ممنون میشم به من هم سر بزنی 
+
+سایتی رایگان برای آپلود عکس و فایل وبلاگ داران عزیز">آپلود رایگان عکس و فایل</a></li><li><a target="_blank" href="http://yagot.dayanshop.com/products/view/281/" title="سلام وبلاگ خوبی داری ممنون میشم به من هم سر بزنی 
+
+
+لهجه امریکایی و بریتانیایی American">پکیج اورجینال نرم افزار آموزش زبان انگلیسی رزتا</a></li><li><a target="_blank" href="http://group.sunbow.ir/" title="سلام وبلاگ خوبی داری ممنون میشم به من هم سر بزنی و تو گروه عضو بشی  گروهی برای شادی و تفریح 
+محلی برای سرگرمی
+
+دانلود موسیقی های روز دنیا 
+دانلود فیلم های روز
+بهترین گروه دختر و پسرای با حال ایرانی
+
+سارا">شاد ترین گروه دختر و پسرای ایرانی</a></li><li><a target="_blank" href="http://www.music20-download.mihanblog.com" title="">وبلاگ رسمی رضا فاتح-دانلود موزیک</a></li><li><a target="_blank" href="http://linkexchange.netscript.ir" title="">تبادل لینک اتوماتیک</a></li><li><a target="_blank" href="http://www.hesenagofte.blogfa.com/" title=""> حس ها ی نا گفته </a></li><li><a target="_blank" href="http://www.sokot-sard.blogfa.com/" title="">دختر رقصان دست روزگار </a></li><li><a target="_blank" href="http://www.blogyab.com" title="سلام
+مدیریت وبلاگ گرامی
+از شما دعوت بعمل می آید تا وبلاگ خود را در سایت بلاگ یاب به صورت رایگان  www.blogyab.com ثبت نمایید.
+بلاگ یاب اولین سایت رسمی معرفی وبلاگ ها در ایران می باشد.
+شما همچنین می توانید با صرف هزینه ی بسیار کم ، جزئی از پوستر سایت شده و از مزایای آن بهره مند شوید.
+( صد وبلاگ اول از تخفیف 90% بر خوردارند )
+برای آگاهی از نحوه ی ثبت نام و امکانات سایت به آدرس http://www.blogyab.com/blog_article.php?id=4  مراجعه نمایید یا از طریق شماره تلفن و ایمیل زیر با ما در ارتباط باشید.
+برای حمایت از این پروژه میتوانید لینک ذیل را بانام اولین دایرکتوری عمومی وبلاگ در سایت خود اضافه نمایید.
+تلفن : 09336064663  و ایمیل : admin@blogyab.com
+با تشکر">بلاگ یاب</a></li><li><a target="_blank" href="http://fullmovie.mihanblog.com" title="">هالیوود و فیلم های لاتین و ترکی </a></li><li><a target="_blank" href="http://mohammad25.blogfa.com/" title="">㋡ تریپ خنده ㋡ </a></li><li><a target="_blank" href="http://saina75.blogfa.com/" title="">ساینا</a></li><li><a target="_blank" href="http://gasedakbineshon.blogfa.com" title="">عاطفه</a></li><li><a target="_blank" href="http://8061.mihanblog.com" title="">fun</a></li><li><a target="_blank" href="http://www.khaneipishekhoda.blogfa.com" title="">اوج اسمان</a></li><li><a target="_blank" href="http://www.love-phobia.mihanblog.com" title="">love killer </a></li><li><a target="_blank" href="http://www.nazadamharfamo.blogfa.com/" title="">دختری در اغوش تنهایی</a></li><li><a target="_blank" href="http://www.2pnustudent.blogfa.com" title="">دو دانشجوی بازیگوش</a></li><li><a target="_blank" href="http://forosh.biz/Detail.aspx?q=cd2110&amp;s=42175" title="بانك پروژه و پایان نامه دانشجویی
+
+كاملترین مجموعه در ایران در 9 دی وی دی
+
+بیش از 40 گیگابایت و 100.000 تحقیق و مقاله
+
+به همراه بهترین طرح های توجیهی تایید شده
+
+توجه داشته باشید
+
+قیمت این محصول در بازار سیاه بیشتر از 300.000 تومان است
+
+كاملترین و به روزترین منبع تحقیق ویژه دانشجویان
+
+بدون نیاز به جستجو در اینترنت مقاله خود را آماده كنید
+
+ما قبلا برای شما سرچ كرده ایم شما فقط انتخاب كنید
+
+كاملترین مقالات در تمام زمینه های ادبی ، 
+
+تاریخی ،مذهبی، شیمی مهندسی و ... همه مقالات
+
+شما را از قبل آماده كرده ایم
+
+7 DVD
+
+به همراه 2 دی وی دی هدیه طرح های توجیهی
+
+قیمت : 15000 تومان
+
+http://forosh.biz/Detail.aspx?q=cd2110&amp;s=42175
+
+دیگر نگران پروژه های دانشجویی و مقالات و پایان نامه تان نباشد
+
+تاپ ترین و جدید ترین مقالات در تمام زمینه های علمی
+
+مجموعه ای بی نظیر و فوق العاده
+
+مناسب برای تمامی دانشجویان
+
+در تمامی رشته های تحصیلی
+
+فرصتی بی نظیر برای صرفه جویی در وقت
+
+
+قیمت : 15000 تومان
+
+http://forosh.biz/Detail.aspx?q=cd2110&amp;s=42175
+بخشی از محتویات این پكیج علمی استثنایی عبارتند از :
+
+     بیش از ۳۰۰۰۰ مقاله و پایان نامه و پروژه فارسی در زمینه های مختلف
+
+    بیش از ۳۰۰۰ فایل های آموزشی پاورپوینت فارسی در زمینه های مختلف
+
+     بیش از هزار طرح كارفرینی باجزئیات كامل در زمینه های مختلف
+
+ تمامی فایل ها بصورت فایل ورد (doc) می باشد و قابل ویرایش به دلخواه میباشد
+
+به صورت كامل و آماده و صفحه بندی شده
+
+تمام مطالب به صورت فارسی نام گذاری و دسته بندی شده است
+
+همه چیز آماده است
+
+شما فقط نام تهیه كننده را عوض كرده و پرینت بگیرید
+
+قیمت : 15000 تومان
+
+http://forosh.biz/Detail.aspx?q=cd2110&amp;s=42175
+در زمینه های مختلف علمی همچون :
+
+ادبیات ، آموزشی ، برق ، كامپیوتر ، دام و طیور ، فیزیك ، حسابداری ، حقوق ، هنر ، جغرافیا ، جهانگردی ، كشاورزی ، معارف ، مشاهیر ، مكانیك
+
+مدیریت و علوم تجربی ، عمران ، پزشكی ، رواشناسی ، صنایع ، شیمی ، تاریخ ، ورزش ، حقوق بشر ،حقوق بیمه ، پزشكی ، تجارت ، حقوق تطبیقی ، حقوق جزایی ، معماری و …
+
+تمام مطالب به صورت فارسی نام گذاری و دسته بندی شده است
+
+حاصل تلاش چند ساله ده ها دانشجوی برتر كشور اكنون در دستان شماست
+
+توجه داشته باشید كه این پكیج بیشتر از 40 گیگابایت حجم دارد
+
+ و كاملترین مجموعه در ایران است
+
+به همراه 2 دی وی دی طرح توجیهی هدیه
+
+نكته مهم : این پكیج در بازار سیاه به ارزش بالای 300 هزار تومان به فروش میرسد">بروزترین بانك پروژه و پایان نامه دانشجویی</a></li><li><a target="_blank" href="http://ehsan_karami.mihanblog.com/" title="">یادداشتهای فراموش شده</a></li><li><a target="_blank" href="http://www.daftareshghe.blogsky.com" title=""> غوغای عشق در دفتر عشق </a></li><li><a target="_blank" href="http://www.deltadownload.ir" title="">بخش بزرگ دلتا دانلود</a></li><li><a target="_blank" href="http://www.ghoghnoos-man.blogfa.com" title="">ققنوس من</a></li><li><a target="_blank" href="http://mdastan-ahora.mihanblog.com" title="">هنر داستان و شعر</a></li><li><a target="_blank" href="http://www.sp2.blogfa.com/" title="">سلیمان پیوسی(SP2)</a></li><li><a target="_blank" href="http://jigili051.blogfa.com/" title="">پسری با کوله بار سختی</a></li><li><a target="_blank" href="http://www.tanhamnazar-70.blogfa.com/" title="">تو همه چیز منی</a></li><li><a target="_blank" href="http://warbler.blogfa.com/" title="">چکاوک</a></li><li><a target="_blank" href="http://http://gtale.blogsky.com" title="">افسانه</a></li><li><a target="_blank" href="http://www.nargesreza.blogsky.com" title="">خوشتیب</a></li><li><a target="_blank" href="http://www.amirho3ein33.blogfa.com" title="">dream love </a></li><li><a target="_blank" href="http://www.asheganeha3.mihanblog.com" title="">تبدیل رایگان وبلاگ به وبسایت</a></li><li><a target="_blank" href="http://www.asmoonabi.mihanblog.com" title="">خاطرات من</a></li><li><a target="_blank" href="http://loveforyou77.blogfa.com" title="">شکست خورده</a></li><li><a target="_blank" href="http://bia2almas.mihanblog.com/" title="">نفرین بر عشق</a></li><li><a target="_blank" href="http://love-phobia.mihanblog.com/" title="">love killer</a></li><li><a target="_blank" href="http://www.nazadamharfamo.blogfa.com" title="">سحر</a></li><li><a target="_blank" href="http://smelofgod.mihanblog.com/" title="">دلشوره های یک پرستار</a></li><li><a target="_blank" href="http://www.1tanha-1gharibeh.blogfa.com" title="">یه تنها یه غریبه</a></li><li><a target="_blank" href="http://rambod2.blogfa.com" title="">تریپ خنده شماره2</a></li><li><a target="_blank" href="http://gogo66.blogfa.com" title="">خنده ها را سیاه پوش کردم حکمم چیست!؟</a></li><li><a target="_blank" href="http://www.atregandom.blogsky.com" title="">عطرگندم</a></li><li><a target="_blank" href="http://s-news.ir" title="">تازه ها</a></li><li><a target="_blank" href="http://helyleh1.blogfa.com" title="">کی...مو؟؟؟</a></li><li><a target="_blank" href="http://parishab.mihanblog.com" title="">پریشب</a></li><li><a target="_blank" href="http://www.mylifedays.blogsky.com/" title="">سرباز</a></li><li><a target="_blank" href="http://www.2pnustudent.blogfa.com" title="">دو دانشجوی بازیگوش</a></li><li><a target="_blank" href="http://www.elahe-eshgh111.mihanblog.com" title="">الهه عشق</a></li></ul>
+</div>
+<center>
+
+<FONT style="FONT-SIZE: 10pt">
+<b>
+<div class="link1" >
+<div align=left>
+	<div class="link2"> Archive</div>
+</b>
+<br>
+
+<div id=mmenu>
+<ul>
+<li><a href="http://andalib1.mihanblog.com/post/archive/1393/6"> شهریور 1393  1 </a></li><li><a href="http://andalib1.mihanblog.com/post/archive/1392/6"> شهریور 1392  1 </a></li><li><a href="http://andalib1.mihanblog.com/post/archive/1392/5"> مرداد 1392  1 </a></li><li><a href="http://andalib1.mihanblog.com/post/archive/1392/4"> تیر 1392  1 </a></li><li><a href="http://andalib1.mihanblog.com/post/archive/1391/12"> اسفند 1391  1 </a></li><li><a href="http://andalib1.mihanblog.com/post/archive/1391/10"> دی 1391  1 </a></li><li><a href="http://andalib1.mihanblog.com/post/archive/1391/9"> آذر 1391  1 </a></li><li><a href="http://andalib1.mihanblog.com/post/archive/1391/8"> آبان 1391  1 </a></li><li><a href="http://andalib1.mihanblog.com/post/archive/1391/6"> شهریور 1391  5 </a></li><li><a href="http://andalib1.mihanblog.com/post/archive/1391/5"> مرداد 1391  8 </a></li><li><a href="http://andalib1.mihanblog.com/post/archive/1391/4"> تیر 1391  6 </a></li><li><a href="http://andalib1.mihanblog.com/post/archive/1391/2"> اردیبهشت 1391  6 </a></li></ul>
+</div>
+
+<center>
+<FONT style="FONT-SIZE: 10pt">
+<b>
+<div class="link1" >
+<div align=left>
+	<div class="link2"> Categories </div>
+</b>
+<br>
+
+<div id=mmenu>
+<ul>
+<center>
+<FONT style="FONT-SIZE: 10pt">
+<b>
+<div class="link1" >
+<div align=left>
+	<div class="link2"> Links </div>
+</b>
+<br>
+
+<div id=mmenu>
+<ul>
+<li><a target="_blank" href="http://www.qk2lover.niloblog.com/">دنیایــ پازلیــ از تکهــ هایــ قلبمـــ</a></li><li><a target="_blank" href="http://a000a12.blogfa.com/">دوستان به فکر خود باشید</a></li><li><a target="_blank" href="http://todarimiay.blogfa.com/">تو داری میای،من دلم روشنه . . .</a></li><li><a target="_blank" href="http://sokote1000shab.blogfa.com/">تاوان عشق</a></li><li><a target="_blank" href="http://residehayenachide.blogfa.com ">مهدی اخرتی</a></li><li><a target="_blank" href="http://www.kholochel24.blogfa.com/">قسمت نبود</a></li><li><a target="_blank" href="http://www.20musicdl.tk/">بیست موزیک دانلود</a></li><li><a target="_blank" href="http://www.imanix.blogfa.com/">پسری از دیار تنهایی واز تبار خستگی</a></li><li><a target="_blank" href="http://rap3da77.mihanblog.com/">rap3da77</a></li><li><a target="_blank" href="http://www.nanazeee.blogfa.com/">دلشکسته</a></li><li><a target="_blank" href="http://www.roya1995.blogfa.com/">رویای خیس بنیامین</a></li><li><a target="_blank" href="http://www.dooji.blogfa.com/">جوک روز</a></li><li><a target="_blank" href="http://bax-blog.blogfa.com/">سکوت</a></li><li><a target="_blank" href="http://www.delkadeh.blogfa.com">دلکده (صادق)</a></li><li><a target="_blank" href="http://www.guitar1995.blogfa.com/">JUST DOWNLOAD♫ ♫</a></li><li><a target="_blank" href="http://arezoops.persianblog.ir ">تشنه ی عشق</a></li><li><a target="_blank" href="http://mohammadali001.blogfa.com ">استقلال قهرمان میشه</a></li><li><a target="_blank" href="http://welcome-here.mihanblog.com ">سکوت دل</a></li><li><a target="_blank" href="http://kolbetanhaei.mihanblog.com ">کلبه تنهایی</a></li><li><a target="_blank" href="http://linkexchange.netscript.ir">تبادل لینک اتوماتیک</a></li><li><a target="_blank" href="http://www.joojooyebala.blogsky.com/">تقدیم به تو که جایت اینجاست میان قلبم</a></li><li><a target="_blank" href="http://www.hallohooll.mihanblog.com ">همه چی از همه جا</a></li><li><a target="_blank" href="http://www.shehr2020.mihanblog.com/">شعر جدید عاشقانه</a></li><li><a target="_blank" href="http://bestiraniangirl.blogfa.com/">&quot;یاسمین-قوی ترین دختـ ــر ایرونیــ &quot;</a></li><li><a target="_blank" href="http://bvsg.blogfa.com/">انتی دخدر</a></li><li><a target="_blank" href="http://jamil90-91.blogfa.com/">من و دلتنگی</a></li><li><a target="_blank" href="http://www.misen.blogfa.com/">پاکترین هوای دنیا</a></li><li><a target="_blank" href="http://feild.mihanblog.com/">ایدا</a></li><li><a target="_blank" href="http://mnfm.blogfa.com">تنها</a></li><li><a target="_blank" href="http://nifty-girl13.blogfa.com">نیلو</a></li><li><a target="_blank" href="http://113043.blogfa.com">کوثر</a></li><li><a target="_blank" href="http://homaarmaghan.mihanblog.com/">ترنم</a></li><li><a target="_blank" href="http://linda-1373.blogfa.com">لیندا</a></li><li><a target="_blank" href="http://www.nojavonii.blogfa.com">سارا</a></li><li><a target="_blank" href="http://sepiid.mihanblog.com">سپید</a></li><li><a target="_blank" href="http://talkhoshirin20.mihanblog.com">شیرین</a></li><li><a target="_blank" href="http://www.angel-eshg.mihanblog.com">فرشته</a></li><li><a target="_blank" href="http://sekonje.mihanblog.com">سکنجه</a></li><li><a target="_blank" href="http://:www.jamemaa.blogfa.com">جمع ما</a></li><li><a target="_blank" href="http://mahyajoon.blogfa.com/">محیا جون</a></li><li><a target="_blank" href="http://www.zendegiyema2ta.blogsky.com">پرستو جون</a></li><li><a target="_blank" href="http:////www.jan47b.blogsky.com">دنیای عشق</a></li><li><a target="_blank" href="http://farzanehlove.blogfa.com">فرزند عشق</a></li><li><a target="_blank" href="http://soozgalm.blogfa.com/">خانم احمدی</a></li><li><a target="_blank" href="http://savadkohi.blogfa.com/">خانم رسکتی</a></li><li><a target="_blank" href="http://loghme.blogfa.com">اقای کشوری</a></li><li><a target="_blank" href="http://http://neyrang.blogfa.com/?mboebmjcE.edWCbeGGGGGGGGGGGGGGGGG">چوپان دروغگو</a></li><li><a target="_blank" href="http://http://www.gagagirl.blogfa.com">سی سی جون</a></li><li><a target="_blank" href="http://baran761300.blogsky.com">روز های کودکی</a></li><li><a target="_blank" href="http://meslesib.blogfa.com">مهناز شهمیری</a></li><li><a target="_blank" href="http://blogs.dehkadeyedownload.ir">قالب میهن بلاگ</a></li>
+</ul>
+</div>
+<center>
+
+<FONT style="FONT-SIZE: 10pt">
+<b>
+<div class="link1" >
+<div align=left>
+	<div class="link2"> Design </div>
+</b>
+<br>
+
+<div id=mmenu>
+<ul style="border:none">
+	   <li> <a href="http://blogs.dehkadeyedownload.ir" target="_blank">قالب وبلاگ</a> </li>
+</div>
+<center>
+
+<FONT style="FONT-SIZE: 10pt">
+<b>
+<div class="link1" >
+<div align=left>
+	<div class="link2"> Specific </div>
+</b>
+<br>
+
+<div id=mmenu>
+<ul style="border:none">
+<li>﻿﻿<a  target="_blank"  title="دانلود بازی" href="http://dehkadeyedownload.ir/">دانلود بازی</a>
+ </li>
+<li>﻿<a target="_blank" href="http://dehkadeyedownload.ir/fa/flashgames/">بازی آنلاین</a>
+</li>
+<li>﻿<a target="_blank" href="http://gallery.dehkadeyedownload.ir">عکس</a></li>
+<li>﻿<a  target="_blank" href="http://music.dehkadeyedownload.ir">دانلود آهنگ</a>
+</li>
+<li>﻿<a target="_blank"  href="http://blogs.dehkadeyedownload.ir">قالب بلاگ</a>
+</li>
+<li>﻿﻿<a  target="_blank"  title="بازی" href="http://dehkadeyedownload.ir/">بازی</a>
+ </li></div>
+<center>
+
+
+
+<FONT style="FONT-SIZE: 10pt">
+<b>
+<div class="link1" >
+<div align=left>
+	<div class="link2"> Others </div>
+</b>
+<br>
+
+<div id=mmenu>
+<ul style="border:none">
+</p>
+<p align="center"><p align="center"><a href="index.html" target="_blank"><img border="0" src="http://amirho3ein33.persiangig.com/image/for%20mu.gif" width="170" height="240" alt="به بلــــــــــــــ ـــ ـــــــــــــــــــــــ ــــــ ـــ ــــــندی فریاد سکوت"></a></p>
+
+
+
+<center><object style="border: 3px solid;" classid="clsid:6bf52a52-394a-11d3-b153-00c04f79faa6" width="147" height="46" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701"><param name="URL" value="http://freecms2009.persiangig.com/audio/blogmusic/Rachel%20Portman%20-%20Vianne%20Sets%20Up%20Shop.wma" /><param name="rate" value="1" /><param name="balance" value="0" /><param name="currentPosition" value="0" /><param name="playCount" value="5" /><param name="autoStart" value="-1" /><param name="currentMarker" value="0" /><param name="invokeURLs" value="-1" /><param name="volume" value="100" /><param name="mute" value="0" /><param name="uiMode" value="full" /><param name="stretchToFit" value="0" /><param name="windowlessVideo" value="0" /><param name="enabled" value="-1" /><param name="enableContextMenu" value="-1" /><param name="fullScreen" value="0" /><param name="enableErrorDialogs" value="0" /><param name="url" value="http://freecms2009.persiangig.com/audio/blogmusic/Rachel%20Portman%20-%20Vianne%20Sets%20Up%20Shop.wma" /><param name="src" value="http://freecms2009.persiangig.com/audio/blogmusic/Rachel%20Portman%20-%20Vianne%20Sets%20Up%20Shop.wma" /><embed style="border: 3px solid;" type="application/x-mplayer2" width="147" height="46" src="http://freecms2009.persiangig.com/audio/blogmusic/Rachel%20Portman%20-%20Vianne%20Sets%20Up%20Shop.wma" enableerrordialogs="0" fullscreen="0" enablecontextmenu="-1" enabled="-1" windowlessvideo="0" stretchtofit="0" uimode="full" mute="0" volume="100" invokeurls="-1" currentmarker="0" autostart="-1" playcount="5" currentposition="0" balance="0" rate="1" url="http://freecms2009.persiangig.com/audio/blogmusic/Rachel%20Portman%20-%20Vianne%20Sets%20Up%20Shop.wma"></embed></object><br><a href="http://freecms.blogfa.com" target="_blank">دریافت کد آهنگ برای وبلاگ</a></center>
+
+
+
+
+
+<!-- Begin nightnama.ir PICST -->
+<style>
+img:hover{
+opacity:0.8;filter:alpha(opacity=80);
+-webkit-transform: rotate(-2deg);
+-moz-transform: rotate(-2deg);
+}
+img:out{
+opacity:1;filter:alpha(opacity=100);
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+}
+</style>
+<br><br>
+<P><A
+href="http://nightnama.ir/codes/picst" target=_blank><SPAN 
+style="FONT-WEIGHT: 700; TEXT-DECORATION: none">کد کج شدن تصاویر
+</FONT></SPAN></A></P>
+<!-- End nightnama.ir PICST -->
+
+
+<script src="http://blogskins.ir/tools/java/no-rightclick.js"></script>
+
+
+<script src="http://blogskins.ir/tools/java/no-rightclick.js"></script>
+</div>
+</div></div>
+</body>
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'andalib1.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.targetedwebtraffic.com" target="_blank">Buy Website Traffic</a> | <a href="https://www.seo25.com" target="_blank">Buy Targeted Website Traffic</a>
+    </div>
+</center>

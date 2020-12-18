@@ -1,0 +1,1403 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*641954*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[425]='0';commentCnt[426]='0';commentCnt[427]='0';commentCnt[428]='0';commentCnt[429]='0';commentCnt[430]='0';commentCnt[431]='0';commentCnt[432]='0';commentCnt[433]='0';commentCnt[434]='7';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[425]='0';
+mihanblogDisLikeArrCnt[425]='0';
+mihanblogLikeArrCnt[426]='0';
+mihanblogDisLikeArrCnt[426]='0';
+mihanblogLikeArrCnt[427]='0';
+mihanblogDisLikeArrCnt[427]='0';
+mihanblogLikeArrCnt[428]='0';
+mihanblogDisLikeArrCnt[428]='0';
+mihanblogLikeArrCnt[429]='0';
+mihanblogDisLikeArrCnt[429]='0';
+mihanblogLikeArrCnt[430]='0';
+mihanblogDisLikeArrCnt[430]='0';
+mihanblogLikeArrCnt[431]='0';
+mihanblogDisLikeArrCnt[431]='0';
+mihanblogLikeArrCnt[432]='0';
+mihanblogDisLikeArrCnt[432]='0';
+mihanblogLikeArrCnt[433]='0';
+mihanblogDisLikeArrCnt[433]='0';
+mihanblogLikeArrCnt[434]='0';
+mihanblogDisLikeArrCnt[434]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://zendegimoon.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://zendegimoon.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','504');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','چهارشنبه 5 آذر 1399');
+	
+	setStatVar('today_view','16');
+	setStatVar('yesterday_view','81');
+	
+	setStatVar('this_month_view','5245');
+	setStatVar('last_month_view','3943');
+
+	setStatVar('total_view','251460');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (05:31)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://zendegimoon.mihanblog.com/statupdate/?data[refereruri]=http://zendegimoon.mihanblog.com/post/archive&data[postid]=&data[requesturi]=/post/archive/1397/1&data[sdate]=1608173846&data[hash]=67add394e288efbbc2d836cb31ec6baa&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<title>زندگی یک زوج ایرانی آلمانی - مطالب  فروردین 1397</title>
+<base href="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Language" content="fa">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="alternate" type="application/rss+xml" title="زندگی یک زوج ایرانی آلمانی" href="../../rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title="زندگی یک زوج ایرانی آلمانی"  href="../../atom/index.html" />
+<style type="text/css">
+
+body { font-family: Tahoma; font-size: 8pt; text-align: center; direction: ltr; line-height: 18px; margin: 0px; background-color: #F3B08E; }
+.page { width: 990px; margin-right: auto; margin-left: auto; direction: rtl; background-color: #FADED0; margin-top: 0px; margin-bottom: 0px; padding: 0px; }
+/******************* header ******************/
+.header { height: 400px; width: 990px; text-align: center; background-repeat: no-repeat; margin-bottom: 0px; background-image: url(http://s7.picofile.com/file/8252907026/theme_01.jpg); }
+.header-mid { width: 90%; margin-left: auto; padding-top: 50px; text-align: right; margin-right: auto; }
+.header h1 { font-family: Arial; font-size: 28px; font-weight: bold; margin: 0px; }
+.header h3 { font-family: Tahoma; font-size: 12px; margin: 0px; padding-top: 20px; color: #F6D0C0; }
+.header A { color: #F6D0C0; text-decoration: none; }
+/****************** navbar ******************/
+.navbar { height: 60px; width: 990px; text-align: center; margin-top: 0px; margin-bottom: 10px; background-repeat: no-repeat; background-position: center top; background-image: url(http://s6.picofile.com/file/8252907042/theme_02.jpg); }
+.navbar-mid { width: 90%; margin-right: auto; margin-left: auto; padding-top: 18px; }
+.navbar ul { padding: 0px; margin: 0px 30px 0px 0px; }
+.navbar li { float: right; list-style-type: none; font-size: 9pt; font-weight: bold; margin-left: 40px; }
+.navbar li a:link { color: #000000; text-decoration: none; }
+.navbar li a:visited { color: #000000; text-decoration: none; }
+.navbar li a:hover { color: #626262; text-decoration: none; }
+/***************** content *******************/
+.main { width: 990px; }
+.content { float: right; width: 550px; }
+.bodypost { width: 550px; margin-bottom: 15px; background-image: url(http://s7.picofile.com/file/8252907192/theme_10.jpg); background-repeat: repeat-y; }
+.bodypost a:link { color: #808080; text-decoration: none; }
+.bodypost a:visited { color: #808080; text-decoration: none; }
+.bodypost a:hover { color: #000000; text-decoration: none; }
+.ptitle { height: 60px; text-align: center; background-repeat: no-repeat; background-position: center; background-image: url(http://s6.picofile.com/file/8252907092/theme_07.jpg); }
+.ptitle-mid { text-align: right; width: 450px; margin-right: 80px; margin-left: 20px; padding-top: 20px; }
+.ptitle a:link { color: #000; text-decoration: none; }
+.ptitle a:visited { color: #000; text-decoration: none; }
+.ptitle a:hover { color: #000; text-decoration: none; }
+.ptitle h2 { margin: 0px; font-family: Arial; font-size: 12pt; font-weight: bold; }
+.ptext { text-align: center; font-family: Tahoma; font-size: 9pt; }
+.ptext-mid { width: 95%; margin-right: auto; margin-left: auto; padding-top: 3px; padding-bottom: 3px; text-align: right; }
+.ptext img { max-width: 95%; height: auto; }
+.ptext img:hover { }
+.pinfo { }
+.pinfo-mid { width: 95%; margin-right: auto; margin-left: auto; text-align: right; padding-bottom: 10px; }
+.author { float: right; width: 45%; }
+.date { float: left; width: 45%; }
+.pcat { }
+.pcat-mid { width: 95%; margin-right: auto; margin-left: auto; text-align: right; padding-top: 3px; padding-bottom: 5px; }
+.pcomore { font-size: 9pt; }
+.pcomore-mid { text-align: right; width: 95%; margin-right: auto; margin-left: auto; padding-top: 12px; }
+.pcomore a:link { color: #000000; }
+.pcomore a:visited { color: #000000; }
+.pcomore a:hover { color: #000000; }
+.pmore { float: right; width: 40%; }
+.pcomment { float: left; width: 40%; }
+.p-bbg { height: 20px; background-repeat: no-repeat; background-position: center; background-image: url(http://s7.picofile.com/file/8252907284/theme_12.jpg); }
+.paper { width: 550px; background-color: #FCF1EB; border-radius: 10px; border: 1px solid #F09F76; }
+.paper-tbg { height: 10px; }
+.paper-text { text-align: center; font-family: Tahoma; font-size: 9pt; font-weight: bold; background-repeat: repeat-y; background-position: center; }
+.paper-text-mid { width: 90%; margin-top: auto; margin-bottom: auto; padding-top: 5px; padding-bottom: 5px; }
+.paper-text a:link { color: #000; text-decoration: none; }
+.paper-text a:visited { color: #000; text-decoration: none; }
+.paper-text a:hover { color: #535353; text-decoration: none; }
+.paper-text ul { margin: 0px; padding: 0px; }
+.paper-text li { float: right; margin-left: 20px; list-style-type: none; }
+.paper-text li a:link { color: #000; text-decoration: none; }
+.paper-text li a:visited { color: #000; text-decoration: none; }
+.paper-text li a:hover { color: #535353; text-decoration: none; }
+.paper-bbg { height: 10px; }
+.rpapers { float: right; width: 49%; }
+.lpapers { float: left; width: 49%; }
+/***************** rbar **********************/
+.right { float: right; width: 200px; margin-left: 10px; margin-right: 10px; }
+.rm { margin-bottom: 10px; }
+.rmtitle { height: 60px; text-align: center; font-family: Arial; font-size: 11pt; font-weight: bold; color: #000; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907068/theme_05.jpg); }
+.rmtitle-mid { width: 160px; margin-right: auto; margin-left: auto; padding-top: 20px; text-align: right; }
+.rmtext { text-align: center; background-repeat: repeat-y; background-image: url(http://s7.picofile.com/file/8252907126/theme_09.jpg); }
+.rmtext-mid { width: 90%; margin-right: auto; margin-left: auto; text-align: right; padding-top: 5px; padding-bottom: 5px; }
+.rmtext a:link { color: #000; text-decoration: none; }
+.rmtext a:visited { color: #000; text-decoration: none; }
+.rmtext a:hover { color: #666; text-decoration: none; }
+.rmtext ul { padding: 0px; margin: 0px; }
+.rmtext li { list-style-type: none; }
+.rmtext li a:link { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.rmtext li a:visited { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.rmtext li a:hover { color: #666; text-decoration: none; display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; }
+.rmtext img { max-width: 98%; height: auto; }
+.rmtext img:hover { }
+.rm-bbg { height: 20px; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907268/theme_11.jpg); }
+/***************** lbar ***********************/
+.left { float: left; width: 200px; margin-left: 10px; }
+.lm { margin-bottom: 10px; }
+.lmtitle { height: 60px; text-align: center; font-family: Arial; font-size: 11pt; font-weight: bold; color: #000; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907068/theme_05.jpg); }
+.lmtitle-mid { width: 160px; margin-right: auto; margin-left: auto; padding-top: 20px; text-align: right; }
+.lmtext { text-align: center; background-repeat: repeat-y; background-image: url(http://s7.picofile.com/file/8252907126/theme_09.jpg); }
+.lmtext-mid { width: 90%; margin-right: auto; margin-left: auto; text-align: right; padding-top: 5px; padding-bottom: 5px; }
+.lmtext a:link { color: #000; text-decoration: none; }
+.lmtext a:visited { color: #000; text-decoration: none; }
+.lmtext a:hover { color: #666; text-decoration: none; }
+.lmtext ul { padding: 0px; margin: 0px; }
+.lmtext li { list-style-type: none; }
+.lmtext li a:link { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.lmtext li a:visited { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.lmtext li a:hover { color: #666; text-decoration: none; display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; }
+.lmtext img { max-width: 98%; height: auto; }
+.lmtext img:hover { }
+.lm-bbg { height: 20px; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907268/theme_11.jpg); }
+/*************** footer **************************/
+.footer { height: 240px; width: 990px; margin-top: 10px; margin-bottom: 0px; font-family: Tahoma; font-size: 10pt; color: #000; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907334/theme_14.jpg); }
+.footer-mid { width: 80%; margin-right: auto; margin-left: auto; padding-top: 100px; text-align: center; }
+.footer a:link { color: #000; text-decoration: none; font-weight: normal; }
+.footer a:visited { color: #000; text-decoration: none; font-weight: normal; }
+.footer a:hover { color: #000; text-decoration: none; font-weight: normal; }
+/************** etc class **************************/
+.profile-img { text-align: center; margin-top: 5px; margin-bottom: 5px; }
+.profile-text { text-align: justify; }
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="header-mid">
+      <h1><a href="../../../index.html">زندگی یک زوج ایرانی آلمانی</a></h1>
+      <h3>خاطرات زندگی من در آلمان</h3>
+    </div>
+  </div>
+  <!--- e header --->
+  
+  <div class="navbar">
+    <div class="navbar-mid">
+      <ul>
+        <li><a href="../../../index.html">خانه</a></li>
+        <li><a href="../../archive.html">آرشیو</a></li>
+        <li><a href="mailto:">ایمیل</a></li>
+        <li><a href="../../rss/index.html">RSS</a></li>
+        <li><a href="http://cafeskin.blogfa.com/">قالب وبلاگ</a></li>
+        <li><a href="../../list.html">عناوین </a></li>
+      </ul>
+    </div>
+  </div>
+  <!--- e navbar ---->
+  
+  <div class="main">
+    <div class="right">
+      <div class="rm">
+        <div class="rmtitle">
+          <div class="rmtitle-mid">درباره من</div>
+        </div>
+        <div class="rmtext">
+          <div class="rmtext-mid">
+            <div class="profile-img"> <img src="http://static.mihanblog.com//public/user_data/web_photo/214/641954.jpg?1062"  /></div>
+            <div class="profile-text">می روم راه دور...خیلی دور..آسمان وطن خدا حافظ<br />
+شهر سرد قدیمی ام بدرود،ایران زیبای من خدا حافظ<br />
+<br />
+می روم راه دور خیلی دور،دورم از چشمهای روشن تو<br />
+منتظر می شوم تو هم برسی،تا دلم بشکفد به دیدن تو<br />
+<br />
+کوله بارم چه قدر سنگین است&quot;از وطن نان و نور آوردم<br />
+عطردلچسب چادر مادر،عشق را با غرور آوردم<br />
+<br />
+شانه های برادرم اینجاست،موی خوشبوی مادرم اینجاست<br />
+گرمی مهربان دست پدر،کیف قرآن و دفترم اینجاست<br />
+<br />
+می روم راه دور خیلی دور،تو همیشه کنار من هستی<br />
+دوستت دارم و دلم با توست،دور و نزدیک،یار من هستی</div>
+          </div>
+        </div>
+        <div class="rm-bbg"></div>
+      </div>
+              <div class="rm">
+          <div class="rmtitle">
+            <div class="rmtitle-mid">موضوعات</div>
+          </div>
+          <div class="rmtext">
+            <div class="rmtext-mid">
+              <ul>
+                                  <li> <a href="../../category/6.html">ادبی&nbsp;(14) </a> </li>
+                                  <li> <a href="../../category/4.html">مقاله&nbsp;(17) </a> </li>
+                                  <li> <a href="../../category/16.html">همسرم&nbsp;(3) </a> </li>
+                                  <li> <a href="../../category/5.html">نومزدنگ&nbsp;(5) </a> </li>
+                                  <li> <a href="../../category/2.html">بعد ازدواجمون&nbsp;(42) </a> </li>
+                                  <li> <a href="../../category/9.html">آشپزی های من&nbsp;(13) </a> </li>
+                                  <li> <a href="../../category/15.html">آموزش زبان آلمانی&nbsp;(15) </a> </li>
+                                  <li> <a href="../../category/1.html">پیش از ازدواجمون&nbsp;(20) </a> </li>
+                                  <li> <a href="../../category/8.html">ایده واسه زندگیمون&nbsp;(5) </a> </li>
+                                  <li> <a href="../../category/14.html">آموزش و پرورش آلمان&nbsp;(51) </a> </li>
+                                  <li> <a href="../../category/7.html">منو بیشتر بشناسین&nbsp;(2) </a> </li>
+                                  <li> <a href="../../category/11.html">مراحل اداری ازدواج ما&nbsp;(3) </a> </li>
+                                  <li> <a href="../../category/13.html">تجربه های مسافرت ما&nbsp;(36) </a> </li>
+                                  <li> <a href="../../category/17.html">فستیوال ها و جشن های آلمان&nbsp;(5) </a> </li>
+                                  <li> <a href="../../category/10.html">فرهنگ آلمانی و زندگی در آلمان&nbsp;(170) </a> </li>
+                                  <li> <a href="../../category/12.html">عقاید خودم و همسر راجع به زندگی&nbsp;(26) </a> </li>
+                              </ul>
+            </div>
+          </div>
+          <div class="rm-bbg"></div>
+        </div>
+                    <div class="rm">
+          <div class="rmtitle">
+            <div class="rmtitle-mid">نویسندگان</div>
+          </div>
+          <div class="rmtext">
+            <div class="rmtext-mid">
+              <ul>
+                                  <li><a href="../../author/123269.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/42/123269.jpg" style="width:16px;" /></a> <a href="../../author/123269.html" style="display:inline;"> باران &nbsp;(504) 	            خیلی فعال و پر جنب و جوشم...اراده قوی دارم و اعتماد به نفس بالایی هم دارم.کمی زود رنجم،خصوصیت بارزم شجاعتمه.عاشق ورزشم هر جا ورز</a></li>
+                              </ul>
+            </div>
+          </div>
+          <div class="rm-bbg"></div>
+        </div>
+                                <div class="rm">
+          <div class="rmtitle">
+            <div class="rmtitle-mid">آرشیو</div>
+          </div>
+          <div class="rmtext">
+            <div class="rmtext-mid">
+              <ul>
+                                  <li><a href='../1399/9.html'> آذر 1399</a></li>
+                                  <li><a href='../1399/8.html'> آبان 1399</a></li>
+                                  <li><a href='../1399/7.html'> مهر 1399</a></li>
+                                <li><a href="../../archive.html"><b>کل آرشیوها</b></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="rm-bbg"></div>
+        </div>
+          </div>
+    <!--- e right --->
+    
+    <div class="content">
+              
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		          <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../434.html">
+                <h2>در  روتنگ</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : جمعه 10 فروردین 1397 10:53 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><div><br></div><div>امروز صبح رفتیم موتور رو دادیم و بعد یه بلیط اتوبوس برای شهر روتنگ گرفتیم واسه ساعت سه ظهر،برگشتیم به هتل و بعد از دوش گرفتن و جمع کردن اساس،منتظر اتوبوس شدیم،ساعت سه و نیم بود که اتوبوس اومد،حدود سه ساعت و نیم بعدش روتنگ بودیم،خیلی خیلی راه بدی بود و توی راه حالت تهوع شدیدی گرفتیم،یه مسافر خونه از قبل کرایه کرده بودیم،رفتیم و شب شام،توی یه رستوران چینی شام خوردیم و بعد خوابیدیم.</div><div><br></div><div>در&nbsp;</div><div>صبح زود به موتور کرایه کردیم و راه افتادیم به سمت روستای وایی ربو،یه راهنما و یه توریست هلندی همراهمون بود ما با یه موتور و اونام با یه موتور دیگه. اول یه جا رفتیم مزرعه های برنج رو دیدیم و بعد راه افتادیم به سمت روستا،بهمون گفتن پنج ساعت تا روستا راهه،یه جایی رسیدیم که واقعا مسیر</div>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/13.html">تجربه های مسافرت ما</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../434.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(434)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../433.html">
+                <h2> روستای وا ربو </h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : جمعه 10 فروردین 1397 10:52 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div>امپو مارو اولین کسی بود که روستای وا ربو رو بنا کرد. در سال ۱۹۹۴ برای اولین بار یک عکاس ژاپنی از این روستا دیدن کرد و بعد یک انسان شناس اهل بریتانیا،از این روستا بازدید کرد و شروع به نوشتن راجع به این روستا کرد. و بعد از آن فردی به نام مارتینوس آنگگو،این ایده را داشت که میتوان از این روستا،کسب درآمد توریستی کرد.وا ربو،بر روی کوهی به ارتفاع ۱۱۱۷ متر بنا شده.</div><div>یکی از راههای کسب درآمد مردم وا ربو،کشاورزی هست. کشت قهوه،بادمجان،موز،کدو،سیب زمینی شیرین</div><div>Passion fruit</div><div>Cassava</div><div>و همین طور ادویه جات و مواد دارویی گیاهی به خصوص&nbsp;</div><div>Ginger</div><div>Galangal</div><div>Turmeric</div><div>White turmeric</div><div>Blue Ginger</div><div>داخل روستا میتونید صدای خیلی از پرندگان مختلف رو بشنوید. از جمله</div><div>Wild taro</div><div>همه ی مردم وا ربو،در این روستا زندگی نمیکنند،بعضی از آنها در روستای کومبو زندگی میکنند،به این علت که در این روستا،تسهیلات مختلفی از جمله درمانگاه و مدارس وجود دارند. بعضی از مردم این روستا،در زمانهای مختلف در وا ربو یا کومبو زندگی میکنند.</div>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/13.html">تجربه های مسافرت ما</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../433.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(433)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../432.html">
+                <h2>در لابوآن باجو:</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : جمعه 10 فروردین 1397 10:52 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div><br></div><div>ظهر ساعت دو پرواز داشتیم به مقصد فلورس،پروازمون تاخیر نداشت یه ساعت و نیم بعد رسیدیم لابوآن باجو . هیچ جایی رو رزرو نکرده بودیم و وقتی رسیدیم،اینترنت اصلا کار نمی‌داد اینترنت گوشی یوناس کار میداد،با لپ تاب توی بوکینگ سرچ کردیم و یه آدرس نزدیک فرودگاه پیدا کردیم و پیاده راه افتادیم،وقتی رسیدیم دیدیم خیلی جای جالبی نیست،تمیز نبود خیلی و خیلی ام دور از شهر بود،واسه همین دوباره توی اینترنت گشتیم و یه مسافرخونه دیگه پیدا کردیم،تاکسی گرفتیم رفتیم اونجا و البته جای خوبی هم نبود اما ما خیلی خسته بودیم تصمیم گرفتیم یه شب بمونیم. سیصد هزار روپیه خیلی کردیم و رفتیم به سمت شهر،شب ماهی تازه وآبمیوه کنار دریای زیبای فلورس خوردیم.</div><div><br></div><div>روز دوم واقعا از بودن توی این مسافرخونه راضی نبودیم واسه همین زدیم بیرون به سمت یه مسافرخونه دیگه،توی سایت یه هاستل دیدیم که قیمتش هم بد نبود،کلی راه توی گرما و آفتاب شدید پیاده رفتیم تا رسیدیم. ما یه اتاق دو تخته گرفتیم ولی ظاهرا پر بود و مجبور شدیم بریم توی دومتوری که یه اتاق گروهی هست البته فقط خودمون بودیم کسی دیگه نبود! خوبی اینجا اینه که کلی توریست اینجا هست،جوش گرمه و از آشپزخونه میشه استفاده کرد! من رفتم بیرون بادمجون و سیر ونودل خریدم ویه غذا درست کردم و یوناس هم پنکیک درست کرد،خوردیم و ظهر ساعت سه ظهر با توریستای دیگه سوار قایق شدیم و رفتیم یه جزیره نزدیک،قواصی،خیلی خیلی خوب بود. آب گرم و خیلی آبی...شب دوباره ماهی خوردیم.</div><div><br></div><div>در فلورس</div><div>روز سوم یه دونه تور قایق گرفتیم،شب رو خیلی خیلی بد خوابیدم،نتونستم درست استراحت کنم،خیلی خسته بودم و صبح ساعت هفت اومدند دنبالمون،چند تا دونه کیک داشتیم خوردیم و رفتیم با موتور به سمت بندر،وقتی رسیدیم منتظر بقیه توریستها شدیم و راه افتادیم به سمت اولین جزیره.توی قایق ما یه زوج دانمارکی ساکت و موقر،یه زوج اهل لهستان-پرو خیلی شاد،یه زوج برزیلی عاشق و یه خانم آلمانی حراف هستند. بعد از ساعت‌ها قایق سواری رسیدیم به جزیره کومودو.</div><div>این اطلاعاتی هست که از راهنما گرفتیم:</div><div>اژدهای کومودو بخش هیجان انگیز سفر ما</div><div>این بزرگترین مارمولک جهانه و خیلی خیلی خطرناک،گوشت خواره و وقتی گرسنه باشه همه چیزی میخوره،اینجا ما خیلی ترسیده بودیم،دو تا از راهنما توریست مواظب بودند که اتفاقی پیش نیاد که&nbsp; ما بتونیم عکس بگیریم. یه دونه کومودور داشت میومد به سمتمون! تجربه خیلی خاصی بود دیدن این اژدها که از بازمانده های دایناسورها هست... توی کل جهان فقط کشور اندونزی میشه دید و توی کل اندونزی،توی جزیره فلورس و در چهار جزیره. اینجا باغ وحش نیست،این حیوان توی طبیعت اینجا آزاد زندگی می‌کنه و واسه بازدید از این مارمولک یه راهنمای محلی داشتیم که با یه چوب مراقب بود و ضمنا اجازه نزدیک شدن به اژدها رو بهمون نمی‌دادند. جزیره کومودور و جزیره رینکا بیشترین تعداد کومودور رو داره،حدود سه هزار اژدهای کومودور توی کل جهان هست...</div><div>این مارمولک،ماهی یه بار غذا میخوره،سه اژدهای نر،با هم می‌جنگند تا بتونند یه ماده رو داشته باشند،وقتی اژدهای ماده تخم گذاری کرد،سوراخهایی به عمق دو متر حفر می‌کنه و توی یکی از اونها تخم ها رو اونجا نگهداری می‌کنه،به این علت سوراخهای مختلف حفر می‌کنه که حیوانات دیگه نتونند از تخم ها تغذیه کنند. وقتی مارمولک‌ها از تخم در اومدند،میرن بالای یه درخت خونه میکنندو سه تا چهار سال بالای درخت میمونن و از پرنده های کوچیک،گکو و حشرات تغذیه می‌کنند علت اینکه بچه های کومودور میرن بالای درخت زندگی میکنند اینه که پدر و مادر وقتی گرسنه شدند بچه های خودشون رو می‌خورند!</div><div>غواصی کردیم و ماهی های فوق العاده زیبا دیدیم. شب رو بعد از کلی غواصی و یه روز پرکار،روی قایق خوابیدیم.</div><div><br></div><div>روز چهارم در لابوآن باجو</div><div>صبح وقتی خواب بودیم،قایقمون شروع به حرکت کرد. از خواب بیدار شدیم و طلوع زیبای خورشید رو دیدیم و دوباره یه کم خوابیدیم،وقت خوردن صبحونه بود،صبحونه رو توی قایق خوردیم و چند دقیقه بعد رسیدیم به یه جزیره فوق العاده قشنگ. از کوه رفتیم بالا و بین راه کلی عکس گرفتیم. یوناس رفت تا بالای کوه من نرفتم. بعدش راه افتادیم به سمت قسمتی از دریا واسه دیدن سفره ماهی ها،تا سفره ماهی رو راحت میشد روی آب دید،زن آلمانی تا یه سفره ماهی دید فورا پرید توی آب و بعد یکی یکی همه پریدند،من آخرین نفر بودم! صحنه ای که توی آب دیدم رو تا ابد فراموش نمیکنم... سفره ماهی های فوق العاده بزرگ... ترسناک ولی فوق العاده قشنگ... عظمت خدا رو با تمام وجودم حس کردم... بعد از اون هم رفتیم به یه جزیره دیگه،کلی غواصی و شنا کردیم... نهار رو هم توی قایقمون خوردیم و عصر رسیدیم لابوآن باجو. تا رسیدیم رفتیم یه هتل دیگه که استخر هم داشت! خیلی خوشمون اومد ازش،واسه سه شب کرایه کردیم! من فورا پریدم توی استخر... خیلی عالی بود خیلییی هتل خوبی بود...</div><div><br></div><div>روز پنجم در لابوآن باجو</div><div>امروز رو استراحت کردیم. واقعا با تمام زیبایی که اینجا داره،خیلی خیلی خسته شدیم از مسافرت،از خوردن غذاهایی که دوست ندارم،خوابیدن توی اتاق‌های نه چندان تمیز،شستن لباسا با دست... خیلی خسته شدم دوست دارم فقط برگردم! کلی با یوناس بحث کردیم و کلی همه چیزو واسه خودمون تلخ کردیم!</div><div>کل روزو استراحت کردیم و فقط شب یه کم قدم زدیم</div><div><br></div><div>روز ششم در لابوآن باجو:</div><div>امروز تصمیم گرفتیم بریم دور و بر جزیره یه تابی بخوریم.یه دونه موتور کرایه کردیم و رفتیم به سمت آخر جزیره و یه ساحل که واقعا قشنگ بود... یوناس از یه جزیره شنا کرد رفت یه جزیره دیگه! بعد که برگشت،راه افتادیم به سمت یه غار،نهار رو توی راه خوردیم و بعد از اینکه فهمیدیم غار ورودی داره تصمیم گرفتیم فردا غارو سر بزنیم. بعد هم از بازار هفتگی یه کم میوه خریدیم!شب برگشتیم به هتل و استراحت کردیم</div><div><br></div><div>روز هفتم در لابوآن باجو:</div><div>اول صبح،وسایلمونو جمع کردیم و رفتیم که اتاق عمومی بود،امروز همه اتاقای خصوصی رزرو شدند،با موتور رفتیم به یه غار دیگه،راه خیلی خراب بود،ظهر رسیدیم و بعد از اینکه نهار خوردیم،یه قایق کرایه کردیم و با قایق رفتیم به سمت غار،یه کم پیاده روی داشت،بعد از اون رسیدیم به یه غار فوق العاده قشنگ که داخلش آب بود و میشد شنا کرد،یه کم ترسناک بود ولی بعد از اینکه دیدیم آب گرم گرمه،پریدیم توی آب و واقعا بیرون اومدن از اون آب سخت بود... فوق العاده قشنگ بود... بعد از شنا اومدیم از آب بیرون و با قایق اومدیم به سمت اون شهر کوچیک و با موتور به سمت لابوآن باجو راه افتادیم. شام همبرگر خوردیم و بعدش اومدیم به هتلمون و خوابیدیم.</div><div><br></div>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/13.html">تجربه های مسافرت ما</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../432.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(432)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../431.html">
+                <h2>در لومبوک/سنگیگی</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : جمعه 10 فروردین 1397 10:51 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div><br></div><div>بعد از بیدار شدن و صبحونه خوشمزه ی مسافرخونه،یه کم رفتیم کنار ساحل قدم‌زنی،یوناس رفت با اون مرد سوئدی مشغول حرف زدن شد و من مشغول عکاسی از پرنده ها و پروانه ها شدم،امروز اون مارمولک بزرگه رو نهایتاً دیدم! خیلی خوشحالم بالاخره خودش رو نشون داد! بعد هم به مامان زنگ زدم و همزمان وسیله هامونو برداشتیم راه افتادیم به سمت اسکله،برامون سخت بود از اونجا خداحافظی کنیم ولی باید می‌رفتیم و سفرمون رو ادامه می‌دادیم... از گیلی منو زیبا خداحافظی کردیم و با قایق رفتیم به سمت لومبوک. وقتی رسیدیم،اول یه مسافرخونه توی شهر سنگیگی سرچ کردیم و یه دونه تاکسی گرفتیم و رفتیم به سمت مسافرخونه،اتاق گرفتیم و پریدیم توی استخر،خیلی خوش گذشت. عصر هم رستوران نزدیک مسافرخونه غذا خوردیم.</div><div>۷/۱۰/۹۶</div><div>28/12/2017</div><div>در لومبوک/سنگیگی</div><div>مسافرخونه که ما گرفتیم نزدیک شهر سنگیگی توی یه محله هندو هست. اینجا پره از سگ! توی خیابونا پر از سگه و ترس داره توی خیابون رفتن،صبح،صبحونه رو خوردیم.رفتم کنار ساحل و تنهایی از بین یه عالمه سگ رد شدم و خیلی ترسیدم اما حاضر نبودم برگردم هتل و پیش یوناس. رفتم توی یه رستوران که غذای دریایی داشت اما خیلی خیلی گرون بود. بی خیال شدم اومدم بیرون و بعد از یه مقدار پیاده روی،سرچ کردم توی اینترنت یه بازار سنتی پیدا کردم که البته دور بود و باید با تاکسی میرفتم،نیم ساعت طول کشید و وقتی رسیدم بازار بسته بود! اینترنت گوشیم کار نمی‌داد و نمیشد تاکسی بگیرم. راه افتادم به مسیری که اصلا نمیدونستم به کجا می‌ره! توی راه از کارکنای دو تا سوپر مارکت پرسیدم هیچ کدوم انگلیسی متوجه نمیشدن تا اینکه رسیدم به یه استخر و از اونا پرسیدم نهایتا یه تاکسی برام گرفتند،رفتم به سمت مسافرخونه،یوناس نبود و من صبح تا اون موقع هیچی نخورده بودم. دوباره زدم از اونجا بیرون،رفتم رستوران غذا خوردم و وقتی برگشتم یوناس هم بود.&nbsp;</div><div>۸/۱۰/۹۶</div><div>29/12/2017</div><div><br></div><div>در بالی</div><div>صبحونه رو توی مسافرخونه خوردیم ویه دم در مسافرخونه یه تاکسی گرفتیم واسه بندر لمبار،بلیط کشتی گرفتیم واسه بالی،کلی دست فروش اوجا باور،ازشون یه تیشرت لومبوک،یه بسته میوه پاپایا،آناناس،یه جور ملون،چهار تا بسته مرغ و برنج و دو تا کافی میکس و یه بسته چیپس اندونزی گرفتیم! همه رو هم خوردیم! من خیلی از این میترسیدم که حالت تهوع بگیرم ولی خوشبختانه چیزی نشد. بالاخره رسیدیم بالی،چهار ساعت و نیم طول کشید،وقتی رسیدیم هوا تاریک بود. مسافرخونه که گرفتیم،نزدیک اسکله بود،پیاده راه افتادیم با اینکه کلی سگ توی راه بود!</div><div>شام سفارش دادیم سوپ و پیتزا،قیمت‌ها اینجا خیلی گرونه و ما همش می‌خوایم صرفه جویی کنیم،تا میشه تاکسی نمی‌گیریم و غذای ارزون میخوریم!</div><div><br></div><div>۹/۱۰/۹۶</div><div>30/12/2017</div><div><br></div><div><br></div><div>پیشنهاد من این بود که شب سال نو رو توی یه شهر توریستی بگذرونیم،یوناس پیشنهادش شهر کوتا بود،یه شهر خیلی شلوغ و توریستی بالی. صاحب مسافرخونمون گفت که بهتره تاکسی بگیریم،هزینه تاکسی پونصد هزار تا میشد اما ما ترجیح دادیم با اتوبوس بریم،توی اینترنت که سرچ کردیم نوشته بود یه اتوبوس هایی توی بالی هست به اسم بمو می‌خواستیم با این اتوبوس‌ها بریم ولی پیشنهاد صاحب مسافرخونه این بود که بریم ترمینال و از اونجا با اتوبوسای دیگه بریم،ما رو با موتور رسوندن،صد و پنجاه هزار روپیه دادیم و نشستیم منتظر اتوبوس،یه کم طول کشید توی این زمان من رفتم یه ساندویچ مرغ و نوشیدنی انبه گرفتم،خوردیم و سوار اتوبوس شدیم اپل راه خیلی ترافیک نبود،به کوتا که رسیدیم،ترافیک شروع شد! واقعا شهر شلوغیه کوتا! وقتی رسیدیم اول از همه رفتیم فرودگاه بالی و یه بلیط رفت و برگشت واسه لابور باجو. یکی از جاهایی که یوناس دوست داره ببینه،جزیره کومودو هست که یه مارمولک خیلی بزرگ اونجا هست البته من خیلی خیلی میترسم چون این مارمولک خیلی خطرناکه! اول می‌خواستیم یه توی کشتی بگیریم که چهار روز طول می‌کشه،من اما میترسم که تمام راه حالت تهوع بگیریم و نتونیم لذت ببریم واسه همین تصمیم گرفتیم هوایی سفر کنیم! بلیط رو گرفتیم،رفت و برگشت دویست یورو،بعد از اون پیاده رفتیم به سمت مسافرخونه،مسافرخونه ما نزدیک فرودگاهه اما با این کوله های سنگین واقعا راحت نبود این همه پیاده روی! بالاخره رسیدیم! استراحت کردیم و دوش گرفتیم</div><div>وشب زدیم بیرون اول رفتیم یه رستوران ارزون،شام خوردیم،بعد رفتیم یه سوپر مارکت آبمیوه و آب خریدیم و بعد رفتیم نزدیک ساحل،انشا شب سال نو میلادیه،اینجا خیلی شلوغه پره از توریست. شلوغه ولی واقعا زیباست این ترکیب زیبای دریا و&nbsp;</div><div><br></div><div>۱۰/۱۰/۹۶</div><div>31/12/2017</div>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/13.html">تجربه های مسافرت ما</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../431.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(431)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../430.html">
+                <h2>در گیلی منو</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : جمعه 10 فروردین 1397 10:50 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div><br></div><div>صبح،صبحونه خوردیم و رفتیم بلیط گرفتیم واسه جزیره زیبای گیلی منو.یه جزیره خیلی آروم و واقعا قشنگ و آرامش بخش... وقتی رسیدیم رفتیم به سینما مسافر خونمون،این دفعه یه مسافر خونه گرون گرفتیم که استخر هم داره! تا رسیدیم لباس شنا پوشیدیم پریدیم توی استخر! بهتر از یه کمی شنا اومدیم بالا،دوش گرفتیم و رفتیم داخل شهر،واسه خوردن غذا. امشب شب کریسمسه و واسه همین تصمیم گرفتیم بریم یه جا که جشن باشه،غذا بخوریم. امشب اما شب خوبی واسه ما نبود،یوناس بهم گفت که امروز روز خوبی براش نبوده چون من خیلی ناراحتش کردم،از این ناراحته که چرا باهاش بیشتر حرف نمی‌زنم و کار خودمو میکنم! خلاصه خاطره خوبی ندارم از امشب!</div><div><br></div><div>۳/۱۰/۱۳۹۶</div><div>2017/12/24</div><div><br></div><div>در گیلی منو:</div><div>امروز صبحونه خوشمزه مسافرخونه رو خوردیم و بعد با دوچرخه زدیم از مسافرخونه بیرون،کل مسیر جزیره رو با دوچرخه رکاب زدیم و بعد وسایل غواصی کرایه کردیم و پریدیم توی آب دریا و تنهایی غواصی کردیم. کلی ماهی و مرجان خوشگل دیدیم. این دفعه من ماسک اکسیژن زدم و با اینکه دفعه قبل خیلی برام سخت بود الان یاد گرفتم با ماسک شنا کنم. امروز واقعا عالی بود خیلی خیلی غواصی بهمون خوش گذشت. بعد از اون با همون لباسای خیس رفتیم رستوران و غذا خوردیم. اینجا واقعا غذا گرونه ولی امشب ما تونستیم یه رستوران پیتزا پیدا کنیم که واقعا قیمتاش خوبن خلاصه یه پیتزا ویه دونه غذای اندونزی سفارش دادیم و بعد از اون برگشتیم به مسافرخونمون.</div><div><br></div><div>۴/۱۰/۱۳۹۶</div><div>2017/12/25</div><div>در گیلی منو</div><div>امروز بعد از صبحونه،توی سایت واسه یه مسافرخونه نزدیک ساحل سرچ کردیم و رفتیم اونجا،سرشون شلوغ بود و خیلی طول کشید تا اتاقمون رو بهمون تحویل بدند واسه همین ما رفتیم کنار دریا،اومدیم وسایلمونو بردیم داخل هتل و بعد از یه دوش کوچیک،رفتیم کنار ساحل،</div><div>می‌خواستیم بریم قواصی چون هوا خیلی بادی بود،نشد بریم و خلاصه امروز رو فقط کنار ساحل پیاده روی کردیم</div><div>۵/۱۰/۱۳۹۶</div><div>2017/12/25</div><div>در گیلی منو</div><div>امروز</div><div><br></div><div>۶/۱۰/۱۳۹۶</div><div>2017/12/26</div><div><br></div>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/13.html">تجربه های مسافرت ما</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../430.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(430)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../429.html">
+                <h2>روز بیست و سوم در برومو</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : جمعه 10 فروردین 1397 10:49 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div><br></div><div>امروز صبح زود ساعت شش از خواب پاشدیم،صبحونه نون و کره مربا خوردیم و پیاده رفتیم به سمت کوه برومو،بعد از یه ساعت و نیم پیاده روی رسیدیم اون بالا واقعا قشنگ و در عین حال ترسناک بود. خیلی آتشفشان عجیبی بود. خیلی میترسیدیم بیفتیم داخلش! باد هم میومد و یوناس از این می‌گفت که یه بار اما و مالین رفته بودند کوه آتشفشانی ایسلند بودند و باد اما رو میندازه پایین از جهت مخالف آتشفشان! می‌گفت خیلی جالبه که به نظرم اصلا جالب نبود! خیلی اونجا نموندیم زود اومدیم پایین،توی راه دسته گلی که برای پیشکش کردن به برومو بود رو خریدیم ولی اینقدر قشنگ بود که تصمیم گرفتم بیارمش ایران! اگر بمونه و خراب نشه! بعدم کاپوچینو و یه مقدار خوردیم. برنامه این بود که بریم به سمت سورابایا،سوار اتوبوس شدیم و بعد از کلی چونه زدن،راننده رو به نفری پنجاه هزار تا راضی کردیم! بعد از یه ساعت پروبولینگو بودیم،سوار اتوبوس شدیم و رفتیم به سمت ایستگاه قطار،واسه ساعت هفت عصر بلیط قطار پروبولینگو به سورابایا گرفتیم و رفتیم توی یه رستوران نزدیک نودل خوردیم! بارون دوباره شروع شد واسه همین یه تاکسی دوچرخه گرفتیم و رفتیم به ایستگاه قطار،یه کمی بعد قطار اومد و</div><div>&nbsp;۷/۹/۱۳۹۶</div><div>2017/12/17</div><div><br></div>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/13.html">تجربه های مسافرت ما</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../429.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(429)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../428.html">
+                <h2>روز بیست و دوم در برومو</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : جمعه 10 فروردین 1397 10:49 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div><br></div><div>صبح صبحونه،نون و کره و مربا خوردیم و زدیم از خونه بیرون،به سمت کوه برومو،پیاده رفتیم و فقط بارونی هامونو آورده بودیم،اول راه خیلی اسب،موتور و جیپ بود اما یوناس گفت پیاده بریم خیلی راهی نیست،ما هم به راه افتادیم و توی راه بارون شدیدی گرفت. خیس خیس شدیم و باید نیم ساعت دیگه راه می‌رفتیم تا برسیم به چادرایی که نزدیک کوه زده بودند،بالاخره رسیدیم و نشستیم توی هوای سرد و بارونی،کاپوچینو خوردیم و منتظر شدیم بارون قطع بشه،بارون شدید و شدیدتر می‌شد، مجبور شدیم دو تا موتور گرفتیم رفتیم به سمت مسافرخونه،اونجا لباسامونو روی بند آویزون کردیم و دوش گرفتیم،بعدم من تنهایی رفتم بیرون رستوران،یوناس میخواست وبلاگ بنویسه مثل همیشه میخکوب شده بود از جاش بلند نمیشد! حوصلشو نداشتم،خودم تنهایی رفتم رستوران،یه لباس بارونی هم گرفتم،پوشیدم و بعدش اومدم خونه،شب رو هم رفتیم بیرون،غذا خوردیم و اومدیم مسافر خونه و خوابیدیم.</div><div>۶/۹/۱۳۹۶</div><div>2017/12/16</div>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/13.html">تجربه های مسافرت ما</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../428.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(428)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../427.html">
+                <h2>روز بیست و یکم در برومو</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : جمعه 10 فروردین 1397 10:48 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div><br></div><div>امروز صبح،صبحونه رو همون نونایی که خریده بودیم،خوردیم،کوله هامون رو برداشتیم و راه افتادیم پیاده به سمت شهر! توی خیابونا و بازار واقعا چیزای جالب و جدید رو دیدیم. رفتیم کی اف سی و اونجا مرغ،سیب زمینی و همبرگر خوردیم! چقدر چسبید! یه غذای خیلی معمولی بعد از مدتها! البته گرون بود قیمتش ولی می ارزید! بعد از اون پلاستیکمون که مواد غذایی داخلش بود پاره شد! مجبور شدیم یه پلاستیک جدید خریدیم،از یه مغازه،چاقو و آینه خریدیم و یه مغازه لباس محلی دیدیم اون وقت بود که من جشن گرفتم! رفتم ویه لباس سنتی خیلی قشنگ و یه شلوار خریدم و بعدش تاکسی گرفتیم و رفتیم به سمت ایستگاه اتوبوس! بهمون یه جایی رو نشون دادند که باید واسه اتوبوس صبر میکردیم.</div><div>امروز برنامه این بود که از پروبولینگو بریم به سمت کوه برومو, دو ساعت منتظر شدیم که اتوبوس پر بشه راه بیفتیم اما چون الان فصل بارونه و خیلی توریست اینجا نیست،کسی نیومد که اتوبوس حرکت کنه،بعد از حدود یه ساعت دو تا توریست اومدن و بعد از گذشت دو ساعت یکی دیگه! باید حداقل پانزده نفر می بودیم که اتوبوس حرکت کنه و می‌خواستند هزینه کل پانزده نفر رو حساب میکردیم تا اتوبوس حرکت کنه و ما حاضر نبودیم این مقدار پرداخت کنیم واسه همین یه تاکسی گرب گرفتیم و تاکسی اومد و گفت که دویست و پنجاه تا میگیره و ما هم قبول کردیم, داشتیم وسایل رو می آوردیم که یکی از راننده های اتوبوس اومد سمت تاکسی و باهاش با عصبانیت یه چی گفت, بعد راننده اومد و در صندوق عقب رو بست و گفت نمیتونم ببرمتون! ازش خواهش کردیم اما فایده نداشت! بعد یکی از راننده های اتوبوس اومد سمت راننده تاکسی،یه چیزی گفت و یه سیلی زد تو گوشش! طبق چیزی که ما همیشه ایران دیدیم،من فکر کردم الان زد و خورد میشه اما راننده تاکسی هیچی نگفت! سرش پایین بود و هیچ اعتراضی نمی‌کرد! بعد که دیدیم راهی نمونده و نه تاکسی ما رو میبره نه اتوبوس،راه افتادیم که بریم دنبال یه اتوبوس دیگه که راننده اتوبوس اومد دنبالمون و گفت سی صد و پنجاه،راضیش کردیم به دویست و پنجاه! شب فقط خوابیدیم! خیلی خسته بودیم!</div><div>۵/۹/۱۳۹۶</div><div>2017/12/15</div>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/13.html">تجربه های مسافرت ما</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../427.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(427)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../426.html">
+                <h2>روز بیستم در پروبولینگو</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : جمعه 10 فروردین 1397 10:48 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div><br></div><div>امروز رو فقط توی قطار سپری کردیم! صبحونه رو توی قطار خوردیم. دوباره برنج! قطار ما توی شهر سورابایا یه توقف داشت،توی سورابایا خیلی گشنه بودیم. هوا گرم بود و کوله ها سنگین و شکم گرسنه! توی شهر راه افتادیم،باید از یه ایستگاه قطار می‌رفتیم یه ایستگاه دیگه،یه دونه تاکسی اینترنتی گرفتیم و توی یکی از خیابونای اصلی شهر پیاده شدیم. پیاده راه افتادیم. واقعا گشنه بودیم اما من خیلی خیلی از برنج و غذای اندونزی خسته شده بودم همه غذاها برنج،مرغ،ماهی یا نودل! دلم سیب زمینی میخواست و سوسیس! هر چی گشتیم چیزی به غیر از برنج پیدا نکردیم! وقتی نداشتیم،رفتیم توی یه رستوران که بوفه بود و خیلی گرون... همسر جان هم که علاقه ای به پول خرج کردن نداره! به بهونه اینکه وقت نداریم و باید بریم ایستگاه قطار اومدیم بیرون!و اومدیم توی ایستگاه قطار،من سیب زمینی و سوسیس به شیوه اندونزی سفارش دادم! قطارمون راه افتاد و دو ساعت بعد پروبولینگو بودیم. همه جا توی اینترنت خونده بودیم که پروبولینگو یه شهره که واسه کوه برومو معروفه،واسه همین خیلی از راننده ها پول اضافه میگیرن! واسه همین پیاده راه افتادیم به سمت هاستلمون،اونجا بلافاصله رفتم حموم،خیلی لباسام کثیف بود،فورا لباسا رو توی پلاستیک شستیم و یوناس کمک کرد،آویزون کردیم که زود خشک بشن،کولر رو هم روشن کردیم که راحت تر خشک بشن و زدیم از خونه بیرون! رفتیم سوپر مارکت و نون و کره و مربا و پنیر گرفتیم،کره که اصلا نبود! مربا هم خیلی گرون!خیلی دلم واسه نون پنیر تنگ شده بود! اومدیم خونه دیدیم نونا،نون شیرین و کره اند! هیچی دیگه همونو خوردیم و خوابیدیم!</div><div>۴/۹/۱۳۹۶</div><div>2017/12/14</div>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/13.html">تجربه های مسافرت ما</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../426.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(426)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../../425.html">
+                <h2>روز نوزدهم در سمارانگ</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : جمعه 10 فروردین 1397 10:47 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div><br></div><div>با جزیره زیبای کاریمونجاوا خداحافظی کردیم و در حالیکه هوا آفتابی شده بود،سوار کشتی شدیم،صبح ساعت پنج پاشدیم،وسیله هامون رو جمع کردیم،یه کاپوچینو خوردیم و سوار کشتی شدیم. خیلی خسته بودیم خیلی زیاد،من بارونیمو پهن کردم زیرم و بالش گذاشتم یه ساعتی خوابیدم با اینکه اکف کشتی خیلی کثیف بود اینقدر خسته بودم که برام مهم نبود! یه ساعتی غش بودم! یوناس دلش نمی‌گرفت روی بدنه کشتی بخوابه! بعد از پنج ساعت رسیدیم به جپارا یه دونه تاکسی دوچرخه گرفتیم و رفتیم ترمینال،تصمیم گرفتیم اول یه چیزی بخوریم،رفتیم رستوران و برنج و مرغ خوردیم بعدم دوباره رفتیم یه رستوران چینی،غذای چینی خوردیم،واقعا دو بار غذای چینی خوردیم و هر دوبار خوشمزه بوده... بعد از اون سوار اتوبوس شدیم رفتیم سمارانگ،خیلی خیلی اذیت شدیم واقعا راه خراب بود،جاده ها همه خراب! حالت تهوع گرفتم تا رسیدیم! سمارانگ یه دونه هاستل از قبل روزو کرده بودیم که نزدیک ایستگاه قطار بود. رفتیم اونجا و بعد از یه کم استراحت رفتیم بیرون،یه میدون تاریخی بود،اونجا رفتیم و شام رفتیم یه رستوران که واقعا گرون بود! اما غذای خوشمزه ای داشت!</div><div><br></div><div>۲۳/۹/۱۳۹۶</div><div>2017/12/13</div>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="../../category/13.html">تجربه های مسافرت ما</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../../425.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(425)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                    
+      <!--- e bodypost --->
+      
+            <!--- e barge ---->
+      
+              <div class="paper">
+          <div class="paper-tbg"></div>
+          <div class="paper-text">
+            <div class="paper-text-mid"> تعداد کل صفحات : 2               <a href="1/page/1.html"> <b>1</b></a>  <a href="1/page/2.html"> <span>2</span></a>               <div style="clear:both"></div>
+            </div>
+          </div>
+          <div class="paper-bbg"></div>
+        </div>
+            
+      <!--- e paper --->
+      
+      <style>
+
+.text100 , .text100 a{color: #000000;font-size: 8pt;text-transform: none;}
+.text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+.text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+.com{width: 100%;float: left;background-color: #ECECEC;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;margin: 10px auto;padding: 0 0 10px 0;}
+.com a { text-decoration: none;}
+.com1{width: 98%;float: left;background-color: #D9D9D9;	-webkit-border-radius: 5px;	-moz-border-radius: 5px;border-radius: 5px;margin: 10px 20px 0 10px;padding: 0 0 3px 0;}
+.com3{ width:50%; float:left; text-align:right; direction:rtl; line-height:27px;}
+.com2{ width:30%px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+.com4{ width:96%; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:12px;}
+.com5{width: 96%;float: left;background-color: #E9E9E9; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;margin: 3px 3px 0 3px;
+	padding: 7px;direction: rtl;	text-align: right;-moz-box-shadow: inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;	box-shadow: inset #444 0px 0px 5px;
+	font-size: 12px;}
+.com6{ width:97%; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+.com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+.comment_form .comment_form_msg {background: none repeat scroll 0 0 #F6F6F6;border: 1px solid #E6E6E6; margin: 5px;    padding: 5px;}
+</style>
+          </div>
+    <!--- e content --->
+    
+    <div class="left">
+      <div class="lm">
+        <div class="lmtitle">
+          <div class="lmtitle-mid">جستجو در وبلاگ</div>
+        </div>
+        <div class="lmtext">
+          <div class="lmtext-mid">
+            <form id="frm-16079573585fd77b6edbc3b" method="get" action="http://zendegimoon.mihanblog.com/post/search/fid/16079573585fd77b6edbc3b"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+              <input type="text" name="search_text"/>
+              <input type="submit" value="جستجو"/>
+            <input type="hidden" name="frm-id" value="16079573585fd77b6edbc3b" id="frm-id" /></form>          </div>
+        </div>
+        <div class="lm-bbg"></div>
+      </div>
+              <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">تازه ترین مطالب</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                                  <li><a href="../../544.html" title="چهارشنبه 5 آذر 1399"> پیش بینی آینده... </a></li>
+                                  <li><a href="../../543.html" title="دوشنبه 3 آذر 1399"> از شیر گرفتن آقا پسر </a></li>
+                                  <li><a href="../../542.html" title="شنبه 24 آبان 1399"> قبل از آشنایی با همسر </a></li>
+                                <li><a href="../../list.html">لیست تمام مطالب</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+                    <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid"> لینک های روزانه </div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                                  <li><a href="http://behzadwin.blogsky.com/" title="" target="_blank">مخمور جام عشق</a> </li>
+                                  <li><a href="http://mamooli.persianblog.ir/" title="" target="_blank">یه دختر معمولی با یه زندگی معمولی</a> </li>
+                                  <li><a href="http://elmiradad.blogfa.com/" title="" target="_blank">روزگار تلخ و شیرین من در غربت</a> </li>
+                                  <li><a href="http://tanhaian.persianblog.ir/" title="" target="_blank">دل نوشته های من در غربت</a> </li>
+                                  <li><a href="http://khateratemanca.blogfa.com/" title="" target="_blank">زندگی من در غربت</a> </li>
+                                  <li><a href="http://www.cafealone.com" title="شعر,مینیمال,جملات فلسفی,داستان کوتاه" target="_blank">کافه تنهایی</a> </li>
+                                  <li><a href="http://dinon.ir/" title="" target="_blank">آمــوزش و پاسخگــویی به سوالات علــوم کامپیوتــر</a> </li>
+                                  <li><a href="http://66darjostojoo.blogfa.com/" title="" target="_blank">در جست و جو</a> </li>
+                                  <li><a href="http://pzi.parsiblog.com/" title="" target="_blank">..••●●ساعت به وقت غربت●●••..</a> </li>
+                                  <li><a href="http://moalem-ko0cho0lo0.blogfa.com/" title="" target="_blank">خاطرات معلم کــوچــولــو 1</a> </li>
+                                <li><a href="../../../linkdaily/index.html"><b>همه لینکها</b></a></li>
+                <li><a href="javascript:linkdailyForm()"><b>ارسال لینک</b></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+            
+		<form id="frm-16079573585fd77b6edc40f" method="post" action="http://zendegimoon.mihanblog.com/poll/new/fid/16079573585fd77b6edc40f/atrty/1607957358/avrvy/0/key/fec7e5f131a148d5fb4343b87b1ef9dd/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="356955" id="data[pollid]" />		
+        <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">نظرسنجی</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid"> دوست دارین بیشتر راجع به چی بنویسم؟<br>
+               <label><input type="radio" name="data[answer]" value="v1">فرهنگ آلمانی</label><br>
+               <label><input type="radio" name="data[answer]" value="v2">زندگی در آلمان</label><br>
+               <label><input type="radio" name="data[answer]" value="v3">ویزا و مراحل اداری ازدواج</label><br>
+               <label><input type="radio" name="data[answer]" value="v4">زندگی با همسرم در آلمان</label><br>
+                            <input type="submit" value="ثبت"/>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+      
+		<input type="hidden" name="frm-id" value="16079573585fd77b6edc40f" id="frm-id" /></form>              <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">دوستان</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                <li><a href="http://cafeskin.blogfa.com/">قالب وبلاگ</a></li>
+                                  <li> <a href="http://deutschlernen1.blogsky.com/" title=""  target="_blank"> بزرگترین سایت کتب و پادکست های زبان آلمانی</a></li>
+                                  <li> <a href="http://mamoolii.blogsky.com" title=""  target="_blank"> یه دختر معمولی با یه زندگی معمولی</a></li>
+                                  <li> <a href="http://mamoolii.blogsky.com" title=""  target="_blank"> یه دختر معمولی با یه زندگی معمولی 2</a></li>
+                                  <li> <a href="http://travle.blogsky.com/" title=""  target="_blank"> سفر - کوچ سرفینگ - تجربه متفاوت</a></li>
+                                  <li> <a href="http://aalmaan.blogfa.com/" title=""  target="_blank"> یادداشت‌های پراکنده در مورد آلمان</a></li>
+                                  <li> <a href="http://studieindeutsch.blogspot.com" title=""  target="_blank"> مهاجرت،تحصیل و زندگی در آلمان</a></li>
+                                  <li> <a href="http://moalem-ko0cho0lo0.blogsky.com/" title=""  target="_blank"> خاطرات معلم کــوچــولــو 2</a></li>
+                                  <li> <a href="http://www.mehditravel87.blogfa.com/" title=""  target="_blank"> سفر به کل دنیا با دوچرخه</a></li>
+                                  <li> <a href="http://wonderland.blog.ir/" title=""  target="_blank"> آزاده در سرزمین عجایب</a></li>
+                                  <li> <a href="http://bluecardgermany.blogsky.com/" title=""  target="_blank"> اقامت کاری کشور آلمان</a></li>
+                                  <li> <a href="http://leiligermany.blogsky.com/" title=""  target="_blank"> زندگی پر از خاطره است</a></li>
+                                  <li> <a href="http://habibashtari.blogfa.com/" title=""  target="_blank"> سفر به دنیا با دوچرخه</a></li>
+                                  <li> <a href="http://booyehbehesht.niniweblog.com/" title=""  target="_blank"> ♡ ♡ بوی بهشت ♡ ♡</a></li>
+                                  <li> <a href="http://weineurope.blogsky.com/" title=""  target="_blank"> من و همسرم در اروپا</a></li>
+                                  <li> <a href="http://ebrahimnejad.persianblog.ir/" title=""  target="_blank"> یک ایرانی در بوستون</a></li>
+                                  <li> <a href="http://aroshayeasemani.persianblog.ir/" title=""  target="_blank"> عروس های آسمانی</a></li>
+                                  <li> <a href="http://bhb.blogfa.com/" title=""  target="_blank"> بلندی های بادگیر</a></li>
+                                  <li> <a href="http://mennomen.mihanblog.com" title=""  target="_blank"> my white house</a></li>
+                                  <li> <a href="http://www.mybabydream.blogfa.com/" title=""  target="_blank"> رویای کودکی من</a></li>
+                                  <li> <a href="http://delavarenoor.persianblog.ir/" title=""  target="_blank"> از رویا تا واقعیت</a></li>
+                                <li><a href="../../../link/index.html"><b>همه لینکها</b></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+            <div class="lm">
+        <div class="lmtitle">
+          <div class="lmtitle-mid">لینک های مفید</div>
+        </div>
+        <div class="lmtext">
+          <div class="lmtext-mid"> 
+            <!--- Start links  ----><ul>
+<li><a href="http://wallz.ir/" target="_blank" title="گرافیک">والز</a></li>
+<li><a href="http://kiosk724.ir/" target="_blank" title="کتاب و مجله الکترونیکی">کیوسک 724</a></li>
+<li><a href="http://sitesetup.ir/" target="_blank" title="طراحی سایت و قالب وبلاگ">سایت ستاپ</a></li>
+<li><a href="http://theme.sitesetup.ir/" target="_blank" title="قالب حرفه ای وبلاگ">قالب وبلاگ حرفه ای</a></li>
+</ul> <!--- End links  ---->  
+          </div>
+        </div>
+        <div class="lm-bbg"></div>
+      </div>
+      <div class="lm">
+        <div class="lmtitle">
+          <div class="lmtitle-mid">ابزارک های وبلاگ</div>
+        </div>
+        <div class="lmtext">
+          <div class="lmtext-mid"> <br>
+            <a href="http://cafeskin.blogfa.com/">قالب وبلاگ</a><br>
+            <br>
+                          <ul>
+                <li>کل بازدید:<script>getStatVar('total_view');</script></li>
+                <li>بازدید امروز :<script>getStatVar('today_view');</script></li>
+                <li>یازدید دیروز : <script>getStatVar('yesterday_view');</script></li>
+                <li>بازدید این ماه : <script>getStatVar('this_month_view');</script></li>
+                <li>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></li>
+                <li>تعداد نویسندگان : <script>getStatVar('total_author');</script></li>
+                <li>تعداد کل مطالب : <script>getStatVar('total_post');</script></li>
+                <li>آخرین بازدید : <script>getStatVar('last_view_date');</script></li>
+                <li>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></li>
+              </ul>
+                        <br>
+            <div style="text-align:center;"> <!-- Begin https://dornamusic.com -->
+<center><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><audio style="width:100%" controls autoplay loop><source src="http://s.dornamusic.com/mp3/17/4/26/Reza-Sadeghi-Man-Ba-Toam-128-DornaMusic.Com.mp3" type="audio/mpeg" /></audio></br>
+<a title="دانلود آهنگ جدید من با توام – رضا صادقی" target="_blank" href="https://dornamusic.com/songs/reza-sadeghi-man-ba-toam/">دانلود آهنگ جدید من با توام – رضا صادقی</a></center>
+<!-- End https://dornamusic.com -->
+
+
+
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=3660612&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=3660612" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code --> </div>
+          </div>
+        </div>
+        <div class="lm-bbg"></div>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+    <!--- e left --->
+    
+    <div style="clear:both"></div>
+  </div>
+  <!--- e main --->
+  
+  <div class="footer">
+    <div class="footer-mid">تمام حقوق وبلاگ متعلق به نویسنده‌ی آن می باشد :: <a href="http://cafeskin.blogfa.com/"> قالب وبلاگ: کافه اسکین</a> 
+      <!--- برای حفظ حقوق طراح قالب لطفا نام و آدرس طراح را تغییر نداده و پاک نفرمایید. سپاس ---> 
+    </div>
+  </div>
+  <!--- e footer ---> 
+  
+</div>
+<!--- e page --->
+
+</body>
+</html>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'zendegimoon.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

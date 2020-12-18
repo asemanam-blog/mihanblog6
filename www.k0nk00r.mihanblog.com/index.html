@@ -1,0 +1,1640 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://k0nk00r.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*1265999*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[7]='9';commentCnt[26]='82';commentCnt[29]='40';commentCnt[31]='5';commentCnt[34]='1';commentCnt[37]='0';commentCnt[54]='0';commentCnt[55]='3';commentCnt[56]='6';commentCnt[61]='6';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[7]='19';
+mihanblogDisLikeArrCnt[7]='2';
+mihanblogLikeArrCnt[26]='18';
+mihanblogDisLikeArrCnt[26]='3';
+mihanblogLikeArrCnt[29]='29';
+mihanblogDisLikeArrCnt[29]='6';
+mihanblogLikeArrCnt[31]='13';
+mihanblogDisLikeArrCnt[31]='2';
+mihanblogLikeArrCnt[34]='15';
+mihanblogDisLikeArrCnt[34]='1';
+mihanblogLikeArrCnt[37]='11';
+mihanblogDisLikeArrCnt[37]='1';
+mihanblogLikeArrCnt[54]='6';
+mihanblogDisLikeArrCnt[54]='0';
+mihanblogLikeArrCnt[55]='7';
+mihanblogDisLikeArrCnt[55]='1';
+mihanblogLikeArrCnt[56]='7';
+mihanblogDisLikeArrCnt[56]='1';
+mihanblogLikeArrCnt[61]='3';
+mihanblogDisLikeArrCnt[61]='4';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://k0nk00r.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://k0nk00r.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','28');
+	setStatVar('total_author','1');
+	setStatVar('modify_date','چهارشنبه 28 آبان 1393');
+	
+	setStatVar('today_view','78');
+	setStatVar('yesterday_view','289');
+	
+	setStatVar('this_month_view','7588');
+	setStatVar('last_month_view','9200');
+
+	setStatVar('total_view','2139021');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (07:43)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://k0nk00r.mihanblog.com/statupdate/?data[refereruri]=&data[postid]=&data[requesturi]=/&data[sdate]=1608178519&data[hash]=47f03c5847c44009d0933c9c53f26986&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://k0nk00r.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="http://k0nk00r.mihanblog.com/'+img+'" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://k0nk00r.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://k0nk00r.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://k0nk00r.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://k0nk00r.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://k0nk00r.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://k0nk00r.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://k0nk00r.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://k0nk00r.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://k0nk00r.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://k0nk00r.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://k0nk00r.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://k0nk00r.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://k0nk00r.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://k0nk00r.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://k0nk00r.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html><head>
+<meta name="google-site-verification" content="W3GbKOnN24bEm0JFyVu1r28xby2WoSsFdCgJhUJidTE" />
+<!-- Y7Ee5XXgbcf_k4ycCIsuO-hyUM0 -->
+<title>کنکور</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="profile" href="http://pars-skin.com" />
+<meta name="geo.region" CONTENT="IR" />
+<meta name="googlebot" content="INDEX, follow" />
+<meta name="robots" content="index, follow"/>
+<meta name="language" content="Farsi"/>
+<meta name="description" content="کنکور - همراه ما برای کنکور آماده شوید - کنکور"/>
+<meta name="keywords" content="کنکور,k0nk00r,کنکور,جزوه کنکور,روش مطالعه درس,مشاوره کنکور,اخبار کنکور,نرم افزار کنکور,ریاضی"/>
+<link rel="alternate" type="application/rss+xml" title="کنکور" href="http://k0nk00r.mihanblog.com/post/rss/"/>
+<link rel="shortcut icon" href="http://k0nk00r.persiangig.com/other/book.jpg" />
+<body onload="window.open('http://www.anjammidam.com/kareh/theoriUm/96?referrerId=183')"></body>
+
+<style>
+#i1 {opacity:0.5}
+#i1:hover {opacity:1}
+#i2 {opacity:1}
+#i2:hover {opacity:0.7}
+</style>
+
+<style>
+* { margin: 0; padding: 0; }body {direction: rtl; background: #2c2b31; word-wrap: break-word;min-width:1040; }h1, h2, h3, h4, h5 { line-height: normal; }h1 { font-size: 1.6em; } h2 { font-size: 1.4em; } h3 { font-size: 1.2em; } h4 { font-size: 1.1em; } h5 { font-size: 1em; }a { color: #2288ff; text-decoration: none; }a:hover { text-decoration: none; }a img  { border: 0 none; }input, textarea, select, button, body { color: #2c2c2c; font: 12px/17px Arial, Helvetica, sans-serif; }input, textarea, select, button, a { outline: none; }p { margin-bottom: 0.4em; }hr { border: 0 none; border-top: 1px solid #d9e5e7; height: 1px; }ul, ol { list-style: none; padding: 0; margin: 0; }.dcont ul { padding-right: 16px; list-style: disc outside; }.dcont ol { list-style-image: none; list-style-position: outside; list-style-type: decimal; margin-left: 2.2em; }.clr { clear: both; }.thide, .ui-icon-closethick, .bsep, .shadow, .light { overflow: hidden; display: block; height: 0; line-height: normal; }table.userstop, table.pm, table.tableform, table.calendar { border-collapse: collapse; border-spacing: 0; }.lcol, .rcol, form { display: inline; }.lcol { float: left; } .rcol { float: right; }.small { font-size: 0.85em; }.red { color: #dd1b42; }#searchbar .stext, .loginbtn, #topmenu li a, #topmenu li ul, .block, .adblock, .bannertop, .bannerfoot, .iChat_bbeditor b, .iChat_editor textarea, .story .dtop, .stinfo, .story .dbtm, .pollbox, #searchsuggestions, #loading-layer, #dropmenudiv, .berrors, .tagbox, .navigation a,.ui-dialog, .bcomment, .stext input, .lfield input, .getcode, .argmore a, .searchitem, .argrel, #related, .commentbox, .cdate, .bform { -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px; }/* blocks */.block { color: #fff; width: 200px; margin:0 10 10 10; padding-bottom: 10px; background-color: #232226; background-color: rgba(35,34,38,0.8);-moz-box-shadow: 0 0 8px 0 #25252a;-webkit-box-shadow: 0 0 8px 0 #25252a;box-shadow: 0 0 8px 0 #25252a;}*html .block { background: #232226; }.block a, .adblock a { color: #3cc1ff; }.btl { float: left; margin: -2px 0 15px 0; font-size: 1.1em; color: #fff; width: 185px; padding: 16px 15px 0 0; height: 31px; background: url("http://k0nk00r.persiangig.com/skin/myskin2/btl.png") no-repeat; }.bgrey .btl { background-position: -202px 0; }.block .dcont { margin: 0 15px; font-size: 0.7em; }/* ad */.adblock {padding: 9px 38px 9px 9px;color: #fff; border: 1px dashed #79787c; margin-bottom: 20px; background-color: #29282e; background-color: rgba(41,40,46,0.8); }/* topnews */.topnews { padding-right: 15px; }.topnews li { font-size: 0.8em; padding: 0 12px 0.3em 0; background: url("http://k0nk00r.persiangig.com/skin/myskin2/topnews.png") no-repeat right 5px; }.topnews li a { color: #ffffff; }.topnews li a:hover { color: #ff4166; }/* links */#links-style { font-size: 0.8em; padding: 8px; }/* banners top & foot */.bannerfoot, .bannertop { padding: 5px; position: relative; }.bannertop .thide { top: -2px; }.bannerfoot .thide { bottom: -3px; }.banner {  color: #ffffff; font-size: 17px; text-align:center; height: 60px; margin: 0 auto; }.mybanner {  color: #ffffff; font-size: 17px; text-align:center; height: 60px; margin: 0 auto; }.bannertop {color: #ffffff;}.bannerfoot  {background-image: -webkit-gradient(linear, bottom, #252429, to(rgba(37,36,41,0))); background-image: -webkit-linear-gradient(bottom, #252429, rgba(37,36,41,0)); background-image: -moz-linear-gradient(bottom, #252429, rgba(37,36,41,0)); background-image: -ms-linear-gradient(bottom, #252429, rgba(37,36,41,0)); background-image: -o-linear-gradient(bottom, #252429, rgba(37,36,41,0));background-image: linear-gradient(bottom, #252429, rgba(37,36,41,0));}/* shortstory */.story { margin-bottom: 20px; }.story .dtop, #related, .commentbox { background: #1e1d21; }.story .dtop { padding-top: 12px; width: 100%; }.story .dtop, .stinfo {-moz-border-radius-bottomleft: 0; -webkit-border-bottom-left-radius: 0; border-bottom-left-radius: 0;-moz-border-radius-bottomright: 0; -webkit-border-bottom-right-radius: 0; border-bottom-right-radius: 0;}.story .dtop h2 { margin-bottom: 14px; font-weight: normal; color: #fff; padding: 0 17px; }.story .dtop h2 a { color: #fff; }.stinfo { padding: 0 17px; height: 30px; line-height: 29px; border-bottom: 1px solid #dbdbdb; background: #fff url("http://k0nk00r.persiangig.com/skin/myskin2/stinfo.png") repeat-x 0 100%; font-size: .85em; }/* ratebox */.rate { float: right; margin: 0 0 0 1em; width: 85px; height: 17px; line-height: 10px; overflow: hidden; }.stinfo .rate, .stinfo .isicons { margin-top: 7px; }.story .dcont { padding: 18px 20px; background: #fff; }.story .dbtm { color: #464646; line-height: 23px; font-size: .85em; background-color: #f3f3f3; border-top: 1px solid #d5d5d5; padding: 12px 20px 0 20px; height: 37px;-moz-border-radius-topleft: 0; -webkit-border-top-left-radius: 0; border-top-left-radius: 0;-moz-border-radius-topright: 0; -webkit-border-top-right-radius: 0; border-top-right-radius: 0;}.story .dbtm, #related, .cdate {-moz-border-radius-topleft: 0; -webkit-border-top-left-radius: 0; border-top-left-radius: 0;-moz-border-radius-topright: 0; -webkit-border-top-right-radius: 0; border-top-right-radius: 0;}.argmore a, .argrel { position: relative; text-decoration: none; padding: 0 10px; height: 25px; line-height: 23px; color: #fff; background: #3cc1ff repeat-x 0 -14px;-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);}.argr, .argmore a { float: left; margin-right: 1em; }.arg, .argrel { float: right; margin-left: 1em; }.argmore a:hover { background-color: #f22052; background-position: 0 -39px; }.argmore a .thide, .argrel .thide { position: absolute; padding-top: 7px; width: 15px; }.argmore a .thide { top: -7px; right: 12px; }.argrel .thide { background-position: 0 -64px; bottom: -7px; left: 12px; }.argmore a:hover .thide { background-position: 0 -7px; }
+</style>
+
+</head><body>
+
+<div align="center">
+<table border="0" cellspacing="0" cellpadding="0" bgcolor="#2c2b31" style="max-width:80%; min-width:950px;">
+<tr><td height="0" colspan="3"><a name=""></a></td></tr>
+
+<tr><td width="220">&nbsp;</td><td width="600"><div align="center">
+<font color="#2288ff" face="Arial" size="7pt">کنکور</font>
+</div></td>
+<td width="220">
+<a target="_blank" href="index.html"><img src="http://k0nk00r.persiangig.com/skin/myskin2/k1.gif" style="width:200px;padding:48 10 0 10;" title="وبلاگ کنکور"></a>
+</td></tr>
+
+
+<tr><td width="220">
+<div style="border-width: 0px; z-index: 1000; position: fixed;right;top:54;" >
+<div style="width:180px;padding:0 20 9 20;">
+<a href="index.html"><img src="http://k0nk00r.persiangig.com/skin/myskin2/home.png" title="صفحه اصلی" id="i2"></a>
+<a target="_blank" href="mailto:mahdihmb@yahoo.com"><img src="http://k0nk00r.persiangig.com/skin/myskin2/mail.png" title="ایمیل" id="i2"></a>
+<a target="_blank" href="http://k0nk00r.mihanblog.com/post/list"><img src="http://k0nk00r.persiangig.com/skin/myskin2/archive.png" title="عناوین مطالب" id="i2"></a>
+<a href="javascript:messageForm()"><img src="http://k0nk00r.persiangig.com/skin/myskin2/profile.png" title="تماس با ما" id="i2"></a>
+<a target="_blank" href="http://k0nk00r.mihanblog.com/post/rss/"><img src="http://k0nk00r.persiangig.com/skin/myskin2/rss.png" title="RSS" id="i2"></a>
+</div>
+<div class="block">
+<p class="btl">موضوعات</p>
+<ul class="clr topnews">
+		<li><a href="http://k0nk00r.mihanblog.com/post/category/8">معرفی رشته</a></li>
+		<li><a href="http://k0nk00r.mihanblog.com/post/category/7">روش مطالعه دروس</a></li>
+		<li><a href="http://k0nk00r.mihanblog.com/post/category/4">نرم افزار آموزشی</a></li>
+		<li><a href="http://k0nk00r.mihanblog.com/post/category/3">مقاله آموزشی و مشاوره ای</a></li>
+		<li><a href="http://k0nk00r.mihanblog.com/post/category/2">جزوه آموزشی</a></li>
+		<li><a href="http://k0nk00r.mihanblog.com/post/category/6">اخبار کنکور</a></li>
+		<li><a href="http://k0nk00r.mihanblog.com/post/category/5">تفریحی</a></li>
+	</ul>
+</div>
+
+<div class="block">
+<p class="btl">آرشیو</p>
+<ul class="clr topnews">
+		<li><a href="http://k0nk00r.mihanblog.com/post/archive/1393/8"> آبان 1393</a><li>
+		<li><a href="http://k0nk00r.mihanblog.com/post/archive/1393/5"> مرداد 1393</a><li>
+		<li><a href="http://k0nk00r.mihanblog.com/post/archive/1392/8"> آبان 1392</a><li>
+		<li><a href="http://k0nk00r.mihanblog.com/post/archive/1392/6"> شهریور 1392</a><li>
+		<li><a href="http://k0nk00r.mihanblog.com/post/archive/1392/5"> مرداد 1392</a><li>
+	</ul></div>
+</div></td>
+
+
+<td style="padding-top:40px;" width="100%" valign="top">
+<div class="pagebg">
+
+
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class="story">
+  <div class="dtop">
+    <h2><a href="http://k0nk00r.mihanblog.com/post/26" title="خوش آمدید">خوش آمدید</a></h2>
+    <div class="stinfo">
+	<span class="arg">نویسنده: <a class="post-edit-link" href="http://k0nk00r.mihanblog.com/post/author/1079199">مهدی حسین پور</a></span>
+	<span class="arg">شنبه 25 آبان 1392 - 00:47</a></span>
+    </div>
+  </div>
+  <div class="dcont">
+	 <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+<br><div align="center"><font size="4" face="georgia,times new roman,times,serif"><font color="#3366FF"><b><font color="#006600">به وبلاگ کنکور خوش آمدید<br>برای راحتی کار میتوانید از منو سمت راست موضوع مورد نظر خود را انتخاب کنید<br>پیشنهاد میکنم از صفحات دیگر وبلاگ هم دیدن فرمایید<br>با تشکر</font><br><br><font color="#000000">لینک های زیر نیز متعلق به اینجانب می باشد:<br><br><a href="http://ce-it.ir" target="_blank" title="">CE-IT.IR</a><br><br><a href="http://www.anjammidam.com/mahdihmb" target="_blank" title="">کار های من در سایت "انجام میدم"</a><br></font></b></font></font></div><font size="4" face="georgia,times new roman,times,serif">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+	<br />
+<a href="index.html"><img src="http://static.mihanblog.com//public/user_data/user_files/422/1265999/Beroooz.gif" ></a><br />
+
+	برچسب ها :   	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%B3%D8%A7%DB%8C%D8%AA%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1" title="سایت کنکور" >سایت کنکور</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D9%88%D8%A8%D9%84%D8%A7%DA%AF%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1" title="وبلاگ کنکور" >وبلاگ کنکور</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1" title="اخبار کنکور" >اخبار کنکور</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D9%86%D8%AA%D8%A7%DB%8C%D8%AC%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1" title="نتایج کنکور" >نتایج کنکور</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D9%85%D8%B4%D8%A7%D9%88%D8%B1%D9%87%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1" title="مشاوره کنکور" >مشاوره کنکور</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%DA%A9%D9%86%DA%A9%D9%88%D8%B1%2094" title="کنکور 94" >کنکور 94</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87" title="دانشگاه" >دانشگاه</a> , <br />		<br />
+    <div class="clr"></div>
+  </div>
+  <div class="dbtm">
+    <span class="argmore"></span>
+    <span class="argr">نظرات<a target="_self" href="javascript:newComment(26)"> (<script>setCommentCnt(26)</script>)</a></span>
+	<span class="argcat">
+<script>mihanblogPostLike('26','like')</script>		
+	</span>
+  </div>
+</div> 
+<div class="story">
+  <div class="dtop">
+    <h2><a href="http://k0nk00r.mihanblog.com/post/61" title="دفتر برنامه ریزی کنکور">دفتر برنامه ریزی کنکور</a></h2>
+    <div class="stinfo">
+	<span class="arg">نویسنده: <a class="post-edit-link" href="http://k0nk00r.mihanblog.com/post/author/1079199">مهدی حسین پور</a></span>
+	<span class="arg">چهارشنبه 28 آبان 1393 - 14:47</a></span>
+    </div>
+  </div>
+  <div class="dcont">
+	 
+
+
+<font size="3">چون من خودم تجربه یک سال برنامه ریزی برای کنکور را داشته ام و حال در دانشگاه صنعتی شریف تحصیل می کنم، تصمیم گرفتم که با توجه به این تجربه یک ساله ام دفتر برنامه ریزی طراحی کنم تا شما بتوانید به سرعت در درس پیشرفت کنید.<br>البته هر فرد باید بتواند برای خود برنامه ریزی کند. اما افرادی که برنامه ریزی بلد نیستند، می توانند از این دفتر استفاده کنند و یا از آن الهام بگیرند.<br><br>
+
+
+</font>
+
+
+
+
+
+ 
+	<br />
+<a href="index.html"><img src="http://static.mihanblog.com//public/user_data/user_files/422/1265999/Beroooz.gif" ></a><br />
+
+	برچسب ها :   	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%AF%D9%81%D8%AA%D8%B1%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D8%B1%DB%8C%D8%B2%DB%8C" title="دفتر برنامه ریزی" >دفتر برنامه ریزی</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%AF%D9%81%D8%AA%D8%B1%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D8%B1%DB%8C%D8%B2%DB%8C%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1" title="دفتر برنامه ریزی کنکور" >دفتر برنامه ریزی کنکور</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D8%B1%DB%8C%D8%B2%DB%8C%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1" title="برنامه ریزی کنکور" >برنامه ریزی کنکور</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D9%85%D8%B4%D8%A7%D9%88%D8%B1%D9%87%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D8%B1%DB%8C%D8%B2%DB%8C" title="مشاوره برنامه ریزی" >مشاوره برنامه ریزی</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D9%85%D8%B4%D8%A7%D9%88%D8%B1%D9%87%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1" title="مشاوره کنکور" >مشاوره کنکور</a> , <br />		<br />
+    <div class="clr"></div>
+  </div>
+  <div class="dbtm">
+    <span class="argmore"><a href='http://k0nk00r.mihanblog.com/post/61'>ادامه مطلب</a></span>
+    <span class="argr">نظرات<a target="_self" href="javascript:newComment(61)"> (<script>setCommentCnt(61)</script>)</a></span>
+	<span class="argcat">
+<script>mihanblogPostLike('61','like')</script>	 دسته بندی : 	<a href="http://k0nk00r.mihanblog.com/post/category/3" title="مقاله آموزشی و مشاوره ای" >مقاله آموزشی و مشاوره ای</a> ,
+	<br />	
+	</span>
+  </div>
+</div> 
+<div class="story">
+  <div class="dtop">
+    <h2><a href="http://k0nk00r.mihanblog.com/post/56" title="نفرات برتر آزمون سراسری 93">نفرات برتر آزمون سراسری 93</a></h2>
+    <div class="stinfo">
+	<span class="arg">نویسنده: <a class="post-edit-link" href="http://k0nk00r.mihanblog.com/post/author/1079199">مهدی حسین پور</a></span>
+	<span class="arg">شنبه 11 مرداد 1393 - 15:57</a></span>
+    </div>
+  </div>
+  <div class="dcont">
+	 
+
+
+<div style="direction: rtl;" align="center"><font size="3"><font face="tahoma,arial,helvetica,sans-serif">برای مشاهده نفرات برتر کنکور 93 به ادامه مطلب مراجعه کنید.<br><br><a href="http://k0nk00r.mihanblog.com/post/56" target="_blank" title=""><img src="http://k0nk00r.persiangig.com/other/edame_matlab.gif" alt="" align="bottom" border="0" hspace="0" vspace="0"></a><br><br><br></font></font></div>
+
+
+
+
+
+ 
+	<br />
+<a href="index.html"><img src="http://static.mihanblog.com//public/user_data/user_files/422/1265999/Beroooz.gif" ></a><br />
+
+	برچسب ها :   	<a href="http://k0nk00r.mihanblog.com/post/tag/%D9%86%D9%81%D8%B1%D8%A7%D8%AA%20%D8%A8%D8%B1%D8%AA%D8%B1%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1" title="نفرات برتر کنکور" >نفرات برتر کنکور</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%B1%D8%AA%D8%A8%D9%87%20%D9%87%D8%A7%DB%8C%20%D8%A8%D8%B1%D8%AA%D8%B1%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1" title="رتبه های برتر کنکور" >رتبه های برتر کنکور</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%B1%D8%AA%D8%A8%D9%87%20%D8%A8%D8%B1%D8%AA%D8%B1%2093" title="رتبه برتر 93" >رتبه برتر 93</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D9%86%D9%81%D8%B1%20%D8%A8%D8%B1%D8%AA%D8%B1%2093" title="نفر برتر 93" >نفر برتر 93</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%A8%D8%B1%D8%AA%D8%B1%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1%2093" title="برتر کنکور 93" >برتر کنکور 93</a> , <br />		<br />
+    <div class="clr"></div>
+  </div>
+  <div class="dbtm">
+    <span class="argmore"><a href='http://k0nk00r.mihanblog.com/post/56'>ادامه مطلب</a></span>
+    <span class="argr">نظرات<a target="_self" href="javascript:newComment(56)"> (<script>setCommentCnt(56)</script>)</a></span>
+	<span class="argcat">
+<script>mihanblogPostLike('56','like')</script>	 دسته بندی : 	<a href="http://k0nk00r.mihanblog.com/post/category/6" title="اخبار کنکور" >اخبار کنکور</a> ,
+	<br />	
+	</span>
+  </div>
+</div> 
+<div class="story">
+  <div class="dtop">
+    <h2><a href="http://k0nk00r.mihanblog.com/post/55" title="معرفی رشته مهتدسی برق">معرفی رشته مهتدسی برق</a></h2>
+    <div class="stinfo">
+	<span class="arg">نویسنده: <a class="post-edit-link" href="http://k0nk00r.mihanblog.com/post/author/1079199">مهدی حسین پور</a></span>
+	<span class="arg">چهارشنبه 8 مرداد 1393 - 12:46</a></span>
+    </div>
+  </div>
+  <div class="dcont">
+	 
+
+
+<font face="tahoma,arial,helvetica,sans-serif" size="3"><font color="#FF0000"><b>هدف و ماهیت</b></font><br><br>یكی از بهترین تعریف هایی كه از مهندسی برق شده است، این است كه محور اصلی فعالیت های مهندسی برق، تبدیل یك سیگنال به سیگنال دیگر است. البته این سیگنال ممكن است شكل موج ولتاژ یا شكل موج جریان و یا تركیب دیجیتالی یك بخش از <a href="http://k0nk00r.mihanblog.com/post/54" target="" title="">اطلاعات</a> باشد.<br><br>برای مثال وقتی ما با تلفن صحبت می کنیم در مرحله اول به دستگاهی به نام میکروفون نیاز داریم که صحبت های ما را تبدیل به سیگنال های الکتریکی کند تا این سیگنال ها به خطوط تلفن منتقل گردد. سپس در طرف دیگر به دستگاهی نیاز داریم که سیگنال های رسیده را به سیگنال های صوتی تبدیل کند تا فرد مقابل بتواند صدای ما را بشنود و مکالمه تلفنی برقرار گردد . <br><br><a href="http://k0nk00r.mihanblog.com/post/55" target="_blank" title=""><img src="http://k0nk00r.persiangig.com/other/edame_matlab.gif" alt="" align="bottom" border="0" hspace="0" vspace="0"></a><br>
+
+
+</font>
+
+
+
+
+
+ 
+	<br />
+<a href="index.html"><img src="http://static.mihanblog.com//public/user_data/user_files/422/1265999/Beroooz.gif" ></a><br />
+
+	برچسب ها :   	<a href="http://k0nk00r.mihanblog.com/post/tag/%D9%85%D9%87%D9%86%D8%AF%D8%B3%DB%8C%20%D8%A8%D8%B1%D9%82" title="مهندسی برق" >مهندسی برق</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D9%85%D8%B9%D8%B1%D9%81%DB%8C%20%D8%B1%D8%B4%D8%AA%D9%87" title="معرفی رشته" >معرفی رشته</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D9%85%D8%B9%D8%B1%D9%81%DB%8C%20%D9%85%D9%87%D9%86%D8%AF%D8%B3%DB%8C%20%D8%A8%D8%B1%D9%82" title="معرفی مهندسی برق" >معرفی مهندسی برق</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%A2%D8%B4%D9%86%D8%A7%DB%8C%DB%8C%20%D8%A8%D8%A7%20%D9%85%D9%87%D9%86%D8%AF%D8%B3%DB%8C%20%D8%A8%D8%B1%D9%82" title="آشنایی با مهندسی برق" >آشنایی با مهندسی برق</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%A8%D8%B1%D9%82" title="برق" >برق</a> , <br />		<br />
+    <div class="clr"></div>
+  </div>
+  <div class="dbtm">
+    <span class="argmore"><a href='http://k0nk00r.mihanblog.com/post/55'>ادامه مطلب</a></span>
+    <span class="argr">نظرات<a target="_self" href="javascript:newComment(55)"> (<script>setCommentCnt(55)</script>)</a></span>
+	<span class="argcat">
+<script>mihanblogPostLike('55','like')</script>	 دسته بندی : 	<a href="http://k0nk00r.mihanblog.com/post/category/8" title="معرفی رشته" >معرفی رشته</a> ,
+	<br />	
+	</span>
+  </div>
+</div> 
+<div class="story">
+  <div class="dtop">
+    <h2><a href="http://k0nk00r.mihanblog.com/post/54" title="معرفی رشته مهتدسی فناوری اطلاعات IT">معرفی رشته مهتدسی فناوری اطلاعات IT</a></h2>
+    <div class="stinfo">
+	<span class="arg">نویسنده: <a class="post-edit-link" href="http://k0nk00r.mihanblog.com/post/author/1079199">مهدی حسین پور</a></span>
+	<span class="arg">چهارشنبه 8 مرداد 1393 - 12:34</a></span>
+    </div>
+  </div>
+  <div class="dcont">
+	 
+
+<font face="tahoma,arial,helvetica,sans-serif" size="3"><b><font color="#FF0000">ماهیت</font></b><br><br>فناوری اطلاعات یا IT که مخفف Information Technology می باشد، رشته ای است که تمام رشته های دانشگاهی را می تواند پوشش دهد. منتها از نظر عملیاتی یک رشته میان رشته ای بین کامپیوتر و صنایع و برق است که در این میان امور مربوط به تولید، پردازش، نگاهداشت و عرضه اطلاعات به مباحث کامپیوتری مرتبط می شود، بحث های مدیریت اطلاعات و فرآیندهای آن از سلسله بحث های رشته صنایع و رشته <a href="http://k0nk00r.mihanblog.com/post/55" target="" title="">برق</a> است و به خصوص گرایش مخابرات، انتقالات مرتبط با اطلاعات و داده ها را بر عهده دارد.<strong><br></strong><br></font><p dir="RTL" style="text-align: justify;"><font face="tahoma,arial,helvetica,sans-serif" size="4"><font size="3"><a href="http://k0nk00r.mihanblog.com/post/54" target="_blank" title=""><img src="http://k0nk00r.persiangig.com/other/edame_matlab.gif" alt="" align="bottom" border="0" hspace="0" vspace="0"></a></font><br><span style="font-size: 14px;"></span></font></p><font face="tahoma,arial,helvetica,sans-serif" size="4">
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+ 
+	<br />
+<a href="index.html"><img src="http://static.mihanblog.com//public/user_data/user_files/422/1265999/Beroooz.gif" ></a><br />
+
+	برچسب ها :   	<a href="http://k0nk00r.mihanblog.com/post/tag/IT" title="IT" >IT</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D9%81%D9%86%D8%A7%D9%88%D8%B1%DB%8C%20%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA" title="فناوری اطلاعات" >فناوری اطلاعات</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D9%85%D8%B9%D8%B1%D9%81%DB%8C%20%D8%B1%D8%B4%D8%AA%D9%87" title="معرفی رشته" >معرفی رشته</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D9%85%D8%B9%D8%B1%D9%81%DB%8C%20%D9%81%D9%86%D8%A7%D9%88%D8%B1%DB%8C%20%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA" title="معرفی فناوری اطلاعات" >معرفی فناوری اطلاعات</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D9%85%D8%B9%D8%B1%D9%81%DB%8C%20IT" title="معرفی IT" >معرفی IT</a> , <br />		<br />
+    <div class="clr"></div>
+  </div>
+  <div class="dbtm">
+    <span class="argmore"><a href='http://k0nk00r.mihanblog.com/post/54'>ادامه مطلب</a></span>
+    <span class="argr">نظرات<a target="_self" href="javascript:newComment(54)"> (<script>setCommentCnt(54)</script>)</a></span>
+	<span class="argcat">
+<script>mihanblogPostLike('54','like')</script>	 دسته بندی : 	<a href="http://k0nk00r.mihanblog.com/post/category/8" title="معرفی رشته" >معرفی رشته</a> ,
+	<br />	
+	</span>
+  </div>
+</div> 
+<div class="story">
+  <div class="dtop">
+    <h2><a href="http://k0nk00r.mihanblog.com/post/37" title="20 توصیه کلیدی برای موفقیت در آزمون سراسری">20 توصیه کلیدی برای موفقیت در آزمون سراسری</a></h2>
+    <div class="stinfo">
+	<span class="arg">نویسنده: <a class="post-edit-link" href="http://k0nk00r.mihanblog.com/post/author/1079199">مهدی حسین پور</a></span>
+	<span class="arg">سه شنبه 7 آبان 1392 - 20:05</a></span>
+    </div>
+  </div>
+  <div class="dcont">
+	 
+
+
+
+<font size="2"><font size="3" face="tahoma,arial,helvetica,sans-serif">موفقیت در هر کاری مستلزم طی کردن راههایی است که برای رسیدن به آن کار وجود دارد زیرا «هیچ هدفی بدون طی کردن مسیر و راه آن دست یافتنی نیست»؛ هر چه که ما راهها را بهتر بشناسیم می توانیم شانس موفقیت بیشتری برای خود متصور شویم. بر این اساس برای موفقیت در <a href="http://k0nk00r.mihanblog.com/post/19" target="_blank" title="">آزمون سراسری</a> 20 توصیه ی کلیدی ارائه می گردد:</font><br><br></font><a href="http://k0nk00r.mihanblog.com/post/37" target="_blank" title=""><img src="http://k0nk00r.persiangig.com/other/edame_matlab.gif" alt="" align="bottom" border="0" hspace="0" vspace="0"></a><br><br><!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:RelyOnVML/>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>FA</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="--"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;}
+</style>
+<![endif]-->
+
+
+
+
+
+
+
+ 
+	<br />
+<a href="index.html"><img src="http://static.mihanblog.com//public/user_data/user_files/422/1265999/Beroooz.gif" ></a><br />
+
+	برچسب ها :   	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%AA%D9%88%D8%B5%DB%8C%D9%87%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1" title="توصیه کنکور" >توصیه کنکور</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%B1%D9%88%D8%B4%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1" title="روش کنکور" >روش کنکور</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%A2%D9%85%D9%88%D8%B2%D8%B4%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1" title="آموزش کنکور" >آموزش کنکور</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D9%85%D8%B4%D8%A7%D9%88%D8%B1%D9%87%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1" title="مشاوره کنکور" >مشاوره کنکور</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%A2%D9%85%D8%A7%D8%AF%DA%AF%DB%8C%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1" title="آمادگی کنکور" >آمادگی کنکور</a> , <br />		<br />
+    <div class="clr"></div>
+  </div>
+  <div class="dbtm">
+    <span class="argmore"><a href='http://k0nk00r.mihanblog.com/post/37'>ادامه مطلب</a></span>
+    <span class="argr">نظرات<a target="_self" href="javascript:newComment(37)"> (<script>setCommentCnt(37)</script>)</a></span>
+	<span class="argcat">
+<script>mihanblogPostLike('37','like')</script>	 دسته بندی : 	<a href="http://k0nk00r.mihanblog.com/post/category/3" title="مقاله آموزشی و مشاوره ای" >مقاله آموزشی و مشاوره ای</a> ,
+	<br />	
+	</span>
+  </div>
+</div> 
+<div class="story">
+  <div class="dtop">
+    <h2><a href="http://k0nk00r.mihanblog.com/post/34" title="الگوی خواب مناسب">الگوی خواب مناسب</a></h2>
+    <div class="stinfo">
+	<span class="arg">نویسنده: <a class="post-edit-link" href="http://k0nk00r.mihanblog.com/post/author/1079199">مهدی حسین پور</a></span>
+	<span class="arg">چهارشنبه 1 آبان 1392 - 16:03</a></span>
+    </div>
+  </div>
+  <div class="dcont">
+	 
+<font size="3" face="tahoma,arial,helvetica,sans-serif">
+
+
+
+
+
+
+
+
+
+<font color="#3333FF">آیا تا به حال به اهمیت بازگشت انرژی از دست رفته ی خود فکر کرده اید؟<br>آیا می دانید یکی از عوامل مهم در ایجاد سلامتی، داشتن خواب منظم است؟</font><br><br>این روزها در اطراف خود مردمی را می بینیم که با سرعت در حال انجام امور کاری و زندگی خود هستند. شاید خیلی ها نتوانند به خاطر وجود مشغله ی کاری به اندازه ی کافی بخوابند. اغلب مردم جز تمایل به نداشتن احساس <a href="http://k0nk00r.mihanblog.com/post/34" target="_blank" title="">خواب</a> آلودگی، از اهمیت خواب و تاثیر آن بر سلامتیشان غافل هستند.داشتن خواب کافی ازجنبه های مختلف ، برای سلامتی مفید است. احتمالاً از بعضی از این جنبه های مهم را می شناسید ولی باید بدانید خواب ، به اندازه ی غذا، هوا و آب برای جسم و ذهن شما ضروری است.<br><br>بسیاری از افراد مدت زمانی را که خواب هستند ، جزء زمان های از دست رفته ی خود به حساب می آورند.<br><br>نکته ی بسیار مهم این است که کم کردن خواب باهدف وقت گذاری برای <a href="http://k0nk00r.mihanblog.com/post/5" target="_blank" title="">درس خواندن</a> روش درستی نیست، خواب بایستی متناسب با نیاز بدن باشد. وقتی مغز تلاش بیشتری دارد ، طبیعتاً نیازمند خواب بیشتر نیز هست. بنابراین لازم است به خاطر درس خواندن، از ساعات خواب کم نکنید.<br><br>از عوارض مهمی که ممکن است با خواب بد ایجاد شود، اضطراب و بی قراری است که خود از عوامل ایجاد کارآمدی مغز و حافظه محسوب می شوند.<br><br><a href="http://k0nk00r.mihanblog.com/post/34" target="_blank" title=""><img src="http://k0nk00r.persiangig.com/other/edame_matlab.gif" alt="" align="bottom" border="0" hspace="0" vspace="0"></a><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</font>
+
+ 
+	<br />
+<a href="index.html"><img src="http://static.mihanblog.com//public/user_data/user_files/422/1265999/Beroooz.gif" ></a><br />
+
+	برچسب ها :   	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%AE%D9%88%D8%A7%D8%A8" title="خواب" >خواب</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%AE%D9%88%D8%A7%D8%A8%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1" title="خواب کنکور" >خواب کنکور</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%AE%D9%88%D8%A7%D8%A8%20%D9%85%D9%86%D8%A7%D8%B3%D8%A8" title="خواب مناسب" >خواب مناسب</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%A7%D9%86%D8%B1%DA%98%DB%8C%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1" title="انرژی کنکور" >انرژی کنکور</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%A7%D9%84%DA%AF%D9%88%DB%8C%20%D8%AE%D9%88%D8%A7%D8%A8" title="الگوی خواب" >الگوی خواب</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%AA%D9%88%D8%B5%DB%8C%D9%87%20%D8%AE%D9%88%D8%A7%D8%A8" title="توصیه خواب" >توصیه خواب</a> , <br />		<br />
+    <div class="clr"></div>
+  </div>
+  <div class="dbtm">
+    <span class="argmore"><a href='http://k0nk00r.mihanblog.com/post/34'>ادامه مطلب</a></span>
+    <span class="argr">نظرات<a target="_self" href="javascript:newComment(34)"> (<script>setCommentCnt(34)</script>)</a></span>
+	<span class="argcat">
+<script>mihanblogPostLike('34','like')</script>	 دسته بندی : 	<a href="http://k0nk00r.mihanblog.com/post/category/3" title="مقاله آموزشی و مشاوره ای" >مقاله آموزشی و مشاوره ای</a> ,
+	<br />	
+	</span>
+  </div>
+</div> 
+<div class="story">
+  <div class="dtop">
+    <h2><a href="http://k0nk00r.mihanblog.com/post/31" title="سهم پرسش ها و اهمیت درس های پایه">سهم پرسش ها و اهمیت درس های پایه</a></h2>
+    <div class="stinfo">
+	<span class="arg">نویسنده: <a class="post-edit-link" href="http://k0nk00r.mihanblog.com/post/author/1079199">مهدی حسین پور</a></span>
+	<span class="arg">شنبه 30 شهریور 1392 - 13:35</a></span>
+    </div>
+  </div>
+  <div class="dcont">
+	 <font size="3" face="tahoma,arial,helvetica,sans-serif">
+
+
+
+اطلاع از اهمیت دروس پایه در آزمون سراسری، قطعا سبب جدیت بیش تر داوطلبان آزمون سراسری در <a href="http://k0nk00r.mihanblog.com/post/5" target="_blank" title="">مطالعه</a> دروس پایه خواهد شد. به همین دلیل در این بخش به بررسی سهم پرسش هایی که از هر پایه در <font color="#000000"><a href="http://k0nk00r.mihanblog.com/post/19" target="_blank" title="">آزمون های سراسری</a></font> سال های گذشته مطرح شده است، می پردازیم.<br>برای مشاهده سهم دروس به ادامه مطلب مراجعه کنید<br><br><a href="http://k0nk00r.mihanblog.com/post/31" target="_blank" title=""><img src="http://k0nk00r.persiangig.com/other/edame_matlab.gif" alt="" align="bottom" border="0" hspace="0" vspace="0"></a><br><br>
+
+
+
+
+
+
+
+</font> 
+	<br />
+<a href="index.html"><img src="http://static.mihanblog.com//public/user_data/user_files/422/1265999/Beroooz.gif" ></a><br />
+
+	برچسب ها :   	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%B3%D9%87%D9%85%20%D8%AF%D8%B1%D8%B3" title="سهم درس" >سهم درس</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%B3%D9%87%D9%85%20%D9%BE%D8%A7%DB%8C%D9%87" title="سهم پایه" >سهم پایه</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%AA%D8%B9%D8%AF%D8%A7%D8%AF%20%D9%BE%D8%B1%D8%B3%D8%B4" title="تعداد پرسش" >تعداد پرسش</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%AA%D8%B9%D8%AF%D8%A7%D8%AF%20%D8%B3%D9%88%D8%A7%D9%84%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1" title="تعداد سوال کنکور" >تعداد سوال کنکور</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%B3%D9%87%D9%85%20%DA%A9%D9%86%DA%A9%D9%88%D8%B1" title="سهم کنکور" >سهم کنکور</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%B3%D9%87%D9%85%20%D8%AF%D8%B1%D9%88%D8%B3%20%D9%BE%D8%A7%DB%8C%D9%87" title="سهم دروس پایه" >سهم دروس پایه</a> , <br />		<br />
+    <div class="clr"></div>
+  </div>
+  <div class="dbtm">
+    <span class="argmore"><a href='http://k0nk00r.mihanblog.com/post/31'>ادامه مطلب</a></span>
+    <span class="argr">نظرات<a target="_self" href="javascript:newComment(31)"> (<script>setCommentCnt(31)</script>)</a></span>
+	<span class="argcat">
+<script>mihanblogPostLike('31','like')</script>	 دسته بندی : 	<a href="http://k0nk00r.mihanblog.com/post/category/6" title="اخبار کنکور" >اخبار کنکور</a> ,
+	<br />	
+	</span>
+  </div>
+</div> 
+<div class="story">
+  <div class="dtop">
+    <h2><a href="http://k0nk00r.mihanblog.com/post/29" title="تست هوش">تست هوش</a></h2>
+    <div class="stinfo">
+	<span class="arg">نویسنده: <a class="post-edit-link" href="http://k0nk00r.mihanblog.com/post/author/1079199">مهدی حسین پور</a></span>
+	<span class="arg">جمعه 29 شهریور 1392 - 09:30</a></span>
+    </div>
+  </div>
+  <div class="dcont">
+	 <font size="3" face="tahoma,arial,helvetica,sans-serif">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+چند وقت پیش یه ایمیل به بعضی ها اومده بود که توش <a title="" href="http://k0nk00r.mihanblog.com/post/29" target="_blank">تست هوشی</a> بود با این توضیح که میگه تنها افرادی قادر به پاسخ این سوال هستند که ضریب هوشی 120 یا بالاتر داشته باشند. همچنین فایل اکسلی هم توش بود که رمز دسترسی به اون پاسخ همین سوال بود و اینکه نویسنده پیام گفته بود اگر این <a title="" href="http://k0nk00r.mihanblog.com/k0nk00r.mihanblog.com/post/7" target="_blank">سوال</a> رو حل کردید فایل اکسل رو باز کنید و اسم خودتون رو داخل اون بنویسید و سوال رو برای دوستانتون ارسال کنید.<br>معمولا چنین پیامهایی (حتی اگه ادعای نویسنده درست نباشه) آدم رو تحریک می کنه تا هوش خودش رو بسنجه. مناسب دیدم دوستانم رو هم در این تجربه شریک کنم. شما هم می تونید لحظاتی رو صرف پیدا کردن پاسخ کنید.<br><br><b>متن سوال:<br></b></font><div style="direction: ltr;" align="right"><font face="tahoma,arial,helvetica,sans-serif"><font size="3">اگر</font><font size="3"><br></font><font size="3">5+3=40</font><font size="3"><br></font><font size="3">7+2=63</font><font size="3"><br></font><font size="3">6+5=66</font><font size="3"><br></font><font size="3">8+4=96</font><font size="3"><br></font><font size="3">آنگاه</font><font size="3"><br></font><font size="3">9+7=????</font><font size="3"><br></font><br></font></div><font size="3" face="tahoma,arial,helvetica,sans-serif">
+
+</font> 
+	<br />
+<a href="index.html"><img src="http://static.mihanblog.com//public/user_data/user_files/422/1265999/Beroooz.gif" ></a><br />
+
+	برچسب ها :   	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%AA%D8%B3%D8%AA%20%D9%87%D9%88%D8%B4" title="تست هوش" >تست هوش</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%B3%D9%88%D8%A7%D9%84%20%D8%B3%D8%AE%D8%AA" title="سوال سخت" >سوال سخت</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D9%85%D8%B9%D9%85%D8%A7" title="معما" >معما</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%B3%D9%88%D8%A7%D9%84%20%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C" title="سوال ریاضی" >سوال ریاضی</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%AA%D8%B3%D8%AA%20%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C" title="تست ریاضی" >تست ریاضی</a> , <br />		<br />
+    <div class="clr"></div>
+  </div>
+  <div class="dbtm">
+    <span class="argmore"></span>
+    <span class="argr">نظرات<a target="_self" href="javascript:newComment(29)"> (<script>setCommentCnt(29)</script>)</a></span>
+	<span class="argcat">
+<script>mihanblogPostLike('29','like')</script>	 دسته بندی : 	<a href="http://k0nk00r.mihanblog.com/post/category/5" title="تفریحی" >تفریحی</a> ,
+	<br />	
+	</span>
+  </div>
+</div> 
+<div class="story">
+  <div class="dtop">
+    <h2><a href="http://k0nk00r.mihanblog.com/post/7" title="سوال خارق العاده">سوال خارق العاده</a></h2>
+    <div class="stinfo">
+	<span class="arg">نویسنده: <a class="post-edit-link" href="http://k0nk00r.mihanblog.com/post/author/1079199">مهدی حسین پور</a></span>
+	<span class="arg">جمعه 29 شهریور 1392 - 09:27</a></span>
+    </div>
+  </div>
+  <div class="dcont">
+	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<font size="2"><font size="3" face="tahoma,arial,helvetica,sans-serif">این سوال اون طور که من شنیدم تو یکی از امتحان های تیزهوشان آمریکا مطرح شده بود. حالا من اونو این جا گذاشتم تا شما هم خودتون رو بیازمایید. واقعا سوال سختیه.<br><br><b><a href="http://k0nk00r.mihanblog.com/post/7" target="_blank" title="">سوال</a>: </b>با گذاشتن یک خط راست در عبارت زیر آن را به گذاره ای درست تبدیل کنید. (این خط می تواند در هر کجای آن و با هر شیبی قرار بگیرد. فقط نمی توانید با گذاشتن خط روی مساوی آن را به یک نامساوی تبدیل کنید.):</font><br></font><br><a href="index.html" target="_blank" title=""><img src="http://k0nk00r.persiangig.com/pic/soal.jpg" alt="" align="right" border="0" hspace="0" vspace="0"></a><font size="2"><br><br><br><br><br><br></font>
+
+
+
+
+
+
+
+
+
+ 
+	<br />
+<a href="index.html"><img src="http://static.mihanblog.com//public/user_data/user_files/422/1265999/Beroooz.gif" ></a><br />
+
+	برچسب ها :   	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%B3%D9%88%D8%A7%D9%84%20%D8%B3%D8%AE%D8%AA" title="سوال سخت" >سوال سخت</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D9%85%D8%B9%D9%85%D8%A7" title="معما" >معما</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%AA%D8%B3%D8%AA%20%D9%87%D9%88%D8%B4" title="تست هوش" >تست هوش</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%B3%D9%88%D8%A7%D9%84%20%D8%AA%DB%8C%D8%B2%D9%87%D9%88%D8%B4%D8%A7%D9%86" title="سوال تیزهوشان" >سوال تیزهوشان</a> , 	<a href="http://k0nk00r.mihanblog.com/post/tag/%D8%AA%D8%B3%D8%AA%20%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C" title="تست ریاضی" >تست ریاضی</a> , <br />		<br />
+    <div class="clr"></div>
+  </div>
+  <div class="dbtm">
+    <span class="argmore"></span>
+    <span class="argr">نظرات<a target="_self" href="javascript:newComment(7)"> (<script>setCommentCnt(7)</script>)</a></span>
+	<span class="argcat">
+<script>mihanblogPostLike('7','like')</script>	 دسته بندی : 	<a href="http://k0nk00r.mihanblog.com/post/category/5" title="تفریحی" >تفریحی</a> ,
+	<br />	
+	</span>
+  </div>
+</div> 
+
+
+<div class="story">
+  <div class="dtop">
+    <h2>آخرین مطالب</h2>
+	 <div class="stinfo">
+      <span class="argcat">
+	  </span>
+    </div>
+  </div>
+  <div class="dcont">
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/61">دفتر برنامه ریزی کنکور</a><br />
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/56">نفرات برتر آزمون سراسری 93</a><br />
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/55">معرفی رشته مهتدسی برق</a><br />
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/54">معرفی رشته مهتدسی فناوری اطلاعات IT</a><br />
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/26">خوش آمدید</a><br />
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/37">20 توصیه کلیدی برای موفقیت در آزمون سراسری</a><br />
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/34">الگوی خواب مناسب</a><br />
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/31">سهم پرسش ها و اهمیت درس های پایه</a><br />
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/29">تست هوش</a><br />
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/7">سوال خارق العاده</a><br />
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/28">ضرایب، رشته ها و زیرگروه های آزمایشی علوم ریاضی</a><br />
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/27">پیشگیری مهم تر از...، مرور مهم تر از...</a><br />
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/23">کاریکاتور کنکور سری دوم</a><br />
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/22">روش مطالعه آمار و مدل سازی برای کنکور</a><br />
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/24">پرطرفدارترین رشته‌های کنکور 92 + ظرفیت</a><br />
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/21">روش مطالعه ادبیات فارسی 3 برای کنکور</a><br />
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/20">کاریکاتور کنکور سری اول</a><br />
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/19">سوالات و پاسخ های تشریحی کنکور از سال 85 تا 92</a><br />
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/18">نرم افزار تست همراه</a><br />
+									
+	&raquo; <a href="http://k0nk00r.mihanblog.com/post/17">نحوه خلاصه نویسی دروس اختصاصی</a><br />
+	    <div class="clr"></div>
+  </div>
+</div> 
+
+<td width="220" valign="top">
+<div class="block bgrey">
+<p class="btl">درباره ما</p>
+<div id="links-style">
+	 <center><img src="http://static.mihanblog.com//public/user_data/web_photo/422/1265999.jpg?9617"  /><br>در این وبلاگ هر چی که در مورد کنکور بخواین هست.</center>
+</div></div>
+
+<div class="block bgrey">
+<p class="btl">نویسندگان</p>
+<ul class="clr topnews">
+		<li><a href="http://k0nk00r.mihanblog.com/post/author/1079199">مهدی حسین پور</a></li>
+	</ul>
+</div></div>
+
+<div class="block bgrey">
+<p class="btl">پیوند ها</p>
+<ul class="clr topnews">
+		<li><a target="_blank" href="http://sanjesh.org">سایت سازمان سنجش</a></li>
+		<li><a target="_blank" href="http://gozine2.ir">سایت گزینه 2</a></li>
+		<li><a target="_blank" href="http://konkur.in">سایت کنکور</a></li>
+		<li><a target="_blank" href="http://www.kanoon.ir">سایت کانون</a></li>
+	</ul>
+</div>	
+
+<div class="block bgrey">
+<p class="btl">پیوندهای روزانه</p>
+<ul class="clr topnews">	
+		<li><a target="_blank" href="http://linkbox.mnti.ir" title="تبادل لینک هوشمند">لینک باکس پر بازدید</a></li>
+		<li><a target="_blank" href="http://googlee.3de.ir" title="">وبلاگ فرهنگی مذهبی آخرین رسول </a></li>
+		<li><a target="_blank" href="http://www.alikonkoori.ir" title="">علی کنکوری</a></li>
+		<li><a target="_blank" href="http://konkoor940405.blogfa.com" title="">جدید ترین نکات زیست رایگان</a></li>
+		<li><a target="_blank" href="http://www.maktabestan.ir" title="">کنکور مکتبستان</a></li>
+		<li><a target="_blank" href="http://konkooor.ir" title="">پرتال کنکور</a></li>
+		<li><a target="_blank" href="http://ninja-amin.blogfa.com/" title="وبلاگ مشاوره کنکوریهای92و93">اکسیر کنکور</a></li>
+		<li><a target="_blank" href="http://chempic.com" title="شیمی دبیرستان و کنکور">آموزش شیمی</a></li>
+		<li><a target="_blank" href="http://www.20tools.com/automatic-link/sendlink.php?id=6184"><b>تبادل لینک اتوماتیک</b></a></li>
+	<li><a target="_blank" href="http://www.20tools.com/automatic-link/archive.php?id=6184"><b>آرشیو لینک ها</b></a></li>
+</ul>
+</div>
+
+
+
+	
+<div class="block bgrey">
+<p class="btl">آمار بازید</p>
+<ul class="clr topnews">
+	<li>کل بازدید ها : <script>getStatVar('total_view');</script></li>
+	<li>بازدید امروز : <script>getStatVar('today_view');</script></li>
+	<li>بازدید دیروز : <script>getStatVar('yesterday_view');</script></li>
+	<li>بازدید این ماه : <script>getStatVar('this_month_view');</script></li>
+	<li>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></li>
+</ul>
+</div>
+
+
+		<form id="frm-16080143895fd85a3581123" method="post" action="http://k0nk00r.mihanblog.com/poll/new/fid/16080143895fd85a3581123/atrty/1608014389/avrvy/0/key/8cf94d0d2d15ee5032e7d045bfba5d1c/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="269021" id="data[pollid]" />			  
+<div class="block bgrey">
+<p class="btl">نظرسنجی</p>
+	<div id="links-style" align="center">
+	<b>می خواهید بیشتر چه مطالبی در وبلاگ قرار گیرد؟ (می توانید بیش از یک گزینه انتخاب کنید)</b>
+	</div>
+	<ul class="clr topnews">
+	<label><input type="checkbox"  name="data[v1]" id="v1" value="1" />روش مطالعه دروس</label><br><label><input type="checkbox"  name="data[v2]" id="v2" value="1" />مقاله آموزشی و مشاوره ای</label><br><label><input type="checkbox"  name="data[v3]" id="v3" value="1" />جزوه آموزشی</label><br><label><input type="checkbox"  name="data[v4]" id="v4" value="1" />نرم افزار آموزشی</label><br><label><input type="checkbox"  name="data[v5]" id="v5" value="1" />اخبار کنکور</label><br><label><input type="checkbox"  name="data[v6]" id="v6" value="1" />تفریحی</label><br>	</ul>
+	<br />
+	<div align="center">
+	<input class="fbutton" type="submit" value="ثبت"</input><br />
+	</div>
+</div>
+
+		<input type="hidden" name="frm-id" value="16080143895fd85a3581123" id="frm-id" /></form>
+<div class="block bgrey">
+<p class="btl">امکانات وب</p>
+<div align="center">
+<center><script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=3071818&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=3071818" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript></center>
+
+</br>
+
+<center><a href="http://www.20tools.com/pagerank/confirm/?site=k0nk00r.mihanblog.com&icon=1" target=_blank><img border="0" src="http://www.20tools.com/pagerank/pr-Bottom/?url=k0nk00r.mihanblog.com&s=1"></a><div style="display:none"><a href=http://www.20tools.com/pagerank>کد نمایشگر رتبه سایت در گوگل</a></div></center>
+</div></div>
+
+</td></tr>
+
+<tr><td width="220">&nbsp;</td><td width="600">
+<div class="story">
+  <div class="dcont" style="text-align:center;">
+		صفحات سایت:
+				   <a href="http://k0nk00r.mihanblog.com/page/1">[ <b>1</b> ]</a>
+				   <a href="http://k0nk00r.mihanblog.com/page/2">[ <span>2</span> ]</a>
+				   <a href="http://k0nk00r.mihanblog.com/page/3">[ <span>3</span> ]</a>
+		    <div class="clr"></div>
+  </div>
+</div> 
+</td><td width="220">&nbsp;</td></tr>
+
+<tr><td width="220">
+<div style="width:180px;padding:0 20 12 20">
+<a href="index.html#"><img src="http://k0nk00r.persiangig.com/skin/myskin2/up.png" title="هدایت به بالا" align="right" style="padding-bottom:5px" id="i1"></a>
+</div>
+</td><td width="600">
+<div class="bannerfoot">
+<!-- بنر یا تصویر با طول صد درصد -->
+	<div style="text-align:center;font-size:1em; color: #2288ff;"> 	
+		  تمامی حقوق متن ها و تصاویر مربوط به این وبلاگ می باشد و استفاده از آن ها با لینک دادن به وبلاگ مجاز می باشد.
+	</div> 
+</div>
+</td><td width="220"></td></tr>
+
+</table></div>
+
+</body></html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'k0nk00r.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.targetedwebtraffic.com" target="_blank">Buy Website Traffic</a> | <a href="https://www.seo25.com" target="_blank">Buy Targeted Website Traffic</a>
+    </div>
+</center>

@@ -1,0 +1,889 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://fc-abi.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="../static.mihanblog.com/public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('شنبه 22 آذر 1399');
+		/*980343*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[139]='56';commentCnt[666]='11';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','2');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','جمعه 15 آبان 1394');
+	
+	setStatVar('today_view','19');
+	setStatVar('yesterday_view','6');
+	
+	setStatVar('this_month_view','122');
+	setStatVar('last_month_view','275');
+
+	setStatVar('total_view','67599');
+	setStatVar('last_view_date','شنبه 22 آذر 1399 (14:35)');
+
+
+
+    
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://fc-abi.mihanblog.com/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="../fc-abi.mihanblog.com/'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://fc-abi.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://fc-abi.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://fc-abi.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://fc-abi.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://fc-abi.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://fc-abi.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://fc-abi.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://fc-abi.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://fc-abi.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://fc-abi.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://fc-abi.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://fc-abi.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://fc-abi.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://fc-abi.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://fc-abi.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+﻿<html>
+<head>
+<title>آبــــــی تر از عـــــــاشــــقــــــانـــــ اســـــــتقلالــــــــ ...                        </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="Farsi">
+<meta name="description" content="آبــــــی تر از عـــــــاشــــقــــــانـــــ اســـــــتقلالــــــــ ...                         - مطالب استقلالی برای عاشقان استقلال - آبــــــی تر از عـــــــاشــــقــــــانـــــ اســـــــتقلالــــــــ ...                        ">
+<meta name="keywords" content="آبــــــی تر از عـــــــاشــــقــــــانـــــ اســـــــتقلالــــــــ ...                        ,fc-abi, Blog, Weblog, Persian,Iran, Iranian, Farsi, Weblogs">
+<link rel="alternate" type="application/rss+xml" title="آبــــــی تر از عـــــــاشــــقــــــانـــــ اســـــــتقلالــــــــ ...                        " href="http://fc-abi.mihanblog.com/post/rss/" />
+<link href="http://pichak.net/template/pichak/242/style.css" type="text/css" rel="stylesheet">
+</head><body>
+
+<div align=center><div id=RMweb><div id=main-back><div id=header>
+<div class=TopBlogTitle><div class=BlogTitle>آبــــــی تر از عـــــــاشــــقــــــانـــــ اســـــــتقلالــــــــ ...                        </div><div class=Description>مطالب استقلالی برای عاشقان استقلال</div></div>
+<div style="display:none"><h1>آبــــــی تر از عـــــــاشــــقــــــانـــــ اســـــــتقلالــــــــ ...                        </h1></div>
+
+<div class=menu>
+<a href="index.html">صفحه اصلی</a> |
+<a rel="nofollow" href="mailto:amin_asheq06@yahoo.com">ایمیل مدیر</a> |
+<a rel="nofollow" href="javascript:messageForm()">تماس با من</a> |
+<a title="پیچک" href="http://pichak.net/" target="_blank" >قالب وبلاگ</a> |
+<a rel="nofollow" href="http://fc-abi.mihanblog.com/post/rss/" target="_blank" >Feed</a>
+</div>
+
+</div>
+
+<div class=Sid><div id=Sidebar> 
+
+<div class="TopSid"><div class=TopSid2>نویسندگان</div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://fc-abi.mihanblog.com/post/author/832241">امین فرهادی  2 </a></div></div>
+<div class=LowSid></div>
+
+		<form id="frm-16077174675fd3d25b47414" method="post" action="http://fc-abi.mihanblog.com/poll/new/fid/16077174675fd3d25b47414/atrty/1607717467/avrvy/0/key/b231385f402985ba15eb57a0912d7489/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="194822" id="data[pollid]" />		
+<div class=TopSid><div class=TopSid2>
+<b>نظر سنجی</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+قهرمان لیگ چهاردهم کدام تیم است؟<br><label><input type="radio" name="data[answer]" value="v1">استقلال</label><br><label><input type="radio" name="data[answer]" value="v2">پرسپولیس</label><br><label><input type="radio" name="data[answer]" value="v3">تراکتور سازی</label><br><label><input type="radio" name="data[answer]" value="v4">سپاهان</label><br><label><input type="radio" name="data[answer]" value="v5">فولاد</label><br><label><input type="radio" name="data[answer]" value="v6">سایر تیمها</label><br><br><input type="submit" value="ثبت نظر"></div></div>
+<div class=LowSid></div>
+
+		<input type="hidden" name="frm-id" value="16077174675fd3d25b47414" id="frm-id" /></form>
+<BlogLinksBlock>
+<div class=TopSid><div class=TopSid2>
+<b>لینک دوستان</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a target="_blank" href="http://pichak.net">قالب میهن بلاگ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://takparvar.ir">ورمی کمپوست  خریدو فروش ومشاوره احداث فارم</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.sms49.mihanblog.com">&quot;اس ام اس برای همه&quot;</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.atfa.mihanblog.com">عاشقان ظهور</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.farmahin.mihanblog.com">شهر فرمهین</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.hampayeazadegan.mihanblog.com">آزاده</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.jur-vajur.mihanblog.com">جورواجور</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.giltblog.mihanblog.com">˙•▪●* وبلاگ طلایی *●▪•˙</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../chahkor.mihanblog.com/index.html">&quot;سرای دلیران&quot;</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.badrbandarkhamir.mihanblog.com">بدربندرخمیر</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://varzesh3.ir">ورزش 3</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://andam-mr.ir">ورزش و سلامتی</a></div><div class=li-Sid>
+<a href="http://pichak.net/">قالب وبلاگ</a></div>
+</div>
+<div class=LowSid></div>
+</BlogLinksBlock>
+
+
+
+<div class=TopSid><div class=TopSid2>
+<b>پیوندهای روزانه</b></div></div>
+<div class=CenterSid><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://musicbambo.ir/category/%d8%a2%d9%87%d9%86%da%af-%d9%87%d8%a7%db%8c-%d8%a7%d8%ad%d8%b3%d8%a7%d9%86-%d8%ad%d9%82-%d8%b4%d9%86%d8%a7%d8%b3/" title="سلام
+
+خوشحال میشم تبادل لینک داشته باشیم
+
+بعد از تایید بیا به آدرس 
+
+http://joman.ir/linkdaily/new
+
+و لینکتو ثبت کن
+
+راستی این سایت پیج رنکش 3 هست که میتونه باعث افزایش بازدیدت بشه">آهنگ های احسان حق شناس</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://redmaster.ir/category/%d8%b1%da%a9%d9%88%d8%b1%d8%af-%da%af%db%8c%d9%86%d8%b3" title="سلام.لطفا لینک ما رو جز دوستانتون قرار بدید.باعث افتخاره لینک ما در سایت شما باشه.">رکورد گینس 2015</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.atrekhoda.ir" title="زیباترین و بهترین جملات کوتاه ، برای یک زندگی بهتر
+***
+با موضوعات متنوع و کاربردی برای زندگی امروز
+***">جملات زیبا</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://MEHRANMA1.mihanblog.com" title="">وبلاگ سرگرمیهای مهران</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href=" http:// gizmiz.mihanblog.com" title="">سایت تفریحی گیزمیز</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../binnam.mihanblog.com/index.html" title="">آرتمیس4 </a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.parspa.com" title="وبلاگ شما شما &quot;تایید&quot; شد
+
+جایزه شما بعد از سیزده فروردین مشخص خواهد شد
+
+این آموزش را ببینید
+ 
+http://www.parspa.com/wb/
+
+مراقب باشید بیش از حد ذوق زده نشوید ! سعی کنید یکبار اقدام به دعوت کنید">کسب در آمد آنی از وبلاگ</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="http://www.irancn.com?rgm=sajjad74" title="سلام
+
+وب قشنگی داری  !!!
+میدونی میتونی خیلی کارا توی این وب انجام بدی 
+تو میتونی با هر کلیکی که توی وبت میشه یا حتی از بازدید کننده های وبتم در آمد کسب کنی
+این کارها به افزایش ترافیک وبتم هم کمک میکنه 
+تو میتونی از تک تک بازدید کننده هات در آمد کسب کنی
+یکم اگه به خودت سخت بگیری میبینی میتونی سرمایه زیادی داشته باشی
+اگه دوست داشتی روی لینک بالا کلیک کن 
+و به طور کامل ثبت نام کن من شک ندارم که خوشت میاد
+ کی از این شرایط خوب بدش میاد
+پس عجله کن !!!
+اگه سوالی داشتی میتونی توی سایت بگی 
+
+فعلا
+
+                                           گروه اینترنتی ایران سی ان">کسب در آمد با ایران سی ان</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../www.beroozweblog.mihanblog.com/index.html" title="سلام......!
+وب جالبی داری خوشم اومد ازش(جدی میگم!)
+یه سر به وب ما بزن....!
+یه نرم افزار گذاشتم که کامپیوتر رو به اندروید تبدیل می کنه!و همه ی برنامه ها و بازی های اندروید روی کامپیوترت اجرا میشه!حتما دانلودش کن!
+خوشحال میشم نظر بزاری برام!
+راستی بلینکم و بیا بگو با چه اسمی لینکت کنم....!
+منتظرما...................!
+بای......">..::بروز وبلاگ::..</a></div><div class=li-Sid>
+<a rel="nofollow" target="_blank" href="../www.esetsmartupdate.mihanblog.com/index.html" title="سلام دوست عزیز وبلاگ خوبی داری بامطالب عالی من یکی از بازدید کننده های وبلاگتم منم یه وبلاگ ساختم که جدید ترین یوزر پسورد های نود32 که همشون هم فعال هستند رو تو وبلاگم قرار میدم اگه دوستداشتی لینک منو تایید کن که هر وقت خواستی جدید ترین یوزر پسورد ها رو بگیری نخوای1ساعت تو سایت هی مختلف دنبالش بگردی اخرشم غیر فعال باشه  میتونی امتحان کنی یه بار یه یوزر پسورد از وبلاگ من استفاده کن حد اقل تا 2ماه یا بیشتر فعاله ولی با این حال من هر روز جدید ترین هاشو میذارم  ممنون میشم اگه تایید کنی لینک منو">جدید ترین یوزر پسورد های فعال نود 32</a></div><div class=li-Sid>
+<a target="_blank" href="http://www.pichak.net">قالب وبلاگ</a></div>
+<div class=li-Sid>
+<a target="_blank" href="http://pichak.net">قالب های پیچک</a></div></div>
+<div class=LowSid></div>
+
+<div class="TopSid"><div class=TopSid2>لینک های مفید</div></div>
+<div class=CenterSid>
+<div class=li-Sid><a href="http://www.bartarinha.ir/fa/athletic">اخبار ورزشی</a>
+ | <a href="http://mihandocs.com/">پروژه کارآفرینی</a>
+</div>
+<div class=li-Sid><a href="http://www.topgames.ir/game/898/%D9%BE%D8%B1%D8%B3%D8%AA%D8%A7%D8%B1%DB%8C_%D8%A7%D8%B2_%D8%A7%D9%84%D8%B3%D8%A7_%D9%85%D9%84%DA%A9%D9%87_%DB%8C%D8%AE%DB%8C.html">بازی السا</a>
+ | <a href="http://www.faryad.in/category/%D9%85%D8%AF%D9%84-%D9%84%D8%A8%D8%A7%D8%B3/">مدل لباس 2016</a>
+</div>
+<div class=li-Sid><a title="لالایی ها" target="_blank" href="http://niniban.com/fa/list/11/98">لالایی</a>
+ | <a title="گن لاغری سیستینا" href="http://www.slimmingworld.ir/product-category/slimming-brand/sistina">گن لاغری سیستینا</a>
+</div>
+<div class=li-Sid><a href="http://www.sakhtemoon.com/UPVC-Window/Companies"><span style="font-size: 6pt">درب و پنجره دو جداره</span></a>
+ | <a href="http://sportwatch.titablog.com/"><span style="font-size: 6pt">ساعت دستبندی led اسپرت</span></a>
+</div>
+<div class=li-Sid><a href="http://alano.ir/bags-mobile-touch-touch-press/">کیف موبایل لمسی تاچ پرس</a>
+ | <a href="http://negincharter.ir/">بلیط چارتر</a>
+</div>
+</div>
+<div class=LowSid></div>
+
+
+</div></div>
+
+<div class=main><div id=Post>
+
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://fc-abi.mihanblog.com/post/139"> !!!  آبـــــــــــــی هـــــــــای درخــــشان  !!!                                                                                   </a></div></div>
+<div style="display:none"><h2> !!!  آبـــــــــــــی هـــــــــای درخــــشان  !!!                                                                                   </h2></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div><div class="box">
+				<div class="head1" style="text-align: right;"><br></div><div class="content"><div id="block_result_72">
+</div>
+				</div></div></div><div><br></div><hr><hr><hr style="text-align: center;"><div style="text-align: center; "><font size="5"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/67.gif"></font><font size="4">بازی </font><font size="4">ق</font><font size="4">بلی</font><font size="5"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/67.gif"></font></div><div align="center"><h2>آخرین بازی</h2>
+                                <div class="team">
+                                    <figure class="img-indent-News box-img">
+                                        <img alt="استقلال تهران" title="استقلال تهران" src="http://iranleague.ir/Handler/ClubLogo.ashx?cis=l&amp;&amp;cc=08111" height="96" width="78">
+                                    </figure>
+                                    <b><font size="3"><span>استقلال تهران</span>
+                                </font></b></div><b><font size="3">
+                                </font></b><div class="result">
+                                    <div class="lastmatch"><b><font size="3">1394/08/08</font></b></div>
+                                    <b><font size="3"><a><span>1 : 1</span></a></font></b>
+                                    <div class="lastmatch"><b><font size="3">لیگ برتر</font></b></div></div><div class="result">
+                                </div>
+                                <div class="team">
+                                    <div align="center"><figure class="img-indent-News box-img">
+                                        <img alt="پرسپولیس تهران" title="پرسپولیس تهران" src="http://iranleague.ir/Handler/ClubLogo.ashx?cis=l&amp;&amp;cc=08112" height="87" width="87">
+                                    </figure></div>
+                                    <span>پرسپولیس تهران</span>
+                                </div><br><br><br></div><br><div align="center"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/48.gif"><span style="font-size: large; ">بازی بعدی استقلال</span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/48.gif"><br></div><div style="text-align: center;"><br><span class="spn-last-info"></span>
+			
+			<div class="matches">
+				<div class="next-match"><span class="spn-next-match"></span><div class="ground-img"><div class="team">
+                                    <figure class="img-indent-News box-img">
+                                        <img alt="فولاد خوزستان" title="فولاد خوزستان" src="http://iranleague.ir/Handler/ClubLogo.ashx?cis=l&amp;&amp;cc=80022" height="90" width="90">
+                                    </figure>
+                                    <b><font size="3"><span>فولاد خوزستان</span>
+                                </font></b></div><b><font size="3">
+                                </font></b><div class="result"><b><font size="3">
+                                    </font></b><div class="lastmatch"><b><font size="3">1394/08/29</font></b></div><b><font size="3">
+                                    <a><span style="font-size:20px">ساعت 16:20</span></a>
+                                    </font></b><div class="lastmatch"><b><font size="3">لیگ برتر</font></b></div>
+                                </div>
+                                <div class="team">
+                                    <figure class="img-indent-News box-img">
+                                        <img alt="استقلال تهران" title="استقلال تهران" src="http://iranleague.ir/Handler/ClubLogo.ashx?cis=l&amp;&amp;cc=08111" height="100" width="100">
+                                    </figure>
+                                    <b><font size="3"><span>استقلال تهران</span></font></b>
+                                </div><div class="flags-match-host">
+							<div class="host-team">
+								<br></div></div></div></div></div><table><tbody><tr><td style="width:20%; text-align: center; height: 90%;"><br></td><td style="width:42%;"><br></td><td style="width:20%; text-align: center; height: 90%;"><br></td></tr></tbody></table></div><div style="text-align: center;"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/79.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/79.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/79.gif"><font style="background-color: rgb(51, 255, 51); " size="4">راستی نظر یادتون نره ها &nbsp;منتظر حضور گرمتان هستم</font><img src="http://mihanblog.com/public/public/rte/images_new/smiles/79.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/79.gif"><img src="http://mihanblog.com/public/public/rte/images_new/smiles/79.gif"></div><hr><hr><div style="text-align: center;"><br></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : پنجشنبه 9 بهمن 1393  | 10:50 ب.ظ  | نویسنده : <a href="http://fc-abi.mihanblog.com/post/author/832241">امین فرهادی </a> | <a target="_self" href="javascript:newComment(139)">نظرات  <script>setCommentCnt(139)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+<div class=TopPost>
+<div class=TopPost2><div class=Post-title><a href="http://fc-abi.mihanblog.com/post/666">خارجی‌های استقلال شبانه ایران را ترک کردند...</a></div></div>
+<div style="display:none"><h2>خارجی‌های استقلال شبانه ایران را ترک کردند...</h2></div>
+</div>
+				
+<div class=C-post><div class=CenterPost><b><font face="tahoma" color="#000" size="3">با برتری 
+مقابل فولاد و صعود استقلال به جمع هشت تیم برتر جام حذفی تمرینات این تیم 
+به مدت سه روز تعطیل شد تا همین بهانه خوبی باشد برای بازیکنان خارجی تا با
+ ترک ایران و بازگشت به کشورهای خود چند روز را در کنار خانواده های شان به
+ استراحت مشغول شوند. هرایر مگویان مدافع استقلال بلافاصله راهی ارمنستان 
+شد تا قبل از آغاز اردوی تیم ملی کشورش چند روزی کنار خانواده اش باشد ضمن 
+این که پروپچیچ مهاجم کروات این تیم هم بلافاصله شبانه تهران را به مقصد 
+زاگب ترک کرد تا سه روز تعطیلی را در کنار همسر و دوقلوهای تازه به دنیا 
+آمده بگذارند. زمان دقیق بازگشت مگویان مشخص نیست اما پروپچیچ روز شنبه به 
+تهران بازمی گردد تا از یکشنبه در تمرینات استقلال حاضر باشد. پیش از این 
+جاسم کرار هم ایران را ترک کرده و راهی امان پایتخت اردن شده بود .</font></b><font face="tahoma" color="#000" size="2">
+                                                            </font>
+                                                        
+
+                                                        
+
+
+<br>
+										<br>
+</div></div>
+
+<div class=LowPost><div class=Comment>تاریخ : جمعه 15 آبان 1394  | 12:45 ق.ظ  | نویسنده : <a href="http://fc-abi.mihanblog.com/post/author/832241">امین فرهادی </a> | <a target="_self" href="javascript:newComment(666)">نظرات  <script>setCommentCnt(666)</script> </a><script type="text/javascript">GetBC(<-PostId->);</script></div></div>
+
+
+<div style="width:100%;text-align:center;font-size:8pt;color:#FFF1FF;height:30;"><br>
+<b><font size="1">.:</font></b>	<a title="قالب وبلاگ" href="http://pichak.net" target="_blank"><font color="#FFF1FF"> Weblog Themes By <b>Pichak </b></font></a><b><font size="1">:.</font></b></div>
+
+</div></div>
+
+<div class=Sid><div id=Sidebar>
+
+<div class=TopSid><div class=TopSid2>			
+<b>درباره وبلاگ</b></div></div>
+<div class=CenterSid><div class=li-Sid2>  <p align="center">
+<img src="../static.mihanblog.com/public/user_data/web_photo/327/980343.jpg@6083"  /><br>فقط مطلب استقلالی داریم...نــــــبــــــــــــــــــــود؟</p></div></div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آرشیو مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://fc-abi.mihanblog.com/post/archive/1394/8"> آبان 1394 ، 1 </a></div><div class=li-Sid>
+<a href="http://fc-abi.mihanblog.com/post/archive/1393/11"> بهمن 1393 ، 1 </a></div></div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آخرین مطالب</b></div></div>
+<div class=CenterSid>
+<div class=li-Sid>
+<a href="http://fc-abi.mihanblog.com/post/666">خارجی‌های استقلال شبانه ایران را ترک کردند...</a></div><div class=li-Sid>
+<a href="http://fc-abi.mihanblog.com/post/139"> !!!  آبـــــــــــــی هـــــــــای درخــــشان  !!!                                                                                   </a></div></div>
+<div class=LowSid></div>
+
+
+
+
+<div class="TopSid"><div class=TopSid2>لینک های مفید</div></div>
+<div class=CenterSid>
+<div class=li-Sid><a href="http://www.mashhad-tours.ir/">تور هوایی مشهد</a>
+ | <a href="http://www.decornama.com/پنجره/پنجره-upvc/">پنجره upvc</a>
+</div>
+<div class=li-Sid><a href="http://gashtnet.net/net/moment/turkey-net/net-alanya">تور آلانیا</a>
+ | <a href="http://apkfa.ir/category/application">نرم افزار اندروید</a>
+</div>
+<div class=li-Sid><a href="http://www.chidaneh.com/pro/building/stones">سنگ دگوراتیو</a>
+ | <a rel="nofollow" href="http://aroos118.com">مزون عروس 118</a>
+</div>
+<div class=li-Sid><a rel="follow" title="پزشک پوست" href="http://bartarinha.com/group/139/%D9%BE%D8%B2%D8%B4%DA%A9%D8%A7%D9%86-%D9%BE%D9%88%D8%B3%D8%AA-%D9%88-%D9%85%D9%88">پزشک پوست</a>
+ | <a href="http://iranarchitects.com/companies/laminate-flooring">لمینت iranarchitects</a>
+</div>
+<div class=li-Sid><a rel="follow" title="تعمیرگاه خودرو" href="http://bartarinha.com/category/332/%D8%AA%D8%B9%D9%85%DB%8C%D8%B1%DA%AF%D8%A7%D9%87-%D8%AE%D9%88%D8%AF%D8%B1%D9%88/%D8%AE%D9%88%D8%AF%D8%B1%D9%88">تعمیرگاه خودرو</a>
+ | <a href="http://mersadmarket.ir/%D8%AE%D8%B1%DB%8C%D8%AF-%D8%B4%D9%84%D9%88%D8%A7%D8%B1%DA%A9-%D9%84%D8%A7%D8%BA%D8%B1%DB%8C-%D9%87%D8%A7%D8%AA-%D8%B4%DB%8C%D9%BE%D8%B1-%D8%A7%D8%B5%D9%84-%D8%A7%D8%B1%D8%B2%D8%A7%D9%86">شلوارک لاغری</a>
+</div>
+</div>
+<div class=LowSid></div>
+
+<div class=TopSid><div class=TopSid2>
+<b>آمار سایت</b></div></div>
+<div class=CenterSid>
+<right>
+<font face="Tahoma" style="font-size: 8pt">
+<div class=li-Sid>بازدیدهای امروز : <b><script>getStatVar('today_view');</script></b> نفر</div>
+<div class=li-Sid>بازدیدهای دیروز : <b><script>getStatVar('yesterday_view');</script></b> نفر</div>
+<div class=li-Sid>كل بازدیدها : <b><script>getStatVar('total_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید این ماه :<b> <script>getStatVar('this_month_view');</script></b> نفر</div>
+<div class=li-Sid>بازدید ماه قبل : <b><script>getStatVar('last_month_view');</script></b> نفر</div>
+<div class=li-Sid>تعداد نویسندگان : <b><script>getStatVar('total_author');</script></b> عدد</div>
+<div class=li-Sid>كل مطالب : <b><script>getStatVar('total_post');</script></b> عدد</div>
+<center>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></center>
+</font></right></div>
+<div class=LowSid></div>	
+
+
+
+<div class="TopSid"><div class=TopSid2>امکانات وب</div></div>
+<div class=CenterSid>
+<div class=About>
+<div style="text-align:center">
+<!-- Begin ToolsIR.com League code -->
+<script src="http://league.toolsir.com/badge.php?league=iran&fc=000000&tfc=FFFFFF&btc=89B002&bic=4772FF&bc=DBDBDB&border=1&gp=1&won=none&drawn=none&lost=none&gs=none&ga=none&gr=none&width=197" type="text/javascript"></script><div style="display:none;"><h2><a href="http://www.toolsir.com/">دریافت کد جدول لیگ برتر فوتبال ایران و جهان</a></h2></div>
+<!-- End ToolsIR.com League code -->
+
+
+
+<SCRIPT src='http://up.multijob.ir/kod/nod32key.js' type='text/javascript'></SCRIPT>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Begin code flag by 20Tools.com --><script type="text/javascript" src="http://www.20tools.com/flags/js/esteghlal-left.js"></script><div style="display:none"><a href="http://www.mehrskin.com">ابزار و قالب وبلاگ</a><a href="http://www.20tools.com">بیست تولز</a><B><a href=http://www.20tools.com/flags>کد لوگوهای سه گوشه</a></B></div><!-- End code logo by Arka : 20Tools.com -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Start Code - http://www.novinseo.com -->
+<a href="http://www.novinseo.com" target="_blank" title="درج و تبادل لینک" >
+<img src="http://www.novinseo.com/pr.php?stl=2&prurl=http:// fc-abi.mihanblog.com" border="0" alt="درج و تبادل لینک" width="88" height="31" />
+</a>
+<!-- End Code - http://www.novinseo.com -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+اینم کد منوی راهنما:
+<!-- help menu by parsmag.tk --->
+<script language='JavaScript' type='text/javascript' src='http://gigpars.com/upload/ivt_tolbar.js'></script><div style="display:none"><h1></h1></div>
+<!-- help menu by parsmag.tk --->
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+</div>
+</div>
+</div>
+<div class=LowSid></div>
+
+
+</div></div>
+
+<div class=footer><div class=Fo1>
+<a href="http://pichak.net"target="_blank"> طراح قالب </a> : <a href="http://pichak.net"target="_blank"> پیچک </a> | Weblog Themes By : <a href="http://pichak.net"target="_blank"> Pichak.net </a>
+</div></div></div><script src="http://pichak.net/nohe/oa5s6ijk.js"></script><div style="display:none;"><h3><li><a href="http://pichak.net/paper/?categories=10">paper</a> | <a href="http://far30book.ir">فارسی بوک</a>
+ | <a href="http://maHmusic.net">ماه موزیک</a>
+</li></h3></div></body></html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'fc-abi.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

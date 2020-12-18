@@ -1,0 +1,1950 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*631671*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','662');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','پنجشنبه 13 اردیبهشت 1397');
+	
+	setStatVar('today_view','1437');
+	setStatVar('yesterday_view','112');
+	
+	setStatVar('this_month_view','4018');
+	setStatVar('last_month_view','5236');
+
+	setStatVar('total_view','681158');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (06:22)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://yadoyar.mihanblog.com/statupdate/?data[refereruri]=http://yadoyar.mihanblog.com/post/archive/page/3&data[postid]=&data[requesturi]=/post/archive/1390/12&data[sdate]=1608173550&data[hash]=9e42849249e73ebf97a4b2d5b211bb5b&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[158]='1';commentCnt[159]='0';commentCnt[160]='9';commentCnt[161]='0';commentCnt[162]='0';commentCnt[164]='6';commentCnt[165]='0';commentCnt[166]='1';commentCnt[167]='0';commentCnt[168]='1';commentCnt[169]='5';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[158]='0';
+mihanblogDisLikeArrCnt[158]='0';
+mihanblogLikeArrCnt[159]='0';
+mihanblogDisLikeArrCnt[159]='0';
+mihanblogLikeArrCnt[160]='0';
+mihanblogDisLikeArrCnt[160]='0';
+mihanblogLikeArrCnt[161]='0';
+mihanblogDisLikeArrCnt[161]='0';
+mihanblogLikeArrCnt[162]='0';
+mihanblogDisLikeArrCnt[162]='0';
+mihanblogLikeArrCnt[164]='0';
+mihanblogDisLikeArrCnt[164]='0';
+mihanblogLikeArrCnt[165]='0';
+mihanblogDisLikeArrCnt[165]='1';
+mihanblogLikeArrCnt[166]='2';
+mihanblogDisLikeArrCnt[166]='0';
+mihanblogLikeArrCnt[167]='0';
+mihanblogDisLikeArrCnt[167]='0';
+mihanblogLikeArrCnt[168]='0';
+mihanblogDisLikeArrCnt[168]='0';
+mihanblogLikeArrCnt[169]='0';
+mihanblogDisLikeArrCnt[169]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://yadoyar.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://yadoyar.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://yadoyar.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://yadoyar.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://yadoyar.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://yadoyar.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://yadoyar.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://yadoyar.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://yadoyar.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://yadoyar.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://yadoyar.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://yadoyar.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://yadoyar.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://yadoyar.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://yadoyar.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://yadoyar.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://yadoyar.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<style>
+
+    /*  
+    Theme Name: Aspire
+    Theme URI: http://www.infocreek.com/webdesign/aspire.html
+    Description: Aspire is a gorgeous 3-column wordpress theme ( Blogger version available ) designed by <a href="http://www.infocreek.com">InfoCreek </a>.
+    Author: InfoCreek.com
+    Author URI: http://www.infocreek.com/
+    Tags: fixed width, clean, valid XHTML, widget ready, options page, gravatar, right sidebar.
+    Version: 1.1.3
+    
+    
+    */
+
+    /*-----------------------------------------------
+   Read This >>> Advance footer style
+   
+   You may also want to download wp-pagenavi - a free plugin that adds advance paging navigation to the footer of your WordPress blog. 
+   
+   Read more about this plugin at: http://lesterchan.net/wordpress/readme/wp-pagenavi.html
+   
+   Enjoy!
+   
+   ----------------------------------------------- */
+
+* {margin:0px; padding:0px;}
+body {background: #38690d url(http://mihanblog.com/public/public/user_data/template/20/images/body-bg.jpg) center top; text-align:center; font-size:12px; color:#240f02; font-family: tahoma,Verdana, Arial, Helvetica, sans-serif;}
+
+img {border: medium none; max-width:597px;}
+blockquote {padding: 5px 20px; text-align: left; color:#602600}
+blockquote blockquote {padding: 2px 10px; text-align: left; color:#602600; font-style:italic;}
+a {text-decoration:none; color:#c97e00; border: 0px;}
+a:hover {text-decoration:underline; border: 0px;}
+a.u {text-decoration:underline; border: 0px;}
+a.u:hover {text-decoration:none; border: 0px;}
+a.n, a.n:hover {text-decoration:none; border: 0px;}
+a:focus, a:active {outline: none;}
+
+p {padding:7px 10px;  line-height: 130%;}
+.border {border:1px solid red;}
+h1, h2, h3, h4 { font-family: "Trebuchet MS";}
+hr {border-left:0px solid #abb0b5; border-right:0px solid #abb0b5; border-top:1px dotted #abb0b5; border-bottom:0px solid #abb0b5; height: 1px;}
+
+input {font-family: 'tahoma'; color: #240f02; font-size: 10px;}
+textarea {font-family: 'Verdana'; color: #240f02; font-size: 11px;}
+select {font-family: 'Verdana'; color: #240f02; font-size: 11px;}
+
+.left-bg {position:absolute; left:0px; top:0px; width:50%; height:517px; margin-left:-495px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/top-left-bg-repeat.jpg) right top repeat-x;}
+.script {position:absolute; right:0px; top:104px; width:100%; height:413px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/left-bg.jpg) right top no-repeat;}
+.right-bg {position:absolute; right:0px; top:0px; width:50%; height:223px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/top-right-bg-repeat.jpg) 40px 0px repeat-x;}
+#head {position:relative; width:990px; height:250px; margin:0 auto; text-align:left; background: url(http://mihanblog.com/public/public/user_data/template/20/images/top-right-bg-repeat.jpg) 90px 0px repeat-x;}
+.crack {position:absolute; left:0px; top:0px; width:990px; height:51px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/crack.jpg) 627px 0px no-repeat;}
+.header {width:627px; height:250px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/header-bg.jpg) no-repeat;}
+.logo {text-align:right;position:absolute; left:0px; top:115px; width:627px;}
+.logo h1 {white-space:nowrap;overflow:hidden;direction:rtl;width:605px;font: bold 26px/120% Georgia; color:#602600; padding:9px 7px 10px 0; margin-right:16px;}
+.logo .description {position:absolute; left:20px; top:36px; font: bold italic 15px/120% Georgia; color:#602600;}
+.logo h1 a, .logo h1 a:hover {color:#602600; text-decoration:none;}
+.logo a b {}
+.shadow-right {position:absolute; left:627px; top:115px; width:102px; height:380px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/right-bg.jpg) no-repeat;}
+#menu {position:absolute; left:100px; top:80px;}
+#menu ul {list-style:none;}
+#menu ul li {display:block; float:left; padding:0 17px;}
+* html #menu ul li {display:inline;}
+#menu ul li a {color:#97712c;}
+.searchbox {text-align:right;position:absolute; right:50px; top:100px; width:210px; font-size:11px; color:#97712c; direction:rtl;}
+#searchform .label {display:block; padding:0px 0px 2px 5px;}
+.search {width:135px; height:20px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/search-input.gif) left top no-repeat; float:right;}
+#searchform input {border:none; background:transparent url(http://mihanblog.com/public/public/user_data/template/20/images/go-button.gif) right top no-repeat; font-weight: bold; color:#ceb978; width:75px; height:20px; float:left;}
+#searchform .search #s {border:none; background:transparent; color:#ceb978; width:125px; height:auto !important; margin:3px 4px 0 0px; float:right;}
+
+.linkprefs {position:absolute; right:20px; bottom:106px; width:120px;}
+.page-options {position:relative; display:block; width:69px; height:16px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/options.gif) center top no-repeat; cursor:pointer; margin-left:40px;}
+.options {position:relative; width:120px; height:40px;}
+* html .options {position:relative; width:120px; height:39px;}
+#content-sizer {position:relative; width:72px; height:22px; display:block;}
+.fnt-dec {position:absolute; left:0px; top:10px; width:24px; height:22px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/text-resizer.gif) 0px 0px no-repeat;}
+.fnt-dec:hover {background: url(http://mihanblog.com/public/public/user_data/template/20/images/text-resizer.gif) 0px -22px no-repeat; z-index:10;}
+.fnt-inc {position:absolute; left:23px; top:10px; width:25px; height:22px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/text-resizer.gif) -23px 0px no-repeat;}
+.fnt-inc:hover {background: url(http://mihanblog.com/public/public/user_data/template/20/images/text-resizer.gif) -23px -22px no-repeat; z-index:10}
+.fnt-res {position:absolute; left:48px; top:10px; width:24px; height:22px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/text-resizer.gif) -48px 0px no-repeat;}
+.fnt-res:hover {background: url(http://mihanblog.com/public/public/user_data/template/20/images/text-resizer.gif) -48px -22px no-repeat; z-index:10}
+.linkset {position:absolute; right:7px; top:3px; display:block; width:32px; height:32px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/link-option.gif) 7px 13px no-repeat;}
+.link-ext {position:absolute; display:block; left:8px; top:10px; width:14px; height:14px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/internal.gif) 0px 0px no-repeat;}
+.link-int {position:absolute; display:none; left:-6px; top:24px; width:14px; height:14px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/external.gif) 0px 0px no-repeat;}
+#linkprefs {position:absolute; display:block; left:7px; top:10px; width:15px; height:15px;}
+
+#content {position:relative; width:990px; margin:0 auto; text-align:left;}
+#main {position:relative; float:left; width:627px;}
+.content {direction:rtl;text-align:right;position:relative; width:627px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/content-bg.jpg);}
+.cont-r {position:relative; background: url(http://mihanblog.com/public/public/user_data/template/20/images/border.gif) right top repeat-y;}
+.cont-l {position:relative; background: url(http://mihanblog.com/public/public/user_data/template/20/images/border.gif) left top repeat-y;}
+.cont-bot {position:relative; background: url(http://mihanblog.com/public/public/user_data/template/20/images/content-bottom-bg.jpg) left bottom no-repeat; top:0px; bottom:0px; min-height:380px;}
+.grad-hack {position:relative; background: url(http://mihanblog.com/public/public/user_data/template/20/images/header-bg.jpg) 0px -170px no-repeat; width:627px; overflow:hidden; margin-top:-80px; padding-bottom:20px}
+.begin {background: url(http://mihanblog.com/public/public/user_data/template/20/images/begin.gif) 20px 0px no-repeat; position:absolute; top:0px; left:0px; width:100%; height:40px; z-index:10;}
+
+.content h1 {font: 20px "Trebuchet MS"; color:#602600; letter-spacing:-1px; padding-top:10px;}
+.content h2 {font:bold 18px "Trebuchet MS"; color:#602600; padding:10px 0px 2px 20px;}
+.content h3 {font:bold 16px "Trebuchet MS"; color:#602600; padding:10px 0px 2px 20px;}
+.content h4 {font:bold 14px "Trebuchet MS"; color:#602600; padding:7px 0px 2px 15px;}
+.content h5 {font:bold 12px "Trebuchet MS"; color:#602600; padding:5px 0px 2px 10px;}
+.content h6 {font:bold 10px Verdana; color:#602600; padding:5px 0px 2px 0px;}
+.content h2.pagetitle {position:absolute; top:0px; right:30px; padding:0px; font-size:12px;}
+.post {padding:24px 10px 10px 10px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/post-devider.jpg) no-repeat;}
+.post1 {padding:0px 10px 10px 10px;position:relative; z-index:100;}
+* html .post {position:relative;}
+* html .post1 {position:relative; height:350px;}
+.content .title {padding:0px;}
+.content .date {padding:10px 2px 0px 2px;;font:normal 18px Georgia; margin-right:10px; color:#ffffff; float:left; width:100px; height:45px; overflow:hidden; text-align:center; background:#CA9417 url(http://mihanblog.com/public/public/user_data/template/20/images/date-bg.gif) no-repeat;}
+.content .date .time {font: 14px/16px Arial; color:#4c2604; margin:-10px 0px 0 0; text-transform:lowercase;}
+.content h1 a, .content h1 a:hover {color:#602600; text-decoration:none;}
+.content p.author {color:#240f02; padding:0px 0px 0px 0px; font-size:11px;}
+.entry {width:597px;overflow:hidden;position:relative; padding:0 10px 10px 0; clear:both;}
+
+
+
+.postmetadata {direction:rtl; padding:5px 20px 0px 75px; text-align:left; background: url(http://mihanblog.com/public/public/user_data/template/20/images/num-comm-left.jpg)  no-repeat; margin-right:15px; clear:both;}
+* html .postmetadata {display:inline-block;}
+*:first-child+html .postmetadata {display:inline-block;}
+.postmetadata .comm-num-left {padding:5px 75px 7px 0px; float:left; background: url(http://mihanblog.com/public/public/user_data/template/20/images/num-comm-right.jpg) no-repeat 100% -2px;}
+
+.addcomment {position:absolute; right:28px; top:2px; font-size:10px; z-index:100;}
+.addcomment a {padding:0px 4px; line-height:100%; background-color:#8c7246; font-size:10px; color:#ffffff;}
+.addcomment a:hover {background-color:#1a0603; text-decoration:none;}
+
+
+.content h2.center {padding:25px 0; text-align:center;}
+.wp-pagenavi {margin:10px 0px; z-index:300; font-size:11px;}
+.wp-pagenavi a, .wp-pagenavi a:link, .wp-pagenavi a:active  {float:right; font-size:11px; background:#ca9417 url(http://mihanblog.com/public/public/user_data/template/20/images/page-num-bg.gif) 0 0 no-repeat !important; line-height:16px; padding:0 4px !important; color:#602600 !important; margin:0 3px 0 0 !important; border:none !important;}
+.wp-pagenavi a:hover {background:#602600 url(http://mihanblog.com/public/public/user_data/template/20/images/page-num-bg.gif) 0 0 no-repeat !important; font-size:11px; color:#ca9417 !important; text-decoration:none; border:none !important;}
+.wp-pagenavi span.pages {float:right; font-size:11px; padding: 0px 4px 0px 4px !important; line-height:16px; margin: 0px 3px 0px 0px !important; color: #ca9417 !important; border: none !important;	background:#602600 !important;}
+
+.wp-pagenavi b {color:#000;text-decoration:underline;}
+
+#main ul {position:relative; list-style:none; padding:5px 20px;}
+#main ul li {display:block; padding:2px 0px 2px 12px;  background: url(http://mihanblog.com/public/public/user_data/template/20/images/marker.gif) 0px 7px no-repeat;}
+#main ol {padding: 5px 40px; list-style: decimal}
+#main ol li {padding:2px 0px 2px 0px;}
+
+
+#comments {}
+#comments a {}
+#comments h4 {padding-left:20px;}
+.nocomments {padding: 0 20px 30px 20px;}
+.message-bottom {position:relative; background: url(http://mihanblog.com/public/public/user_data/template/20/images/message-bottom.gif) left bottom repeat-x;}
+.message-top {position:relative; background: url(http://mihanblog.com/public/public/user_data/template/20/images/message-top.gif) 0 5px repeat-x;}
+.message-right {position:relative; background: url(http://mihanblog.com/public/public/user_data/template/20/images/message-right.gif) 100% 0px repeat-y;}
+.message-left {position:relative; background: url(http://mihanblog.com/public/public/user_data/template/20/images/message-left.gif) 0 0 repeat-y;}
+.mes-br {position:relative; background: url(http://mihanblog.com/public/public/user_data/template/20/images/message-br.jpg) right bottom no-repeat;}
+.mes-bl {position:relative; background: url(http://mihanblog.com/public/public/user_data/template/20/images/message-bl.jpg) left bottom no-repeat;}
+.mes-tr {position:relative; background: url(http://mihanblog.com/public/public/user_data/template/20/images/message-tr.jpg) right top no-repeat;}
+.mes-tl {position:relative; background: url(http://mihanblog.com/public/public/user_data/template/20/images/message-tl.jpg) left top no-repeat; width:100%;}
+.message-by {padding:15px 0 5px 0; font:16px/18px "Trebushet MS"; color:#602600; text-align:center;}
+.avatar-place {position:absolute; right:17px; top:17px; width:50px; height:50px;}
+.message-count {text-align:center;}
+.message-count span {display:inline-block; border:1px solid #8a5f3b; font:12px/14px Georgia; position:relative; padding:0 5px;}
+.message-count span b.count-l {position:absolute; left:-74px; top:1px; height:14px; width:72px; line-height:0px; font-size:0px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/message-number-right.gif) left top no-repeat;}
+.message-count span b.count-r {position:absolute; right:-76px; top:1px; height:14px; width:74px; line-height:0px; font-size:0px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/message-number-left.gif) right top no-repeat;}
+.message-entry {position:relative; padding:10px 20px 20px 20px;}
+.message-entry p {overflow:hidden;}
+* html .message-entry p {width:100%;}
+.message-time {font-size:11px; line-height:20px; color:#efe7c6; height:20px; width:250px; background: #b27110 url(http://mihanblog.com/public/public/user_data/template/20/images/message-time-right.gif) right top no-repeat; margin:10px 20px 0 10px;}
+.message-time span {display:block; height:20px; padding:0 25px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/message-time-left.gif) left top no-repeat;}
+
+
+#response {position:relative;}
+#response h4 {padding:20px 0px 5px 20px;}
+#response div.form {width:100%; position:relative; border:1px solid #a4813c;}
+* html #response div.form {width:100%;}
+#response div.form #commentform {padding:10px;}
+
+.inputs {position:relative; width:49%; float:left;}
+.input {position:relative;}
+.input b {color:#c97e00;}
+.inputs input {position:relative; background:#ede5c3; border:1px solid #a4813c; width:99%; padding:2px; margin-bottom:5px;}
+.message {position:relative; width:49%; float:right; text-align:center;}
+.message .input {margin-bottom:0px; text-align:center;}
+.message textarea {background:#ede5c3; border:1px solid #a4813c; width:99%; height:92px; padding:1px;}
+.submit {text-align:right; margin-top:10px;}
+* html .submit {margin-top:0px;}
+*:first-child+html .submit {margin-top:0px;}
+
+
+
+#sidebars {text-align:right;position:relative; width:350px; float:right; margin-top:-66px;}
+#sidebars #searchform #s {border:1px solid #212121; background:#689330; background-image:none; color:#ffffff; width:100%; height:auto !important; margin:0px 0 0 0px;}
+#sidebar-left {width:173px; float:left; overflow:hidden;}
+#sidebar-right {width:173px; float:right; overflow:hidden;}
+#sidebar-right .about_box #user_logo img{direction:rtl;margin-top:2px;height:150px;width:150px;border:1px solid #602600}
+#sidebar-right .about_box {text-align:center;}
+#sidebar-right .about_box #about_text{line-height:15px;margin-top:10px;color:#602600;text-align:right;}
+
+
+
+.sb-bot {direction:rtl;position:relative; background:url(http://mihanblog.com/public/public/user_data/template/20/images/sidebar-bottom.jpg) center bottom repeat-x; margin-top:15px;}
+.sb-top {position:relative; background:url(http://mihanblog.com/public/public/user_data/template/20/images/sidebar-top.jpg) center top repeat-x;}
+.sb-right {position:relative; background:url(http://mihanblog.com/public/public/user_data/template/20/images/sb-border.gif) right top repeat-y;}
+.sb-left {position:relative; background:url(http://mihanblog.com/public/public/user_data/template/20/images/sb-border.gif) left top repeat-y;}
+.sb-rb {position:relative; background:url(http://mihanblog.com/public/public/user_data/template/20/images/sidebar-rb.jpg) right bottom no-repeat;}
+.sb-lb {position:relative; background:url(http://mihanblog.com/public/public/user_data/template/20/images/sidebar-lb.jpg) left bottom no-repeat;}
+.sb-rt {position:relative; background:url(http://mihanblog.com/public/public/user_data/template/20/images/sidebar-rt.jpg) right top no-repeat; width:100%}
+.sb-lt {position:relative; background:url(http://mihanblog.com/public/public/user_data/template/20/images/sidebar-lt.jpg) left top no-repeat; padding:10px 10px 15px 10px; width:153px; overflow:hidden;}
+
+#sidebars h2 {position:relative; font:bold 16px "Trebuchet MS"; color:#602600; margin:0 -6px; text-align:center; background:url(http://mihanblog.com/public/public/user_data/template/20/images/sidebar-title-line.jpg) center bottom no-repeat; padding:3px 0 18px 0;}
+#sidebars a {color:#602600;}
+#sidebars ul {display:inline-block; position:relative; padding:3px 0 0px 0; list-style:none; background:none}
+#sidebars .poll {padding-right:5px;}
+#sidebars .poll  #poll_ques{padding-right:0px;}
+#sidebars .poll li {padding-right:5px;line-height:30px;}
+#sidebars ul li {display:block; position:relative; font-size: 12px; color:#240f02; padding:0px 0px}
+* html #sidebars ul li {display:inline-block;}
+*:first-child+html #sidebars ul li {display:inline-block;}
+#sidebars ul li a {color:#602600; padding:2px 10px 2px 0px; display:block; background: url(http://mihanblog.com/public/public/user_data/template/20/images/sb-marker.gif) 100% 7px no-repeat;}
+#sidebars ul li.current-cat a {color:#240f02; background:#c18c35 url(http://mihanblog.com/public/public/user_data/template/20/images/sb-marker-hover.gif) 100%px 7px no-repeat;}
+#sidebars ul li a:hover {color:#240f02; background:#c18c35 url(http://mihanblog.com/public/public/user_data/template/20/images/sb-marker-hover.gif) 100% 7px no-repeat; text-decoration:none;}
+#sidebars ul li:hover {color:#240f02; background:#c18c35; text-decoration:none;}
+#sidebars ul li p a {color:#602600; display:inline; background: none; padding:0px;}
+#sidebars ul li p a:hover {color:#602600; display:inline; background:#c18c35 none; padding:0px;}
+
+    /*
+    #sidebars ul li ul {padding:0px 0 0px 0px; list-style:none;}
+    #sidebars ul li ul li a {padding:2px 0px 2px 25px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/sb-marker.gif) 13px 7px no-repeat;}
+    #sidebars ul li ul li a:hover {background:#c18c35 url(http://mihanblog.com/public/public/user_data/template/20/images/sb-marker-hover.gif) 13px 7px no-repeat;}
+    */
+    /*
+    #sidebars ul li.cat-item, #sidebars #archives ul li {padding:2px 10px 2px 0px; background: url(http://mihanblog.com/public/public/user_data/template/20/images/sb-marker.gif) 100% 7px no-repeat;}
+    #sidebars ul li.cat-item a, #sidebars #archives ul li a {color:#602600; padding:0px; display:inline; background:none;}
+    #sidebars ul li.cat-item.current-cat, #sidebars #archives ul li.current-cat {background:#c18c35 url(http://mihanblog.com/public/public/user_data/template/20/images/sb-marker-hover.gif) 3px 7px no-repeat;}
+    #sidebars ul li.cat-item.current-cat a, #sidebars #archives ul li a {color:#240f02; background:none;}
+    #sidebars ul li:hover.cat-item, #sidebars #archives ul li:hover, .selected {background:#c18c35 url(http://mihanblog.com/public/public/user_data/template/20/images/sb-marker-hover.gif) 3px 7px no-repeat !important;}
+    #sidebars ul li.cat-item a:hover, #sidebars #archives ul li a:hover {color:#240f02; background:none; text-decoration:none;}
+    */
+
+
+#recentcomments li a {background:none !important; padding:0 0 0 0;}
+.textwidget iframe {position:relative; margin:0 -5px 10px -5px;}
+
+.logo-bottom {position:absolute; right:30px; bottom:15px; z-index:1000;}
+
+
+a:hover abbr {border:none;}
+
+
+#footer {width:100%; margin:0 auto; text-align:left;}
+#footer a {color:#602600;}
+#footer strong{font-size:9px}
+.copy {float:left; padding:50px 0px 15px 0px; font-size:11px; z-index:100; width:590px; text-align:right;}
+.rss_box {float:right; font-size:11px; background:#ca9417 url(http://mihanblog.com/public/public/user_data/template/20/images/page-num-bg.gif) 0 0 no-repeat; line-height:22px; padding:0 7px; margin:10px 20px;}
+
+.ping-track {position:relative; border:1px solid #a4813c; padding:10px;}
+
+
+.up {text-transform:uppercase;}
+.b {font-weight:bold;}
+.center {text-align:center;}
+.l, .left {float:left;}
+.r, .right {float:right;}
+.textleft {text-align:left !important;}
+.clear {clear:both;}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.wp-caption {
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: #f3f3f3;
+    padding-top: 4px;
+    margin: 10px;
+    /* optional rounded corners for browsers that support it */
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.wp-caption img {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    padding: 0 4px 5px;
+    margin: 0;
+}
+
+.owner_photo{
+    color:#fff;
+    float:right;
+    margin:5px 5px 5px 17px;
+}
+
+.clearfix {display: inline-block;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+
+.stat span{
+    color:#602600 ;
+    font-weight:bold;
+    font-size:11px;
+}
+
+.btn {
+    -x-system-font:none;
+    background-color:#602600 ;
+    color:#fff;
+    cursor:pointer;
+    float:none;
+    font-family:Tahoma;
+    font-size:12px;
+    font-size-adjust:none;
+    font-stretch:normal;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    height:24px;
+    line-height:normal;
+    text-align:center;
+    padding:0 3px;
+}
+
+.poll_btn{
+    width:140px;
+    padding-top:10px;
+}
+.mihan_logo{
+    background: url(http://mihanblog.com/public/public/images/logo/poweredby.gif) no-repeat top center;
+    text-align:center;
+    height:131px;
+    margin-top:10px;
+}
+#parentheses p{
+    float:right;
+    color:#602600;
+    padding:0px 1px;
+    margin:0px;
+    direction:rtl;
+    text-align:right;
+}
+
+.cb_general{
+    line-height:18px;
+}
+
+.cb_share{
+    text-align:left;
+    padding: 15px 0;
+}
+.cb_share a{
+    font-size:11px;
+    text-decoration:none
+}
+.cb_share a img{
+    padding:0 0 0 5px;
+}
+
+
+.cblike{
+    margin:4px 0px;
+}
+.cblike a {
+    float:left;
+    padding:3px;
+    text-align:center;
+    font-size:12px;
+    color:#FFF;
+    display:block;
+    line-height:15px;
+    text-decoration: none;
+}
+
+
+
+
+.cblike a.clike_plus {
+    background-color:#009900 ; /*green #039B03*/
+
+    border-radius: 5px ;
+
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    /*border:1px solid green;
+             border-right:0px;*/
+}
+.cblike a.clike_minus {
+    background-color:#CC0000;
+    border-radius: 5px ;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+    /*border:1px solid red;
+             border-left:0px;*/
+}
+.cblike a.clike_minus:hover {
+    background-color:red;
+    text-decoration: none;
+}
+.cblike a.clike_plus:hover {
+    background-color:green;
+    text-decoration: none;
+}
+.cblike a span{
+    font-weight:bold;
+    font-size:13px;
+
+    color:#fff;
+}
+
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name='description' content='' />
+<meta name='keywords' content='دل نوشته  - داستان - قطعه ادبی-شعر' />
+
+<title>به یادش و به یاریش - مطالب  اسفند 1390</title>
+
+<link rel="alternate" type="application/rss+xml" title="به یادش و به یاریش" href="../../rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title="به یادش و به یاریش" href="../../atom/index.html" />
+
+</head>
+<body>
+<div class="left-bg"><div class="script"></div></div>
+<div class="right-bg"></div>
+<div id="head">
+    <div class="crack"></div>
+    <div class="header" id="top">
+        <div id="menu">
+            <ul>
+                <li><a href="../../rss/index.html" >RSS</a></li>
+                <li><a href="../../atom/index.html">ATOM</a></li>
+                <li><a href="mailto:" title="ارسال ایمیل به مدیر وبلاگ">پست الکترونیک</a></li>
+                <li><a href="javascript:messageForm()" title="تماس با مدیر وبلاگ">تماس با ما</a></li>
+
+            </ul>
+        </div>
+        <div class="logo"><div class="begin"></div>
+            <h1><a href="../../../index.html">به یادش و به یاریش</a></h1>
+            <div class="description">الهی! وَاخْتِمْ لَنا بالّتی هِیَ اَحْمَدُ عاقِبه - صحیفه سجادیه،نیایش33</div>
+        </div>
+    </div>
+
+    <div class="shadow-right"></div>
+
+    <form id="frm-16081735505fdac7ee2a077" method="get" action="http://yadoyar.mihanblog.com/post/search/fid/16081735505fdac7ee2a077"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+        <div class="searchbox"><div id="searchform">
+            <div class="label">جستجو</div>
+            <div class="search"><input type="text" value="" name="search_text" id="s" /></div>
+            <div><input type="submit" id="searchsubmit" value=" صبری بباید" /></div>
+        </div></div>
+    <input type="hidden" name="frm-id" value="16081735505fdac7ee2a077" id="frm-id" /></form>
+</div>
+
+
+<div id="content">
+<div id="main">
+<div class="content clearfix"><div class="cont-r"><div class="cont-l"><div class="cont-bot">
+<div class="grad-hack">
+
+
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		    <div class="post clearfix" id="169">
+        <div class="title">
+            <div class="date">جمعه 26 اسفند 1390</div>
+            <h1><a href="../../169.html" rel="bookmark">درود و بدرود - به همراه روایت &quot;گون از نسیم پرسید/دل من گرفته زین جا/ هوس سفر نداری /ز غبار این بیابان؟&quot;</a></h1>
+
+            <p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="../../author/507250.html">فاطمه دبیری </a> &nbsp;&nbsp;&nbsp;نوع مطلب :<a href="../../category/1.html">کلام دل (نوشته های شخصی)</a>&nbsp;،</p>
+
+
+
+
+        </div>
+
+        <div class="entry clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://yadoyar.mihanblog.com/post/169&amp;title=درود و بدرود - به همراه روایت &quot;گون از نسیم پرسید/دل من گرفته زین جا/ هوس سفر نداری /ز غبار این بیابان؟&quot;">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo"></div><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><P align=center><IMG style="WIDTH: 458px; HEIGHT: 330px" height=374 alt="" hspace=0 src="http://vista.ir/include/photos/photos/CZB20012.jpg" width=440 align=textTop border=0></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%" align=justify><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt">یک روز و نیم درود<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%" align=justify><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt">یک روز و نیم بدرود<o:p></o:p></SPAN></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%" align=justify><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt">یک روز و نیم، تنفس؛<o:p></o:p></SPAN></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%" align=justify><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt">تنفس در آب و هوای پاک و صافِ تکه ای از بهشت و بِهـِشت<A title="" style="mso-footnote-id: ftn1" href="http://www.mihanblog.com/blog/post/new#_ftn1" name=_ftnref1><SPAN class=MsoFootnoteReference><SPAN dir=ltr style="mso-special-character: footnote"><SPAN class=MsoFootnoteReference><SPAN style="FONT-SIZE: 14pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Times New Roman','serif'; mso-bidi-font-size: 16.0pt; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: 'B Lotus'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: FA">[1]</SPAN></SPAN></SPAN></SPAN></A> کوه و دره و دشتِ<A title="" style="mso-footnote-id: ftn2" href="http://www.mihanblog.com/blog/post/new#_ftn2" name=_ftnref2><SPAN class=MsoFootnoteReference><SPAN dir=ltr style="mso-special-character: footnote"><SPAN class=MsoFootnoteReference><SPAN style="FONT-SIZE: 14pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Times New Roman','serif'; mso-bidi-font-size: 16.0pt; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: 'B Lotus'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: FA">[2]</SPAN></SPAN></SPAN></SPAN></A> زمین.<o:p></o:p></SPAN></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%" align=justify><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt">یک روز و نیم آرامش، بدون فرسایش ، بدون تنازع برای بقا<o:p></o:p></SPAN></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%" align=justify><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt">یک روز و نیم</SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; mso-ansi-font-size: 14.0pt; mso-bidi-font-family: 'Times New Roman'"><FONT face="Times New Roman">"</FONT></SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt"> قَطَع</SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt; mso-ascii-font-family: 'Arabic Transparent'">ْ</SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt">تُ البِلاد</SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; mso-ansi-font-size: 14.0pt; mso-bidi-font-family: 'Times New Roman'"><FONT face="Times New Roman">"</FONT></SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt"> و </SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; mso-ansi-font-size: 14.0pt; mso-bidi-font-family: 'Times New Roman'"><FONT face="Times New Roman">"</FONT></SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt">ءَاَد</SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt; mso-ascii-font-family: 'Arabic Transparent'">ْ</SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt">خُل</SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; mso-ansi-font-size: 14.0pt; mso-bidi-font-family: 'Times New Roman'"><FONT face="Times New Roman">"</FONT></SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt"> گویی با همه ی</SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; mso-ansi-font-size: 14.0pt; mso-bidi-font-family: 'Times New Roman'"><FONT face="Times New Roman">"</FONT></SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt"> جَنَیْتُ نَف</SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt; mso-ascii-font-family: 'Arabic Transparent'">ْ</SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt">سی</SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; mso-ansi-font-size: 14.0pt; mso-bidi-font-family: 'Times New Roman'"><FONT face="Times New Roman">"</FONT></SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt"> ها، با همه ی بدی ها و روسیاهی ها.<o:p></o:p></SPAN></P>
+<P align=right><SPAN lang=FA dir=rtl style="FONT-SIZE: 16pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: FA; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">یک روز و نیم مهمانِ ..................</SPAN></P>
+<DIV style="mso-element: footnote-list"><BR clear=all></DIV>
+<DIV style="mso-element: footnote-list">
+<HR align=left width="33%" SIZE=1>
+</DIV>
+<P class=MsoFootnoteText dir=rtl style="MARGIN: 0cm 0cm 0pt; mso-element: footnote" align=justify><A title="" style="mso-footnote-id: ftn1" href="http://www.mihanblog.com/blog/post/new#_ftnref1" name=_ftn1><SPAN class=MsoFootnoteReference><SPAN dir=ltr style="FONT-SIZE: 14pt"><SPAN style="mso-special-character: footnote"><SPAN class=MsoFootnoteReference><SPAN style="FONT-SIZE: 14pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: 'B Lotus'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: FA">[1]</SPAN></SPAN></SPAN></SPAN></SPAN></A><SPAN dir=rtl></SPAN><SPAN style="FONT-SIZE: 14pt; FONT-FAMILY: 'B Lotus'"><SPAN dir=rtl></SPAN> <SPAN lang=FA>فروگذاشتن، رها کردن، ترک کردن( شاهد مثال معنای این فعل در بیتی از حافظ : نه من از پرده ی تقوا به در افتادم و بس، پدرم نیز بهشتِ ابد از دست بِهِش</SPAN></SPAN><SPAN lang=FA style="FONT-SIZE: 14pt; FONT-FAMILY: 'B Lotus'; mso-ascii-font-family: 'Arabic Transparent'; mso-hansi-font-family: 'Arabic Transparent'">ْ</SPAN><SPAN lang=FA style="FONT-SIZE: 14pt; FONT-FAMILY: 'B Lotus'">ت)</SPAN><SPAN lang=FA style="FONT-FAMILY: 'B Lotus'"><o:p></o:p></SPAN></P>
+<P class=MsoFootnoteText dir=rtl style="MARGIN: 0cm 0cm 0pt; mso-element: footnote" align=justify><A title="" style="mso-footnote-id: ftn2" href="http://www.mihanblog.com/blog/post/new#_ftnref2" name=_ftn2><SPAN class=MsoFootnoteReference><SPAN dir=ltr style="FONT-SIZE: 14pt"><SPAN style="mso-special-character: footnote"><SPAN class=MsoFootnoteReference><SPAN style="FONT-SIZE: 14pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: 'B Lotus'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: FA">[2]</SPAN></SPAN></SPAN></SPAN></SPAN></A><SPAN dir=rtl></SPAN><SPAN style="FONT-SIZE: 14pt; FONT-FAMILY: 'B Lotus'"><SPAN dir=rtl></SPAN> <SPAN lang=FA>مراجعه شود به مطلب درّه و دهن دره در همین وبلاگ</SPAN></SPAN><SPAN lang=FA style="FONT-FAMILY: 'B Lotus'"><o:p></o:p></SPAN></P></p>
+            <p><br/><a href='../../169.html'>ادامه مطلب</a>
+            </p>
+
+
+                            <p><b>برچسب ها: </b>
+                                            <a href="../../tag/گون&#32;از&#32;نسیم&#32;پرسید.html" title="گون از نسیم پرسید">گون از نسیم پرسید</a>&nbsp;،
+                                            <a href="../../tag/پیشرفت&#32;اخلاقی&#32;و&#32;تزکیه&#32;نفس.html" title="پیشرفت اخلاقی و تزکیه نفس">پیشرفت اخلاقی و تزکیه نفس</a>&nbsp;،
+                                            <a href="../../tag/امام&#32;رئوف.html" title="امام رئوف">امام رئوف</a>&nbsp;،
+                                            <a href="../../tag/بهشت.html" title="بهشت">بهشت</a>&nbsp;،
+                                            <a href="../../tag/تنفس.html" title="تنفس">تنفس</a>&nbsp;،
+                                            <a href="../../tag/درود&#32;و&#32;بدرود.html" title="درود و بدرود">درود و بدرود</a>&nbsp;،
+                                            <a href="../../tag/همه&#32;آرزویم&#32;اما&#32;چه&#32;کنم&#32;که&#32;بسته&#32;پایم.html" title="همه آرزویم اما چه کنم که بسته پایم">همه آرزویم اما چه کنم که بسته پایم</a>&nbsp;،
+                    <br/>
+                </p>
+            
+                    </div>
+
+        <div class="postmetadata"><div class="comm-num-left" style="width:145px;"><a style="float:left;" target="_self" href="../../169.html#commentlist" class="comment-link">یاران! نظری که نیک اندیش شوم... بیگانه ز قید هستی خویش شوم(<script>setCommentCnt(169)</script>)</a>&nbsp;
+
+            <div style="float: left; margin-left: 11px;  margin-top: -5px;"><script>mihanblogPostLike('169','like')</script></div>
+
+        </div><div class="clear"></div></div>
+    </div>
+    <div class="post clearfix" id="168">
+        <div class="title">
+            <div class="date">پنجشنبه 18 اسفند 1390</div>
+            <h1><a href="../../168.html" rel="bookmark">گویند که ایستاده می میرد او</a></h1>
+
+            <p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="../../author/507250.html">فاطمه دبیری </a> &nbsp;&nbsp;&nbsp;نوع مطلب :<a href="../../category/3.html">کلام شُعرا</a>&nbsp;،</p>
+
+
+
+
+        </div>
+
+        <div class="entry clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://yadoyar.mihanblog.com/post/168&amp;title=گویند که ایستاده می میرد او">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo"></div><P align=center><IMG height=339 alt="" hspace=0 src="http://up.vatandownload.com/images/3u1drz0pjxt78jvp6xz.jpg" width=489 align=textTop border=0></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">بسته است دل پرنده بر جانِ درخت<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">یک عمر پرنده هست مهمان درخت<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 15.6pt; unicode-bidi: embed; TEXT-ALIGN: right"><SPAN lang=AR-SA style="FONT-SIZE: 8pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA"><o:p>&nbsp;</o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">سستی نکند به هر نسیمی که وزید<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">چون ریشه در آب دارد ایمان درخت<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 15.6pt; unicode-bidi: embed; TEXT-ALIGN: right"><SPAN lang=AR-SA style="FONT-SIZE: 8pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA"><o:p>&nbsp;</o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">از دست تبر چه کار بر می آید؟<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">تا هست خدا خودش نگهبان درخت<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 15.6pt; unicode-bidi: embed; TEXT-ALIGN: right"><SPAN lang=AR-SA style="FONT-SIZE: 8pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA"><o:p>&nbsp;</o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">از بس که دعا به حال گل ها کرده است<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">در حال قنوت مانده دستان درخت<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 15.6pt; unicode-bidi: embed; TEXT-ALIGN: right"><SPAN lang=AR-SA style="FONT-SIZE: 8pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA"><o:p>&nbsp;</o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">از حرکت برگ ها به خوبی پیداست<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">باد است که می وزد به فرمان درخت<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 15.6pt; unicode-bidi: embed; TEXT-ALIGN: right"><SPAN lang=AR-SA style="FONT-SIZE: 8pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA"><o:p>&nbsp;</o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">گویند که ایستاده می میرد او<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">یعنی که شهادت است پایان درخت<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center; mso-line-height-alt: 15.6pt" align=center><B><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">زهرا بیدکی<o:p></o:p></SPAN></B></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA"><o:p>&nbsp;</o:p></SPAN></P></p>
+            <p><br/>
+            </p>
+
+
+            
+                    </div>
+
+        <div class="postmetadata"><div class="comm-num-left" style="width:145px;"><a style="float:left;" target="_self" href="../../168.html#commentlist" class="comment-link">نظری زین بلندبینان بس....(<script>setCommentCnt(168)</script>)</a>&nbsp;
+
+            <div style="float: left; margin-left: 11px;  margin-top: -5px;"><script>mihanblogPostLike('168','like')</script></div>
+
+        </div><div class="clear"></div></div>
+    </div>
+    <div class="post clearfix" id="167">
+        <div class="title">
+            <div class="date">پنجشنبه 18 اسفند 1390</div>
+            <h1><a href="../../167.html" rel="bookmark">دعا کن من نیز، این چنین کال نمانم به شهادت برسم</a></h1>
+
+            <p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="../../author/507250.html">فاطمه دبیری </a> &nbsp;&nbsp;&nbsp;نوع مطلب :<a href="../../category/3.html">کلام شُعرا</a>&nbsp;،</p>
+
+
+
+
+        </div>
+
+        <div class="entry clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://yadoyar.mihanblog.com/post/167&amp;title=دعا کن من نیز، این چنین کال نمانم به شهادت برسم">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo"></div><P align=center><IMG style="WIDTH: 218px; HEIGHT: 176px" height=291 alt="" hspace=0 src="http://www.informl.com/wp-content/uploads/2008/03/green_apple.jpg" width=256 align=textTop border=0></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">زود بیدار شدم تا سرِ ساعت برسم<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">باید این بار به غوغای قیامت برسم<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 15.6pt; unicode-bidi: embed; TEXT-ALIGN: right"><SPAN lang=AR-SA style="FONT-SIZE: 7pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA"><o:p>&nbsp;</o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">من به قد قامتِ یاران نرسیدم، ای کاش<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">لااقل رکعت آخر به جماعت برسم<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 15.6pt; unicode-bidi: embed; TEXT-ALIGN: right"><SPAN lang=AR-SA style="FONT-SIZE: 7pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA"><o:p>&nbsp;</o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">آه،مادر! مگر از من چه گناهی سر زد<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">که دعا کردی و گفتی به سلامت برسم؟<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 15.6pt; unicode-bidi: embed; TEXT-ALIGN: right"><SPAN lang=AR-SA style="FONT-SIZE: 7pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA"><o:p>&nbsp;</o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">طمع بوسه مدار از لبم ای چشمه که من<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">نذر دارم لب تشنه به زیارت برسم<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 15.6pt; unicode-bidi: embed; TEXT-ALIGN: right"><SPAN lang=AR-SA style="FONT-SIZE: 7pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA"><o:p>&nbsp;</o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">سیب سرخی سر نیزه زدست...دعا کن من نیز<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: right; mso-line-height-alt: 15.6pt"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">این چنین کال نمانم به شهادت برسم<o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: center; mso-line-height-alt: 15.6pt" align=center><B><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; FONT-FAMILY: 'B Lotus'; mso-themecolor: text1; mso-bidi-language: AR-SA">محمدمهدی سیار<o:p></o:p></SPAN></B></P>
+<P align=center>&nbsp;</P></p>
+            <p><br/>
+            </p>
+
+
+            
+                    </div>
+
+        <div class="postmetadata"><div class="comm-num-left" style="width:145px;"><a style="float:left;" target="_self" href="../../167.html#commentlist" class="comment-link">یا رب نظری ز پاکبازانم ده...(<script>setCommentCnt(167)</script>)</a>&nbsp;
+
+            <div style="float: left; margin-left: 11px;  margin-top: -5px;"><script>mihanblogPostLike('167','like')</script></div>
+
+        </div><div class="clear"></div></div>
+    </div>
+    <div class="post clearfix" id="166">
+        <div class="title">
+            <div class="date">چهارشنبه 17 اسفند 1390</div>
+            <h1><a href="../../166.html" rel="bookmark">قدرت عهد شباب،می توانست مرا تا به خدا پیش بَرَد! </a></h1>
+
+            <p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="../../author/507250.html">فاطمه دبیری </a> &nbsp;&nbsp;&nbsp;نوع مطلب :<a href="../../category/3.html">کلام شُعرا</a>&nbsp;،</p>
+
+
+
+
+        </div>
+
+        <div class="entry clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://yadoyar.mihanblog.com/post/166&amp;title=قدرت عهد شباب،می توانست مرا تا به خدا پیش بَرَد! ">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo"></div><P align=center><IMG style="WIDTH: 541px; HEIGHT: 352px" height=470 alt="" hspace=0 src="http://www.smstak.com/wp-content/uploads/2011/01/30.jpg" width=577 align=textTop border=0></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: right"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Zar'; mso-themecolor: text1; mso-bidi-language: AR-SA">طی شد این عمر تو دانی به چه سان ؟ </SPAN><SPAN dir=ltr style="FONT-SIZE: 16pt; COLOR: black; LINE-HEIGHT: 150%; mso-themecolor: text1; mso-bidi-font-family: 'B Zar'"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: right"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Zar'; mso-bidi-language: AR-SA; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">پوچ و بس تند چنان باد دمان </SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Zar'"><o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: right"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Zar'; mso-bidi-language: AR-SA; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">همه تقصیر من است این</SPAN><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: 'Tahoma','sans-serif'; mso-bidi-language: AR-SA">&nbsp;</SPAN><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Zar'; mso-bidi-language: AR-SA; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">و خودم می دانم كه نكردم فكری،</SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Zar'"><o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: right"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Zar'; mso-bidi-language: AR-SA; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">كه تأمّل ننمودم روزی ، ساعتی یا آنی </SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Zar'"><o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: right"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Zar'; mso-bidi-language: AR-SA; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">كه چه سان می گذرد عمر گران؟</SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Zar'"><o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: right"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Zar'; mso-bidi-language: AR-SA; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">كودكی رفت به بازی ، به فراغت ، به نشاط </SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Zar'"><o:p></o:p></SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: right"><SPAN lang=AR-SA style="FONT-SIZE: 16pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Zar'; mso-bidi-language: AR-SA; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">فارغ از نیك و بد و مرگ و حیات </SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Zar'"><o:p></o:p></SPAN></P>
+<P align=right><SPAN lang=AR-SA dir=rtl style="FONT-SIZE: 16pt; COLOR: black; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Zar'; mso-bidi-language: AR-SA; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma; mso-ansi-language: EN-US; mso-fareast-language: EN-US">همه گفتند: .............</SPAN></P></p>
+            <p><br/><a href='../../166.html'>ادامه مطلب</a>
+            </p>
+
+
+                            <p><b>برچسب ها: </b>
+                                            <a href="../../tag/گذر&#32;عمر.html" title="گذر عمر">گذر عمر</a>&nbsp;،
+                                            <a href="../../tag/کودکی&#32;جوانی&#32;پیری.html" title="کودکی جوانی پیری">کودکی جوانی پیری</a>&nbsp;،
+                    <br/>
+                </p>
+            
+                    </div>
+
+        <div class="postmetadata"><div class="comm-num-left" style="width:145px;"><a style="float:left;" target="_self" href="../../166.html#commentlist" class="comment-link">یا رب نظری ز پاکبازانم ده...(<script>setCommentCnt(166)</script>)</a>&nbsp;
+
+            <div style="float: left; margin-left: 11px;  margin-top: -5px;"><script>mihanblogPostLike('166','like')</script></div>
+
+        </div><div class="clear"></div></div>
+    </div>
+    <div class="post clearfix" id="165">
+        <div class="title">
+            <div class="date">شنبه 13 اسفند 1390</div>
+            <h1><a href="../../165.html" rel="bookmark">شَرْبَةِ الظَّمْئان = اُقَدِّمُ عَلی رِضایَ رِضاهُما </a></h1>
+
+            <p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="../../author/507250.html">فاطمه دبیری </a> &nbsp;&nbsp;&nbsp;نوع مطلب :<a href="../../category/2.html">کلام مطهر</a>&nbsp;،</p>
+
+
+
+
+        </div>
+
+        <div class="entry clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://yadoyar.mihanblog.com/post/165&amp;title=شَرْبَةِ الظَّمْئان = اُقَدِّمُ عَلی رِضایَ رِضاهُما ">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo"></div><P align=center><IMG style="WIDTH: 238px; HEIGHT: 233px" height=300 alt="" hspace=0 src="http://www.img.nazfun.com/2011/08/e1794829354713ce9075c4246c3e6d7b.jpg" width=316 align=textTop border=0></P><B><SPAN lang=FA style="FONT-SIZE: 14pt; COLOR: #1f497d; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 12.0pt; mso-themecolor: text2"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%; TEXT-ALIGN: center" align=center><B><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'"><FONT color=#000000>وَاخْصُصِ اللّهُمَّ والِدَیَّ بِالْکَرامَةِ لَدَیْکَ و الصَّلوةِ مِنْکَ یا اَرْحَمَ الرّاحِمینَ:<o:p></o:p></FONT></SPAN></B></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%; TEXT-ALIGN: center" align=center><B><SPAN lang=FA style="FONT-SIZE: 14pt; COLOR: #1f497d; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-themecolor: text2">الهی! پدر و مادر مرا به کرامت نزد خود و درود از سوی خود اختصاص ده ، </SPAN></B></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%; TEXT-ALIGN: center" align=center><B><SPAN lang=FA style="FONT-SIZE: 14pt; COLOR: #1f497d; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-themecolor: text2">ای مهربان ترین مهربانان</SPAN></B></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%; TEXT-ALIGN: center" align=left><B><SPAN lang=FA style="FONT-SIZE: 14pt; COLOR: #1f497d; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-themecolor: text2"><FONT color=#cc0000>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; و شربة الظمئان در ادامه ی مطلب</FONT></SPAN></B></o:p></SPAN></B></P></p>
+            <p><br/><a href='../../165.html'>ادامه مطلب</a>
+            </p>
+
+
+                            <p><b>برچسب ها: </b>
+                                            <a href="../../tag/فرازهایی&#32;از&#32;نیایش&#32;امام&#32;سجاد&#32;در&#32;حق&#32;والدین.html" title="فرازهایی از نیایش امام سجاد در حق والدین">فرازهایی از نیایش امام سجاد در حق والدین</a>&nbsp;،
+                    <br/>
+                </p>
+            
+                    </div>
+
+        <div class="postmetadata"><div class="comm-num-left" style="width:145px;"><a style="float:left;" target="_self" href="../../165.html#commentlist" class="comment-link">یا رب نظری ز پاکبازانم ده...(<script>setCommentCnt(165)</script>)</a>&nbsp;
+
+            <div style="float: left; margin-left: 11px;  margin-top: -5px;"><script>mihanblogPostLike('165','like')</script></div>
+
+        </div><div class="clear"></div></div>
+    </div>
+    <div class="post clearfix" id="164">
+        <div class="title">
+            <div class="date">جمعه 12 اسفند 1390</div>
+            <h1><a href="../../164.html" rel="bookmark">عصر ِاتوبوس های تندرو -BRT</a></h1>
+
+            <p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="../../author/507250.html">فاطمه دبیری </a> &nbsp;&nbsp;&nbsp;نوع مطلب :<a href="../../category/1.html">کلام دل (نوشته های شخصی)</a>&nbsp;،</p>
+
+
+
+
+        </div>
+
+        <div class="entry clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://yadoyar.mihanblog.com/post/164&amp;title=عصر ِاتوبوس های تندرو -BRT">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo"></div>
+<p align="center"><img style="WIDTH: 436px; HEIGHT: 277px" alt="" src="http://www.namadha.ir/fa/wp-content/uploads/6_891103_L600.jpg" align="textTop" border="0" width="472" height="381" hspace="0"></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%" align="justify"><span style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt" lang="FA">دوشنبه بود که با نِع</span><span style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt; mso-ascii-font-family: 'Arabic Transparent'; mso-hansi-font-family: 'Arabic Transparent'" lang="FA">ْ</span><span style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt" lang="FA">مَ العونم، چند نوبتی </span><font face="Times New Roman"><span dir="ltr" style="FONT-SIZE: 14pt; LINE-HEIGHT: 150%; mso-bidi-font-size: 16.0pt">BRT</span><span dir="rtl"></span></font><span style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt" lang="FA"><span dir="rtl"></span> سواری</span><span style="FONT-SIZE: 14pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 12.0pt" lang="FA"> </span><span style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt" lang="FA">کردیم. بله ،<b> </b></span><font face="Times New Roman"><span dir="ltr" style="FONT-SIZE: 14pt; LINE-HEIGHT: 150%; mso-bidi-font-size: 16.0pt">BRT</span><span dir="rtl"></span></font><span style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt" lang="FA"><span dir="rtl"></span> ، همان اتوبوس های تندروی تهران مدرن، همان اتوبوس های تندرویی که شباهت عجیبی با قوطی های کبریت دارد، همان اتوبوس های تندرویی که جرقه ی تندرُویی و تندرَوی را به سرعتِ شعله پخش کن ِاجاق گاز، نفر به نفر، نشر و پخش می کند و آهسته آهسته اتوبوس را به کپسولی در آستانه ی انفجار نزدیک و نزدیک تر می کند.<!--?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /--><o:p></o:p></span></p>
+<div style="mso-element: footnote-list" align="justify"><font size="5"><span dir="rtl" style="FONT-SIZE: 16pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: FA" lang="FA">در همین اتوبوس تندرو بود که من و نعم العونم، فارغ از هیاهوها و تندرَوی ها و تندرُویی های اطرافیان، دمی هم</span><span dir="rtl" style="FONT-SIZE: 16pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Arabic Transparent'; mso-ansi-font-size: 14.0pt; mso-ascii-font-family: 'Arabic Transparent'; mso-hansi-font-family: 'Times New Roman'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: FA" lang="FA">ْ</span><span dir="rtl" style="FONT-SIZE: 16pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: FA" lang="FA"> صحبتی را از چنگ روزگار به غنیمت گرفته بودیم<a title="" style="mso-footnote-id: ftn1" href="http://www.mihanblog.com/blog/post/new#_ftn1" name="_ftnref1"><span class="MsoFootnoteReference"><span dir="ltr" style="mso-special-character: footnote"><span class="MsoFootnoteReference"><span style="FONT-SIZE: 14pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Times New Roman','serif'; mso-bidi-font-size: 16.0pt; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: FA; mso-bidi-font-family: 'B Lotus'">[1]</span></span></span></span></a> و غبارهای دوریِ یک ماهه مان را تند تند می زدودیم و تند تند از ایستگاه موردنظر، دور و دورتر می شدیم. نمی دانم به خودمان آمدیم یا به خودمان آوردند که ..........</span></font></div>
+<div style="mso-element: footnote-list"><br clear="all"></div>
+<div style="mso-element: footnote-list">
+<hr align="left" size="1" width="33%">
+</div>
+<div id="ftn1" style="mso-element: footnote">
+<p class="MsoFootnoteText" dir="rtl" style="MARGIN: 0cm 0cm 0pt"><a title="" style="mso-footnote-id: ftn1" href="http://www.mihanblog.com/blog/post/new#_ftnref1" name="_ftn1"><span class="MsoFootnoteReference"><span dir="ltr" style="FONT-SIZE: 16pt"><span style="mso-special-character: footnote"><span class="MsoFootnoteReference"><span style="FONT-SIZE: 16pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: FA; mso-bidi-font-family: 'B Lotus'">[<font size="4">1]</font></span></span></span></span></span></a><span dir="rtl"></span><span style="FONT-SIZE: 16pt; FONT-FAMILY: 'B Lotus'"><span dir="rtl"></span><font size="4"> <span lang="FA">در جَنگ سرنوشت، دمی صحبتِ تو را / از چنگ روزگار غنیمت گرفته ام ( منزوی)</span></font></span><span style="FONT-FAMILY: 'B Lotus'" lang="FA"><o:p></o:p></span></p></div>
+<div style="mso-element: footnote-list"><br clear="all"></div><font size="3" face="Times New Roman">
+</font><div style="mso-element: footnote-list"><font size="3" face="Times New Roman"></font><span style="FONT-SIZE: 16pt; FONT-FAMILY: 'B Lotus'"><span lang="FA"></span></span><span style="FONT-FAMILY: 'B Lotus'" lang="FA"><o:p></o:p></span>&nbsp;</div>
+
+</p>
+            <p><br/><a href='../../164.html'>ادامه مطلب</a>
+            </p>
+
+
+                            <p><b>برچسب ها: </b>
+                                            <a href="../../tag/اتوبوس&#32;های&#32;تندرو.html" title="اتوبوس های تندرو">اتوبوس های تندرو</a>&nbsp;،
+                                            <a href="../../tag/BRT.html" title="BRT">BRT</a>&nbsp;،
+                                            <a href="../../tag/ایستگاه&#32;نبوت.html" title="ایستگاه نبوت">ایستگاه نبوت</a>&nbsp;،
+                                            <a href="../../tag/امامت.html" title="امامت">امامت</a>&nbsp;،
+                                            <a href="../../tag/خانه&#32;تکانی.html" title="خانه تکانی">خانه تکانی</a>&nbsp;،
+                    <br/>
+                </p>
+            
+                    </div>
+
+        <div class="postmetadata"><div class="comm-num-left" style="width:145px;"><a style="float:left;" target="_self" href="../../164.html#commentlist" class="comment-link">یاران! نظری که نیک اندیش شوم... بیگانه ز قید هستی خویش شوم(<script>setCommentCnt(164)</script>)</a>&nbsp;
+
+            <div style="float: left; margin-left: 11px;  margin-top: -5px;"><script>mihanblogPostLike('164','like')</script></div>
+
+        </div><div class="clear"></div></div>
+    </div>
+    <div class="post clearfix" id="162">
+        <div class="title">
+            <div class="date">چهارشنبه 10 اسفند 1390</div>
+            <h1><a href="../../162.html" rel="bookmark">وعده های انتخاباتی</a></h1>
+
+            <p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="../../author/507250.html">فاطمه دبیری </a> &nbsp;&nbsp;&nbsp;نوع مطلب :<a href="../../category/3.html">کلام شُعرا</a>&nbsp;،</p>
+
+
+
+
+        </div>
+
+        <div class="entry clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://yadoyar.mihanblog.com/post/162&amp;title=وعده های انتخاباتی">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo"></div><P align=center><IMG height=275 alt="" hspace=0 src="http://khabaronline.ir/Images/News/Smal_Pic/4-12-1390/IMAGE634655670711669207.jpg" width=443 align=textTop border=0></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%"><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 12.0pt">گر به مجلس راه یابد پای من<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%"><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 12.0pt">هر چه ویرانی است عمران می کنم<o:p></o:p></SPAN></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%"><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 12.0pt">مشکلات شهرتان را رتق و فتق<o:p></o:p></SPAN></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%"><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 12.0pt">پشت میز و پشت فرمان می کنم<o:p></o:p></SPAN></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%"><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 12.0pt">کوچه های تنگ را هر شب فراخ<o:p></o:p></SPAN></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%"><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 12.0pt">هر چه بن بست است دالان می کنم<o:p></o:p></SPAN></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%"><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 12.0pt">چاله های شهر را چاه عمیق<o:p></o:p></SPAN></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%"><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 12.0pt">هر چه دالان را خیابان می کنم.............<o:p></o:p></SPAN></P>
+<P align=center>&nbsp;</P></p>
+            <p><br/><a href='../../162.html'>ادامه مطلب</a>
+            </p>
+
+
+                            <p><b>برچسب ها: </b>
+                                            <a href="../../tag/12&#32;اسفند.html" title="12 اسفند">12 اسفند</a>&nbsp;،
+                                            <a href="../../tag/انتخابات&#32;مجلس&#32;شورای&#32;اسلامی.html" title="انتخابات مجلس شورای اسلامی">انتخابات مجلس شورای اسلامی</a>&nbsp;،
+                                            <a href="../../tag/وعده&#32;های&#32;انتخاباتی.html" title="وعده های انتخاباتی">وعده های انتخاباتی</a>&nbsp;،
+                                            <a href="../../tag/تبلیغات&#32;انتخاباتی.html" title="تبلیغات انتخاباتی">تبلیغات انتخاباتی</a>&nbsp;،
+                    <br/>
+                </p>
+            
+                    </div>
+
+        <div class="postmetadata"><div class="comm-num-left" style="width:145px;"><a style="float:left;" target="_self" href="../../162.html#commentlist" class="comment-link">یاران! نظری که نیک اندیش شوم...(<script>setCommentCnt(162)</script>)</a>&nbsp;
+
+            <div style="float: left; margin-left: 11px;  margin-top: -5px;"><script>mihanblogPostLike('162','like')</script></div>
+
+        </div><div class="clear"></div></div>
+    </div>
+    <div class="post clearfix" id="161">
+        <div class="title">
+            <div class="date">سه شنبه 9 اسفند 1390</div>
+            <h1><a href="../../161.html" rel="bookmark">اُدْعونی اَسْتَجِب لَکُم</a></h1>
+
+            <p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="../../author/507250.html">فاطمه دبیری </a> &nbsp;&nbsp;&nbsp;نوع مطلب :<a href="../../category/5.html">کلام صاحب نظران،علماء</a>&nbsp;،</p>
+
+
+
+
+        </div>
+
+        <div class="entry clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://yadoyar.mihanblog.com/post/161&amp;title=اُدْعونی اَسْتَجِب لَکُم">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo"></div><P align=center><IMG height=203 alt="" hspace=0 src="http://amirdehnad.com/daneshgara/image/556A.jpg" width=211 align=textTop border=0></P>
+<P align=justify><SPAN lang=FA dir=rtl style="FONT-SIZE: 16pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt; mso-ascii-font-family: 'Times New Roman'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: FA">فرمود بعضی روز قیامت می آیند؛ می بینند یک چیز بزرگی را آوردند و به یکی دادند. این عملش کم بود، داشت بدبختی هایش را ضجّه می زد، یک چیزی آوردند گذاشتند توی ترازو، هر چه سنگ بود همه را برد به آسمان پرت کرد؛ این قدر سنگین بود. <SPAN lang=FA dir=rtl style="FONT-SIZE: 16pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt; mso-ascii-font-family: 'Times New Roman'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: FA">گفت: پروردگارا در عُمرم، عملی که مناسب باشد به جا نیاوردم که چنین چیزی نصیب من بشود! این چیست؟ فرمود: .......<FONT color=#ff0000>متن کامل در ادامه مطلب</FONT></SPAN></SPAN></P></p>
+            <p><br/><a href='../../161.html'>ادامه مطلب</a>
+            </p>
+
+
+                            <p><b>برچسب ها: </b>
+                                            <a href="../../tag/دعا.html" title="دعا">دعا</a>&nbsp;،
+                                            <a href="../../tag/حاجت.html" title="حاجت">حاجت</a>&nbsp;،
+                                            <a href="../../tag/ادعونی&#32;استجب&#32;لکم.html" title="ادعونی استجب لکم">ادعونی استجب لکم</a>&nbsp;،
+                    <br/>
+                </p>
+            
+                    </div>
+
+        <div class="postmetadata"><div class="comm-num-left" style="width:145px;"><a style="float:left;" target="_self" href="../../161.html#commentlist" class="comment-link">نظری زین بلندبینان بس...(<script>setCommentCnt(161)</script>)</a>&nbsp;
+
+            <div style="float: left; margin-left: 11px;  margin-top: -5px;"><script>mihanblogPostLike('161','like')</script></div>
+
+        </div><div class="clear"></div></div>
+    </div>
+    <div class="post clearfix" id="160">
+        <div class="title">
+            <div class="date">یکشنبه 7 اسفند 1390</div>
+            <h1><a href="../../160.html" rel="bookmark">همایش جوانه های فتح خیبر و ذره بینی ها و نبینی هایش</a></h1>
+
+            <p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="../../author/507250.html">فاطمه دبیری </a> &nbsp;&nbsp;&nbsp;نوع مطلب :<a href="../../category/1.html">کلام دل (نوشته های شخصی)</a>&nbsp;،</p>
+
+
+
+
+        </div>
+
+        <div class="entry clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://yadoyar.mihanblog.com/post/160&amp;title=همایش جوانه های فتح خیبر و ذره بینی ها و نبینی هایش">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo"></div><P align=center><IMG alt="" hspace=0 src="http://www.modir21.com/wp-content/uploads/2010/05/Zare-bin-End.jpg" align=textTop border=0></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%; TEXT-ALIGN: center" align=center><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt">حرف ها دارم، اما بزنم یا نزنم!<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%; TEXT-ALIGN: center" align=center><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt">با تو اَم ، با تو ! خدا را بزنم یا نزنم؟!<A title="" style="mso-footnote-id: ftn1" href="http://www.mihanblog.com/blog/post/new#_ftn1" name=_ftnref1><SPAN class=MsoFootnoteReference><SPAN dir=ltr style="mso-special-character: footnote"><SPAN class=MsoFootnoteReference><SPAN style="FONT-SIZE: 14pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Times New Roman','serif'; mso-bidi-font-size: 16.0pt; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: 'B Lotus'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: FA">[1]</SPAN></SPAN></SPAN></SPAN></A><o:p></o:p></SPAN></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%" align=justify><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt">جمعه5 اسفندماه1390 بود، درون و بُرون سالن ، مملو بود از جمعیت.<o:p></o:p></SPAN></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%" align=justify><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt">جمعیتی که آمده بودند به نظاره ی همایش جوانه های فتح خیبر&nbsp;بنشینند. <o:p></o:p></SPAN></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%" align=justify><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt">جمعیتی که با وجود تلاش های چند روزه و بی وقفه ی گروهی محجوب و مخلص؛ <B>پیش</B> هایش، به هزار و یک دلیل، ذره <B>بینی</B> نشده بود.<o:p></o:p></SPAN></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%" align=justify><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt">جمعیتی که همیشه ی خدا، جیب هایش مملو از ذره بین های ضعف بینی است که سبقه ی بدبینی اش به صدها هزار تجربه ی همایش هایی می رسد که درصد نمایش بودنش، بیداد می کند.<o:p></o:p></SPAN></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%" align=justify><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt">و گروهی که تعدادشان به انگشتانِ دست هم نمی رسد؛ باید به هزار و یک دلیل، قندِ خونِ همایش بچه های بالا -که دَم به دَم هم می افتد- را ارتقا بدهد تا شاید برای تداوم حرکت های جهادگونه شان، از هزاران وعده ی خوبان، یکی وفا بکند.<o:p></o:p></SPAN></P>
+<P class=MsoNormal dir=rtl style="MARGIN: 0cm 0cm 10pt; LINE-HEIGHT: 150%"><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt">گروهی که </SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; mso-ansi-font-size: 14.0pt; mso-bidi-font-family: 'Times New Roman'"><FONT face="Times New Roman">"</FONT></SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt">دلا بسوز که سوزِ تو کارها بکند</SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; mso-ansi-font-size: 14.0pt; mso-bidi-font-family: 'Times New Roman'"><FONT face="Times New Roman">"</FONT></SPAN><SPAN lang=FA style="FONT-SIZE: 16pt; LINE-HEIGHT: 150%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt"> گویان، می دوید و می شنید:.........<o:p></o:p></SPAN></P>
+<DIV style="mso-element: footnote-list"><BR clear=all>
+<HR align=left width="33%" SIZE=1>
+
+<DIV id=ftn1 style="mso-element: footnote">
+<P class=MsoFootnoteText dir=rtl style="MARGIN: 0cm 0cm 0pt"><A title="" style="mso-footnote-id: ftn1" href="http://www.mihanblog.com/blog/post/new#_ftnref1" name=_ftn1><SPAN class=MsoFootnoteReference><SPAN dir=ltr style="FONT-SIZE: 16pt"><SPAN style="mso-special-character: footnote"><SPAN class=MsoFootnoteReference><SPAN style="FONT-SIZE: 16pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'Times New Roman','serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: 'B Lotus'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: FA">[1]</SPAN></SPAN></SPAN></SPAN></SPAN></A><SPAN dir=rtl></SPAN><SPAN style="FONT-SIZE: 16pt; FONT-FAMILY: 'B Lotus'"><SPAN dir=rtl></SPAN> <SPAN lang=FA>قیصر امین پور<o:p></o:p></SPAN></SPAN></P></DIV></DIV></p>
+            <p><br/><a href='../../160.html'>ادامه مطلب</a>
+            </p>
+
+
+                            <p><b>برچسب ها: </b>
+                                            <a href="../../tag/همایش.html" title="همایش">همایش</a>&nbsp;،
+                                            <a href="../../tag/ذره&#32;بین.html" title="ذره بین">ذره بین</a>&nbsp;،
+                                            <a href="../../tag/جشنواره.html" title="جشنواره">جشنواره</a>&nbsp;،
+                                            <a href="../../tag/نمایش.html" title="نمایش">نمایش</a>&nbsp;،
+                    <br/>
+                </p>
+            
+                    </div>
+
+        <div class="postmetadata"><div class="comm-num-left" style="width:145px;"><a style="float:left;" target="_self" href="../../160.html#commentlist" class="comment-link">یاران! نظری که نیک اندیش شوم...(<script>setCommentCnt(160)</script>)</a>&nbsp;
+
+            <div style="float: left; margin-left: 11px;  margin-top: -5px;"><script>mihanblogPostLike('160','like')</script></div>
+
+        </div><div class="clear"></div></div>
+    </div>
+    <div class="post clearfix" id="159">
+        <div class="title">
+            <div class="date">یکشنبه 7 اسفند 1390</div>
+            <h1><a href="../../159.html" rel="bookmark">بایست!</a></h1>
+
+            <p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="../../author/507250.html">فاطمه دبیری </a> &nbsp;&nbsp;&nbsp;نوع مطلب :<a href="../../category/5.html">کلام صاحب نظران،علماء</a>&nbsp;،</p>
+
+
+
+
+        </div>
+
+        <div class="entry clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://yadoyar.mihanblog.com/post/159&amp;title=بایست!">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo"></div><P align=center><IMG alt="" hspace=0 src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Stop_in_Iran.svg/120px-Stop_in_Iran.svg.png" align=textTop border=0></P>
+<P align=center><FONT face="B Lotus" color=#cc0000 size=5>اِنَّ لِربِّکم فی ایام دَهْرِکُم نَفَحاتٍ اَلا فَتَعَرَّضوا لَها... خودتان را به آن عرضه کنید. عرضه کنید؛ یعنی چه؟ یعنی بایست</FONT></P>
+<P align=justify><SPAN lang=FA dir=rtl style="FONT-SIZE: 16pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Lotus'; mso-ansi-font-size: 14.0pt; mso-ascii-font-family: 'Times New Roman'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-hansi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: FA">هر وقت غذای خوشمزه در خودت دیدی، <FONT color=#990000>آنجا بایست</FONT>. هر جا حدیثی، آیه ای، دعایی به دلت خورد بایست. مبادا یک وقت بگذاری و بروی! صبر کن. تهِ آن ظرف را قشنگ، انگشت بکش و بخور و وقتی تمام شد برو. اگر در جایی با رفیقت هم بودی؛ بگو شما برو ، من اینجا کار دارم. آن وقت بایست، گریه آمد، گریه کن. خنده آمد ، خنده کن. هیچکدام نبود ، هیچکاری نکن؛ فقط بایست و تهِ ظرف را قشنگ ، انگشت بکش. اگر قرآن می خواندی؛ آیه ای جلوی تو را گرفت و به دلت خورد و پرده ای برداشته شد، مبادا رها کنی و بروی!.......... <FONT color=#cc0000>بقیه در ادامه ی مطلب</FONT></SPAN></P></p>
+            <p><br/><a href='../../159.html'>ادامه مطلب</a>
+            </p>
+
+
+                            <p><b>برچسب ها: </b>
+                                            <a href="../../tag/نفحه.html" title="نفحه">نفحه</a>&nbsp;،
+                                            <a href="../../tag/بایست.html" title="بایست">بایست</a>&nbsp;،
+                                            <a href="../../tag/حاج&#32;اسماعیل&#32;دولابی.html" title="حاج اسماعیل دولابی">حاج اسماعیل دولابی</a>&nbsp;،
+                    <br/>
+                </p>
+            
+                    </div>
+
+        <div class="postmetadata"><div class="comm-num-left" style="width:145px;"><a style="float:left;" target="_self" href="../../159.html#commentlist" class="comment-link">یا رب نظری ز پاکبازانم ده...(<script>setCommentCnt(159)</script>)</a>&nbsp;
+
+            <div style="float: left; margin-left: 11px;  margin-top: -5px;"><script>mihanblogPostLike('159','like')</script></div>
+
+        </div><div class="clear"></div></div>
+    </div>
+    <div class="post clearfix" id="158">
+        <div class="title">
+            <div class="date">شنبه 6 اسفند 1390</div>
+            <h1><a href="../../158.html" rel="bookmark">جبهه و جبهه ها</a></h1>
+
+            <p class="author">&nbsp;&nbsp;&nbsp;نوشته شده توسط: <a href="../../author/507250.html">فاطمه دبیری </a> &nbsp;&nbsp;&nbsp;نوع مطلب :<a href="../../category/4.html">کلامک (کوتاه نوشت شخصی)</a>&nbsp;،<a href="../../category/5.html">کلام صاحب نظران،علماء</a>&nbsp;،<a href="../../category/8.html">کلام شهدا</a>&nbsp;،</p>
+
+
+
+
+        </div>
+
+        <div class="entry clearfix">
+
+            <div class="cb_share clearfix">
+                <a rel="nofollow" target="_blank" href="http://www.cloob.com/share/link/add/?url=http://yadoyar.mihanblog.com/post/158&amp;title=جبهه و جبهه ها">
+                    ارسال به <img title="ارسال به 100 درجه کلوب دات کام" alt="ارسال به 100 درجه کلوب دات کام" src="http://www.cloob.com/public/public/images/icon/100c.gif" />
+                </a>
+            </div>
+
+            <p><div class="owner_photo"></div><P align=center><IMG style="WIDTH: 443px; HEIGHT: 266px" height=360 alt="" hspace=0 src="http://www.img4up.com/up2/75058185473302191109.jpg" width=405 align=textTop border=0>&nbsp;</P><SPAN lang=FA dir=rtl style="FONT-SIZE: 12pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Lotus'">
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt; TEXT-ALIGN: center" align=center><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Lotus'">دیروز 300 هزار شهید ، در یک «جبهه» جا شدند ،</SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt; TEXT-ALIGN: center" align=center><SPAN lang=FA style="FONT-SIZE: 18pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Lotus'">امروز در این همه جبهه، 300 نماینده جا نمی شوند!!</SPAN></P>
+<P dir=rtl style="MARGIN: 0cm 0cm 10pt; TEXT-ALIGN: left" align=right><SPAN lang=FA style="FONT-SIZE: 14pt; LINE-HEIGHT: 115%; FONT-FAMILY: 'B Lotus'">(حسین قدیانی)</SPAN></P></SPAN></p>
+            <p><br/>
+            </p>
+
+
+                            <p><b>برچسب ها: </b>
+                                            <a href="../../tag/جبهه.html" title="جبهه">جبهه</a>&nbsp;،
+                                            <a href="../../tag/نماینده.html" title="نماینده">نماینده</a>&nbsp;،
+                                            <a href="../../tag/انتخابات.html" title="انتخابات">انتخابات</a>&nbsp;،
+                    <br/>
+                </p>
+            
+                    </div>
+
+        <div class="postmetadata"><div class="comm-num-left" style="width:145px;"><a style="float:left;" target="_self" href="../../158.html#commentlist" class="comment-link">یا رب نظری ز پاکبازانم ده...(<script>setCommentCnt(158)</script>)</a>&nbsp;
+
+            <div style="float: left; margin-left: 11px;  margin-top: -5px;"><script>mihanblogPostLike('158','like')</script></div>
+
+        </div><div class="clear"></div></div>
+    </div>
+
+<!-- Comment -->
+
+
+<div>
+
+    <style>
+
+            /*** COMMENT BODY***/
+        .comment_body{
+            background: #D9CEB2;
+            margin:10px;
+            border-radius: 5px;
+            border-right:5px solid #beb398;
+            overflow:hidden
+        }
+
+
+        .comment .comment_reply {
+            background: #A79C8E;
+            border-right: 5px solid #665f56;
+            border-radius: 5px;
+            font-size: 12px;
+            width: 350px;
+            margin-top:10px;
+            overflow:hidden
+        }
+
+
+        .comment .name {
+            font-weight: 600;
+            color: #4E3E09;
+            padding-right: 5px;
+            text-align: right;
+            line-height: 26px;
+            float: right;
+        }
+
+
+        .comment .date_comment {
+            font-size: 10px;
+            padding: 5px;
+            color: #7A6A53;
+            float: left;
+        }
+
+
+        .comment .comemnt_web {
+            padding: 5px 0 5px 15px; color: #999; direction: ltr; text-align: left;
+
+        }
+
+
+        .comment .comemnt_web a {
+            color: #554c3d;
+            text-decoration: underline;
+        }
+
+
+        .comment_det{
+            border-bottom:1px solid #9f9680;
+            padding:4px;
+
+        }
+
+        .comment .name,.date_comment,.comemnt_text,.comment_reply{
+            margin-right:3px;
+            padding-right:3px;
+
+        }
+
+            /**** COMMENT FORM ****/
+
+        .comment_form {
+            background: none repeat scroll 0 0 #958773;
+            border-radius: 5px 5px 5px 5px;
+            border-right: 5px solid #8e7b61;
+            direction: rtl;
+            margin: 10px;
+            padding: 20px;
+        }
+
+
+
+        .comment_form label {
+            width: 100px;
+            display: block;
+            float: right;
+            text-align: left;
+            font-size: 11px;
+            color: white;
+            padding-left: 10px;
+        }
+
+
+        .comment_form .comment_form_row {
+            margin: 3px 0;
+        }
+
+
+        #imageCodeWrapper .imageCode_input #imgstr {
+            font-size: 25px;
+            height: 34px;
+            width: 70px;
+        }
+
+
+        .comment_form .comment_form_textarea, .comment_form .comment_form_textbox {
+            border: 1px solid #C5C5C5;
+        }
+
+        .comment_form_textbox {
+            width:240px;
+
+        }
+        .comment_form_textarea{
+            width:240px;
+        }
+
+
+    </style>
+
+    </div>
+<!-- End Comment-->
+
+
+<div class="post clearfix"><div class="entry">
+    </div></div>
+
+
+</div>
+</div></div></div></div>
+
+
+</div>
+
+
+<div id="sidebars">
+    <div id="sidebar-left">
+
+
+                    <div class="sb-bot"><div class="sb-top"><div class="sb-right"><div class="sb-left"><div class="sb-rb"><div class="sb-lb"><div class="sb-rt"><div class="sb-lt">
+                <h2>طبقه بندی</h2>
+                <ul>
+                                            <li class="clearfix" id="parentheses"><a class="clearfix" href="../../category/1.html"><p>کلام دل (نوشته های شخصی)</p><p>(260)</p></a></li>
+                                            <li class="clearfix" id="parentheses"><a class="clearfix" href="../../category/15.html"><p>کلام موزون(اشعار شخصی)</p><p>(31)</p></a></li>
+                                            <li class="clearfix" id="parentheses"><a class="clearfix" href="../../category/4.html"><p>کلامک (کوتاه نوشت شخصی)</p><p>(79)</p></a></li>
+                                            <li class="clearfix" id="parentheses"><a class="clearfix" href="../../category/5.html"><p>کلام صاحب نظران،علماء</p><p>(43)</p></a></li>
+                                            <li class="clearfix" id="parentheses"><a class="clearfix" href="../../category/12.html"><p>کلام اهالی قلم</p><p>(45)</p></a></li>
+                                            <li class="clearfix" id="parentheses"><a class="clearfix" href="../../category/14.html"><p>کلام دفاع مقدس</p><p>(36)</p></a></li>
+                                            <li class="clearfix" id="parentheses"><a class="clearfix" href="../../category/13.html"><p>کلام مهدویت</p><p>(18)</p></a></li>
+                                            <li class="clearfix" id="parentheses"><a class="clearfix" href="../../category/10.html"><p>کلام انقلاب</p><p>(57)</p></a></li>
+                                            <li class="clearfix" id="parentheses"><a class="clearfix" href="../../category/11.html"><p>کلام تصاویر</p><p>(2)</p></a></li>
+                                            <li class="clearfix" id="parentheses"><a class="clearfix" href="../../category/3.html"><p>کلام شُعرا</p><p>(236)</p></a></li>
+                                            <li class="clearfix" id="parentheses"><a class="clearfix" href="../../category/8.html"><p>کلام شهدا</p><p>(27)</p></a></li>
+                                            <li class="clearfix" id="parentheses"><a class="clearfix" href="../../category/2.html"><p>کلام مطهر</p><p>(54)</p></a></li>
+                                            <li class="clearfix" id="parentheses"><a class="clearfix" href="../../category/6.html"><p>کلام رهبر</p><p>(11)</p></a></li>
+                                            <li class="clearfix" id="parentheses"><a class="clearfix" href="../../category/7.html"><p>فراخوان</p><p>(8)</p></a></li>
+                                            <li class="clearfix" id="parentheses"><a class="clearfix" href="../../category/9.html"><p>سایر</p><p>(18)</p></a></li>
+                                    </ul>
+            </div></div></div></div></div></div></div></div>
+        
+
+                    <div class="sb-bot"><div class="sb-top"><div class="sb-right"><div class="sb-left"><div class="sb-rb"><div class="sb-lb"><div class="sb-rt"><div class="sb-lt">
+                <h2>آرشیو</h2>
+                <ul>
+                                            <li>
+                            <a href="../1397/2.html"> اردیبهشت 1397</a>
+                        </li>
+                                            <li>
+                            <a href="../1396/6.html"> شهریور 1396</a>
+                        </li>
+                                            <li>
+                            <a href="../1396/5.html"> مرداد 1396</a>
+                        </li>
+                                            <li>
+                            <a href="../1396/4.html"> تیر 1396</a>
+                        </li>
+                                            <li>
+                            <a href="../1396/3.html"> خرداد 1396</a>
+                        </li>
+                                            <li>
+                            <a href="../1396/2.html"> اردیبهشت 1396</a>
+                        </li>
+                                            <li>
+                            <a href="../1396/1.html"> فروردین 1396</a>
+                        </li>
+                                            <li>
+                            <a href="../1395/12.html"> اسفند 1395</a>
+                        </li>
+                                            <li>
+                            <a href="../1395/11.html"> بهمن 1395</a>
+                        </li>
+                                            <li>
+                            <a href="../1395/10.html"> دی 1395</a>
+                        </li>
+                                            <li>
+                            <a href="../1395/9.html"> آذر 1395</a>
+                        </li>
+                                            <li>
+                            <a href="../1395/8.html"> آبان 1395</a>
+                        </li>
+                                        <li>
+                        <a href="../../archive.html"><b>همه آرشیوها</b></a>
+                    </li>
+                </ul>
+            </div></div></div></div></div></div></div></div>
+        
+                    <div class="sb-bot"><div class="sb-top"><div class="sb-right"><div class="sb-left"><div class="sb-rb"><div class="sb-lb"><div class="sb-rt"><div class="sb-lt">
+                <h2>نویسندگان</h2>
+                <ul>
+                                            <li class="clearfix" id="parentheses">
+                            <a class="clearfix" href="../../author/507250.html"><p>فاطمه دبیری </p><p>(662)</p></a>
+                        </li>
+                                    </ul>
+            </div></div></div></div></div></div></div></div>
+        
+        
+                    <div class="sb-bot"><div class="sb-top"><div class="sb-right"><div class="sb-left"><div class="sb-rb"><div class="sb-lb"><div class="sb-rt"><div class="sb-lt">
+                <h2>پیوندها</h2>
+                <ul>
+                                            <li>
+                            <a href="http://www.yadoyar.mihanblog.com" title=""  target="_blank">به یادش و به یاریش(صفحه نخست)</a>
+                        </li>
+                                            <li>
+                            <a href="http://www.khamenei.ir" title=""  target="_blank">پایگاه اطلاع رسانی دفتر حفظ و نشر آثار مقام معظم رهبری</a>
+                        </li>
+                                            <li>
+                            <a href="http://center.namaz.ir/" title=""  target="_blank">ستاد اقامه ی نماز</a>
+                        </li>
+                                            <li>
+                            <a href="http://www.ayateghamzeh.ir/" title=""  target="_blank">آیات غمزه(انجمن مجازی شعر فارسی)</a>
+                        </li>
+                                            <li>
+                            <a href="http://manazno.ir/" title=""  target="_blank">من از نو (سروده های قاسم اردکانی)</a>
+                        </li>
+                                            <li>
+                            <a href="http://toktamhosseyni.blogfa.com" title=""  target="_blank">زنی از کوه های دوشنبه(شاعر: تکتم حسینی)</a>
+                        </li>
+                                            <li>
+                            <a href="http://www.abdollahi313.blogfa.com/" title=""  target="_blank">موعود عصر(شاعر:محمد مهدی عبداللهی)</a>
+                        </li>
+                                            <li>
+                            <a href="http://2to7.persianblog.ir/" title=""  target="_blank">از دوشنبه تا جمعه(شاعر:حسن بیاتانی)</a>
+                        </li>
+                                            <li>
+                            <a href="http://nanabdard.blogfa.com/" title=""  target="_blank">نان و آب و درد(شاعر: رضا حاج حسینی)</a>
+                        </li>
+                                            <li>
+                            <a href="http://saghiane.parsiblog.com/" title=""  target="_blank">ساقیانه(شاعره: زهرا بشری موحد)</a>
+                        </li>
+                                            <li>
+                            <a href="http://payeezesabz.blog.ir/" title=""  target="_blank">پاییز سبز( شاعر: محمد میرزایی)</a>
+                        </li>
+                                            <li>
+                            <a href="http://ma-fi-alzamir.persianblog.ir/" title=""  target="_blank">یک وجب آسمان(شاعر:علی مویدی)</a>
+                        </li>
+                                            <li>
+                            <a href="http://karavanedel.blog.ir" title=""  target="_blank">کاروان دل(شاعر:یوسف رحیمی)</a>
+                        </li>
+                                            <li>
+                            <a href="http://h-abbaspoor.blogfa.com/" title=""  target="_blank">عاشقانه های نسبتا آرام</a>
+                        </li>
+                                            <li>
+                            <a href="http://www.rahmag.ir" title=""  target="_blank">ماهنامه فرهنگی تحلیلی راه</a>
+                        </li>
+                                            <li>
+                            <a href="http://qoran1430.persianblog.ir/" title=""  target="_blank">حرفی برای تمام فصول</a>
+                        </li>
+                                            <li>
+                            <a href="http://irafta.com" title=""  target="_blank">شاعران پارسی زبان</a>
+                        </li>
+                                            <li>
+                            <a href="http://womanart.blogfa.com/" title=""  target="_blank">تو فقط لیلی باش</a>
+                        </li>
+                                            <li>
+                            <a href="http://emtedadebaran.mihanblog.com/" title=""  target="_blank">در امتداد باران...</a>
+                        </li>
+                                            <li>
+                            <a href="http://3-noghteha.blog.ir/" title=""  target="_blank">سه نقطه های من</a>
+                        </li>
+                                        <li>
+                        <a href="../../../link/index.html"><b> همه پیوندها</b></a>
+                    </li>
+                </ul>
+            </div></div></div></div></div></div></div></div>
+        
+        
+
+        <div align="center" class="clearfix"><br></div>
+
+
+
+
+    </div>
+    <div id="sidebar-right">
+
+        <div id="menu_item" class="sb-bot"><div class="sb-top"><div class="sb-right"><div class="sb-left"><div class="sb-rb"><div class="sb-lb"><div class="sb-rt"><div class="sb-lt">
+            <h2>درباره وبلاگ</h2>
+            <div class="about_box">
+                <div id="user_logo"><img src="http://static.mihanblog.com//public/user_data/web_photo/211/631671.jpg?5599"  /></div>
+                <div id="about_text">*سیروا عَلَی اسْمِ الله (حضرت علی)<br />
+<br />
+*وَ عَظِّمِ اسْمِ الله (حضرت علی)<br />
+<br />
+*بِسْمِ اللهِ الَّذی لا یَضُرُّ مَعَ اسْمِهِ شَی ءٌ فی الارضِ و لا فی السَّماءِ و هُوَ السَّمیعُ الْعَلیمُ : به نام خدایی که زیان نرسد با بودنِ نام او به چیزی در زمین و نه در آسمان و اوست شنوای دانا<br />
+<br />
+* هر جا بسم الله بگویند و صلوات بفرستند؛خداوند مَلَکی می فرستد که در آن مجلس غیبت نمی شود.(حضرت علی)<br />
+<br />
+*بِسْمِ اللهِ الرَّحْمن الرَّحیمِ مفتاحُ کُلِّ کتابٍ: بِسْمِ اللهِ الرَّحْمن الرَّحیمِ، سرآغازِ هر نوشته ای است.(پیامبر اکرم)<br />
+<br />
+<br />
+</div>
+                <div align="right">مدیر وبلاگ: <a href="../../author/507250.html"><b>فاطمه دبیری </b></a></div>
+            </div>
+        </div></div></div></div></div></div></div></div>
+
+
+                    <div id="menu_item" class="sb-bot"><div class="sb-top"><div class="sb-right"><div class="sb-left"><div class="sb-rb"><div class="sb-lb"><div class="sb-rt"><div class="sb-lt">
+                <h2>آخرین پست ها</h2>
+                <ul>
+                                            <li><a  href="../../718.html">یک تکه از بهشت</a></li>
+                                            <li><a  href="../../711.html">برگشته ای با حال و روز بهتری از من</a></li>
+                                            <li><a  href="../../710.html">آن چشم ها</a></li>
+                                            <li><a  href="../../709.html">اللهم ارزقنا...</a></li>
+                                            <li><a  href="../../708.html">من و بابا تو را مثل نفس هر لحظه می خواهیم </a></li>
+                                            <li><a  href="../../707.html">لا یُغیِّر</a></li>
+                                            <li><a  href="../../706.html">من بودم و دل بود و کناری و فراغی...</a></li>
+                                            <li><a  href="../../705.html">بهار بهترینی هست</a></li>
+                                            <li><a  href="../../704.html">بهار پشت در است</a></li>
+                                            <li><a  href="../../703.html">دنیا همان یک لحظه بود</a></li>
+                                            <li><a  href="../../702.html">سپاس</a></li>
+                                            <li><a  href="../../701.html">یک روز</a></li>
+                                            <li><a  href="../../700.html">منم یه مادرم...</a></li>
+                                            <li><a  href="../../699.html">الهی...</a></li>
+                                            <li><a  href="../../698.html">مجله دیجیتالی سایبر پژوهی</a></li>
+                                        <li><a  href="../../list.html"><b>همه پستها</b></a></li>
+                </ul>
+            </div></div></div></div></div></div></div></div>
+        
+
+                    <div id="tag_cloud clearfix" class="sb-bot"><div class="sb-top"><div class="sb-right"><div class="sb-left"><div class="sb-rb"><div class="sb-lb"><div class="sb-rt"><div class="sb-lt">
+                <h2>اَبر برچسبها</h2>
+                                    <a href="../../tag/حسن+بیاتانی.html" style="font-size:1.1em">حسن بیاتانی&nbsp;</a>
+                                    <a href="../../tag/دلنوشته.html" style="font-size:1.05em">دلنوشته&nbsp;</a>
+                                    <a href="../../tag/انقلاب+اسلامی.html" style="font-size:1em">انقلاب اسلامی&nbsp;</a>
+                                    <a href="../../tag/قاسم+اردکانی.html" style="font-size:1em">قاسم اردکانی&nbsp;</a>
+                                    <a href="../../tag/نماز.html" style="font-size:1.3em">نماز&nbsp;</a>
+                                    <a href="../../tag/دفاع+مقدس.html" style="font-size:2em">دفاع مقدس&nbsp;</a>
+                                    <a href="../../tag/محرم.html" style="font-size:1em">محرم&nbsp;</a>
+                                    <a href="../../tag/رمضان.html" style="font-size:1em">رمضان&nbsp;</a>
+                                    <a href="../../tag/روزه.html" style="font-size:1em">روزه&nbsp;</a>
+                                    <a href="../../tag/انتظار.html" style="font-size:1.1em">انتظار&nbsp;</a>
+                            </div></div></div></div></div></div></div></div>
+        
+
+
+        
+		
+
+                    <div id="menu_item" class="sb-bot"><div class="sb-top"><div class="sb-right"><div class="sb-left"><div class="sb-rb"><div class="sb-lb"><div class="sb-rt"><div class="sb-lt">
+                <h2>آمار وبلاگ</h2>
+                <div class="stat clearfix">
+                    کل بازدید : <span><script>getStatVar('total_view');</script></span><br>
+                    بازدید امروز :<span><script>getStatVar('today_view');</script></span><br>
+                    بازدید دیروز : <span><script>getStatVar('yesterday_view');</script></span><br>
+                    بازدید این ماه : <span><script>getStatVar('this_month_view');</script></span><br>
+                    بازدید ماه قبل : <span><script>getStatVar('last_month_view');</script></span><br>
+                    تعداد نویسندگان : <span><script>getStatVar('total_author');</script></span><br>
+                    تعداد کل پست ها : <span><script>getStatVar('total_post');</script></span><br>
+                    آخرین بازدید : <span><script>getStatVar('last_view_date');</script></span><br>
+                    آخرین بروز رسانی : <span><script>getStatVar('modify_date');</script></span><br>
+                </div>
+            </div></div></div></div></div></div></div></div>
+        
+
+        <div align="center" class="mihan_logo"></div>
+
+
+
+    </div>
+
+    <div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+</div>
+
+<div align="center" id="footer">
+
+    <div class="copy"><strong>POWERED BY <a href="http://www.mihanblog.com/"><font color="#FF0000" size="2px">M</font>IHAN<font color="#FF0000" size="2px">B</font>LOG.COM</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+        <a>Design</a> by InfoCreek | <font color="">www.infocreek.com</font></div>
+
+
+
+</div>
+</body>
+</html>
+
+
+<a target='_blank' href='http://www.iranskin.com/online'><span style='text-decoration: none'>Online</span></a>
+<script type='text/JavaScript'>
+var oulb= 'http://www.iranskin.com/online/';
+function CheckBrowser(){
+if(navigator.appName == "Microsoft Internet Explorer")	{
+document.write('<scrip'+'t src="'+oulb+'js/jquery.min.js"></s'+'cript><scrip'+'t src="'+oulb+'js/js.php?c=4&t=5"></s'+'cript>');return true;}document.write('<scrip'+'t src="'+oulb+'cod.php?c=4&t=5"></s'+'cript>');
+return false; }</script>
+<script type='text/JavaScript'>CheckBrowser()</script>
+<a target='_blank' href='http://www.iranskin.com'><span style='text-decoration: none'>User</span></a>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'yadoyar.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>

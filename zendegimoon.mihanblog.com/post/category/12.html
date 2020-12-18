@@ -1,0 +1,1430 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc%3Frsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('پنجشنبه 27 آذر 1399');
+		/*641954*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[315]='2';commentCnt[316]='0';commentCnt[334]='0';commentCnt[375]='1';commentCnt[395]='1';commentCnt[396]='1';commentCnt[403]='0';commentCnt[479]='3';commentCnt[484]='1';commentCnt[486]='3';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[315]='0';
+mihanblogDisLikeArrCnt[315]='0';
+mihanblogLikeArrCnt[316]='0';
+mihanblogDisLikeArrCnt[316]='0';
+mihanblogLikeArrCnt[334]='0';
+mihanblogDisLikeArrCnt[334]='0';
+mihanblogLikeArrCnt[375]='0';
+mihanblogDisLikeArrCnt[375]='0';
+mihanblogLikeArrCnt[395]='0';
+mihanblogDisLikeArrCnt[395]='0';
+mihanblogLikeArrCnt[396]='0';
+mihanblogDisLikeArrCnt[396]='0';
+mihanblogLikeArrCnt[403]='0';
+mihanblogDisLikeArrCnt[403]='0';
+mihanblogLikeArrCnt[479]='0';
+mihanblogDisLikeArrCnt[479]='0';
+mihanblogLikeArrCnt[484]='0';
+mihanblogDisLikeArrCnt[484]='0';
+mihanblogLikeArrCnt[486]='0';
+mihanblogDisLikeArrCnt[486]='0';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("http://zendegimoon.mihanblog.com/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("http://zendegimoon.mihanblog.com/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','504');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','چهارشنبه 5 آذر 1399');
+	
+	setStatVar('today_view','16');
+	setStatVar('yesterday_view','81');
+	
+	setStatVar('this_month_view','5245');
+	setStatVar('last_month_view','3943');
+
+	setStatVar('total_view','251460');
+	setStatVar('last_view_date','پنجشنبه 27 آذر 1399 (05:31)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://zendegimoon.mihanblog.com/statupdate/?data[refereruri]=http://zendegimoon.mihanblog.com/&data[postid]=&data[requesturi]=/post/category/12&data[sdate]=1608173839&data[hash]=3b05ee1c2f317999230c7601d30a00b0&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="'+link+'.html" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="'+img+'.html" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.eot');
+            src: url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.eot?') format('embedded-opentype'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('http://zendegimoon.mihanblog.com/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+<head>
+<title>زندگی یک زوج ایرانی آلمانی - مطالب عقاید خودم و همسر راجع به زندگی</title>
+<base href="" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Language" content="fa">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="alternate" type="application/rss+xml" title="زندگی یک زوج ایرانی آلمانی" href="../rss/index.html" />
+<link rel="alternate" type="application/atom+xml" title="زندگی یک زوج ایرانی آلمانی"  href="../atom/index.html" />
+<style type="text/css">
+
+body { font-family: Tahoma; font-size: 8pt; text-align: center; direction: ltr; line-height: 18px; margin: 0px; background-color: #F3B08E; }
+.page { width: 990px; margin-right: auto; margin-left: auto; direction: rtl; background-color: #FADED0; margin-top: 0px; margin-bottom: 0px; padding: 0px; }
+/******************* header ******************/
+.header { height: 400px; width: 990px; text-align: center; background-repeat: no-repeat; margin-bottom: 0px; background-image: url(http://s7.picofile.com/file/8252907026/theme_01.jpg); }
+.header-mid { width: 90%; margin-left: auto; padding-top: 50px; text-align: right; margin-right: auto; }
+.header h1 { font-family: Arial; font-size: 28px; font-weight: bold; margin: 0px; }
+.header h3 { font-family: Tahoma; font-size: 12px; margin: 0px; padding-top: 20px; color: #F6D0C0; }
+.header A { color: #F6D0C0; text-decoration: none; }
+/****************** navbar ******************/
+.navbar { height: 60px; width: 990px; text-align: center; margin-top: 0px; margin-bottom: 10px; background-repeat: no-repeat; background-position: center top; background-image: url(http://s6.picofile.com/file/8252907042/theme_02.jpg); }
+.navbar-mid { width: 90%; margin-right: auto; margin-left: auto; padding-top: 18px; }
+.navbar ul { padding: 0px; margin: 0px 30px 0px 0px; }
+.navbar li { float: right; list-style-type: none; font-size: 9pt; font-weight: bold; margin-left: 40px; }
+.navbar li a:link { color: #000000; text-decoration: none; }
+.navbar li a:visited { color: #000000; text-decoration: none; }
+.navbar li a:hover { color: #626262; text-decoration: none; }
+/***************** content *******************/
+.main { width: 990px; }
+.content { float: right; width: 550px; }
+.bodypost { width: 550px; margin-bottom: 15px; background-image: url(http://s7.picofile.com/file/8252907192/theme_10.jpg); background-repeat: repeat-y; }
+.bodypost a:link { color: #808080; text-decoration: none; }
+.bodypost a:visited { color: #808080; text-decoration: none; }
+.bodypost a:hover { color: #000000; text-decoration: none; }
+.ptitle { height: 60px; text-align: center; background-repeat: no-repeat; background-position: center; background-image: url(http://s6.picofile.com/file/8252907092/theme_07.jpg); }
+.ptitle-mid { text-align: right; width: 450px; margin-right: 80px; margin-left: 20px; padding-top: 20px; }
+.ptitle a:link { color: #000; text-decoration: none; }
+.ptitle a:visited { color: #000; text-decoration: none; }
+.ptitle a:hover { color: #000; text-decoration: none; }
+.ptitle h2 { margin: 0px; font-family: Arial; font-size: 12pt; font-weight: bold; }
+.ptext { text-align: center; font-family: Tahoma; font-size: 9pt; }
+.ptext-mid { width: 95%; margin-right: auto; margin-left: auto; padding-top: 3px; padding-bottom: 3px; text-align: right; }
+.ptext img { max-width: 95%; height: auto; }
+.ptext img:hover { }
+.pinfo { }
+.pinfo-mid { width: 95%; margin-right: auto; margin-left: auto; text-align: right; padding-bottom: 10px; }
+.author { float: right; width: 45%; }
+.date { float: left; width: 45%; }
+.pcat { }
+.pcat-mid { width: 95%; margin-right: auto; margin-left: auto; text-align: right; padding-top: 3px; padding-bottom: 5px; }
+.pcomore { font-size: 9pt; }
+.pcomore-mid { text-align: right; width: 95%; margin-right: auto; margin-left: auto; padding-top: 12px; }
+.pcomore a:link { color: #000000; }
+.pcomore a:visited { color: #000000; }
+.pcomore a:hover { color: #000000; }
+.pmore { float: right; width: 40%; }
+.pcomment { float: left; width: 40%; }
+.p-bbg { height: 20px; background-repeat: no-repeat; background-position: center; background-image: url(http://s7.picofile.com/file/8252907284/theme_12.jpg); }
+.paper { width: 550px; background-color: #FCF1EB; border-radius: 10px; border: 1px solid #F09F76; }
+.paper-tbg { height: 10px; }
+.paper-text { text-align: center; font-family: Tahoma; font-size: 9pt; font-weight: bold; background-repeat: repeat-y; background-position: center; }
+.paper-text-mid { width: 90%; margin-top: auto; margin-bottom: auto; padding-top: 5px; padding-bottom: 5px; }
+.paper-text a:link { color: #000; text-decoration: none; }
+.paper-text a:visited { color: #000; text-decoration: none; }
+.paper-text a:hover { color: #535353; text-decoration: none; }
+.paper-text ul { margin: 0px; padding: 0px; }
+.paper-text li { float: right; margin-left: 20px; list-style-type: none; }
+.paper-text li a:link { color: #000; text-decoration: none; }
+.paper-text li a:visited { color: #000; text-decoration: none; }
+.paper-text li a:hover { color: #535353; text-decoration: none; }
+.paper-bbg { height: 10px; }
+.rpapers { float: right; width: 49%; }
+.lpapers { float: left; width: 49%; }
+/***************** rbar **********************/
+.right { float: right; width: 200px; margin-left: 10px; margin-right: 10px; }
+.rm { margin-bottom: 10px; }
+.rmtitle { height: 60px; text-align: center; font-family: Arial; font-size: 11pt; font-weight: bold; color: #000; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907068/theme_05.jpg); }
+.rmtitle-mid { width: 160px; margin-right: auto; margin-left: auto; padding-top: 20px; text-align: right; }
+.rmtext { text-align: center; background-repeat: repeat-y; background-image: url(http://s7.picofile.com/file/8252907126/theme_09.jpg); }
+.rmtext-mid { width: 90%; margin-right: auto; margin-left: auto; text-align: right; padding-top: 5px; padding-bottom: 5px; }
+.rmtext a:link { color: #000; text-decoration: none; }
+.rmtext a:visited { color: #000; text-decoration: none; }
+.rmtext a:hover { color: #666; text-decoration: none; }
+.rmtext ul { padding: 0px; margin: 0px; }
+.rmtext li { list-style-type: none; }
+.rmtext li a:link { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.rmtext li a:visited { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.rmtext li a:hover { color: #666; text-decoration: none; display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; }
+.rmtext img { max-width: 98%; height: auto; }
+.rmtext img:hover { }
+.rm-bbg { height: 20px; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907268/theme_11.jpg); }
+/***************** lbar ***********************/
+.left { float: left; width: 200px; margin-left: 10px; }
+.lm { margin-bottom: 10px; }
+.lmtitle { height: 60px; text-align: center; font-family: Arial; font-size: 11pt; font-weight: bold; color: #000; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907068/theme_05.jpg); }
+.lmtitle-mid { width: 160px; margin-right: auto; margin-left: auto; padding-top: 20px; text-align: right; }
+.lmtext { text-align: center; background-repeat: repeat-y; background-image: url(http://s7.picofile.com/file/8252907126/theme_09.jpg); }
+.lmtext-mid { width: 90%; margin-right: auto; margin-left: auto; text-align: right; padding-top: 5px; padding-bottom: 5px; }
+.lmtext a:link { color: #000; text-decoration: none; }
+.lmtext a:visited { color: #000; text-decoration: none; }
+.lmtext a:hover { color: #666; text-decoration: none; }
+.lmtext ul { padding: 0px; margin: 0px; }
+.lmtext li { list-style-type: none; }
+.lmtext li a:link { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.lmtext li a:visited { display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; color: #000; text-decoration: none; }
+.lmtext li a:hover { color: #666; text-decoration: none; display: block; width: 100%; padding-top: 2px; padding-bottom: 2px; }
+.lmtext img { max-width: 98%; height: auto; }
+.lmtext img:hover { }
+.lm-bbg { height: 20px; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907268/theme_11.jpg); }
+/*************** footer **************************/
+.footer { height: 240px; width: 990px; margin-top: 10px; margin-bottom: 0px; font-family: Tahoma; font-size: 10pt; color: #000; background-repeat: no-repeat; background-image: url(http://s6.picofile.com/file/8252907334/theme_14.jpg); }
+.footer-mid { width: 80%; margin-right: auto; margin-left: auto; padding-top: 100px; text-align: center; }
+.footer a:link { color: #000; text-decoration: none; font-weight: normal; }
+.footer a:visited { color: #000; text-decoration: none; font-weight: normal; }
+.footer a:hover { color: #000; text-decoration: none; font-weight: normal; }
+/************** etc class **************************/
+.profile-img { text-align: center; margin-top: 5px; margin-bottom: 5px; }
+.profile-text { text-align: justify; }
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div class="header-mid">
+      <h1><a href="../../index.html">زندگی یک زوج ایرانی آلمانی</a></h1>
+      <h3>خاطرات زندگی من در آلمان</h3>
+    </div>
+  </div>
+  <!--- e header --->
+  
+  <div class="navbar">
+    <div class="navbar-mid">
+      <ul>
+        <li><a href="../../index.html">خانه</a></li>
+        <li><a href="../archive.html">آرشیو</a></li>
+        <li><a href="mailto:">ایمیل</a></li>
+        <li><a href="../rss/index.html">RSS</a></li>
+        <li><a href="http://cafeskin.blogfa.com/">قالب وبلاگ</a></li>
+        <li><a href="../list.html">عناوین </a></li>
+      </ul>
+    </div>
+  </div>
+  <!--- e navbar ---->
+  
+  <div class="main">
+    <div class="right">
+      <div class="rm">
+        <div class="rmtitle">
+          <div class="rmtitle-mid">درباره من</div>
+        </div>
+        <div class="rmtext">
+          <div class="rmtext-mid">
+            <div class="profile-img"> <img src="http://static.mihanblog.com//public/user_data/web_photo/214/641954.jpg?4934"  /></div>
+            <div class="profile-text">می روم راه دور...خیلی دور..آسمان وطن خدا حافظ<br />
+شهر سرد قدیمی ام بدرود،ایران زیبای من خدا حافظ<br />
+<br />
+می روم راه دور خیلی دور،دورم از چشمهای روشن تو<br />
+منتظر می شوم تو هم برسی،تا دلم بشکفد به دیدن تو<br />
+<br />
+کوله بارم چه قدر سنگین است&quot;از وطن نان و نور آوردم<br />
+عطردلچسب چادر مادر،عشق را با غرور آوردم<br />
+<br />
+شانه های برادرم اینجاست،موی خوشبوی مادرم اینجاست<br />
+گرمی مهربان دست پدر،کیف قرآن و دفترم اینجاست<br />
+<br />
+می روم راه دور خیلی دور،تو همیشه کنار من هستی<br />
+دوستت دارم و دلم با توست،دور و نزدیک،یار من هستی</div>
+          </div>
+        </div>
+        <div class="rm-bbg"></div>
+      </div>
+              <div class="rm">
+          <div class="rmtitle">
+            <div class="rmtitle-mid">موضوعات</div>
+          </div>
+          <div class="rmtext">
+            <div class="rmtext-mid">
+              <ul>
+                                  <li> <a href="6.html">ادبی&nbsp;(14) </a> </li>
+                                  <li> <a href="4.html">مقاله&nbsp;(17) </a> </li>
+                                  <li> <a href="16.html">همسرم&nbsp;(3) </a> </li>
+                                  <li> <a href="5.html">نومزدنگ&nbsp;(5) </a> </li>
+                                  <li> <a href="2.html">بعد ازدواجمون&nbsp;(42) </a> </li>
+                                  <li> <a href="9.html">آشپزی های من&nbsp;(13) </a> </li>
+                                  <li> <a href="15.html">آموزش زبان آلمانی&nbsp;(15) </a> </li>
+                                  <li> <a href="1.html">پیش از ازدواجمون&nbsp;(20) </a> </li>
+                                  <li> <a href="8.html">ایده واسه زندگیمون&nbsp;(5) </a> </li>
+                                  <li> <a href="14.html">آموزش و پرورش آلمان&nbsp;(51) </a> </li>
+                                  <li> <a href="7.html">منو بیشتر بشناسین&nbsp;(2) </a> </li>
+                                  <li> <a href="11.html">مراحل اداری ازدواج ما&nbsp;(3) </a> </li>
+                                  <li> <a href="13.html">تجربه های مسافرت ما&nbsp;(36) </a> </li>
+                                  <li> <a href="17.html">فستیوال ها و جشن های آلمان&nbsp;(5) </a> </li>
+                                  <li> <a href="10.html">فرهنگ آلمانی و زندگی در آلمان&nbsp;(170) </a> </li>
+                                  <li> <a href="12.html">عقاید خودم و همسر راجع به زندگی&nbsp;(26) </a> </li>
+                              </ul>
+            </div>
+          </div>
+          <div class="rm-bbg"></div>
+        </div>
+                    <div class="rm">
+          <div class="rmtitle">
+            <div class="rmtitle-mid">نویسندگان</div>
+          </div>
+          <div class="rmtext">
+            <div class="rmtext-mid">
+              <ul>
+                                  <li><a href="../author/123269.html"><img src="http://static.mihanblog.com//public/user_data/user_photo/42/123269.jpg" style="width:16px;" /></a> <a href="../author/123269.html" style="display:inline;"> باران &nbsp;(504) 	            خیلی فعال و پر جنب و جوشم...اراده قوی دارم و اعتماد به نفس بالایی هم دارم.کمی زود رنجم،خصوصیت بارزم شجاعتمه.عاشق ورزشم هر جا ورز</a></li>
+                              </ul>
+            </div>
+          </div>
+          <div class="rm-bbg"></div>
+        </div>
+                                <div class="rm">
+          <div class="rmtitle">
+            <div class="rmtitle-mid">آرشیو</div>
+          </div>
+          <div class="rmtext">
+            <div class="rmtext-mid">
+              <ul>
+                                  <li><a href='../archive/1399/9.html'> آذر 1399</a></li>
+                                  <li><a href='../archive/1399/8.html'> آبان 1399</a></li>
+                                  <li><a href='../archive/1399/7.html'> مهر 1399</a></li>
+                                <li><a href="../archive.html"><b>کل آرشیوها</b></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="rm-bbg"></div>
+        </div>
+          </div>
+    <!--- e right --->
+    
+    <div class="content">
+              
+		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		          <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../486.html">
+                <h2>داشته ها</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : پنجشنبه 11 بهمن 1397 06:50 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><p>بیایم همین الان،توی همین لحظه به این فکر کنیم که چه چیزایی داریم؟... خانواده؟فرزند؟شغل؟خونه؟ماشین؟..<br>و
+</p>
+<p> همین الان فکر کنیم که در آینده پنجاه درصد امکان این هست که اینها رو
+</p>
+<p>داشته باشیم و پنجاه درصد که از دستشون بدیم،دقیقا پنجاه درصد،واسه هرچی که
+</p>
+<p> داریم،هر طوری که به دستش آوردیم...این رو دایم با خودمون تکرار کنیم که
+</p>
+<p>هرچی داریم تا ابد با ما نمی‌مونه،یه روزی از دست میره.... اینطور از دست
+</p>
+<p>دادن ها راحت میشه... نظرتون رو بنویسید دوستان.
+</p> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="12.html">عقاید خودم و همسر راجع به زندگی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../486.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(486)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../484.html">
+                <h2>گیاهخواری</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : پنجشنبه 11 بهمن 1397 06:33 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+
+
+<span>تمام این هفته رو غذای گیاهی خوردیم و این خیلی خوشحالم می‌کنه... 
+پیدا کردن دستور غذای گیاهی واقعا سخته اما به امتحانش می ارزه اینطور کشته
+ شدن روزانه این همه حیوون رو حداقل یه مقدار کاهش میدیم...<br>خوشحالم و می‌خوام از تمام دوستانم دعوت کنم که کمتر گوشت بخرن و کمتر گوشت مصرف کنند<br>اولین
+ قدمی که میتونیم برداریم،خرید کم گوشت و استفاده کم توی غذاست،به مرور 
+میشه گوشت رو از غذا حذف کرد و با سبزیجات جایگزین کرد...<br>بیایم این کار رو بکنیم...برای حمایت از طبیعت</span> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="12.html">عقاید خودم و همسر راجع به زندگی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../484.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(484)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../479.html">
+                <h2>خدای شما چه کسیه؟</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : چهارشنبه 10 بهمن 1397 08:47 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+
+
+<span>دیروز وقتی گوشی موبایلم رو گم کردم و اومدم خونه،تمام غم های جهان رو حس کردم... فهمیدم که خدای من شاید گوشی منه...<br>راستی خدای شما چه کسیه؟... تا حالا به این موضوع فکر کردین؟.. با تمام وجود نه از سر حرف! "خدا هیچ چیز نیست."<br>پرستش
+ هم دقیقا بدین معنا می تواند محقّق شود. یعنی هرگاه ما به جایی رسیدیم که 
+هیچ چیز را نپرستیدیم، به پرستش ِ خدا رسیده ایم. برای همین است که پرستش ِ
+ خدا کار سختی است. چراکه همه ما "چیزی" را می پرستیم. یکی پول، یکی قدرت، 
+یکی شهرت و دیگری شهوت را می پرستد. یکی علم را، یکی دین را و یکی هم جهل 
+را می پرستد. همه اینها، پرستش ِ چیزی است. در حالیکه خدا، "چیز" نیست. 
+یعنی قرار است که خدا، "چیز" نباشد. همه ِحیثیّت خدا در همین امر است که او
+ فراتر از وهم ، گمان و خیال ِ ماست. او اگر چیزی بود، حتماً در یکی از 
+قوای فاهمه، یا مدرکه، یا مخیّله یا وهمیّه ِ ما در می آمد و ما می 
+توانستیم به او "معتقد" شویم و تصوّری از او داشته باشیم. حال آنکه چنین 
+نیست.<br><br>در قرآن هم به همین خاطر، هیچ کجا ما را به " اعتقاد به خدا "
+ دعوت نکرده است و هیچ جا صحبت از " اعتقاد به خدا " نشده است. در عوض همه 
+جا درباره "ایمان به خدا " صحبت شده است. امّا در دین ِ تاریخی به راحتی 
+"اعتقاد" را مترادف با "ایمان" گرفته اند و یک تصوّرِ شیء انگارانه ساخته 
+اند و بدنبال آن اخلاق ، فقه ، علم و حتّی عرفانی متناسب با آن را رقم زده 
+اند. <br>این «ایمان» نه تنها غیر از اعتقاد است، بلکه در مقابل ان قرار می گیرد. <br>وقتی
+ به خدا معتقد شدیم، این اعتقاد به خدا هم خشونت و توحّش تولید می کند، هم 
+جهل ِ مرکّب. همین دو امر (خشونت و جهل ِ مرکّب) برای نابودی انسان و این 
+جهان کافیست</span> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="12.html">عقاید خودم و همسر راجع به زندگی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../479.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(479)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../403.html">
+                <h2>هزینه پست</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : پنجشنبه 2 آذر 1396 08:00 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <span style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;">اومدم این مجموعه عکس از سفرمون به جزیره قشم رو برای همکارام توی آلمان پست بفرستم،اول رفتم پست عادی که بهم گفتند باید برم پست مرکزی،اومدم پست نشاط اصفهان یه باجه پرسیدم گفتند هزینش میشه صد و چهارده هزار تومن ،</span><span style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;">پست اکسپرس البته! گفتند یه باجه دیگه پست عادی می‌فرسته! خلاصه رفتم اون باجه گفتند این کارت پستال حساب نمیشه واسه همین باید به عنوان عکس بفرستم و هزینش میشه بیست و هفت هزار تومن! در حالت عادی هزینه یه کارت پستال معمولی فرستادن به خارج از کشور،سه هزار تومن میشه و میتونید تمبر سه هزار تومنی رو خودتون بچسبونید و آدرس رو بنویسید و توی صندوق های پستی که زرد رنگ هستند بندازید!</span> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="12.html">عقاید خودم و همسر راجع به زندگی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../403.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(403)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../396.html">
+                <h2>خروج از کشور با اجازه همسر!</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : پنجشنبه 2 آذر 1396 07:22 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">اگر یه خانم ایرانی بخواد مسافرت به خارج از کشور داشته باشه باید اجازه از همسرش داشته باشه اگر نه نمیتونه از مرز خارج بشه،اون برگه رو باید اول نشون بده! اگر کسی طلاق گرفته،باید طلاق نامه و اگر همسرش فوت کرده باید گواهی فوت نشون داده بشه اگرنه اجازه خروج از کشور نمیدن! واسه همین ازدواج خانم آلمانی با یه مرد ایرانی خیلی ریسک بزرگی داره،یعنی عقد ایرانی کردن خیلی ریسکه چون اون خانم آلمانی هم بدون اجازه شوهرش نمیتونه برگرده کشور خودش! واسه همین توی اغلب این موارد،عقد ایرانی انجام نمیدن و فقط عقد آلمانی انجام میدند.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">توی مورد ما خیلی جالب بود وقتی من و همسر میخواستیم یه سال اینجا زندگی کنیم،توی اداره مهاجرت من باید امضا میکردم که همسر اجازه برگشت به کشورش رو داره! این حس خوبی داشت که من باید اجازه بدم و امضا کنم</span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/10.gif"><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">یه سوال: اگر یه مرد یا زن از یه کشور دیگه بخواد با شما ازدواج کنه،شما قبول میکنید؟</span>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="12.html">عقاید خودم و همسر راجع به زندگی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../396.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(396)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../395.html">
+                <h2>یه روز توی اتوبوس!</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : پنجشنبه 2 آذر 1396 07:21 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 
+<span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">یادمه یه کلاس روانشناسی خودشناسی میرفتم،استادمون می‌گفت اگر میخواین یه جامعه و مردمش رو بشناسین،یه صبح تا ظهر سوار اتوبوس بشین و خوب نگاه کنید به برخورد مردم و رفتار اونا با هم،بعد میفهمین مشکلات اون جامعه رو!</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">نشستم توی اتوبوس، دقت کردم مردم و برخوردشون با هم رو زیر نظر گرفتم،بچه ها از مدرسه تعطیل شدند،یه بچه دبستانی با عینک ته استکانی،سرش توی گوشی مامانش مشغول بازی!</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">یه دختر بچه اومد نشست کنار یه خانم،کیفش خورد بهش،خانم با لحن بدی بهش گفت چرا حواست نیست! بچه هم خجالت زده و با حالت خیلی ناراحت ازش معذرت خواهی کرد!</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">این تجربه پونزده دقیقه اتوبوس سواری من توی اصفهان،شهر تمدن و فرهنگه!</span>
+
+
+
+
+<div><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline;">توی اتوبوس نشستم جو آرومه و دارم به این فکر میکنم که یه کم جو شهرم رو بهتر از قبل حس میکنم،دارم با خودم فکر میکنم ایران واسه زندگی بهتره یا آلمان؟... درگیر فکرم که بیرون یه تصادف میشه،مرد از داخل ماشین در میاد و خیلی عصبانی میره به سمت ماشین روبروییش، فورا دست به یقه میشن و همزمان مردای دیگه میان از هم جداشون میکنند! یادم میفته به پارسال که یه تصادف شد و یه ماشین چپ شد و یکی داخل ماشین گیر افتاده بود،یه مرد دیگه اومد همینجوری که این یه وری تو ماشین بود،یقشو گرفته بود و د بزن</span></span><img src="http://mihanblog.com/public/public/rte/images_new/smiles/40.gif"><span style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;">&nbsp;همسر هم این صحنه رو دید و گفت که فکر کرده اون یکی میخواد کمکش کنه و از داخل ماشین درش بیاره&nbsp;</span></div><div><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline;">به همین موقعیت توی آلمان و برخورد مودبانه مردم با هم فکر میکنم. یادم میفته که حتی یه بار عصبانیت مردم توی خیابون رو با هم ندیدم...</span><br><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline;">دوباره و دوباره فکر میکنم چرا اینقدر تفاوت؟... چه باید کرد که این موقعیت رو عوض کرد و چه کنیم که کشورمون قابل سکونت و زندگی بشه؟..</span></span></div> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="12.html">عقاید خودم و همسر راجع به زندگی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../395.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(395)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../375.html">
+                <h2>قهر و صحبت</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : یکشنبه 28 آبان 1396 10:42 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">یادم باشه که قهر هیچ مشکلی رو حل نمیکنه قهر یعنی بدترین مکانیزم دفاعی،ما هیچ وقت یاد نگرفتیم که میشه واکنش های عاقلانه تری به مسائلی داشت. ما یاد گرفتیم وقتی چیزی میبینیم که علاقه ای بهش نداریم،فورا نادیده بگیریم( واکنش دفاعی انکار)</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">یاد گرفتیم اگر چیزی رو دوست نداشتیم انکارش کنیم.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">ما واکنش های اشتباهی رو از جامعه و خانواده خودمون یاد گرفتیم.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">ما یاد نگرفتیم بعد از اینکه از دست کسی ناراحت شدیم«باید»راجع به ناراحتیمون صحبت کنیم و اینکه انکارش کنیم یا با طرف قهر کنیم،به حال بهترمون هیچ کمکی نمیکنه!</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">اینقدر اینجا تربیت ها درست و بی عیب ونقصه که دوست دارم واسه همه بگم تا همه بدونن راهی غیر از راهی که ما توی جامعه ومملکت خودمون میریم هم برای تربیت و آموزش هست... اینجا من میبینم بچه ای که رفتار اشتباهی از خودش نشون داد هرگز بهش نمیخندن،هرگز!</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">حتی یه بار نشد ببینم دو بچه ای که سر چیزی از هم عصبانی بودند،بعد از معذرت خواهی همچنان عصبانی باشن،چرا؟چون از اول یاد گرفتند وقتی معذرت خواهی شنیدند،آروم بشن،چون از اول یاد گرفتن اگر کار اشتباهی انجام دادند«باید»معذرت بخوان!</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">وظیفه شما که توی آموزش کشورت هستی،اینه که به بچه ها اینها رو آموزش بدی.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">دوست معلم و دوست مربی من، وظیفه شما خیلی سنگینه، خیلی مراقب رفتار و آموزشهات باش....</span>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="12.html">عقاید خودم و همسر راجع به زندگی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../375.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(375)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../334.html">
+                <h2>قهرمانهای زندگی من...</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : سه شنبه 31 مرداد 1396 07:56 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">قهرمان زندگی من مادربزرگمه (مامان بابام)اونکه با وجود همه سختی ها همیشه خندید،اونکه با وجود هیچ پشتوانه ای از طرف همسرش همیشه بچه هاشو با عشق بزرگ کرد،اونکه هیچ وقت دل ما رو نشکست. اونکه همیشه بزرگ بود و همیشه ما رو دور خودش جمع کرد،اونکه همیشه منتظر رسیدن ماست و اونکه غذاشو همیشه زیاد بار میذاره که اگر بچه ها و نوه هاش رسیدند،گرسنه نمونن.. قهرمان زندگی من اونه چون همیشه در عین دستنگی،خوب زندگی کرد اونکه به همه بچه هاش آزادی عمل داد و هیچ وقت نگفت این دختره،این پسر،اینطور بود که همه ی بچه هاش به پیشرفت هایی رسیدند که اون زمان کسی به فکرش خطور هم نمی‌کرد.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">قهرمان زندگی من باباجونه(بابای بابا) اونکه همیشه کار کرد و همیشه پشتکار فراوون داشت،اونکه هیچی توی دلش نبود و هیچ وقت هیچ خاطره بدی از خودش نذاشت. اونکه ساده و بلند پرواز بود. خیلی زود رفت و واقعا به عنوان یه نوه هیچ وقت نشد خوب بشناسمش...</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">قهرمان زندگی من عمه بزرگمه اونکه همیشه عاشقانه ما رو دوست داشت. اونکه عشق رو به ما یاد داد. اونکه ساده بود و ساده زندگی کرد...</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">قهرمان زندگی من مامانجونمه(مامان مامانم) اونکه در عین تمام سختی ها بچه هاشو بزرگ کرد،اونکه با تمام سختگیری های مردای قدیم موند و با عشق ادامه داد. اونی که همیشه پاک و ساده بود.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">قهرمان زندگی من باباجونمه(بابای مامانم) که با تمام مشکلات زندگی جنگید،اونی که همیشه بچه هاشو دوست داشت،اونی که در زمان کمبود علم و فهم و درک تونست یه نویسنده موفق بشه... اونکه همیشه راسخ بود و اونی که همیشه واسه تک تک لحظاتش برنامه داشت.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">قهرمان زندگی من داییمه اونی که همیشه ما رو دوست داشت. اونی که همیشه لبخند میزنه... اونی که سخت کار می‌کنه و به ما هم یاد میده باید توی زندگی سخت بود....</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">بزرگترین قهرمان زندگی من مامان و بابا و برادرم هستند. پدر و مادری که همیشه عاشق ما بودند،اونایی که زمانی که همه دختری،پسری میکردن،هر دوی ما رو به یه اندازه دوست داشتن،اونایی که ما رو تشویق کردن که قوی باشیم،که درس بخونیم،اونایی که همیشه کنار من بود،اونایی که گذاشتن من و یوناس با هم زندگی کنیم. اونایی که به این تصمیم سخت راضی شدند. اونایی که جلوی ما گریه نمی‌کنند که موقع جدایی دلمون نگیره. اونا همیشه ما رو دوست داشتند.ن اینجا با یاد و خاطره همه شما زندگی می‌کنم خانواده و فامیل عزیزم</span> </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="12.html">عقاید خودم و همسر راجع به زندگی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../334.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(334)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../316.html">
+                <h2>دوری از کشور و خانواده...</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : سه شنبه 31 مرداد 1396 07:20 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <span style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;">دقیقا یک سال و سه روز از زندگی ما توی آلمان میگذره... اون همه سختی که میشنیدم زندگی توی غربت داره،واقعا اون سختی ها رو من ندیدم،دوری از کشور سخته زمانی که آدم توی خونه باشه و با جامعه ارتباط نداشته باشه، هرچه زودتر باید توی جامعه وارد شد و با مردم ارتباط گرفت اگرنه اون هوم سیک که همه ازش میگن سراغتون میاد..‌. اول زبان و بعد پذیرش جامعه... بعد از این محاله حس هوم سیک پیدا کنید و دلتنگ خانه و کشورتون بشین. اگر تجربه ای از هوم سیک شدن دارید بنویسید لطفا.</span>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="12.html">عقاید خودم و همسر راجع به زندگی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../316.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(316)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                  <div class="bodypost">
+            <div class="ptitle">
+              <div class="ptitle-mid"> <a href="../315.html">
+                <h2>میانگین درآمد کشورهای مختلف</h2>
+                </a> </div>
+            </div>
+            <div class="pinfo">
+              <div class="pinfo-mid">
+                <div class="author"> نویسنده : <a href="../author/123269.html">باران  </a> </div>
+                <div class="date"> تاریخ : سه شنبه 31 مرداد 1396 07:19 ب.ظ </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="ptext">
+              <div class="ptext-mid">                 <span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">راجع به میانگین درآمدهای کشورا خیلی کنجکاو بودم و &nbsp;سرچ کردیم نتیجه اینه که می‌بینید:</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">میانگین درآمد ایران،۴۵۰۰ دلار در سال،</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">و آلمان،۴۵۰۰۰ دلار در سال هست،</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">یعنی کشور ما ده برابر کمتر از کشور آلمان درآمد سالیانه مردم هست!!</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">این رقم واسه گامبیا (کشور شوهر خواهر همسر) خیلی کمتر از این هست یعنی ده برابر کمتر از ایران!!!</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">اسپانیا دو سوم درآمد آلمان رو داره.</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">این در حالیه که نروژ و سوییس ده برابر بیشتر از آلمان درآمد سالیانه دارند!</span><br style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: baseline;">در نهایت یه چیز خیلی عجیب که من باور نکردم! کویت و قطر درآمد سالانه بالاتر از آلمان دارند!!!!</span>
+
+
+ </div>
+            </div>
+            <div class="pcat">
+              <div class="pcat-mid">
+                 موضوع:
+                   <a href="12.html">عقاید خودم و همسر راجع به زندگی</a>،                                 <br />
+                                <br />
+                              </div>
+            </div>
+            <div class="pcomore">
+              <div class="pcomore-mid">
+                <div class="plike"></div>
+                <div class="pmore">  </div>
+                <div class="pcomment"> <a href="../315.html#commentlist"> <b>دیدگاه ها </b>(<script>setCommentCnt(315)</script>)</a> </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+            <div class="p-bbg"></div>
+          </div>
+                    
+      <!--- e bodypost --->
+      
+            <!--- e barge ---->
+      
+              <div class="paper">
+          <div class="paper-tbg"></div>
+          <div class="paper-text">
+            <div class="paper-text-mid"> تعداد کل صفحات : 3               <a href="12/page/1.html"> <b>1</b></a>  <a href="12/page/2.html"> <span>2</span></a>  <a href="12/page/3.html"> <span>3</span></a>               <div style="clear:both"></div>
+            </div>
+          </div>
+          <div class="paper-bbg"></div>
+        </div>
+            
+      <!--- e paper --->
+      
+      <style>
+
+.text100 , .text100 a{color: #000000;font-size: 8pt;text-transform: none;}
+.text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+.text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+.com{width: 100%;float: left;background-color: #ECECEC;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;margin: 10px auto;padding: 0 0 10px 0;}
+.com a { text-decoration: none;}
+.com1{width: 98%;float: left;background-color: #D9D9D9;	-webkit-border-radius: 5px;	-moz-border-radius: 5px;border-radius: 5px;margin: 10px 20px 0 10px;padding: 0 0 3px 0;}
+.com3{ width:50%; float:left; text-align:right; direction:rtl; line-height:27px;}
+.com2{ width:30%px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+.com4{ width:96%; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;font-size:12px;}
+.com5{width: 96%;float: left;background-color: #E9E9E9; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;margin: 3px 3px 0 3px;
+	padding: 7px;direction: rtl;	text-align: right;-moz-box-shadow: inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;	box-shadow: inset #444 0px 0px 5px;
+	font-size: 12px;}
+.com6{ width:97%; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+.com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+.comment_form .comment_form_msg {background: none repeat scroll 0 0 #F6F6F6;border: 1px solid #E6E6E6; margin: 5px;    padding: 5px;}
+</style>
+          </div>
+    <!--- e content --->
+    
+    <div class="left">
+      <div class="lm">
+        <div class="lmtitle">
+          <div class="lmtitle-mid">جستجو در وبلاگ</div>
+        </div>
+        <div class="lmtext">
+          <div class="lmtext-mid">
+            <form id="frm-16079384005fd73160148bd" method="get" action="http://zendegimoon.mihanblog.com/post/search/fid/16079384005fd73160148bd"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> 
+              <input type="text" name="search_text"/>
+              <input type="submit" value="جستجو"/>
+            <input type="hidden" name="frm-id" value="16079384005fd73160148bd" id="frm-id" /></form>          </div>
+        </div>
+        <div class="lm-bbg"></div>
+      </div>
+              <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">تازه ترین مطالب</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                                  <li><a href="../544.html" title="چهارشنبه 5 آذر 1399"> پیش بینی آینده... </a></li>
+                                  <li><a href="../543.html" title="دوشنبه 3 آذر 1399"> از شیر گرفتن آقا پسر </a></li>
+                                  <li><a href="../542.html" title="شنبه 24 آبان 1399"> قبل از آشنایی با همسر </a></li>
+                                <li><a href="../list.html">لیست تمام مطالب</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+                    <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid"> لینک های روزانه </div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                                  <li><a href="http://behzadwin.blogsky.com/" title="" target="_blank">مخمور جام عشق</a> </li>
+                                  <li><a href="http://mamooli.persianblog.ir/" title="" target="_blank">یه دختر معمولی با یه زندگی معمولی</a> </li>
+                                  <li><a href="http://elmiradad.blogfa.com/" title="" target="_blank">روزگار تلخ و شیرین من در غربت</a> </li>
+                                  <li><a href="http://tanhaian.persianblog.ir/" title="" target="_blank">دل نوشته های من در غربت</a> </li>
+                                  <li><a href="http://khateratemanca.blogfa.com/" title="" target="_blank">زندگی من در غربت</a> </li>
+                                  <li><a href="http://www.cafealone.com" title="شعر,مینیمال,جملات فلسفی,داستان کوتاه" target="_blank">کافه تنهایی</a> </li>
+                                  <li><a href="http://dinon.ir/" title="" target="_blank">آمــوزش و پاسخگــویی به سوالات علــوم کامپیوتــر</a> </li>
+                                  <li><a href="http://66darjostojoo.blogfa.com/" title="" target="_blank">در جست و جو</a> </li>
+                                  <li><a href="http://pzi.parsiblog.com/" title="" target="_blank">..••●●ساعت به وقت غربت●●••..</a> </li>
+                                  <li><a href="http://moalem-ko0cho0lo0.blogfa.com/" title="" target="_blank">خاطرات معلم کــوچــولــو 1</a> </li>
+                                <li><a href="../../linkdaily/index.html"><b>همه لینکها</b></a></li>
+                <li><a href="javascript:linkdailyForm()"><b>ارسال لینک</b></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+            
+		<form id="frm-16079384005fd731601508a" method="post" action="http://zendegimoon.mihanblog.com/poll/new/fid/16079384005fd731601508a/atrty/1607938400/avrvy/0/key/04e642636031e9103c9002991e71c58c/"  onsubmit="window.open('', 'poll', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=505,height=315')" target="poll"><input type="hidden" name="data[pollid]" value="356955" id="data[pollid]" />		
+        <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">نظرسنجی</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid"> دوست دارین بیشتر راجع به چی بنویسم؟<br>
+               <label><input type="radio" name="data[answer]" value="v1">فرهنگ آلمانی</label><br>
+               <label><input type="radio" name="data[answer]" value="v2">زندگی در آلمان</label><br>
+               <label><input type="radio" name="data[answer]" value="v3">ویزا و مراحل اداری ازدواج</label><br>
+               <label><input type="radio" name="data[answer]" value="v4">زندگی با همسرم در آلمان</label><br>
+                            <input type="submit" value="ثبت"/>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+      
+		<input type="hidden" name="frm-id" value="16079384005fd731601508a" id="frm-id" /></form>              <div class="lm">
+          <div class="lmtitle">
+            <div class="lmtitle-mid">دوستان</div>
+          </div>
+          <div class="lmtext">
+            <div class="lmtext-mid">
+              <ul>
+                <li><a href="http://cafeskin.blogfa.com/">قالب وبلاگ</a></li>
+                                  <li> <a href="http://deutschlernen1.blogsky.com/" title=""  target="_blank"> بزرگترین سایت کتب و پادکست های زبان آلمانی</a></li>
+                                  <li> <a href="http://mamoolii.blogsky.com" title=""  target="_blank"> یه دختر معمولی با یه زندگی معمولی</a></li>
+                                  <li> <a href="http://mamoolii.blogsky.com" title=""  target="_blank"> یه دختر معمولی با یه زندگی معمولی 2</a></li>
+                                  <li> <a href="http://travle.blogsky.com/" title=""  target="_blank"> سفر - کوچ سرفینگ - تجربه متفاوت</a></li>
+                                  <li> <a href="http://aalmaan.blogfa.com/" title=""  target="_blank"> یادداشت‌های پراکنده در مورد آلمان</a></li>
+                                  <li> <a href="http://studieindeutsch.blogspot.com" title=""  target="_blank"> مهاجرت،تحصیل و زندگی در آلمان</a></li>
+                                  <li> <a href="http://moalem-ko0cho0lo0.blogsky.com/" title=""  target="_blank"> خاطرات معلم کــوچــولــو 2</a></li>
+                                  <li> <a href="http://www.mehditravel87.blogfa.com/" title=""  target="_blank"> سفر به کل دنیا با دوچرخه</a></li>
+                                  <li> <a href="http://wonderland.blog.ir/" title=""  target="_blank"> آزاده در سرزمین عجایب</a></li>
+                                  <li> <a href="http://bluecardgermany.blogsky.com/" title=""  target="_blank"> اقامت کاری کشور آلمان</a></li>
+                                  <li> <a href="http://leiligermany.blogsky.com/" title=""  target="_blank"> زندگی پر از خاطره است</a></li>
+                                  <li> <a href="http://habibashtari.blogfa.com/" title=""  target="_blank"> سفر به دنیا با دوچرخه</a></li>
+                                  <li> <a href="http://booyehbehesht.niniweblog.com/" title=""  target="_blank"> ♡ ♡ بوی بهشت ♡ ♡</a></li>
+                                  <li> <a href="http://weineurope.blogsky.com/" title=""  target="_blank"> من و همسرم در اروپا</a></li>
+                                  <li> <a href="http://ebrahimnejad.persianblog.ir/" title=""  target="_blank"> یک ایرانی در بوستون</a></li>
+                                  <li> <a href="http://aroshayeasemani.persianblog.ir/" title=""  target="_blank"> عروس های آسمانی</a></li>
+                                  <li> <a href="http://bhb.blogfa.com/" title=""  target="_blank"> بلندی های بادگیر</a></li>
+                                  <li> <a href="http://mennomen.mihanblog.com" title=""  target="_blank"> my white house</a></li>
+                                  <li> <a href="http://www.mybabydream.blogfa.com/" title=""  target="_blank"> رویای کودکی من</a></li>
+                                  <li> <a href="http://delavarenoor.persianblog.ir/" title=""  target="_blank"> از رویا تا واقعیت</a></li>
+                                <li><a href="../../link/index.html"><b>همه لینکها</b></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="lm-bbg"></div>
+        </div>
+            <div class="lm">
+        <div class="lmtitle">
+          <div class="lmtitle-mid">لینک های مفید</div>
+        </div>
+        <div class="lmtext">
+          <div class="lmtext-mid"> 
+            <!--- Start links  ----><ul>
+<li><a href="http://wallz.ir/" target="_blank" title="گرافیک">والز</a></li>
+<li><a href="http://kiosk724.ir/" target="_blank" title="کتاب و مجله الکترونیکی">کیوسک 724</a></li>
+<li><a href="http://sitesetup.ir/" target="_blank" title="طراحی سایت و قالب وبلاگ">سایت ستاپ</a></li>
+<li><a href="http://theme.sitesetup.ir/" target="_blank" title="قالب حرفه ای وبلاگ">قالب وبلاگ حرفه ای</a></li>
+</ul> <!--- End links  ---->  
+          </div>
+        </div>
+        <div class="lm-bbg"></div>
+      </div>
+      <div class="lm">
+        <div class="lmtitle">
+          <div class="lmtitle-mid">ابزارک های وبلاگ</div>
+        </div>
+        <div class="lmtext">
+          <div class="lmtext-mid"> <br>
+            <a href="http://cafeskin.blogfa.com/">قالب وبلاگ</a><br>
+            <br>
+                          <ul>
+                <li>کل بازدید:<script>getStatVar('total_view');</script></li>
+                <li>بازدید امروز :<script>getStatVar('today_view');</script></li>
+                <li>یازدید دیروز : <script>getStatVar('yesterday_view');</script></li>
+                <li>بازدید این ماه : <script>getStatVar('this_month_view');</script></li>
+                <li>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></li>
+                <li>تعداد نویسندگان : <script>getStatVar('total_author');</script></li>
+                <li>تعداد کل مطالب : <script>getStatVar('total_post');</script></li>
+                <li>آخرین بازدید : <script>getStatVar('last_view_date');</script></li>
+                <li>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></li>
+              </ul>
+                        <br>
+            <div style="text-align:center;"> <!-- Begin https://dornamusic.com -->
+<center><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><audio style="width:100%" controls autoplay loop><source src="http://s.dornamusic.com/mp3/17/4/26/Reza-Sadeghi-Man-Ba-Toam-128-DornaMusic.Com.mp3" type="audio/mpeg" /></audio></br>
+<a title="دانلود آهنگ جدید من با توام – رضا صادقی" target="_blank" href="https://dornamusic.com/songs/reza-sadeghi-man-ba-toam/">دانلود آهنگ جدید من با توام – رضا صادقی</a></center>
+<!-- End https://dornamusic.com -->
+
+
+
+<!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=3660612&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=3660612" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code --> </div>
+          </div>
+        </div>
+        <div class="lm-bbg"></div>
+      </div>
+      <div style="clear:both"></div>
+    </div>
+    <!--- e left --->
+    
+    <div style="clear:both"></div>
+  </div>
+  <!--- e main --->
+  
+  <div class="footer">
+    <div class="footer-mid">تمام حقوق وبلاگ متعلق به نویسنده‌ی آن می باشد :: <a href="http://cafeskin.blogfa.com/"> قالب وبلاگ: کافه اسکین</a> 
+      <!--- برای حفظ حقوق طراح قالب لطفا نام و آدرس طراح را تغییر نداده و پاک نفرمایید. سپاس ---> 
+    </div>
+  </div>
+  <!--- e footer ---> 
+  
+</div>
+<!--- e page --->
+
+</body>
+</html>
+<script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'zendegimoon.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>
